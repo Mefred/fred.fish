@@ -1,4 +1,36 @@
 (() => {
+  const storageGet = key => {
+    try { return localStorage.getItem(key); } catch (_) { return null; }
+  };
+  const storageSet = (key, value) => {
+    try { localStorage.setItem(key, value); } catch (_) {}
+  };
+
+  const updateLessonProgress = control => {
+    const complete = control.checked;
+    const label = control.closest(".lesson-complete")?.querySelector("[data-completion-label]");
+    if (label) label.textContent = complete
+      ? "Lesson marked complete. Progress is saved in this browser."
+      : "Mark this lesson complete when you are ready.";
+    const bar = document.querySelector(".lesson-aside .progress-track span");
+    if (bar) bar.style.width = complete ? "100%" : "0%";
+  };
+
+  const updateCourseProgress = () => {
+    const panel = document.querySelector("[data-course-progress]");
+    if (!panel) return;
+    let complete = 0;
+    for (let n = 1; n <= 30; n++) {
+      if (storageGet("fred-cisco-complete-" + String(n).padStart(2, "0")) === "true") complete++;
+    }
+    const count = panel.querySelector("[data-progress-count]");
+    const bar = panel.querySelector(".progress-track span");
+    const percent = Math.round(complete / 30 * 100);
+    if (count) count.textContent = complete + " / 30 modules completed";
+    if (bar) bar.style.width = percent + "%";
+    panel.setAttribute("aria-label", percent + "% of the course completed");
+  };
+
   document.querySelectorAll("[data-lesson-quiz]").forEach(quiz => {
     const questions = [...quiz.querySelectorAll(".quiz-question")];
     const result = quiz.querySelector(".quiz-result");
@@ -12,8 +44,7 @@
       questions.forEach(question => {
         const correct = (question.dataset.correct || "").split(",").filter(Boolean);
         const selected = [...question.querySelectorAll("input:checked")].map(input => input.value);
-        const isAnswered = selected.length > 0;
-        if (isAnswered) answered++;
+        if (selected.length) answered++;
         const isCorrect = selected.length === correct.length && correct.every(value => selected.includes(value));
         if (isCorrect) score++;
         question.classList.add("graded");
@@ -25,14 +56,20 @@
           option.classList.toggle("correct", isRight);
           option.classList.toggle("incorrect", chosen && !isRight);
           input.disabled = true;
-          if (feedback) feedback.innerHTML = "<strong>" + (isRight ? "Correct choice: " : chosen ? "Your selection: " : "Not selected: ") + "</strong>" + feedback.dataset.explanation;
+          if (feedback) {
+            const status = isRight ? "Correct choice: " : chosen ? "Your selection: " : "Not selected: ";
+            feedback.textContent = status + feedback.dataset.explanation;
+          }
         });
       });
       const percent = Math.round(score / questions.length * 100);
       result.classList.add("visible");
-      result.innerHTML = "<strong>Result: " + score + " / " + questions.length + " (" + percent + "%)</strong><br>" + (answered === questions.length ? "All questions answered. " : answered + " of " + questions.length + " questions answered. ") + (score === questions.length ? "Excellent work. You have a strong grasp of this lesson." : "Read each explanation, then retry the quiz to reinforce the concepts.");
+      result.textContent = "Result: " + score + " / " + questions.length + " (" + percent + "%). " +
+        (answered === questions.length ? "All questions answered. " : answered + " of " + questions.length + " questions answered. ") +
+        (score === questions.length ? "Excellent work. You have a strong grasp of this lesson." : "Read each explanation, then retry the quiz to reinforce the concepts.");
+      storageSet("fred-cisco-quiz-" + document.title, JSON.stringify({ score, total: questions.length, percent }));
       submit.disabled = true;
-      reset.hidden = false;
+      if (reset) reset.hidden = false;
     });
 
     reset?.addEventListener("click", () => {
@@ -51,11 +88,14 @@
 
   document.querySelectorAll("[data-completion]").forEach(control => {
     const key = "fred-cisco-complete-" + control.dataset.completion;
-    try { control.checked = localStorage.getItem(key) === "true"; } catch (_) {}
+    control.checked = storageGet(key) === "true";
+    updateLessonProgress(control);
     control.addEventListener("change", () => {
-      try { localStorage.setItem(key, String(control.checked)); } catch (_) {}
-      const label = control.closest(".lesson-complete")?.querySelector("[data-completion-label]");
-      if (label) label.textContent = control.checked ? "Lesson marked complete. Progress is saved in this browser." : "Mark this lesson complete when you are ready.";
+      storageSet(key, String(control.checked));
+      updateLessonProgress(control);
+      updateCourseProgress();
     });
   });
+
+  updateCourseProgress();
 })();
