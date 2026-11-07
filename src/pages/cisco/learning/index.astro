@@ -1,0 +1,90 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import Eyebrow from "../../../components/Eyebrow.astro";
+const curriculum = [{"id":"foundations","label":"PART 01 / FOUNDATIONS","title":"Networking fundamentals","description":"Understand the components, models, media, and protocols that make networks function.","domain":"CCNA · NETWORK FUNDAMENTALS","items":[["01","The Physical Layer","Signals, bits, media, cabling, connectors, transceivers, and physical-layer characteristics.","01-physical-layer","FOUNDATIONS"],["02","The Data Link Layer","Frames, MAC addressing, LLC/MAC sublayers, media access, and Layer 2 delivery.","02-data-link-layer","FOUNDATIONS"],["03","Ethernet and Switching","Ethernet frame fields, MAC learning, forwarding decisions, switching tables, duplex, and speed.","03-ethernet-switching","FOUNDATIONS"],["04","Network Devices and Topologies","Routers, switches, access points, firewalls, endpoints, physical/logical topologies, and network architectures.","04-network-devices-topologies","FOUNDATIONS"],["05","Network Models and Encapsulation","OSI and TCP/IP models, PDU names, encapsulation, decapsulation, and protocol interaction.","05-network-models-encapsulation","FOUNDATIONS"],["06","Number Systems and Binary Math","Binary, decimal, hexadecimal, bitwise reasoning, and conversions used in addressing.","06-number-systems-binary-math","FOUNDATIONS"],["07","IPv4 Addressing and Subnetting","Address structure, network/host portions, masks, CIDR, subnet ranges, VLSM, and troubleshooting.","07-ipv4-addressing-subnetting","FOUNDATIONS"],["08","IPv6 Addressing","Address structure, compression, prefix lengths, global/local/multicast/anycast, and configuration.","08-ipv6-addressing","FOUNDATIONS"],["09","The Network Layer and Routing Basics","Logical addressing, packet forwarding, routing tables, next hops, longest-prefix match, and TTL/hop limit.","09-network-layer-routing-basics","FOUNDATIONS"],["10","ARP, Neighbor Discovery, and ICMP","IPv4 ARP, IPv6 Neighbor Discovery, ICMP messages, ping, traceroute, and fault isolation.","10-arp-neighbor-discovery-icmp","FOUNDATIONS"],["11","The Transport Layer","TCP and UDP, ports, sockets, connection setup/teardown, reliability, and flow control.","11-transport-layer","FOUNDATIONS"],["12","Application Layer and Common Services","DNS, DHCP, HTTP(S), SSH, FTP/TFTP, SMTP, NTP, SNMP, and client/server behavior.","12-application-layer-services","FOUNDATIONS"]]},{"id":"access","label":"PART 02 / NETWORK ACCESS","title":"Switching, wireless, and LANs","description":"Build and operate local networks with VLANs, trunks, redundancy, and wireless access.","domain":"CCNA · NETWORK ACCESS","items":[["13","VLANs and 802.1Q Trunking","Access ports, VLAN databases, native VLANs, allowed VLANs, voice VLANs, and trunk troubleshooting.","13-vlans-8021q-trunking","NETWORK ACCESS"],["14","Inter-VLAN Routing","Router-on-a-stick, SVIs, Layer 3 switching, default gateways, and verification.","14-inter-vlan-routing","NETWORK ACCESS"],["15","Spanning Tree Protocol","Loops, root bridge election, port roles/states, RSTP, PortFast, and BPDU Guard.","15-spanning-tree-protocol","NETWORK ACCESS"],["16","EtherChannel and Link Aggregation","LACP, channel groups, negotiation, load distribution, and troubleshooting.","16-etherchannel-link-aggregation","NETWORK ACCESS"],["17","Wireless LANs and Architectures","RF fundamentals, AP/WLC roles, WLAN components, channels, authentication, and wireless security.","17-wireless-lans-architectures","NETWORK ACCESS"]]},{"id":"connectivity","label":"PART 03 / CONNECTIVITY & OPERATIONS","title":"Routing, services, and operations","description":"Connect networks, deliver services, secure devices, and troubleshoot end-to-end behavior.","domain":"CCNA · IP CONNECTIVITY & OPERATIONS","items":[["18","Static and Default Routing","Connected, static, floating static, default routes, IPv4/IPv6 route configuration, and verification.","18-static-default-routing","IP CONNECTIVITY"],["19","Dynamic Routing and OSPF","Routing protocols, metrics, administrative distance, OSPF neighbors, areas, and single-area configuration.","19-dynamic-routing-ospf","IP CONNECTIVITY"],["20","Routing Troubleshooting and First-Hop Redundancy","Route selection, gateway redundancy concepts, path failures, and systematic troubleshooting.","20-routing-troubleshooting-redundancy","IP CONNECTIVITY"],["21","IP Services","DHCP, DNS, NAT/PAT, NTP, SNMP, Syslog, QoS, file transfer, and device management.","21-ip-services","IP SERVICES"],["22","Network Security Fundamentals","Threats, vulnerabilities, secure device access, passwords, SSH, ACLs, Layer 2 security, and VPN concepts.","22-network-security-fundamentals","SECURITY"],["23","Network Automation and Programmability","Traditional vs. controller-based networking, SDN, APIs, REST, JSON, configuration management, and AI/ML concepts.","23-network-automation-programmability","AUTOMATION"],["24","Cisco IOS XE CLI and Device Management","CLI modes, configuration files, CDP/LLDP, SSH, and safe device administration.","24-ios-xe-cli-device-management","IOS XE"],["25","Access Control Lists and Traffic Filtering","Standard and extended ACLs, wildcard masks, evaluation order, placement, and verification.","25-access-control-lists","SECURITY"],["26","NAT, PAT, and DHCP Configuration","DHCP pools and relay, static/dynamic NAT, PAT overload, and troubleshooting.","26-nat-dhcp-configuration","IP SERVICES"],["27","Layer 2 and Wireless Security","Port security, DHCP snooping, Dynamic ARP Inspection, IP Source Guard, WPA2/WPA3, and 802.1X.","27-layer2-security-wireless-security","SECURITY"],["28","QoS and Network Monitoring Services","Classification, marking, queuing, shaping, policing, NTP, SNMP, and Syslog.","28-qos-network-monitoring","IP SERVICES"],["29","Network Virtualization and Cloud Networking","Hypervisors, VMs, containers, VLANs, VRFs, overlays, and cloud deployment models.","29-virtualization-cloud-networking","FUNDAMENTALS"],["30","Integrated Network Troubleshooting and Exam Scenarios","Layered fault isolation, IOS XE verification, end-to-end testing, and scenario practice.","30-integrated-network-troubleshooting","PRACTICAL REVIEW"]]}];
+const modules = curriculum.flatMap((part) => part.items);
+---
+<SiteLayout title="Cisco Learning — fred.fish" description="A structured Cisco networking curriculum with 30 lessons, 95 original practice questions, and browser-local progress tracking." active="cisco">
+  <div class="learning-shell">
+    <div class="learning-breadcrumb"><a href="/">fred.fish</a><span>/</span><a href="/cisco/">cisco</a><span>/</span><strong>learning</strong></div>
+    <header class="learning-hero">
+      <Eyebrow index="01" label="CISCO / NETWORKING CURRICULUM" />
+      <h1>Learn networking.<br /><span>Understand why it works.</span></h1>
+      <p>A structured course from physical signals on a cable to routing, network services, security, and automation. Lessons combine explanations, original diagrams, configuration examples, and interactive knowledge checks.</p>
+      <div class="learning-hero-meta"><span>30 MODULES</span><span>95 PRACTICE QUESTIONS</span><span>CCNA 200-301 ALIGNMENT</span></div>
+    </header>
+    <section class="learning-stats" aria-label="Course statistics">
+      <div><strong>30</strong><span>published learning modules</span></div>
+      <div><strong>95</strong><span>original practice questions</span></div>
+      <div><strong>CCNA</strong><span>200-301 exam alignment</span></div>
+    </section>
+    <section class="course-progress" data-course-progress aria-label="Course progress">
+      <div class="progress-heading"><div><Eyebrow label="YOUR WORKSPACE" /><h2>Your learning progress</h2></div><strong data-progress-count>0 / 30 completed</strong></div>
+      <div class="progress-track" role="progressbar" aria-label="Modules completed" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><span data-progress-bar></span></div>
+      <p>Completion is saved locally in this browser. You can continue where you left off on this device.</p>
+    </section>
+    <section class="learning-guide">
+      <span class="guide-icon" aria-hidden="true">i</span>
+      <div><strong>How to use this course</strong><p>Follow the modules in order if you are new to networking. Each lesson builds on earlier concepts. Finish the knowledge checks, then reinforce the same ideas with labs and command references. Your lesson completion and quiz results stay in this browser.</p></div>
+    </section>
+    <div class="curriculum-toolbar">
+      <div><Eyebrow label="THE CURRICULUM" /><h2>All modules</h2></div>
+      <label class="module-search"><span class="sr-only">Search modules</span><span aria-hidden="true">⌕</span><input id="module-search" type="search" placeholder="Search topics..." autocomplete="off" /></label>
+    </div>
+    <p class="search-status" id="search-status" aria-live="polite">Showing all 30 modules</p>
+    {curriculum.map((part) => (
+      <section class="curriculum-part" data-part={part.id}>
+        <div class="part-heading"><div><Eyebrow label={part.label} /><h2>{part.title}</h2><p>{part.description}</p></div><span class="domain-tag">{part.domain}</span></div>
+        <div class="module-list">
+          {part.items.map((module) => (
+            <a class="module-row" href={`/cisco/learning/modules/${module[3]}/`} data-module data-search={`${module[0]} ${module[1]} ${module[2]} ${module[4]}`.toLowerCase()} data-number={module[0]}>
+              <span class="module-index">{module[0]}</span>
+              <span class="module-main"><span class="module-title">{module[1]}</span><span class="module-description">{module[2]}</span><span class="module-domain">{module[4]}</span></span>
+              <span class="module-state"><span class="module-complete" aria-hidden="true">✓</span><span class="module-action">Open lesson <span aria-hidden="true">↗</span></span></span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+    <div class="no-results" id="no-results" hidden>No modules match that search. Try a different topic or keyword.</div>
+    <section class="learning-next"><div><Eyebrow label="KEEP BUILDING" /><h2>Take the concepts into a lab.</h2><p>Reading explains how protocols work. Configuring and troubleshooting a network is where those ideas become practical skills.</p></div><a href="/cisco/labs/" class="next-link">Explore hands-on labs <span aria-hidden="true">↗</span></a></section>
+  </div>
+  <script>
+    const storageGet = (key) => { try { return localStorage.getItem(key); } catch { return null; } };
+    const progress = document.querySelector("[data-course-progress]");
+    const updateProgress = () => {
+      let complete = 0;
+      document.querySelectorAll("[data-module]").forEach((link) => {
+        const done = storageGet("fred-cisco-complete-" + link.dataset.number) === "true";
+        link.classList.toggle("is-complete", done);
+        if (done) complete++;
+      });
+      const count = progress?.querySelector("[data-progress-count]");
+      const bar = progress?.querySelector("[data-progress-bar]");
+      const track = progress?.querySelector('[role="progressbar"]');
+      if (count) count.textContent = complete + " / 30 completed";
+      if (bar) bar.style.width = (complete / 30 * 100) + "%";
+      if (track) track.setAttribute("aria-valuenow", String(complete));
+      if (progress) progress.setAttribute("aria-label", complete + " of 30 modules completed");
+    };
+    const search = document.querySelector("#module-search");
+    const status = document.querySelector("#search-status");
+    const empty = document.querySelector("#no-results");
+    search?.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      let shown = 0;
+      document.querySelectorAll("[data-module]").forEach((module) => {
+        const visible = !query || module.dataset.search.includes(query);
+        module.hidden = !visible;
+        if (visible) shown++;
+      });
+      document.querySelectorAll(".curriculum-part").forEach((part) => {
+        part.hidden = !part.querySelector("[data-module]:not([hidden])");
+      });
+      if (status) status.textContent = query ? "Showing " + shown + " of 30 modules" : "Showing all 30 modules";
+      if (empty) empty.hidden = shown !== 0;
+    });
+    updateProgress();
+    window.addEventListener("storage", updateProgress);
+  </script>
+</SiteLayout>
