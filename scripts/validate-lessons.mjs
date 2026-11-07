@@ -160,7 +160,7 @@ for (const slug of migratedLessons) {
   }
 
   const sourceTableCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<table class="lesson-table">/g)].length;
-  const builtTableCount = [...html.matchAll(/<div(?=[^>]*class="lesson-table-wrap")(?=[^>]*data-lesson-table)[^>]*>/g)].length;
+  const builtTableCount = [...html.matchAll(/<table class="lesson-table" data-lesson-table>/g)].length;
   if (builtTableCount !== sourceTableCount) {
     fail(slug, `generated route contains ${builtTableCount} component lesson tables; legacy source contains ${sourceTableCount}`);
   }
