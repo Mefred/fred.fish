@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111714">
-  <meta name="description" content="Fred's personal website and project directory.">
-  <title>fred.fish</title>
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Fred's personal website, technical notes, learning resources, and projects.">
+  <title>fred.fish — Home</title>
   <link rel="stylesheet" href="/assets/site.css">
   <script src="/assets/site.js" defer></script>
 </head>
@@ -16,43 +16,47 @@
     <div class="tree-label">WORKSPACE</div>
     <nav class="file-tree" aria-label="Site navigation">
       <a class="tree-row active" href="/" aria-current="page"><span class="file-icon">⌂</span><span>home</span></a>
-      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>cisco/</span></button>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">cisco/</span></button>
       <div class="tree-children" id="cisco-links">
         <a class="tree-row child" href="/cisco/"><span class="file-icon">◫</span><span>overview</span></a>
+        <a class="tree-row child" href="/cisco/learning/"><span class="file-icon">◫</span><span>learning</span></a>
+        <a class="tree-row child" href="/cisco/labs/"><span class="file-icon">◫</span><span>labs</span></a>
+        <a class="tree-row child" href="/cisco/reference/"><span class="file-icon">◫</span><span>reference</span></a>
       </div>
-      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>reef/</span></button>
-      <div class="tree-children" id="reef-links">
-        <a class="tree-row child" href="/reef/"><span class="file-icon">◫</span><span>overview</span></a>
-      </div>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">reef/</span></button>
+      <div class="tree-children" id="reef-links"><a class="tree-row child" href="/reef/"><span class="file-icon">◫</span><span>overview</span></a></div>
     </nav>
-    <div class="sidebar-bottom"><span class="status-dot"></span> A little corner of the internet</div>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span>A little corner of the internet</span></div>
+    <button class="sidebar-collapse" type="button" aria-expanded="true"><span class="collapse-icon">⇤</span><span class="collapse-label">Collapse sidebar</span></button>
   </aside>
   <div class="sidebar-backdrop" hidden></div>
-  <main class="main">
-    <div class="content">
-      <div class="breadcrumb"><span>fred.fish</span><span>/</span><strong>home</strong></div>
-      <section class="intro">
-        <div class="eyebrow">PERSONAL WEBSITE</div>
-        <h1>Hi, I'm Fred.</h1>
-        <p>I build software, work with networks, and spend a lot of time figuring out how things work.</p>
-      </section>
-      <section class="section">
-        <div class="section-heading"><h2>Directories</h2><span>2 items</span></div>
-        <div class="directory-list">
-          <a class="directory-card" href="/cisco/">
-            <span class="directory-icon">▰</span>
-            <span class="directory-copy"><strong>cisco/</strong><small>Networking notes, IOS XE, and references.</small></span>
-            <span class="directory-arrow">↗</span>
-          </a>
-          <a class="directory-card" href="/reef/">
-            <span class="directory-icon">▰</span>
-            <span class="directory-copy"><strong>reef/</strong><small>A project for working with Cisco devices.</small></span>
-            <span class="directory-arrow">↗</span>
-          </a>
-        </div>
-      </section>
-      <footer>© <span data-year></span> fred.fish</footer>
-    </div>
-  </main>
+  <main class="main"><div class="content">
+    <div class="breadcrumb"><span>fred.fish</span><span>/</span><strong>home</strong></div>
+    <section class="hero">
+      <div class="eyebrow">PERSONAL WORKSPACE · FRED.FISH</div>
+      <h1>Build. Learn.<br><span>Figure it out.</span></h1>
+      <p>A home for technical projects, networking notes, experiments, and the things I'm learning along the way.</p>
+      <div class="hero-actions">
+        <a class="button-link primary" href="/cisco/">Explore Cisco learning <span>↗</span></a>
+        <a class="button-link" href="/reef/">Explore Reef <span>↗</span></a>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-heading"><h2>Directories</h2><span>02 workspaces</span></div>
+      <div class="card-grid">
+        <a class="card" href="/cisco/">
+          <div class="card-top"><span class="card-icon">⌘</span><span class="card-tag">LEARNING</span></div>
+          <h3>Cisco</h3><p>Networking study material, IOS XE references, hands-on labs, and a foundation for future quizzes and practice.</p>
+          <span class="card-arrow">Open Cisco workspace ↗</span>
+        </a>
+        <a class="card" href="/reef/">
+          <div class="card-top"><span class="card-icon">⌁</span><span class="card-tag">PROJECT</span></div>
+          <h3>Reef</h3><p>A focused project for connecting to and working with Cisco network devices.</p>
+          <span class="card-arrow">Open project overview ↗</span>
+        </a>
+      </div>
+    </section>
+    <footer>© <span data-year></span> fred.fish <span>·</span> Built as a small, evolving workspace.</footer>
+  </div></main>
 </body>
 </html>
