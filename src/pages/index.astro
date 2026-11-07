@@ -1,0 +1,79 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout title="fred.fish — Build. Learn. Figure it out." description="A personal workspace for software projects, networking, technical learning, and experiments." active="home">
+  <section class="hero-shell">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-line"></span> PERSONAL TECHNICAL WORKSPACE</div>
+      <h1>Curiosity,<br /><span>put to work.</span></h1>
+      <p class="hero-lede">A place for building software, exploring systems, learning how networks work, and documenting the interesting parts along the way.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="/projects/">Explore projects <span aria-hidden="true">↗</span></a>
+        <a class="text-link" href="/cisco/">Browse Cisco learning <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-meta"><span class="meta-dot"></span> Independently built · Always evolving</div>
+    </div>
+    <div class="hero-visual" aria-label="Abstract network diagram showing connected nodes" role="img">
+      <div class="visual-grid"></div>
+      <svg class="network-art" viewBox="0 0 560 440" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="wire" x1="80" y1="60" x2="470" y2="380" gradientUnits="userSpaceOnUse"><stop stop-color="#4adcc8" stop-opacity=".75"/><stop offset="1" stop-color="#70bfea" stop-opacity=".12"/></linearGradient>
+          <radialGradient id="core"><stop stop-color="#4adcc8" stop-opacity=".28"/><stop offset="1" stop-color="#4adcc8" stop-opacity="0"/></radialGradient>
+        </defs>
+        <circle cx="286" cy="220" r="164" fill="url(#core)"/>
+        <g stroke="url(#wire)" stroke-width="1.5">
+          <path d="M90 115 220 78 335 128 468 78M90 115 145 275 286 220 335 128M220 78 286 220 420 300 468 78M145 275 205 370 420 300M286 220 335 128M286 220 205 370M335 128 420 300"/>
+          <path d="m90 115 130-37 115 50-49 92-141 55-55-160Z" stroke-dasharray="4 8" opacity=".5"/>
+        </g>
+        <g fill="#0c171e" stroke="#4adcc8" stroke-width="2">
+          <rect x="69" y="94" width="42" height="42" rx="12"/><rect x="199" y="57" width="42" height="42" rx="12"/>
+          <rect x="314" y="107" width="42" height="42" rx="12"/><rect x="447" y="57" width="42" height="42" rx="12"/>
+          <rect x="124" y="254" width="42" height="42" rx="12"/><rect x="265" y="199" width="42" height="42" rx="12"/>
+          <rect x="184" y="349" width="42" height="42" rx="12"/><rect x="399" y="279" width="42" height="42" rx="12"/>
+        </g>
+        <g fill="#4adcc8">
+          <circle cx="90" cy="115" r="4"/><circle cx="220" cy="78" r="4"/><circle cx="335" cy="128" r="4"/>
+          <circle cx="468" cy="78" r="4"/><circle cx="145" cy="275" r="4"/><circle cx="286" cy="220" r="5"/>
+          <circle cx="205" cy="370" r="4"/><circle cx="420" cy="300" r="4"/>
+        </g>
+        <circle cx="286" cy="220" r="34" stroke="#4adcc8" stroke-opacity=".4" stroke-dasharray="3 6"/>
+      </svg>
+      <div class="visual-caption"><span class="caption-indicator"></span> SYSTEMS / NETWORKS / SOFTWARE</div>
+      <div class="visual-coordinate">FIG. 001 — CONNECTED IDEAS</div>
+    </div>
+  </section>
+
+  <section class="intro-strip">
+    <span class="strip-label">THE WORKSPACE</span>
+    <p>Not a finished product. A growing collection of projects, practical notes, and things worth understanding.</p>
+  </section>
+
+  <section class="section-block">
+    <div class="section-heading">
+      <div><div class="eyebrow">EXPLORE</div><h2>Places to start.</h2></div>
+      <span class="section-index">01 / 03</span>
+    </div>
+    <div class="feature-grid">
+      <a class="feature-card feature-large" href="/cisco/">
+        <div class="feature-top"><span class="feature-icon">⌘</span><span class="feature-kicker">LEARNING ENVIRONMENT</span><span class="feature-arrow">↗</span></div>
+        <div><h3>Networking, from the ground up.</h3><p>Thirty learning modules covering networking fundamentals, switching, routing, services, security, and troubleshooting.</p></div>
+        <div class="feature-bottom"><span>30 modules</span><span>95 practice questions</span><span>IOS XE references</span></div>
+      </a>
+      <a class="feature-card" href="/reef/">
+        <div class="feature-top"><span class="feature-icon">⌁</span><span class="feature-kicker">SOFTWARE PROJECT</span><span class="feature-arrow">↗</span></div>
+        <div><h3>Reef</h3><p>A project focused on connecting to and working with Cisco network devices.</p></div>
+        <div class="feature-bottom"><span>Explore the project</span></div>
+      </a>
+      <a class="feature-card" href="/projects/">
+        <div class="feature-top"><span class="feature-icon">⌬</span><span class="feature-kicker">PROJECT INDEX</span><span class="feature-arrow">↗</span></div>
+        <div><h3>Built and in progress.</h3><p>A growing index of experiments, tools, software, and technical work.</p></div>
+        <div class="feature-bottom"><span>Browse projects</span></div>
+      </a>
+    </div>
+  </section>
+
+  <section class="closing-band">
+    <div><div class="eyebrow">STAY CURIOUS</div><h2>Understand the system.<br /><span>Then build something better.</span></h2></div>
+    <a class="button button-outline" href="/about/">A little about this site <span aria-hidden="true">→</span></a>
+  </section>
+</SiteLayout>

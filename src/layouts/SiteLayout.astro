@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  active?: string;
+}
+const { title, description, active = "" } = Astro.props;
+const nav = [
+  { href: "/", label: "Home", key: "home" },
+  { href: "/projects/", label: "Projects", key: "projects" },
+  { href: "/cisco/", label: "Cisco", key: "cisco" },
+  { href: "/reef/", label: "Reef", key: "reef" },
+  { href: "/about/", label: "About", key: "about" },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080e14" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="fred.fish" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="fred.fish home">
+        <span class="brand-mark" aria-hidden="true">f<span>.</span></span>
+        <span>fred<span class="brand-dot">.</span>fish</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        {nav.map((item) => (
+          <a href={item.href} class:list={{ active: active === item.key }} aria-current={active === item.key ? "page" : undefined}>{item.label}</a>
+        ))}
+      </nav>
+      <a class="header-status" href="https://github.com/Mefred" target="_blank" rel="noreferrer">
+        <span class="status-pulse"></span> On GitHub <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <a class="footer-brand" href="/">fred.fish</a>
+      <span>A personal workspace for building, learning, and figuring things out.</span>
+      <span>© {new Date().getFullYear()}</span>
+    </footer>
+  </body>
+</html>
