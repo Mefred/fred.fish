@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = "dist/cisco/learning/modules";
+const legacyRoot = "cisco/learning/modules";
 const directories = readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isDirectory());
 const failures = [];
 let questionTotal = 0;
@@ -135,7 +136,7 @@ for (const slug of migratedLessons) {
   }
   const html = readFileSync(builtPage, "utf8");
   const builtQuestionCount = [...html.matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
-  const sourceQuestionCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
+  const sourceQuestionCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
   if (builtQuestionCount !== sourceQuestionCount) {
     fail(slug, `generated route contains ${builtQuestionCount} quiz questions; legacy source contains ${sourceQuestionCount}`);
   }
