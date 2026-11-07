@@ -102,9 +102,9 @@ for (const slug of migratedLessons) {
   for (const [label, pattern] of [
     ["canonical URL", /<link rel="canonical" href=/],
     ["article metadata", /property="og:type" content="article"/],
-    ["lesson stylesheet", /href="\\/assets\\/learning\\.css"/],
-    ["lesson interaction script", /src="\\/assets\\/learning\\.js"/],
-    ["lesson body", /<main class="main">[\\s\\S]*<article class="lesson-main">/],
+    ["lesson stylesheet", /href="\/assets\/learning\.css"/],
+    ["lesson interaction script", /src="\/assets\/learning\.js"/],
+    ["lesson body", /<main class="main">[\s\S]*<article class="lesson-main">/],
   ]) {
     if (!pattern.test(html)) failures.push(`${slug}: migrated page is missing ${label}`);
   }
