@@ -32,7 +32,7 @@ for (const section of sections) {
   if (index > cursor) segments.push({ type: "html", content: afterHeader.slice(cursor, index) });
   const inner = section[2];
   const heading = inner.match(/^<h2>([\s\S]*?)<\/h2>/);
-  if (!heading) throw new Error(\`Cisco lesson section "\${section[1]}" has no leading h2 heading.\`);
+  if (!heading) throw new Error("Cisco lesson section " + section[1] + " has no leading h2 heading.");
   segments.push({
     type: "section",
     id: section[1],
