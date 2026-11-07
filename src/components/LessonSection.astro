@@ -1,6 +1,7 @@
 ---
 import LessonFigure from "./LessonFigure.astro";
 import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
+import LessonTable from "./LessonTable.astro";
 
 interface Props {
   id: string;
@@ -12,15 +13,40 @@ const { id, heading, content } = Astro.props;
 type SectionSegment =
   | { type: "html"; content: string }
   | { type: "figure"; content: string }
-  | { type: "definition-grid"; content: string };
+  | { type: "definition-grid"; content: string }
+  | { type: "table"; content: string };
 
 const segments: SectionSegment[] = [];
-const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">/g;
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">/g;
 let cursor = 0;
 let match: RegExpExecArray | null;
 while ((match = blockPattern.exec(content))) {
   const index = match.index;
   if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+
+  if (match[0].startsWith("<table")) {
+    // Tables may contain nested markup; balance table tags to preserve the
+    // complete original table rather than relying on a fragile closing-tag regex.
+    const tablePattern = /<\/?table\b[^>]*>/g;
+    tablePattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = tablePattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else depth += 1;
+      if (depth === 0) {
+        end = tablePattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson table is missing its matching closing tag.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "table", content: content.slice(openingEnd, end - "</table>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
 
   if (match[0].startsWith("<figure")) {
     const end = content.indexOf("</figure>", blockPattern.lastIndex);
@@ -63,7 +89,9 @@ if (/<div class="definition-grid">/.test(content) && !segments.some((segment) =>
 <section class="lesson-section" id={id} data-lesson-section>
   <h2>{heading}</h2>
   {segments.map((segment) =>
-    segment.type === "figure" ? (
+    segment.type === "table" ? (
+      <LessonTable content={segment.content} />
+    ) : segment.type === "figure" ? (
       <LessonFigure content={segment.content} />
     ) : segment.type === "definition-grid" ? (
       <LessonDefinitionGrid content={segment.content} />
