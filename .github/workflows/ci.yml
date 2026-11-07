@@ -45,6 +45,8 @@ jobs:
           '
       - name: Type-check and build
         run: npm run build
+      - name: Validate generated local links and fragments
+        run: npm run validate:links
       - name: Validate Cisco lesson and quiz integrity
         run: node scripts/validate-lessons.mjs
       - name: Verify preserved routes and Cisco curriculum
