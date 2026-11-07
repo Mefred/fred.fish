@@ -121,11 +121,27 @@ for (const slug of migratedLessons) {
     failures.push(`${slug}: missing Astro route source ${routeSource}`);
     continue;
   }
+  const source = readFileSync(routeSource, "utf8");
+  const expectedLegacyImport = `../../../../../cisco/learning/modules/${slug}/index.html?raw`;
+  if (!source.includes(expectedLegacyImport)) {
+    fail(slug, `Astro route does not import its matching legacy lesson (${expectedLegacyImport})`);
+  }
+  if (!source.includes("LegacyLessonLayout") || !/source=\{lessonSource\}/.test(source)) {
+    fail(slug, "Astro route must render its source through LegacyLessonLayout");
+  }
   if (!existsSync(builtPage)) {
     failures.push(`${slug}: migrated Astro route was not generated at ${builtPage}`);
     continue;
   }
   const html = readFileSync(builtPage, "utf8");
+  const builtQuestionCount = [...html.matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
+  const sourceQuestionCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
+  if (builtQuestionCount !== sourceQuestionCount) {
+    fail(slug, `generated route contains ${builtQuestionCount} quiz questions; legacy source contains ${sourceQuestionCount}`);
+  }
+  if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
+    fail(slug, "generated route is missing its original lesson completion key");
+  }
   for (const [label, pattern] of [
     ["canonical URL", /<link rel="canonical" href=/],
     ["article metadata", /property="og:type" content="article"/],
