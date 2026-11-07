@@ -1,5 +1,5 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs";
-import { dirname, extname, join, relative, resolve, sep } from "node:path";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { extname, join, relative, resolve, sep } from "node:path";
 
 const output = resolve("dist");
 const htmlFiles = [];
@@ -74,7 +74,7 @@ for (const page of htmlFiles) {
       continue;
     }
 
-    if (resolved.hash) {
+    if (resolved.hash && extname(resolved.target).toLowerCase() === ".html") {
       let ids = cache.get(resolved.target);
       if (!ids) {
         ids = idsIn(readFileSync(resolved.target, "utf8"));
