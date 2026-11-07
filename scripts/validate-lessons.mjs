@@ -97,6 +97,9 @@ const migratedLessons = [
   "13-vlans-8021q-trunking",
   "14-inter-vlan-routing",
   "15-spanning-tree-protocol",
+  "16-etherchannel-link-aggregation",
+  "17-wireless-lans-architectures",
+  "18-static-default-routing",
 ];
 
 for (const slug of migratedLessons) {
