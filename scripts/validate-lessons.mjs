@@ -29,7 +29,7 @@ for (const directory of directories) {
     fail(directory.name, `completion key should be "${expectedNumber}", got "${completion ?? "missing"}"`);
   }
 
-  const quiz = html.match(/<div class="quiz-panel" data-lesson-quiz>([\s\S]*?)<\/div>\s*<\/section>/)?.[1];
+  const quiz = html.match(/<div class="quiz-panel" data-lesson-quiz(?: [^>]*)?>([\s\S]*?)<\/div>\s*<\/section>/)?.[1];
   if (!quiz) {
     fail(directory.name, "missing lesson quiz panel");
     continue;
