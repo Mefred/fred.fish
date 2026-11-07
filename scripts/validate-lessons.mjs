@@ -10,14 +10,14 @@ let questionTotal = 0;
 const fail = (module, message) => failures.push(`${module}: ${message}`);
 
 const quizSignature = (html) =>
-  [...html.matchAll(/<fieldset class="quiz-question" data-correct="([^"]+)">([\\s\\S]*?)<\\/fieldset>/g)].map(([, correct, body]) => ({
+  [...html.matchAll(/<fieldset class="quiz-question" data-correct="([^"]+)">([\s\S]*?)<\/fieldset>/g)].map(([, correct, body]) => ({
     correct,
-    legend: body.match(/<legend>([\\s\\S]*?)<\\/legend>/)?.[1]?.replace(/\\s+/g, " ").trim() ?? null,
-    options: [...body.matchAll(/<label class="quiz-option">([\\s\\S]*?)<\\/label>/g)].map(([, option]) => ({
+    legend: body.match(/<legend>([\s\S]*?)<\/legend>/)?.[1]?.replace(/\s+/g, " ").trim() ?? null,
+    options: [...body.matchAll(/<label class="quiz-option">([\s\S]*?)<\/label>/g)].map(([, option]) => ({
       value: option.match(/<input[^>]*value="([^"]+)"/)?.[1] ?? null,
       name: option.match(/<input[^>]*name="([^"]+)"/)?.[1] ?? null,
       explanation: option.match(/data-explanation="([^"]*)"/)?.[1] ?? null,
-      text: option.match(/<span>([\\s\\S]*?)<\\/span>/)?.[1]?.replace(/\\s+/g, " ").trim() ?? null,
+      text: option.match(/<span>([\s\S]*?)<\/span>/)?.[1]?.replace(/\s+/g, " ").trim() ?? null,
     })),
   }));
 
