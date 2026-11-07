@@ -85,6 +85,9 @@ const migratedLessons = [
   "01-physical-layer",
   "02-data-link-layer",
   "03-ethernet-switching",
+  "04-network-devices-topologies",
+  "05-network-models-encapsulation",
+  "06-number-systems-binary-math",
 ];
 
 for (const slug of migratedLessons) {
