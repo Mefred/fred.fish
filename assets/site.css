@@ -57,8 +57,8 @@ body.sidebar-collapsed .main { margin-left: 72px; }
 body.sidebar-collapsed .wordmark { padding-inline: 7px; }
 body.sidebar-collapsed .wordmark > span:last-child,
 body.sidebar-collapsed .tree-label,
-body.sidebar-collapsed .tree-row > span:not(.file-icon):not(.folder-icon):not(.chevron),
-body.sidebar-collapsed .sidebar-bottom:not(.status-dot) { display: none; }
+body.sidebar-collapsed .tree-row > span:not(.file-icon):not(.folder-icon):not(.chevron), body.sidebar-collapsed .tree-row .folder-name,
+body.sidebar-collapsed .sidebar-bottom > span:last-child { display: none; }
 body.sidebar-collapsed .tree-row { justify-content: center; gap: 0; padding-inline: 4px; }
 body.sidebar-collapsed .tree-row .chevron { display: none; }
 body.sidebar-collapsed .tree-children { display: none !important; }
