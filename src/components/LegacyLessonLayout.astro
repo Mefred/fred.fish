@@ -1,4 +1,6 @@
 ---
+import CiscoSidebar from "./CiscoSidebar.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -9,6 +11,11 @@ const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1];
 if (!body) {
   throw new Error("Legacy Cisco lesson source does not contain a readable body element.");
 }
+const sidebarPattern = /<button class="mobile-menu"[\s\S]*?<div class="sidebar-backdrop" hidden><\/div>/;
+if (!sidebarPattern.test(body)) {
+  throw new Error("Cisco lesson source is missing the expected shared navigation region.");
+}
+const lessonContent = body.replace(sidebarPattern, "");
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -31,6 +38,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <script src="/assets/learning.js" defer></script>
   </head>
   <body>
-    <Fragment set:html={body} />
+    <CiscoSidebar />
+    <Fragment set:html={lessonContent} />
   </body>
 </html>
