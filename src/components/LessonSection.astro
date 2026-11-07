@@ -3,6 +3,7 @@ import LessonFigure from "./LessonFigure.astro";
 import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
 import LessonTable from "./LessonTable.astro";
 import LessonCommandBlock from "./LessonCommandBlock.astro";
+import LessonQuiz from "./LessonQuiz.astro";
 
 interface Props {
   id: string;
@@ -16,15 +17,38 @@ type SectionSegment =
   | { type: "figure"; content: string }
   | { type: "definition-grid"; content: string }
   | { type: "table"; content: string }
-  | { type: "command-block"; content: string };
+  | { type: "command-block"; content: string }
+  | { type: "quiz"; content: string };
 
 const segments: SectionSegment[] = [];
-const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">/g;
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">|<div class="quiz-panel" data-lesson-quiz>/g;
 let cursor = 0;
 let match: RegExpExecArray | null;
 while ((match = blockPattern.exec(content))) {
   const index = match.index;
   if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+
+  if (match[0].startsWith("<div class=\"quiz-panel\"")) {
+    const divPattern = /<\/?div\b[^>]*>/g;
+    divPattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = divPattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+      if (depth === 0) {
+        end = divPattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson quiz is missing its matching closing div.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "quiz", content: content.slice(openingEnd, end - "</div>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
 
   if (match[0].startsWith("<div class=\"command-block\"")) {
     const divPattern = /<\/?div\b[^>]*>/g;
@@ -113,7 +137,9 @@ if (/<div class="definition-grid">/.test(content) && !segments.some((segment) =>
 <section class="lesson-section" id={id} data-lesson-section>
   <h2>{heading}</h2>
   {segments.map((segment) =>
-    segment.type === "command-block" ? (
+    segment.type === "quiz" ? (
+      <LessonQuiz content={segment.content} />
+    ) : segment.type === "command-block" ? (
       <LessonCommandBlock content={segment.content} />
     ) : segment.type === "table" ? (
       <LessonTable content={segment.content} />
