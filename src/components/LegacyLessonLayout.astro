@@ -5,7 +5,7 @@ interface Props {
   source: string;
 }
 const { title, description, source } = Astro.props;
-const body = source.match(/<body[^>]*>([\\s\\S]*?)<\\/body>/i)?.[1];
+const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1];
 if (!body) {
   throw new Error("Legacy Cisco lesson source does not contain a readable body element.");
 }
