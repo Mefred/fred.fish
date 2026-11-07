@@ -47,6 +47,8 @@ for (const directory of directories) {
     const body = question[2];
     const optionLabels = [...body.matchAll(/<label class="quiz-option">([\s\S]*?)<\/label>/g)];
     const optionValues = optionLabels.map((option) => option[1].match(/<input[^>]*value="([A-D])"/)?.[1]);
+    const inputTags = optionLabels.map((option) => option[1].match(/<input[^>]*>/)?.[0] ?? "");
+    const radioNames = inputTags.map((input) => input.match(/name="([^"]+)"/)?.[1]);
     const questionNumber = index + 1;
 
     if (!body.includes("<legend>")) {
@@ -58,8 +60,14 @@ for (const directory of directories) {
     if (optionValues.some((value) => !value) || new Set(optionValues).size !== optionValues.length) {
       fail(directory.name, `question ${questionNumber} has missing or duplicate A-D option values`);
     }
-    if (correct.length === 0 || correct.some((value) => !["A", "B", "C", "D"].includes(value))) {
+    if (correct.length !== 1 || correct.some((value) => !["A", "B", "C", "D"].includes(value))) {
       fail(directory.name, `question ${questionNumber} has invalid data-correct value "${question[1]}"`);
+    }
+    if (inputTags.some((input) => !/type="radio"/.test(input))) {
+      fail(directory.name, `question ${questionNumber} contains a non-radio answer input`);
+    }
+    if (radioNames.some((name) => !name) || new Set(radioNames).size !== 1) {
+      fail(directory.name, `question ${questionNumber} options must share one radio-group name`);
     }
     if (correct.some((value) => !optionValues.includes(value))) {
       fail(directory.name, `question ${questionNumber} marks an answer correct that is not present`);
