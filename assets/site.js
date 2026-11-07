@@ -5,15 +5,20 @@
   const closeMenu = () => {
     document.body.classList.remove("nav-open");
     menuButton?.setAttribute("aria-expanded", "false");
+    if (backdrop) backdrop.hidden = true;
   };
 
   menuButton?.addEventListener("click", () => {
     const open = document.body.classList.toggle("nav-open");
     menuButton.setAttribute("aria-expanded", String(open));
+    if (backdrop) backdrop.hidden = !open;
   });
   backdrop?.addEventListener("click", closeMenu);
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") closeMenu();
+  });
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", closeMenu);
   });
 
   document.querySelectorAll(".folder-toggle").forEach(button => {
