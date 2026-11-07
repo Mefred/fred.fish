@@ -1,5 +1,6 @@
 ---
 import LessonFigure from "./LessonFigure.astro";
+import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
 
 interface Props {
   id: string;
@@ -10,21 +11,53 @@ const { id, heading, content } = Astro.props;
 
 type SectionSegment =
   | { type: "html"; content: string }
-  | { type: "figure"; content: string };
+  | { type: "figure"; content: string }
+  | { type: "definition-grid"; content: string };
 
 const segments: SectionSegment[] = [];
-const figurePattern = /<figure class="lesson-figure">([\s\S]*?)<\/figure>/g;
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">/g;
 let cursor = 0;
-for (const figure of content.matchAll(figurePattern)) {
-  const index = figure.index;
-  if (index === undefined) continue;
+let match: RegExpExecArray | null;
+while ((match = blockPattern.exec(content))) {
+  const index = match.index;
   if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
-  segments.push({ type: "figure", content: figure[1] });
-  cursor = index + figure[0].length;
+
+  if (match[0].startsWith("<figure")) {
+    const end = content.indexOf("</figure>", blockPattern.lastIndex);
+    if (end === -1) throw new Error("Cisco lesson figure is missing its closing tag.");
+    segments.push({ type: "figure", content: content.slice(blockPattern.lastIndex, end) });
+    cursor = end + "</figure>".length;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  // Definition cards contain nested divs, so find the matching wrapper by
+  // balancing div tags instead of stopping at the first closing div.
+  const divPattern = /<\/?div\b[^>]*>/g;
+  divPattern.lastIndex = match.index;
+  let depth = 0;
+  let end = -1;
+  let tag: RegExpExecArray | null;
+  while ((tag = divPattern.exec(content))) {
+    if (tag[0].startsWith("</")) depth -= 1;
+    else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+    if (depth === 0) {
+      end = divPattern.lastIndex;
+      break;
+    }
+  }
+  if (end === -1) throw new Error("Cisco lesson definition grid is missing its matching closing div.");
+  const openingEnd = content.indexOf(">", match.index) + 1;
+  segments.push({ type: "definition-grid", content: content.slice(openingEnd, end - "</div>".length) });
+  cursor = end;
+  blockPattern.lastIndex = cursor;
 }
 if (cursor < content.length) segments.push({ type: "html", content: content.slice(cursor) });
-if (/<figure\b/.test(content) && !figurePattern.test(content)) {
+if (/<figure\b/.test(content) && !segments.some((segment) => segment.type === "figure")) {
   throw new Error("Cisco lesson figure does not use the expected lesson-figure markup.");
+}
+if (/<div class="definition-grid">/.test(content) && !segments.some((segment) => segment.type === "definition-grid")) {
+  throw new Error("Cisco lesson definition grid could not be parsed.");
 }
 ---
 <section class="lesson-section" id={id} data-lesson-section>
@@ -32,6 +65,8 @@ if (/<figure\b/.test(content) && !figurePattern.test(content)) {
   {segments.map((segment) =>
     segment.type === "figure" ? (
       <LessonFigure content={segment.content} />
+    ) : segment.type === "definition-grid" ? (
+      <LessonDefinitionGrid content={segment.content} />
     ) : (
       <Fragment set:html={segment.content} />
     )
