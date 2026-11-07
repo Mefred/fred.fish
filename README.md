@@ -26,6 +26,7 @@ Useful commands:
 | `npm run check` | Run Astro and TypeScript diagnostics |
 | `npm run build` | Check and build the static site into `dist/` |
 | `npm run preview` | Preview the generated production build |
+| `npm run validate:links` | Check generated local links and in-page fragment targets (after building) |
 
 ## Project structure
 
@@ -47,6 +48,7 @@ Pull requests and pushes to the redesign branches run GitHub Actions checks for:
 
 - Astro diagnostics and static build
 - npm audit, with high and critical findings blocking CI
+- Local links, generated assets, and in-page fragment targets across every generated HTML page
 - 30 Cisco lesson routes and all 95 quiz questions
 - Quiz prompts, correct answers, options, radio names, and explanations
 - Lesson component/source parity and required published routes
