@@ -91,6 +91,12 @@ const migratedLessons = [
   "07-ipv4-addressing-subnetting",
   "08-ipv6-addressing",
   "09-network-layer-routing-basics",
+  "10-arp-neighbor-discovery-icmp",
+  "11-transport-layer",
+  "12-application-layer-services",
+  "13-vlans-8021q-trunking",
+  "14-inter-vlan-routing",
+  "15-spanning-tree-protocol",
 ];
 
 for (const slug of migratedLessons) {
