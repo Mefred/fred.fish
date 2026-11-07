@@ -105,3 +105,27 @@ a.module-row:hover { transform:translateY(-1px); border-color:#39766f; backgroun
 .course-progress .progress-track { height:6px; margin:10px 0 7px; overflow:hidden; border-radius:10px; background:#26363c; }
 .course-progress .progress-track span { display:block; width:0; height:100%; background:var(--teal); transition:width .2s; }
 .course-progress p { margin:0; color:var(--subtle); font-size:10px; }
+
+
+/* Keep lesson media and dense technical content usable at narrow widths. */
+.lesson-figure { min-width: 0; overflow: hidden; }
+.lesson-figure svg,
+.lesson-figure img { display: block; width: 100%; max-width: 100%; height: auto; }
+.lesson-content,
+.lesson-main,
+.lesson-section { min-width: 0; }
+.lesson-section { overflow-wrap: break-word; }
+.lesson-table-wrap { max-width: 100%; overscroll-behavior-inline: contain; }
+.lesson-table { min-width: 520px; }
+.lesson-nav { flex-wrap: wrap; }
+.lesson-nav a { min-width: 0; }
+.quiz-option { min-width: 0; }
+.quiz-option > span { min-width: 0; }
+@media (max-width: 600px) {
+  .lesson-figure { margin-inline: -2px; }
+  .lesson-nav { align-items: flex-start; }
+  .lesson-nav a { flex: 1 1 45%; }
+  .quiz-panel { padding: 13px; }
+  .quiz-option { padding: 10px; }
+  .option-feedback { margin-left: 0; }
+}
