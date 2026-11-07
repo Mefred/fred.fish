@@ -33,6 +33,11 @@ jobs:
             const audit = JSON.parse(readFileSync(process.env.RUNNER_TEMP + "/npm-audit.json", "utf8"));
             const vulnerabilities = audit.vulnerabilities ?? {};
             console.log("Dependency audit summary:", JSON.stringify(audit.metadata?.vulnerabilities ?? {}));
+            const counts = audit.metadata?.vulnerabilities ?? {};
+            if ((counts.high ?? 0) > 0 || (counts.critical ?? 0) > 0) {
+              console.error("High or critical dependency vulnerabilities must be resolved before merge.");
+              process.exitCode = 1;
+            }
             for (const [name, issue] of Object.entries(vulnerabilities)) {
               const advisories = (issue.via ?? []).filter((item) => typeof item === "object").map((item) => item.title);
               console.log("- " + name + " [" + issue.severity + "] fix=" + JSON.stringify(issue.fixAvailable) + " advisories=" + advisories.join("; "));
