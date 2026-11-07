@@ -106,6 +106,9 @@ const migratedLessons = [
   "22-network-security-fundamentals",
   "23-network-automation-programmability",
   "24-ios-xe-cli-device-management",
+  "25-access-control-lists",
+  "26-nat-dhcp-configuration",
+  "27-layer2-security-wireless-security",
 ];
 
 for (const slug of migratedLessons) {
