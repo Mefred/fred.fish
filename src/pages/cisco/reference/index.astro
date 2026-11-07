@@ -1,0 +1,66 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import Eyebrow from "../../../components/Eyebrow.astro";
+const groups = [
+ {title:"Device inspection",mode:"EXEC MODE",description:"Identify the software version, hardware, uptime, and installed resources.",commands:["show version","show inventory","show platform","show clock"]},
+ {title:"Interfaces and addressing",mode:"EXEC MODE",description:"Inspect interface state, IP configuration, errors, and descriptions.",commands:["show ip interface brief","show interfaces","show interfaces description","show running-config | section interface"]},
+ {title:"Switching and VLANs",mode:"EXEC MODE",description:"Inspect VLAN membership, trunk state, and learned MAC addresses.",commands:["show vlan brief","show interfaces trunk","show mac address-table"]},
+ {title:"Routing and connectivity",mode:"EXEC MODE",description:"Check route selection and test reachability from the device.",commands:["show ip route","show ip protocols","ping 192.0.2.1","traceroute 192.0.2.1"]},
+ {title:"Configure an interface",mode:"CONFIGURATION MODE",description:"A basic interface template using a documentation-only address. Replace values for the actual lab.",commands:["configure terminal","interface GigabitEthernet1/0/1"," description Example connection"," ip address 192.0.2.1 255.255.255.0"," no shutdown","end","copy running-config startup-config"]}
+];
+---
+<SiteLayout title="IOS XE Reference — fred.fish" description="Searchable Cisco IOS XE command examples and configuration patterns." active="cisco">
+  <div class="workspace-page">
+    <div class="workspace-breadcrumb"><a href="/">fred.fish</a><span>/</span><a href="/cisco/">cisco</a><span>/</span><strong>reference</strong></div>
+    <header class="workspace-hero">
+      <Eyebrow index="03" label="CISCO / QUICK LOOKUP" />
+      <h1>IOS XE command<br /><span>reference.</span></h1>
+      <p>A practical lookup for common inspection, verification, and configuration workflows. Search by command or topic, then copy an individual command or an entire example.</p>
+    </header>
+    <div class="reference-warning"><strong>Platform scope</strong><p>Examples use Cisco IOS XE CLI conventions. Command availability and interface names vary by device, feature set, and software release. Verify against the documentation for your platform before applying changes.</p></div>
+    <label class="reference-search"><span aria-hidden="true">⌕</span><span class="sr-only">Search commands</span><input id="reference-search" type="search" placeholder="Search commands, interfaces, VLANs, routing..." autocomplete="off" /></label>
+    <p class="reference-count" id="reference-count" aria-live="polite">Showing all 5 command groups</p>
+    <div class="reference-groups">
+      {groups.map((group,i) => <section class="reference-group" data-reference-group>
+        <div class="reference-group-heading"><div><Eyebrow label={`REFERENCE / 0${i+1}`} /><h2>{group.title}</h2><p>{group.description}</p></div><span>{group.mode}</span></div>
+        <div class="command-list" data-searchable={`${group.title} ${group.description} ${group.commands.join(" ")}`.toLowerCase()}>
+          {group.commands.map((command) => <div class="command-row"><code>{command}</code><button type="button" class="copy-command" data-copy={command} aria-label={`Copy ${command}`}>Copy</button></div>)}
+        </div>
+        <button type="button" class="copy-group" data-copy-group>Copy full example <span aria-hidden="true">↗</span></button>
+      </section>)}
+    </div>
+    <p class="reference-empty" id="reference-empty" hidden>No matching command groups. Try a different search term.</p>
+    <p class="reference-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
+  </div>
+  <script>
+    const search = document.querySelector("#reference-search");
+    const groups = [...document.querySelectorAll("[data-reference-group]")];
+    const count = document.querySelector("#reference-count");
+    const empty = document.querySelector("#reference-empty");
+    const feedback = document.querySelector("#copy-feedback");
+    search?.addEventListener("input", () => {
+      const query = search.value.trim().toLowerCase();
+      let visible = 0;
+      groups.forEach((group) => {
+        const match = !query || group.querySelector("[data-searchable]")?.dataset.searchable.includes(query);
+        group.hidden = !match;
+        if (match) visible++;
+      });
+      if (count) count.textContent = query ? "Showing " + visible + " of " + groups.length + " command groups" : "Showing all " + groups.length + " command groups";
+      if (empty) empty.hidden = visible > 0;
+    });
+    const copy = async (value) => {
+      try {
+        await navigator.clipboard.writeText(value);
+        if (feedback) feedback.textContent = "Copied to clipboard.";
+      } catch {
+        if (feedback) feedback.textContent = "Clipboard access was unavailable. Select and copy the command manually.";
+      }
+    };
+    document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => copy(button.dataset.copy || "")));
+    document.querySelectorAll("[data-copy-group]").forEach((button) => button.addEventListener("click", () => {
+      const list = button.closest(".reference-group")?.querySelectorAll(".command-row code");
+      copy([...(list || [])].map((code) => code.textContent || "").join("\n"));
+    }));
+  </script>
+</SiteLayout>
