@@ -11,7 +11,9 @@ const { eyebrow, title, lead, metadata } = Astro.props;
   <div class="eyebrow">{eyebrow}</div>
   <h1>{title}</h1>
   <p class="page-lead">{lead}</p>
-  <div class="lesson-meta">
-    {metadata.map((item) => <span>{item}</span>)}
-  </div>
+  {metadata.length > 0 && (
+    <div class="lesson-meta">
+      {metadata.map((item) => <span>{item}</span>)}
+    </div>
+  )}
 </header>
