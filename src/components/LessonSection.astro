@@ -2,6 +2,7 @@
 import LessonFigure from "./LessonFigure.astro";
 import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
 import LessonTable from "./LessonTable.astro";
+import LessonCommandBlock from "./LessonCommandBlock.astro";
 
 interface Props {
   id: string;
@@ -14,15 +15,38 @@ type SectionSegment =
   | { type: "html"; content: string }
   | { type: "figure"; content: string }
   | { type: "definition-grid"; content: string }
-  | { type: "table"; content: string };
+  | { type: "table"; content: string }
+  | { type: "command-block"; content: string };
 
 const segments: SectionSegment[] = [];
-const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">/g;
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">/g;
 let cursor = 0;
 let match: RegExpExecArray | null;
 while ((match = blockPattern.exec(content))) {
   const index = match.index;
   if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+
+  if (match[0].startsWith("<div class=\"command-block\"")) {
+    const divPattern = /<\/?div\\b[^>]*>/g;
+    divPattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = divPattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else if (!/\\/\\s*>$/.test(tag[0])) depth += 1;
+      if (depth === 0) {
+        end = divPattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson command block is missing its matching closing div.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "command-block", content: content.slice(openingEnd, end - "</div>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
 
   if (match[0].startsWith("<table")) {
     // Tables may contain nested markup; balance table tags to preserve the
@@ -89,7 +113,9 @@ if (/<div class="definition-grid">/.test(content) && !segments.some((segment) =>
 <section class="lesson-section" id={id} data-lesson-section>
   <h2>{heading}</h2>
   {segments.map((segment) =>
-    segment.type === "table" ? (
+    segment.type === "command-block" ? (
+      <LessonCommandBlock content={segment.content} />
+    ) : segment.type === "table" ? (
       <LessonTable content={segment.content} />
     ) : segment.type === "figure" ? (
       <LessonFigure content={segment.content} />
