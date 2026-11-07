@@ -170,6 +170,12 @@ for (const slug of migratedLessons) {
   if (builtCommandBlockCount !== sourceCommandBlockCount) {
     fail(slug, `generated route contains ${builtCommandBlockCount} component command blocks; legacy source contains ${sourceCommandBlockCount}`);
   }
+
+  const sourceQuizPanelCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<div class="quiz-panel" data-lesson-quiz>/g)].length;
+  const builtQuizPanelCount = [...html.matchAll(/<div class="quiz-panel" data-lesson-quiz data-lesson-quiz-component>/g)].length;
+  if (builtQuizPanelCount !== sourceQuizPanelCount) {
+    fail(slug, `generated route contains ${builtQuizPanelCount} component quiz panels; legacy source contains ${sourceQuizPanelCount}`);
+  }
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
