@@ -26,8 +26,11 @@ jobs:
         run: npm install
       - name: Type-check and build
         run: npm run build
-      - name: Verify preserved routes
+      - name: Verify preserved routes and Cisco curriculum
+        shell: bash
         run: |
+          set -euo pipefail
+
           test -f dist/index.html
           test -f dist/about/index.html
           test -f dist/projects/index.html
@@ -36,7 +39,20 @@ jobs:
           test -f dist/cisco/learning/index.html
           grep -q 'All modules' dist/cisco/learning/index.html
           grep -q 'module-search' dist/cisco/learning/index.html
-          test -f dist/cisco/learning/index.html
-          test -f dist/cisco/learning/modules/30-integrated-network-troubleshooting/index.html
+          test -f dist/cisco/labs/index.html
+          test -f dist/cisco/reference/index.html
           test -f dist/reef/index.html
           test -f dist/CNAME
+
+          lesson_dir="dist/cisco/learning/modules"
+          lesson_count="$(find "$lesson_dir" -mindepth 2 -maxdepth 2 -name index.html | wc -l)"
+          test "$lesson_count" -eq 30
+
+          # Every published lesson must retain its completion control and quiz.
+          for lesson in "$lesson_dir"/*/index.html; do
+            grep -q 'data-completion="[0-9][0-9]"' "$lesson"
+            grep -q 'data-lesson-quiz' "$lesson"
+          done
+
+          question_count="$(grep -roh 'class="quiz-question"' "$lesson_dir" | wc -l)"
+          test "$question_count" -eq 95
