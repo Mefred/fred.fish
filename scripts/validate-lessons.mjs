@@ -139,6 +139,12 @@ for (const slug of migratedLessons) {
   if (builtQuestionCount !== sourceQuestionCount) {
     fail(slug, `generated route contains ${builtQuestionCount} quiz questions; legacy source contains ${sourceQuestionCount}`);
   }
+
+  const sourceSectionCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<section class="lesson-section" id=/g)].length;
+  const builtSectionCount = [...html.matchAll(/<section class="lesson-section" id="[^"]+" data-lesson-section>/g)].length;
+  if (builtSectionCount !== sourceSectionCount) {
+    fail(slug, `generated route contains ${builtSectionCount} component sections; legacy source contains ${sourceSectionCount}`);
+  }
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
@@ -153,6 +159,7 @@ for (const slug of migratedLessons) {
     ["shared Cisco sidebar", /<aside class="sidebar" id="sidebar">/],
     ["lesson body", /<main class="main">[\s\S]*<article class="lesson-main">/],
     ["component-rendered lesson header", /<header class="lesson-header" data-lesson-header>/],
+    ["component-rendered lesson sections", /<section class="lesson-section" id="[^"]+" data-lesson-section>/],
   ]) {
     if (!pattern.test(html)) failures.push(`${slug}: migrated page is missing ${label}`);
   }
