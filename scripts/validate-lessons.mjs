@@ -9,6 +9,18 @@ let questionTotal = 0;
 
 const fail = (module, message) => failures.push(`${module}: ${message}`);
 
+const quizSignature = (html) =>
+  [...html.matchAll(/<fieldset class="quiz-question" data-correct="([^"]+)">([\\s\\S]*?)<\\/fieldset>/g)].map(([, correct, body]) => ({
+    correct,
+    legend: body.match(/<legend>([\\s\\S]*?)<\\/legend>/)?.[1]?.replace(/\\s+/g, " ").trim() ?? null,
+    options: [...body.matchAll(/<label class="quiz-option">([\\s\\S]*?)<\\/label>/g)].map(([, option]) => ({
+      value: option.match(/<input[^>]*value="([^"]+)"/)?.[1] ?? null,
+      name: option.match(/<input[^>]*name="([^"]+)"/)?.[1] ?? null,
+      explanation: option.match(/data-explanation="([^"]*)"/)?.[1] ?? null,
+      text: option.match(/<span>([\\s\\S]*?)<\\/span>/)?.[1]?.replace(/\\s+/g, " ").trim() ?? null,
+    })),
+  }));
+
 if (directories.length !== 30) {
   failures.push(`Expected 30 lesson directories, found ${directories.length}`);
 }
@@ -139,6 +151,11 @@ for (const slug of migratedLessons) {
   const sourceQuestionCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<fieldset class="quiz-question" data-correct=/g)].length;
   if (builtQuestionCount !== sourceQuestionCount) {
     fail(slug, `generated route contains ${builtQuestionCount} quiz questions; legacy source contains ${sourceQuestionCount}`);
+  }
+
+  const legacyHtml = readFileSync(join(legacyRoot, slug, "index.html"), "utf8");
+  if (JSON.stringify(quizSignature(html)) !== JSON.stringify(quizSignature(legacyHtml))) {
+    fail(slug, "generated quiz question text, answer keys, options, radio names, or explanations differ from the legacy source");
   }
 
   const sourceSectionCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<section class="lesson-section" id=/g)].length;
