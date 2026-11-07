@@ -1,0 +1,12 @@
+---
+interface Props {
+  id: string;
+  heading: string;
+  content: string;
+}
+const { id, heading, content } = Astro.props;
+---
+<section class="lesson-section" id={id} data-lesson-section>
+  <h2>{heading}</h2>
+  <Fragment set:html={content} />
+</section>
