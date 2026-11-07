@@ -4,6 +4,7 @@ import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
 import LessonTable from "./LessonTable.astro";
 import LessonCommandBlock from "./LessonCommandBlock.astro";
 import LessonQuiz from "./LessonQuiz.astro";
+import LessonCodeBlock from "./LessonCodeBlock.astro";
 
 interface Props {
   id: string;
@@ -18,15 +19,25 @@ type SectionSegment =
   | { type: "definition-grid"; content: string }
   | { type: "table"; content: string }
   | { type: "command-block"; content: string }
-  | { type: "quiz"; content: string };
+  | { type: "quiz"; content: string }
+  | { type: "code-block"; content: string };
 
 const segments: SectionSegment[] = [];
-const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">|<div class="quiz-panel" data-lesson-quiz>/g;
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">|<div class="quiz-panel" data-lesson-quiz>|<pre>/g;
 let cursor = 0;
 let match: RegExpExecArray | null;
 while ((match = blockPattern.exec(content))) {
   const index = match.index;
   if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+
+  if (match[0] === "<pre>") {
+    const end = content.indexOf("</pre>", blockPattern.lastIndex);
+    if (end === -1) throw new Error("Cisco lesson code block is missing its closing pre tag.");
+    segments.push({ type: "code-block", content: content.slice(blockPattern.lastIndex, end) });
+    cursor = end + "</pre>".length;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
 
   if (match[0].startsWith("<div class=\"quiz-panel\"")) {
     const divPattern = /<\/?div\b[^>]*>/g;
@@ -137,7 +148,9 @@ if (/<div class="definition-grid">/.test(content) && !segments.some((segment) =>
 <section class="lesson-section" id={id} data-lesson-section>
   <h2>{heading}</h2>
   {segments.map((segment) =>
-    segment.type === "quiz" ? (
+    segment.type === "code-block" ? (
+      <LessonCodeBlock content={segment.content} />
+    ) : segment.type === "quiz" ? (
       <LessonQuiz content={segment.content} />
     ) : segment.type === "command-block" ? (
       <LessonCommandBlock content={segment.content} />
