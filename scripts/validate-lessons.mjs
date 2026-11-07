@@ -141,13 +141,13 @@ for (const slug of migratedLessons) {
     fail(slug, `generated route contains ${builtQuestionCount} quiz questions; legacy source contains ${sourceQuestionCount}`);
   }
 
-  const sourceSectionCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<section class="lesson-section" id=/g)].length;
+  const sourceSectionCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<section class="lesson-section" id=/g)].length;
   const builtSectionCount = [...html.matchAll(/<section class="lesson-section" id="[^"]+" data-lesson-section>/g)].length;
   if (builtSectionCount !== sourceSectionCount) {
     fail(slug, `generated route contains ${builtSectionCount} component sections; legacy source contains ${sourceSectionCount}`);
   }
 
-  const sourceFigureCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<figure class="lesson-figure">/g)].length;
+  const sourceFigureCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<figure class="lesson-figure">/g)].length;
   const builtFigureCount = [...html.matchAll(/<figure class="lesson-figure" data-lesson-figure>/g)].length;
   if (builtFigureCount !== sourceFigureCount) {
     fail(slug, `generated route contains ${builtFigureCount} component figures; legacy source contains ${sourceFigureCount}`);
