@@ -1,0 +1,19 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  metadata: string[];
+}
+const { eyebrow, title, lead, metadata } = Astro.props;
+---
+<header class="lesson-header" data-lesson-header>
+  <div class="eyebrow">{eyebrow}</div>
+  <h1>{title}</h1>
+  <p class="page-lead">{lead}</p>
+  {metadata.length > 0 && (
+    <div class="lesson-meta">
+      {metadata.map((item) => <span>{item}</span>)}
+    </div>
+  )}
+</header>

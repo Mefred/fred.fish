@@ -1,0 +1,167 @@
+---
+import LessonFigure from "./LessonFigure.astro";
+import LessonDefinitionGrid from "./LessonDefinitionGrid.astro";
+import LessonTable from "./LessonTable.astro";
+import LessonCommandBlock from "./LessonCommandBlock.astro";
+import LessonQuiz from "./LessonQuiz.astro";
+import LessonCodeBlock from "./LessonCodeBlock.astro";
+
+interface Props {
+  id: string;
+  heading: string;
+  content: string;
+}
+const { id, heading, content } = Astro.props;
+
+type SectionSegment =
+  | { type: "html"; content: string }
+  | { type: "figure"; content: string }
+  | { type: "definition-grid"; content: string }
+  | { type: "table"; content: string }
+  | { type: "command-block"; content: string }
+  | { type: "quiz"; content: string }
+  | { type: "code-block"; content: string };
+
+const segments: SectionSegment[] = [];
+const blockPattern = /<figure class="lesson-figure">|<div class="definition-grid">|<table class="lesson-table">|<div class="command-block">|<div class="quiz-panel" data-lesson-quiz>|<pre>/g;
+let cursor = 0;
+let match: RegExpExecArray | null;
+while ((match = blockPattern.exec(content))) {
+  const index = match.index;
+  if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+
+  if (match[0] === "<pre>") {
+    const end = content.indexOf("</pre>", blockPattern.lastIndex);
+    if (end === -1) throw new Error("Cisco lesson code block is missing its closing pre tag.");
+    segments.push({ type: "code-block", content: content.slice(blockPattern.lastIndex, end) });
+    cursor = end + "</pre>".length;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  if (match[0].startsWith("<div class=\"quiz-panel\"")) {
+    const divPattern = /<\/?div\b[^>]*>/g;
+    divPattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = divPattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+      if (depth === 0) {
+        end = divPattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson quiz is missing its matching closing div.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "quiz", content: content.slice(openingEnd, end - "</div>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  if (match[0].startsWith("<div class=\"command-block\"")) {
+    const divPattern = /<\/?div\b[^>]*>/g;
+    divPattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = divPattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+      if (depth === 0) {
+        end = divPattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson command block is missing its matching closing div.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "command-block", content: content.slice(openingEnd, end - "</div>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  if (match[0].startsWith("<table")) {
+    // Tables may contain nested markup; balance table tags to preserve the
+    // complete original table rather than relying on a fragile closing-tag regex.
+    const tablePattern = /<\/?table\b[^>]*>/g;
+    tablePattern.lastIndex = match.index;
+    let depth = 0;
+    let end = -1;
+    let tag: RegExpExecArray | null;
+    while ((tag = tablePattern.exec(content))) {
+      if (tag[0].startsWith("</")) depth -= 1;
+      else depth += 1;
+      if (depth === 0) {
+        end = tablePattern.lastIndex;
+        break;
+      }
+    }
+    if (end === -1) throw new Error("Cisco lesson table is missing its matching closing tag.");
+    const openingEnd = content.indexOf(">", match.index) + 1;
+    segments.push({ type: "table", content: content.slice(openingEnd, end - "</table>".length) });
+    cursor = end;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  if (match[0].startsWith("<figure")) {
+    const end = content.indexOf("</figure>", blockPattern.lastIndex);
+    if (end === -1) throw new Error("Cisco lesson figure is missing its closing tag.");
+    segments.push({ type: "figure", content: content.slice(blockPattern.lastIndex, end) });
+    cursor = end + "</figure>".length;
+    blockPattern.lastIndex = cursor;
+    continue;
+  }
+
+  // Definition cards contain nested divs, so find the matching wrapper by
+  // balancing div tags instead of stopping at the first closing div.
+  const divPattern = /<\/?div\b[^>]*>/g;
+  divPattern.lastIndex = match.index;
+  let depth = 0;
+  let end = -1;
+  let tag: RegExpExecArray | null;
+  while ((tag = divPattern.exec(content))) {
+    if (tag[0].startsWith("</")) depth -= 1;
+    else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+    if (depth === 0) {
+      end = divPattern.lastIndex;
+      break;
+    }
+  }
+  if (end === -1) throw new Error("Cisco lesson definition grid is missing its matching closing div.");
+  const openingEnd = content.indexOf(">", match.index) + 1;
+  segments.push({ type: "definition-grid", content: content.slice(openingEnd, end - "</div>".length) });
+  cursor = end;
+  blockPattern.lastIndex = cursor;
+}
+if (cursor < content.length) segments.push({ type: "html", content: content.slice(cursor) });
+if (/<figure\b/.test(content) && !segments.some((segment) => segment.type === "figure")) {
+  throw new Error("Cisco lesson figure does not use the expected lesson-figure markup.");
+}
+if (/<div class="definition-grid">/.test(content) && !segments.some((segment) => segment.type === "definition-grid")) {
+  throw new Error("Cisco lesson definition grid could not be parsed.");
+}
+---
+<section class="lesson-section" id={id} data-lesson-section>
+  <h2>{heading}</h2>
+  {segments.map((segment) =>
+    segment.type === "code-block" ? (
+      <LessonCodeBlock content={segment.content} />
+    ) : segment.type === "quiz" ? (
+      <LessonQuiz content={segment.content} />
+    ) : segment.type === "command-block" ? (
+      <LessonCommandBlock content={segment.content} />
+    ) : segment.type === "table" ? (
+      <LessonTable content={segment.content} />
+    ) : segment.type === "figure" ? (
+      <LessonFigure content={segment.content} />
+    ) : segment.type === "definition-grid" ? (
+      <LessonDefinitionGrid content={segment.content} />
+    ) : (
+      <Fragment set:html={segment.content} />
+    )
+  )}
+</section>

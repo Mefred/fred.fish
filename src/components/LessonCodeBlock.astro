@@ -1,0 +1,7 @@
+---
+interface Props {
+  content: string;
+}
+const { content } = Astro.props;
+---
+<pre data-lesson-code-block><Fragment set:html={content} /></pre>

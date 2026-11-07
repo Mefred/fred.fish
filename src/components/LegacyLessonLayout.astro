@@ -1,0 +1,81 @@
+---
+import CiscoSidebar from "./CiscoSidebar.astro";
+import LessonHeader from "./LessonHeader.astro";
+import LessonSection from "./LessonSection.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  source: string;
+}
+const { title, description, source } = Astro.props;
+const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1];
+if (!body) throw new Error("Legacy Cisco lesson source does not contain a readable body element.");
+const sidebarPattern = /<button class="mobile-menu"[\s\S]*?<div class="sidebar-backdrop" hidden><\/div>/;
+if (!sidebarPattern.test(body)) throw new Error("Cisco lesson source is missing the expected shared navigation region.");
+const lessonContent = body.replace(sidebarPattern, "");
+const headerMatch = lessonContent.match(/<header class="lesson-header"><div class="eyebrow">([\s\S]*?)<\/div><h1>([\s\S]*?)<\/h1><p class="page-lead">([\s\S]*?)<\/p>(?:<div class="lesson-meta">([\s\S]*?)<\/div>)?<\/header>/);
+if (!headerMatch || headerMatch.index === undefined) {
+  throw new Error("Cisco lesson source is missing the expected lesson header.");
+}
+const metadata = [...(headerMatch[4] ?? "").matchAll(/<span>([\s\S]*?)<\/span>/g)].map((item) => item[1]);
+const beforeHeader = lessonContent.slice(0, headerMatch.index);
+const afterHeader = lessonContent.slice(headerMatch.index + headerMatch[0].length);
+const sectionPattern = /<section class="lesson-section" id="([^"]+)">([\s\S]*?)<\/section>/g;
+const sections = [...afterHeader.matchAll(sectionPattern)];
+if (sections.length === 0) throw new Error("Cisco lesson source contains no migratable lesson sections.");
+type LessonSegment =
+  | { type: "html"; content: string }
+  | { type: "section"; id: string; heading: string; content: string };
+const segments: LessonSegment[] = [];
+let cursor = 0;
+for (const section of sections) {
+  const index = section.index;
+  if (index === undefined) continue;
+  if (index > cursor) segments.push({ type: "html", content: afterHeader.slice(cursor, index) });
+  const inner = section[2];
+  const heading = inner.match(/^<h2>([\s\S]*?)<\/h2>/);
+  if (!heading) throw new Error("Cisco lesson section " + section[1] + " has no leading h2 heading.");
+  segments.push({
+    type: "section",
+    id: section[1],
+    heading: heading[1],
+    content: inner.slice(heading[0].length),
+  });
+  cursor = index + section[0].length;
+}
+if (cursor < afterHeader.length) segments.push({ type: "html", content: afterHeader.slice(cursor) });
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d12" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="fred.fish" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/learning.css" />
+    <title>{title}</title>
+    <script src="/assets/site.js" defer></script>
+    <script src="/assets/learning.js" defer></script>
+  </head>
+  <body>
+    <CiscoSidebar />
+    <Fragment set:html={beforeHeader} />
+    <LessonHeader eyebrow={headerMatch[1]} title={headerMatch[2]} lead={headerMatch[3]} metadata={metadata} />
+    {segments.map((segment) =>
+      segment.type === "section" ? (
+        <LessonSection id={segment.id} heading={segment.heading} content={segment.content} />
+      ) : (
+        <Fragment set:html={segment.content} />
+      )
+    )}
+  </body>
+</html>

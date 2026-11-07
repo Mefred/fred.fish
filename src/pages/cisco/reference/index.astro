@@ -1,66 +1,212 @@
 ---
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import Eyebrow from "../../../components/Eyebrow.astro";
+
 const groups = [
- {title:"Device inspection",mode:"EXEC MODE",description:"Identify the software version, hardware, uptime, and installed resources.",commands:["show version","show inventory","show platform","show clock"]},
- {title:"Interfaces and addressing",mode:"EXEC MODE",description:"Inspect interface state, IP configuration, errors, and descriptions.",commands:["show ip interface brief","show interfaces","show interfaces description","show running-config | section interface"]},
- {title:"Switching and VLANs",mode:"EXEC MODE",description:"Inspect VLAN membership, trunk state, and learned MAC addresses.",commands:["show vlan brief","show interfaces trunk","show mac address-table"]},
- {title:"Routing and connectivity",mode:"EXEC MODE",description:"Check route selection and test reachability from the device.",commands:["show ip route","show ip protocols","ping 192.0.2.1","traceroute 192.0.2.1"]},
- {title:"Configure an interface",mode:"CONFIGURATION MODE",description:"A basic interface template using a documentation-only address. Replace values for the actual lab.",commands:["configure terminal","interface GigabitEthernet1/0/1"," description Example connection"," ip address 192.0.2.1 255.255.255.0"," no shutdown","end","copy running-config startup-config"]}
+  {
+    id: "device",
+    title: "Device and system",
+    description: "Identify the platform, software, hardware, uptime, and system state.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show version", detail: "IOS XE release, uptime, model, memory, and boot information.", keywords: "software ios xe platform release version uptime" },
+      { command: "show inventory", detail: "Installed hardware, modules, product identifiers, and serial numbers.", keywords: "hardware modules serial pid" },
+      { command: "show platform", detail: "Platform-specific hardware and operating state.", keywords: "hardware chassis modules status" },
+      { command: "show clock", detail: "Current device clock and time source status.", keywords: "time ntp date" },
+      { command: "show running-config", detail: "Active configuration currently held in memory.", keywords: "configuration config startup saved" },
+      { command: "show startup-config", detail: "Configuration used at the next reload.", keywords: "configuration config save boot" }
+    ]
+  },
+  {
+    id: "interfaces",
+    title: "Interfaces and IP addressing",
+    description: "Check link state, addressing, counters, errors, and interface configuration.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show ip interface brief", detail: "Quick IPv4 address and interface up/down summary.", keywords: "ipv4 status up down brief" },
+      { command: "show ipv6 interface brief", detail: "Quick IPv6 address and interface state summary.", keywords: "ipv6 status address" },
+      { command: "show interfaces", detail: "Detailed interface counters, errors, duplex, speed, and line protocol.", keywords: "errors crc drops counters duplex speed physical" },
+      { command: "show interfaces description", detail: "Interface descriptions and operational status at a glance.", keywords: "port label description status" },
+      { command: "show ip interface", detail: "IPv4 interface settings, ACLs, helper addresses, and protocol state.", keywords: "ipv4 acl access-list helper" },
+      { command: "show running-config | section interface", detail: "Configured interface blocks from the active configuration.", keywords: "interface config port" }
+    ]
+  },
+  {
+    id: "switching",
+    title: "Layer 2 switching",
+    description: "Inspect VLAN membership, trunking, MAC learning, and spanning tree.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show vlan brief", detail: "VLAN IDs, names, status, and access-port membership.", keywords: "vlan access port membership" },
+      { command: "show interfaces trunk", detail: "Operational trunks, native VLANs, and allowed VLANs.", keywords: "802.1q trunk native allowed tagging" },
+      { command: "show mac address-table", detail: "Learned MAC addresses and their associated VLANs and ports.", keywords: "mac forwarding table layer 2" },
+      { command: "show spanning-tree", detail: "Spanning Tree root, port roles, states, and timers.", keywords: "stp rstp root bridge loop portfast bpdu" },
+      { command: "show etherchannel summary", detail: "Port-channel membership and negotiation state.", keywords: "lacp pagp aggregation bundle link" }
+    ]
+  },
+  {
+    id: "routing",
+    title: "Routing and reachability",
+    description: "Verify route selection, routing protocols, and end-to-end connectivity.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show ip route", detail: "IPv4 routing table, route sources, metrics, and next hops.", keywords: "ipv4 routes gateway next hop static ospf" },
+      { command: "show ipv6 route", detail: "IPv6 routing table and selected forwarding paths.", keywords: "ipv6 routes prefix next hop" },
+      { command: "show ip protocols", detail: "Active IPv4 routing protocols and their advertised networks.", keywords: "ospf rip eigrp routing protocol" },
+      { command: "show ip ospf neighbor", detail: "OSPF neighbor relationships and adjacency state.", keywords: "ospf adjacency neighbor routing" },
+      { command: "ping 192.0.2.1", detail: "Test IP reachability; replace the documentation address with your target.", keywords: "icmp connectivity test reachability" },
+      { command: "traceroute 192.0.2.1", detail: "Discover Layer 3 hops toward a destination.", keywords: "path trace hops troubleshoot" }
+    ]
+  },
+  {
+    id: "security",
+    title: "Security and access control",
+    description: "Review access policies and common Layer 2 security state.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show access-lists", detail: "Configured ACL entries and match counters.", keywords: "acl access control list filtering firewall" },
+      { command: "show port-security", detail: "Port-security configuration and violation state.", keywords: "switchport mac sticky violation" },
+      { command: "show ip ssh", detail: "SSH server version and configuration status.", keywords: "secure shell remote management" },
+      { command: "show users", detail: "Active terminal sessions connected to the device.", keywords: "login sessions vty console" }
+    ]
+  },
+  {
+    id: "services",
+    title: "Network services and operations",
+    description: "Check DHCP, NAT, time synchronization, and operational logging.",
+    mode: "EXEC MODE",
+    commands: [
+      { command: "show ip dhcp binding", detail: "Current IPv4 DHCP address leases and client bindings.", keywords: "dhcp lease pool client address" },
+      { command: "show ip dhcp pool", detail: "DHCP pool utilization and available address counts.", keywords: "dhcp scope allocation" },
+      { command: "show ip nat translations", detail: "Active NAT translation entries.", keywords: "nat pat overload translation address" },
+      { command: "show ip nat statistics", detail: "NAT hit counts, misses, and configured interfaces.", keywords: "nat statistics pat" },
+      { command: "show ntp status", detail: "NTP synchronization state and reference clock.", keywords: "time synchronization clock" },
+      { command: "show logging", detail: "Buffered system messages and logging configuration.", keywords: "syslog logs events troubleshooting" }
+    ]
+  },
+  {
+    id: "configuration",
+    title: "Configuration workflows",
+    description: "A small, safe starting point for common configuration and save operations.",
+    mode: "CONFIGURATION MODE",
+    commands: [
+      { command: "configure terminal", detail: "Enter global configuration mode.", keywords: "global config mode" },
+      { command: "interface GigabitEthernet1/0/1", detail: "Select an interface; adjust the identifier to match your device.", keywords: "interface port select" },
+      { command: " description Example connection", detail: "Add a human-readable interface description.", keywords: "label port documentation" },
+      { command: " ip address 192.0.2.1 255.255.255.0", detail: "Assign an example documentation IPv4 address and mask.", keywords: "ipv4 subnet mask address" },
+      { command: " no shutdown", detail: "Administratively enable the selected interface.", keywords: "enable up interface" },
+      { command: "end", detail: "Return directly to privileged EXEC mode.", keywords: "exit config mode" },
+      { command: "copy running-config startup-config", detail: "Save the active configuration for the next reload.", keywords: "write memory save persist startup" }
+    ]
+  }
 ];
+const commandCount = groups.reduce((total, group) => total + group.commands.length, 0);
 ---
-<SiteLayout title="IOS XE Reference — fred.fish" description="Searchable Cisco IOS XE command examples and configuration patterns." active="cisco">
+<SiteLayout title="IOS XE Reference — fred.fish" description="Organized, searchable Cisco IOS XE commands, configuration patterns, and verification workflows." active="cisco">
   <div class="workspace-page">
     <div class="workspace-breadcrumb"><a href="/">fred.fish</a><span>/</span><a href="/cisco/">cisco</a><span>/</span><strong>reference</strong></div>
     <header class="workspace-hero">
-      <Eyebrow index="03" label="CISCO / QUICK LOOKUP" />
+      <Eyebrow index="02" label="CISCO / QUICK LOOKUP" />
       <h1>IOS XE command<br /><span>reference.</span></h1>
-      <p>A practical lookup for common inspection, verification, and configuration workflows. Search by command or topic, then copy an individual command or an entire example.</p>
+      <p>A structured command index organized by the job you are trying to do. Search command syntax, protocols, features, or troubleshooting tasks, then copy a command or a complete category.</p>
+      <div class="reference-meta"><span>7 CATEGORIES</span><span>{commandCount} COMMANDS</span><span>IOS XE</span></div>
     </header>
-    <div class="reference-warning"><strong>Platform scope</strong><p>Examples use Cisco IOS XE CLI conventions. Command availability and interface names vary by device, feature set, and software release. Verify against the documentation for your platform before applying changes.</p></div>
-    <label class="reference-search"><span aria-hidden="true">⌕</span><span class="sr-only">Search commands</span><input id="reference-search" type="search" placeholder="Search commands, interfaces, VLANs, routing..." autocomplete="off" /></label>
-    <p class="reference-count" id="reference-count" aria-live="polite">Showing all 5 command groups</p>
-    <div class="reference-groups">
-      {groups.map((group,i) => <section class="reference-group" data-reference-group>
-        <div class="reference-group-heading"><div><Eyebrow label={`REFERENCE / 0${i+1}`} /><h2>{group.title}</h2><p>{group.description}</p></div><span>{group.mode}</span></div>
-        <div class="command-list" data-searchable={`${group.title} ${group.description} ${group.commands.join(" ")}`.toLowerCase()}>
-          {group.commands.map((command) => <div class="command-row"><code>{command}</code><button type="button" class="copy-command" data-copy={command} aria-label={`Copy ${command}`}>Copy</button></div>)}
-        </div>
-        <button type="button" class="copy-group" data-copy-group>Copy full example <span aria-hidden="true">↗</span></button>
-      </section>)}
+    <div class="reference-warning"><strong>Platform scope</strong><p>Examples use Cisco IOS XE CLI conventions. Command availability, syntax, and interface names vary by device, feature set, and software release. Review the platform documentation and understand each command before applying configuration changes.</p></div>
+    <div class="reference-toolbar">
+      <label class="reference-search"><span aria-hidden="true">⌕</span><span class="sr-only">Search IOS XE commands</span><input id="reference-search" type="search" placeholder="Search commands, VLANs, OSPF, DHCP, interface errors..." autocomplete="off" /></label>
+      <p class="reference-count" id="reference-count" aria-live="polite">Showing {commandCount} of {commandCount} commands across 7 categories</p>
     </div>
-    <p class="reference-empty" id="reference-empty" hidden>No matching command groups. Try a different search term.</p>
+    <div class="reference-groups">
+      {groups.map((group, index) => (
+        <section class="reference-group" data-reference-group data-category={group.id}>
+          <div class="reference-group-heading">
+            <div><Eyebrow label={`CATEGORY / 0${index + 1}`} /><h2>{group.title}</h2><p>{group.description}</p></div>
+            <span>{group.mode}</span>
+          </div>
+          <div class="command-list">
+            {group.commands.map((item) => (
+              <div class="command-row" data-command-row data-search={`${item.command} ${item.detail} ${item.keywords} ${group.title} ${group.description}`.toLowerCase()}>
+                <div class="command-copy"><code>{item.command}</code><p>{item.detail}</p></div>
+                <button type="button" class="copy-command" data-copy={item.command.trim()}>Copy</button>
+              </div>
+            ))}
+          </div>
+          <button type="button" class="copy-group" data-copy-group>Copy category commands <span aria-hidden="true">↗</span></button>
+        </section>
+      ))}
+    </div>
+    <p class="reference-empty" id="reference-empty" hidden>No commands match that search. Try a command, protocol, feature, or a broader term.</p>
     <p class="reference-feedback" id="copy-feedback" role="status" aria-live="polite"></p>
   </div>
   <script>
-    const search = document.querySelector("#reference-search");
-    const groups = [...document.querySelectorAll("[data-reference-group]")];
-    const count = document.querySelector("#reference-count");
-    const empty = document.querySelector("#reference-empty");
-    const feedback = document.querySelector("#copy-feedback");
+    const search = document.querySelector<HTMLInputElement>("#reference-search");
+    const categories = [...document.querySelectorAll<HTMLElement>("[data-reference-group]")];
+    const rows = [...document.querySelectorAll<HTMLElement>("[data-command-row]")];
+    const count = document.querySelector<HTMLElement>("#reference-count");
+    const empty = document.querySelector<HTMLElement>("#reference-empty");
+    const feedback = document.querySelector<HTMLElement>("#copy-feedback");
     search?.addEventListener("input", () => {
       const query = search.value.trim().toLowerCase();
       let visible = 0;
-      groups.forEach((group) => {
-        const match = !query || group.querySelector("[data-searchable]")?.dataset.searchable.includes(query);
-        group.hidden = !match;
+      rows.forEach((row) => {
+        const match = !query || (row.dataset.search || "").includes(query);
+        row.hidden = !match;
         if (match) visible++;
       });
-      if (count) count.textContent = query ? "Showing " + visible + " of " + groups.length + " command groups" : "Showing all " + groups.length + " command groups";
+      categories.forEach((category) => {
+        category.hidden = !category.querySelector("[data-command-row]:not([hidden])");
+      });
+      if (count) count.textContent = `Showing ${visible} of ${rows.length} commands across ${categories.filter((category) => !category.hidden).length} categories`;
       if (empty) empty.hidden = visible > 0;
     });
-    const copy = async (value) => {
+    const copy = async (value: string) => {
       try {
         await navigator.clipboard.writeText(value);
         if (feedback) feedback.textContent = "Copied to clipboard.";
       } catch {
-        if (feedback) feedback.textContent = "Clipboard access was unavailable. Select and copy the command manually.";
+        if (feedback) feedback.textContent = "Clipboard access unavailable. Select and copy the command manually.";
       }
     };
-    document.querySelectorAll("[data-copy]").forEach((button) => button.addEventListener("click", () => copy(button.dataset.copy || "")));
-    document.querySelectorAll("[data-copy-group]").forEach((button) => button.addEventListener("click", () => {
-      const list = button.closest(".reference-group")?.querySelectorAll(".command-row code");
-      copy([...(list || [])].map((code) => code.textContent || "").join("\n"));
-    }));
+    document.querySelectorAll<HTMLButtonElement>("[data-copy]").forEach((button) => {
+      button.addEventListener("click", () => copy(button.dataset.copy || ""));
+    });
+    document.querySelectorAll<HTMLButtonElement>("[data-copy-group]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const category = button.closest<HTMLElement>(".reference-group");
+        const commands = [...(category?.querySelectorAll<HTMLElement>(".command-row:not([hidden]) code") || [])];
+        copy(commands.map((code) => code.textContent || "").join("\n"));
+      });
+    });
   </script>
+  <style>
+    .reference-meta { display:flex; flex-wrap:wrap; gap:9px; margin-top:23px; }
+    .reference-meta span { padding:6px 9px; border:1px solid var(--line); border-radius:6px; color:var(--muted); font:10px ui-monospace,monospace; letter-spacing:.06em; }
+    .reference-warning { margin:20px 0 24px; padding:15px 17px; border:1px solid var(--line); border-left:3px solid var(--teal); border-radius:9px; background:var(--panel); }
+    .reference-warning strong { display:block; margin-bottom:4px; color:var(--teal); font-size:12px; }
+    .reference-warning p { margin:0; color:var(--muted); font-size:12px; line-height:1.7; }
+    .reference-toolbar { position:sticky; top:10px; z-index:5; padding:12px; border:1px solid var(--line); border-radius:11px; background:color-mix(in srgb,var(--bg) 92%,transparent); backdrop-filter:blur(14px); }
+    .reference-search { display:flex; align-items:center; gap:10px; min-height:45px; padding:0 13px; border:1px solid var(--line-strong); border-radius:8px; background:var(--panel); color:var(--teal); }
+    .reference-search > span:first-child { font-size:19px; }
+    .reference-search input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:var(--text); font:12px ui-monospace,monospace; }
+    .reference-search input::placeholder { color:var(--subtle); }
+    .reference-count { margin:9px 2px 0; color:var(--subtle); font:10px ui-monospace,monospace; }
+    .reference-groups { display:grid; gap:14px; margin-top:18px; }
+    .reference-group { min-width:0; overflow:hidden; border:1px solid var(--line); border-radius:11px; background:var(--panel); }
+    .reference-group[hidden], .command-row[hidden] { display:none; }
+    .reference-group-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:17px 18px 14px; border-bottom:1px solid var(--line); background:var(--panel-raised); }
+    .reference-group-heading h2 { margin:5px 0 4px; font-size:15px; letter-spacing:-.025em; }
+    .reference-group-heading p { margin:0; color:var(--muted); font-size:11px; line-height:1.6; }
+    .reference-group-heading > span { flex:0 0 auto; padding:5px 7px; border:1px solid var(--line); border-radius:5px; color:var(--subtle); font:9px ui-monospace,monospace; }
+    .command-row { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:12px 16px; border-bottom:1px solid var(--line); }
+    .command-row:last-child { border-bottom:0; }
+    .command-copy { min-width:0; }
+    .command-copy code { display:block; overflow-wrap:anywhere; color:#bcece1; font-size:11px; line-height:1.6; }
+    .command-copy p { margin:3px 0 0; color:var(--muted); font-size:10px; line-height:1.55; }
+    .copy-command,.copy-group { flex:0 0 auto; padding:6px 9px; border:1px solid var(--line-strong); border-radius:6px; background:#14252b; color:var(--teal); font-size:10px; cursor:pointer; }
+    .copy-command:hover,.copy-group:hover { border-color:var(--teal); background:#183431; }
+    .copy-group { margin:11px 15px 13px; }
+    .reference-empty { margin:18px 0; padding:22px; border:1px dashed var(--line-strong); border-radius:9px; color:var(--muted); text-align:center; font-size:12px; }
+    .reference-feedback { min-height:18px; color:var(--teal); font-size:11px; }
+    @media(max-width:560px) { .reference-group-heading { flex-direction:column; gap:9px; } .command-row { align-items:flex-start; padding:11px 12px; } .reference-toolbar { top:6px; } }
+  </style>
 </SiteLayout>

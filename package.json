@@ -1,0 +1,23 @@
+{
+  "name": "fred-fish",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro check && astro build && node scripts/copy-legacy.mjs",
+    "preview": "astro preview",
+    "validate:links": "node scripts/validate-links.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.7"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

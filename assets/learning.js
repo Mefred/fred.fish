@@ -6,12 +6,16 @@
     try { localStorage.setItem(key, value); } catch (_) {}
   };
 
-  const updateLessonProgress = control => {
+  const updateLessonProgress = (control, saved) => {
     const complete = control.checked;
     const label = control.closest(".lesson-complete")?.querySelector("[data-completion-label]");
-    if (label) label.textContent = complete
-      ? "Lesson marked complete. Progress is saved in this browser."
-      : "Mark this lesson complete when you are ready.";
+    if (label) {
+      label.textContent = complete
+        ? saved
+          ? "Lesson marked complete. Progress is saved in this browser."
+          : "Lesson marked complete, but browser storage is unavailable. Progress may not persist."
+        : "Mark this lesson complete when you are ready.";
+    }
     const bar = document.querySelector(".lesson-aside .progress-track span");
     if (bar) bar.style.width = complete ? "100%" : "0%";
   };
@@ -89,10 +93,10 @@
   document.querySelectorAll("[data-completion]").forEach(control => {
     const key = "fred-cisco-complete-" + control.dataset.completion;
     control.checked = storageGet(key) === "true";
-    updateLessonProgress(control);
+    updateLessonProgress(control, !control.checked || storageGet(key) === "true");
     control.addEventListener("change", () => {
       storageSet(key, String(control.checked));
-      updateLessonProgress(control);
+      updateLessonProgress(control, storageGet(key) === String(control.checked));
       updateCourseProgress();
     });
   });

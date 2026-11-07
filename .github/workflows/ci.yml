@@ -1,0 +1,84 @@
+name: Site CI
+
+on:
+  pull_request:
+  push:
+    branches: [main, "redesign/**"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: site-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install dependencies
+        run: npm install
+      - name: Summarize dependency audit findings
+        shell: bash
+        run: |
+          npm audit --json > "$RUNNER_TEMP/npm-audit.json" || true
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            const audit = JSON.parse(readFileSync(process.env.RUNNER_TEMP + "/npm-audit.json", "utf8"));
+            const vulnerabilities = audit.vulnerabilities ?? {};
+            console.log("Dependency audit summary:", JSON.stringify(audit.metadata?.vulnerabilities ?? {}));
+            const counts = audit.metadata?.vulnerabilities ?? {};
+            if ((counts.high ?? 0) > 0 || (counts.critical ?? 0) > 0) {
+              console.error("High or critical dependency vulnerabilities must be resolved before merge.");
+              process.exitCode = 1;
+            }
+            for (const [name, issue] of Object.entries(vulnerabilities)) {
+              const advisories = (issue.via ?? []).filter((item) => typeof item === "object").map((item) => item.title);
+              console.log("- " + name + " [" + issue.severity + "] fix=" + JSON.stringify(issue.fixAvailable) + " advisories=" + advisories.join("; "));
+            }
+          '
+      - name: Type-check and build
+        run: npm run build
+      - name: Validate generated local links and fragments
+        run: npm run validate:links
+      - name: Validate Cisco lesson and quiz integrity
+        run: node scripts/validate-lessons.mjs
+      - name: Verify preserved routes and Cisco curriculum
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          test -f dist/index.html
+          test -f dist/about/index.html
+          test -f dist/projects/index.html
+          test -f dist/cisco/index.html
+          grep -q 'Understand the network' dist/cisco/index.html
+          test -f dist/cisco/learning/index.html
+          grep -q 'All modules' dist/cisco/learning/index.html
+          grep -q 'module-search' dist/cisco/learning/index.html
+          test ! -e dist/cisco/labs/index.html
+          test -f dist/cisco/reference/index.html
+          grep -q 'reference-search' dist/cisco/reference/index.html
+          grep -q 'data-command-row' dist/cisco/reference/index.html
+          grep -q 'copy-group' dist/cisco/reference/index.html
+          test -f dist/reef/index.html
+          test -f dist/CNAME
+
+          lesson_dir="dist/cisco/learning/modules"
+          lesson_count="$(find "$lesson_dir" -mindepth 2 -maxdepth 2 -name index.html | wc -l)"
+          test "$lesson_count" -eq 30
+
+          # Every published lesson must retain its completion control and quiz.
+          for lesson in "$lesson_dir"/*/index.html; do
+            grep -q 'data-completion="[0-9][0-9]"' "$lesson"
+            grep -q 'data-lesson-quiz' "$lesson"
+          done
+
+          question_count="$(grep -roh 'class="quiz-question"' "$lesson_dir" | wc -l)"
+          test "$question_count" -eq 95
