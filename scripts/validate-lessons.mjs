@@ -88,6 +88,9 @@ const migratedLessons = [
   "04-network-devices-topologies",
   "05-network-models-encapsulation",
   "06-number-systems-binary-math",
+  "07-ipv4-addressing-subnetting",
+  "08-ipv6-addressing",
+  "09-network-layer-routing-basics",
 ];
 
 for (const slug of migratedLessons) {
