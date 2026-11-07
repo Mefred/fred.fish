@@ -1,12 +1,39 @@
 ---
+import LessonFigure from "./LessonFigure.astro";
+
 interface Props {
   id: string;
   heading: string;
   content: string;
 }
 const { id, heading, content } = Astro.props;
+
+type SectionSegment =
+  | { type: "html"; content: string }
+  | { type: "figure"; content: string };
+
+const segments: SectionSegment[] = [];
+const figurePattern = /<figure class="lesson-figure">([\s\S]*?)<\/figure>/g;
+let cursor = 0;
+for (const figure of content.matchAll(figurePattern)) {
+  const index = figure.index;
+  if (index === undefined) continue;
+  if (index > cursor) segments.push({ type: "html", content: content.slice(cursor, index) });
+  segments.push({ type: "figure", content: figure[1] });
+  cursor = index + figure[0].length;
+}
+if (cursor < content.length) segments.push({ type: "html", content: content.slice(cursor) });
+if (/<figure\b/.test(content) && !figurePattern.test(content)) {
+  throw new Error("Cisco lesson figure does not use the expected lesson-figure markup.");
+}
 ---
 <section class="lesson-section" id={id} data-lesson-section>
   <h2>{heading}</h2>
-  <Fragment set:html={content} />
+  {segments.map((segment) =>
+    segment.type === "figure" ? (
+      <LessonFigure content={segment.content} />
+    ) : (
+      <Fragment set:html={segment.content} />
+    )
+  )}
 </section>
