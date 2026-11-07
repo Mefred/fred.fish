@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080d12"><meta name="description" content="Cisco IOS XE command and configuration reference."><title>Reference — Cisco — fred.fish</title><link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script></head>
+<body><button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+<aside class="sidebar" id="sidebar"><a class="wordmark" href="/"><span class="wordmark-icon">f.</span><span>fred.fish</span></a><div class="tree-label">WORKSPACE</div><nav class="file-tree" aria-label="Site navigation"><a class="tree-row" href="/"><span class="file-icon">⌂</span><span>home</span></a><button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">cisco/</span></button><div class="tree-children" id="cisco-links"><a class="tree-row child" href="/cisco/"><span class="file-icon">◫</span><span>overview</span></a><a class="tree-row child" href="/cisco/learning/"><span class="file-icon">◫</span><span>learning</span></a><a class="tree-row child" href="/cisco/labs/"><span class="file-icon">◫</span><span>labs</span></a><a class="tree-row child active" href="/cisco/reference/" aria-current="page"><span class="file-icon">◫</span><span>reference</span></a></div><button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">reef/</span></button><div class="tree-children" id="reef-links"><a class="tree-row child" href="/reef/"><span class="file-icon">◫</span><span>overview</span></a></div></nav><div class="sidebar-bottom"><span class="status-dot"></span><span>A little corner of the internet</span></div><button class="sidebar-collapse" type="button" aria-expanded="true"><span class="collapse-icon">⇤</span><span class="collapse-label">Collapse sidebar</span></button></aside><div class="sidebar-backdrop" hidden></div>
+<main class="main"><div class="content"><div class="breadcrumb"><a href="/">fred.fish</a><span>/</span><a href="/cisco/">cisco</a><span>/</span><strong>reference</strong></div><header class="page-header"><div class="eyebrow">CISCO / QUICK LOOKUP</div><h1>IOS XE reference</h1><p class="page-lead">A concise command and configuration reference for common Cisco IOS XE workflows. Examples are starting points; interface names and feature availability depend on the device.</p></header>
+<div class="callout"><strong>Platform scope</strong><p>These examples target IOS XE CLI conventions. They are not a promise that every command exists on every IOS XE device or software release.</p></div>
+<section class="section"><div class="section-heading"><h2>Device inspection</h2><span>EXEC MODE</span></div>
+<div class="info-block"><h2>System and platform</h2><p>Identify the software version, hardware, uptime, and installed resources.</p><pre>show version
+show inventory
+show platform
+show clock</pre></div>
+<div class="info-block"><h2>Interfaces and addressing</h2><p>Quickly inspect interface state and IP configuration.</p><pre>show ip interface brief
+show interfaces
+show interfaces description
+show running-config | section interface</pre></div>
+<div class="info-block"><h2>Switching and VLANs</h2><p>Inspect VLAN membership, trunk state, and learned MAC addresses.</p><pre>show vlan brief
+show interfaces trunk
+show mac address-table</pre></div>
+<div class="info-block"><h2>Routing and connectivity</h2><p>Check routes and test reachability from the device.</p><pre>show ip route
+show ip protocols
+ping 192.0.2.1
+traceroute 192.0.2.1</pre></div>
+</section>
+<section class="section"><div class="section-heading"><h2>Common configuration pattern</h2><span>CONFIGURATION MODE</span></div><div class="info-block"><h2>Configure an interface</h2><p>Example template using a documentation-only address. Replace the interface and address values for the actual lab.</p><pre>configure terminal
+interface GigabitEthernet1/0/1
+ description Example connection
+ ip address 192.0.2.1 255.255.255.0
+ no shutdown
+end
+copy running-config startup-config</pre></div></section>
+<footer>© <span data-year></span> fred.fish · IOS XE reference</footer></div></main></body></html>
