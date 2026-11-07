@@ -97,3 +97,11 @@ a.module-row:hover { transform:translateY(-1px); border-color:#39766f; backgroun
 .lesson-nav a { color:var(--teal); font-size:11px; }
 @media(max-width:850px) { .lesson-layout { grid-template-columns:minmax(0,1fr); } .lesson-aside { position:static; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 12px; order:-1; } .lesson-aside h2,.lesson-aside .progress-wrap { grid-column:1/-1; } }
 @media(max-width:600px) { .learning-stats { grid-template-columns:repeat(3,minmax(0,1fr)); } .learning-stats > div { padding:10px; } .learning-stats strong { font-size:16px; } .curriculum-heading { align-items:start; flex-direction:column; } .module-row { grid-template-columns:27px minmax(0,1fr); gap:9px; padding:12px; } .module-state { grid-column:2; } .definition-grid { grid-template-columns:1fr; } .lesson-figure { padding:8px; } }
+
+.course-progress { margin: 0 0 18px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel); }
+.course-progress-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.course-progress-top strong { font-size:12px; }
+.course-progress-top span { color:var(--teal); font:10px ui-monospace,monospace; }
+.course-progress .progress-track { height:6px; margin:10px 0 7px; overflow:hidden; border-radius:10px; background:#26363c; }
+.course-progress .progress-track span { display:block; width:0; height:100%; background:var(--teal); transition:width .2s; }
+.course-progress p { margin:0; color:var(--subtle); font-size:10px; }
