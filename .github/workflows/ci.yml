@@ -24,6 +24,20 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Summarize dependency audit findings
+        shell: bash
+        run: |
+          npm audit --json > "$RUNNER_TEMP/npm-audit.json" || true
+          node --input-type=module -e '
+            import { readFileSync } from "node:fs";
+            const audit = JSON.parse(readFileSync(process.env.RUNNER_TEMP + "/npm-audit.json", "utf8"));
+            const vulnerabilities = audit.vulnerabilities ?? {};
+            console.log("Dependency audit summary:", JSON.stringify(audit.metadata?.vulnerabilities ?? {}));
+            for (const [name, issue] of Object.entries(vulnerabilities)) {
+              const advisories = (issue.via ?? []).filter((item) => typeof item === "object").map((item) => item.title);
+              console.log("- " + name + " [" + issue.severity + "] fix=" + JSON.stringify(issue.fixAvailable) + " advisories=" + advisories.join("; "));
+            }
+          '
       - name: Type-check and build
         run: npm run build
       - name: Validate Cisco lesson and quiz integrity
