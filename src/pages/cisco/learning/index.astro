@@ -59,7 +59,7 @@ const curriculum = [{"id":"foundations","label":"PART 01 / FOUNDATIONS","title":
         if (done) complete++;
       });
       const count = progress?.querySelector("[data-progress-count]");
-      const bar = progress?.querySelector("[data-progress-bar]");
+      const bar = progress?.querySelector<HTMLElement>("[data-progress-bar]");
       const track = progress?.querySelector('[role="progressbar"]');
       if (count) count.textContent = complete + " / 30 completed";
       if (bar) bar.style.width = (complete / 30 * 100) + "%";
@@ -73,7 +73,7 @@ const curriculum = [{"id":"foundations","label":"PART 01 / FOUNDATIONS","title":
       const query = search.value.trim().toLowerCase();
       let shown = 0;
       document.querySelectorAll<HTMLElement>("[data-module]").forEach((module) => {
-        const visible = !query || module.dataset.search.includes(query);
+        const visible = !query || (module.dataset.search || "").includes(query);
         module.hidden = !visible;
         if (visible) shown++;
       });
