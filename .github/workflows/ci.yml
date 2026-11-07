@@ -26,6 +26,8 @@ jobs:
         run: npm install
       - name: Type-check and build
         run: npm run build
+      - name: Validate Cisco lesson and quiz integrity
+        run: node scripts/validate-lessons.mjs
       - name: Verify preserved routes and Cisco curriculum
         shell: bash
         run: |
