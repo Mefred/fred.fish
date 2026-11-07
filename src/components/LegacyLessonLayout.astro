@@ -24,7 +24,10 @@ const afterHeader = lessonContent.slice(headerMatch.index + headerMatch[0].lengt
 const sectionPattern = /<section class="lesson-section" id="([^"]+)">([\s\S]*?)<\/section>/g;
 const sections = [...afterHeader.matchAll(sectionPattern)];
 if (sections.length === 0) throw new Error("Cisco lesson source contains no migratable lesson sections.");
-const segments = [];
+type LessonSegment =
+  | { type: "html"; content: string }
+  | { type: "section"; id: string; heading: string; content: string };
+const segments: LessonSegment[] = [];
 let cursor = 0;
 for (const section of sections) {
   const index = section.index;
