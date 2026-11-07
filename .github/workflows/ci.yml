@@ -32,6 +32,8 @@ jobs:
           test -f dist/about/index.html
           test -f dist/projects/index.html
           test -f dist/cisco/index.html
+          grep -q 'Understand the network' dist/cisco/index.html
+          test -f dist/cisco/learning/index.html
           test -f dist/cisco/learning/index.html
           test -f dist/cisco/learning/modules/30-integrated-network-troubleshooting/index.html
           test -f dist/reef/index.html
