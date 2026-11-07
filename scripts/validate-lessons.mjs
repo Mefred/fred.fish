@@ -152,6 +152,7 @@ for (const slug of migratedLessons) {
     ["lesson interaction script", /src="\/assets\/learning\.js"/],
     ["shared Cisco sidebar", /<aside class="sidebar" id="sidebar">/],
     ["lesson body", /<main class="main">[\s\S]*<article class="lesson-main">/],
+    ["component-rendered lesson header", /<header class="lesson-header" data-lesson-header>/],
   ]) {
     if (!pattern.test(html)) failures.push(`${slug}: migrated page is missing ${label}`);
   }
