@@ -145,6 +145,12 @@ for (const slug of migratedLessons) {
   if (builtSectionCount !== sourceSectionCount) {
     fail(slug, `generated route contains ${builtSectionCount} component sections; legacy source contains ${sourceSectionCount}`);
   }
+
+  const sourceFigureCount = [...readFileSync(join(root, slug, "index.html"), "utf8").matchAll(/<figure class="lesson-figure">/g)].length;
+  const builtFigureCount = [...html.matchAll(/<figure class="lesson-figure" data-lesson-figure>/g)].length;
+  if (builtFigureCount !== sourceFigureCount) {
+    fail(slug, `generated route contains ${builtFigureCount} component figures; legacy source contains ${sourceFigureCount}`);
+  }
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
