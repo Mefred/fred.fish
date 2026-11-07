@@ -4,17 +4,6 @@ interface Props {
 }
 const { content } = Astro.props;
 ---
-<div class="lesson-table-wrap" data-lesson-table tabindex="0" aria-label="Scrollable lesson table">
-  <table class="lesson-table">
-    <Fragment set:html={content} />
-  </table>
-</div>
-
-<style>
-  .lesson-table-wrap {
-    max-width: 100%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    -webkit-overflow-scrolling: touch;
-  }
-</style>
+<table class="lesson-table" data-lesson-table>
+  <Fragment set:html={content} />
+</table>
