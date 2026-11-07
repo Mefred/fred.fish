@@ -109,6 +109,9 @@ const migratedLessons = [
   "25-access-control-lists",
   "26-nat-dhcp-configuration",
   "27-layer2-security-wireless-security",
+  "28-qos-network-monitoring",
+  "29-virtualization-cloud-networking",
+  "30-integrated-network-troubleshooting",
 ];
 
 for (const slug of migratedLessons) {
