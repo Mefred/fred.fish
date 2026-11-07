@@ -1,6 +1,7 @@
 ---
 import CiscoSidebar from "./CiscoSidebar.astro";
 import LessonHeader from "./LessonHeader.astro";
+import LessonSection from "./LessonSection.astro";
 
 interface Props {
   title: string;
@@ -20,6 +21,27 @@ if (!headerMatch || headerMatch.index === undefined) {
 const metadata = [...(headerMatch[4] ?? "").matchAll(/<span>([\s\S]*?)<\/span>/g)].map((item) => item[1]);
 const beforeHeader = lessonContent.slice(0, headerMatch.index);
 const afterHeader = lessonContent.slice(headerMatch.index + headerMatch[0].length);
+const sectionPattern = /<section class="lesson-section" id="([^"]+)">([\s\S]*?)<\/section>/g;
+const sections = [...afterHeader.matchAll(sectionPattern)];
+if (sections.length === 0) throw new Error("Cisco lesson source contains no migratable lesson sections.");
+const segments = [];
+let cursor = 0;
+for (const section of sections) {
+  const index = section.index;
+  if (index === undefined) continue;
+  if (index > cursor) segments.push({ type: "html", content: afterHeader.slice(cursor, index) });
+  const inner = section[2];
+  const heading = inner.match(/^<h2>([\s\S]*?)<\/h2>/);
+  if (!heading) throw new Error(\`Cisco lesson section "\${section[1]}" has no leading h2 heading.\`);
+  segments.push({
+    type: "section",
+    id: section[1],
+    heading: heading[1],
+    content: inner.slice(heading[0].length),
+  });
+  cursor = index + section[0].length;
+}
+if (cursor < afterHeader.length) segments.push({ type: "html", content: afterHeader.slice(cursor) });
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -45,6 +67,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <CiscoSidebar />
     <Fragment set:html={beforeHeader} />
     <LessonHeader eyebrow={headerMatch[1]} title={headerMatch[2]} lead={headerMatch[3]} metadata={metadata} />
-    <Fragment set:html={afterHeader} />
+    {segments.map((segment) =>
+      segment.type === "section" ? (
+        <LessonSection id={segment.id} heading={segment.heading} content={segment.content} />
+      ) : (
+        <Fragment set:html={segment.content} />
+      )
+    )}
   </body>
 </html>
