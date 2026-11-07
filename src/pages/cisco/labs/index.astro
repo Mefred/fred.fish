@@ -1,0 +1,20 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import Eyebrow from "../../../components/Eyebrow.astro";
+const labs = [
+  ["01","Switching fundamentals","Inspect switch behavior, learn MAC address-table operation, and configure access ports.","MAC learning · Access ports · Verification"],
+  ["02","VLANs and 802.1Q trunks","Segment a LAN, configure VLAN membership, establish a trunk, and diagnose mismatches.","VLAN assignment · Trunking · Native VLAN"],
+  ["03","Inter-VLAN routing","Connect multiple VLANs with router-on-a-stick and verify gateway reachability.","Subinterfaces · Gateways · Routing"],
+  ["04","Static routing and troubleshooting","Connect separate IP networks and isolate reachability failures methodically.","Static routes · Route tables · ICMP"]
+];
+---
+<SiteLayout title="Cisco Labs — fred.fish" description="Practical Cisco networking lab scenarios and guided configuration exercises." active="cisco">
+<div class="workspace-page">
+<div class="workspace-breadcrumb"><a href="/">fred.fish</a><span>/</span><a href="/cisco/">cisco</a><span>/</span><strong>labs</strong></div>
+<header class="workspace-hero"><Eyebrow index="02" label="CISCO / HANDS-ON PRACTICE" /><h1>Build it.<br/><span>Break it. Understand it.</span></h1><p>Practical exercises designed to turn protocol knowledge into repeatable configuration and troubleshooting skills. Each lab is structured around a clear outcome, not just a list of commands.</p></header>
+<section class="lab-method"><div><Eyebrow label="LAB STANDARD"/><h2>Every lab should be verifiable.</h2></div><p>Guided labs are being developed with objectives, prerequisites, topology and addressing, tasks, expected command output, verification steps, and troubleshooting prompts. Platform-specific differences will be called out rather than hidden.</p></section>
+<div class="workspace-section-heading"><div><Eyebrow label="LEARNING PATH"/><h2>Lab collections</h2></div><span>4 STARTER SCENARIOS</span></div>
+<div class="lab-grid">{labs.map((lab)=><article class="lab-card"><div class="lab-card-top"><span>{lab[0]}</span><span class="lab-level">FOUNDATION</span></div><h3>{lab[1]}</h3><p>{lab[2]}</p><div class="lab-topics">{lab[3]}</div><div class="lab-card-footer"><span>PLANNED</span><span>Content in development</span></div></article>)}</div>
+<section class="lab-environments"><Eyebrow label="SUPPORTED ENVIRONMENTS"/><div class="environment-grid"><div><h3>Packet Tracer</h3><p>Guided topologies, repeatable introductory exercises, and visual packet-flow practice.</p></div><div><h3>Physical equipment</h3><p>IOS XE examples will document hardware assumptions and platform-specific differences.</p></div><div><h3>Virtual network labs</h3><p>Where appropriate, exercises can include notes for virtualized devices and setup requirements.</p></div></div></section>
+<div class="workspace-next"><span>Study the concepts first?</span><a href="/cisco/learning/">Return to the curriculum ↗</a></div>
+</div></SiteLayout>
