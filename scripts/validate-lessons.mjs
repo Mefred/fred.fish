@@ -164,6 +164,12 @@ for (const slug of migratedLessons) {
   if (builtTableCount !== sourceTableCount) {
     fail(slug, `generated route contains ${builtTableCount} component lesson tables; legacy source contains ${sourceTableCount}`);
   }
+
+  const sourceCommandBlockCount = [...readFileSync(join(legacyRoot, slug, "index.html"), "utf8").matchAll(/<div class="command-block">/g)].length;
+  const builtCommandBlockCount = [...html.matchAll(/<div class="command-block" data-lesson-command-block>/g)].length;
+  if (builtCommandBlockCount !== sourceCommandBlockCount) {
+    fail(slug, `generated route contains ${builtCommandBlockCount} component command blocks; legacy source contains ${sourceCommandBlockCount}`);
+  }
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
