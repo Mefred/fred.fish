@@ -4,7 +4,7 @@ import Eyebrow from "../../components/Eyebrow.astro";
 ---
 <SiteLayout
   title="Cisco Networking — fred.fish"
-  description="A practical Cisco networking workspace with a structured CCNA curriculum, hands-on labs, and IOS XE references."
+  description="A practical Cisco networking workspace with a structured CCNA curriculum and organized IOS XE references."
   active="cisco"
 >
   <section class="page-intro cisco-intro">
@@ -13,7 +13,6 @@ import Eyebrow from "../../components/Eyebrow.astro";
     <p>A growing technical workspace for learning networking, practising configurations, and keeping useful Cisco IOS XE references close at hand.</p>
     <div class="intro-actions">
       <a class="button button-primary" href="/cisco/learning/">Explore the curriculum <span aria-hidden="true">↗</span></a>
-      <a class="text-link" href="/cisco/labs/">Browse labs <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -23,13 +22,8 @@ import Eyebrow from "../../components/Eyebrow.astro";
       <div><h2>Networking curriculum</h2><p>Build a strong foundation from physical-layer concepts through switching, routing, services, security, and automation.</p></div>
       <div class="cisco-card-metrics"><span><strong>30</strong> modules</span><span><strong>95</strong> practice questions</span><span>CCNA 200-301 aligned</span></div>
     </a>
-    <a class="cisco-card" href="/cisco/labs/">
-      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌁</span><span class="cisco-card-label">02 / PRACTISE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
-      <div><h2>Hands-on labs</h2><p>Apply concepts in guided scenarios, build configurations, and practise troubleshooting real network behavior.</p></div>
-      <span class="cisco-card-cta">Open lab workspace <span aria-hidden="true">→</span></span>
-    </a>
     <a class="cisco-card" href="/cisco/reference/">
-      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌕</span><span class="cisco-card-label">03 / REFERENCE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
+      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌕</span><span class="cisco-card-label">02 / REFERENCE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
       <div><h2>IOS XE reference</h2><p>Keep commands, configuration patterns, verification steps, and troubleshooting notes organized in one place.</p></div>
       <span class="cisco-card-cta">Browse references <span aria-hidden="true">→</span></span>
     </a>
@@ -38,6 +32,6 @@ import Eyebrow from "../../components/Eyebrow.astro";
   <section class="cisco-note">
     <Eyebrow label="HOW THIS WORKSPACE IS ORGANIZED" />
     <h2>Learn it. Build it. Verify it.</h2>
-    <p>Use the lessons to understand the underlying protocols, reinforce them with labs, then return to the reference material when configuring or troubleshooting devices. The sections are designed to work together rather than as separate collections of notes.</p>
+    <p>Use the lessons to understand the underlying protocols, then return to the reference material when configuring or troubleshooting devices. The curriculum and command reference are designed to work together.</p>
   </section>
 </SiteLayout>
