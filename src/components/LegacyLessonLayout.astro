@@ -9,20 +9,17 @@ interface Props {
 }
 const { title, description, source } = Astro.props;
 const body = source.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1];
-if (!body) {
-  throw new Error("Legacy Cisco lesson source does not contain a readable body element.");
-}
+if (!body) throw new Error("Legacy Cisco lesson source does not contain a readable body element.");
 const sidebarPattern = /<button class="mobile-menu"[\s\S]*?<div class="sidebar-backdrop" hidden><\/div>/;
-if (!sidebarPattern.test(body)) {
-  throw new Error("Cisco lesson source is missing the expected shared navigation region.");
-}
+if (!sidebarPattern.test(body)) throw new Error("Cisco lesson source is missing the expected shared navigation region.");
 const lessonContent = body.replace(sidebarPattern, "");
 const headerMatch = lessonContent.match(/<header class="lesson-header"><div class="eyebrow">([\s\S]*?)<\/div><h1>([\s\S]*?)<\/h1><p class="page-lead">([\s\S]*?)<\/p><div class="lesson-meta">([\s\S]*?)<\/div><\/header>/);
-if (!headerMatch) {
+if (!headerMatch || headerMatch.index === undefined) {
   throw new Error("Cisco lesson source is missing the expected lesson header.");
 }
 const metadata = [...headerMatch[4].matchAll(/<span>([\s\S]*?)<\/span>/g)].map((item) => item[1]);
-const contentWithoutHeader = lessonContent.replace(headerMatch[0], "");
+const beforeHeader = lessonContent.slice(0, headerMatch.index);
+const afterHeader = lessonContent.slice(headerMatch.index + headerMatch[0].length);
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
@@ -46,12 +43,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <CiscoSidebar />
-    <Fragment set:html={contentWithoutHeader} />
+    <Fragment set:html={beforeHeader} />
     <LessonHeader
       eyebrow={headerMatch[1]}
       title={headerMatch[2]}
       lead={headerMatch[3]}
       metadata={metadata}
     />
+    <Fragment set:html={afterHeader} />
   </body>
 </html>
