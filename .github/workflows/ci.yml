@@ -41,8 +41,11 @@ jobs:
           test -f dist/cisco/learning/index.html
           grep -q 'All modules' dist/cisco/learning/index.html
           grep -q 'module-search' dist/cisco/learning/index.html
-          test -f dist/cisco/labs/index.html
+          test ! -e dist/cisco/labs/index.html
           test -f dist/cisco/reference/index.html
+          grep -q 'reference-search' dist/cisco/reference/index.html
+          grep -q 'data-command-row' dist/cisco/reference/index.html
+          grep -q 'copy-group' dist/cisco/reference/index.html
           test -f dist/reef/index.html
           test -f dist/CNAME
 
