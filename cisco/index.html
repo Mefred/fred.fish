@@ -3,37 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111714">
-  <meta name="description" content="Cisco networking notes and IOS XE references.">
+  <meta name="theme-color" content="#080d12">
+  <meta name="description" content="Cisco networking learning materials, IOS XE references, labs, and practice.">
   <title>Cisco — fred.fish</title>
-  <link rel="stylesheet" href="/assets/site.css">
-  <script src="/assets/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/site.css"><script src="/assets/site.js" defer></script>
 </head>
 <body>
   <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
   <aside class="sidebar" id="sidebar">
-    <a class="wordmark" href="/"><span class="wordmark-icon">f.</span><span>fred.fish</span></a>
-    <div class="tree-label">WORKSPACE</div>
+    <a class="wordmark" href="/"><span class="wordmark-icon">f.</span><span>fred.fish</span></a><div class="tree-label">WORKSPACE</div>
     <nav class="file-tree" aria-label="Site navigation">
       <a class="tree-row" href="/"><span class="file-icon">⌂</span><span>home</span></a>
-      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>cisco/</span></button>
-      <div class="tree-children" id="cisco-links"><a class="tree-row child active" href="/cisco/" aria-current="page"><span class="file-icon">◫</span><span>overview</span></a></div>
-      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>reef/</span></button>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">cisco/</span></button>
+      <div class="tree-children" id="cisco-links">
+        <a class="tree-row child active" href="/cisco/" aria-current="page"><span class="file-icon">◫</span><span>overview</span></a>
+        <a class="tree-row child" href="/cisco/learning/"><span class="file-icon">◫</span><span>learning</span></a>
+        <a class="tree-row child" href="/cisco/labs/"><span class="file-icon">◫</span><span>labs</span></a>
+        <a class="tree-row child" href="/cisco/reference/"><span class="file-icon">◫</span><span>reference</span></a>
+      </div>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span class="folder-name">reef/</span></button>
       <div class="tree-children" id="reef-links"><a class="tree-row child" href="/reef/"><span class="file-icon">◫</span><span>overview</span></a></div>
     </nav>
-    <div class="sidebar-bottom"><span class="status-dot"></span> A little corner of the internet</div>
-  </aside>
-  <div class="sidebar-backdrop" hidden></div>
+    <div class="sidebar-bottom"><span class="status-dot"></span><span>A little corner of the internet</span></div>
+    <button class="sidebar-collapse" type="button" aria-expanded="true"><span class="collapse-icon">⇤</span><span class="collapse-label">Collapse sidebar</span></button>
+  </aside><div class="sidebar-backdrop" hidden></div>
   <main class="main"><div class="content">
     <div class="breadcrumb"><a href="/">fred.fish</a><span>/</span><strong>cisco</strong></div>
-    <header class="page-header"><div class="eyebrow">DIRECTORY / CISCO</div><h1>Cisco</h1><p class="page-lead">Networking, device configuration, and notes from working with Cisco platforms.</p></header>
+    <header class="page-header"><div class="eyebrow">LEARNING WORKSPACE / CISCO</div><h1>Cisco</h1><p class="page-lead">A growing collection of networking material: concepts, configuration references, practical labs, and eventually interactive quizzes.</p></header>
+    <div class="callout"><strong>Starting point: Cisco IOS XE</strong><p>Initial platform coverage focuses on IOS XE. Topics and commands will be labeled by platform so differences between Cisco operating systems do not get mixed together.</p></div>
     <section class="section">
-      <div class="section-heading"><h2>Getting started</h2><span>IOS XE first</span></div>
-      <div class="info-block"><h2>IOS XE</h2><p>The initial focus for Cisco-related guides and references. This section will start with common IOS XE workflows, configuration examples, and command behavior.</p></div>
-      <div class="info-block"><h2>Topics</h2><p>Device basics, interfaces, VLANs, routing, switching, and practical troubleshooting notes will have a home here as the reference grows.</p></div>
-      <div class="info-block"><h2>Scope</h2><p>Keep platform-specific details clearly separated. IOS XE is the starting point; other Cisco operating systems can be added as their differences are documented.</p></div>
+      <div class="section-heading"><h2>Study and practice</h2><span>03 areas</span></div>
+      <div class="card-grid">
+        <a class="card" href="/cisco/learning/"><div class="card-top"><span class="card-icon">▤</span><span class="card-tag">STUDY</span></div><h3>Learning material</h3><p>Organized explanations, topic notes, diagrams, and learning paths from networking fundamentals through routing and switching.</p><span class="card-arrow">Browse learning topics ↗</span></a>
+        <a class="card" href="/cisco/labs/"><div class="card-top"><span class="card-icon">⌁</span><span class="card-tag">HANDS-ON</span></div><h3>Labs and exercises</h3><p>Guided configuration tasks, troubleshooting scenarios, verification steps, and practical exercises.</p><span class="card-arrow">Browse lab structure ↗</span></a>
+        <a class="card" href="/cisco/reference/"><div class="card-top"><span class="card-icon">⌘</span><span class="card-tag">LOOKUP</span></div><h3>IOS XE reference</h3><p>Command notes, configuration patterns, verification commands, and concise explanations.</p><span class="card-arrow">Open command reference ↗</span></a>
+        <div class="card"><div class="card-top"><span class="card-icon">?</span><span class="card-tag">PLANNED</span></div><h3>Quizzes and review</h3><p>A future practice system with topic-based questions, explanations, scoring, and review of missed concepts.</p><span class="card-arrow">Planned foundation</span></div>
+      </div>
     </section>
-    <footer>© <span data-year></span> fred.fish</footer>
+    <section class="section"><div class="section-heading"><h2>How this section is organized</h2><span>IOS XE first</span></div>
+      <div class="info-block"><h2>Learn the concept</h2><p>Start with an explanation of the protocol, feature, or networking behavior. Notes should explain why something works, not only list commands.</p></div>
+      <div class="info-block"><h2>Apply it in a lab</h2><p>Use Packet Tracer, emulators, or physical equipment to configure a network and observe its behavior.</p></div>
+      <div class="info-block"><h2>Verify and review</h2><p>Use show commands, troubleshooting steps, and eventually quizzes to check understanding and revisit weak areas.</p></div>
+    </section>
+    <footer>© <span data-year></span> fred.fish · Cisco learning workspace</footer>
   </div></main>
-</body>
-</html>
+</body></html>
