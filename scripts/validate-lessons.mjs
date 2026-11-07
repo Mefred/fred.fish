@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 
 const root = "dist/cisco/learning/modules";
@@ -78,6 +78,35 @@ for (const directory of directories) {
         fail(directory.name, `question ${questionNumber}, option ${optionIndex + 1} has no explanation`);
       }
     }
+  }
+}
+
+const migratedLessons = [
+  "01-physical-layer",
+  "02-data-link-layer",
+  "03-ethernet-switching",
+];
+
+for (const slug of migratedLessons) {
+  const routeSource = `src/pages/cisco/learning/modules/${slug}.astro`;
+  const builtPage = join("dist/cisco/learning/modules", slug, "index.html");
+  if (!existsSync(routeSource)) {
+    failures.push(`${slug}: missing Astro route source ${routeSource}`);
+    continue;
+  }
+  if (!existsSync(builtPage)) {
+    failures.push(`${slug}: migrated Astro route was not generated at ${builtPage}`);
+    continue;
+  }
+  const html = readFileSync(builtPage, "utf8");
+  for (const [label, pattern] of [
+    ["canonical URL", /<link rel="canonical" href=/],
+    ["article metadata", /property="og:type" content="article"/],
+    ["lesson stylesheet", /href="\\/assets\\/learning\\.css"/],
+    ["lesson interaction script", /src="\\/assets\\/learning\\.js"/],
+    ["lesson body", /<main class="main">[\\s\\S]*<article class="lesson-main">/],
+  ]) {
+    if (!pattern.test(html)) failures.push(`${slug}: migrated page is missing ${label}`);
   }
 }
 
