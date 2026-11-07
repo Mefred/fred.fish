@@ -103,6 +103,9 @@ const migratedLessons = [
   "19-dynamic-routing-ospf",
   "20-routing-troubleshooting-redundancy",
   "21-ip-services",
+  "22-network-security-fundamentals",
+  "23-network-automation-programmability",
+  "24-ios-xe-cli-device-management",
 ];
 
 for (const slug of migratedLessons) {
