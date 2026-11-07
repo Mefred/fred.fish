@@ -194,7 +194,7 @@ for (const slug of migratedLessons) {
     fail(slug, `generated route contains ${builtQuizPanelCount} component quiz panels; legacy source contains ${sourceQuizPanelCount}`);
   }
 
-  const sourceWithoutCommandBlocks = legacyHtml.replace(/<div class="command-block">[\\s\\S]*?<\\/div>/g, "");
+  const sourceWithoutCommandBlocks = legacyHtml.replace(/<div class="command-block">[\s\S]*?<\/div>/g, "");
   const sourceCodeBlockCount = [...sourceWithoutCommandBlocks.matchAll(/<pre>/g)].length;
   const builtCodeBlockCount = [...html.matchAll(/<pre data-lesson-code-block>/g)].length;
   if (builtCodeBlockCount !== sourceCodeBlockCount) {
