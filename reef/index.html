@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111714">
+  <meta name="description" content="Reef, a project for working with Cisco IOS XE devices.">
+  <title>Reef — fred.fish</title>
+  <link rel="stylesheet" href="/assets/site.css">
+  <script src="/assets/site.js" defer></script>
+</head>
+<body>
+  <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <a class="wordmark" href="/"><span class="wordmark-icon">f.</span><span>fred.fish</span></a>
+    <div class="tree-label">WORKSPACE</div>
+    <nav class="file-tree" aria-label="Site navigation">
+      <a class="tree-row" href="/"><span class="file-icon">⌂</span><span>home</span></a>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="cisco-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>cisco/</span></button>
+      <div class="tree-children" id="cisco-links"><a class="tree-row child" href="/cisco/"><span class="file-icon">◫</span><span>overview</span></a></div>
+      <button class="tree-row folder-toggle" type="button" aria-expanded="true" aria-controls="reef-links"><span class="chevron">▾</span><span class="folder-icon">▰</span><span>reef/</span></button>
+      <div class="tree-children" id="reef-links"><a class="tree-row child active" href="/reef/" aria-current="page"><span class="file-icon">◫</span><span>overview</span></a></div>
+    </nav>
+    <div class="sidebar-bottom"><span class="status-dot"></span> A little corner of the internet</div>
+  </aside>
+  <div class="sidebar-backdrop" hidden></div>
+  <main class="main"><div class="content">
+    <div class="breadcrumb"><a href="/">fred.fish</a><span>/</span><strong>reef</strong></div>
+    <header class="page-header"><div class="eyebrow">PROJECT / NETWORKING</div><h1>Reef</h1><p class="page-lead">A focused workspace for connecting to and working with Cisco network devices.</p></header>
+    <section class="section">
+      <div class="section-heading"><h2>Project overview</h2><span>In development</span></div>
+      <div class="info-block"><h2>What it is</h2><p>Reef is being built around Cisco IOS XE first, with a clear separation between device connection, device information, and configuration workflows.</p></div>
+      <div class="info-block"><h2>Planned workflow</h2><p>Connect to a device first. Once connected, show the relevant device details and make its available settings and operations easy to navigate.</p></div>
+      <div class="info-block"><h2>Starting scope</h2><p>Begin with IOS XE support and a dependable foundation. Additional platforms and capabilities can be introduced without making the initial interface or workflow unnecessarily complicated.</p></div>
+    </section>
+    <footer>© <span data-year></span> fred.fish</footer>
+  </div></main>
+</body>
+</html>
