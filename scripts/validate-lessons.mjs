@@ -100,6 +100,9 @@ const migratedLessons = [
   "16-etherchannel-link-aggregation",
   "17-wireless-lans-architectures",
   "18-static-default-routing",
+  "19-dynamic-routing-ospf",
+  "20-routing-troubleshooting-redundancy",
+  "21-ip-services",
 ];
 
 for (const slug of migratedLessons) {
