@@ -34,6 +34,10 @@
     if (localStorage.getItem("fred-sidebar-collapsed") === "true" && window.innerWidth > 760) {
       body.classList.add("sidebar-collapsed");
       collapseButton?.setAttribute("aria-expanded", "false");
+      const label = collapseButton?.querySelector(".collapse-label");
+      if (label) label.textContent = "Expand sidebar";
+      const icon = collapseButton?.querySelector(".collapse-icon");
+      if (icon) icon.textContent = "⇥";
     }
   } catch (_) {}
 
@@ -41,6 +45,7 @@
     const collapsed = body.classList.toggle("sidebar-collapsed");
     collapseButton.setAttribute("aria-expanded", String(!collapsed));
     collapseButton.querySelector(".collapse-label").textContent = collapsed ? "Expand sidebar" : "Collapse sidebar";
+    collapseButton.querySelector(".collapse-icon").textContent = collapsed ? "⇥" : "⇤";
     try { localStorage.setItem("fred-sidebar-collapsed", String(collapsed)); } catch (_) {}
   });
 
