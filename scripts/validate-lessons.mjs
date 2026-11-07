@@ -142,11 +142,15 @@ for (const slug of migratedLessons) {
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
+  if ((html.match(/<aside class="sidebar" id="sidebar">/g) ?? []).length !== 1) {
+    fail(slug, "generated page must contain exactly one shared Cisco sidebar");
+  }
   for (const [label, pattern] of [
     ["canonical URL", /<link rel="canonical" href=/],
     ["article metadata", /property="og:type" content="article"/],
     ["lesson stylesheet", /href="\/assets\/learning\.css"/],
     ["lesson interaction script", /src="\/assets\/learning\.js"/],
+    ["shared Cisco sidebar", /<aside class="sidebar" id="sidebar">],
     ["lesson body", /<main class="main">[\s\S]*<article class="lesson-main">/],
   ]) {
     if (!pattern.test(html)) failures.push(`${slug}: migrated page is missing ${label}`);
