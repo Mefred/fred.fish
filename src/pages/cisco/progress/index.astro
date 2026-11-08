@@ -18,8 +18,9 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
   const weak = entries.filter((item) => item.attempts === 0 || item.mastery < 70).slice(0,6);
   const due = entries.filter((item) => item.attempts > 0 && item.dueAt <= Date.now());
   const pct = progress.totalAnswers ? Math.round(progress.totalCorrect / progress.totalAnswers * 100) : 0;
-  const today = new Date().toISOString().slice(0,10);
-  const sessionsToday = progress.history.filter((item) => new Date(item.date).toISOString().slice(0,10) === today).length;
+  const currentDate = new Date();
+  const today = `${currentDate.getFullYear()}-${String(currentDate.getMonth()+1).padStart(2,"0")}-${String(currentDate.getDate()).padStart(2,"0")}`;
+  const sessionsToday = progress.history.filter((item) => { const date = new Date(item.date); return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}` === today; }).length;
   const label = (mastery:number, attempts:number) => attempts === 0 ? "Not practiced" : mastery >= 90 ? "Mastered" : mastery >= 70 ? "Developing" : mastery >= 40 ? "Needs review" : "Building foundation";
   if (root) root.innerHTML = `
     <div class="progress-metrics">
