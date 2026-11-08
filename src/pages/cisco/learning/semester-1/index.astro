@@ -2,23 +2,23 @@
 import SiteLayout from "../../../../layouts/SiteLayout.astro";
 import Eyebrow from "../../../../components/Eyebrow.astro";
 const modules = [
-  ["01","Networking Today","Network roles, topologies, LANs and WANs, Internet access, network reliability, trends, and security.","modules/01-networking-today/","block-0004","Source lesson rebuilt"],
-  ["02","Basic Switch and End Device Configuration","Cisco IOS access, command modes, device configuration, management addressing, and connectivity verification.","semester-1/modules/02-basic-device-configuration/","IMG-0144","Source lesson rebuilt"],
-  ["03","Protocols and Models","Protocol rules, protocol suites, standards organizations, OSI and TCP/IP models, encapsulation, and data access.","semester-1/modules/03-protocols-and-models/","IMG-0218","Source lesson rebuilt"],
-  ["04","Physical Layer","Physical-layer purpose, signals, bandwidth, copper cabling, fiber-optic cabling, and wireless media.","modules/01-physical-layer/","IMG-0371","Related lesson linked"],
-  ["05","Number Systems","Binary and hexadecimal number systems, conversions, and their use in network addressing.","modules/06-number-systems-binary-math/","IMG-0390","Related lesson linked"],
-  ["06","Data Link Layer","Layer 2 purpose, framing, topologies, media access, and the LLC and MAC sublayers.","modules/02-data-link-layer/","IMG-0424","Related lesson linked"],
-  ["07","Ethernet Switching","Ethernet frames and MAC addresses, MAC address tables, switching methods, and switch forwarding.","modules/03-ethernet-switching/","IMG-0478","Related lesson linked"],
-  ["08","Network Layer","IPv4 and IPv6 packets, network-layer characteristics, host routing, and router routing tables.","modules/09-network-layer-routing-basics/","IMG-0641","Related lesson linked"],
-  ["09","Address Resolution","IPv4 ARP tables and requests, IPv6 Neighbor Discovery, and ICMPv6 messages.","modules/10-arp-neighbor-discovery-icmp/","IMG-0660","Related lesson linked"],
-  ["10","Basic Router Configuration","Initial router settings, interface configuration, default gateways, and connectivity verification.","modules/24-ios-xe-cli-device-management/","IMG-0738","Related lesson linked"],
-  ["11","IPv4 Addressing","IPv4 structure, unicast/broadcast/multicast, public/private addresses, subnetting, VLSM, and address planning.","modules/07-ipv4-addressing-subnetting/","IMG-0888","Related lesson linked"],
-  ["12","IPv6 Addressing","IPv6 notation, address types, GUAs and LLAs, static and dynamic addressing, SLAAC, and subnetting.","modules/08-ipv6-addressing/","IMG-0969","Related lesson linked"],
+  ["01","Networking Today","Network roles, topologies, LANs and WANs, Internet access, network reliability, trends, and security.","/cisco/learning/semester-1/modules/01-networking-today/","block-0004","Source lesson rebuilt"],
+  ["02","Basic Switch and End Device Configuration","Cisco IOS access, command modes, device configuration, management addressing, and connectivity verification.","/cisco/learning/semester-1/modules/02-basic-device-configuration/","IMG-0144","Source lesson rebuilt"],
+  ["03","Protocols and Models","Protocol rules, protocol suites, standards organizations, OSI and TCP/IP models, encapsulation, and data access.","/cisco/learning/semester-1/modules/03-protocols-and-models/","IMG-0218","Source lesson rebuilt"],
+  ["04","Physical Layer","Physical-layer purpose, signals, bandwidth, copper cabling, fiber-optic cabling, and wireless media.","/cisco/learning/modules/01-physical-layer","IMG-0371","Related lesson linked"],
+  ["05","Number Systems","Binary and hexadecimal number systems, conversions, and their use in network addressing.","/cisco/learning/modules/06-number-systems-binary-math","IMG-0390","Related lesson linked"],
+  ["06","Data Link Layer","Layer 2 purpose, framing, topologies, media access, and the LLC and MAC sublayers.","/cisco/learning/modules/02-data-link-layer","IMG-0424","Related lesson linked"],
+  ["07","Ethernet Switching","Ethernet frames and MAC addresses, MAC address tables, switching methods, and switch forwarding.","/cisco/learning/modules/03-ethernet-switching","IMG-0478","Related lesson linked"],
+  ["08","Network Layer","IPv4 and IPv6 packets, network-layer characteristics, host routing, and router routing tables.","/cisco/learning/modules/09-network-layer-routing-basics","IMG-0641","Related lesson linked"],
+  ["09","Address Resolution","IPv4 ARP tables and requests, IPv6 Neighbor Discovery, and ICMPv6 messages.","/cisco/learning/modules/10-arp-neighbor-discovery-icmp","IMG-0660","Related lesson linked"],
+  ["10","Basic Router Configuration","Initial router settings, interface configuration, default gateways, and connectivity verification.","/cisco/learning/modules/24-ios-xe-cli-device-management","IMG-0738","Related lesson linked"],
+  ["11","IPv4 Addressing","IPv4 structure, unicast/broadcast/multicast, public/private addresses, subnetting, VLSM, and address planning.","/cisco/learning/modules/07-ipv4-addressing-subnetting","IMG-0888","Related lesson linked"],
+  ["12","IPv6 Addressing","IPv6 notation, address types, GUAs and LLAs, static and dynamic addressing, SLAAC, and subnetting.","/cisco/learning/modules/08-ipv6-addressing","IMG-0969","Related lesson linked"],
   ["13","ICMP","ICMP and ICMPv6 messages, ping, traceroute, and connectivity testing.","modules/10-arp-neighbor-discovery-icmp/","IMG-1123","Related lesson linked"],
-  ["14","Transport Layer","TCP and UDP, port numbers, reliability, flow control, and transport communication.","modules/11-transport-layer/","IMG-1168","Related lesson linked"],
-  ["15","Application Layer","Application protocols, web and email protocols, IP addressing services, and file-sharing services.","modules/12-application-layer-services/","IMG-1263","Related lesson linked"],
-  ["16","Network Security Fundamentals","Threat actors, malware, network attacks, device security, secure management, and defense in depth.","modules/22-network-security-fundamentals/","IMG-1510","Related lesson linked"],
-  ["17","Build a Small Network","Small-network devices and applications, scaling, host and IOS commands, and troubleshooting methodology.","modules/30-integrated-network-troubleshooting/","IMG-1449","Related lesson linked"]
+  ["14","Transport Layer","TCP and UDP, port numbers, reliability, flow control, and transport communication.","/cisco/learning/modules/11-transport-layer","IMG-1168","Related lesson linked"],
+  ["15","Application Layer","Application protocols, web and email protocols, IP addressing services, and file-sharing services.","/cisco/learning/modules/12-application-layer-services","IMG-1263","Related lesson linked"],
+  ["16","Network Security Fundamentals","Threat actors, malware, network attacks, device security, secure management, and defense in depth.","/cisco/learning/modules/22-network-security-fundamentals","IMG-1510","Related lesson linked"],
+  ["17","Build a Small Network","Small-network devices and applications, scaling, host and IOS commands, and troubleshooting methodology.","/cisco/learning/modules/30-integrated-network-troubleshooting","IMG-1449","Related lesson linked"]
 ];
 ---
 <SiteLayout title="Semester 1 Networking Course — fred.fish" description="A source-traceable Semester 1 networking course reconstructed from lecture notes, screenshots, and diagrams." active="cisco">
@@ -27,7 +27,7 @@ const modules = [
     <header class="semester-hero"><Eyebrow index="S1 / COURSE" label="SEMESTER 1 / INTRODUCTION TO NETWORKS" /><h1>Networking, from<br /><span>the fundamentals up.</span></h1><p>This course follows the 17-module Cisco Introduction to Networks sequence found in the lecture material. The source image archive is being OCR-processed and audited; source-specific lesson improvements will be added as that review is completed.</p><div class="semester-tags"><span>17 SOURCE MODULES IDENTIFIED</span><span>2,646 IMAGE ASSETS TO AUDIT</span><span>73 RECOVERED TEXT BLOCKS</span></div></header>
     <section class="source-notice"><strong>How source coverage is represented</strong><p>Module titles and topic outlines below were identified from the source corpus and image text. Module 1 has a rebuilt lesson with explicit text-block references. Other modules currently link to the site's related CCNA lessons while their source-specific material is being incorporated. These links do not mean their image audits are complete.</p></section>
     <div class="module-grid">
-      {modules.map((module)=><article class="module-card"><div class="module-card-top"><span>{module[0]}</span><code>{module[4]}</code></div><h2>{module[1]}</h2><p>{module[2]}</p><div class="module-card-foot"><small>{module[5]}</small><a href={module[3].startsWith("modules/01") ? "/cisco/learning/semester-1/modules/01-networking-today/" : "/cisco/learning/"+module[3]}>Open lesson ↗</a></div></article>)}
+      {modules.map((module)=><article class="module-card"><div class="module-card-top"><span>{module[0]}</span><code>{module[4]}</code></div><h2>{module[1]}</h2><p>{module[2]}</p><div class="module-card-foot"><small>{module[5]}</small><a href={module[3]}>Open lesson ↗</a></div></article>)}
     </div>
     <section class="semester-footer"><div><Eyebrow label="PRACTICE AND RETENTION" /><h2>Practice across the concepts.</h2><p>Short sessions adapt to your strengths, weak areas, and concepts due for review.</p></div><a class="semester-button" href="/cisco/practice/">Start a practice session →</a></section>
   </section>
