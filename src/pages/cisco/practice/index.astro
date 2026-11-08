@@ -14,7 +14,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
 
 <script>
   import { semesterOneQuestions } from "../../../data/learning/semester-1-seed";
-  import { buildAdaptiveQuiz, emptyProgress, finishSession, recordAnswer } from "../../../lib/learning/adaptive";
+  import { buildAdaptiveQuiz, finishSession, recordAnswer } from "../../../lib/learning/adaptive";
   import { loadProgress, saveProgress } from "../../../lib/learning/storage";
   import type { LearningQuestion, LearningProgress } from "../../../lib/learning/types";
 
@@ -24,6 +24,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
   let answers: { correct: boolean }[] = [];
   let index = 0;
   let selected = new Set<string>();
+  let ordering: string[] = [];
   let locked = false;
 
   const updateStats = () => {
@@ -47,60 +48,113 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     if (!app) return;
     const q = quiz[index];
     selected = new Set();
+    ordering = q.items?.map((item) => item.id) ?? [];
     locked = false;
     const pct = index / quiz.length * 100;
-    const choices = q.type === "true-false"
-      ? [{id:"true",text:"True"},{id:"false",text:"False"}]
-      : (q.choices || []);
+    const choices = q.type === "true-false" ? [{id:"true",text:"True"},{id:"false",text:"False"}] : (q.choices || []);
+    let inputMarkup = "";
+    if (q.type === "fill") {
+      inputMarkup = `<label class="fill-label" for="fill-answer">Your answer</label><input id="fill-answer" class="fill-answer" type="text" autocomplete="off" placeholder="Type your answer..." />`;
+    } else if (q.type === "matching") {
+      inputMarkup = `<div class="matching-list">${(q.pairs || []).map((pair) => `<label class="matching-row"><span>${escapeHtml(pair.prompt)}</span><select data-pair="${escapeHtml(pair.id)}"><option value="">Choose a match…</option>${(q.matchOptions || []).map((option) => `<option value="${escapeHtml(option.id)}">${escapeHtml(option.text)}</option>`).join("")}</select></label>`).join("")}</div>`;
+    } else if (q.type === "ordering") {
+      inputMarkup = `<div id="ordering-list" class="ordering-list"></div>`;
+    } else {
+      inputMarkup = `<div class="quiz-options">${choices.map((choice) => `<button class="quiz-option" type="button" data-choice="${escapeHtml(choice.id)}" aria-pressed="false"><span class="quiz-option-mark"></span><span>${escapeHtml(choice.text)}</span></button>`).join("")}</div>`;
+    }
+    const hint = q.type === "multiple" ? "Select all answers that apply." : q.type === "true-false" ? "Choose true or false." : q.type === "fill" ? "Enter the technical term. Capitalization does not matter." : q.type === "matching" ? "Match every item with its correct definition." : q.type === "ordering" ? "Arrange the steps in the correct order." : "Choose the best answer.";
     app.innerHTML = `<div class="quiz-progress-row"><span>QUESTION ${String(index + 1).padStart(2,"0")} / ${quiz.length}</span><span>${Math.round(pct)}% complete</span></div>
       <div class="quiz-track"><span style="width:${pct}%"></span></div>
-      <div class="quiz-meta"><span>${escapeHtml(q.subject)}</span><span>DIFFICULTY ${q.difficulty}/5</span></div>
-      <h2 class="quiz-prompt">${escapeHtml(q.prompt)}</h2>
-      <p class="quiz-hint">${q.type === "multiple" ? "Select all answers that apply." : q.type === "true-false" ? "Choose true or false." : "Choose the best answer."}</p>
-      <div class="quiz-options">${choices.map((choice) => `<button class="quiz-option" type="button" data-choice="${escapeHtml(choice.id)}" aria-pressed="false"><span class="quiz-option-mark"></span><span>${escapeHtml(choice.text)}</span></button>`).join("")}</div>
+      <div class="quiz-meta"><span>${escapeHtml(q.subject)} · ${q.origin === "source" ? "SOURCE QUESTION" : "AI-GENERATED"}</span><span>DIFFICULTY ${q.difficulty}/5</span></div>
+      <h2 class="quiz-prompt">${escapeHtml(q.prompt)}</h2><p class="quiz-hint">${hint}</p>
+      ${inputMarkup}
       <div id="answer-feedback" class="answer-feedback" hidden></div>
       <div class="quiz-controls"><span class="quiz-concepts">CONCEPTS: ${q.concepts.map(escapeHtml).join(" · ")}</span><button class="practice-button" id="submit-answer" disabled>Check answer <span>→</span></button></div>`;
+
+    if (q.type === "ordering") drawOrdering();
     app.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((button) => button.addEventListener("click", () => {
       if (locked) return;
       const id = button.dataset.choice!;
-      if (q.type === "multiple") {
-        selected.has(id) ? selected.delete(id) : selected.add(id);
-      } else {
-        selected = new Set([id]);
-      }
+      if (q.type === "multiple") selected.has(id) ? selected.delete(id) : selected.add(id);
+      else selected = new Set([id]);
       app?.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((item) => {
         const active = selected.has(item.dataset.choice!);
         item.classList.toggle("selected", active);
         item.setAttribute("aria-pressed", String(active));
       });
-      const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
-      if (submit) submit.disabled = selected.size === 0;
+      updateSubmitState();
+    }));
+    app.querySelector<HTMLInputElement>("#fill-answer")?.addEventListener("input", (event) => {
+      selected = new Set([(event.currentTarget as HTMLInputElement).value.trim()]);
+      updateSubmitState();
+    });
+    app.querySelectorAll<HTMLSelectElement>("[data-pair]").forEach((select) => select.addEventListener("change", () => {
+      selected = new Set([...app!.querySelectorAll<HTMLSelectElement>("[data-pair]")].filter((item) => item.value).map((item) => `${item.dataset.pair}:${item.value}`));
+      updateSubmitState();
     }));
     app.querySelector<HTMLButtonElement>("#submit-answer")?.addEventListener("click", checkAnswer);
   };
+  const updateSubmitState = () => {
+    const q = quiz[index];
+    const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
+    let ready = selected.size > 0;
+    if (q.type === "matching") ready = selected.size === (q.pairs || []).length;
+    if (submit) submit.disabled = !ready;
+  };
+  const drawOrdering = () => {
+    const list = app?.querySelector<HTMLElement>("#ordering-list");
+    if (!list) return;
+    const q = quiz[index];
+    list.innerHTML = ordering.map((id, position) => {
+      const item = q.items?.find((entry) => entry.id === id);
+      return `<div class="ordering-row"><span>${position + 1}. ${escapeHtml(item?.text || id)}</span><div><button type="button" data-move="-1" data-id="${id}" ${position === 0 ? "disabled" : ""} aria-label="Move up">↑</button><button type="button" data-move="1" data-id="${id}" ${position === ordering.length - 1 ? "disabled" : ""} aria-label="Move down">↓</button></div></div>`;
+    }).join("");
+    list.querySelectorAll<HTMLButtonElement>("[data-move]").forEach((button) => button.addEventListener("click", () => {
+      if (locked) return;
+      const from = ordering.indexOf(button.dataset.id!);
+      const to = from + Number(button.dataset.move);
+      if (to < 0 || to >= ordering.length) return;
+      [ordering[from], ordering[to]] = [ordering[to], ordering[from]];
+      selected = new Set(ordering);
+      drawOrdering();
+      updateSubmitState();
+    }));
+  };
   const checkAnswer = () => {
     const q = quiz[index];
-    const expected = Array.isArray(q.answer) ? [...q.answer].sort() : [q.answer];
-    const actual = [...selected].sort();
-    const correct = expected.length === actual.length && expected.every((value, i) => value === actual[i]);
+    const expected = Array.isArray(q.answer) ? [...q.answer] : [q.answer];
+    const actual = [...selected];
+    let correct = false;
+    if (q.type === "fill") {
+      correct = expected.some((value) => value.toLowerCase() === (actual[0] || "").trim().toLowerCase());
+    } else if (q.type === "ordering") {
+      correct = expected.length === actual.length && expected.every((value, i) => value === actual[i]);
+    } else {
+      const sortedExpected = [...expected].sort();
+      const sortedActual = [...actual].sort();
+      correct = sortedExpected.length === sortedActual.length && sortedExpected.every((value, i) => value === sortedActual[i]);
+    }
     locked = true;
     progress = recordAnswer(progress, q, correct);
     saveProgress(progress);
     answers.push({correct});
     const feedback = app?.querySelector<HTMLElement>("#answer-feedback");
     if (feedback) {
-      const explanation = `<strong>${correct ? "Correct" : "Not quite"}</strong><p>${escapeHtml(q.explanation)}</p>`;
-      feedback.innerHTML = explanation;
+      const wrongDetails = !correct && q.distractorExplanations
+        ? actual.map((id) => q.distractorExplanations?.[id]).filter(Boolean).map((detail) => `<p>${escapeHtml(detail!)}</p>`).join("")
+        : "";
+      feedback.innerHTML = `<strong>${correct ? "Correct" : "Not quite"}</strong><p>${escapeHtml(q.explanation)}</p>${wrongDetails}`;
       feedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
       feedback.hidden = false;
     }
     app?.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((button) => {
       button.disabled = true;
       const id = button.dataset.choice!;
-      const isAnswer = expected.includes(id);
-      button.classList.toggle("answer-correct", isAnswer);
-      button.classList.toggle("answer-wrong", selected.has(id) && !isAnswer);
+      button.classList.toggle("answer-correct", expected.includes(id));
+      button.classList.toggle("answer-wrong", selected.has(id) && !expected.includes(id));
     });
+    app?.querySelectorAll<HTMLInputElement | HTMLSelectElement>("#fill-answer, [data-pair]").forEach((input) => input.disabled = true);
+    app?.querySelectorAll<HTMLButtonElement>("[data-move]").forEach((button) => button.disabled = true);
     const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
     if (submit) {
       submit.disabled = false;
@@ -113,7 +167,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     if (index < quiz.length - 1) { index += 1; renderQuestion(); return; }
     progress = finishSession(progress, answers);
     saveProgress(progress);
-    const correct = answers.filter((a) => a.correct).length;
+    const correct = answers.filter((answer) => answer.correct).length;
     if (app) app.innerHTML = `<div class="session-complete"><span class="practice-kicker">SESSION COMPLETE</span><h2>${correct} / ${quiz.length} correct</h2><p>You earned <strong>${correct * 10 + 10} XP</strong>. Your concept mastery and review schedule have been updated.</p><div class="session-actions"><button class="practice-button" id="again">Practice again →</button><a href="/cisco/progress/">Review learning dashboard ↗</a></div></div>`;
     app?.querySelector("#again")?.addEventListener("click", start);
     updateStats();
