@@ -1,7 +1,7 @@
 # Semester 1 question bank audit
 
-**Current bank:** 200 unique questions  
-**Concept tags:** 329 unique concept identifiers  
+**Current bank:** 206 unique questions  
+**Concept tags:** 340 unique concept identifiers  
 **Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 180 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
@@ -23,22 +23,22 @@ The latest eleven batches added 114 distinct questions:
 
 | Format | Questions |
 |---|---:|
-| Single choice | 98 |
-| Multiple select | 16 |
+| Single choice | 99 |
+| Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 26 |
-| Matching | 18 |
+| Matching | 19 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 30 |
-| **Total** | **200** |
+| Scenario / troubleshooting | 32 |
+| **Total** | **206** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 68 |
-| 3 — Applied | 71 |
+| 2 — Foundational | 71 |
+| 3 — Applied | 74 |
 | 4 — Advanced | 23 |
 | 5 — Challenging | 4 |
 
@@ -63,4 +63,4 @@ The first automated promotion map contained several incorrect image-to-question 
 
 The 200-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
-Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. Remaining work includes deeper route-configuration labs, practical subnetting variants, and systematic coverage checks against every lesson's concept list.
+Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. Remaining work includes deeper route-configuration labs, practical subnetting variants, and systematic coverage checks against every lesson's concept list.
