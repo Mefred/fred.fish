@@ -28,7 +28,7 @@ The 270 exact duplicates are flagged, not deleted. Repeated material may be peda
 
 - 792 image assets contain question-like OCR text.
 - Normalizing exact OCR text yields 474 candidate groups.
-- These are candidate prompts, not 474 verified answer-key entries. Some are duplicate slides, matching activities, diagram-dependent questions, or questions whose correct answer is indicated only by a visual mark.
+- These are candidate prompts, not 474 verified answer-key entries. Eight image-linked candidates have been promoted after checking their source text or visual answer marks. The remaining candidates may be duplicate slides, matching activities, diagram-dependent questions, or prompts whose correct answer is indicated only by a visual mark.
 - Candidate prompts without a visually verified answer remain out of the active source-question bank. New explanations or answers derived from networking knowledge are labeled `ai-generated`.
 
 ## Module sequence discovered
