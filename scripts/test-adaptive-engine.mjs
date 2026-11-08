@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import {
-  buildAdaptiveQuiz, emptyProgress, finishSession, recordAnswer, recommendedDifficulty,
+  buildAdaptiveQuiz, emptyProgress, finishSession, recordAnswer, recommendedDifficulty, shuffleOrderingItems,
 } from "../src/lib/learning/adaptive.ts";
 import { semesterOneQuestions } from "../src/data/learning/semester-1-seed.ts";
 
@@ -9,6 +9,11 @@ const initial = emptyProgress();
 const session = buildAdaptiveQuiz(semesterOneQuestions, initial, 10, now);
 assert.equal(session.length, 10, "practice sessions should contain ten questions");
 assert.equal(new Set(session.map((question) => question.id)).size, 10, "a session must not repeat question IDs");
+const orderItems = [{ id: "first" }, { id: "second" }, { id: "third" }];
+const shuffledOrder = shuffleOrderingItems(orderItems, ["first", "second", "third"], () => 0);
+assert.notDeepEqual(shuffledOrder, ["first", "second", "third"], "ordering questions must not reveal the answer in their initial presentation");
+assert.deepEqual(new Set(shuffledOrder), new Set(orderItems.map((item) => item.id)), "shuffling must preserve every ordering item exactly once");
+
 
 const withoutRecent = { ...initial, recentQuestionIds: semesterOneQuestions.slice(0, 8).map((question) => question.id) };
 const nextSession = buildAdaptiveQuiz(semesterOneQuestions, withoutRecent, 10, now);
