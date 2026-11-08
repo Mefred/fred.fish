@@ -3,6 +3,7 @@ import {
   buildAdaptiveQuiz, emptyProgress, finishSession, recordAnswer, recommendedDifficulty, shuffleOrderingItems,
 } from "../src/lib/learning/adaptive.ts";
 import { semesterOneQuestions } from "../src/data/learning/semester-1-seed.ts";
+import { loadProgress, saveProgress } from "../src/lib/learning/storage.ts";
 
 const now = Date.UTC(2026, 10, 8, 12);
 const initial = emptyProgress();
@@ -39,4 +40,21 @@ assert.equal(dayOne.totalSessions, 1);
 const dayTwo = finishSession(dayOne, [{ correct: true }], now + 24 * 60 * 60 * 1000);
 assert.equal(dayTwo.streakDays, 2, "consecutive practice days should extend the streak");
 
-console.log("Adaptive engine tests passed: quiz length, repeat avoidance, mastery, difficulty, review scheduling, XP, and streaks.");
+const storage = new Map();
+Object.defineProperty(globalThis, "localStorage", {
+  configurable: true,
+  value: {
+    getItem: (key) => storage.get(key) ?? null,
+    setItem: (key, value) => storage.set(key, value),
+  },
+});
+saveProgress(masteryProgress);
+assert.deepEqual(loadProgress(), masteryProgress, "valid saved progress should round-trip unchanged");
+const corrupted = structuredClone(masteryProgress);
+corrupted.concepts[sample.concepts[0]].attempts = "not-a-number";
+storage.set("fredfish.learning.progress.v1", JSON.stringify(corrupted));
+assert.deepEqual(loadProgress(), emptyProgress(), "malformed concept records should safely reset instead of leaking invalid state");
+storage.set("fredfish.learning.progress.v1", "{invalid json");
+assert.deepEqual(loadProgress(), emptyProgress(), "invalid JSON should safely reset progress");
+
+console.log("Learning tests passed: adaptive selection, mastery, review scheduling, XP, streaks, ordering shuffle, and storage validation.");
