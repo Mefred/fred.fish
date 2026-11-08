@@ -18,7 +18,7 @@ All 2,646 manifest assets were passed through Tesseract OCR and have a correspon
 |---|---:|---|
 | OCR text on unique images | 2,353 | Unique images with non-empty OCR output |
 | Exact duplicate copies | 270 | Byte-identical images, linked to a canonical asset ID |
-| Unique images without OCR text | 23 | Blank, non-text, or unreadable to OCR |
+| Visually reviewed non-text images | 22 | Hardware/cabling photos, topology/configuration diagrams, certification badges, or decorative assets |\n| Image requiring manual transcription | 1 | A dark slide with unclear short text; retained for review |
 | **Total accounted** | **2,646** | Every manifest asset has a status |
 
 The 270 exact duplicates are flagged, not deleted. Repeated material may be pedagogically meaningful or appear in different notebook contexts. OCR text similarity is also recorded separately from exact byte identity; it is not used to silently remove near-duplicates.
@@ -54,7 +54,7 @@ The images identify the Cisco Introduction to Networks sequence:
 
 ## Visual review status
 
-OCR is complete, but visual review is not. OCR cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. A human/vision review pass is still required for the 23 no-text images, the 474 unique question candidates, and diagrams/screenshots whose relationships matter to the explanation.
+OCR is complete. A visual contact-sheet pass reviewed the 23 unique images without OCR text: 22 were identified as visual-only assets (including cable/connectors, switch hardware, certification badges, and diagrams) and one dark slide remains flagged for manual transcription. OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. A further visual review is required for the 474 unique question candidates and diagrams/screenshots whose relationships matter to the explanation.
 
 ## Structured export
 
