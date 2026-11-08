@@ -10,6 +10,9 @@ export interface LearningQuestion {
   difficulty: Difficulty;
   concepts: string[];
   choices?: { id: string; text: string }[];
+  items?: { id: string; text: string }[];
+  matchOptions?: { id: string; text: string }[];
+  pairs?: { id: string; prompt: string; answerId: string }[];
   answer: string | string[];
   explanation: string;
   distractorExplanations?: Record<string, string>;
