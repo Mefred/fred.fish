@@ -14,7 +14,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
 
 <script>
   import { semesterOneQuestions } from "../../../data/learning/semester-1-seed";
-  import { buildAdaptiveQuiz, finishSession, recordAnswer } from "../../../lib/learning/adaptive";
+  import { buildAdaptiveQuiz, finishSession, recordAnswer, shuffleOrderingItems } from "../../../lib/learning/adaptive";
   import { loadProgress, saveProgress } from "../../../lib/learning/storage";
   import type { LearningQuestion, LearningProgress } from "../../../lib/learning/types";
 
@@ -47,7 +47,9 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
   const renderQuestion = () => {
     if (!app) return;
     const q = quiz[index];
-    ordering = q.items?.map((item) => item.id) ?? [];
+    ordering = q.type === "ordering" && q.items
+      ? shuffleOrderingItems(q.items, Array.isArray(q.answer) ? q.answer : [])
+      : [];
     selected = q.type === "ordering" ? new Set(ordering) : new Set();
     locked = false;
     const pct = index / quiz.length * 100;
