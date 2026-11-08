@@ -18,7 +18,8 @@ All 2,646 manifest assets were passed through Tesseract OCR and have a correspon
 |---|---:|---|
 | OCR text on unique images | 2,353 | Unique images with non-empty OCR output |
 | Exact duplicate copies | 270 | Byte-identical images, linked to a canonical asset ID |
-| Visually reviewed non-text images | 22 | Hardware/cabling photos, topology/configuration diagrams, certification badges, or decorative assets |\n| Image requiring manual transcription | 1 | A dark slide with unclear short text; retained for review |
+| Visually reviewed non-text images | 22 | Hardware/cabling photos, topology/configuration diagrams, certification badges, or decorative assets |
+| Image requiring manual transcription | 1 | A dark slide with unclear short text; retained for review |
 | **Total accounted** | **2,646** | Every manifest asset has a status |
 
 The 270 exact duplicates are flagged, not deleted. Repeated material may be pedagogically meaningful or appear in different notebook contexts. OCR text similarity is also recorded separately from exact byte identity; it is not used to silently remove near-duplicates.
