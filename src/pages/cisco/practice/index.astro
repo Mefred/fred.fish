@@ -142,10 +142,23 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     answers.push({correct});
     const feedback = app?.querySelector<HTMLElement>("#answer-feedback");
     if (feedback) {
+      const correctAnswerText = q.type === "fill"
+        ? String(q.answer)
+        : q.type === "ordering"
+          ? expected.map((id) => q.items?.find((item) => item.id === id)?.text || id).join(" → ")
+          : q.type === "matching"
+            ? expected.map((entry) => {
+                const [pairId, matchId] = String(entry).split(":");
+                const pair = q.pairs?.find((item) => item.id === pairId);
+                const match = q.matchOptions?.find((item) => item.id === matchId);
+                return (pair?.prompt || pairId) + ": " + (match?.text || matchId);
+              }).join("; ")
+            : expected.map((id) => id === "true" ? "True" : id === "false" ? "False" : q.choices?.find((choice) => choice.id === id)?.text || id).join(", ");
+      const answerReveal = !correct ? "<p><strong>Correct answer:</strong> " + escapeHtml(correctAnswerText) + "</p>" : "";
       const wrongDetails = !correct && q.distractorExplanations
-        ? actual.map((id) => q.distractorExplanations?.[id]).filter(Boolean).map((detail) => `<p>${escapeHtml(detail!)}</p>`).join("")
+        ? actual.map((id) => q.distractorExplanations?.[id]).filter(Boolean).map((detail) => "<p>" + escapeHtml(detail!) + "</p>").join("")
         : "";
-      feedback.innerHTML = `<strong>${correct ? "Correct" : "Not quite"}</strong><p>${escapeHtml(q.explanation)}</p>${wrongDetails}`;
+      feedback.innerHTML = "<strong>" + (correct ? "Correct" : "Not quite") + "</strong><p>" + escapeHtml(q.explanation) + "</p>" + answerReveal + wrongDetails;
       feedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
       feedback.hidden = false;
     }
