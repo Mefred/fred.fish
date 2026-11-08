@@ -1,12 +1,12 @@
 # Semester 1 question bank audit
 
-**Current bank:** 211 unique questions  
-**Concept tags:** 350 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 191 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 217 unique questions  
+**Concept tags:** 358 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 197 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
-The latest twelve source-grounded batches added 120 distinct questions, followed by five AI-generated network-topology practice questions:
+The latest twelve source-grounded batches added 120 distinct questions, followed by eleven AI-generated practice questions for Network Topologies, Internet Connections, and Address Resolution:
 - 28 questions grounded in recovered Semester 1 text blocks, covering network scope, Internet structure, host roles, peer-to-peer trade-offs, reliable-network characteristics, packet switching, modern network trends, business connectivity, QoS, and layered security.
 - 8 questions grounded in source screenshots, covering DHCP and IPv6 autoconfiguration, IOS command syntax, console access, IOS command modes, Layer 3 source/destination addressing, MAC addressing, and transport ports.
 - 8 questions grounded in Protocols and Models source screenshots, covering PDU encapsulation order, segmentation, open standards, message delivery types, same-LAN and remote-network frame addressing, per-hop Layer 2 changes, and protocol-stack responsibilities.
@@ -23,22 +23,22 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 
 | Format | Questions |
 |---|---:|
-| Single choice | 102 |
+| Single choice | 106 |
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 26 |
 | Matching | 19 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 34 |
-| **Total** | **211** |
+| Scenario / troubleshooting | 36 |
+| **Total** | **217** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 72 |
-| 3 — Applied | 78 |
+| 2 — Foundational | 75 |
+| 3 — Applied | 81 |
 | 4 — Advanced | 23 |
 | 5 — Challenging | 4 |
 
@@ -61,6 +61,6 @@ The first automated promotion map contained several incorrect image-to-question 
 
 ## Coverage and remaining work
 
-The 211-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 217-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
-Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Remaining work includes deeper route-configuration labs, practical subnetting variants, and systematic coverage checks against every lesson's concept list.
+Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Remaining work includes deeper route-configuration labs, practical subnetting variants, and systematic coverage checks against every lesson's concept list.
