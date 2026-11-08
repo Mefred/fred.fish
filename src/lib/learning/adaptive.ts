@@ -35,7 +35,7 @@ export function recordAnswer(
     // Recent accuracy matters more than lifetime accuracy, but a single miss cannot erase mastery.
     const recentAccuracy = recentResults.filter(Boolean).length / recentResults.length;
     const lifetimeAccuracy = (previous.correct + (correct ? 1 : 0)) / attempts;
-    const mastery = clamp(Math.round((recentAccuracy * 0.65 + lifetimeAccuracy * 0.35) * 100), 0, 100);
+    const evidence = Math.min(1, attempts / 5);\n    const mastery = clamp(Math.round((recentAccuracy * 0.65 + lifetimeAccuracy * 0.35) * evidence * 100), 0, 100);
     const intervalDays = !correct ? 0.25 : mastery >= 90 ? 21 : mastery >= 75 ? 7 : mastery >= 55 ? 3 : 1;
     next.concepts[id] = {
       conceptId: id, attempts, correct: previous.correct + (correct ? 1 : 0),
@@ -44,6 +44,12 @@ export function recordAnswer(
   }
   next.recentQuestionIds = [question.id, ...next.recentQuestionIds].slice(0, 40);
   return next;
+}
+
+function difficultyFit(question: LearningQuestion, progress: LearningProgress): number {
+  const target = recommendedDifficulty(question.concepts, progress);
+  // Prefer questions near the learner's current level without excluding harder stretch questions.
+  return 12 - Math.abs(question.difficulty - target) * 3;
 }
 
 function priority(question: LearningQuestion, progress: LearningProgress, now: number): number {
@@ -67,7 +73,7 @@ export function buildAdaptiveQuiz(
   const remaining = [...pool];
   while (selected.length < count && remaining.length) {
     remaining.sort((a, b) => {
-      const score = priority(b, progress, now) - priority(a, progress, now);
+      const score = (priority(b, progress, now) + difficultyFit(b, progress)) - (priority(a, progress, now) + difficultyFit(a, progress));
       return score || a.id.localeCompare(b.id);
     });
     // A little controlled exploration prevents the same weakest topic from dominating every session.
