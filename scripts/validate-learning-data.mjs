@@ -40,7 +40,7 @@ for (const [index, line] of lines.entries()) {
   if (!allowedTypes.has(type)) errors.push(`${label}: unsupported type ${type}`);
   if (!Array.isArray(concepts) || concepts.length === 0) errors.push(`${label}: must map to at least one concept`);
   if (!sourceRefs.length) errors.push(`${label}: missing source references`);
-  if (sourceRefs.some((ref) => !/^(block-\\d{4}|IMG-\\d{4})$/.test(ref))) errors.push(`${label}: malformed source reference`);
+  if (sourceRefs.some((ref) => !/^(block-\d{4}|IMG-\d{4})$/.test(ref))) errors.push(`${label}: malformed source reference`);
   if (!["source","ai-generated"].includes(origin)) errors.push(`${label}: invalid origin`);
   if (answer === null) errors.push(`${label}: missing answer`);
 
