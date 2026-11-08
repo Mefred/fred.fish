@@ -35,7 +35,8 @@ export function recordAnswer(
     // Recent accuracy matters more than lifetime accuracy, but a single miss cannot erase mastery.
     const recentAccuracy = recentResults.filter(Boolean).length / recentResults.length;
     const lifetimeAccuracy = (previous.correct + (correct ? 1 : 0)) / attempts;
-    const evidence = Math.min(1, attempts / 5);\n    const mastery = clamp(Math.round((recentAccuracy * 0.65 + lifetimeAccuracy * 0.35) * evidence * 100), 0, 100);
+    const evidence = Math.min(1, attempts / 5);
+    const mastery = clamp(Math.round((recentAccuracy * 0.65 + lifetimeAccuracy * 0.35) * evidence * 100), 0, 100);
     const intervalDays = !correct ? 0.25 : mastery >= 90 ? 21 : mastery >= 75 ? 7 : mastery >= 55 ? 3 : 1;
     next.concepts[id] = {
       conceptId: id, attempts, correct: previous.correct + (correct ? 1 : 0),
