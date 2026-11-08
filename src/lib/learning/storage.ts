@@ -17,5 +17,5 @@ export function loadProgress(): LearningProgress {
 }
 
 export function saveProgress(progress: LearningProgress): void {
-  if (typeof localStorage !== "undefined") localStorage.setItem(KEY, JSON.stringify(progress));
+  if (typeof localStorage !== "undefined") {\n    try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch { /* Storage may be unavailable or full; keep the active session usable. */ }\n  }
 }
