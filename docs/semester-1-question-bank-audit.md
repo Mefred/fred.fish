@@ -2,7 +2,7 @@
 
 **Current bank:** 187 unique questions  
 **Concept tags:** 307 unique concept identifiers  
-**Source provenance:** 10 source questions with textually or visually supported answers; 177 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 167 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -40,9 +40,18 @@ The latest nine batches added 101 distinct questions:
 | 4 — Advanced | 20 |
 | 5 — Challenging | 4 |
 
+## Source provenance audit
+
+The first automated promotion map contained several incorrect image-to-question associations. A second pass compared the actual OCR text and image content against each active question and corrected those links before adding more source-labelled items.
+
+- 10 image question candidates have been visually checked and linked to active question IDs in the OCR candidate export.
+- 4 false-positive candidates were manually marked as non-question slides and removed from the promoted set.
+- The corrected candidate associations include client/server terminology, the transport source-port layer, destination MAC layer, protocol decapsulation order, IOS command keyword, saving configuration to NVRAM, LLC functions, Telnet encapsulation, IPv6 interface verification, and troubleshooting sequence.
+- Source refs now point to the corresponding `IMG-XXXX` asset or `block-XXXX` text block. A source reference documents provenance; it does not imply that all surrounding slide content has been reconstructed.
+
 ## Provenance rules
 
-- `origin: "source"` is reserved for questions whose prompt and answer are explicitly supported by recovered source text or a visually checked answer mark.
+- `origin: "source"` is reserved for questions whose prompt and answer are explicitly supported by recovered source text or a visually checked answer mark/diagram.
 - `origin: "ai-generated"` identifies new questions or questions whose answer was derived from source material rather than explicitly supplied in the original.
 - `sourceRefs` points to `block-XXXX` text blocks or `IMG-XXXX` image assets.
 - OCR question candidates are not promoted into the active bank merely because OCR found a question mark. They remain candidates until their wording, visual dependencies, and answer key have been reviewed.
