@@ -66,3 +66,9 @@ The accompanying OCR export contains:
 - `README.md`: export summary and limitations.
 
 See `scripts/ingest-semester-images.py` for the resumable OCR workflow.
+
+## Module classification
+
+A heuristic classifier matched 1,393 assets to one or more module topic buckets (439 high-confidence heading matches and 954 medium-confidence keyword matches). The remaining 1,253 assets are unclassified by text heuristics and require visual/topic review. These hints are not authoritative: a diagram may be relevant to a module without containing its title, and a question can span multiple concepts.
+
+Run `scripts/classify-semester-images.py` against the OCR JSONL export to regenerate a reviewable module-image map. Do not use heuristic classification as a reason to omit unclassified assets.
