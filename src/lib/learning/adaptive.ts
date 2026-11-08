@@ -69,7 +69,8 @@ export function buildAdaptiveQuiz(
   count = 10,
   now = Date.now(),
 ): LearningQuestion[] {
-  const candidates = bank.filter((q) => !progress.recentQuestionIds.slice(0, 8).includes(q.id));
+  const recentWindow = progress.recentQuestionIds.slice(0, Math.min(40, count * 4));
+  const candidates = bank.filter((q) => !recentWindow.includes(q.id));
   const pool = candidates.length >= count ? candidates : bank;
   const selected: LearningQuestion[] = [];
   const remaining = [...pool];
