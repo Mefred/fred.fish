@@ -32,7 +32,7 @@ function isLearningProgress(value: unknown): value is LearningProgress {
     || !isNonNegativeInteger(value.totalSessions) || !isNonNegativeInteger(value.totalAnswers)
     || !isNonNegativeInteger(value.totalCorrect) || value.totalCorrect > value.totalAnswers) return false;
   if (value.lastPracticeDate !== null && (typeof value.lastPracticeDate !== "string"
-    || !/^\\d{4}-\\d{2}-\\d{2}$/.test(value.lastPracticeDate))) return false;
+    || !/^\d{4}-\d{2}-\d{2}$/.test(value.lastPracticeDate))) return false;
   if (!Array.isArray(value.recentQuestionIds)
     || value.recentQuestionIds.length > 40
     || !value.recentQuestionIds.every((id) => typeof id === "string")) return false;
