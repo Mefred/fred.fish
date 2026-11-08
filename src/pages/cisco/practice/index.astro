@@ -1,0 +1,126 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+---
+<SiteLayout title="Adaptive Practice — Cisco Learning — fred.fish" description="Short adaptive networking practice sessions that target concepts needing reinforcement." active="cisco">
+  <section class="practice-shell">
+    <div class="practice-top"><a href="/cisco/learning/">← Curriculum</a><a href="/cisco/progress/">Learning dashboard ↗</a></div>
+    <div class="practice-heading"><span class="practice-kicker">ADAPTIVE PRACTICE / SEMESTER 1</span><h1>Build knowledge.<br /><span>One question at a time.</span></h1><p>Ten-question sessions adapt to your concept-level performance. Each answer updates your review priorities on this device.</p></div>
+    <section id="practice-app" class="practice-panel" aria-live="polite">
+      <div class="practice-start"><div class="practice-stats"><div><strong id="stat-xp">0</strong><span>XP earned</span></div><div><strong id="stat-streak">0</strong><span>Day streak</span></div><div><strong id="stat-accuracy">—</strong><span>Overall accuracy</span></div></div><h2>Ready for a practice session?</h2><p>Questions are selected from your least-mastered and due concepts, with occasional mixed review.</p><button class="practice-button" id="start-session">Start 10-question practice <span>→</span></button></div>
+    </section>
+    <p class="practice-footnote">Progress is saved in this browser. This first release uses local storage; cross-device account sync is not enabled.</p>
+  </section>
+</SiteLayout>
+
+<script>
+  import { semesterOneQuestions } from "../../../data/learning/semester-1-seed";
+  import { buildAdaptiveQuiz, emptyProgress, finishSession, recordAnswer } from "../../../lib/learning/adaptive";
+  import { loadProgress, saveProgress } from "../../../lib/learning/storage";
+  import type { LearningQuestion, LearningProgress } from "../../../lib/learning/types";
+
+  const app = document.querySelector<HTMLElement>("#practice-app");
+  let progress: LearningProgress = loadProgress();
+  let quiz: LearningQuestion[] = [];
+  let answers: { correct: boolean }[] = [];
+  let index = 0;
+  let selected = new Set<string>();
+  let locked = false;
+
+  const updateStats = () => {
+    const xp = document.querySelector("#stat-xp");
+    const streak = document.querySelector("#stat-streak");
+    const accuracy = document.querySelector("#stat-accuracy");
+    if (xp) xp.textContent = String(progress.xp);
+    if (streak) streak.textContent = String(progress.streakDays);
+    if (accuracy) accuracy.textContent = progress.totalAnswers ? `${Math.round(progress.totalCorrect / progress.totalAnswers * 100)}%` : "—";
+  };
+  updateStats();
+
+  const escapeHtml = (value: string) => value.replace(/[&<>"']/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" })[c] || c);
+  const start = () => {
+    quiz = buildAdaptiveQuiz(semesterOneQuestions, progress, 10);
+    answers = [];
+    index = 0;
+    renderQuestion();
+  };
+  const renderQuestion = () => {
+    if (!app) return;
+    const q = quiz[index];
+    selected = new Set();
+    locked = false;
+    const pct = index / quiz.length * 100;
+    const choices = q.type === "true-false"
+      ? [{id:"true",text:"True"},{id:"false",text:"False"}]
+      : (q.choices || []);
+    app.innerHTML = `<div class="quiz-progress-row"><span>QUESTION ${String(index + 1).padStart(2,"0")} / ${quiz.length}</span><span>${Math.round(pct)}% complete</span></div>
+      <div class="quiz-track"><span style="width:${pct}%"></span></div>
+      <div class="quiz-meta"><span>${escapeHtml(q.subject)}</span><span>DIFFICULTY ${q.difficulty}/5</span></div>
+      <h2 class="quiz-prompt">${escapeHtml(q.prompt)}</h2>
+      <p class="quiz-hint">${q.type === "multiple" ? "Select all answers that apply." : q.type === "true-false" ? "Choose true or false." : "Choose the best answer."}</p>
+      <div class="quiz-options">${choices.map((choice) => `<button class="quiz-option" type="button" data-choice="${escapeHtml(choice.id)}" aria-pressed="false"><span class="quiz-option-mark"></span><span>${escapeHtml(choice.text)}</span></button>`).join("")}</div>
+      <div id="answer-feedback" class="answer-feedback" hidden></div>
+      <div class="quiz-controls"><span class="quiz-concepts">CONCEPTS: ${q.concepts.map(escapeHtml).join(" · ")}</span><button class="practice-button" id="submit-answer" disabled>Check answer <span>→</span></button></div>`;
+    app.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((button) => button.addEventListener("click", () => {
+      if (locked) return;
+      const id = button.dataset.choice!;
+      if (q.type === "multiple") {
+        selected.has(id) ? selected.delete(id) : selected.add(id);
+      } else {
+        selected = new Set([id]);
+      }
+      app?.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((item) => {
+        const active = selected.has(item.dataset.choice!);
+        item.classList.toggle("selected", active);
+        item.setAttribute("aria-pressed", String(active));
+      });
+      const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
+      if (submit) submit.disabled = selected.size === 0;
+    }));
+    app.querySelector<HTMLButtonElement>("#submit-answer")?.addEventListener("click", checkAnswer);
+  };
+  const checkAnswer = () => {
+    const q = quiz[index];
+    const expected = Array.isArray(q.answer) ? [...q.answer].sort() : [q.answer];
+    const actual = [...selected].sort();
+    const correct = expected.length === actual.length && expected.every((value, i) => value === actual[i]);
+    locked = true;
+    progress = recordAnswer(progress, q, correct);
+    saveProgress(progress);
+    answers.push({correct});
+    const feedback = app?.querySelector<HTMLElement>("#answer-feedback");
+    if (feedback) {
+      const explanation = `<strong>${correct ? "Correct" : "Not quite"}</strong><p>${escapeHtml(q.explanation)}</p>`;
+      feedback.innerHTML = explanation;
+      feedback.className = `answer-feedback ${correct ? "is-correct" : "is-incorrect"}`;
+      feedback.hidden = false;
+    }
+    app?.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((button) => {
+      button.disabled = true;
+      const id = button.dataset.choice!;
+      const isAnswer = expected.includes(id);
+      button.classList.toggle("answer-correct", isAnswer);
+      button.classList.toggle("answer-wrong", selected.has(id) && !isAnswer);
+    });
+    const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
+    if (submit) {
+      submit.disabled = false;
+      submit.textContent = index === quiz.length - 1 ? "Finish session →" : "Next question →";
+      submit.addEventListener("click", nextQuestion, { once: true });
+    }
+    updateStats();
+  };
+  const nextQuestion = () => {
+    if (index < quiz.length - 1) { index += 1; renderQuestion(); return; }
+    progress = finishSession(progress, answers);
+    saveProgress(progress);
+    const correct = answers.filter((a) => a.correct).length;
+    if (app) app.innerHTML = `<div class="session-complete"><span class="practice-kicker">SESSION COMPLETE</span><h2>${correct} / ${quiz.length} correct</h2><p>You earned <strong>${correct * 10 + 10} XP</strong>. Your concept mastery and review schedule have been updated.</p><div class="session-actions"><button class="practice-button" id="again">Practice again →</button><a href="/cisco/progress/">Review learning dashboard ↗</a></div></div>`;
+    app?.querySelector("#again")?.addEventListener("click", start);
+    updateStats();
+  };
+  app?.querySelector("#start-session")?.addEventListener("click", start);
+</script>
+
+<style>
+.practice-shell{max-width:980px;margin:0 auto;padding:46px 24px 100px}.practice-top{display:flex;justify-content:space-between;color:var(--muted);font:11px "DM Mono",monospace}.practice-top a:hover,.session-actions a:hover{color:var(--teal)}.practice-heading{padding:70px 0 34px}.practice-kicker{color:var(--teal);font:10px "DM Mono",monospace;letter-spacing:.15em}.practice-heading h1{font-size:clamp(40px,6vw,66px);line-height:1.05;letter-spacing:-.07em;margin:17px 0}.practice-heading h1 span{color:var(--teal)}.practice-heading p,.practice-footnote{color:var(--muted);max-width:610px}.practice-panel{padding:clamp(22px,5vw,48px);border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#10212a,#0b151d);min-height:310px}.practice-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:42px}.practice-stats div{display:grid;gap:4px;padding:14px;border:1px solid var(--line);border-radius:12px}.practice-stats strong{font-size:24px;color:var(--teal)}.practice-stats span,.quiz-meta,.quiz-progress-row,.quiz-concepts{font:10px "DM Mono",monospace;color:var(--muted);letter-spacing:.06em}.practice-start h2,.session-complete h2{font-size:30px;letter-spacing:-.04em;margin-bottom:8px}.practice-start p,.session-complete p{color:var(--muted);max-width:600px}.practice-button{border:1px solid var(--teal);border-radius:9px;background:var(--teal);color:#061513;padding:13px 18px;font-weight:750;cursor:pointer}.practice-button:disabled{opacity:.45;cursor:not-allowed}.practice-button span{margin-left:16px}.quiz-progress-row{display:flex;justify-content:space-between}.quiz-track{height:5px;background:#23363d;border-radius:9px;margin:13px 0 27px;overflow:hidden}.quiz-track span{display:block;height:100%;background:var(--teal);transition:width .2s}.quiz-meta{display:flex;justify-content:space-between}.quiz-prompt{font-size:clamp(21px,3vw,30px);line-height:1.3;letter-spacing:-.035em;margin:20px 0 9px}.quiz-hint{font-size:13px;color:var(--muted)}.quiz-options{display:grid;gap:10px;margin:25px 0}.quiz-option{display:flex;align-items:center;gap:13px;text-align:left;padding:15px;border:1px solid var(--line);border-radius:11px;background:#0c1921;color:var(--text);cursor:pointer}.quiz-option:hover,.quiz-option.selected{border-color:var(--teal);background:#12302f}.quiz-option-mark{width:17px;height:17px;flex:none;border:1px solid #6b858a;border-radius:50%}.quiz-option.selected .quiz-option-mark{background:var(--teal);border-color:var(--teal);box-shadow:inset 0 0 0 4px #12302f}.quiz-option.answer-correct{border-color:#4adcc8}.quiz-option.answer-wrong{border-color:#d98777}.quiz-controls{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:24px}.quiz-concepts{max-width:60%;line-height:1.8}.answer-feedback{padding:16px;border-radius:11px;margin:18px 0}.answer-feedback p{margin:5px 0 0}.answer-feedback.is-correct{background:#12332d;border:1px solid #286d5b}.answer-feedback.is-incorrect{background:#352522;border:1px solid #875447}.session-complete{padding:32px 0}.session-complete h2{font-size:48px;color:var(--teal);margin-top:16px}.session-actions{display:flex;align-items:center;gap:22px;margin-top:28px;font-size:13px}.practice-footnote{font-size:11px;margin-top:18px}@media(max-width:620px){.practice-shell{padding:28px 18px 70px}.practice-heading{padding:50px 0 26px}.practice-stats{gap:7px}.practice-stats div{padding:10px}.practice-stats strong{font-size:20px}.quiz-controls,.session-actions{align-items:stretch;flex-direction:column}.quiz-concepts{max-width:none}.quiz-controls .practice-button{width:100%}}
+</style>
