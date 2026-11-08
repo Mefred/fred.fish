@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+---
+<SiteLayout title="Learning Progress — Cisco Learning — fred.fish" description="Review networking concept mastery, quiz history, and recommended practice." active="cisco">
+  <section class="progress-shell">
+    <div class="progress-top"><a href="/cisco/learning/">← Curriculum</a><a href="/cisco/practice/">Start practice ↗</a></div>
+    <div class="progress-heading"><span class="progress-kicker">LEARNING ANALYTICS / LOCAL PROFILE</span><h1>Your progress,<br /><span>concept by concept.</span></h1><p>See what is sticking, what needs reinforcement, and what is ready for a retention check.</p></div>
+    <div id="learning-dashboard"><p class="dashboard-loading">Loading your learning data…</p></div>
+  </section>
+</SiteLayout>
+<script>
+  import { loadProgress } from "../../../lib/learning/storage";
+  const root = document.querySelector<HTMLElement>("#learning-dashboard");
+  const progress = loadProgress();
+  const entries = Object.values(progress.concepts).sort((a,b) => a.mastery - b.mastery);
+  const weak = entries.filter((item) => item.attempts > 0 && item.mastery < 70).slice(0,5);
+  const pct = progress.totalAnswers ? Math.round(progress.totalCorrect / progress.totalAnswers * 100) : 0;
+  const label = (mastery:number) => mastery >= 90 ? "Mastered" : mastery >= 70 ? "Developing" : mastery >= 40 ? "Needs review" : "New / weak";
+  if (root) root.innerHTML = `
+    <div class="progress-metrics">
+      <article><strong>${progress.xp}</strong><span>Total XP</span></article>
+      <article><strong>${progress.streakDays}</strong><span>Day streak</span></article>
+      <article><strong>${progress.totalSessions}</strong><span>Sessions</span></article>
+      <article><strong>${pct}%</strong><span>Answer accuracy</span></article>
+    </div>
+    <section class="dashboard-section"><div class="dashboard-title"><div><span class="progress-kicker">FOCUS NEXT</span><h2>Concepts to reinforce</h2></div><a href="/cisco/practice/">Practice weak areas →</a></div>
+      ${weak.length ? weak.map((item) => `<div class="concept-row"><div><strong>${item.conceptId.replaceAll("-"," ")}</strong><small>${item.attempts} attempts · ${item.correct} correct</small></div><div class="mastery"><span style="width:${item.mastery}%"></span></div><b>${item.mastery}%</b></div>`).join("") : '<p class="empty-state">No weak concepts recorded yet. Complete a practice session to begin building your mastery profile.</p>'}
+    </section>
+    <section class="dashboard-section"><div class="dashboard-title"><div><span class="progress-kicker">CONCEPT MAP</span><h2>All tracked concepts</h2></div><span>${entries.length} concepts</span></div>
+      ${entries.length ? entries.map((item) => `<div class="concept-row"><div><strong>${item.conceptId.replaceAll("-"," ")}</strong><small>${label(item.mastery)} · ${item.attempts} attempts</small></div><div class="mastery"><span style="width:${item.mastery}%"></span></div><b>${item.mastery}%</b></div>`).join("") : '<p class="empty-state">Your concept map will appear here after your first session.</p>'}
+    </section>
+    <section class="dashboard-section"><div class="dashboard-title"><div><span class="progress-kicker">RECENT ACTIVITY</span><h2>Session history</h2></div></div>
+      ${progress.history.length ? [...progress.history].reverse().slice(0,10).map((item) => `<div class="history-row"><span>${new Date(item.date).toLocaleDateString()}</span><strong>${item.correct}/${item.total}</strong><span>+${item.xp} XP</span></div>`).join("") : '<p class="empty-state">No sessions yet. Start a short quiz to record your first result.</p>'}
+    </section>`;
+</script>
+<style>
+.progress-shell{max-width:1000px;margin:auto;padding:46px 24px 100px}.progress-top{display:flex;justify-content:space-between;color:var(--muted);font:11px "DM Mono",monospace}.progress-top a:hover,.dashboard-title a:hover{color:var(--teal)}.progress-heading{padding:70px 0 34px}.progress-kicker{color:var(--teal);font:10px "DM Mono",monospace;letter-spacing:.15em}.progress-heading h1{font-size:clamp(40px,6vw,66px);line-height:1.05;letter-spacing:-.07em;margin:17px 0}.progress-heading h1 span{color:var(--teal)}.progress-heading p{color:var(--muted);max-width:600px}.progress-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.progress-metrics article{padding:18px;border:1px solid var(--line);border-radius:13px;background:var(--surface);display:grid;gap:5px}.progress-metrics strong{font-size:28px;color:var(--teal)}.progress-metrics span,.dashboard-title>span{font:10px "DM Mono",monospace;color:var(--muted)}.dashboard-section{margin-top:48px}.dashboard-title{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.dashboard-title h2{font-size:25px;letter-spacing:-.04em;margin:7px 0 0}.dashboard-title a{font-size:12px;color:var(--muted)}.concept-row{display:grid;grid-template-columns:minmax(150px,1fr) minmax(100px,1.3fr) 48px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line-soft)}.concept-row>div:first-child{display:grid;gap:3px}.concept-row strong{text-transform:capitalize;font-size:13px}.concept-row small{font-size:10px;color:var(--muted)}.concept-row>b{text-align:right;font:12px "DM Mono",monospace;color:var(--teal)}.mastery{height:7px;border-radius:9px;background:#20333a;overflow:hidden}.mastery span{display:block;height:100%;background:var(--teal);border-radius:9px}.empty-state,.dashboard-loading{color:var(--muted);padding:22px;border:1px dashed var(--line);border-radius:12px}.history-row{display:grid;grid-template-columns:1fr 80px 80px;padding:12px 0;border-bottom:1px solid var(--line-soft);font-size:12px;color:var(--muted)}.history-row strong{color:var(--text)}@media(max-width:650px){.progress-shell{padding:28px 18px 70px}.progress-heading{padding:48px 0 28px}.progress-metrics{grid-template-columns:repeat(2,1fr)}.concept-row{grid-template-columns:1fr 44px;gap:10px}.mastery{grid-column:1/2;grid-row:2}.concept-row>b{grid-column:2;grid-row:1/3}.dashboard-title{align-items:start;gap:10px;flex-direction:column}}
+</style>
