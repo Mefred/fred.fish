@@ -47,8 +47,8 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
   const renderQuestion = () => {
     if (!app) return;
     const q = quiz[index];
-    selected = new Set();
     ordering = q.items?.map((item) => item.id) ?? [];
+    selected = q.type === "ordering" ? new Set(ordering) : new Set();
     locked = false;
     const pct = index / quiz.length * 100;
     const choices = q.type === "true-false" ? [{id:"true",text:"True"},{id:"false",text:"False"}] : (q.choices || []);
@@ -71,7 +71,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
       <div id="answer-feedback" class="answer-feedback" hidden></div>
       <div class="quiz-controls"><span class="quiz-concepts">CONCEPTS: ${q.concepts.map(escapeHtml).join(" · ")}</span><button class="practice-button" id="submit-answer" disabled>Check answer <span>→</span></button></div>`;
 
-    if (q.type === "ordering") drawOrdering();
+    if (q.type === "ordering") { drawOrdering(); updateSubmitState(); }
     app.querySelectorAll<HTMLButtonElement>("[data-choice]").forEach((button) => button.addEventListener("click", () => {
       if (locked) return;
       const id = button.dataset.choice!;
@@ -98,6 +98,8 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     const q = quiz[index];
     const submit = app?.querySelector<HTMLButtonElement>("#submit-answer");
     let ready = selected.size > 0;
+    if (q.type === "fill") ready = [...selected][0]?.trim().length > 0;
+    if (q.type === "ordering") ready = selected.size === (q.items || []).length && selected.size > 0;
     if (q.type === "matching") ready = selected.size === (q.pairs || []).length;
     if (submit) submit.disabled = !ready;
   };
