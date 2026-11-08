@@ -1,4 +1,4 @@
-import { emptyProgress } from "./adaptive";
+import { emptyProgress } from "./adaptive.ts";
 import type { ConceptProgress, LearningProgress } from "./types";
 
 const KEY = "fredfish.learning.progress.v1";
