@@ -24,7 +24,6 @@ for (const [index, line] of lines.entries()) {
   const concepts = strings(fieldArray(line, "concepts"));
   const sourceRefs = strings(fieldArray(line, "sourceRefs"));
   const origin = line.match(/origin:"([^"]+)"/)?.[1];
-  const choices = strings(fieldArray(line, "choices", "answer").replace(/\{\s*id:/g, '{id:').replace(/\{id:"([^"]+)"[^}]*text:"[^"]*"\}/g, '"$1"'));
   const choiceFragment = fieldArray(line, "choices", "answer");
   const choiceIds = choiceFragment ? [...choiceFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
   const itemFragment = fieldArray(line, "items", "answer");
