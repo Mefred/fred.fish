@@ -2,7 +2,7 @@
 
 **Current bank:** 86 questions  
 **Concept tags:** 146 unique concept identifiers  
-**Source provenance:** 10 source questions with visually/textually supported answers; 76 AI-generated questions derived from the recovered notes and lesson concepts. Every active question carries one or more concept tags and at least one source reference.
+**Source provenance:** 10 source questions with textually or visually supported answers (8 image-linked candidates and 2 text-block-only questions); 76 AI-generated questions derived from the recovered notes and lesson concepts. Every active question carries one or more concept tags and at least one source reference.
 
 ## Format coverage
 
