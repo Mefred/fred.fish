@@ -1,6 +1,7 @@
 import type { ConceptProgress, LearningProgress, LearningQuestion } from "./types";
 
 const DAY = 24 * 60 * 60 * 1000;
+const localDateKey = (date: Date) => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
 const clamp = (n: number, min: number, max: number) => Math.min(max, Math.max(min, n));
 
 export function emptyProgress(): LearningProgress {
@@ -97,9 +98,12 @@ export function finishSession(
   now = Date.now(),
 ): LearningProgress {
   const next = structuredClone(progress);
-  const date = new Date(now).toISOString().slice(0, 10);
+  const currentDate = new Date(now);
+  const date = localDateKey(currentDate);
   if (next.lastPracticeDate !== date) {
-    const yesterday = new Date(now - DAY).toISOString().slice(0, 10);
+    const previousDate = new Date(now);
+    previousDate.setDate(previousDate.getDate() - 1);
+    const yesterday = localDateKey(previousDate);
     next.streakDays = next.lastPracticeDate === yesterday ? next.streakDays + 1 : 1;
     next.lastPracticeDate = date;
   }
