@@ -1,12 +1,12 @@
 # Semester 1 question bank audit
 
-**Current bank:** 194 unique questions  
-**Concept tags:** 319 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 174 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 200 unique questions  
+**Concept tags:** 329 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 180 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
-The latest ten batches added 108 distinct questions:
+The latest eleven batches added 114 distinct questions:
 - 28 questions grounded in recovered Semester 1 text blocks, covering network scope, Internet structure, host roles, peer-to-peer trade-offs, reliable-network characteristics, packet switching, modern network trends, business connectivity, QoS, and layered security.
 - 8 questions grounded in source screenshots, covering DHCP and IPv6 autoconfiguration, IOS command syntax, console access, IOS command modes, Layer 3 source/destination addressing, MAC addressing, and transport ports.
 - 8 questions grounded in Protocols and Models source screenshots, covering PDU encapsulation order, segmentation, open standards, message delivery types, same-LAN and remote-network frame addressing, per-hop Layer 2 changes, and protocol-stack responsibilities.
@@ -16,29 +16,30 @@ The latest ten batches added 108 distinct questions:
 - 8 questions grounded in IPv6 Addressing screenshots, covering GUA/LLA/multicast prefixes, IPv6 prefix extraction, address compression, IPv4/IPv6 coexistence, RS/RA router discovery, modified EUI-64, and address-type recognition.
 - 15 questions grounded in Application and Transport Layer screenshots, covering DNS resource records, SMTP/POP3/IMAP, email ports, TCP/IP application-layer mapping, hybrid P2P, HTTP GET, TCP windowing, UDP characteristics, TCP-only header fields, acknowledgment numbers, sockets, port ranges, real-time UDP use, and reliable HTTP transport.
 - 8 questions grounded in router-configuration and address-resolution screenshots, covering router boot/setup behavior, router forwarding/path-selection roles, enabling interfaces, router memory, saving configuration, IPv6 interface verification, Layer 2 switch default gateways, and ARP cache inspection.
-- 7 questions grounded in IPv4 addressing and Network Layer screenshots, covering /27 prefix notation, /26 usable host capacity, /22 broadcast calculation, sizing a subnet for 61 hosts, routing-table contents, metric selection, and IP's connectionless/media-independent properties.
+- 7 questions grounded in IPv4 addressing and Network Layer screenshots, covering /27 prefix notation, /26 usable host capacity, /22 broadcast calculation, sizing a subnet for 61 hosts, routing-table behavior, metric selection, and IP's connectionless/media-independent properties.
+- 6 questions grounded in routing and route-table screenshots, covering static-route syntax, default-route syntax, C/L route codes, administrative distance versus metric, no-route behavior, and next-hop resolution on Ethernet.
 
 ## Format coverage
 
 | Format | Questions |
 |---|---:|
-| Single choice | 97 |
+| Single choice | 98 |
 | Multiple select | 16 |
 | True / false | 1 |
-| Fill in the blank | 25 |
-| Matching | 16 |
+| Fill in the blank | 26 |
+| Matching | 18 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 28 |
-| **Total** | **194** |
+| Scenario / troubleshooting | 30 |
+| **Total** | **200** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 67 |
-| 3 — Applied | 68 |
-| 4 — Advanced | 21 |
+| 2 — Foundational | 68 |
+| 3 — Applied | 71 |
+| 4 — Advanced | 23 |
 | 5 — Challenging | 4 |
 
 ## Source provenance audit
@@ -60,6 +61,6 @@ The first automated promotion map contained several incorrect image-to-question 
 
 ## Coverage and remaining work
 
-The 194-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 200-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
-Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. Remaining coverage gaps include routing configuration depth and some practical subnetting and troubleshooting variants.
+Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. Remaining work includes deeper route-configuration labs, practical subnetting variants, and systematic coverage checks against every lesson's concept list.
