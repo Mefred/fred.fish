@@ -15,7 +15,7 @@ for (const line of records) {
   const lessonId = line.match(/lessonId:"([^"]+)"/)?.[1];
   const type = line.match(/type:"([^"]+)"/)?.[1] ?? "unknown";
   const difficulty = Number(line.match(/difficulty:(\d)/)?.[1] ?? 0);
-  const conceptFragment = line.match(/concepts:\[(.*?)\],sourceRefs:/)?.[1] ?? "";
+  const conceptFragment = line.match(/concepts:\[([^\]]*)\]/)?.[1] ?? "";
   const concepts = values(conceptFragment);
   if (!id || !lessonId || !concepts.length) continue;
   if (!lessons.has(lessonId)) lessons.set(lessonId, { ids: [], concepts: new Set(), formats: new Map(), difficulties: new Map() });
