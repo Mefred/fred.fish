@@ -9,7 +9,7 @@ The primary source is `Semester_1_FredFish_AI_Ingestion_Package.zip`. Its ingest
 - `Semester_1_Image_Manifest.csv`, which maps stable asset IDs to image paths.
 - `Sem1_Lecture_Notes_Complete_Extraction.md`, a source-order text extraction with known limitations.
 
-The image assets are instructional source material, not decorative media. The text extraction explicitly does not guarantee that handwritten notes, diagrams, labels, questions, answers, tables, or annotations have been recovered.
+The image assets are instructional source material, not decorative media. OCR has now been run across all 2,646 assets; see `docs/semester-1-image-audit.md` for counts, duplicate handling, visual-review status, and question-candidate discovery. OCR does not guarantee that handwritten notes, diagrams, labels, questions, answers, tables, or annotations have been recovered.
 
 ## OCR workflow
 
@@ -41,7 +41,7 @@ The statuses distinguish processed text, unreadable/non-text images, missing ass
 
 ## Current implementation
 
-The first Semester 1 lesson route is `/cisco/learning/semester-1/`. It currently reconstructs the recoverable Module 1: Networking Today text into nine lessons with block-level references. The adaptive practice bank is in `src/data/learning/semester-1-seed.ts`; the shared question and progress types are in `src/lib/learning/types.ts`.
+The Semester 1 course index is `/cisco/learning/semester-1/`. Source-based lessons for Modules 1–3 are available at `/cisco/learning/semester-1/modules/01-networking-today/`, `/cisco/learning/semester-1/modules/02-basic-device-configuration/`, and `/cisco/learning/semester-1/modules/03-protocols-and-models/`. Modules 4–17 currently link to the corresponding existing CCNA lessons while source-specific material is being integrated. The adaptive practice bank is in `src/data/learning/semester-1-seed.ts`; the shared question and progress types are in `src/lib/learning/types.ts`.
 
 The practice interface uses approximately ten questions per session. The selection engine prioritizes unseen, weak, and due concepts, avoids recently used question IDs when the bank is large enough, and biases question difficulty toward the learner's estimated level. Mastery requires repeated evidence rather than being awarded after one correct response.
 
