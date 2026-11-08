@@ -1,30 +1,30 @@
 # Semester 1 question bank audit
 
-**Current bank:** 86 questions  
-**Concept tags:** 146 unique concept identifiers  
-**Source provenance:** 10 source questions with textually or visually supported answers (8 image-linked candidates and 2 text-block-only questions); 76 AI-generated questions derived from the recovered notes and lesson concepts. Every active question carries one or more concept tags and at least one source reference.
+**Current bank:** 114 unique questions  
+**Concept tags:** 178 unique concept identifiers  
+**Current expansion:** 28 additional questions added from the recovered Semester 1 notes, focusing on network scope, Internet structure, host roles, peer-to-peer trade-offs, reliable-network characteristics, network trends, business connectivity, and layered security.
 
 ## Format coverage
 
 | Format | Questions |
 |---|---:|
-| Single choice | 37 |
-| Multiple select | 6 |
+| Single choice | 55 |
+| Multiple select | 8 |
 | True / false | 1 |
 | Fill in the blank | 15 |
-| Matching | 8 |
-| Ordering | 7 |
-| Scenario / troubleshooting | 12 |
-| **Total** | **86** |
+| Matching | 9 |
+| Ordering | 8 |
+| Scenario / troubleshooting | 18 |
+| **Total** | **114** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
-| 1 — Introductory | 18 |
-| 2 — Foundational | 23 |
-| 3 — Applied | 30 |
-| 4 — Advanced | 11 |
+| 1 — Introductory | 23 |
+| 2 — Foundational | 37 |
+| 3 — Applied | 38 |
+| 4 — Advanced | 12 |
 | 5 — Challenging | 4 |
 
 ## Provenance rules
@@ -35,6 +35,8 @@
 - OCR question candidates are not promoted into the active bank merely because OCR found a question mark. They remain candidates until their wording, visual dependencies, and answer key have been reviewed.
 - Every active question is mapped to one or more concepts. The adaptive engine updates each mapped concept from the response.
 
-## Current limitation
+## Coverage and remaining work
 
-86 is an initial verified bank for implementation and workflow testing, not the final target. The archive yielded 474 normalized question-like OCR candidates, and many source diagrams and scenario prompts still need visual review. The bank should continue to grow as those candidates are audited and converted into distinct, concept-tagged items.
+The 114-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+
+The Semester 1 archive's recovered text includes especially dense coverage of Networking Today (network components and roles, topologies, LAN/WAN, Internet and intranet/extranet, reliability, trends, Internet access, and security). The new batch adds questions across these areas. Later module coverage should be expanded from the corresponding source images and lesson pages, rather than inferred from module titles alone.
