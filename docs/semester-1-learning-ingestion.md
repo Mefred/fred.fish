@@ -41,7 +41,7 @@ The statuses distinguish processed text, unreadable/non-text images, missing ass
 
 ## Current implementation
 
-The Semester 1 course index is `/cisco/learning/semester-1/`. Source-based lessons for Modules 1–3 are available at `/cisco/learning/semester-1/modules/01-networking-today/`, `/cisco/learning/semester-1/modules/02-basic-device-configuration/`, and `/cisco/learning/semester-1/modules/03-protocols-and-models/`. Modules 4–17 currently link to the corresponding existing CCNA lessons while source-specific material is being integrated. The adaptive practice bank is in `src/data/learning/semester-1-seed.ts`; the shared question and progress types are in `src/lib/learning/types.ts`.
+The Semester 1 course index is `/cisco/learning/semester-1/`. Source-based lessons for all 17 modules are available under `/cisco/learning/semester-1/modules/`, with a dedicated route for each module. Lessons cite recovered text blocks and OCR-identified image assets. The module index links directly to the rebuilt Semester 1 lessons. The adaptive practice bank is in `src/data/learning/semester-1-seed.ts`; the shared question and progress types are in `src/lib/learning/types.ts`.
 
 The practice interface uses approximately ten questions per session. The selection engine prioritizes unseen, weak, and due concepts, avoids recently used question IDs when the bank is large enough, and biases question difficulty toward the learner's estimated level. Mastery requires repeated evidence rather than being awarded after one correct response.
 
