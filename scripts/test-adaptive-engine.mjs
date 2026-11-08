@@ -50,6 +50,10 @@ Object.defineProperty(globalThis, "localStorage", {
 });
 saveProgress(masteryProgress);
 assert.deepEqual(loadProgress(), masteryProgress, "valid saved progress should round-trip unchanged");
+const invalidDate = structuredClone(masteryProgress);
+invalidDate.lastPracticeDate = "not-a-date";
+storage.set("fredfish.learning.progress.v1", JSON.stringify(invalidDate));
+assert.deepEqual(loadProgress(), emptyProgress(), "invalid practice dates should safely reset progress");
 const corrupted = structuredClone(masteryProgress);
 corrupted.concepts[sample.concepts[0]].attempts = "not-a-number";
 storage.set("fredfish.learning.progress.v1", JSON.stringify(corrupted));
