@@ -4,14 +4,14 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **576** |
-| Unique question IDs | 576 |
-| Unique normalized prompts | 576 |
+| Active questions | **577** |
+| Unique question IDs | 577 |
+| Unique normalized prompts | 577 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 605 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 34 |
+| Source-origin questions | 35 |
 | AI-generated questions | 542 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
@@ -20,28 +20,28 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 | Format | Questions |
 |---|---:|
-| Single choice | 221 |
+| Single choice | 222 |
 | Multiple select | 32 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 96 |
 | Ordering | 19 |
 | Scenario / troubleshooting | 155 |
-| **Total** | **576** |
+| **Total** | **577** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 44 |
-| 2 — Foundational | 161 |
+| 2 — Foundational | 162 |
 | 3 — Applied | 247 |
 | 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 576 questions during the full concept-depth effort. The 183 additions consist of 173 AI-generated applied questions and ten source-origin questions. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 577 questions during the full concept-depth effort. The 184 additions consist of 173 AI-generated applied questions and eleven source-origin questions. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -54,7 +54,7 @@ The expansion adds distinct practice across:
 
 ## Additional visually verified source questions
 
-The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Seventeen additional image assets have now been visually inspected across the two follow-up passes. Eleven new image-question associations were added in the latest pass: four images reinforce existing source questions and six new source-origin questions were added (one new question is supported by two connector images).
+The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across the three follow-up passes. Eleven new image-question associations were added in the latest pass: four images reinforce existing source questions and six new source-origin questions were added (one new question is supported by two connector images).
 
 | Image reference | Active question | Verified answer |
 |---|---|---|
@@ -74,8 +74,9 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0306` | `s3-destination-ip-layer-source-001` | Network layer |
 | `IMG-0314` | `s3-source-ip-layer-source-001` | Network layer |
 | `IMG-0279` | `s3-application-data-layer-source-001` | Application layer |
+| `IMG-0779` | `s8-diffserv-priority-source-001` | Differentiated Services field carries QoS classification information |
 
-The 11 new image-question associations increase the visually checked set to 27. Four false-positive image candidates remain excluded. Of the 772 unique unresolved candidate images, 761 remain for visual review; duplicate asset records mean 767 unresolved records remain in the export. Do not promote an OCR candidate solely because its text resembles an active question.
+The 12 new image-question associations increase the visually checked set to 28. Four false-positive image candidates remain excluded. Of the 772 unique unresolved candidate images, 760 remain for visual review; duplicate asset records mean 766 unresolved records remain in the export. Do not promote an OCR candidate solely because its text resembles an active question.
 
 ## Provenance rules
 
@@ -94,7 +95,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- Seventeen additional question-image associations have been manually checked across the follow-up passes. The remaining 761 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
+- Seventeen additional question-image associations have been manually checked across the follow-up passes. The remaining 760 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
 - The source-concept inventory is a first-pass transcription, not a fully reviewed atomic objective-to-question-tag matrix for every lesson.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
