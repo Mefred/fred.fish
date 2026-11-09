@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 221
+- **Questions:** 226
 - **Lessons represented:** 22
 - **Distinct concept tags:** 362
 
@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 12 | 25 | fill: 1, scenario: 2, single: 9 | 1–4 |
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
-| ipv4-addressing | 10 | 12 | fill: 6, matching: 2, multiple: 1, single: 1 | 2–5 |
+| ipv4-addressing | 15 | 12 | fill: 7, matching: 2, multiple: 1, scenario: 2, single: 3 | 2–5 |
 | ipv6-addressing | 11 | 26 | fill: 4, matching: 2, scenario: 1, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 14 | 31 | fill: 1, matching: 2, multiple: 2, scenario: 4, single: 5 | 2–5 |
@@ -539,12 +539,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 26 |
+| fill | 27 |
 | matching | 19 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 38 |
-| single | 108 |
+| scenario | 40 |
+| single | 110 |
 | true-false | 1 |
 
 ### Difficulty
@@ -553,8 +553,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 75 |
-| 3 | 85 |
-| 4 | 23 |
+| 3 | 89 |
+| 4 | 24 |
 | 5 | 4 |
 
 ## Interpretation and limits
