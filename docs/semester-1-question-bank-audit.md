@@ -1,6 +1,6 @@
 # Semester 1 question bank audit
 
-**Current bank:** 387 unique questions  
+**Current bank:** 393 unique questions across 22 lesson IDs and 605 distinct concept tags
 **Concept tags:** 605 unique concept identifiers  
 **Source provenance:** 24 source questions; 363 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
@@ -12,7 +12,7 @@ Six new questions expand subnetting and switching practice: /27 usable host-rang
 
 The preceding five-question Ethernet-switching batch added VLAN-scoped unknown-unicast flooding, trunk versus access selection, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping diagnosis.
 
-The bank now contains 387 questions across 605 distinct concept tags. The latest six-question batch adds remote-network ARP resolution, stale-cache recovery, local-link ARP boundaries, SLAAC Router Advertisement diagnosis, IPv6 Duplicate Address Detection, and traceroute TTL progression. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
+The bank now contains 393 questions across 605 distinct concept tags. The latest six-question batch adds remote-network ARP resolution, stale-cache recovery, local-link ARP boundaries, SLAAC Router Advertisement diagnosis, IPv6 Duplicate Address Detection, and traceroute TTL progression. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
 
 ## Recent expansion
 
@@ -244,3 +244,8 @@ Added five applied questions for Ethernet frame source/destination addressing, L
 ## Ethernet switching concept reinforcement
 
 Added five applied questions covering OUI/vendor identification, per-port collision domains, dynamic MAC aging after a device move, Auto-MDIX and cable compatibility, and MAC flapping investigation with EtherChannel and spanning-tree checks. Ethernet Switching now has 28 questions. The new questions reinforce existing concept tags rather than creating additional one-question tags.
+
+
+## Latest transport, application, and WAN practice
+
+Added six applied questions: TCP duplicate-ACK loss recovery, advertised receive-window flow control, UDP suitability for real-time voice, DNS cache TTL expiry, DHCP T1 unicast renewal, and leased-line fault-domain isolation. The coverage report was regenerated from the active question bank.
