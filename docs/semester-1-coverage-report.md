@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 325
+- **Questions:** 328
 - **Lessons represented:** 22
-- **Distinct concept tags:** 548
+- **Distinct concept tags:** 550
 
 ## Lesson coverage
 
@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 16 | 36 | fill: 1, matching: 2, scenario: 3, single: 10 | 1–4 |
 | icmp | 13 | 26 | matching: 1, scenario: 3, single: 9 | 1–4 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
-| ipv4-addressing | 22 | 20 | fill: 8, matching: 3, multiple: 1, scenario: 7, single: 3 | 2–5 |
+| ipv4-addressing | 25 | 25 | fill: 8, matching: 3, multiple: 1, scenario: 7, single: 6 | 2–5 |
 | ipv6-addressing | 21 | 47 | fill: 6, matching: 5, scenario: 6, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
@@ -269,6 +269,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### ipv4-addressing
 
+- `broadcast`
 - `broadcast-address`
 - `broadcast-domains`
 - `cidr`
@@ -276,7 +277,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ipv4-address-types`
 - `ipv4-addressing`
 - `ipv4-subnetting`
+- `ipv4-unicast-broadcast-multicast`
 - `link-local-address`
+- `multicast`
+- `multicast-group`
 - `network-address`
 - `network-scalability`
 - `network-segmentation`
@@ -288,6 +292,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `shared-address-space`
 - `subnet-mask`
 - `subnet-sizing`
+- `unicast`
 - `vlsm`
 
 ### ipv6-addressing
@@ -805,9 +810,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 1 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
-| `broadcast` | 3 | address-resolution, ethernet-switching, protocols-and-models |
+| `broadcast` | 4 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
 | `broadcast-address` | 6 | ipv4-addressing |
-| `broadcast-domains` | 1 | ipv4-addressing |
+| `broadcast-domains` | 2 | ipv4-addressing |
 | `bus-topology` | 1 | network-topologies |
 | `business-internet-connections` | 3 | internet-connections |
 | `byod` | 1 | network-trends |
@@ -991,7 +996,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ips` | 1 | network-security |
 | `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 1 | ipv4-addressing |
-| `ipv4-addressing` | 4 | basic-device-configuration, ipv4-addressing, number-systems |
+| `ipv4-addressing` | 5 | basic-device-configuration, ipv4-addressing, number-systems |
 | `ipv4-differentiated-services` | 1 | network-layer |
 | `ipv4-fragmentation-fields` | 1 | network-layer |
 | `ipv4-header-checksum` | 2 | network-layer |
@@ -1006,6 +1011,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-subnetting` | 20 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 3 | icmp, network-layer |
+| `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
 | `ipv4-version` | 1 | network-layer |
 | `ipv4-vs-ipv6-header` | 1 | network-layer |
 | `ipv6-address-configuration` | 4 | basic-device-configuration, ipv6-addressing |
@@ -1075,8 +1081,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `message-timing` | 1 | protocols-and-models |
 | `mtu` | 1 | transport-layer |
 | `multiaccess-topology` | 1 | data-link-layer |
-| `multicast` | 1 | protocols-and-models |
+| `multicast` | 2 | ipv4-addressing, protocols-and-models |
 | `multicast-address` | 2 | ipv6-addressing |
+| `multicast-group` | 1 | ipv4-addressing |
 | `multimode-fiber` | 3 | physical-layer |
 | `multiplexing` | 1 | transport-layer |
 | `mx-record` | 1 | application-layer |
@@ -1285,7 +1292,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tunneling` | 1 | ipv6-addressing |
 | `udp` | 5 | application-layer, protocols-and-models, transport-layer |
 | `udp-header` | 1 | transport-layer |
-| `unicast` | 2 | address-resolution, protocols-and-models |
+| `unicast` | 3 | address-resolution, ipv4-addressing, protocols-and-models |
 | `unknown-unicast-flooding` | 1 | ethernet-switching |
 | `url-filtering` | 1 | network-security |
 | `user-exec` | 1 | basic-device-configuration |
@@ -1321,7 +1328,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 316. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 315. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1334,7 +1341,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | multiple | 18 |
 | ordering | 13 |
 | scenario | 85 |
-| single | 119 |
+| single | 122 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1342,11 +1349,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 85 |
+| 2 | 88 |
 | 3 | 135 |
 | 4 | 64 |
 | 5 | 7 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. All 17 modules now have explicit first-pass topic-to-question mappings. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. All 17 modules now have explicit first-pass topic-to-question mappings. Selected source question references and OCR-answer corrections are recorded in `docs/semester-1-source-question-index.md`. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
