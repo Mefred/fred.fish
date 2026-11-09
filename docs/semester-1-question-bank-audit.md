@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **585** |
-| Unique question IDs | 585 |
-| Unique normalized prompts | 585 |
+| Active questions | **587** |
+| Unique question IDs | 587 |
+| Unique normalized prompts | 587 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 605 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 545 |
+| AI-generated questions | 547 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -20,28 +20,28 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 | Format | Questions |
 |---|---:|
-| Single choice | 228 |
+| Single choice | 229 |
 | Multiple select | 33 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 97 |
-| Ordering | 19 |
+| Ordering | 20 |
 | Scenario / troubleshooting | 155 |
-| **Total** | **585** |
+| **Total** | **587** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 45 |
-| 2 — Foundational | 166 |
-| 3 — Applied | 250 |
+| 2 — Foundational | 167 |
+| 3 — Applied | 251 |
 | 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 585 questions during the full concept-depth effort. The 192 additions consist of 176 AI-generated applied questions and sixteen source-origin questions. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 587 questions during the full concept-depth effort. The 194 additions consist of 176 AI-generated applied questions and eighteen source-origin questions. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -54,7 +54,7 @@ The expansion adds distinct practice across:
 
 ## Additional visually verified source questions
 
-The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across three follow-up passes. These include twelve new source-origin questions (one supported by two connector images) and five additional image references linked to existing questions.
+The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across three follow-up passes. A further triage pass inspected 77 unique candidate images containing non-template blue marks or diagram components; 18 were already linked to source questions, and the remaining 59 did not provide a new unambiguous answer key (most showed unmarked question slides, duplicate diagrams, or Packet Tracer task screens). These include twelve new source-origin questions (one supported by two connector images) and five additional image references linked to existing questions.
 
 | Image reference | Active question | Verified answer |
 |---|---|---|
@@ -88,7 +88,7 @@ There are now 34 source-origin image-question associations plus four visually re
 
 ## Validation
 
-GitHub Actions Site CI run #522 passed. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
+GitHub Actions Site CI run #524 passed on the latest code, including the fix for duplicate answer recording when advancing practice questions. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
 
 The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
 
