@@ -81,7 +81,7 @@ try {
       }
     }
 
-    if (viewport.name === "desktop") {
+    {
       await page.goto(new URL("/cisco/practice/", baseUrl).href, { waitUntil: "networkidle" });
       await page.evaluate(() => localStorage.removeItem("fredfish.learning.progress.v1"));
       await page.reload({ waitUntil: "networkidle" });
@@ -135,7 +135,7 @@ try {
     viewports: ["1440x900 desktop", "390x844 mobile"],
     routesTested: pages.length,
     routes: pages,
-    practiceInteraction: "complete ten-question session, keyboard answer selection, per-answer feedback, local persistence, and dashboard update",
+    practiceInteraction: "complete ten-question session at both desktop and mobile viewports, keyboard answer selection, per-answer feedback, local persistence, and dashboard update",
     axeViolations,
   }, null, 2));
   assert.equal(serious.length, 0, `Serious or critical accessibility violations: ${JSON.stringify(serious)}`);
