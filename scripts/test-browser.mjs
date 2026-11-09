@@ -121,6 +121,9 @@ try {
       await page.goto(new URL("/cisco/progress/", baseUrl).href, { waitUntil: "networkidle" });
       assert.match(await page.locator("#learning-dashboard").innerText(), /10/);
       assert.match(await page.locator("#learning-dashboard").innerText(), /Sessions/);
+      await page.reload({ waitUntil: "networkidle" });
+      assert.match(await page.locator("#learning-dashboard").innerText(), /10/);
+      assert.match(await page.locator("#learning-dashboard").innerText(), /Sessions/);
 
     }
 
