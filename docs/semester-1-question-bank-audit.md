@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **589** |
-| Unique question IDs | 589 |
-| Unique normalized prompts | 589 |
+| Active questions | **591** |
+| Unique question IDs | 591 |
+| Unique normalized prompts | 591 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 607 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 549 |
+| AI-generated questions | 551 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -20,14 +20,14 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 | Format | Questions |
 |---|---:|
-| Single choice | 230 |
+| Single choice | 231 |
 | Multiple select | 33 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 97 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 156 |
-| **Total** | **589** |
+| Scenario / troubleshooting | 157 |
+| **Total** | **591** |
 
 ## Difficulty
 
@@ -35,13 +35,13 @@ Every existing concept tag has at least two question records. This is a bank-cov
 |---|---:|
 | 1 — Introductory | 45 |
 | 2 — Foundational | 168 |
-| 3 — Applied | 252 |
+| 3 — Applied | 254 |
 | 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 589 questions during the full expansion. The 196 additions comprise 180 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 591 questions during the full expansion. The 198 additions comprise 182 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -78,7 +78,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
-There are now 36 source-origin image-question associations plus four visually reviewed images used as context for AI-generated applied questions (40 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
+There are now 36 source-origin image-question associations plus six visually reviewed images used as context for AI-generated applied questions (42 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
 
 ## Provenance rules
 
@@ -92,7 +92,7 @@ There are now 36 source-origin image-question associations plus four visually re
 
 GitHub Actions Site CI run #524 passed on the latest code, including the fix for duplicate answer recording when advancing practice questions. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
 
-The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
+Two additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944) and IPv4 subnet-table host membership (IMG-1070). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
 
 ## Remaining source and review limitations
 
