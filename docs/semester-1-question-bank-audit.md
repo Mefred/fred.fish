@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 239 unique questions  
+**Current bank:** 244 unique questions  
 **Concept tags:** 373 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 219 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 224 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -26,11 +26,11 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 | Single choice | 110 |
 | Multiple select | 18 |
 | True / false | 1 |
-| Fill in the blank | 28 |
-| Matching | 19 |
+| Fill in the blank | 30 |
+| Matching | 20 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 52 |
-| **Total** | **239** |
+| Scenario / troubleshooting | 54 |
+| **Total** | **244** |
 
 ## Difficulty coverage
 
