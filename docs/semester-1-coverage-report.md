@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 294
+- **Questions:** 297
 - **Lessons represented:** 22
 - **Distinct concept tags:** 484
 
@@ -29,7 +29,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | physical-layer | 24 | 51 | matching: 7, scenario: 10, single: 7 | 1–4 |
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
-| router-configuration | 8 | 22 | fill: 2, matching: 1, multiple: 1, single: 4 | 1–3 |
+| router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
 | small-network | 9 | 25 | ordering: 2, scenario: 4, single: 3 | 1–4 |
 | transport-layer | 13 | 27 | fill: 2, matching: 1, multiple: 3, ordering: 1, single: 6 | 1–4 |
 
@@ -603,11 +603,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### router-configuration
 
 - `configuration-commands`
+- `default-gateway`
 - `flash`
 - `interface-status`
+- `ios-command-modes`
 - `ios-commands`
 - `ios-verification-commands`
 - `ip-default-gateway`
+- `ipv4-address-configuration`
+- `ipv4-interface-configuration`
 - `ipv6-interface-verification`
 - `no-shutdown`
 - `nvram`
@@ -621,6 +625,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `router-interface-configuration`
 - `router-memory`
 - `running-configuration`
+- `show-ip-interface-brief`
 - `show-ipv6-interface`
 - `startup-configuration`
 - `switch-management`
@@ -762,7 +767,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decapsulation` | 2 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
-| `default-gateway` | 5 | address-resolution, basic-device-configuration, network-layer, protocols-and-models, small-network |
+| `default-gateway` | 6 | address-resolution, basic-device-configuration, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
@@ -860,7 +865,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `imap` | 2 | application-layer |
 | `insider-threat` | 1 | network-security |
 | `interface-configuration` | 1 | basic-device-configuration |
-| `interface-status` | 4 | basic-device-configuration, router-configuration |
+| `interface-status` | 5 | basic-device-configuration, router-configuration |
 | `internet-access` | 3 | internet-connections |
 | `internet-architecture` | 1 | network-types |
 | `internet-governance` | 2 | network-types |
@@ -868,26 +873,26 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `internet-standards` | 1 | protocols-and-models |
 | `interoperability` | 2 | protocols-and-models |
 | `intranet` | 2 | network-types |
-| `ios-command-modes` | 2 | basic-device-configuration |
+| `ios-command-modes` | 3 | basic-device-configuration, router-configuration |
 | `ios-command-syntax` | 2 | basic-device-configuration |
 | `ios-commands` | 1 | router-configuration |
 | `ios-debug` | 1 | small-network |
 | `ios-device-hardening` | 2 | basic-device-configuration |
 | `ios-interface-configuration` | 1 | basic-device-configuration |
 | `ios-navigation` | 1 | basic-device-configuration |
-| `ios-verification-commands` | 9 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
+| `ios-verification-commands` | 10 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
 | `ip` | 2 | protocols-and-models |
 | `ip-addressing` | 2 | protocols-and-models |
 | `ip-addressing-services` | 1 | application-layer |
 | `ip-characteristics` | 1 | network-layer |
 | `ip-default-gateway` | 1 | router-configuration |
-| `ipv4-address-configuration` | 1 | basic-device-configuration |
+| `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-addressing` | 4 | basic-device-configuration, ipv4-addressing, number-systems |
 | `ipv4-differentiated-services` | 1 | network-layer |
 | `ipv4-fragmentation-fields` | 1 | network-layer |
 | `ipv4-header-checksum` | 2 | network-layer |
 | `ipv4-header-fields` | 2 | network-layer |
-| `ipv4-interface-configuration` | 1 | basic-device-configuration |
+| `ipv4-interface-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-ipv6-coexistence` | 1 | ipv6-addressing |
 | `ipv4-protocol` | 2 | network-layer |
 | `ipv4-routing` | 1 | basic-device-configuration |
@@ -990,7 +995,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `next-hop` | 4 | ipv6-addressing, network-layer |
 | `next-hop-resolution` | 2 | network-layer |
 | `nic` | 1 | ethernet-switching |
-| `no-shutdown` | 4 | basic-device-configuration, ipv6-addressing, router-configuration |
+| `no-shutdown` | 5 | basic-device-configuration, ipv6-addressing, router-configuration |
 | `ns-record` | 1 | application-layer |
 | `nslookup` | 1 | small-network |
 | `number-systems` | 9 | number-systems |
@@ -1044,7 +1049,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reliability` | 2 | transport-layer |
 | `reliability-and-flow-control` | 1 | transport-layer |
 | `reliable-delivery` | 1 | transport-layer |
-| `remote-management` | 2 | basic-device-configuration, router-configuration |
+| `remote-management` | 3 | basic-device-configuration, router-configuration |
 | `remote-network-communication` | 3 | address-resolution, protocols-and-models, small-network |
 | `retransmission` | 1 | protocols-and-models |
 | `return-route` | 2 | network-layer |
@@ -1061,7 +1066,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `router-advertisement` | 1 | address-resolution |
 | `router-boot-process` | 1 | router-configuration |
 | `router-functions` | 1 | router-configuration |
-| `router-interface-configuration` | 2 | router-configuration |
+| `router-interface-configuration` | 5 | router-configuration |
 | `router-interfaces` | 1 | icmp |
 | `router-memory` | 1 | router-configuration |
 | `router-role` | 2 | network-components |
@@ -1090,7 +1095,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `shared-memory-buffering` | 1 | ethernet-switching |
 | `shielded-twisted-pair` | 1 | physical-layer |
 | `show-cdp-neighbors` | 1 | small-network |
-| `show-ip-interface-brief` | 2 | basic-device-configuration, small-network |
+| `show-ip-interface-brief` | 3 | basic-device-configuration, router-configuration, small-network |
 | `show-ip-route` | 1 | network-layer |
 | `show-ipv6-interface` | 2 | ipv6-addressing, router-configuration |
 | `signal-integrity` | 2 | physical-layer |
@@ -1172,7 +1177,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1183,8 +1188,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | fill | 34 |
 | matching | 39 |
 | multiple | 18 |
-| ordering | 11 |
-| scenario | 75 |
+| ordering | 12 |
+| scenario | 77 |
 | single | 116 |
 | true-false | 1 |
 
@@ -1193,11 +1198,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 84 |
-| 3 | 122 |
+| 2 | 85 |
+| 3 | 124 |
 | 4 | 48 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, 8, and 9 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, 8, 9, and 10 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
