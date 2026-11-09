@@ -78,7 +78,7 @@ The first 36 unique unresolved question-candidate images were screened on contac
 
 The other 33 candidates show unmarked question prompts, blank matching targets, lesson summaries, or diagrams without an answer mark. No new source-origin questions were added. See [the batch-by-batch review log](./semester-1-image-review-batch-1.md) for all 36 references and decisions.
 
-The 960×540 contact-sheet screen is not counted as native-resolution verification for the other 33 images. The 744-unique-image / 750-asset-record native-resolution backlog therefore remains unchanged. The original OCR ZIP candidate-status fields remain unchanged in the Library; this repository audit is the current review record.
+The 960×540 contact-sheet screen is not counted as native-resolution verification for the other 33 images. The original export's 744-unique-image / 750-asset-record unresolved status is not a native-resolution backlog count. Across batches 1–4, 144 candidates were screened at contact-sheet scale; twelve were opened at native resolution and 132 were not individually opened at native resolution. The original OCR ZIP candidate-status fields remain unchanged in the Library; this repository audit is the current review record.
 
 ## High-resolution contact-sheet review — batch 2
 
@@ -86,13 +86,13 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale, and twelve answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the original export's 744-unique-image / 750-asset-record unresolved count remains unchanged.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale, and twelve answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the other 132 candidates in these batches, or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
 
 ## High-resolution contact-sheet review — batch 3
 
 The next 36 candidates (IMG-0428–IMG-0511) were screened. No clearly marked answer-selection or matching key was visible. The batch contains unmarked LLC/MAC sublayer, frame-field, switching, topology, and MAC-learning prompts plus lesson-summary and Packet Tracer activity slides. No new source-origin question or visual-context association was added. See [the batch 3 review log](./semester-1-image-review-batch-3.md).
 
-Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items were cross-checked at native resolution and are already linked to existing questions; the other 99 show unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items were cross-checked at native resolution and are already linked to existing questions; the other 99 were contact-sheet-only. At that scale they appeared to be unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams, but native-resolution review may still reveal small marks or details. The original export's 744-unique-image / 750-asset-record unresolved status is not a native-resolution backlog count.
 
  against extracted source questions
 
@@ -145,7 +145,7 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 - Six new image candidates have been visually reviewed and associated with active source-origin questions.
 - The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
-- The remaining 744 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
+- The original OCR export continues to mark 744 unique images (750 asset records including duplicate references) as unresolved. This is an export-status count, not a current manual-review backlog. Do not promote an image to a source-origin question without sufficient visual or textual evidence; the batch logs record the 144-candidate detailed screen and 12 native-resolution checks.
 - The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
 
 
