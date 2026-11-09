@@ -608,7 +608,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
 | `auto-mdix` | 1 | ethernet-switching |
-| `bandwidth` | 1 | reliable-networks |
+| `bandwidth` | 2 | physical-layer, reliable-networks |
 | `best-effort` | 1 | network-layer |
 | `bidirectional-connectivity` | 1 | network-layer |
 | `binary` | 1 | number-systems |
@@ -867,7 +867,6 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer` | 2 | protocols-and-models |
 | `physical-layer-cabling` | 1 | basic-device-configuration |
 | `physical-layer-media` | 3 | physical-layer |
-| `bandwidth` | 2 | physical-layer, reliable-networks |
 | `cabling-standards` | 1 | physical-layer |
 | `physical-layer-characteristics` | 1 | physical-layer |
 | `physical-layer-encoding` | 1 | physical-layer |
