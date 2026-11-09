@@ -126,4 +126,23 @@ knownProgress.concepts["test-known"] = {
 const unseenFirst = buildAdaptiveQuiz([knownQuestion, unseenQuestion], knownProgress, 1, now, () => 0);
 assert.equal(unseenFirst[0].id, unseenQuestion.id, "unseen concepts should receive initial exposure");
 
+// Equal-priority questions should spread across lessons before repeating a lesson.
+const lessonAFirst = {
+  ...sample, id: "a-lesson-first", lessonId: "lesson-a",
+  concepts: ["test-lesson-a-first"], difficulty: 1,
+};
+const lessonASecond = {
+  ...sample, id: "b-lesson-second", lessonId: "lesson-a",
+  concepts: ["test-lesson-a-second"], difficulty: 1,
+};
+const lessonBFirst = {
+  ...sample, id: "z-lesson-b-first", lessonId: "lesson-b",
+  concepts: ["test-lesson-b-first"], difficulty: 1,
+};
+const diverseSession = buildAdaptiveQuiz(
+  [lessonAFirst, lessonASecond, lessonBFirst], emptyProgress(), 2, now, () => 0,
+);
+assert.equal(diverseSession[0].id, lessonAFirst.id, "stable tie-breaking should select the first question deterministically");
+assert.equal(diverseSession[1].lessonId, "lesson-b", "the selector should prefer a new lesson over an equally ranked repeat");
+
 console.log("Learning tests passed: adaptive selection, mastery, review scheduling, XP, streaks, ordering shuffle, and storage validation.");
