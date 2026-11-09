@@ -109,6 +109,7 @@ try {
         assert.ok(await page.locator("#answer-feedback").innerText(), "answer feedback should include an explanation");
         if (questionIndex < 9) await page.locator("#submit-answer").click();
       }
+      await page.locator("#submit-answer").click();
       assert.equal(await page.locator(".session-complete").count(), 1, "finishing ten answers should complete the session");
       const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("fredfish.learning.progress.v1") || "null"));
       assert.ok(saved, "answering should persist learning progress in local storage");
