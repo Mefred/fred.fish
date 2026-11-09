@@ -44,7 +44,7 @@ See [the reproducible recovery procedure](./semester-1-image-recovery.md).
 - Normalizing the OCR text yields 474 candidate groups.
 - These are candidate prompts, not 474 verified answer-key entries. Some are duplicate slides, matching activities, Packet Tracer instructions, lesson summaries, or questions whose answer depends on a diagram or visual mark.
 - Eighteen additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier associations, 34 image-question associations have visual verification. Four false-positive candidates remain excluded.
-- Of the 772 unique unresolved candidate images, 748 remain for visual answer-key review (754 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
+- Of the 766 unique unresolved candidate images, 748 remain for visual answer-key review (754 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
 
 ## Module sequence discovered
 
