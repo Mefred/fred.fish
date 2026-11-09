@@ -124,3 +124,8 @@ Completed a first-pass topic-to-question mapping for Module 9 Address Resolution
 ## Module 10 source mapping update
 
 Completed a first-pass topic-to-question mapping for Module 10 Basic Router Configuration. The lesson now has 11 questions. Three AI-generated items add router interface command ordering, concise interface verification, and host default-gateway selection. Packet Tracer interface and gateway exhibits still need direct visual verification.
+
+
+## Module 11 source mapping update
+
+Completed a first-pass topic-to-question mapping for Module 11 IPv4 Addressing. The lesson has 20 active questions with strong subnet-calculation coverage. The mapping identifies remaining gaps in unicast/broadcast/multicast delivery semantics, public/reserved IPv4 address categories, and the purpose of network segmentation. These are expansion targets; the current question count is not treated as proof of complete objective coverage.
