@@ -2,16 +2,29 @@ import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { setTimeout as delay } from "node:timers/promises";
 import { createRequire } from "node:module";
+import { readdirSync } from "node:fs";
+import { join, relative, sep } from "node:path";
 import { chromium } from "playwright";
 
 const require = createRequire(import.meta.url);
 const baseUrl = process.env.BROWSER_TEST_URL || "http://127.0.0.1:4321";
-const pages = [
+const corePages = [
+  "/",
   "/cisco/",
+  "/cisco/learning/",
   "/cisco/learning/semester-1/",
   "/cisco/practice/",
   "/cisco/progress/",
+  "/cisco/reference/",
 ];
+const collectHtml = (directory) => readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+  const path = join(directory, entry.name);
+  if (entry.isDirectory()) return collectHtml(path);
+  if (!entry.isFile() || !entry.name.endsWith(".html")) return [];
+  const rel = relative("dist", path).split(sep).join("/");
+  return [rel.endsWith("/index.html") ? `/${rel.slice(0, -10)}` : rel === "index.html" ? "/" : `/${rel}`];
+});
+const pages = [...new Set([...corePages, ...collectHtml("dist")])].sort();
 const server = process.env.BROWSER_TEST_URL ? null : spawn("npm", ["run", "preview", "--", "--host", "127.0.0.1", "--port", "4321"], {
   stdio: "ignore",
   env: process.env,
@@ -97,6 +110,7 @@ try {
   console.log(JSON.stringify({
     browser: "Chromium",
     viewports: ["1440x900 desktop", "390x844 mobile"],
+    routesTested: pages.length,
     routes: pages,
     practiceInteraction: "keyboard answer selection, feedback, and local persistence",
     axeViolations,
