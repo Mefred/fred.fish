@@ -64,3 +64,20 @@ Pushing to `main` builds and deploys `dist/` to GitHub Pages. The custom domain 
 ## Semester 1 source recovery
 
 The source-processing audit and repeatable OneNote image-recovery procedure are documented in `docs/semester-1-image-audit.md`, `docs/semester-1-ocr-candidate-triage.md`, and `docs/semester-1-image-recovery.md`. The recovery script verifies extracted image bytes against the OCR export's SHA-256 manifest before accepting them.
+
+## Cisco Semester 1 learning system
+
+The Cisco learning area includes a reconstructed 17-module Semester 1 course at `/cisco/learning/semester-1/`, adaptive practice at `/cisco/practice/`, and a learner dashboard at `/cisco/progress/`.
+
+The current practice bank contains 600 questions across 22 lesson IDs and 607 concept tags. Questions include single-choice, multiple-select, true/false, fill-in, matching, ordering, and scenario/troubleshooting formats. Source-origin questions are reserved for prompts and answers supported by recovered source text or visually checked source material. New questions whose answers are derived rather than explicitly supplied by the source are marked AI-generated.
+
+Adaptive practice uses concept-level performance, recent accuracy, review due dates, difficulty fit, and question-history avoidance to select sessions. Progress, mastery, XP, streaks, and session history are stored in the current browser's local storage. There is no account system, backend, or cross-device synchronization in this release.
+
+The source and verification limits are documented in:
+
+- `docs/semester-1-coverage-report.md` — question counts and concept exposure by lesson.
+- `docs/semester-1-question-bank-audit.md` — question provenance, formats, and quality checks.
+- `docs/semester-1-source-concept-inventory.md` — first-pass source objective mapping.
+- `docs/semester-1-image-audit.md` — recovered source image inventory and visual-review status.
+
+Run `npm run validate:learning` to validate question structure and concept exposure, and `npm run test:learning` to run adaptive-engine and learner-storage regression tests.
