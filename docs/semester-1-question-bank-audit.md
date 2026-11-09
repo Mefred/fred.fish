@@ -90,6 +90,8 @@ There are now 36 source-origin image-question associations plus nine visually re
 
 ## Validation
 
+Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Dedicated regression tests reject missing or duplicate pair mappings, duplicate targets, unknown IDs, declared-answer mismatches, non-string entries, and malformed mappings with extra delimiters. The learning test command runs these cases alongside the adaptive-engine tests.
+
 GitHub Actions Site CI run #540 passed after the source inventory and validator updates, including the fix for duplicate answer recording when advancing practice questions. Subsequent changes are rechecked by the current pull-request CI run; consult the PR Checks tab for the latest result. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
 
 Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
