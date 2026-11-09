@@ -61,6 +61,8 @@ The first automated promotion map contained several incorrect image-to-question 
 - OCR question candidates are not promoted into the active bank merely because OCR found a question mark. They remain candidates until their wording, visual dependencies, and answer key have been reviewed.
 - Every active question is mapped to one or more concepts. The adaptive engine updates each mapped concept from the response.
 
+The Module 8 source inventory now decomposes the IPv4 and IPv6 packet-header objectives into field-level concepts (Version, Differentiated Services / Traffic Class, Header Checksum, TTL / Hop Limit, Protocol / Next Header, addresses, Flow Label, Payload Length, fragmentation fields, and the fixed IPv6 base header). These are documented as source-backed targets, not counted as active questions. The exact image-asset IDs for the packet-header diagrams have not yet been visually verified, so no new question has been given an unverified image reference. See the Module 8 packet-header concept decomposition in the source-concept inventory.
+
 ## Coverage and remaining work
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
