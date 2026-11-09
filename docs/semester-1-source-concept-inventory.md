@@ -41,7 +41,7 @@ The Physical Layer module is now mapped to active question records. This is an i
 | Fiber-Optic Cabling | `s4-fiber-purpose-001`, `s4-media-scenario-001`, `s4-fiber-modes-001`, and `s4-signal-medium-match-001` assess light signaling, distance, EMI resistance, and single-mode versus multimode. | Broadly represented; connector types and visual identification still need review. |
 | Wireless Media | `s4-wireless-medium-001` and `s4-signal-medium-match-001` assess radio/microwave signaling and the wireless medium. | Partially represented; interference sources and practical placement/channel scenarios could use additional questions. |
 
-**Initial practice expansion:** four AI-generated questions were added for physical-layer function, bandwidth versus throughput, medium-to-signal mapping, and TIA/EIA-568 UTP requirements. The new questions cite the recovered text block `block-0073`; they are not verbatim source-origin questions. The lesson now has 12 active questions. Continue visual verification of cable and connector exhibits before adding image-specific references.
+**Initial practice expansion:** four AI-generated questions were added for physical-layer function, bandwidth versus throughput, medium-to-signal mapping, and TIA/EIA-568 UTP requirements. The new questions cite the recovered text block `block-0073`; they are not verbatim source-origin questions. The lesson now has 43 active questions. Continue visual verification of cable and connector exhibits before adding image-specific references.
 
 ## First-pass topic-to-question comparison: Module 8
 
@@ -96,7 +96,7 @@ The Module 4 objectives recovered from the lecture notes are mapped against the 
 | Fiber-Optic Cabling | SMF/MMF, core size, laser/LED, dispersion, distance/bandwidth, EMI immunity, ST/SC/LC connectors, patch cords | `single-mode-fiber`, `multimode-fiber`, `fiber-optic-cabling`, `fiber-dispersion`, `fiber-optic-connectors` | Broadly represented; mode comparison, dispersion, and connector-name recognition are practiced. Exact connector appearance and patch-cord visual identification remain pending image review. |
 | Wireless Media | Radio/microwave signaling; Wi-Fi, Bluetooth, WiMAX, Zigbee; AP/NIC; coverage, interference, security, shared half-duplex medium | `wireless-media`, `radio-frequency`, `wireless-standards`, `wifi`, `bluetooth`, `wimax`, `zigbee`, `wlan`, `wireless-access-point`, `wireless-nic`, `wireless-security`, `shared-medium`, `half-duplex` | Improved; a deployment scenario now tests AP/NIC requirements, compatibility, and the need for WLAN security policies. Standards matching and WLAN contention are also covered. |
 
-The lesson currently has **43 active questions**. The source exhibit IMG-2104 is now linked to an AI-generated cable-selection scenario; the answer is derived from the visible device/link types rather than marked on the slide. Four additional AI-generated questions address goodput, latency, UTP cable wiring conventions, and secure WLAN deployment. They are derived from recovered Module 4 notes and existing source references, not presented as verbatim source questions. Connector diagrams, termination exhibits, cable categories, and patch-cord visuals still need direct image review.
+The lesson currently has **43 active questions**. The source exhibit IMG-2104 is now linked to an AI-generated cable-selection scenario; the answer is derived from the visible device/link types rather than marked on the slide. Five additional AI-generated questions address goodput, latency, UTP cable wiring conventions, secure WLAN deployment, and exhibit-based console/straight-through/crossover cable selection. They are derived from recovered Module 4 notes and existing source references, not presented as verbatim source questions. Connector diagrams, termination exhibits, cable categories, and patch-cord visuals still need direct image review.
 
 ## Module 5 first-pass topic-to-question mapping
 
@@ -107,12 +107,12 @@ The Module 5 objectives recovered from the lecture notes are mapped against the 
 | Binary Number System | Base-2 digits; positional notation; bit values; 8-bit octets; IPv4 dotted-decimal notation; decimal/binary conversion | `binary`, `binary-to-decimal`, `decimal-to-binary`, `binary-positional-notation`, `octet`, `dotted-decimal-notation` | Represented with direct conversions and IPv4 octet interpretation. More mixed multi-octet conversion drills would improve fluency. |
 | Hexadecimal Number System | Base-16 digits 0–9/A–F; 4-bit nibbles; binary/hex conversion; decimal/hex conversion; IPv6 128-bit addresses and hextets | `hexadecimal`, `hexadecimal-to-decimal`, `decimal-to-hexadecimal`, `hexadecimal-to-binary`, `binary-to-hexadecimal`, `hextet`, `ipv6-address-structure` | Represented with conversions in both directions, hextet structure, and IPv6 digit counts. More long-form IPv6 address conversion practice remains useful. |
 
-The lesson now contains 16 active questions and 21 distinct concept tags. Eight new AI-generated questions add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, hextet identification/counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. They are derived from the recovered Module 5 notes, not verbatim source questions.
+The lesson now contains 21 active questions and 21 distinct concept tags. Eight new AI-generated questions add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, hextet identification/counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. They are derived from the recovered Module 5 notes, not verbatim source questions.
 
 
 ## Module 6 first-pass topic-to-question mapping
 
-The recovered Module 6 source identifies three main areas: the purpose of the Data Link Layer, LAN/WAN topologies and media-access methods, and the structure and functions of the data-link frame. The active `data-link-layer` lesson now has 13 questions after this expansion.
+The recovered Module 6 source identifies three main areas: the purpose of the Data Link Layer, LAN/WAN topologies and media-access methods, and the structure and functions of the data-link frame. The active `data-link-layer` lesson now has 26 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -124,7 +124,7 @@ Four new AI-generated questions add frame-field matching, WAN topology matching,
 
 ## Module 7 first-pass topic-to-question mapping
 
-The recovered Module 7 material focuses on Ethernet frame structure and MAC addressing, switch MAC-table learning/forwarding, and switch forwarding methods and buffering. The active `ethernet-switching` lesson now has 16 questions after this expansion.
+The recovered Module 7 material focuses on Ethernet frame structure and MAC addressing, switch MAC-table learning/forwarding, and switch forwarding methods and buffering. The active `ethernet-switching` lesson now has 38 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -137,7 +137,7 @@ Four new AI-generated questions add OUI identification, MAC-address movement bet
 
 ## Module 9 first-pass topic-to-question mapping
 
-The recovered Module 9 objective is to explain how ARP and Neighbor Discovery enable communication. Its two source topics are MAC/IP addressing and IPv6 Neighbor Discovery. The active `address-resolution` lesson now has 11 questions.
+The recovered Module 9 objective is to explain how ARP and Neighbor Discovery enable communication. Its two source topics are MAC/IP addressing and IPv6 Neighbor Discovery. The active `address-resolution` lesson now has 17 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -148,7 +148,7 @@ Three new AI-generated questions add remote-network gateway resolution, full ICM
 
 ## Module 10 first-pass topic-to-question mapping
 
-The recovered Module 10 objective is to implement initial settings on a router and end devices. Its three source topics are initial router settings, interface configuration, and default-gateway configuration. The active `router-configuration` lesson now has 11 questions.
+The recovered Module 10 objective is to implement initial settings on a router and end devices. Its three source topics are initial router settings, interface configuration, and default-gateway configuration. The active `router-configuration` lesson now has 22 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -160,7 +160,7 @@ Three new AI-generated questions add router interface command ordering, concise 
 
 ## Module 11 first-pass topic-to-question mapping
 
-The recovered Module 11 objective is to calculate an IPv4 subnetting scheme to efficiently segment a network. Its five source topics are IPv4 address structure, unicast/broadcast/multicast, IPv4 address types, network segmentation, and subnetting a /24. The active `ipv4-addressing` lesson now has 25 questions after five additional items.
+The recovered Module 11 objective is to calculate an IPv4 subnetting scheme to efficiently segment a network. Its five source topics are IPv4 address structure, unicast/broadcast/multicast, IPv4 address types, network segmentation, and subnetting a /24. The active `ipv4-addressing` lesson now has 43 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -190,7 +190,7 @@ Five new AI-generated questions add RA M/O flag interpretation, IPv6 subnet-ID p
 
 ## Module 13 first-pass topic-to-question mapping
 
-The recovered Module 13 objective is to use tools to test network connectivity. Its two source topics are ICMP messages and ping/traceroute testing. The active `icmp` lesson now has 13 questions.
+The recovered Module 13 objective is to use tools to test network connectivity. Its two source topics are ICMP messages and ping/traceroute testing. The active `icmp` lesson now has 18 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -201,7 +201,7 @@ Four new AI-generated questions add ICMPv4 unreachable-code matching, loopback t
 
 ## Module 14 first-pass topic-to-question mapping
 
-The recovered Module 14 material covers transport-layer responsibilities, TCP and UDP behavior, port numbers/socket pairs, and TCP reliability and flow control. The active `transport-layer` lesson now has 17 questions.
+The recovered Module 14 material covers transport-layer responsibilities, TCP and UDP behavior, port numbers/socket pairs, and TCP reliability and flow control. The active `transport-layer` lesson now has 38 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -211,11 +211,11 @@ The recovered Module 14 material covers transport-layer responsibilities, TCP an
 | Port Numbers and Socket Pairs | Well-known, registered, dynamic/private ranges; source/destination ports; IP-plus-port sockets; IANA allocation; netstat | `port-numbers`, `well-known-ports`, `iana`, `socket-pairs`, `dns`, `ssh`, `http`, `https` | Represented with port-range identification, common service matching, and socket endpoint identification. More ports and a netstat troubleshooting scenario remain useful. |
 | Reliability and Flow Control | Ordered delivery; sequence/ACK behavior; retransmission; duplicate ACK; sliding window; receiver window; SACK; MSS/MTU; congestion avoidance | `reliability`, `reliability-and-flow-control`, `tcp-windowing`, `flow-control`, `selective-acknowledgment`, `sack`, `maximum-segment-size`, `mtu`, `congestion-control` | Improved; new scenarios cover duplicate ACK behavior, SACK information, MSS versus MTU, and flow versus congestion control. Advertised-window capacity and remaining-window arithmetic now have dedicated applied scenarios. TCP termination remains an optional extension because the recovered source material does not include a direct termination sequence. |
 
-Four new AI-generated questions add duplicate-ACK loss recovery, SACK, MSS/MTU comparison, and flow-versus-congestion-control distinctions. They are derived from recovered Module 14 notes and existing source references, not presented as verbatim source questions. TCP header and sliding-window diagrams were screened in the candidate exhibit pass; no marked answer key was visible. Full-size packet-capture interpretation remains pending.
+Six new AI-generated questions add duplicate-ACK loss recovery, SACK, MSS/MTU comparison, flow-versus-congestion-control distinctions, advertised-window capacity, and remaining-window arithmetic. They are derived from recovered Module 14 notes and existing source references, not presented as verbatim source questions. TCP header and sliding-window diagrams were screened in the candidate exhibit pass; no marked answer key was visible. Full-size packet-capture interpretation remains pending.
 
 ## Module 15 first-pass topic-to-question mapping
 
-The recovered Module 15 objective is to explain how application-layer protocols support end-user applications. Its source topics cover the application/presentation/session layers, peer-to-peer, web/email protocols, IP addressing services, and file sharing. The active `application-layer` lesson now has 14 questions.
+The recovered Module 15 objective is to explain how application-layer protocols support end-user applications. Its source topics cover the application/presentation/session layers, peer-to-peer, web/email protocols, IP addressing services, and file sharing. The active `application-layer` lesson now has 23 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -229,7 +229,7 @@ Four new AI-generated questions add HTTP method matching, presentation/session l
 
 ## Module 16 first-pass topic-to-question mapping
 
-The recovered Module 16 objective is to configure switches and routers with device-hardening features. Its source topics cover security threats and vulnerabilities, network attacks, attack mitigation, and device security. The active `network-security` lesson now has 16 questions.
+The recovered Module 16 objective is to configure switches and routers with device-hardening features. Its source topics cover security threats and vulnerabilities, network attacks, attack mitigation, and device security. The active `network-security` lesson now has 27 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -296,7 +296,7 @@ The Module 2 source objectives are mapped against the active basic-device-config
 
 ## Module 3 first-pass topic-to-question comparison
 
-The Module 3 source objectives are compared with 23 active questions assigned to `protocols-and-models`. All seven source topics have direct question-bank evidence after this expansion.
+The Module 3 source objectives are compared with 38 active questions assigned to `protocols-and-models`. All seven source topics have direct question-bank evidence after this expansion.
 
 | Source topic objective | Active question-bank evidence | First-pass finding |
 |---|---|---|
@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 585 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 178 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 600 questions across 22 lesson IDs and 607 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 191 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions introduce two new tags, each used twice. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -374,7 +374,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 587 questions, 40 source-origin questions, and 547 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 600 questions, 40 source-origin questions, and 560 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
