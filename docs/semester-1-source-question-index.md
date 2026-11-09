@@ -34,6 +34,15 @@ This index provides stable references for source questions promoted into the act
 - **Extracted answer:** "240.0.0.0 - 254.255.255.255"
 - **Review status:** Not promoted. The extracted answer is incorrect: IPv4 multicast uses 224.0.0.0/4 (224.0.0.0 through 239.255.255.255). The supplied range is in the experimental/reserved Class E space. Keep this candidate flagged for source-image verification rather than copying the incorrect answer.
 
+
+## Q357 — Verify IPv6 interface addresses
+
+- **Source line:** 27197
+- **Module:** Module 17: Build a Small Network
+- **Prompt:** A network technician is troubleshooting an issue and needs to verify all of the IPv6 interface addresses on a router. What is the best command to use to accomplish the task?
+- **Extracted answer:** `show ipv6 interface`
+- **Review status:** Promoted as a source-origin question. The active answer and explanation preserve the extracted command and clarify its interface-verification purpose.
+
 ## Usage
 
 Question IDs such as `Q194` and `Q201` may appear in a question's `sourceRefs`. These IDs resolve to the entries in this index. When OCR answer text conflicts with a protocol definition, preserve the source text in this index and document the correction in the active question explanation; do not silently reproduce an incorrect answer.
