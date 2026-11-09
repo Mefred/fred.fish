@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 601
+- **Questions:** 600
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -26,7 +26,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
 | number-systems | 21 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 7 | 1–4 |
-| physical-layer | 44 | 53 | matching: 12, multiple: 2, scenario: 12, single: 18 | 1–4 |
+| physical-layer | 43 | 53 | matching: 12, multiple: 2, scenario: 11, single: 18 | 1–4 |
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
@@ -37,16 +37,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 411 |
-| 3 | 79 |
+| 2 | 414 |
+| 3 | 76 |
 | 4 | 34 |
 | 5 | 21 |
 | 6 | 18 |
 | 7 | 9 |
 | 8 | 9 |
 | 9 | 1 |
-| 10 | 4 |
-| 11 | 7 |
+| 10 | 5 |
+| 11 | 6 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
@@ -951,7 +951,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `business-internet-connections` | 4 | internet-connections |
 | `byod` | 2 | network-trends |
 | `cable-internet` | 2 | internet-connections, physical-layer |
-| `cabling-standards` | 3 | physical-layer |
+| `cabling-standards` | 2 | physical-layer |
 | `cache-expiration` | 3 | address-resolution |
 | `ccna-certification` | 2 | network-components |
 | `cdp` | 2 | small-network |
@@ -981,7 +981,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `contention-based-access` | 2 | data-link-layer |
 | `controlled-access` | 2 | data-link-layer |
 | `copper-access` | 2 | internet-connections |
-| `copper-cabling` | 11 | physical-layer |
+| `copper-cabling` | 10 | physical-layer |
 | `copper-fiber-wireless` | 2 | network-components |
 | `crossover-cable` | 3 | physical-layer |
 | `crosstalk` | 4 | physical-layer |
@@ -1394,7 +1394,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `shared-bandwidth` | 2 | internet-connections |
 | `shared-medium` | 2 | network-topologies, physical-layer |
 | `shared-memory-buffering` | 2 | ethernet-switching |
-| `shielded-twisted-pair` | 3 | physical-layer |
+| `shielded-twisted-pair` | 2 | physical-layer |
 | `show-arp` | 2 | small-network |
 | `show-cdp-neighbors` | 2 | small-network |
 | `show-interfaces` | 2 | small-network |
@@ -1406,7 +1406,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `show-protocols` | 2 | small-network |
 | `show-running-config` | 2 | small-network |
 | `show-version` | 2 | small-network |
-| `signal-integrity` | 3 | physical-layer |
+| `signal-integrity` | 2 | physical-layer |
 | `single-mode-fiber` | 3 | physical-layer |
 | `single-point-of-failure` | 2 | network-topologies |
 | `slaac` | 6 | basic-device-configuration, ipv6-addressing |
@@ -1526,7 +1526,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 98 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 166 |
+| scenario | 165 |
 | single | 231 |
 | true-false | 1 |
 
@@ -1536,7 +1536,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
-| 3 | 264 |
+| 3 | 263 |
 | 4 | 102 |
 | 5 | 22 |
 
