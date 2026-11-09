@@ -119,6 +119,12 @@ The OCR export contains:
 
 Use `scripts/ingest-semester-images.py` to rerun OCR and `scripts/recover-onenote-images.py` to recover and hash-verify the original image bytes.
 
+## High-resolution contact-sheet review — batch 3
+
+The next 36 candidates (IMG-0428–IMG-0511) were screened. No clearly marked answer-selection or matching key was visible; the images are unmarked LLC/MAC sublayer, frame-field, switching, topology, and MAC-learning prompts, plus lesson-summary and Packet Tracer activity slides. No new source-origin or visual-context association was added. See [the batch 3 review log](./semester-1-image-review-batch-3.md).
+
+Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items have been cross-checked at native resolution and were already linked to existing source-origin questions. The remaining 99 contact-sheet-only items still need native-resolution inspection where small answer marks or diagram details matter. The 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+
 ## Module classification
 
 A heuristic classifier matched 1,393 assets to one or more module topic buckets (439 high-confidence heading matches and 954 medium-confidence keyword matches). The remaining 1,253 assets are unclassified by text heuristics and require visual/topic review. These hints are not authoritative: a diagram may be relevant to a module without containing its title, and a question can span multiple concepts.
