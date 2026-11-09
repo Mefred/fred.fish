@@ -38,6 +38,9 @@ for (const line of records) {
 const sorted = (map) => [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
 const totalQuestions = [...lessons.values()].reduce((sum, lesson) => sum + lesson.ids.length, 0);
 const singleQuestionConcepts = [...conceptQuestionCounts.entries()].filter(([, count]) => count === 1);
+const underPracticedConcepts = [...conceptQuestionCounts.entries()].filter(([, count]) => count < 2);
+const exposureHistogram = new Map();
+for (const count of conceptQuestionCounts.values()) exposureHistogram.set(count, (exposureHistogram.get(count) ?? 0) + 1);
 const lines = [
   "# Semester 1 question coverage report",
   "",
@@ -57,7 +60,19 @@ for (const [lessonId, lesson] of [...lessons.entries()].sort((a, b) => a[0].loca
   const difficultyKeys = [...lesson.difficulties.keys()].sort((a, b) => a - b);
   lines.push(`| ${lessonId} | ${lesson.ids.length} | ${lesson.concepts.size} | ${formatText} | ${difficultyKeys[0]}–${difficultyKeys.at(-1)} |`);
 }
-lines.push("", "## Concepts represented by lesson", "");
+lines.push(
+  "",
+  "## Concept exposure distribution",
+  "",
+  "| Questions per concept | Number of concepts |",
+  "|---:|---:|",
+  ...[...exposureHistogram.entries()].sort((a, b) => a[0] - b[0]).map(([count, concepts]) => `| ${count} | ${concepts} |`),
+  "",
+  `**Concepts with fewer than two questions:** ${underPracticedConcepts.length}.`,
+  "",
+  "## Concepts represented by lesson",
+  "",
+);
 for (const [lessonId, lesson] of [...lessons.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
   lines.push(`### ${lessonId}`, "", [...lesson.concepts].sort().map((concept) => `- \`${concept}\``).join("\n"), "");
 }
@@ -68,7 +83,7 @@ lines.push(
   "|---|---:|---|",
   ...[...conceptQuestionCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([concept, count]) => `| \`${concept}\` | ${count} | ${[...conceptLessons.get(concept)].sort().join(", ")} |`),
   "",
-  `**Single-question concepts:** ${singleQuestionConcepts.length}. These tags currently have only one active question and are the first candidates for additional varied practice.`,
+  `**Single-question concepts:** ${singleQuestionConcepts.length}. **Concepts below the two-question exposure floor:** ${underPracticedConcepts.length}. The data validator fails if any concept falls below this floor.`,
   "",
   "## Bank-wide distribution",
   "",
@@ -86,7 +101,7 @@ lines.push(
   "",
   "## Interpretation and limits",
   "",
-  "This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.",
+  "This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal, not evidence of learner mastery or proof of missing source content.",
   "",
 );
 writeFileSync(output, lines.join("\n"));
