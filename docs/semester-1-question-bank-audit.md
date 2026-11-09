@@ -16,6 +16,33 @@
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
+### Concept exposure distribution
+
+The current 607 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
+
+| Questions per concept | Concept tags |
+|---:|---:|
+| 2 | 414 |
+| 3 | 76 |
+| 4 | 34 |
+| 5 | 21 |
+| 6 | 18 |
+| 7 | 9 |
+| 8 | 9 |
+| 9 | 1 |
+| 10 | 5 |
+| 11 | 6 |
+| 12 | 3 |
+| 13 | 3 |
+| 14 | 1 |
+| 15 | 3 |
+| 16 | 1 |
+| 18 | 1 |
+| 19 | 1 |
+| 31 | 1 |
+
+**Priority implication:** 414 concepts (68.2%) sit exactly at the two-question minimum. Future expansion should prioritize concepts with thin coverage and add varied assessment modes or applied contexts only when the source supports the underlying learning objective.
+
 ## Question formats
 
 | Format | Questions |
