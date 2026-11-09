@@ -42,6 +42,32 @@ The Module 8 objective list is now compared against the active `network-layer` q
 
 The two packet-header findings are provisional but concrete: the source has explicit assessable objectives and field lists, while the active seed scan contains no dedicated header-field prompts/tags. Add distinct IPv4- and IPv6-header concepts and questions before calling Module 8 coverage complete.
 
+### Module 8 packet-header concept decomposition
+
+The first-pass gap is now decomposed into assessable field-level targets. These are source-derived concepts, not claims that the corresponding questions have already been added.
+
+| Header family | Atomic concept | Source-supported role / distinction | Evidence |
+|---|---|---|---|
+| IPv4 | `ipv4-version` | Identifies the packet format; the source review question uses the 4-bit value `0100`. | Lines 7661–7677 and IPv4 header review material |
+| IPv4 | `ipv4-differentiated-services` | 8-bit field used to indicate packet priority / differentiated treatment. | Lines 7661–7677 and packet-header review slide |
+| IPv4 | `ipv4-header-checksum` | Header integrity-check field; distinguish it from transport checksums. | Lines 7661–7677 |
+| IPv4 | `ipv4-ttl` | Limits packet lifetime / Layer 3 hop count. | Lines 7661–7677; TTL review prompt |
+| IPv4 | `ipv4-protocol` | Identifies the encapsulated next-level protocol (for example, TCP, UDP, or ICMP). | Lines 7661–7677; protocol-identification review prompt |
+| IPv4 | `ipv4-source-destination` | Source and destination IPv4 addresses identify the packet endpoints; each address is 32 bits. | Lines 7661–7677 and IPv4 header overview |
+| IPv4 | `ipv4-fragmentation-fields` | Identification, Flags, and Fragment Offset support IPv4 fragmentation and fragment reassembly. | Module 8 new-terms list around lines 7661–7677 |
+| IPv6 | `ipv6-version` | Identifies IPv6; the source gives the 4-bit value `0110`. | Lines 7565–7583 |
+| IPv6 | `ipv6-traffic-class` | QoS-related field corresponding to the IPv4 Differentiated Services field. | Lines 7565–7583 |
+| IPv6 | `ipv6-flow-label` | 20-bit value used to identify packets in the same flow for consistent handling. | Lines 7565–7583 |
+| IPv6 | `ipv6-payload-length` | 16-bit field describing the payload length. | Lines 7565–7583 |
+| IPv6 | `ipv6-next-header` | Identifies the next protocol or extension header, such as TCP, UDP, or ICMPv6. | Lines 7565–7583 |
+| IPv6 | `ipv6-hop-limit` | Layer 3 hop limit; replaces the IPv4 TTL function. | Lines 7565–7583 |
+| IPv6 | `ipv6-source-destination` | Source and destination addresses are 128 bits each. | Lines 7565–7583 |
+| IPv6 | `ipv6-fixed-header` | Base header is a fixed 40 bytes; extension headers carry optional information. | Lines 7963–7974 |
+| IPv4 vs IPv6 | `ipv4-vs-ipv6-header` | Compare retained fields (Version, Source Address, Destination Address), renamed/replaced fields (TTL → Hop Limit), and IPv4-only header checksum / fragmentation handling. | Lines 7963–7974 and comparison review question |
+
+**Question-bank follow-up:** add at least one direct identification item and one applied packet-inspection scenario for each protocol, plus a comparison item. Include distractors that separate IPv4 TTL from IPv6 Hop Limit, IPv4 Protocol from IPv6 Next Header, IPv4 Differentiated Services from IPv6 Traffic Class, and IPv6 Flow Label from ordinary addressing. Questions about the IPv6 Flow Label should test flow classification/consistent handling, not promise that the network must use one physical path. The source's OCR labels the IPv6 addresses as “Source IPv4 Address” and “Destination IPV4 Address”; treat those as transcription errors because the same rows explicitly specify 128-bit IPv6 addresses.
+
+**Provenance limitation:** the line references above identify the recovered OCR evidence, but they do not identify the exact image asset IDs for the original header diagrams. Do not attach an `IMG-####` source reference to a new question until the image-to-asset mapping is visually verified. The current inventory therefore records these as source-backed content targets while the precise visual asset linkage remains pending.
 ## Interpretation rules
 
 1. **Source topic present** means the topic heading/objective was recovered from the lecture-note source. It does not mean every detail, diagram, lab, or embedded question under that topic has been reviewed.
