@@ -213,6 +213,20 @@ The recovered Module 14 material covers transport-layer responsibilities, TCP an
 
 Four new AI-generated questions add duplicate-ACK loss recovery, SACK, MSS/MTU comparison, and flow-versus-congestion-control distinctions. They are derived from recovered Module 14 notes and existing source references, not presented as verbatim source questions. TCP header and sliding-window diagrams still need direct visual verification.
 
+## Module 15 first-pass topic-to-question mapping
+
+The recovered Module 15 objective is to explain how application-layer protocols support end-user applications. Its source topics cover the application/presentation/session layers, peer-to-peer, web/email protocols, IP addressing services, and file sharing. The active `application-layer` lesson now has 14 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Application, Presentation, and Session | Application interface to services; data formatting, compression, encryption; session dialog establishment/maintenance | `application-layer`, `presentation-layer`, `session-layer`, `osi-model` | Improved; new matching item distinguishes presentation data handling from session dialog management. More applied examples of encryption/compression and session state remain useful. |
+| Peer-to-Peer | Decentralized resource sharing; peers acting as both clients and servers; hybrid P2P designs | `peer-to-peer`, `hybrid-p2p`, `client-server-model` | Represented through pure/hybrid architecture and practical resource-sharing scenarios. |
+| Web and Email Protocols | HTTP/HTTPS request-response; GET/POST/PUT; SMTP sending; POP3/IMAP retrieval and mailbox synchronization | `http`, `web-protocols`, `smtp`, `pop3`, `imap`, `email-protocols` | Improved; new matching item tests GET/POST/PUT roles. Existing questions cover SMTP sending, POP3/IMAP retrieval, and email ports. HTTPS security behavior and HTTP status codes remain gaps. |
+| IP Addressing Services | DNS name resolution and hierarchy; A/AAAA/MX/NS records; nslookup; DHCPv4 DORA; DHCPv6 message flow | `dns`, `dns-resource-records`, `a-record`, `aaaa-record`, `mx-record`, `ns-record`, `dhcp`, `ip-addressing-services` | Strong for DNS purpose/records and DHCPv4 DORA/ports; new nslookup scenario adds name-resolution troubleshooting. DHCPv6 SOLICIT/ADVERTISE/REQUEST/REPLY remains untested in this lesson. |
+| File Sharing Services | FTP control/data connections; TFTP; SMB session, authentication, file/printer sharing; client/server transfer | `file-sharing-services`, `ftp`, `tftp`, `smb`, `client-server-model` | Improved; new matching item contrasts FTP, TFTP, and SMB. A direct FTP control/data port scenario and SMB permissions/session troubleshooting would add depth. |
+
+Four new AI-generated questions add HTTP method matching, presentation/session layer roles, nslookup troubleshooting, and FTP/TFTP/SMB comparison. They are based on recovered Module 15 notes and existing source references, not presented as verbatim source questions. The HTTP exchange, DNS hierarchy, and file-sharing diagrams still need direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
