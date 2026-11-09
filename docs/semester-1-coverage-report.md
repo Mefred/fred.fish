@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 589
+- **Questions:** 591
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -17,8 +17,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
-| ipv4-addressing | 41 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 12, single: 13 | 2–5 |
-| ipv6-addressing | 33 | 47 | fill: 9, matching: 8, scenario: 8, single: 8 | 2–5 |
+| ipv4-addressing | 42 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 12, single: 14 | 2–5 |
+| ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 56 | 69 | fill: 3, matching: 7, multiple: 5, ordering: 1, scenario: 22, single: 18 | 1–5 |
 | network-security | 27 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 3, single: 5 | 1–5 |
@@ -37,15 +37,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 429 |
-| 3 | 69 |
-| 4 | 31 |
+| 2 | 426 |
+| 3 | 70 |
+| 4 | 33 |
 | 5 | 19 |
 | 6 | 16 |
 | 7 | 10 |
 | 8 | 8 |
-| 9 | 2 |
-| 10 | 4 |
+| 9 | 1 |
+| 10 | 5 |
 | 11 | 5 |
 | 12 | 3 |
 | 13 | 3 |
@@ -54,7 +54,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 16 | 1 |
 | 18 | 1 |
 | 19 | 1 |
-| 29 | 1 |
+| 30 | 1 |
 
 **Concepts with fewer than two questions:** 0.
 
@@ -1158,7 +1158,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-routing-table` | 5 | network-layer |
 | `ipv4-source-destination` | 4 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
-| `ipv4-subnetting` | 29 | ipv4-addressing |
+| `ipv4-subnetting` | 30 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 4 | icmp, network-layer |
 | `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
@@ -1169,7 +1169,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-address-resolution` | 2 | icmp |
 | `ipv6-address-structure` | 4 | ipv6-addressing, number-systems |
 | `ipv6-address-types` | 6 | ipv6-addressing |
-| `ipv6-addressing` | 2 | ipv6-addressing |
+| `ipv6-addressing` | 3 | ipv6-addressing |
 | `ipv6-extension-headers` | 2 | network-layer |
 | `ipv6-fixed-header` | 2 | network-layer |
 | `ipv6-flow-label` | 2 | network-layer |
@@ -1190,8 +1190,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-routing` | 3 | ipv6-addressing |
 | `ipv6-source-destination` | 2 | network-layer |
 | `ipv6-static-route` | 2 | ipv6-addressing |
-| `ipv6-subnet-id` | 2 | ipv6-addressing |
-| `ipv6-subnetting` | 2 | ipv6-addressing |
+| `ipv6-subnet-id` | 3 | ipv6-addressing |
+| `ipv6-subnetting` | 3 | ipv6-addressing |
 | `ipv6-traffic-class` | 2 | network-layer |
 | `ipv6-version` | 2 | network-layer |
 | `irtf` | 2 | protocols-and-models |
@@ -1431,8 +1431,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `store-and-forward-switching` | 2 | ethernet-switching |
 | `straight-through-cable` | 2 | physical-layer |
 | `subinterfaces` | 2 | ethernet-switching |
-| `subnet-mask` | 9 | ipv4-addressing, router-configuration |
-| `subnet-membership` | 3 | ipv4-addressing |
+| `subnet-mask` | 10 | ipv4-addressing, router-configuration |
+| `subnet-membership` | 4 | ipv4-addressing |
 | `subnet-overlap` | 2 | ipv4-addressing |
 | `subnet-sizing` | 11 | ipv4-addressing |
 | `svi` | 2 | basic-device-configuration |
@@ -1475,7 +1475,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `unknown-unicast-flooding` | 2 | ethernet-switching |
 | `url-filtering` | 2 | network-security |
 | `usable-host-count` | 2 | ipv4-addressing |
-| `usable-host-range` | 3 | ipv4-addressing |
+| `usable-host-range` | 4 | ipv4-addressing |
 | `user-exec` | 2 | basic-device-configuration |
 | `utp-cabling` | 7 | physical-layer |
 | `vendor-identification` | 2 | ethernet-switching |
@@ -1526,20 +1526,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 97 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 156 |
-| single | 230 |
+| scenario | 157 |
+| single | 231 |
 | true-false | 1 |
 
 ### Difficulty
 
-| Level | Count |
+| Level | Questions |
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
-| 3 | 252 |
+| 3 | 254 |
 | 4 | 102 |
 | 5 | 22 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal, not evidence of learner mastery or proof of missing source content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Question counts are a triage signal, not evidence of learner mastery or proof of missing source content.
