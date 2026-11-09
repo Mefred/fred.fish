@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 593
+- **Questions:** 600
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -20,32 +20,32 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
-| network-layer | 57 | 69 | fill: 3, matching: 7, multiple: 5, ordering: 1, scenario: 23, single: 18 | 1–5 |
+| network-layer | 59 | 69 | fill: 3, matching: 8, multiple: 5, ordering: 1, scenario: 24, single: 18 | 1–5 |
 | network-security | 27 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 3, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
 | number-systems | 21 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 7 | 1–4 |
-| physical-layer | 42 | 53 | matching: 12, multiple: 2, scenario: 10, single: 18 | 1–4 |
+| physical-layer | 43 | 53 | matching: 12, multiple: 2, scenario: 11, single: 18 | 1–4 |
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 44 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 22, single: 7 | 1–5 |
-| transport-layer | 36 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 5, single: 20 | 1–4 |
+| small-network | 46 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 24, single: 7 | 1–5 |
+| transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 424 |
-| 3 | 72 |
-| 4 | 30 |
-| 5 | 22 |
-| 6 | 16 |
+| 2 | 414 |
+| 3 | 76 |
+| 4 | 34 |
+| 5 | 21 |
+| 6 | 18 |
 | 7 | 9 |
 | 8 | 9 |
 | 9 | 1 |
-| 10 | 4 |
+| 10 | 5 |
 | 11 | 6 |
 | 12 | 3 |
 | 13 | 3 |
@@ -921,7 +921,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `all-routers-multicast` | 2 | ipv6-addressing |
 | `allowed-vlan-list` | 2 | small-network |
 | `anycast` | 2 | ipv6-addressing |
-| `apipa` | 2 | small-network |
+| `apipa` | 3 | small-network |
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
 | `application-layer-services` | 5 | application-layer, small-network |
@@ -983,7 +983,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `copper-access` | 2 | internet-connections |
 | `copper-cabling` | 10 | physical-layer |
 | `copper-fiber-wireless` | 2 | network-components |
-| `crossover-cable` | 2 | physical-layer |
+| `crossover-cable` | 3 | physical-layer |
 | `crosstalk` | 4 | physical-layer |
 | `csma-ca` | 2 | data-link-layer |
 | `csma-cd` | 2 | data-link-layer, ethernet-switching |
@@ -1008,12 +1008,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dhcp-options` | 2 | small-network |
 | `dhcp-relay` | 2 | small-network |
 | `dhcp-scope` | 2 | small-network |
-| `dhcp-troubleshooting` | 3 | small-network |
+| `dhcp-troubleshooting` | 4 | small-network |
 | `dhcpv6` | 2 | basic-device-configuration, ipv6-addressing |
 | `dns` | 7 | application-layer, network-types, transport-layer |
 | `dns-client-configuration` | 2 | basic-device-configuration |
 | `dns-resource-records` | 2 | application-layer |
-| `dns-troubleshooting` | 5 | application-layer, small-network |
+| `dns-troubleshooting` | 6 | application-layer, small-network |
 | `dotted-decimal-notation` | 2 | number-systems |
 | `dsl` | 2 | internet-connections |
 | `dual-stack` | 2 | ipv6-addressing |
@@ -1034,7 +1034,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `etherchannel` | 2 | ethernet-switching |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 2 | address-resolution |
-| `ethernet-cabling` | 3 | ethernet-switching, physical-layer |
+| `ethernet-cabling` | 4 | ethernet-switching, physical-layer |
 | `ethernet-frame` | 11 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 2 | ethernet-switching |
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
@@ -1061,7 +1061,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `file-sharing-services` | 2 | application-layer |
 | `firewall-filtering` | 5 | network-security |
 | `flash` | 2 | router-configuration |
-| `flow-control` | 4 | transport-layer |
+| `flow-control` | 6 | transport-layer |
 | `fragment-free-switching` | 2 | ethernet-switching |
 | `frame-boundaries` | 2 | data-link-layer |
 | `frame-control-field` | 2 | data-link-layer |
@@ -1089,7 +1089,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hierarchical-topology` | 2 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
 | `host-configuration` | 2 | ipv4-addressing |
-| `host-ip-configuration` | 2 | small-network |
+| `host-ip-configuration` | 3 | small-network |
 | `host-reachability` | 3 | icmp |
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 8 | address-resolution, router-configuration, small-network |
@@ -1142,15 +1142,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ip-characteristics` | 2 | network-layer |
 | `ip-default-gateway` | 2 | router-configuration |
 | `ip-helper-address` | 2 | small-network |
-| `ipconfig-displaydns` | 2 | small-network |
+| `ipconfig-displaydns` | 3 | small-network |
 | `ips` | 2 | network-security |
 | `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 2 | ipv4-addressing |
 | `ipv4-addressing` | 6 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
 | `ipv4-differentiated-services` | 3 | network-layer |
-| `ipv4-fragmentation-fields` | 2 | network-layer |
+| `ipv4-fragmentation-fields` | 4 | network-layer |
 | `ipv4-header-checksum` | 3 | network-layer |
-| `ipv4-header-fields` | 8 | network-layer |
+| `ipv4-header-fields` | 10 | network-layer |
 | `ipv4-interface-configuration` | 3 | basic-device-configuration, router-configuration |
 | `ipv4-ipv6-coexistence` | 2 | ipv6-addressing |
 | `ipv4-protocol` | 2 | network-layer |
@@ -1242,7 +1242,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multimode-fiber` | 3 | physical-layer |
 | `multiplexing` | 3 | transport-layer |
 | `mx-record` | 2 | application-layer |
-| `name-resolution` | 6 | application-layer, small-network |
+| `name-resolution` | 7 | application-layer, small-network |
 | `native-vlan` | 2 | ethernet-switching |
 | `neighbor-advertisement` | 2 | address-resolution, icmp |
 | `neighbor-discovery` | 2 | icmp |
@@ -1348,7 +1348,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `return-route` | 3 | network-layer |
 | `rfc1918` | 2 | ipv4-addressing |
 | `ring-topology` | 2 | network-topologies |
-| `rollover-cable` | 2 | physical-layer |
+| `rollover-cable` | 3 | physical-layer |
 | `rom` | 2 | router-configuration |
 | `root-cause-analysis` | 2 | small-network |
 | `route-code-interpretation` | 2 | network-layer |
@@ -1429,7 +1429,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `static-routes` | 2 | network-layer |
 | `static-routing` | 15 | network-layer, small-network |
 | `store-and-forward-switching` | 2 | ethernet-switching |
-| `straight-through-cable` | 2 | physical-layer |
+| `straight-through-cable` | 3 | physical-layer |
 | `subinterfaces` | 2 | ethernet-switching |
 | `subnet-mask` | 11 | ipv4-addressing, router-configuration |
 | `subnet-membership` | 4 | ipv4-addressing |
@@ -1447,12 +1447,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-troubleshooting` | 2 | ethernet-switching |
 | `switching-latency` | 2 | ethernet-switching |
 | `tcp` | 13 | protocols-and-models, transport-layer |
-| `tcp-acknowledgments` | 4 | transport-layer |
+| `tcp-acknowledgments` | 6 | transport-layer |
 | `tcp-connection-establishment` | 2 | transport-layer |
 | `tcp-header` | 2 | transport-layer |
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 4 | transport-layer |
-| `tcp-windowing` | 2 | transport-layer |
+| `tcp-windowing` | 4 | transport-layer |
 | `technological-vulnerability` | 2 | network-security |
 | `tftp` | 2 | application-layer |
 | `throughput` | 3 | physical-layer |
@@ -1477,7 +1477,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `usable-host-count` | 2 | ipv4-addressing |
 | `usable-host-range` | 5 | ipv4-addressing |
 | `user-exec` | 2 | basic-device-configuration |
-| `utp-cabling` | 7 | physical-layer |
+| `utp-cabling` | 8 | physical-layer |
 | `vendor-identification` | 2 | ethernet-switching |
 | `verification` | 2 | small-network |
 | `video-communications` | 2 | network-trends |
@@ -1495,8 +1495,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `well-known-ports` | 2 | transport-layer |
 | `wifi` | 2 | physical-layer |
 | `wimax` | 2 | physical-layer |
-| `windowing` | 2 | transport-layer |
-| `windows-network-commands` | 2 | small-network |
+| `windowing` | 4 | transport-layer |
+| `windows-network-commands` | 4 | small-network |
 | `wireless-access-point` | 2 | physical-layer |
 | `wireless-broadband` | 2 | internet-connections |
 | `wireless-compatibility` | 2 | physical-layer |
@@ -1523,10 +1523,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 97 |
+| matching | 98 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 159 |
+| scenario | 165 |
 | single | 231 |
 | true-false | 1 |
 
@@ -1536,7 +1536,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
-| 3 | 256 |
+| 3 | 263 |
 | 4 | 102 |
 | 5 | 22 |
 
