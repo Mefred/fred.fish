@@ -6,6 +6,7 @@ const source = readFileSync(file, "utf8");
 const sourceIndexFile = new URL("../docs/semester-1-source-question-index.md", import.meta.url);
 const sourceInventoryFile = new URL("../docs/semester-1-source-concept-inventory.md", import.meta.url);
 const sourceIndex = readFileSync(sourceIndexFile, "utf8");
+const sourceInventory = readFileSync(sourceInventoryFile, "utf8");
 const indexedQuestionIds = new Set([...sourceIndex.matchAll(/^## (Q\d{3}) —/gm)].map((match) => match[1]));
 const lines = source.split(/\r?\n/).filter((line) => line.trim().startsWith("{ id:"));
 const errors = [];
