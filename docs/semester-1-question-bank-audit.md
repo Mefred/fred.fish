@@ -21,7 +21,7 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 
 A further five applied Network Layer scenarios exercise two-router static-route configuration, missing return paths, route-table interpretation, longest-prefix match, and configuration persistence after reload.
 
-Added four AI-generated Physical Layer questions covering the data-link-to-physical-layer handoff, bandwidth versus throughput, copper/fiber/wireless signal mapping, and TIA/EIA-568 UTP requirements. The lesson now has 12 questions, including explicit coverage for the physical-layer purpose and characteristics objectives.
+Added fourteen AI-generated Physical Layer questions beyond the original six. The expanded lesson now has 20 questions covering the data-link-to-physical-layer handoff, bandwidth and throughput, copper cable types and interference, STP/coax selection, fiber modes/dispersion/connectors, wireless standards, and WLAN contention.
 
 Added five AI-generated packet-header practice questions for Module 8. Two assess IPv4 field roles and packet inspection (including Protocol, TTL, and Header Checksum); three assess IPv6 field roles, Flow Label interpretation, and IPv4/IPv6 base-header differences. The additions use the recovered text block reference `block-0073`; they are not marked as verbatim source questions. The Network Layer lesson now has 28 questions and includes dedicated IPv4/IPv6 header concepts.
 
@@ -29,22 +29,22 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 110 |
+| Single choice | 113 |
 | Multiple select | 18 |
 | True / false | 1 |
-| Fill in the blank | 30 |
-| Matching | 23 |
+| Fill in the blank | 34 |
+| Matching | 29 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 65 |
-| **Total** | **258** |
+| Scenario / troubleshooting | 68 |
+| **Total** | **274** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 77 |
-| 3 — Applied | 99 |
+| 2 — Foundational | 82 |
+| 3 — Applied | 110 |
 | 4 — Advanced | 42 |
 | 5 — Challenging | 6 |
 
@@ -71,7 +71,7 @@ The Module 8 source inventory decomposes the IPv4 and IPv6 packet-header objecti
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
 
-The 266-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 274-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
