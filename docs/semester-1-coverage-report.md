@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 609
+- **Questions:** 611
 - **Lessons represented:** 22
-- **Distinct concept tags:** 609
+- **Distinct concept tags:** 610
 
 ## Lesson coverage
 
@@ -30,21 +30,21 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 54 | 87 | fill: 4, matching: 4, multiple: 6, ordering: 4, scenario: 27, single: 9 | 1–5 |
+| small-network | 56 | 88 | fill: 4, matching: 4, multiple: 6, ordering: 4, scenario: 28, single: 10 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 410 |
+| 2 | 411 |
 | 3 | 76 |
 | 4 | 37 |
 | 5 | 23 |
 | 6 | 18 |
-| 7 | 9 |
+| 7 | 8 |
 | 8 | 9 |
-| 9 | 1 |
+| 9 | 2 |
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 3 |
@@ -820,6 +820,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `link-local-address`
 - `mac-addressing`
 - `multi-device-troubleshooting`
+- `multi-service-server`
 - `name-resolution`
 - `network-applications-vs-services`
 - `network-baselines`
@@ -929,7 +930,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `apipa` | 3 | small-network |
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
-| `application-layer-services` | 7 | application-layer, small-network |
+| `application-layer-services` | 9 | application-layer, small-network |
 | `arp` | 13 | address-resolution, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
@@ -1241,6 +1242,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `message-timing` | 2 | protocols-and-models |
 | `mtu` | 2 | transport-layer |
 | `multi-device-troubleshooting` | 2 | small-network |
+| `multi-service-server` | 2 | small-network |
 | `multiaccess-topology` | 2 | data-link-layer |
 | `multicast` | 2 | ipv4-addressing, protocols-and-models |
 | `multicast-address` | 2 | ipv6-addressing |
@@ -1533,8 +1535,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 99 |
 | multiple | 35 |
 | ordering | 20 |
-| scenario | 168 |
-| single | 234 |
+| scenario | 169 |
+| single | 235 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1542,8 +1544,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 169 |
-| 3 | 267 |
+| 2 | 170 |
+| 3 | 268 |
 | 4 | 105 |
 | 5 | 22 |
 

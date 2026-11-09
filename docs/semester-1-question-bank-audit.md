@@ -4,32 +4,32 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **609** |
-| Unique question IDs | 609 |
-| Unique normalized prompts | 609 |
+| Active questions | **611** |
+| Unique question IDs | 611 |
+| Unique normalized prompts | 611 |
 | Lesson IDs represented | 22 |
-| Distinct concept tags | 609 |
+| Distinct concept tags | 610 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 41 |
-| AI-generated questions | 568 |
+| AI-generated questions | 570 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
 ### Concept exposure distribution
 
-The current 609 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
+The current 610 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 410 |
+| 2 | 411 |
 | 3 | 76 |
 | 4 | 37 |
 | 5 | 23 |
 | 6 | 18 |
-| 7 | 9 |
+| 7 | 8 |
 | 8 | 9 |
-| 9 | 1 |
+| 9 | 2 |
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 3 |
@@ -41,34 +41,34 @@ The current 609 concept tags are not evenly represented. This distribution makes
 | 19 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 410 concepts (67.3%) sit exactly at the two-question minimum.
+**Priority implication:** 411 concepts (67.4%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 234 |
+| Single choice | 235 |
 | Multiple select | 35 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 99 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 168 |
-| **Total** | **609** |
+| Scenario / troubleshooting | 169 |
+| **Total** | **611** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 169 |
-| 3 — Applied | 267 |
+| 2 — Foundational | 170 |
+| 3 — Applied | 268 |
 | 4 — Advanced | 105 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 609 questions during the full expansion. The 216 additions comprise 199 AI-generated questions and seventeen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 609 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 611 questions during the full expansion. The 218 additions comprise 201 AI-generated questions and seventeen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -126,7 +126,7 @@ Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Ded
 
 Site CI run #649 passed on commit `79637c2`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. It completed successfully with zero reported accessibility violations. Later commits continue to receive the same full workflow; use the PR Checks tab to verify the latest head rather than treating any in-progress or queued run as passed.
 
-Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest eight Module 17 additions bring the bank to 609 questions; the regenerated report records 54 questions across 87 concept tags in `small-network`. The new pair directly assesses the source distinction between network applications and application-layer services. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
+Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest ten Module 17 additions bring the bank to 611 questions; the regenerated report records 56 questions across 88 concept tags in `small-network`. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
