@@ -201,7 +201,7 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 - Six new image candidates have been visually reviewed and associated with active source-origin questions.
 - The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
-- The remaining 744 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
+- The original OCR export continues to mark 744 unique images (750 asset records including duplicate references) as unresolved. This is an export-status count, not the current manual-review backlog. Do not promote an image to a source-origin question without sufficient visual or textual evidence; the batch logs record the 144-candidate detailed screen and 12 native-resolution checks.
 - The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
 
 
