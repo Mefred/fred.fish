@@ -1,0 +1,112 @@
+import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
+import { setTimeout as delay } from "node:timers/promises";
+import { createRequire } from "node:module";
+import { chromium } from "playwright";
+
+const require = createRequire(import.meta.url);
+const baseUrl = process.env.BROWSER_TEST_URL || "http://127.0.0.1:4321";
+const pages = [
+  "/cisco/",
+  "/cisco/learning/semester-1/",
+  "/cisco/practice/",
+  "/cisco/progress/",
+];
+const server = process.env.BROWSER_TEST_URL ? null : spawn("npm", ["run", "preview", "--", "--host", "127.0.0.1", "--port", "4321"], {
+  stdio: "ignore",
+  env: process.env,
+});
+let browser;
+const failures = [];
+const axeViolations = [];
+
+try {
+  if (server) {
+    let ready = false;
+    for (let attempt = 0; attempt < 60; attempt++) {
+      if (server.exitCode !== null) throw new Error(`Astro preview exited with ${server.exitCode}`);
+      try {
+        const response = await fetch(baseUrl);
+        if (response.ok) { ready = true; break; }
+      } catch {}
+      await delay(500);
+    }
+    assert.ok(ready, "Astro preview server did not become ready");
+  }
+
+  browser = await chromium.launch({ headless: true });
+  for (const viewport of [
+    { name: "desktop", width: 1440, height: 900 },
+    { name: "mobile", width: 390, height: 844 },
+  ]) {
+    const context = await browser.newContext({ viewport, deviceScaleFactor: viewport.name === "mobile" ? 2 : 1 });
+    const page = await context.newPage();
+    const pageErrors = [];
+    page.on("pageerror", (error) => pageErrors.push(error.message));
+
+    for (const route of pages) {
+      const response = await page.goto(new URL(route, baseUrl).href, { waitUntil: "networkidle" });
+      assert.ok(response?.ok(), `${viewport.name}: ${route} returned ${response?.status()}`);
+      assert.equal(pageErrors.length, 0, `${viewport.name}: ${route} raised page errors: ${pageErrors.join("; ")}`);
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+      assert.equal(overflow, false, `${viewport.name}: ${route} has horizontal overflow`);
+
+      await page.addScriptTag({ path: require.resolve("axe-core/axe.min.js") });
+      const audit = await page.evaluate(async () => window.axe.run(document, {
+        runOnly: { type: "tag", values: ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "best-practice"] },
+      }));
+      for (const violation of audit.violations) {
+        axeViolations.push({
+          viewport: viewport.name,
+          route,
+          id: violation.id,
+          impact: violation.impact,
+          description: violation.help,
+          nodes: violation.nodes.length,
+          examples: violation.nodes.slice(0, 3).map((node) => node.target.join(" ")),
+        });
+      }
+    }
+
+    if (viewport.name === "desktop") {
+      await page.goto(new URL("/cisco/practice/", baseUrl).href, { waitUntil: "networkidle" });
+      await page.getByRole("button", { name: /Start 10-question practice/i }).click();
+      assert.equal(await page.locator(".quiz-prompt").count(), 1, "starting practice should render a question");
+      const choices = page.locator("[data-choice]");
+      if (await choices.count()) {
+        await choices.first().focus();
+        await page.keyboard.press("Enter");
+      } else if (await page.locator("#fill-answer").count()) {
+        await page.locator("#fill-answer").fill("test response");
+      } else if (await page.locator("[data-pair]").count()) {
+        const selects = page.locator("[data-pair]");
+        for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: 1 });
+      }
+      await page.locator("#submit-answer").click();
+      assert.equal(await page.locator("#answer-feedback[hidden]").count(), 0, "submitting an answer should show feedback");
+      assert.ok(await page.locator("#answer-feedback").innerText(), "answer feedback should include an explanation");
+      const saved = await page.evaluate(() => localStorage.getItem("fredfish.learning.progress.v1"));
+      assert.ok(saved, "answering should persist learning progress in local storage");
+    }
+
+    assert.equal(pageErrors.length, 0, `${viewport.name} browser errors: ${pageErrors.join("; ")}`);
+    await context.close();
+  }
+
+  const serious = axeViolations.filter((item) => item.impact === "serious" || item.impact === "critical");
+  console.log(JSON.stringify({
+    browser: "Chromium",
+    viewports: ["1440x900 desktop", "390x844 mobile"],
+    routes: pages,
+    practiceInteraction: "keyboard answer selection, feedback, and local persistence",
+    axeViolations,
+  }, null, 2));
+  assert.equal(serious.length, 0, `Serious or critical accessibility violations: ${JSON.stringify(serious)}`);
+} finally {
+  await browser?.close();
+  if (server) {
+    server.kill("SIGTERM");
+    await delay(250);
+    if (server.exitCode === null) server.kill("SIGKILL");
+  }
+}
