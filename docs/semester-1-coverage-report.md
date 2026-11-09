@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 279
+- **Questions:** 283
 - **Lessons represented:** 22
-- **Distinct concept tags:** 449
+- **Distinct concept tags:** 458
 
 ## Lesson coverage
 
@@ -26,7 +26,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
 | number-systems | 16 | 21 | fill: 9, matching: 1, scenario: 1, single: 5 | 1–4 |
-| physical-layer | 20 | 41 | matching: 6, scenario: 8, single: 6 | 1–4 |
+| physical-layer | 24 | 51 | matching: 7, scenario: 10, single: 7 | 1–4 |
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 8 | 22 | fill: 2, matching: 1, multiple: 1, single: 4 | 1–3 |
@@ -450,16 +450,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `cabling-standards`
 - `coaxial-cable`
 - `copper-cabling`
+- `crossover-cable`
 - `crosstalk`
 - `electromagnetic-interference`
 - `fiber-core`
 - `fiber-dispersion`
 - `fiber-optic-cabling`
 - `fiber-optic-connectors`
+- `goodput`
 - `half-duplex`
+- `latency`
 - `lc-connector`
 - `media-selection`
 - `multimode-fiber`
+- `network-performance`
 - `physical-layer-characteristics`
 - `physical-layer-encoding`
 - `physical-layer-media`
@@ -467,20 +471,26 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `physical-layer-signaling`
 - `radio-frequency`
 - `radio-frequency-interference`
+- `rollover-cable`
 - `sc-connector`
 - `shared-medium`
 - `shielded-twisted-pair`
 - `signal-integrity`
 - `single-mode-fiber`
 - `st-connector`
+- `straight-through-cable`
 - `throughput`
 - `tia-eia-568`
 - `utp-cabling`
 - `wifi`
 - `wimax`
+- `wireless-access-point`
+- `wireless-compatibility`
 - `wireless-installations`
 - `wireless-interference`
 - `wireless-media`
+- `wireless-nic`
+- `wireless-security`
 - `wireless-standards`
 - `wlan`
 - `zigbee`
@@ -651,7 +661,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `address-resolution` | 6 | address-resolution |
 | `administrative-distance` | 3 | network-layer |
 | `aging-timer` | 1 | ethernet-switching |
-| `application-layer` | 1 | application-layer |
+| `application-layer` | 2 | application-layer, protocols-and-models |
 | `application-layer-services` | 3 | application-layer |
 | `arp` | 8 | address-resolution, protocols-and-models |
 | `arp-cache` | 2 | address-resolution |
@@ -659,7 +669,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
 | `auto-mdix` | 1 | ethernet-switching |
-| `bandwidth` | 2 | physical-layer, reliable-networks |
+| `bandwidth` | 4 | physical-layer, reliable-networks |
 | `base-10` | 1 | number-systems |
 | `base-16` | 1 | number-systems |
 | `base-2` | 1 | number-systems |
@@ -689,6 +699,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `collision-avoidance` | 1 | data-link-layer |
 | `collision-domains` | 1 | ethernet-switching |
 | `command-keywords` | 2 | basic-device-configuration |
+| `communication-rules` | 1 | protocols-and-models |
 | `confidentiality` | 2 | network-security |
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
 | `configuration-persistence` | 3 | basic-device-configuration, network-layer |
@@ -703,6 +714,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `copper-access` | 1 | internet-connections |
 | `copper-cabling` | 7 | physical-layer |
 | `copper-fiber-wireless` | 2 | network-components |
+| `crossover-cable` | 1 | physical-layer |
 | `crosstalk` | 3 | physical-layer |
 | `csma-ca` | 1 | data-link-layer |
 | `csma-cd` | 2 | data-link-layer, ethernet-switching |
@@ -710,12 +722,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `data-centers` | 2 | network-trends |
 | `data-link-layer` | 9 | data-link-layer, protocols-and-models |
 | `data-link-topologies` | 1 | data-link-layer |
-| `decapsulation` | 1 | protocols-and-models |
+| `decapsulation` | 2 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
 | `default-gateway` | 4 | basic-device-configuration, network-layer, protocols-and-models, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
+| `delivery-options` | 1 | protocols-and-models |
 | `device-management` | 1 | basic-device-configuration |
 | `device-resource-management` | 1 | small-network |
 | `dhcp` | 3 | application-layer, basic-device-configuration |
@@ -733,7 +746,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `enable-secret` | 1 | basic-device-configuration |
-| `encapsulation` | 9 | data-link-layer, protocols-and-models |
+| `encapsulation` | 10 | data-link-layer, protocols-and-models |
 | `end-devices` | 1 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
 | `error-detection` | 2 | data-link-layer |
@@ -770,6 +783,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `full-mesh` | 1 | network-topologies |
 | `global-configuration` | 1 | basic-device-configuration |
 | `global-unicast-address` | 2 | ipv6-addressing |
+| `goodput` | 1 | physical-layer |
 | `half-duplex` | 1 | physical-layer |
 | `hexadecimal` | 3 | number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
@@ -785,6 +799,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `http` | 5 | application-layer, protocols-and-models, transport-layer |
 | `https` | 1 | transport-layer |
 | `hybrid-p2p` | 1 | application-layer |
+| `iab` | 1 | protocols-and-models |
 | `iana` | 1 | transport-layer |
 | `icann` | 1 | network-types |
 | `icmp` | 2 | icmp |
@@ -793,7 +808,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `icmp-filtering` | 2 | icmp |
 | `icmp-time-exceeded` | 1 | icmp |
 | `icmpv6` | 4 | address-resolution, icmp, ipv6-addressing |
-| `ietf` | 1 | network-types |
+| `ietf` | 2 | network-types, protocols-and-models |
 | `imap` | 2 | application-layer |
 | `insider-threat` | 1 | network-security |
 | `interface-configuration` | 1 | basic-device-configuration |
@@ -801,7 +816,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `internet-access` | 3 | internet-connections |
 | `internet-architecture` | 1 | network-types |
 | `internet-governance` | 2 | network-types |
-| `interoperability` | 1 | protocols-and-models |
+| `internet-layer` | 1 | protocols-and-models |
+| `internet-standards` | 1 | protocols-and-models |
+| `interoperability` | 2 | protocols-and-models |
 | `intranet` | 2 | network-types |
 | `ios-command-modes` | 2 | basic-device-configuration |
 | `ios-command-syntax` | 2 | basic-device-configuration |
@@ -862,10 +879,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-static-route` | 1 | ipv6-addressing |
 | `ipv6-traffic-class` | 1 | network-layer |
 | `ipv6-version` | 1 | network-layer |
+| `irtf` | 1 | protocols-and-models |
+| `isoc` | 1 | protocols-and-models |
 | `isp-role` | 1 | internet-connections |
 | `jitter` | 1 | network-trends |
 | `lan` | 4 | network-types |
-| `latency` | 2 | network-trends, transport-layer |
+| `latency` | 3 | network-trends, physical-layer, transport-layer |
 | `layer2-layer3-addressing` | 1 | network-layer |
 | `lc-connector` | 1 | physical-layer |
 | `leased-line` | 1 | internet-connections |
@@ -885,6 +904,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `media-selection` | 2 | physical-layer |
 | `mesh-topology` | 1 | network-topologies |
 | `message-delivery` | 1 | protocols-and-models |
+| `message-encoding` | 1 | protocols-and-models |
+| `message-formatting` | 1 | protocols-and-models |
+| `message-size` | 1 | protocols-and-models |
+| `message-timing` | 1 | protocols-and-models |
 | `multiaccess-topology` | 1 | data-link-layer |
 | `multicast` | 1 | protocols-and-models |
 | `multicast-address` | 1 | ipv6-addressing |
@@ -896,6 +919,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `neighbor-discovery` | 1 | icmp |
 | `neighbor-solicitation` | 1 | icmp |
 | `network-access` | 1 | network-types |
+| `network-access-layer` | 1 | protocols-and-models |
 | `network-address` | 6 | ipv4-addressing |
 | `network-architecture-requirements` | 1 | network-security |
 | `network-components` | 3 | network-components |
@@ -905,6 +929,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-layer` | 6 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
 | `network-operations` | 1 | small-network |
+| `network-performance` | 1 | physical-layer |
 | `network-reliability` | 7 | reliable-networks, small-network |
 | `network-scalability` | 1 | network-components |
 | `network-scale` | 1 | network-components |
@@ -929,12 +954,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `password-encryption` | 1 | basic-device-configuration |
 | `password-security` | 1 | basic-device-configuration |
 | `path-selection` | 1 | router-configuration |
-| `pdu` | 1 | protocols-and-models |
+| `pdu` | 2 | protocols-and-models |
 | `pdu-names` | 1 | protocols-and-models |
 | `peer-to-peer` | 3 | application-layer, network-components |
 | `physical-layer` | 2 | protocols-and-models |
 | `physical-layer-cabling` | 1 | basic-device-configuration |
-| `physical-layer-characteristics` | 1 | physical-layer |
+| `physical-layer-characteristics` | 2 | physical-layer |
 | `physical-layer-encoding` | 1 | physical-layer |
 | `physical-layer-media` | 5 | physical-layer |
 | `physical-layer-purpose` | 1 | physical-layer |
@@ -952,7 +977,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `private-ipv4` | 1 | ipv4-addressing |
 | `privileged-exec` | 1 | basic-device-configuration |
 | `problem-identification` | 1 | small-network |
-| `protocol-interaction` | 1 | protocols-and-models |
+| `protocol-data-units` | 1 | protocols-and-models |
+| `protocol-interaction` | 2 | protocols-and-models |
+| `protocol-suites` | 1 | protocols-and-models |
 | `protocols` | 1 | protocols-and-models |
 | `quality-of-service` | 6 | network-trends, reliable-networks |
 | `radio-frequency` | 1 | physical-layer |
@@ -961,6 +988,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ram` | 1 | router-configuration |
 | `real-time-applications` | 1 | transport-layer |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
+| `reference-models` | 1 | protocols-and-models |
 | `reliability` | 2 | transport-layer |
 | `reliability-and-flow-control` | 1 | transport-layer |
 | `reliable-delivery` | 1 | transport-layer |
@@ -970,6 +998,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `return-route` | 2 | network-layer |
 | `rfc1918` | 1 | ipv4-addressing |
 | `ring-topology` | 1 | network-topologies |
+| `rollover-cable` | 1 | physical-layer |
 | `rom` | 1 | router-configuration |
 | `root-cause-analysis` | 1 | small-network |
 | `route-code-interpretation` | 1 | network-layer |
@@ -1019,7 +1048,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `source-ip-selection` | 1 | icmp |
 | `ssh` | 1 | transport-layer |
 | `st-connector` | 1 | physical-layer |
-| `standards-organizations` | 1 | network-types |
+| `standards-organizations` | 2 | network-types, protocols-and-models |
 | `star-topology` | 2 | network-topologies |
 | `startup-config` | 2 | basic-device-configuration |
 | `startup-configuration` | 3 | router-configuration |
@@ -1027,6 +1056,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `static-routes` | 1 | network-layer |
 | `static-routing` | 10 | network-layer |
 | `store-and-forward-switching` | 1 | ethernet-switching |
+| `straight-through-cable` | 1 | physical-layer |
 | `subnet-mask` | 4 | ipv4-addressing |
 | `subnet-sizing` | 8 | ipv4-addressing |
 | `svi` | 1 | basic-device-configuration |
@@ -1038,15 +1068,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp-acknowledgments` | 2 | transport-layer |
 | `tcp-connection-establishment` | 1 | transport-layer |
 | `tcp-header` | 1 | transport-layer |
-| `tcp-ip-model` | 5 | application-layer, protocols-and-models |
+| `tcp-ip-model` | 7 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 2 | transport-layer |
 | `tcp-windowing` | 1 | transport-layer |
-| `throughput` | 1 | physical-layer |
-| `tia-eia-568` | 1 | physical-layer |
+| `throughput` | 3 | physical-layer |
+| `tia-eia-568` | 2 | physical-layer |
 | `traceroute` | 5 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
-| `transport-layer` | 11 | protocols-and-models, transport-layer |
+| `transport-layer` | 12 | protocols-and-models, transport-layer |
 | `troubleshooting` | 3 | basic-device-configuration, small-network |
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 1 | icmp |
@@ -1056,7 +1086,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `unicast` | 2 | address-resolution, protocols-and-models |
 | `unknown-unicast-flooding` | 1 | ethernet-switching |
 | `user-exec` | 1 | basic-device-configuration |
-| `utp-cabling` | 4 | physical-layer |
+| `utp-cabling` | 5 | physical-layer |
 | `verification` | 1 | small-network |
 | `video-communications` | 1 | network-trends |
 | `vlsm` | 4 | ipv4-addressing |
@@ -1066,32 +1096,36 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `wifi` | 1 | physical-layer |
 | `wimax` | 1 | physical-layer |
 | `windowing` | 1 | transport-layer |
+| `wireless-access-point` | 1 | physical-layer |
 | `wireless-broadband` | 1 | internet-connections |
+| `wireless-compatibility` | 1 | physical-layer |
 | `wireless-installations` | 1 | physical-layer |
 | `wireless-interference` | 1 | physical-layer |
 | `wireless-media` | 3 | physical-layer |
 | `wireless-media-access` | 1 | data-link-layer |
+| `wireless-nic` | 1 | physical-layer |
+| `wireless-security` | 1 | physical-layer |
 | `wireless-standards` | 1 | physical-layer |
 | `wisp` | 1 | internet-connections |
-| `wlan` | 1 | physical-layer |
+| `wlan` | 2 | physical-layer |
 | `zero-compression` | 1 | ipv6-addressing |
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 253. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 266. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
 ### Question formats
 
 | Format | Count |
-|---|---:|---|
+|---|---:|
 | fill | 34 |
-| matching | 29 |
+| matching | 33 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 68 |
-| single | 113 |
+| scenario | 71 |
+| single | 115 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1099,11 +1133,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 82 |
-| 3 | 110 |
-| 4 | 42 |
+| 2 | 83 |
+| 3 | 116 |
+| 4 | 44 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 4, 5, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
