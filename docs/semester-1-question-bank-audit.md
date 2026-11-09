@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **582** |
-| Unique question IDs | 582 |
-| Unique normalized prompts | 582 |
+| Active questions | **585** |
+| Unique question IDs | 585 |
+| Unique normalized prompts | 585 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 605 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 542 |
+| AI-generated questions | 545 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -20,14 +20,14 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 | Format | Questions |
 |---|---:|
-| Single choice | 227 |
-| Multiple select | 32 |
+| Single choice | 228 |
+| Multiple select | 33 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 96 |
+| Matching | 97 |
 | Ordering | 19 |
 | Scenario / troubleshooting | 155 |
-| **Total** | **582** |
+| **Total** | **585** |
 
 ## Difficulty
 
@@ -35,13 +35,13 @@ Every existing concept tag has at least two question records. This is a bank-cov
 |---|---:|
 | 1 — Introductory | 45 |
 | 2 — Foundational | 166 |
-| 3 — Applied | 247 |
+| 3 — Applied | 250 |
 | 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 582 questions during the full concept-depth effort. The 189 additions consist of 173 AI-generated applied questions and sixteen source-origin questions. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 585 questions during the full concept-depth effort. The 192 additions consist of 176 AI-generated applied questions and sixteen source-origin questions. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -76,7 +76,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0279` | `s3-application-data-layer-source-001` | Application layer |
 | `IMG-0779`, `IMG-0624` | `s8-diffserv-priority-source-001` | Differentiated Services field carries QoS classification information |
 
-The 18 new image-question associations increase the visually checked set to 34. Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 748 remain for visual review; duplicate asset records mean 754 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
+There are now 34 source-origin image-question associations plus four visually reviewed images used as context for AI-generated applied questions (38 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
 
 ## Provenance rules
 
@@ -95,7 +95,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- Eighteen additional question-image associations have been manually checked across the follow-up passes. The remaining 748 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
+- Twenty-two additional question-image associations have been manually checked across the follow-up passes. The remaining 744 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
 - The source-concept inventory is a first-pass transcription, not a fully reviewed atomic objective-to-question-tag matrix for every lesson.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
