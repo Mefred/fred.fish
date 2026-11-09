@@ -95,7 +95,7 @@ if (lines.length < 10) errors.push(`question bank too small: found ${lines.lengt
 if (ids.size !== lines.length) errors.push(`question IDs are not unique: ${ids.size} unique IDs across ${lines.length} records`);
 const underPracticed = [...conceptQuestionCounts.entries()].filter(([, count]) => count < 2);
 if (underPracticed.length) errors.push(`concepts need at least two questions: ${underPracticed.map(([concept, count]) => `${concept} (${count})`).join(", ")}`);
-const inventoryQuestionIds = [...sourceInventory.matchAll(/\\b(s\\d{1,2}-[a-z0-9-]+-\\d{3})\\b/g)].map((match) => match[1]);
+const inventoryQuestionIds = [...sourceInventory.matchAll(/\b(s\d{1,2}-[a-z0-9-]+-\d{3})\b/g)].map((match) => match[1]);
 for (const inventoryId of new Set(inventoryQuestionIds)) {
   if (!ids.has(inventoryId)) errors.push(`source-concept inventory references missing question ${inventoryId}`);
 }
