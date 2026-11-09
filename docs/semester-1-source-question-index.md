@@ -55,3 +55,26 @@ This index provides stable references for source questions promoted into the act
 ## Usage
 
 Question IDs such as `Q194` and `Q201` may appear in a question's `sourceRefs`. These IDs resolve to the entries in this index. When OCR answer text conflicts with a protocol definition, preserve the source text in this index and document the correction in the active question explanation; do not silently reproduce an incorrect answer.
+
+
+## Visually verified image-only questions
+
+These active questions are grounded in recovered OneNote images whose answer marks or diagrams were inspected directly. They use `IMG-XXXX` source references rather than numbered text-question IDs.
+
+| Image reference | Active question ID | Verified content |
+|---|---|---|
+| IMG-0816 | `s9-arp-cache-aging-source-001` | ARP cache entries age out when their timer expires; timer duration varies by OS and entries can be removed manually |
+| IMG-0348 | `s4-utp-identification-source-001` | Four color-coded twisted copper pairs with no visible shield: UTP |
+| IMG-1725, IMG-1872 | `s4-rj45-connector-source-001` | RJ-45/8P8C connector is used for twisted-pair Ethernet |
+| IMG-0306 | `s3-destination-ip-layer-source-001` | Destination IP address is added at the Network layer |
+| IMG-0314 | `s3-source-ip-layer-source-001` | Source IP address is added at the Network layer |
+| IMG-0279 | `s3-application-data-layer-source-001` | Application data enters encapsulation at the Application layer |
+
+The following additional images were checked and linked to existing source-origin questions rather than creating duplicates:
+
+| Image reference | Active question ID | Verified content |
+|---|---|---|
+| IMG-0270 | `s3-source-mac-001` | Source MAC address is added at the Data Link layer |
+| IMG-0282 | `s3-destination-mac-layer-002` | Destination MAC address is added at the Data Link layer |
+| IMG-0287 | `s3-destination-port-001` | Destination port number is added at the Transport layer |
+| IMG-0322 | `s3-source-port-layer-002` | Source port number is added at the Transport layer |
