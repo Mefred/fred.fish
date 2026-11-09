@@ -212,7 +212,7 @@ Added two applied scenarios to the Small Network question bank, bringing it to 2
 - A controlled interface-counter diagnosis uses rising CRC/input errors, matching duplex settings, and no late collisions to distinguish physical-path faults from an assumed duplex mismatch.
 - A staged host-to-router diagnosis uses successful local reachability and an inspected routing table with no matching/default route to identify the missing remote route as the next issue to investigate.
 
-These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 346 questions: 24 source-origin and 322 AI-generated. The IPv4 Addressing lesson has 28 questions and Small Network has 25. The newest Small Network addition is a staged DNS fault-isolation scenario using ipconfig /all, ping, nslookup, and ipconfig /displaydns evidence to distinguish DNS-service failure from routing, link, and endpoint-cache issues.
+These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 347 questions: 24 source-origin and 323 AI-generated. The IPv4 Addressing lesson has 28 questions and Small Network has 26. The latest Small Network addition is a multi-device fault-isolation scenario requiring learners to correlate switch trunk allowed-VLAN output with router routing-table evidence to identify two independent faults.
 
 
 ## Multi-device troubleshooting expansion
