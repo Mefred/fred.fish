@@ -95,6 +95,12 @@ The latest 11 image checks verified the exact prompt and answer marks/diagram de
 
 OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. The remaining question candidates and diagram-dependent lesson references still need visual review.
 
+### High-resolution contact-sheet review — batch 1
+
+The first 36 unresolved candidate images were screened at 960×540 per image. Three answer-marked images were opened individually at native resolution and confirmed against existing source-origin questions: IMG-0063 (signal distance and installation environment), IMG-0279 (Application layer), and IMG-0282 (Data Link layer). All three are already linked in the active bank; no new source-origin association was added. The remaining 33 images in this batch are unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams. The full batch log is in [semester-1-image-review-batch-1.md](./semester-1-image-review-batch-1.md).
+
+This contact-sheet screen does not count as native-resolution review for the other 33 images. The previously reported 744 unique / 750 asset-record native-resolution backlog remains unchanged.
+
 ## Structured export
 
 The OCR export contains:
