@@ -61,4 +61,61 @@ assert.deepEqual(loadProgress(), emptyProgress(), "malformed concept records sho
 storage.set("fredfish.learning.progress.v1", "{invalid json");
 assert.deepEqual(loadProgress(), emptyProgress(), "invalid JSON should safely reset progress");
 
+
+// Adaptive selection regression coverage: weak concepts should outrank mastered ones.
+const weakQuestion = {
+  ...sample, id: "test-weak-concept", lessonId: "weak-topic",
+  concepts: ["test-weak"], difficulty: 2,
+};
+const masteredQuestion = {
+  ...sample, id: "test-mastered-concept", lessonId: "mastered-topic",
+  concepts: ["test-mastered"], difficulty: 2,
+};
+const selectionProgress = emptyProgress();
+selectionProgress.concepts["test-weak"] = {
+  conceptId: "test-weak", attempts: 5, correct: 1, streak: 0,
+  mastery: 20, lastReviewedAt: now, dueAt: now,
+  recentResults: [false, false, true, false, false],
+};
+selectionProgress.concepts["test-mastered"] = {
+  conceptId: "test-mastered", attempts: 5, correct: 5, streak: 5,
+  mastery: 100, lastReviewedAt: now, dueAt: now + 30 * 24 * 60 * 60 * 1000,
+  recentResults: [true, true, true, true, true],
+};
+const selectionSnapshot = structuredClone(selectionProgress);
+const targeted = buildAdaptiveQuiz([masteredQuestion, weakQuestion], selectionProgress, 1, now, () => 0);
+assert.equal(targeted[0].id, weakQuestion.id, "weak and due concepts should outrank mastered concepts");
+assert.deepEqual(selectionProgress, selectionSnapshot, "building a quiz must not mutate learner progress");
+
+// Session construction must remain bounded, unique, and robust when every question is recent.
+const tinyBank = [weakQuestion, masteredQuestion];
+const oversized = buildAdaptiveQuiz(tinyBank, emptyProgress(), 10, now, () => 0);
+assert.equal(oversized.length, tinyBank.length, "quiz size must never exceed the available question bank");
+assert.equal(new Set(oversized.map((question) => question.id)).size, tinyBank.length, "fallback selection must not duplicate questions");
+const fullyRecent = {
+  ...emptyProgress(),
+  recentQuestionIds: tinyBank.map((question) => question.id),
+};
+const recentFallback = buildAdaptiveQuiz(tinyBank, fullyRecent, 10, now, () => 0);
+assert.equal(recentFallback.length, tinyBank.length, "the selector should fall back to the bank when all questions are recent");
+assert.equal(new Set(recentFallback.map((question) => question.id)).size, tinyBank.length);
+
+// A newly introduced concept should be represented before repeatedly sampling a known concept.
+const unseenQuestion = {
+  ...sample, id: "test-unseen-concept", lessonId: "new-topic",
+  concepts: ["test-unseen"], difficulty: 1,
+};
+const knownQuestion = {
+  ...sample, id: "test-known-concept", lessonId: "known-topic",
+  concepts: ["test-known"], difficulty: 1,
+};
+const knownProgress = emptyProgress();
+knownProgress.concepts["test-known"] = {
+  conceptId: "test-known", attempts: 8, correct: 6, streak: 0,
+  mastery: 70, lastReviewedAt: now, dueAt: now + 7 * 24 * 60 * 60 * 1000,
+  recentResults: [true, false, true, true, false, true, true, false],
+};
+const unseenFirst = buildAdaptiveQuiz([knownQuestion, unseenQuestion], knownProgress, 1, now, () => 0);
+assert.equal(unseenFirst[0].id, unseenQuestion.id, "unseen concepts should receive initial exposure");
+
 console.log("Learning tests passed: adaptive selection, mastery, review scheduling, XP, streaks, ordering shuffle, and storage validation.");
