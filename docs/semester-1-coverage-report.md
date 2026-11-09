@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 600
+- **Questions:** 602
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -30,16 +30,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 46 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 24, single: 7 | 1–5 |
+| small-network | 48 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 26, single: 7 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 414 |
-| 3 | 76 |
-| 4 | 34 |
+| 2 | 410 |
+| 3 | 78 |
+| 4 | 36 |
 | 5 | 21 |
 | 6 | 18 |
 | 7 | 9 |
@@ -1252,14 +1252,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-address` | 10 | ipv4-addressing |
 | `network-architecture-requirements` | 2 | network-security |
 | `network-attacks` | 2 | network-security |
-| `network-baselines` | 2 | small-network |
+| `network-baselines` | 4 | small-network |
 | `network-components` | 5 | network-components |
 | `network-discovery` | 2 | small-network |
 | `network-efficiency` | 2 | address-resolution, protocols-and-models |
 | `network-intermediary-devices` | 4 | network-components, small-network |
 | `network-layer` | 15 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
-| `network-monitoring` | 2 | small-network |
+| `network-monitoring` | 3 | small-network |
 | `network-operations` | 2 | small-network |
 | `network-performance` | 2 | physical-layer, transport-layer |
 | `network-redundancy` | 2 | data-link-layer |
@@ -1298,7 +1298,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `pdu` | 2 | protocols-and-models |
 | `pdu-names` | 2 | protocols-and-models |
 | `peer-to-peer` | 3 | application-layer, network-components |
-| `performance-troubleshooting` | 2 | small-network |
+| `performance-troubleshooting` | 4 | small-network |
 | `physical-layer` | 2 | protocols-and-models |
 | `physical-layer-cabling` | 3 | basic-device-configuration, physical-layer |
 | `physical-layer-characteristics` | 2 | physical-layer |
@@ -1460,7 +1460,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `token-passing` | 2 | data-link-layer |
 | `trace-interpretation` | 2 | small-network |
 | `traceroute` | 10 | icmp, network-layer, small-network |
-| `traffic-analysis` | 2 | small-network |
+| `traffic-analysis` | 3 | small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 2 | ipv6-addressing |
 | `transport-layer` | 15 | protocols-and-models, transport-layer |
@@ -1526,20 +1526,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 98 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 165 |
+| scenario | 167 |
 | single | 231 |
 | true-false | 1 |
 
 ### Difficulty
 
-| Level | Questions |
+| Level | Count |
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
 | 3 | 263 |
-| 4 | 102 |
+| 4 | 104 |
 | 5 | 22 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Question counts are a triage signal, not evidence of learner mastery or proof of missing source content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal, not evidence of learner mastery or proof of missing source content.
