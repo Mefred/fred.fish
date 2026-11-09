@@ -41,7 +41,7 @@ const singleQuestionConcepts = [...conceptQuestionCounts.entries()].filter(([, c
 const lines = [
   "# Semester 1 question coverage report",
   "",
-  `Generated from ` + "`src/data/learning/semester-1-seed.ts`" + ` by ` + "`scripts/report-learning-coverage.mjs`" + `.,
+  "Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.",
   "",
   `- **Questions:** ${totalQuestions}`,
   `- **Lessons represented:** ${lessons.size}`,
