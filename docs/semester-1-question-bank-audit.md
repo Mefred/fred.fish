@@ -41,7 +41,7 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 587 questions during the full concept-depth effort. The 194 additions consist of 176 AI-generated applied questions and eighteen source-origin questions. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 587 questions during the full concept-depth effort. The 194 additions consist of 178 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -54,7 +54,7 @@ The expansion adds distinct practice across:
 
 ## Additional visually verified source questions
 
-The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across three follow-up passes. A further triage pass inspected 77 unique candidate images containing non-template blue marks or diagram components; 18 were already linked to source questions, and the remaining 59 did not provide a new unambiguous answer key (most showed unmarked question slides, duplicate diagrams, or Packet Tracer task screens). These include twelve new source-origin questions (one supported by two connector images) and five additional image references linked to existing questions.
+The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across three follow-up passes. A further visual triage pass inspected 77 unique candidate images containing non-template blue marks or diagram components; 18 were already linked to source questions, and the remaining 59 did not provide a new unambiguous answer key (most showed unmarked question slides, duplicate diagrams, or Packet Tracer task screens). These include twelve new source-origin questions (one supported by two connector images) and five additional image references linked to existing questions.
 
 | Image reference | Active question | Verified answer |
 |---|---|---|
