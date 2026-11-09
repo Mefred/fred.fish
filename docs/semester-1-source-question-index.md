@@ -78,3 +78,6 @@ The following additional images were checked and linked to existing source-origi
 | IMG-0282 | `s3-destination-mac-layer-002` | Destination MAC address is added at the Data Link layer |
 | IMG-0287 | `s3-destination-port-001` | Destination port number is added at the Transport layer |
 | IMG-0322 | `s3-source-port-layer-002` | Source port number is added at the Transport layer |
+
+
+| IMG-0779 | `s8-diffserv-priority-source-001` | Differentiated Services field is the 8-bit IPv4 QoS field (modern DSCP + ECN) |
