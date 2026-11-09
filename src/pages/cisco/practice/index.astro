@@ -94,7 +94,10 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
       selected = new Set([...app!.querySelectorAll<HTMLSelectElement>("[data-pair]")].filter((item) => item.value).map((item) => `${item.dataset.pair}:${item.value}`));
       updateSubmitState();
     }));
-    app.querySelector<HTMLButtonElement>("#submit-answer")?.addEventListener("click", checkAnswer);
+    app.querySelector<HTMLButtonElement>("#submit-answer")?.addEventListener("click", () => {
+      if (locked) nextQuestion();
+      else checkAnswer();
+    });
   };
   const updateSubmitState = () => {
     const q = quiz[index];
@@ -177,7 +180,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     if (submit) {
       submit.disabled = false;
       submit.textContent = index === quiz.length - 1 ? "Finish session →" : "Next question →";
-      submit.addEventListener("click", nextQuestion, { once: true });
+
     }
     updateStats();
   };
