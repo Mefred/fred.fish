@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 605
+- **Questions:** 607
 - **Lessons represented:** 22
-- **Distinct concept tags:** 607
+- **Distinct concept tags:** 608
 
 ## Lesson coverage
 
@@ -30,17 +30,17 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 50 | 85 | fill: 4, matching: 4, multiple: 5, ordering: 4, scenario: 26, single: 7 | 1–5 |
+| small-network | 52 | 86 | fill: 4, matching: 4, multiple: 6, ordering: 4, scenario: 26, single: 8 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 408 |
-| 3 | 78 |
+| 2 | 409 |
+| 3 | 76 |
 | 4 | 37 |
-| 5 | 22 |
+| 5 | 24 |
 | 6 | 18 |
 | 7 | 8 |
 | 8 | 9 |
@@ -867,6 +867,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `vlan-troubleshooting`
 - `vlan-trunking`
 - `windows-network-commands`
+- `employee-network-utilization`
 
 ### transport-layer
 
@@ -1525,13 +1526,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 52 |
-| matching | 99 |
-| multiple | 34 |
-| ordering | 20 |
-| scenario | 167 |
-| single | 232 |
-| true-false | 1 |
+| Fill | 52 |
+| Matching | 99 |
+| Multiple | 35 |
+| Ordering | 20 |
+| Scenario | 167 |
+| Single | 233 |
+| True / false | 1 |
 
 ### Difficulty
 
@@ -1539,7 +1540,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 46 |
 | 2 | 168 |
-| 3 | 264 |
+| 3 | 266 |
 | 4 | 105 |
 | 5 | 22 |
 
