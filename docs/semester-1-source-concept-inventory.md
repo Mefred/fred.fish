@@ -1,16 +1,16 @@
 # Semester 1 source-concept inventory
 
-**Status:** first-pass source inventory, not yet a complete concept-to-question audit  
+**Status:** all 17 module objectives transcribed; first-pass objective-to-question map complete; page-by-page source verification remains incomplete  
 **Primary evidence:** `Sem1_Lecture_Notes_Raw_Text.txt` in the Semester 1 source package  
 **Method:** transcribe module objectives and topic objectives from the recovered lecture-note text. The line numbers below refer to that source text as indexed in the Library. Repeated objective blocks are treated as one module objective, not as additional concepts.
 
-This inventory is deliberately kept separate from the active question bank. A source topic is not considered covered merely because a similarly named question tag exists. The next audit stage must map each reviewed topic to one or more explicit question-bank concept tags, then check the actual question prompts and answers.
+This inventory is deliberately kept separate from the active question bank. The objective-to-question map later in this document is a first-pass navigation aid. A source topic is not considered fully verified merely because a similarly named question tag exists; the remaining audit must check actual prompts, answers, diagrams, and Packet Tracer activity evidence against the source pages.
 
 ## Module inventory
 
 | Source module | Source objective | Topic objectives recovered from source | Related Fred.fish lesson IDs | Inventory status |
 |---|---|---|---|---|
-| 1. Networking Today | Explain the advances in modern technologies. | Networks Affect our Lives; Network Components; Network Representations and Topologies; Common Types of Networks; Internet Connections; Reliable Networks; Network Trends; Network Security | `network-components`, `network-topologies`, `network-types`, `internet-connections`, `reliable-networks`, `network-trends`, `network-security` | Objective and topic list transcribed (source lines 343–363). |
+| 1. Networking Today | Explain the advances in modern technologies. | Networks Affect our Lives; Network Components; Network Representations and Topologies; Common Types of Networks; Internet Connections; Reliable Networks; Network Trends; Network Security; The IT Professional | `network-components`, `network-topologies`, `network-types`, `internet-connections`, `reliable-networks`, `network-trends`, `network-security` | Objective and topic list transcribed (source lines 343–363). |
 | 2. Basic Switch and End Device Configuration | Implement initial settings including passwords, IP addressing, and default gateway parameters on a network switch and end devices. | Cisco IOS Access; IOS Navigation; The Command Structure; Basic Device Configuration; Save Configurations; Ports and Addresses; Configure IP Addressing; Verify Connectivity | `basic-device-configuration` | All eight topic objectives transcribed (source lines 1114–1140). |
 | 3. Protocols and Models | Explain how network protocols enable devices to access local and remote network resources. | The Rules; Protocols; Protocol Suites; Standards Organizations; Reference Models; Data Encapsulation; Data Access | `protocols-and-models` | All seven topic objectives transcribed (source lines 2625–2644). |
 | 4. Physical Layer | Explain how physical layer protocols, services, and network media support communications across data networks. | Purpose of the Physical Layer; Physical Layer Characteristics; Copper Cabling; UTP Cabling; Fiber-Optic Cabling; Wireless Media | `physical-layer` | Objective and topic list transcribed (source lines 4572–4593). |
