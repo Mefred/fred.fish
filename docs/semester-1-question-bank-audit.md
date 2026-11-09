@@ -90,7 +90,7 @@ There are now 36 source-origin image-question associations plus nine visually re
 
 ## Validation
 
-Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Dedicated regression tests reject missing or duplicate pair mappings, duplicate targets, unknown IDs, declared-answer mismatches, non-string entries, and malformed mappings with extra delimiters. The learning test command runs these cases alongside the adaptive-engine tests.
+Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Dedicated regression tests reject missing or duplicate pair mappings, duplicate targets, unknown IDs, declared-answer mismatches, non-string or blank IDs, malformed top-level inputs, and mappings with extra delimiters. The learning test command runs these cases alongside the adaptive-engine tests.
 
 GitHub Actions Site CI run #540 passed after the source inventory and validator updates, including the fix for duplicate answer recording when advancing practice questions. Subsequent changes are rechecked by the current pull-request CI run; consult the PR Checks tab for the latest result. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
 
