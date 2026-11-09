@@ -42,8 +42,8 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 75 |
-| 3 — Applied | 96 |
-| 4 — Advanced | 38 |
+| 3 — Applied | 97 |
+| 4 — Advanced | 42 |
 | 5 — Challenging | 6 |
 
 ## Source provenance audit
