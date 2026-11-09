@@ -1,8 +1,12 @@
 # Semester 1 question bank audit
 
-**Current bank:** 393 unique questions across 22 lesson IDs and 605 distinct concept tags
-**Concept tags:** 605 unique concept identifiers  
-**Source provenance:** 24 source questions; 369 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+## Current bank snapshot
+
+**Current bank:** 566 unique questions across 22 lesson IDs and 605 distinct concept tags  
+**Source provenance:** 24 source-origin questions; 542 AI-generated questions  
+**Concept exposure floor:** all 605 concept tags appear in at least two distinct questions; no singleton tags remain.
+
+The question bank grew from 393 to 566 questions during the under-practiced concept expansion. The 173 additions reinforce existing concept identifiers rather than creating new tags. Coverage is now at least two questions per concept; this is an exposure floor, not evidence of learner mastery.
 
 ## Latest applied troubleshooting additions
 
@@ -39,24 +43,23 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 128 |
-| Multiple select | 19 |
+| Single choice | 211 |
+| Multiple select | 32 |
 | True / false | 1 |
-| Fill in the blank | 36 |
-| Matching | 57 |
-| Ordering | 15 |
-| Scenario / troubleshooting | 137 |
-
-| **Total** | **393** |
+| Fill in the blank | 52 |
+| Matching | 96 |
+| Ordering | 19 |
+| Scenario / troubleshooting | 155 |
+| **Total** | **566** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
-| 1 — Introductory | 34 |
-| 2 — Foundational | 90 |
-| 3 — Applied | 150 |
-| 4 — Advanced | 97 |
+| 1 — Introductory | 39 |
+| 2 — Foundational | 159 |
+| 3 — Applied | 244 |
+| 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Source provenance audit
@@ -84,7 +87,7 @@ Completed a first-pass topic-to-question mapping for all seven Module 3 (Protoco
 
 ## Coverage and remaining work
 
-A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
+A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. The current bank has no single-question concept tags: every existing concept identifier appears in at least two questions. Continue monitoring exposure counts as new content is added.
 
 The 329-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
@@ -249,3 +252,20 @@ Added five applied questions covering OUI/vendor identification, per-port collis
 ## Latest transport, application, and WAN practice
 
 Added six applied questions: TCP duplicate-ACK loss recovery, advertised receive-window flow control, UDP suitability for real-time voice, DNS cache TTL expiry, DHCP T1 unicast renewal, and leased-line fault-domain isolation. The coverage report was regenerated from the active question bank.
+
+
+## Completion of under-practiced concept expansion
+
+Added 173 AI-generated questions across the existing 605 concept identifiers. The expansion was driven by a per-tag exposure audit and prioritized distinct applied practice rather than adding new concept names. Coverage includes:
+
+- Cisco IOS navigation, interface configuration, privileged access, SSH-only VTY security, management SVIs, and verification commands.
+- Ethernet frame processing, MAC sublayer functions, access/trunk configuration, VLAN forwarding, STP, frame integrity, switching methods, buffering, and topology.
+- IPv4 subnet membership, usable ranges, VLSM-related reasoning, routing-table interpretation, static/default routes, route recursion, and OSPF preference.
+- IPv6 compression, EUI-64, subnet IDs, coexistence methods, DHCPv6 modes, Neighbor Discovery, multicast, anycast, and IPv6 routing.
+- TCP connection setup, sequence/acknowledgment numbers, SACK, receive windows, congestion control, MSS/MTU, UDP, ports, DNS records, HTTP methods, and file-sharing protocols.
+- Network security controls, AAA, ACLs, firewall filtering, VPN/IPS, malware, attack categories, vulnerabilities, and physical threats.
+- Host and IOS troubleshooting using DHCP/APIPA, DNS cache and scope evidence, ping/traceroute, CDP, route tables, interface state, and network baselines.
+
+The generated coverage report records the current per-lesson counts, question formats, difficulty distribution, and concept-exposure histogram. The current minimum is two questions per concept; a small number of broad tags intentionally appear in many questions because they represent cross-cutting skills. Future expansion should focus on improving question variety and practical depth rather than increasing tag count.
+
+The latest CI run on the first completed expansion revision exposed four duplicate prompts. Those prompts were rewritten to make their scenarios distinct before the next validation run. The data-level count check confirms 566 unique question IDs, 605 concept tags, zero singleton tags, and no missing explanation or source-reference fields. Full CI validation remains pending on the corrected commit.
