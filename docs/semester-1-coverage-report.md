@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 17 | 51 | matching: 2, ordering: 2, scenario: 8, single: 5 | 2–4 |
+| small-network | 17 | 51 | matching: 2, ordering: 2, scenario: 8, single: 5 | 1–4 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
@@ -812,7 +812,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `application-layer` | 3 | application-layer, protocols-and-models |
 | `application-layer-services` | 3 | application-layer |
 | `arp` | 10 | address-resolution, protocols-and-models |
-| `arp-cache` | 3 | address-resolution |
+| `arp-cache` | 4 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
@@ -860,7 +860,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `connected-routes` | 1 | network-layer |
 | `connectionless` | 1 | network-layer |
 | `connectionless-transport` | 1 | transport-layer |
-| `connectivity-testing` | 3 | icmp |
+| `connectivity-testing` | 5 | icmp, small-network |
 | `console-access` | 1 | basic-device-configuration |
 | `contention-based-access` | 2 | data-link-layer |
 | `controlled-access` | 1 | data-link-layer |
@@ -879,7 +879,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decapsulation` | 2 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
-| `default-gateway` | 7 | address-resolution, basic-device-configuration, icmp, network-layer, protocols-and-models, router-configuration, small-network |
+| `default-gateway` | 8 | address-resolution, basic-device-configuration, icmp, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 3 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
@@ -887,7 +887,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `device-hardening` | 2 | network-security |
 | `device-management` | 1 | basic-device-configuration |
 | `device-resource-management` | 1 | small-network |
-| `dhcp` | 3 | application-layer, basic-device-configuration |
+| `device-selection` | 1 | small-network |
+| `dhcp` | 4 | application-layer, basic-device-configuration, small-network |
+| `dhcp-troubleshooting` | 1 | small-network |
 | `dhcpv6` | 2 | basic-device-configuration, ipv6-addressing |
 | `dns` | 6 | application-layer, network-types, transport-layer |
 | `dns-client-configuration` | 1 | basic-device-configuration |
@@ -922,7 +924,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ethernet-troubleshooting` | 1 | ethernet-switching |
 | `ethernet-wan` | 1 | internet-connections |
 | `eui-64` | 1 | ipv6-addressing |
+| `extended-ping` | 1 | small-network |
 | `extended-star-topology` | 1 | network-topologies |
+| `extended-traceroute` | 1 | small-network |
 | `extranet` | 1 | network-types |
 | `fast-forward-switching` | 1 | ethernet-switching |
 | `fault-isolation` | 1 | network-topologies |
@@ -964,9 +968,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hextets` | 2 | ipv6-addressing |
 | `hierarchical-topology` | 1 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
+| `host-ip-configuration` | 1 | small-network |
 | `host-reachability` | 3 | icmp |
 | `host-role` | 1 | network-components |
-| `host-troubleshooting` | 1 | address-resolution |
+| `host-troubleshooting` | 4 | address-resolution, small-network |
 | `http` | 6 | application-layer, protocols-and-models, transport-layer |
 | `http-get` | 1 | application-layer |
 | `http-post` | 1 | application-layer |
@@ -1015,7 +1020,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ips` | 1 | network-security |
 | `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 1 | ipv4-addressing |
-| `ipv4-addressing` | 5 | basic-device-configuration, ipv4-addressing, number-systems |
+| `ipv4-addressing` | 6 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
 | `ipv4-differentiated-services` | 1 | network-layer |
 | `ipv4-fragmentation-fields` | 1 | network-layer |
 | `ipv4-header-checksum` | 2 | network-layer |
@@ -1073,7 +1078,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `lc-connector` | 1 | physical-layer |
 | `leased-line` | 1 | internet-connections |
 | `line-protocol` | 1 | basic-device-configuration |
-| `link-local-address` | 4 | ipv4-addressing, ipv6-addressing |
+| `link-local-address` | 5 | ipv4-addressing, ipv6-addressing, small-network |
 | `llc-sublayer` | 2 | data-link-layer, protocols-and-models |
 | `local-authentication` | 1 | network-security |
 | `local-route` | 1 | network-layer |
@@ -1082,7 +1087,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 3 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 4 | ethernet-switching |
-| `mac-addressing` | 14 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
+| `mac-addressing` | 15 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
@@ -1118,20 +1123,21 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-components` | 3 | network-components |
 | `network-discovery` | 1 | small-network |
 | `network-efficiency` | 2 | address-resolution, protocols-and-models |
-| `network-intermediary-devices` | 3 | network-components |
+| `network-intermediary-devices` | 4 | network-components, small-network |
 | `network-layer` | 6 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
 | `network-operations` | 1 | small-network |
 | `network-performance` | 2 | physical-layer, transport-layer |
 | `network-redundancy` | 1 | data-link-layer |
 | `network-reliability` | 7 | reliable-networks, small-network |
-| `network-scalability` | 2 | ipv4-addressing, network-components |
+| `network-requirements` | 1 | small-network |
+| `network-scalability` | 3 | ipv4-addressing, network-components, small-network |
 | `network-scale` | 1 | network-components |
 | `network-scope` | 4 | network-types |
 | `network-security-controls` | 10 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 1 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
-| `network-troubleshooting` | 6 | icmp, small-network |
+| `network-troubleshooting` | 7 | icmp, small-network |
 | `next-hop` | 4 | ipv6-addressing, network-layer |
 | `next-hop-resolution` | 2 | network-layer |
 | `nic` | 1 | ethernet-switching |
@@ -1161,10 +1167,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-media` | 5 | physical-layer |
 | `physical-layer-purpose` | 1 | physical-layer |
 | `physical-layer-signaling` | 1 | physical-layer |
-| `physical-layer-troubleshooting` | 1 | basic-device-configuration |
+| `physical-layer-troubleshooting` | 2 | basic-device-configuration, small-network |
 | `physical-security` | 1 | network-security |
 | `physical-topology` | 3 | network-topologies |
-| `ping` | 6 | icmp, small-network |
+| `ping` | 7 | icmp, small-network |
 | `point-to-point-topology` | 2 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 1 | ethernet-switching |
@@ -1264,7 +1270,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `smtp` | 2 | application-layer |
 | `socket-pairs` | 1 | transport-layer |
 | `source-destination-addressing` | 1 | protocols-and-models |
-| `source-ip-selection` | 1 | icmp |
+| `source-ip-selection` | 3 | icmp, small-network |
 | `ssh` | 3 | network-security, transport-layer |
 | `st-connector` | 1 | physical-layer |
 | `standards-organizations` | 2 | network-types, protocols-and-models |
@@ -1300,12 +1306,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
 | `token-passing` | 1 | data-link-layer |
-| `traceroute` | 6 | icmp, small-network |
+| `traceroute` | 7 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
 | `transport-layer` | 13 | protocols-and-models, transport-layer |
 | `trojan-horse` | 1 | network-security |
-| `troubleshooting` | 3 | basic-device-configuration, small-network |
+| `troubleshooting` | 4 | basic-device-configuration, small-network |
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 1 | icmp |
 | `tunneling` | 1 | ipv6-addressing |
@@ -1347,7 +1353,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 315. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 318. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1375,4 +1381,4 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. All 17 modules now have explicit first-pass topic-to-question mappings. Selected source question references and OCR-answer corrections are recorded in `docs/semester-1-source-question-index.md`. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
