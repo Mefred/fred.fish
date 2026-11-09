@@ -23,7 +23,13 @@ for (const line of records) {
   if (!lessons.has(lessonId)) lessons.set(lessonId, { ids: [], concepts: new Set(), formats: new Map(), difficulties: new Map() });
   const lesson = lessons.get(lessonId);
   lesson.ids.push(id);
-  for (const concept of concepts) {\n    lesson.concepts.add(concept);\n    allConcepts.add(concept);\n    conceptQuestionCounts.set(concept, (conceptQuestionCounts.get(concept) ?? 0) + 1);\n    if (!conceptLessons.has(concept)) conceptLessons.set(concept, new Set());\n    conceptLessons.get(concept).add(lessonId);\n  }
+  for (const concept of concepts) {
+    lesson.concepts.add(concept);
+    allConcepts.add(concept);
+    conceptQuestionCounts.set(concept, (conceptQuestionCounts.get(concept) ?? 0) + 1);
+    if (!conceptLessons.has(concept)) conceptLessons.set(concept, new Set());
+    conceptLessons.get(concept).add(lessonId);
+  }
   lesson.formats.set(type, (lesson.formats.get(type) ?? 0) + 1);
   lesson.difficulties.set(difficulty, (lesson.difficulties.get(difficulty) ?? 0) + 1);
   formats.set(type, (formats.get(type) ?? 0) + 1);
@@ -31,10 +37,11 @@ for (const line of records) {
 }
 const sorted = (map) => [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]));
 const totalQuestions = [...lessons.values()].reduce((sum, lesson) => sum + lesson.ids.length, 0);
+const singleQuestionConcepts = [...conceptQuestionCounts.entries()].filter(([, count]) => count === 1);
 const lines = [
   "# Semester 1 question coverage report",
   "",
-  `Generated from ` + "`src/data/learning/semester-1-seed.ts`" + ` by ` + "`scripts/report-learning-coverage.mjs`" + `.`,
+  `Generated from ` + "`src/data/learning/semester-1-seed.ts`" + ` by ` + "`scripts/report-learning-coverage.mjs`" + `.,
   "",
   `- **Questions:** ${totalQuestions}`,
   `- **Lessons represented:** ${lessons.size}`,
@@ -55,7 +62,15 @@ for (const [lessonId, lesson] of [...lessons.entries()].sort((a, b) => a[0].loca
   lines.push(`### ${lessonId}`, "", [...lesson.concepts].sort().map((concept) => `- \`${concept}\``).join("\n"), "");
 }
 lines.push(
-  "## Concept question exposure",\n  "",\n  "| Concept tag | Questions | Lesson(s) |",\n  "|---|---:|---|",\n  ...[...conceptQuestionCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([concept, count]) => `| \\`${concept}\\` | ${count} | ${[...conceptLessons.get(concept)].sort().join(", ")} |`),\n  "",\n  `**Single-question concepts:** ${[...conceptQuestionCounts.entries()].filter(([, count]) => count === 1).length}. These tags currently have only one active question and are the first candidates for additional varied practice.`,\n  "",\n  "## Bank-wide distribution",
+  "## Concept question exposure",
+  "",
+  "| Concept tag | Questions | Lesson(s) |",
+  "|---|---:|---|",
+  ...[...conceptQuestionCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([concept, count]) => `| \`${concept}\` | ${count} | ${[...conceptLessons.get(concept)].sort().join(", ")} |`),
+  "",
+  `**Single-question concepts:** ${singleQuestionConcepts.length}. These tags currently have only one active question and are the first candidates for additional varied practice.`,
+  "",
+  "## Bank-wide distribution",
   "",
   "### Question formats",
   "",
