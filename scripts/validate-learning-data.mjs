@@ -45,7 +45,7 @@ for (const [index, line] of lines.entries()) {
     const distractorEntries = [...distractorFragment.matchAll(/([a-zA-Z0-9_-]+):"((?:\\.|[^"\\])*)"/g)];
     const distractorExplanations = Object.fromEntries(distractorEntries.map((match) => [match[1], JSON.parse('"' + match[2] + '"')]));
     if (distractorEntries.length === 0 || !isValidDistractorExplanations(choiceIds, Array.isArray(answer) ? answer : [answer], distractorExplanations)) {
-      errors.push(\`\${label}: distractor explanations must reference non-answer choice IDs and contain non-empty text\`);
+      errors.push(label + ": distractor explanations must reference non-answer choice IDs and contain non-empty text");
     }
   }
   const itemFragment = fieldArray(line, "items", "answer");
