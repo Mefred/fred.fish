@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 291 unique questions  
-**Concept tags:** 480 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 271 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 294 unique questions  
+**Concept tags:** 484 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 274 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -33,10 +33,10 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 34 |
-| Matching | 38 |
+| Matching | 39 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 73 |
-| **Total** | **291** |
+| Scenario / troubleshooting | 75 |
+| **Total** | **294** |
 
 ## Difficulty coverage
 
@@ -44,8 +44,8 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 84 |
-| 3 — Applied | 121 |
-| 4 — Advanced | 46 |
+| 3 — Applied | 122 |
+| 4 — Advanced | 48 |
 | 5 — Challenging | 6 |
 
 ## Source provenance audit
@@ -75,7 +75,7 @@ Completed a first-pass topic-to-question mapping for all seven Module 3 (Protoco
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
 
-The 291-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 294-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank now has 13 questions. Four new AI-generated items add frame-field matching, WAN topology matching, controlled-access application, and half/full-duplex matching. Existing questions cover LLC/MAC roles, CSMA/CD versus CSMA/CA, point-to-point versus multi-access links, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
@@ -114,3 +114,8 @@ Completed a first-pass topic-to-question mapping for the Module 6 Data Link Laye
 ## Module 7 source mapping update
 
 Completed a first-pass topic-to-question mapping for the Module 7 Ethernet Switching objectives. The lesson now has 16 questions. Four AI-generated items add OUI identification, MAC-address movement between switch ports, switching-method trade-offs, and switch memory-buffering comparison. MAC-table and switch-buffer diagrams still require direct visual verification.
+
+
+## Module 9 source mapping update
+
+Completed a first-pass topic-to-question mapping for Module 9 Address Resolution. The lesson now has 11 questions. Three AI-generated items add remote-network default-gateway resolution, the roles of all five ICMPv6 Neighbor Discovery messages, and ARP cache-expiration behavior. ARP/ND topology exhibits still need direct visual verification.
