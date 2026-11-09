@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 602
+- **Questions:** 604
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -30,22 +30,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 48 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 26, single: 7 | 1–5 |
+| small-network | 50 | 85 | fill: 4, matching: 4, multiple: 5, ordering: 4, scenario: 26, single: 7 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 410 |
-| 3 | 78 |
-| 4 | 36 |
-| 5 | 21 |
+| 2 | 409 |
+| 3 | 77 |
+| 4 | 37 |
+| 5 | 22 |
 | 6 | 18 |
 | 7 | 9 |
-| 8 | 9 |
+| 8 | 8 |
 | 9 | 1 |
-| 10 | 5 |
+| 10 | 6 |
 | 11 | 6 |
 | 12 | 3 |
 | 13 | 3 |
@@ -837,6 +837,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `physical-layer-troubleshooting`
 - `ping`
 - `problem-identification`
+- `quality-of-service`
+- `real-time-applications`
 - `redundancy`
 - `remote-network-communication`
 - `root-cause-analysis`
@@ -858,6 +860,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `trace-interpretation`
 - `traceroute`
 - `traffic-analysis`
+- `traffic-prioritization`
 - `troubleshooting`
 - `troubleshooting-methodology`
 - `verification`
@@ -1328,12 +1331,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `protocol-unreachable` | 2 | icmp |
 | `protocols` | 3 | protocols-and-models |
 | `public-ipv4` | 2 | ipv4-addressing |
-| `quality-of-service` | 8 | network-layer, network-trends, reliable-networks |
+| `quality-of-service` | 10 | network-layer, network-trends, reliable-networks, small-network |
 | `radio-frequency` | 2 | physical-layer |
 | `radio-frequency-interference` | 2 | physical-layer |
 | `radix` | 2 | number-systems |
 | `ram` | 2 | router-configuration |
-| `real-time-applications` | 2 | transport-layer |
+| `real-time-applications` | 4 | small-network, transport-layer |
 | `reconnaissance-attacks` | 2 | network-security |
 | `recursive-route-lookup` | 2 | network-layer |
 | `redundancy` | 5 | network-topologies, reliable-networks, small-network |
@@ -1461,7 +1464,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `trace-interpretation` | 2 | small-network |
 | `traceroute` | 10 | icmp, network-layer, small-network |
 | `traffic-analysis` | 3 | small-network |
-| `traffic-prioritization` | 3 | reliable-networks |
+| `traffic-prioritization` | 5 | reliable-networks, small-network |
 | `translation` | 2 | ipv6-addressing |
 | `transport-layer` | 15 | protocols-and-models, transport-layer |
 | `trojan-horse` | 2 | network-security |
@@ -1523,8 +1526,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 98 |
-| multiple | 33 |
+| matching | 99 |
+| multiple | 34 |
 | ordering | 20 |
 | scenario | 167 |
 | single | 231 |
@@ -1536,8 +1539,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
-| 3 | 263 |
-| 4 | 104 |
+| 3 | 264 |
+| 4 | 105 |
 | 5 | 22 |
 
 ## Interpretation and limits
