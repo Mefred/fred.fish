@@ -4,7 +4,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - **Questions:** 249
 - **Lessons represented:** 22
-- **Distinct concept tags:** 379
+- **Distinct concept tags:** 380
 
 ## Lesson coverage
 
@@ -18,9 +18,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
-| ipv6-addressing | 16 | 30 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
+| ipv6-addressing | 16 | 36 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
-| network-layer | 23 | 41 | fill: 1, matching: 2, multiple: 2, scenario: 8, single: 5 | 2–5 |
+| network-layer | 23 | 42 | fill: 1, matching: 2, multiple: 2, scenario: 13, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
@@ -195,8 +195,6 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ping`
 - `router-interfaces`
 - `routing-table-lookup`
-- `routing-table-troubleshooting`
-- `show-ip-route`
 - `source-ip-selection`
 - `traceroute`
 - `ttl`
@@ -237,27 +235,37 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### ipv6-addressing
 
+- `default-route`
 - `dual-stack`
 - `eui-64`
 - `global-unicast-address`
 - `hextets`
 - `icmpv6`
+- `ios-verification-commands`
 - `ipv4-ipv6-coexistence`
+- `ipv6-address-configuration`
 - `ipv6-address-representation`
 - `ipv6-address-structure`
 - `ipv6-address-types`
 - `ipv6-addressing`
+- `ipv6-interface-configuration`
 - `ipv6-interface-id`
+- `ipv6-interface-verification`
 - `ipv6-multicast`
 - `ipv6-network-prefix`
 - `ipv6-prefix-length`
 - `ipv6-prefixes`
 - `ipv6-router-advertisement`
 - `ipv6-router-solicitation`
+- `ipv6-routing`
+- `ipv6-static-route`
 - `link-local-address`
 - `loopback-address`
 - `mac-addressing`
 - `multicast-address`
+- `next-hop`
+- `no-shutdown`
+- `show-ipv6-interface`
 - `slaac`
 - `translation`
 - `tunneling`
@@ -284,6 +292,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - `administrative-distance`
 - `best-effort`
+- `bidirectional-connectivity`
+- `configuration-persistence`
 - `connected-route`
 - `connected-routes`
 - `connectionless`
@@ -292,6 +302,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `dynamic-routing`
 - `ethernet-multiaccess`
 - `icmp-destination-unreachable`
+- `ios-verification-commands`
 - `ip-characteristics`
 - `ipv4-routing-table`
 - `ipv4-static-route`
@@ -303,23 +314,25 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `next-hop`
 - `next-hop-resolution`
 - `packet-forwarding`
-- `route-selection`
+- `return-route`
 - `route-code-interpretation`
-- `route-troubleshooting`
+- `route-configuration`
+- `route-selection`
 - `route-sources`
+- `route-troubleshooting`
 - `routing`
 - `routing-configuration`
 - `routing-metric`
 - `routing-table`
 - `routing-table-codes`
+- `routing-table-interpretation`
 - `routing-table-lookup`
+- `routing-table-troubleshooting`
+- `show-ip-route`
+- `static-route`
 - `static-routes`
 - `static-routing`
 
-- `bidirectional-connectivity`
-- `return-route`
-- `route-configuration`
-- `routing-table-interpretation`
 ### network-security
 
 - `aaa`
@@ -550,17 +563,404 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `well-known-ports`
 - `windowing`
 
+## Concept question exposure
+
+| Concept tag | Questions | Lesson(s) |
+|---|---:|---|
+| `a-record` | 1 | application-layer |
+| `aaa` | 1 | network-security |
+| `aaaa-record` | 1 | application-layer |
+| `access-control-lists` | 1 | network-security |
+| `accounting` | 1 | network-security |
+| `address-resolution` | 6 | address-resolution |
+| `administrative-distance` | 3 | network-layer |
+| `aging-timer` | 1 | ethernet-switching |
+| `application-layer` | 1 | application-layer |
+| `application-layer-services` | 3 | application-layer |
+| `arp` | 8 | address-resolution, protocols-and-models |
+| `arp-cache` | 2 | address-resolution |
+| `attenuation` | 1 | physical-layer |
+| `authentication` | 1 | network-security |
+| `authorization` | 1 | network-security |
+| `auto-mdix` | 1 | ethernet-switching |
+| `bandwidth` | 1 | reliable-networks |
+| `best-effort` | 1 | network-layer |
+| `bidirectional-connectivity` | 1 | network-layer |
+| `binary` | 1 | number-systems |
+| `binary-positional-notation` | 1 | number-systems |
+| `binary-to-decimal` | 3 | number-systems |
+| `binary-to-hexadecimal` | 1 | number-systems |
+| `broadband-access` | 3 | internet-connections |
+| `broadcast` | 3 | address-resolution, ethernet-switching, protocols-and-models |
+| `broadcast-address` | 6 | ipv4-addressing |
+| `bus-topology` | 1 | network-topologies |
+| `business-internet-connections` | 3 | internet-connections |
+| `byod` | 1 | network-trends |
+| `cable-internet` | 1 | internet-connections |
+| `cdp` | 1 | small-network |
+| `cidr` | 1 | ipv4-addressing |
+| `circuit-switching` | 1 | reliable-networks |
+| `client-role` | 1 | network-components |
+| `client-server-model` | 6 | application-layer, network-components |
+| `cloud-computing` | 3 | network-trends |
+| `cloud-deployment-models` | 1 | network-trends |
+| `collision-avoidance` | 1 | data-link-layer |
+| `collision-domains` | 1 | ethernet-switching |
+| `command-keywords` | 2 | basic-device-configuration |
+| `confidentiality` | 2 | network-security |
+| `configuration-commands` | 2 | basic-device-configuration, router-configuration |
+| `configuration-persistence` | 3 | basic-device-configuration, network-layer |
+| `congestion` | 1 | reliable-networks |
+| `connected-route` | 1 | network-layer |
+| `connected-routes` | 1 | network-layer |
+| `connectionless` | 1 | network-layer |
+| `connectionless-transport` | 1 | transport-layer |
+| `connectivity-testing` | 1 | icmp |
+| `console-access` | 1 | basic-device-configuration |
+| `contention-based-access` | 1 | data-link-layer |
+| `copper-access` | 1 | internet-connections |
+| `copper-cabling` | 2 | physical-layer |
+| `copper-fiber-wireless` | 2 | network-components |
+| `crosstalk` | 2 | physical-layer |
+| `csma-ca` | 1 | data-link-layer |
+| `csma-cd` | 2 | data-link-layer, ethernet-switching |
+| `cut-through-switching` | 1 | ethernet-switching |
+| `data-centers` | 2 | network-trends |
+| `data-link-layer` | 9 | data-link-layer, protocols-and-models |
+| `data-link-topologies` | 1 | data-link-layer |
+| `decapsulation` | 1 | protocols-and-models |
+| `decimal-to-binary` | 1 | number-systems |
+| `default-gateway` | 4 | basic-device-configuration, network-layer, protocols-and-models, small-network |
+| `default-route` | 6 | ipv6-addressing, network-layer |
+| `defense-in-depth` | 2 | network-security |
+| `device-management` | 1 | basic-device-configuration |
+| `device-resource-management` | 1 | small-network |
+| `dhcp` | 3 | application-layer, basic-device-configuration |
+| `dhcpv6` | 1 | basic-device-configuration |
+| `dns` | 5 | application-layer, network-types, transport-layer |
+| `dns-client-configuration` | 1 | basic-device-configuration |
+| `dns-resource-records` | 1 | application-layer |
+| `dns-troubleshooting` | 1 | small-network |
+| `dsl` | 1 | internet-connections |
+| `dual-stack` | 1 | ipv6-addressing |
+| `duplex` | 1 | ethernet-switching |
+| `duplex-mismatch` | 1 | ethernet-switching |
+| `dynamic-routing` | 2 | network-layer |
+| `electromagnetic-interference` | 2 | physical-layer |
+| `email-protocols` | 3 | application-layer |
+| `enable-secret` | 1 | basic-device-configuration |
+| `encapsulation` | 9 | data-link-layer, protocols-and-models |
+| `end-devices` | 1 | network-components |
+| `endpoint-security` | 4 | network-security, network-trends |
+| `error-detection` | 2 | data-link-layer |
+| `ethernet` | 2 | protocols-and-models |
+| `ethernet-broadcast` | 1 | address-resolution |
+| `ethernet-cabling` | 1 | ethernet-switching |
+| `ethernet-frame` | 7 | data-link-layer, ethernet-switching |
+| `ethernet-frame-processing` | 1 | ethernet-switching |
+| `ethernet-media-access` | 2 | data-link-layer, ethernet-switching |
+| `ethernet-multiaccess` | 1 | network-layer |
+| `ethernet-standards` | 1 | ethernet-switching |
+| `ethernet-switching` | 4 | ethernet-switching |
+| `ethernet-troubleshooting` | 1 | ethernet-switching |
+| `ethernet-wan` | 1 | internet-connections |
+| `eui-64` | 1 | ipv6-addressing |
+| `extended-star-topology` | 1 | network-topologies |
+| `extranet` | 1 | network-types |
+| `fault-isolation` | 1 | network-topologies |
+| `fault-tolerance` | 7 | network-topologies, reliable-networks, small-network |
+| `fcs` | 2 | data-link-layer |
+| `fiber-internet` | 1 | internet-connections |
+| `fiber-optic-cabling` | 4 | physical-layer |
+| `fiber-optic-media` | 1 | internet-connections |
+| `firewall-filtering` | 4 | network-security |
+| `flash` | 1 | router-configuration |
+| `flow-control` | 2 | transport-layer |
+| `frame-encapsulation` | 1 | data-link-layer |
+| `frame-size` | 1 | ethernet-switching |
+| `frame-structure` | 1 | data-link-layer |
+| `full-duplex` | 2 | ethernet-switching |
+| `full-mesh` | 1 | network-topologies |
+| `global-configuration` | 1 | basic-device-configuration |
+| `global-unicast-address` | 2 | ipv6-addressing |
+| `hexadecimal` | 2 | number-systems |
+| `hexadecimal-to-decimal` | 2 | number-systems |
+| `hextets` | 2 | ipv6-addressing |
+| `hierarchical-topology` | 1 | network-topologies |
+| `host-capacity` | 7 | ipv4-addressing |
+| `host-reachability` | 1 | icmp |
+| `host-role` | 1 | network-components |
+| `host-troubleshooting` | 1 | address-resolution |
+| `http` | 5 | application-layer, protocols-and-models, transport-layer |
+| `https` | 1 | transport-layer |
+| `hybrid-p2p` | 1 | application-layer |
+| `iana` | 1 | transport-layer |
+| `icann` | 1 | network-types |
+| `icmp` | 2 | icmp |
+| `icmp-destination-unreachable` | 2 | icmp, network-layer |
+| `icmp-echo` | 1 | icmp |
+| `icmp-filtering` | 2 | icmp |
+| `icmp-time-exceeded` | 1 | icmp |
+| `icmpv6` | 4 | address-resolution, icmp, ipv6-addressing |
+| `ietf` | 1 | network-types |
+| `imap` | 2 | application-layer |
+| `insider-threat` | 1 | network-security |
+| `interface-configuration` | 1 | basic-device-configuration |
+| `interface-status` | 4 | basic-device-configuration, router-configuration |
+| `internet-access` | 3 | internet-connections |
+| `internet-architecture` | 1 | network-types |
+| `internet-governance` | 2 | network-types |
+| `interoperability` | 1 | protocols-and-models |
+| `intranet` | 2 | network-types |
+| `ios-command-modes` | 2 | basic-device-configuration |
+| `ios-command-syntax` | 2 | basic-device-configuration |
+| `ios-commands` | 1 | router-configuration |
+| `ios-debug` | 1 | small-network |
+| `ios-device-hardening` | 2 | basic-device-configuration |
+| `ios-interface-configuration` | 1 | basic-device-configuration |
+| `ios-navigation` | 1 | basic-device-configuration |
+| `ios-verification-commands` | 9 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
+| `ip` | 2 | protocols-and-models |
+| `ip-addressing` | 2 | protocols-and-models |
+| `ip-addressing-services` | 1 | application-layer |
+| `ip-characteristics` | 1 | network-layer |
+| `ip-default-gateway` | 1 | router-configuration |
+| `ipv4-address-configuration` | 1 | basic-device-configuration |
+| `ipv4-addressing` | 3 | basic-device-configuration, ipv4-addressing, number-systems |
+| `ipv4-interface-configuration` | 1 | basic-device-configuration |
+| `ipv4-ipv6-coexistence` | 1 | ipv6-addressing |
+| `ipv4-routing` | 1 | basic-device-configuration |
+| `ipv4-routing-table` | 4 | network-layer |
+| `ipv4-static-route` | 2 | network-layer |
+| `ipv4-subnetting` | 19 | ipv4-addressing |
+| `ipv4-troubleshooting` | 2 | small-network |
+| `ipv4-ttl` | 1 | icmp |
+| `ipv6-address-configuration` | 2 | basic-device-configuration, ipv6-addressing |
+| `ipv6-address-representation` | 2 | ipv6-addressing |
+| `ipv6-address-resolution` | 1 | icmp |
+| `ipv6-address-structure` | 2 | ipv6-addressing, number-systems |
+| `ipv6-address-types` | 4 | ipv6-addressing |
+| `ipv6-addressing` | 2 | ipv6-addressing |
+| `ipv6-interface-configuration` | 2 | ipv6-addressing |
+| `ipv6-interface-id` | 1 | ipv6-addressing |
+| `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
+| `ipv6-multicast` | 1 | ipv6-addressing |
+| `ipv6-neighbor-discovery` | 2 | address-resolution |
+| `ipv6-network-prefix` | 1 | ipv6-addressing |
+| `ipv6-prefix-length` | 1 | ipv6-addressing |
+| `ipv6-prefixes` | 2 | ipv6-addressing |
+| `ipv6-router-advertisement` | 3 | ipv6-addressing |
+| `ipv6-router-solicitation` | 2 | ipv6-addressing |
+| `ipv6-routing` | 2 | ipv6-addressing |
+| `ipv6-static-route` | 1 | ipv6-addressing |
+| `isp-role` | 1 | internet-connections |
+| `jitter` | 1 | network-trends |
+| `lan` | 4 | network-types |
+| `latency` | 2 | network-trends, transport-layer |
+| `layer2-layer3-addressing` | 1 | network-layer |
+| `leased-line` | 1 | internet-connections |
+| `line-protocol` | 1 | basic-device-configuration |
+| `link-local-address` | 3 | ipv6-addressing |
+| `llc-sublayer` | 2 | data-link-layer, protocols-and-models |
+| `local-route` | 1 | network-layer |
+| `logical-topology` | 2 | network-topologies |
+| `longest-prefix-match` | 3 | network-layer |
+| `loopback-address` | 1 | ipv6-addressing |
+| `mac-address-table` | 3 | ethernet-switching |
+| `mac-addressing` | 11 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
+| `mac-learning` | 1 | ethernet-switching |
+| `mac-sublayer` | 1 | data-link-layer |
+| `media-access-control` | 1 | data-link-layer |
+| `media-independent` | 1 | network-layer |
+| `media-selection` | 2 | physical-layer |
+| `mesh-topology` | 1 | network-topologies |
+| `message-delivery` | 1 | protocols-and-models |
+| `multiaccess-topology` | 1 | data-link-layer |
+| `multicast` | 1 | protocols-and-models |
+| `multicast-address` | 1 | ipv6-addressing |
+| `multimode-fiber` | 1 | physical-layer |
+| `multiplexing` | 1 | transport-layer |
+| `mx-record` | 1 | application-layer |
+| `name-resolution` | 2 | application-layer, small-network |
+| `neighbor-advertisement` | 1 | icmp |
+| `neighbor-discovery` | 1 | icmp |
+| `neighbor-solicitation` | 1 | icmp |
+| `network-access` | 1 | network-types |
+| `network-address` | 6 | ipv4-addressing |
+| `network-architecture-requirements` | 1 | network-security |
+| `network-components` | 3 | network-components |
+| `network-discovery` | 1 | small-network |
+| `network-efficiency` | 2 | address-resolution, protocols-and-models |
+| `network-intermediary-devices` | 3 | network-components |
+| `network-layer` | 6 | network-layer, protocols-and-models |
+| `network-media-selection` | 5 | network-components, network-trends |
+| `network-operations` | 1 | small-network |
+| `network-reliability` | 7 | reliable-networks, small-network |
+| `network-scalability` | 1 | network-components |
+| `network-scale` | 1 | network-components |
+| `network-scope` | 4 | network-types |
+| `network-security-controls` | 8 | network-security, network-types, reliable-networks |
+| `network-trends` | 3 | network-trends |
+| `network-troubleshooting` | 4 | icmp, small-network |
+| `next-hop` | 4 | ipv6-addressing, network-layer |
+| `next-hop-resolution` | 2 | network-layer |
+| `nic` | 1 | ethernet-switching |
+| `no-shutdown` | 4 | basic-device-configuration, ipv6-addressing, router-configuration |
+| `ns-record` | 1 | application-layer |
+| `nslookup` | 1 | small-network |
+| `number-systems` | 8 | number-systems |
+| `nvram` | 3 | router-configuration |
+| `online-collaboration` | 1 | network-trends |
+| `open-standards` | 1 | protocols-and-models |
+| `osi-model` | 7 | application-layer, protocols-and-models |
+| `packet-forwarding` | 2 | network-layer, router-configuration |
+| `packet-switching` | 2 | reliable-networks |
+| `password-encryption` | 1 | basic-device-configuration |
+| `password-security` | 1 | basic-device-configuration |
+| `path-selection` | 1 | router-configuration |
+| `pdu` | 1 | protocols-and-models |
+| `pdu-names` | 1 | protocols-and-models |
+| `peer-to-peer` | 3 | application-layer, network-components |
+| `physical-layer` | 2 | protocols-and-models |
+| `physical-layer-cabling` | 1 | basic-device-configuration |
+| `physical-layer-media` | 3 | physical-layer |
+| `physical-layer-troubleshooting` | 1 | basic-device-configuration |
+| `physical-topology` | 3 | network-topologies |
+| `ping` | 4 | icmp, small-network |
+| `point-to-point-topology` | 1 | data-link-layer |
+| `pop3` | 2 | application-layer |
+| `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
+| `powerline-networking` | 4 | network-trends |
+| `prefix-length` | 12 | ipv4-addressing |
+| `presentation-layer` | 1 | application-layer |
+| `private-ipv4` | 1 | ipv4-addressing |
+| `privileged-exec` | 1 | basic-device-configuration |
+| `problem-identification` | 1 | small-network |
+| `protocol-interaction` | 1 | protocols-and-models |
+| `protocols` | 1 | protocols-and-models |
+| `quality-of-service` | 6 | network-trends, reliable-networks |
+| `radio-frequency` | 1 | physical-layer |
+| `ram` | 1 | router-configuration |
+| `real-time-applications` | 1 | transport-layer |
+| `redundancy` | 4 | network-topologies, reliable-networks, small-network |
+| `reliability` | 2 | transport-layer |
+| `reliability-and-flow-control` | 1 | transport-layer |
+| `reliable-delivery` | 1 | transport-layer |
+| `remote-management` | 2 | basic-device-configuration, router-configuration |
+| `remote-network-communication` | 2 | protocols-and-models, small-network |
+| `retransmission` | 1 | protocols-and-models |
+| `return-route` | 2 | network-layer |
+| `rfc1918` | 1 | ipv4-addressing |
+| `ring-topology` | 1 | network-topologies |
+| `rom` | 1 | router-configuration |
+| `root-cause-analysis` | 1 | small-network |
+| `route-code-interpretation` | 1 | network-layer |
+| `route-configuration` | 1 | network-layer |
+| `route-selection` | 2 | network-layer |
+| `route-sources` | 1 | network-layer |
+| `route-troubleshooting` | 3 | network-layer |
+| `router-boot-process` | 1 | router-configuration |
+| `router-functions` | 1 | router-configuration |
+| `router-interface-configuration` | 2 | router-configuration |
+| `router-interfaces` | 1 | icmp |
+| `router-memory` | 1 | router-configuration |
+| `router-role` | 2 | network-components |
+| `routing` | 5 | data-link-layer, network-layer, protocols-and-models |
+| `routing-configuration` | 1 | network-layer |
+| `routing-metric` | 2 | network-layer |
+| `routing-table` | 5 | network-layer |
+| `routing-table-codes` | 1 | network-layer |
+| `routing-table-interpretation` | 1 | network-layer |
+| `routing-table-lookup` | 4 | icmp, network-layer |
+| `routing-table-troubleshooting` | 1 | network-layer |
+| `running-config` | 2 | basic-device-configuration |
+| `running-configuration` | 2 | basic-device-configuration, router-configuration |
+| `same-subnet-communication` | 1 | protocols-and-models |
+| `satellite-internet` | 1 | internet-connections |
+| `scalability` | 3 | reliable-networks |
+| `security-threat-vectors` | 1 | network-security |
+| `segmentation` | 1 | protocols-and-models |
+| `sequence-numbers` | 1 | transport-layer |
+| `server-role` | 1 | network-components |
+| `session-layer` | 1 | application-layer |
+| `shared-bandwidth` | 1 | internet-connections |
+| `shared-medium` | 1 | network-topologies |
+| `show-cdp-neighbors` | 1 | small-network |
+| `show-ip-interface-brief` | 2 | basic-device-configuration, small-network |
+| `show-ip-route` | 1 | network-layer |
+| `show-ipv6-interface` | 2 | ipv6-addressing, router-configuration |
+| `signal-integrity` | 1 | physical-layer |
+| `single-mode-fiber` | 1 | physical-layer |
+| `single-point-of-failure` | 2 | network-topologies |
+| `slaac` | 4 | basic-device-configuration, ipv6-addressing |
+| `smtp` | 2 | application-layer |
+| `socket-pairs` | 1 | transport-layer |
+| `source-destination-addressing` | 1 | protocols-and-models |
+| `source-ip-selection` | 1 | icmp |
+| `ssh` | 1 | transport-layer |
+| `standards-organizations` | 1 | network-types |
+| `star-topology` | 2 | network-topologies |
+| `startup-config` | 2 | basic-device-configuration |
+| `startup-configuration` | 3 | router-configuration |
+| `static-route` | 1 | network-layer |
+| `static-routes` | 1 | network-layer |
+| `static-routing` | 10 | network-layer |
+| `store-and-forward-switching` | 1 | ethernet-switching |
+| `subnet-mask` | 4 | ipv4-addressing |
+| `subnet-sizing` | 8 | ipv4-addressing |
+| `svi` | 1 | basic-device-configuration |
+| `switch-default-gateway` | 1 | basic-device-configuration |
+| `switch-learning` | 1 | ethernet-switching |
+| `switch-management` | 2 | basic-device-configuration, router-configuration |
+| `switch-port-settings` | 1 | ethernet-switching |
+| `tcp` | 7 | protocols-and-models, transport-layer |
+| `tcp-acknowledgments` | 2 | transport-layer |
+| `tcp-connection-establishment` | 1 | transport-layer |
+| `tcp-header` | 1 | transport-layer |
+| `tcp-ip-model` | 5 | application-layer, protocols-and-models |
+| `tcp-sequence-numbers` | 2 | transport-layer |
+| `tcp-windowing` | 1 | transport-layer |
+| `traceroute` | 5 | icmp, small-network |
+| `traffic-prioritization` | 3 | reliable-networks |
+| `translation` | 1 | ipv6-addressing |
+| `transport-layer` | 11 | protocols-and-models, transport-layer |
+| `troubleshooting` | 3 | basic-device-configuration, small-network |
+| `troubleshooting-methodology` | 2 | small-network |
+| `ttl` | 1 | icmp |
+| `tunneling` | 1 | ipv6-addressing |
+| `udp` | 5 | application-layer, protocols-and-models, transport-layer |
+| `udp-header` | 1 | transport-layer |
+| `unicast` | 2 | address-resolution, protocols-and-models |
+| `unknown-unicast-flooding` | 1 | ethernet-switching |
+| `user-exec` | 1 | basic-device-configuration |
+| `utp-cabling` | 2 | physical-layer |
+| `verification` | 1 | small-network |
+| `video-communications` | 1 | network-trends |
+| `vlsm` | 4 | ipv4-addressing |
+| `wan` | 5 | internet-connections, network-types |
+| `web-protocols` | 1 | application-layer |
+| `well-known-ports` | 1 | transport-layer |
+| `windowing` | 1 | transport-layer |
+| `wireless-broadband` | 1 | internet-connections |
+| `wireless-media` | 1 | physical-layer |
+| `wireless-media-access` | 1 | data-link-layer |
+| `wisp` | 1 | internet-connections |
+| `zero-compression` | 1 | ipv6-addressing |
+| `zero-suppression` | 1 | ipv6-addressing |
+
+**Single-question concepts:** 218. These tags currently have only one active question and are the first candidates for additional varied practice.
+
 ## Bank-wide distribution
 
 ### Question formats
 
 | Format | Count |
 |---|---:|
-| fill | 27 |
-| matching | 19 |
+| fill | 30 |
+| matching | 20 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 44 |
+| scenario | 59 |
 | single | 110 |
 | true-false | 1 |
 
@@ -570,10 +970,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 75 |
-| 3 | 90 |
-| 4 | 27 |
-| 5 | 4 |
+| 3 | 96 |
+| 4 | 38 |
+| 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only the concepts currently tagged on active questions. It shows where the bank is concentrated and which tags are represented; it does **not** prove that every instructional concept in a lesson has been tested. A true syllabus-gap report requires an authoritative per-lesson concept inventory to compare against. Question counts are a useful triage signal, not a mastery or quality score.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
