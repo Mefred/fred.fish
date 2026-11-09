@@ -199,6 +199,20 @@ The recovered Module 13 objective is to use tools to test network connectivity. 
 
 Four new AI-generated questions add ICMPv4 unreachable-code matching, loopback testing, default-gateway testing, and IPv6 Hop Limit expiration. They are derived from recovered Module 13 notes and existing source references, not presented as verbatim source questions. The Packet Tracer ping/traceroute topology exhibits still need direct visual verification.
 
+## Module 14 first-pass topic-to-question mapping
+
+The recovered Module 14 material covers transport-layer responsibilities, TCP and UDP behavior, port numbers/socket pairs, and TCP reliability and flow control. The active `transport-layer` lesson now has 17 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Transportation of Data | Track application conversations; segment/reassemble data; multiplex conversations; identify applications with ports; select TCP or UDP based on application needs | `transport-layer`, `multiplexing`, `port-numbers`, `tcp`, `udp` | Represented through protocol comparison, socket pairs, port use, and application selection. More direct segmentation/reassembly and conversation-multiplexing scenarios would improve depth. |
+| TCP Overview and Communication Process | Connection-oriented setup; three-way handshake; sequence and acknowledgment numbers; TCP header fields; connection termination and control flags | `tcp`, `tcp-connection-establishment`, `tcp-header`, `tcp-sequence-numbers`, `tcp-acknowledgments` | Strong for handshake, header fields, sequence/ACK arithmetic, and next-byte semantics. TCP termination/FIN/RST behavior remains under-practiced. |
+| UDP Overview and Communication | Connectionless datagrams; small header; low overhead; no TCP-style sequencing, acknowledgment, retransmission, or flow control; application use cases | `udp`, `udp-header`, `connectionless-transport`, `real-time-applications` | Represented with protocol characteristics and real-time application selection. UDP header-field interpretation and datagram reordering limitations could use more direct practice. |
+| Port Numbers and Socket Pairs | Well-known, registered, dynamic/private ranges; source/destination ports; IP-plus-port sockets; IANA allocation; netstat | `port-numbers`, `well-known-ports`, `iana`, `socket-pairs`, `dns`, `ssh`, `http`, `https` | Represented with port-range identification, common service matching, and socket endpoint identification. More ports and a netstat troubleshooting scenario remain useful. |
+| Reliability and Flow Control | Ordered delivery; sequence/ACK behavior; retransmission; duplicate ACK; sliding window; receiver window; SACK; MSS/MTU; congestion avoidance | `reliability`, `reliability-and-flow-control`, `tcp-windowing`, `flow-control`, `selective-acknowledgment`, `sack`, `maximum-segment-size`, `mtu`, `congestion-control` | Improved; new scenarios cover duplicate ACK behavior, SACK information, MSS versus MTU, and flow versus congestion control. Detailed sliding-window calculations and TCP termination still need more practice. |
+
+Four new AI-generated questions add duplicate-ACK loss recovery, SACK, MSS/MTU comparison, and flow-versus-congestion-control distinctions. They are derived from recovered Module 14 notes and existing source references, not presented as verbatim source questions. TCP header and sliding-window diagrams still need direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
