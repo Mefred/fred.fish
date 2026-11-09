@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 254
+- **Questions:** 258
 - **Lessons represented:** 22
-- **Distinct concept tags:** 398
+- **Distinct concept tags:** 405
 
 ## Lesson coverage
 
@@ -26,7 +26,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
 | number-systems | 8 | 10 | fill: 5, single: 3 | 1–4 |
-| physical-layer | 8 | 13 | scenario: 3, single: 5 | 1–4 |
+| physical-layer | 12 | 21 | matching: 1, scenario: 6, single: 5 | 1–4 |
 | protocols-and-models | 18 | 36 | matching: 3, multiple: 2, ordering: 3, scenario: 3, single: 7 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 8 | 22 | fill: 2, matching: 1, multiple: 1, single: 4 | 1–3 |
@@ -439,6 +439,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `media-selection`
 - `multimode-fiber`
 - `physical-layer-media`
+- `physical-layer-purpose`
+- `physical-layer-encoding`
+- `physical-layer-characteristics`
+- `physical-layer-signaling`
+- `throughput`
+- `tia-eia-568`
+- `cabling-standards`
 - `radio-frequency`
 - `signal-integrity`
 - `single-mode-fiber`
@@ -860,6 +867,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer` | 2 | protocols-and-models |
 | `physical-layer-cabling` | 1 | basic-device-configuration |
 | `physical-layer-media` | 3 | physical-layer |
+| `bandwidth` | 2 | physical-layer, reliable-networks |
+| `cabling-standards` | 1 | physical-layer |
+| `physical-layer-characteristics` | 1 | physical-layer |
+| `physical-layer-encoding` | 1 | physical-layer |
+| `physical-layer-purpose` | 1 | physical-layer |
+| `physical-layer-signaling` | 1 | physical-layer |
 | `physical-layer-troubleshooting` | 1 | basic-device-configuration |
 | `physical-topology` | 3 | network-topologies |
 | `ping` | 4 | icmp, small-network |
@@ -984,7 +997,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-compression` | 1 | ipv6-addressing |
 | `zero-suppression` | 1 | ipv6-addressing |
 
-**Single-question concepts:** 230. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 235. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -993,10 +1006,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 30 |
-| matching | 22 |
+| matching | 23 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 62 |
+| scenario | 65 |
 | single | 110 |
 | true-false | 1 |
 
@@ -1005,8 +1018,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 75 |
-| 3 | 97 |
+| 2 | 77 |
+| 3 | 99 |
 | 4 | 42 |
 | 5 | 6 |
 
