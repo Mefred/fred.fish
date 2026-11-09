@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 274
+- **Questions:** 279
 - **Lessons represented:** 22
-- **Distinct concept tags:** 434
+- **Distinct concept tags:** 449
 
 ## Lesson coverage
 
@@ -27,7 +27,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
 | number-systems | 16 | 21 | fill: 9, matching: 1, scenario: 1, single: 5 | 1–4 |
 | physical-layer | 20 | 41 | matching: 6, scenario: 8, single: 6 | 1–4 |
-| protocols-and-models | 18 | 36 | matching: 3, multiple: 2, ordering: 3, scenario: 3, single: 7 | 1–4 |
+| protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 8 | 22 | fill: 2, matching: 1, multiple: 1, single: 4 | 1–3 |
 | small-network | 9 | 25 | ordering: 2, scenario: 4, single: 3 | 1–4 |
@@ -487,21 +487,35 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### protocols-and-models
 
+- `application-layer`
 - `arp`
 - `broadcast`
+- `communication-rules`
 - `data-link-layer`
 - `decapsulation`
 - `default-gateway`
+- `delivery-options`
 - `encapsulation`
 - `ethernet`
 - `http`
+- `iab`
+- `ietf`
+- `internet-layer`
+- `internet-standards`
 - `interoperability`
 - `ip`
 - `ip-addressing`
+- `irtf`
+- `isoc`
 - `llc-sublayer`
 - `mac-addressing`
 - `message-delivery`
+- `message-encoding`
+- `message-formatting`
+- `message-size`
+- `message-timing`
 - `multicast`
+- `network-access-layer`
 - `network-efficiency`
 - `network-layer`
 - `open-standards`
@@ -510,14 +524,18 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `pdu-names`
 - `physical-layer`
 - `port-numbers`
+- `protocol-data-units`
 - `protocol-interaction`
+- `protocol-suites`
 - `protocols`
+- `reference-models`
 - `remote-network-communication`
 - `retransmission`
 - `routing`
 - `same-subnet-communication`
 - `segmentation`
 - `source-destination-addressing`
+- `standards-organizations`
 - `tcp`
 - `tcp-ip-model`
 - `transport-layer`
