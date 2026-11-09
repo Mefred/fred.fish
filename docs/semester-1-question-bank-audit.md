@@ -92,3 +92,7 @@ The Physical Layer bank has now grown from 12 to 20 questions. Eight AI-generate
 
 
 The Number Systems bank has grown from eight to 16 questions. Eight AI-generated items add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, IPv6 hextet identification and counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. The Module 5 first-pass topic mapping records the current coverage and remaining need for longer mixed-octet and IPv6 conversion drills.
+
+## Module 1 source mapping update
+
+Completed a first-pass topic-to-question mapping for all nine Module 1 (Networking Today) topic objectives in docs/semester-1-source-concept-inventory.md. Seven objectives have related active questions; two currently lack direct practice: **Networks Affect our Lives** and **The IT Professional**. The mapping also records follow-up checks for dial-up/cellular access, smart-home examples, and lesson-scope alignment. These are source-audit findings, not a claim that Module 1 is complete.
