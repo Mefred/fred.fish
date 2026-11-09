@@ -4,7 +4,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - **Questions:** 345
 - **Lessons represented:** 22
-- **Distinct concept tags:** 563
+- **Distinct concept tags:** 564
 
 ## Lesson coverage
 
@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 16 | 36 | fill: 1, matching: 2, scenario: 3, single: 10 | 1–4 |
 | icmp | 13 | 26 | matching: 1, scenario: 3, single: 9 | 1–4 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
-| ipv4-addressing | 28 | 31 | fill: 8, matching: 4, multiple: 1, scenario: 9, single: 6 | 2–5 |
+| ipv4-addressing | 28 | 26 | fill: 8, matching: 4, multiple: 1, scenario: 9, single: 6 | 2–5 |
 | ipv6-addressing | 21 | 47 | fill: 6, matching: 5, scenario: 6, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
