@@ -85,21 +85,39 @@ try {
       await page.goto(new URL("/cisco/practice/", baseUrl).href, { waitUntil: "networkidle" });
       await page.getByRole("button", { name: /Start 10-question practice/i }).click();
       assert.equal(await page.locator(".quiz-prompt").count(), 1, "starting practice should render a question");
-      const choices = page.locator("[data-choice]");
-      if (await choices.count()) {
-        await choices.first().focus();
-        await page.keyboard.press("Enter");
-      } else if (await page.locator("#fill-answer").count()) {
-        await page.locator("#fill-answer").fill("test response");
-      } else if (await page.locator("[data-pair]").count()) {
-        const selects = page.locator("[data-pair]");
-        for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: 1 });
+      const seenFormats = new Set();
+      for (let questionIndex = 0; questionIndex < 10; questionIndex++) {
+        assert.equal(await page.locator(".quiz-prompt").count(), 1, `question ${questionIndex + 1} should render`);
+        if (await page.locator("[data-choice]").count()) {
+          seenFormats.add("choice / multiple-select / true-false / scenario");
+          await page.locator("[data-choice]").first().focus();
+          await page.keyboard.press("Enter");
+        } else if (await page.locator("#fill-answer").count()) {
+          seenFormats.add("fill-in");
+          await page.locator("#fill-answer").fill("test response");
+        } else if (await page.locator("[data-pair]").count()) {
+          seenFormats.add("matching");
+          const selects = page.locator("[data-pair]");
+          for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: 1 });
+        } else if (await page.locator("#ordering-list").count()) {
+          seenFormats.add("ordering");
+        } else {
+          throw new Error(`Question ${questionIndex + 1} has no recognized response control`);
+        }
+        await page.locator("#submit-answer").click();
+        assert.equal(await page.locator("#answer-feedback[hidden]").count(), 0, "submitting an answer should show feedback");
+        assert.ok(await page.locator("#answer-feedback").innerText(), "answer feedback should include an explanation");
+        if (questionIndex < 9) await page.locator("#submit-answer").click();
       }
-      await page.locator("#submit-answer").click();
-      assert.equal(await page.locator("#answer-feedback[hidden]").count(), 0, "submitting an answer should show feedback");
-      assert.ok(await page.locator("#answer-feedback").innerText(), "answer feedback should include an explanation");
-      const saved = await page.evaluate(() => localStorage.getItem("fredfish.learning.progress.v1"));
+      assert.equal(await page.locator(".session-complete").count(), 1, "finishing ten answers should complete the session");
+      const saved = await page.evaluate(() => JSON.parse(localStorage.getItem("fredfish.learning.progress.v1") || "null"));
       assert.ok(saved, "answering should persist learning progress in local storage");
+      assert.equal(saved.totalAnswers, 10, "a complete session should record ten answers");
+      assert.equal(saved.totalSessions, 1, "a complete session should increment the session count");
+      await page.goto(new URL("/cisco/progress/", baseUrl).href, { waitUntil: "networkidle" });
+      assert.match(await page.locator("#learning-dashboard").innerText(), /10/);
+      assert.match(await page.locator("#learning-dashboard").innerText(), /Sessions/);
+
     }
 
     assert.equal(pageErrors.length, 0, `${viewport.name} browser errors: ${pageErrors.join("; ")}`);
@@ -112,7 +130,7 @@ try {
     viewports: ["1440x900 desktop", "390x844 mobile"],
     routesTested: pages.length,
     routes: pages,
-    practiceInteraction: "keyboard answer selection, feedback, and local persistence",
+    practiceInteraction: "complete ten-question session, keyboard answer selection, per-answer feedback, local persistence, and dashboard update",
     axeViolations,
   }, null, 2));
   assert.equal(serious.length, 0, `Serious or critical accessibility violations: ${JSON.stringify(serious)}`);
