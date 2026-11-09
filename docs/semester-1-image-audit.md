@@ -101,7 +101,30 @@ The first 36 unresolved candidate images were screened at 960×540 per image. Th
 
 This contact-sheet screen does not count as native-resolution review for the other 33 images. The previously reported 744 unique / 750 asset-record native-resolution backlog remains unchanged.
 
-## Structured export
+### High-resolution contact-sheet review — batch 2
+
+The next 36 candidates (IMG-0287–IMG-0427) were screened. Five marked OSI-layer answers were opened at native resolution and confirmed against existing source-origin questions: destination port/Transport (IMG-0287), open standards/interoperability (IMG-0292), destination IP/Network (IMG-0306), source IP/Network (IMG-0314), and source port/Transport (IMG-0322). IMG-0348 was opened at native resolution and confirms the four twisted pairs in the existing UTP-identification visual. All six already belong to existing source-origin associations; no new association was added. The other 30 images are unmarked prompts, choices without selections, or instructional slides/diagrams. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
+
+Across batches 1 and 2, 72 candidates have been screened at high-resolution contact-sheet scale and nine answer/visual items have been cross-checked at native resolution. The 744-unique-image / 750-asset-record native-resolution backlog remains unchanged because the remaining contact-sheet-only items still require native-resolution inspection where answer marks or diagram details matter.
+
+
+
+The OCR export contains:
+
+- `image-ocr.jsonl`: one record per image asset, including source ID, OCR text, exact-duplicate status, canonical asset ID, and SHA-256.
+- `image-audit.csv`: compact audit status for every manifest asset.
+- `question-candidates.jsonl`: question-like OCR candidates with an explicit visual-verification status.
+- `module-image-map.csv`: heuristic module-topic suggestions.
+- `README.md`: export summary and limitations.
+
+Use `scripts/ingest-semester-images.py` to rerun OCR and `scripts/recover-onenote-images.py` to recover and hash-verify the original image bytes.
+
+## Module classification
+
+A heuristic classifier matched 1,393 assets to one or more module topic buckets (439 high-confidence heading matches and 954 medium-confidence keyword matches). The remaining 1,253 assets are unclassified by text heuristics and require visual/topic review. These hints are not authoritative: a diagram may be relevant to a module without containing its title, and a question can span multiple concepts.
+
+Run `scripts/classify-semester-images.py` against the OCR JSONL export to regenerate a reviewable module-image map. Do not use heuristic classification as a reason to omit unclassified assets.
+
 
 The OCR export contains:
 
