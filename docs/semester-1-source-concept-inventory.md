@@ -28,6 +28,20 @@ This inventory is deliberately kept separate from the active question bank. A so
 | 16. Network Security Fundamentals | Configure switches and routers with device hardening features to enhance security. | Security Threats and Vulnerabilities; Network Attacks; Network Attack Mitigation; Device Security | `network-security` | Objective and topic list transcribed (source lines 24867–24881). |
 | 17. Build a Small Network | Implement a network design for a small network to include a router, a switch, and end devices. | Devices in a Small Network; Small Network Applications and Protocols; Scale to Larger Networks; Verify Connectivity; Host and IOS Commands; Troubleshooting Methodologies; Troubleshooting Scenarios | `small-network` | Objective and topic list transcribed (source lines 26892–26915). |
 
+## First-pass topic-to-question comparison: Module 8
+
+The Module 8 objective list is now compared against the active `network-layer` question records and their concept tags. This is a narrow, explicit mapping pass; it is not yet generalized to the other modules.
+
+| Source topic objective | Evidence in source notes | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Network Layer Characteristics | IP is connectionless, best-effort, and media-independent; the source explains that IP does not guarantee delivery (source lines 7661–7708 and nearby review material). | `ip-characteristics`, `connectionless`, `best-effort`, `media-independent` | Represented, with multiple applied questions. |
+| IPv4 Packet | Source lists Version, Differentiated Services, Header Checksum, TTL, Protocol, Source IPv4 Address, and Destination IPv4 Address (source lines 7661–7677). | No dedicated IPv4 packet-header concept tag or active prompt found in the current seed scan. The only `TTL`-tagged prompts are ICMP TTL-expiry questions. | **Likely practice gap:** assess IPv4 header fields directly, including how they are interpreted. |
+| IPv6 Packet | Source lists Version, Traffic Class, Flow Label, Payload Length, Next Header, Hop Limit, and 128-bit source/destination addresses (source lines 7565–7583); it also notes the fixed 40-byte header and removed IPv4 fields (source lines 7963–7974). | No dedicated IPv6 packet-header concept tag or active prompt found in the current seed scan. IPv6 address-structure tags do not by themselves assess packet-header fields. | **Likely practice gap:** assess IPv6 header fields and compare the IPv4/IPv6 header structures. |
+| How a Host Routes | Source explains local versus remote destinations, default-gateway use, and host routing-table behavior (Module 8 topic block at source lines 7788–7800 and related material). | `default-gateway`, `packet-forwarding`, `routing-table-lookup`, `next-hop` | Represented. Verify that the lesson teaches host route selection distinctly from router route selection. |
+| Router Routing Tables | Source covers directly connected, remote, and default routes; route sources, metrics, and forwarding decisions (Module 8 source material around lines 7788–7800 and 7864 onward). | `routing-table`, `ipv4-routing-table`, `connected-routes`, `static-routes`, `default-route`, `routing-metric`, `administrative-distance`, `route-sources`, `longest-prefix-match` | Broadly represented; continue checking route-entry interpretation and route selection with varied output-based scenarios. |
+
+The two packet-header findings are provisional but concrete: the source has explicit assessable objectives and field lists, while the active seed scan contains no dedicated header-field prompts/tags. Add distinct IPv4- and IPv6-header concepts and questions before calling Module 8 coverage complete.
+
 ## Interpretation rules
 
 1. **Source topic present** means the topic heading/objective was recovered from the lecture-note source. It does not mean every detail, diagram, lab, or embedded question under that topic has been reviewed.
