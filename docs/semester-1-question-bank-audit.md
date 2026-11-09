@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **587** |
-| Unique question IDs | 587 |
-| Unique normalized prompts | 587 |
+| Active questions | **589** |
+| Unique question IDs | 589 |
+| Unique normalized prompts | 589 |
 | Lesson IDs represented | 22 |
-| Distinct concept tags | 605 |
+| Distinct concept tags | 607 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 547 |
+| AI-generated questions | 549 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -20,28 +20,28 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 | Format | Questions |
 |---|---:|
-| Single choice | 229 |
+| Single choice | 230 |
 | Multiple select | 33 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 97 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 155 |
-| **Total** | **587** |
+| Scenario / troubleshooting | 156 |
+| **Total** | **589** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 45 |
-| 2 — Foundational | 167 |
-| 3 — Applied | 251 |
+| 2 — Foundational | 168 |
+| 3 — Applied | 252 |
 | 4 — Advanced | 102 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 587 questions during the full concept-depth effort. The 194 additions consist of 178 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 587 questions during the full concept-depth effort. The 196 additions consist of 180 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -96,7 +96,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
 - Twenty-two additional question-image associations have been manually checked across the follow-up passes. The remaining 744 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
-- The source-concept inventory is a first-pass transcription, not a fully reviewed atomic objective-to-question-tag matrix for every lesson.
+- The source-concept inventory is a first-pass transcription with explicit mappings for Modules 1–4 and 8; a complete atomic objective-to-question-tag matrix for every lesson remains outstanding.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
 
