@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { isValidMatchingAnswer } from "./matching-validation.mjs";
-import { isValidDistractorExplanations } from "./distractor-validation.mjs";
+import { isValidDistractorExplanations, parseDistractorExplanations } from "./distractor-validation.mjs";
 
 const base = {
   pairIds: ["p1", "p2", "p3"],
@@ -35,3 +35,11 @@ assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, 
 assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, { z: "Unknown choice." }), false, "unknown choice IDs must fail");
 assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, { b: "  " }), false, "blank distractor explanations must fail");
 assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, null), false, "malformed explanation maps must fail");
+
+assert.deepEqual(parseDistractorExplanations('b:"Wrong answer.",c:"Another explanation."), { b: "Wrong answer.", c: "Another explanation." }, "well-formed feedback maps should parse");
+assert.deepEqual(parseDistractorExplanations('b:"Escaped quote: \\"yes\\"."'), { b: 'Escaped quote: "yes".' }, "escaped quotes should parse without truncation");
+assert.equal(parseDistractorExplanations('b:"Valid.",broken-entry'), null, "malformed trailing entries must not be silently ignored");
+assert.equal(parseDistractorExplanations('b:"First.",b:"Duplicate."'), null, "duplicate feedback keys must be rejected");
+assert.equal(parseDistractorExplanations('b:"Bad escape: \\q"'), null, "invalid JSON string escapes must be rejected");
+assert.equal(parseDistractorExplanations(""), null, "empty feedback maps must be rejected");
+console.log("Distractor validation tests passed: answer exclusion, known choice IDs, non-empty text, strict parsing, escapes, and duplicate-key rejection.");
