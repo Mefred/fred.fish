@@ -30,7 +30,6 @@ const server = process.env.BROWSER_TEST_URL ? null : spawn("npm", ["run", "previ
   env: process.env,
 });
 let browser;
-const failures = [];
 const axeViolations = [];
 
 try {
@@ -89,25 +88,20 @@ try {
       assert.equal(initialAnswers, 0, "browser practice should start with a clean learner profile");
       await page.getByRole("button", { name: /Start 10-question practice/i }).click();
       assert.equal(await page.locator(".quiz-prompt").count(), 1, "starting practice should render a question");
-      const seenFormats = new Set();
       for (let questionIndex = 0; questionIndex < 10; questionIndex++) {
         assert.equal(await page.locator(".quiz-prompt").count(), 1, `question ${questionIndex + 1} should render`);
         if (await page.locator("[data-choice]").count()) {
-          seenFormats.add("choice / multiple-select / true-false / scenario");
           if (viewport.name === "mobile") await page.locator("[data-choice]").first().tap();
           else {
             await page.locator("[data-choice]").first().focus();
             await page.keyboard.press("Enter");
           }
         } else if (await page.locator("#fill-answer").count()) {
-          seenFormats.add("fill-in");
           await page.locator("#fill-answer").fill("test response");
         } else if (await page.locator("[data-pair]").count()) {
-          seenFormats.add("matching");
           const selects = page.locator("[data-pair]");
           for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: i + 1 });
         } else if (await page.locator("#ordering-list").count()) {
-          seenFormats.add("ordering");
         } else {
           throw new Error(`Question ${questionIndex + 1} has no recognized response control`);
         }
