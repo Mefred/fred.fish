@@ -24,9 +24,9 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Visually verified source-origin image-question associations | 36 |
+| Visually verified source-origin image-question associations | 39 |
 | Visual references used by AI-generated questions | 9 |
-| Total visually reviewed image-question associations | 45 |
+| Total visually reviewed image-question associations | 48 |
 | Candidate asset records visually reviewed as not questions | 4 |
 | Unique unresolved candidate images remaining | 744 |
 | Unresolved candidate asset records (including duplicate references) | 750 |
@@ -51,6 +51,8 @@ Eighteen additional unique image candidates were inspected across three follow-u
 | IMG-0322 | `s3-source-port-layer-002` | Circled answer: Transport layer |
 | IMG-0816 | `s9-arp-cache-aging-source-001` | Explanatory slide confirms ARP cache aging timer and manual removal |
 | IMG-0348 | `s4-utp-identification-source-001` | Diagram shows four unshielded twisted copper pairs |
+| IMG-0545 | `s4-utp-identification-source-001` | Second image shows four unshielded twisted copper pairs |
+| IMG-0324, IMG-0557 | `s4-coax-identification-source-001` | Two images show coaxial cable construction: central conductor and concentric metallic shield |
 | IMG-1725, IMG-1872 | `s4-rj45-connector-source-001` | Connector comparison identifies RJ-45/8P8C for twisted-pair Ethernet |
 | IMG-0306 | `s3-destination-ip-layer-source-001` | Circled answer: Network layer |
 | IMG-0314 | `s3-source-ip-layer-source-001` | Circled answer: Network layer |
