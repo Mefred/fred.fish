@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 300
+- **Questions:** 304
 - **Lessons represented:** 22
-- **Distinct concept tags:** 489
+- **Distinct concept tags:** 492
 
 ## Lesson coverage
 
@@ -15,7 +15,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
 | ethernet-switching | 16 | 36 | fill: 1, matching: 2, scenario: 3, single: 10 | 1–4 |
-| icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
+| icmp | 13 | 26 | matching: 1, scenario: 3, single: 9 | 1–4 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
 | ipv6-addressing | 19 | 44 | fill: 6, matching: 4, scenario: 5, single: 4 | 2–5 |
@@ -213,20 +213,26 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### icmp
 
 - `connectivity-testing`
+- `default-gateway`
 - `host-reachability`
 - `icmp`
 - `icmp-destination-unreachable`
 - `icmp-echo`
 - `icmp-filtering`
 - `icmp-time-exceeded`
+- `icmpv4`
 - `icmpv6`
 - `ipv4-ttl`
 - `ipv6-address-resolution`
+- `ipv6-hop-limit`
+- `loopback-address`
 - `neighbor-advertisement`
 - `neighbor-discovery`
 - `neighbor-solicitation`
 - `network-troubleshooting`
 - `ping`
+- `port-unreachable`
+- `protocol-unreachable`
 - `router-interfaces`
 - `routing-table-lookup`
 - `source-ip-selection`
@@ -756,7 +762,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `connected-routes` | 1 | network-layer |
 | `connectionless` | 1 | network-layer |
 | `connectionless-transport` | 1 | transport-layer |
-| `connectivity-testing` | 1 | icmp |
+| `connectivity-testing` | 3 | icmp |
 | `console-access` | 1 | basic-device-configuration |
 | `contention-based-access` | 2 | data-link-layer |
 | `controlled-access` | 1 | data-link-layer |
@@ -775,7 +781,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decapsulation` | 2 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
-| `default-gateway` | 6 | address-resolution, basic-device-configuration, network-layer, protocols-and-models, router-configuration, small-network |
+| `default-gateway` | 7 | address-resolution, basic-device-configuration, icmp, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
@@ -853,7 +859,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hextets` | 2 | ipv6-addressing |
 | `hierarchical-topology` | 1 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
-| `host-reachability` | 1 | icmp |
+| `host-reachability` | 3 | icmp |
 | `host-role` | 1 | network-components |
 | `host-troubleshooting` | 1 | address-resolution |
 | `http` | 5 | application-layer, protocols-and-models, transport-layer |
@@ -864,11 +870,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `iana` | 1 | transport-layer |
 | `icann` | 1 | network-types |
 | `icmp` | 2 | icmp |
-| `icmp-destination-unreachable` | 2 | icmp, network-layer |
+| `icmp-destination-unreachable` | 3 | icmp, network-layer |
 | `icmp-echo` | 1 | icmp |
 | `icmp-filtering` | 2 | icmp |
-| `icmp-time-exceeded` | 1 | icmp |
-| `icmpv6` | 6 | address-resolution, icmp, ipv6-addressing |
+| `icmp-time-exceeded` | 2 | icmp |
+| `icmpv4` | 1 | icmp |
+| `icmpv6` | 7 | address-resolution, icmp, ipv6-addressing |
 | `icmpv6-redirect` | 1 | address-resolution |
 | `ietf` | 2 | network-types, protocols-and-models |
 | `imap` | 2 | application-layer |
@@ -923,7 +930,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-fixed-header` | 1 | network-layer |
 | `ipv6-flow-label` | 2 | network-layer |
 | `ipv6-header-fields` | 2 | network-layer |
-| `ipv6-hop-limit` | 1 | network-layer |
+| `ipv6-hop-limit` | 2 | icmp, network-layer |
 | `ipv6-interface-configuration` | 2 | ipv6-addressing |
 | `ipv6-interface-id` | 1 | ipv6-addressing |
 | `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
@@ -958,7 +965,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `local-route` | 1 | network-layer |
 | `logical-topology` | 2 | network-topologies |
 | `longest-prefix-match` | 3 | network-layer |
-| `loopback-address` | 1 | ipv6-addressing |
+| `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 4 | ethernet-switching |
 | `mac-addressing` | 14 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
 | `mac-learning` | 2 | ethernet-switching |
@@ -1002,7 +1009,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scope` | 4 | network-types |
 | `network-security-controls` | 8 | network-security, network-types, reliable-networks |
 | `network-trends` | 3 | network-trends |
-| `network-troubleshooting` | 4 | icmp, small-network |
+| `network-troubleshooting` | 6 | icmp, small-network |
 | `next-hop` | 4 | ipv6-addressing, network-layer |
 | `next-hop-resolution` | 2 | network-layer |
 | `nic` | 1 | ethernet-switching |
@@ -1033,11 +1040,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-signaling` | 1 | physical-layer |
 | `physical-layer-troubleshooting` | 1 | basic-device-configuration |
 | `physical-topology` | 3 | network-topologies |
-| `ping` | 4 | icmp, small-network |
+| `ping` | 6 | icmp, small-network |
 | `point-to-point-topology` | 2 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 1 | ethernet-switching |
 | `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
+| `port-unreachable` | 1 | icmp |
 | `positional-notation` | 1 | number-systems |
 | `powerline-networking` | 4 | network-trends |
 | `prefix-length` | 12 | ipv4-addressing |
@@ -1048,6 +1056,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `protocol-data-units` | 1 | protocols-and-models |
 | `protocol-interaction` | 2 | protocols-and-models |
 | `protocol-suites` | 1 | protocols-and-models |
+| `protocol-unreachable` | 1 | icmp |
 | `protocols` | 1 | protocols-and-models |
 | `quality-of-service` | 6 | network-trends, reliable-networks |
 | `radio-frequency` | 1 | physical-layer |
@@ -1149,7 +1158,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
 | `token-passing` | 1 | data-link-layer |
-| `traceroute` | 5 | icmp, small-network |
+| `traceroute` | 6 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
 | `transport-layer` | 12 | protocols-and-models, transport-layer |
@@ -1190,7 +1199,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1199,11 +1208,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 40 |
+| matching | 41 |
 | multiple | 18 |
 | ordering | 12 |
-| scenario | 79 |
-| single | 116 |
+| scenario | 81 |
+| single | 117 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1212,10 +1221,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 85 |
-| 3 | 124 |
-| 4 | 51 |
+| 3 | 127 |
+| 4 | 52 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 12 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 13 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
