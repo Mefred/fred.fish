@@ -97,7 +97,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- Twenty-two additional question-image associations have been manually checked across the follow-up passes. The remaining 744 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
+- Twenty-two additional question-image associations have been manually checked across the follow-up passes. All 772 unresolved candidate records have been screened at thumbnail resolution. The remaining 744 unique images still require full-size review where an answer or concept depends on a diagram, screenshot, or answer mark. Many are repeated unmarked question slides, lesson summaries, or Packet Tracer activity screens.
 - The source-concept inventory now includes a first-pass objective-to-question map for all 17 modules. It is not yet a page-by-page audit of every question, answer, diagram, and Packet Tracer activity.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
