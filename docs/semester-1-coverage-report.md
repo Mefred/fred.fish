@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 230
+- **Questions:** 234
 - **Lessons represented:** 22
-- **Distinct concept tags:** 368
+- **Distinct concept tags:** 373
 
 ## Lesson coverage
 
@@ -20,7 +20,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 15 | 12 | fill: 7, matching: 2, multiple: 1, scenario: 2, single: 3 | 2–5 |
 | ipv6-addressing | 11 | 26 | fill: 4, matching: 2, scenario: 1, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
-| network-layer | 14 | 31 | fill: 1, matching: 2, multiple: 2, scenario: 4, single: 5 | 2–5 |
+| network-layer | 18 | 37 | fill: 1, matching: 2, multiple: 2, scenario: 8, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
@@ -195,6 +195,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ping`
 - `router-interfaces`
 - `routing-table-lookup`
+- `routing-table-troubleshooting`
+- `show-ip-route`
 - `source-ip-selection`
 - `traceroute`
 - `ttl`
@@ -302,6 +304,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `next-hop-resolution`
 - `packet-forwarding`
 - `route-selection`
+- `route-code-interpretation`
+- `route-troubleshooting`
 - `route-sources`
 - `routing`
 - `routing-configuration`
