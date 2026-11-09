@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 328
+- **Questions:** 329
 - **Lessons represented:** 22
 - **Distinct concept tags:** 550
 
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 10 | 32 | matching: 1, ordering: 2, scenario: 4, single: 3 | 1–4 |
+| small-network | 11 | 34 | matching: 1, ordering: 2, scenario: 4, single: 4 | 1–4 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
@@ -711,6 +711,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ios-debug`
 - `ios-verification-commands`
 - `ipv4-troubleshooting`
+- `ipv6-interface-verification`
 - `name-resolution`
 - `network-discovery`
 - `network-operations`
@@ -728,6 +729,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `show-ip-interface`
 - `show-ip-interface-brief`
 - `show-ip-route`
+- `show-ipv6-interface`
 - `show-protocols`
 - `show-running-config`
 - `show-version`
@@ -987,7 +989,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ios-interface-configuration` | 1 | basic-device-configuration |
 | `ios-navigation` | 1 | basic-device-configuration |
 | `ios-security-commands` | 1 | network-security |
-| `ios-verification-commands` | 11 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
+| `ios-verification-commands` | 12 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
 | `ip` | 2 | protocols-and-models |
 | `ip-addressing` | 2 | protocols-and-models |
 | `ip-addressing-services` | 1 | application-layer |
@@ -1027,7 +1029,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-hop-limit` | 2 | icmp, network-layer |
 | `ipv6-interface-configuration` | 2 | ipv6-addressing |
 | `ipv6-interface-id` | 1 | ipv6-addressing |
-| `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
+| `ipv6-interface-verification` | 3 | ipv6-addressing, router-configuration, small-network |
 | `ipv6-multicast` | 2 | ipv6-addressing |
 | `ipv6-neighbor-discovery` | 4 | address-resolution, ipv6-addressing |
 | `ipv6-network-prefix` | 2 | ipv6-addressing |
@@ -1233,7 +1235,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `show-ip-interface` | 1 | small-network |
 | `show-ip-interface-brief` | 3 | basic-device-configuration, router-configuration, small-network |
 | `show-ip-route` | 2 | network-layer, small-network |
-| `show-ipv6-interface` | 2 | ipv6-addressing, router-configuration |
+| `show-ipv6-interface` | 3 | ipv6-addressing, router-configuration, small-network |
 | `show-protocols` | 1 | small-network |
 | `show-running-config` | 1 | small-network |
 | `show-version` | 1 | small-network |
@@ -1341,7 +1343,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | multiple | 18 |
 | ordering | 13 |
 | scenario | 85 |
-| single | 122 |
+| single | 123 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1349,7 +1351,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 88 |
+| 2 | 89 |
 | 3 | 135 |
 | 4 | 64 |
 | 5 | 7 |
