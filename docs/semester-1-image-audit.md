@@ -129,7 +129,7 @@ Across batches 1–3, 108 candidate images have been screened at high-resolution
 
 The next 36 candidates (IMG-0518–IMG-0578) were screened. IMG-0545 was opened at native resolution and confirms the four twisted copper pairs in the existing UTP question. IMG-0557 was opened at native resolution and confirms coaxial construction; together with IMG-0324 it supports the new self-contained coaxial-identification question. The UTP update adds one source-image association and the new coax question adds two, bringing source-origin associations to 39 and total reviewed image-question associations to 48. The other 34 candidates are unmarked prompts or instructional slides. See [the batch 4 review log](./semester-1-image-review-batch-4.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. A native-resolution follow-up has now opened 24 of those images individually; eight marked-answer items were already linked to source questions, and the four cable images support the UTP and coaxial questions. The follow-up found no additional unambiguous answer marks or new source-image associations. The remaining 120 images from these four batches have contact-sheet-only review and still need native-resolution inspection where small marks or diagram details matter. The original OCR ZIP still labels 744 unique images (750 asset records) unresolved; that is the export's status count, not the post-review backlog. The original status fields remain unchanged in the Library.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. Native-resolution follow-ups have now opened 48 of those images individually; eight marked-answer items were already linked to source questions, and the four cable images support the UTP and coaxial questions. The additional follow-ups found no new unambiguous answer marks or source-image associations. The remaining 96 images from these four batches have contact-sheet-only review and still need native-resolution inspection where small marks or diagram details matter. The original OCR ZIP still labels 744 unique images (750 asset records) unresolved; that is the export's status count, not the post-review backlog. The original status fields remain unchanged in the Library.
 
 
 
@@ -153,6 +153,41 @@ A second native-resolution pass opened twelve previously contact-sheet-only cand
 | IMG-0466 | Switch source-MAC-table behavior question; all four radio options are empty | No marked answer key |
 
 The 12 native-resolution checks are additional to the prior 12 checks. They do not change the 39 source-origin image-question associations or nine AI-generated visual-context references (48 reviewed associations total). See [the native-resolution follow-up log](./semester-1-image-review-native-followup-1.md).
+
+
+
+### Native-resolution follow-up — 24 additional images
+
+A third native-resolution pass opened 24 more candidates from batches 1–4. All answer controls were unselected; the blue star graphic is a repeated slide decoration, not an answer mark. Several prompts are repeated variants of the same objective. No new source-origin question or image-question association was added.
+
+| Image | Native-resolution finding | Review decision |
+|---|---|---|
+| IMG-0408 | Data-link layer services; all six checkboxes are empty | No marked answer key |
+| IMG-0413 | Media-access-control functions; all six checkboxes are empty | No marked answer key |
+| IMG-0414 | MAC-sublayer functions; all five checkboxes are empty | No marked answer key |
+| IMG-0417 | Repeated MAC-sublayer functions prompt with a different option set; all five checkboxes are empty | Duplicate objective variant; no marked answer key |
+| IMG-0420 | LLC-sublayer functions; all five checkboxes are empty | No marked answer key |
+| IMG-0421 | Data-link frame trailer contents; all four radio options are empty | No marked answer key |
+| IMG-0426 | Repeated LLC-sublayer functions prompt; all five checkboxes are empty | Duplicate objective variant; no marked answer key |
+| IMG-0427 | Media communication type that does not require arbitration; all four radio options are empty | No marked answer key |
+| IMG-0428 | LLC-sublayer functions; all five checkboxes are empty | No marked answer key |
+| IMG-0432 | Data-link frame-header fields; all four radio options are empty | No marked answer key |
+| IMG-0440 | Extended-star topology definition; all four radio options are empty | No marked answer key |
+| IMG-0447 | Broadcast destination MAC behavior; all four radio options are empty | No marked answer key |
+| IMG-0470 | Multicast destination MAC behavior; all four radio options are empty | No marked answer key |
+| IMG-0483 | Switch behavior when source MAC is already in the MAC table; all four radio options are empty | No marked answer key |
+| IMG-0488 | Ethernet frame acceptance/discard fields; all five checkboxes are empty | No marked answer key |
+| IMG-0489 | Cut-through switching examples; all five checkboxes are empty | No marked answer key |
+| IMG-0494 | Repeated source-MAC-table refresh question with reordered options; all four radio options are empty | Duplicate objective variant; no marked answer key |
+| IMG-0496 | Switching method that uses CRC; all four radio options are empty | No marked answer key |
+| IMG-0501 | Repeated CRC switching-method question; all four radio options are empty | Duplicate prompt variant; no marked answer key |
+| IMG-0503 | LLC-sublayer characteristic; all four radio options are empty | No marked answer key |
+| IMG-0506 | Repeated extended-star topology question; all four radio options are empty | Duplicate prompt variant; no marked answer key |
+| IMG-0507 | Host behavior for an unknown destination MAC; all four radio options are empty | No marked answer key |
+| IMG-0508 | Physical-media module-practice summary slide | Instructional exhibit; no question answer key |
+| IMG-0511 | Repeated LLC-sublayer functions prompt; all five checkboxes are empty | Duplicate objective variant; no marked answer key |
+
+The 24 native-resolution checks in this follow-up are additional to the first 24. The total is now 48 individually opened images out of 144 candidates, leaving 96 with contact-sheet-only review. The 39 source-origin image-question associations and nine AI-generated visual-context references (48 reviewed associations total) remain unchanged. See [the native-resolution follow-up log](./semester-1-image-review-native-followup-2.md).
 
 ## Module classification
 
