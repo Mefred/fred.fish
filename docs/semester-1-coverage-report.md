@@ -2,16 +2,16 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 308
+- **Questions:** 312
 - **Lessons represented:** 22
-- **Distinct concept tags:** 497
+- **Distinct concept tags:** 504
 
 ## Lesson coverage
 
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
 | address-resolution | 11 | 20 | fill: 1, matching: 2, scenario: 3, single: 5 | 1–4 |
-| application-layer | 10 | 26 | matching: 2, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–4 |
+| application-layer | 14 | 35 | matching: 5, multiple: 1, ordering: 1, scenario: 3, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
 | ethernet-switching | 16 | 36 | fill: 1, matching: 2, scenario: 3, single: 10 | 1–4 |
@@ -68,22 +68,31 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `dhcp`
 - `dns`
 - `dns-resource-records`
+- `dns-troubleshooting`
 - `email-protocols`
+- `file-sharing-services`
+- `ftp`
 - `http`
+- `http-get`
+- `http-post`
+- `http-put`
 - `hybrid-p2p`
 - `imap`
 - `ip-addressing-services`
 - `mx-record`
 - `name-resolution`
 - `ns-record`
+- `nslookup`
 - `osi-model`
 - `peer-to-peer`
 - `pop3`
 - `port-numbers`
 - `presentation-layer`
 - `session-layer`
+- `smb`
 - `smtp`
 - `tcp-ip-model`
+- `tftp`
 - `udp`
 - `web-protocols`
 
@@ -721,7 +730,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `address-resolution` | 8 | address-resolution |
 | `administrative-distance` | 3 | network-layer |
 | `aging-timer` | 1 | ethernet-switching |
-| `application-layer` | 2 | application-layer, protocols-and-models |
+| `application-layer` | 3 | application-layer, protocols-and-models |
 | `application-layer-services` | 3 | application-layer |
 | `arp` | 10 | address-resolution, protocols-and-models |
 | `arp-cache` | 3 | address-resolution |
@@ -753,7 +762,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `cidr` | 1 | ipv4-addressing |
 | `circuit-switching` | 1 | reliable-networks |
 | `client-role` | 1 | network-components |
-| `client-server-model` | 6 | application-layer, network-components |
+| `client-server-model` | 7 | application-layer, network-components |
 | `cloud-computing` | 3 | network-trends |
 | `cloud-deployment-models` | 1 | network-trends |
 | `coaxial-cable` | 1 | physical-layer |
@@ -797,10 +806,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `device-resource-management` | 1 | small-network |
 | `dhcp` | 3 | application-layer, basic-device-configuration |
 | `dhcpv6` | 2 | basic-device-configuration, ipv6-addressing |
-| `dns` | 5 | application-layer, network-types, transport-layer |
+| `dns` | 6 | application-layer, network-types, transport-layer |
 | `dns-client-configuration` | 1 | basic-device-configuration |
 | `dns-resource-records` | 1 | application-layer |
-| `dns-troubleshooting` | 1 | small-network |
+| `dns-troubleshooting` | 2 | application-layer, small-network |
 | `dotted-decimal-notation` | 1 | number-systems |
 | `dsl` | 1 | internet-connections |
 | `dual-stack` | 1 | ipv6-addressing |
@@ -840,6 +849,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fiber-optic-cabling` | 6 | physical-layer |
 | `fiber-optic-connectors` | 1 | physical-layer |
 | `fiber-optic-media` | 1 | internet-connections |
+| `file-sharing-services` | 1 | application-layer |
 | `firewall-filtering` | 4 | network-security |
 | `flash` | 1 | router-configuration |
 | `flow-control` | 3 | transport-layer |
@@ -853,6 +863,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `frame-size` | 1 | ethernet-switching |
 | `frame-structure` | 1 | data-link-layer |
 | `frame-type-field` | 1 | data-link-layer |
+| `ftp` | 1 | application-layer |
 | `full-duplex` | 3 | data-link-layer, ethernet-switching |
 | `full-mesh` | 1 | network-topologies |
 | `global-configuration` | 1 | basic-device-configuration |
@@ -870,7 +881,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-reachability` | 3 | icmp |
 | `host-role` | 1 | network-components |
 | `host-troubleshooting` | 1 | address-resolution |
-| `http` | 5 | application-layer, protocols-and-models, transport-layer |
+| `http` | 6 | application-layer, protocols-and-models, transport-layer |
+| `http-get` | 1 | application-layer |
+| `http-post` | 1 | application-layer |
+| `http-put` | 1 | application-layer |
 | `https` | 1 | transport-layer |
 | `hub-and-spoke-topology` | 1 | data-link-layer |
 | `hybrid-p2p` | 1 | application-layer |
@@ -996,7 +1010,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multimode-fiber` | 3 | physical-layer |
 | `multiplexing` | 1 | transport-layer |
 | `mx-record` | 1 | application-layer |
-| `name-resolution` | 2 | application-layer, small-network |
+| `name-resolution` | 3 | application-layer, small-network |
 | `neighbor-advertisement` | 2 | address-resolution, icmp |
 | `neighbor-discovery` | 1 | icmp |
 | `neighbor-solicitation` | 3 | address-resolution, icmp, ipv6-addressing |
@@ -1025,13 +1039,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `nic` | 1 | ethernet-switching |
 | `no-shutdown` | 5 | basic-device-configuration, ipv6-addressing, router-configuration |
 | `ns-record` | 1 | application-layer |
-| `nslookup` | 1 | small-network |
+| `nslookup` | 2 | application-layer, small-network |
 | `number-systems` | 9 | number-systems |
 | `nvram` | 3 | router-configuration |
 | `octet` | 2 | number-systems |
 | `online-collaboration` | 1 | network-trends |
 | `open-standards` | 1 | protocols-and-models |
-| `osi-model` | 7 | application-layer, protocols-and-models |
+| `osi-model` | 8 | application-layer, protocols-and-models |
 | `oui` | 1 | ethernet-switching |
 | `packet-forwarding` | 2 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
@@ -1059,7 +1073,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `positional-notation` | 1 | number-systems |
 | `powerline-networking` | 4 | network-trends |
 | `prefix-length` | 12 | ipv4-addressing |
-| `presentation-layer` | 1 | application-layer |
+| `presentation-layer` | 2 | application-layer |
 | `private-ipv4` | 1 | ipv4-addressing |
 | `privileged-exec` | 1 | basic-device-configuration |
 | `problem-identification` | 1 | small-network |
@@ -1121,7 +1135,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `selective-acknowledgment` | 1 | transport-layer |
 | `sequence-numbers` | 1 | transport-layer |
 | `server-role` | 1 | network-components |
-| `session-layer` | 1 | application-layer |
+| `session-layer` | 2 | application-layer |
 | `shared-bandwidth` | 1 | internet-connections |
 | `shared-medium` | 2 | network-topologies, physical-layer |
 | `shared-memory-buffering` | 1 | ethernet-switching |
@@ -1134,6 +1148,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `single-mode-fiber` | 3 | physical-layer |
 | `single-point-of-failure` | 2 | network-topologies |
 | `slaac` | 5 | basic-device-configuration, ipv6-addressing |
+| `smb` | 1 | application-layer |
 | `smtp` | 2 | application-layer |
 | `socket-pairs` | 1 | transport-layer |
 | `source-destination-addressing` | 1 | protocols-and-models |
@@ -1167,6 +1182,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 3 | transport-layer |
 | `tcp-windowing` | 2 | transport-layer |
+| `tftp` | 1 | application-layer |
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
 | `token-passing` | 1 | data-link-layer |
@@ -1190,7 +1206,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `vlsm` | 4 | ipv4-addressing |
 | `wan` | 5 | internet-connections, network-types |
 | `wan-topologies` | 1 | data-link-layer |
-| `web-protocols` | 1 | application-layer |
+| `web-protocols` | 2 | application-layer |
 | `well-known-ports` | 1 | transport-layer |
 | `wifi` | 1 | physical-layer |
 | `wimax` | 1 | physical-layer |
@@ -1211,7 +1227,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 283. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1220,10 +1236,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 42 |
+| matching | 45 |
 | multiple | 18 |
 | ordering | 12 |
-| scenario | 82 |
+| scenario | 83 |
 | single | 119 |
 | true-false | 1 |
 
@@ -1233,10 +1249,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 85 |
-| 3 | 128 |
-| 4 | 55 |
+| 3 | 131 |
+| 4 | 56 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 14 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 15 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
