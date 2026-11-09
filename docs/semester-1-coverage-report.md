@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 287
+- **Questions:** 291
 - **Lessons represented:** 22
-- **Distinct concept tags:** 470
+- **Distinct concept tags:** 480
 
 ## Lesson coverage
 
@@ -14,7 +14,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | application-layer | 10 | 26 | matching: 2, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
-| ethernet-switching | 12 | 25 | fill: 1, scenario: 2, single: 9 | 1–4 |
+| ethernet-switching | 16 | 36 | fill: 1, matching: 2, scenario: 3, single: 10 | 1–4 |
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
@@ -180,16 +180,27 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ethernet-standards`
 - `ethernet-switching`
 - `ethernet-troubleshooting`
+- `fast-forward-switching`
+- `fragment-free-switching`
+- `frame-integrity`
 - `frame-size`
 - `full-duplex`
+- `hexadecimal`
 - `mac-address-table`
 - `mac-addressing`
 - `mac-learning`
+- `mac-move`
 - `nic`
+- `oui`
+- `port-based-memory`
+- `shared-memory-buffering`
 - `store-and-forward-switching`
 - `switch-learning`
+- `switch-memory-buffering`
 - `switch-port-settings`
+- `switching-latency`
 - `unknown-unicast-flooding`
+- `vendor-identification`
 
 ### icmp
 
@@ -734,7 +745,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `crosstalk` | 3 | physical-layer |
 | `csma-ca` | 1 | data-link-layer |
 | `csma-cd` | 2 | data-link-layer, ethernet-switching |
-| `cut-through-switching` | 1 | ethernet-switching |
+| `cut-through-switching` | 2 | ethernet-switching |
 | `data-centers` | 2 | network-trends |
 | `data-link-frame` | 1 | data-link-layer |
 | `data-link-layer` | 9 | data-link-layer, protocols-and-models |
@@ -776,12 +787,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 1 | network-layer |
 | `ethernet-standards` | 1 | ethernet-switching |
-| `ethernet-switching` | 4 | ethernet-switching |
+| `ethernet-switching` | 5 | ethernet-switching |
 | `ethernet-troubleshooting` | 1 | ethernet-switching |
 | `ethernet-wan` | 1 | internet-connections |
 | `eui-64` | 1 | ipv6-addressing |
 | `extended-star-topology` | 1 | network-topologies |
 | `extranet` | 1 | network-types |
+| `fast-forward-switching` | 1 | ethernet-switching |
 | `fault-isolation` | 1 | network-topologies |
 | `fault-tolerance` | 7 | network-topologies, reliable-networks, small-network |
 | `fcs` | 2 | data-link-layer |
@@ -794,10 +806,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `firewall-filtering` | 4 | network-security |
 | `flash` | 1 | router-configuration |
 | `flow-control` | 2 | transport-layer |
+| `fragment-free-switching` | 1 | ethernet-switching |
 | `frame-boundaries` | 1 | data-link-layer |
 | `frame-control-field` | 1 | data-link-layer |
 | `frame-encapsulation` | 1 | data-link-layer |
 | `frame-fields` | 1 | data-link-layer |
+| `frame-integrity` | 1 | ethernet-switching |
 | `frame-payload` | 1 | data-link-layer |
 | `frame-size` | 1 | ethernet-switching |
 | `frame-structure` | 1 | data-link-layer |
@@ -808,7 +822,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `global-unicast-address` | 2 | ipv6-addressing |
 | `goodput` | 1 | physical-layer |
 | `half-duplex` | 2 | data-link-layer, physical-layer |
-| `hexadecimal` | 3 | number-systems |
+| `hexadecimal` | 4 | ethernet-switching, number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
 | `hexadecimal-to-binary` | 1 | number-systems |
 | `hexadecimal-to-decimal` | 3 | number-systems |
@@ -919,9 +933,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `logical-topology` | 2 | network-topologies |
 | `longest-prefix-match` | 3 | network-layer |
 | `loopback-address` | 1 | ipv6-addressing |
-| `mac-address-table` | 3 | ethernet-switching |
-| `mac-addressing` | 12 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
-| `mac-learning` | 1 | ethernet-switching |
+| `mac-address-table` | 4 | ethernet-switching |
+| `mac-addressing` | 13 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
+| `mac-learning` | 2 | ethernet-switching |
+| `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
 | `media-access-control` | 2 | data-link-layer |
 | `media-independent` | 1 | network-layer |
@@ -974,6 +989,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `online-collaboration` | 1 | network-trends |
 | `open-standards` | 1 | protocols-and-models |
 | `osi-model` | 7 | application-layer, protocols-and-models |
+| `oui` | 1 | ethernet-switching |
 | `packet-forwarding` | 2 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
 | `password-encryption` | 1 | basic-device-configuration |
@@ -994,6 +1010,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ping` | 4 | icmp, small-network |
 | `point-to-point-topology` | 2 | data-link-layer |
 | `pop3` | 2 | application-layer |
+| `port-based-memory` | 1 | ethernet-switching |
 | `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
 | `positional-notation` | 1 | number-systems |
 | `powerline-networking` | 4 | network-trends |
@@ -1058,6 +1075,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `session-layer` | 1 | application-layer |
 | `shared-bandwidth` | 1 | internet-connections |
 | `shared-medium` | 2 | network-topologies, physical-layer |
+| `shared-memory-buffering` | 1 | ethernet-switching |
 | `shielded-twisted-pair` | 1 | physical-layer |
 | `show-cdp-neighbors` | 1 | small-network |
 | `show-ip-interface-brief` | 2 | basic-device-configuration, small-network |
@@ -1080,15 +1098,17 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `static-route` | 1 | network-layer |
 | `static-routes` | 1 | network-layer |
 | `static-routing` | 10 | network-layer |
-| `store-and-forward-switching` | 1 | ethernet-switching |
+| `store-and-forward-switching` | 2 | ethernet-switching |
 | `straight-through-cable` | 1 | physical-layer |
 | `subnet-mask` | 4 | ipv4-addressing |
 | `subnet-sizing` | 8 | ipv4-addressing |
 | `svi` | 1 | basic-device-configuration |
 | `switch-default-gateway` | 1 | basic-device-configuration |
-| `switch-learning` | 1 | ethernet-switching |
+| `switch-learning` | 2 | ethernet-switching |
 | `switch-management` | 2 | basic-device-configuration, router-configuration |
+| `switch-memory-buffering` | 1 | ethernet-switching |
 | `switch-port-settings` | 1 | ethernet-switching |
+| `switching-latency` | 1 | ethernet-switching |
 | `tcp` | 7 | protocols-and-models, transport-layer |
 | `tcp-acknowledgments` | 2 | transport-layer |
 | `tcp-connection-establishment` | 1 | transport-layer |
@@ -1113,6 +1133,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `unknown-unicast-flooding` | 1 | ethernet-switching |
 | `user-exec` | 1 | basic-device-configuration |
 | `utp-cabling` | 5 | physical-layer |
+| `vendor-identification` | 1 | ethernet-switching |
 | `verification` | 1 | small-network |
 | `video-communications` | 1 | network-trends |
 | `vlsm` | 4 | ipv4-addressing |
@@ -1139,7 +1160,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 273. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1148,11 +1169,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 36 |
+| matching | 38 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 72 |
-| single | 115 |
+| scenario | 73 |
+| single | 116 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1161,10 +1182,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 84 |
-| 3 | 119 |
-| 4 | 44 |
+| 3 | 121 |
+| 4 | 46 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
