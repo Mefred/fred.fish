@@ -24,10 +24,12 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Visually verified image-question associations | 34 |
+| Visually verified source-origin image-question associations | 34 |
+| Visual references used by AI-generated questions | 4 |
+| Total visually reviewed image-question associations | 38 |
 | Candidate asset records visually reviewed as not questions | 4 |
-| Unique unresolved candidate images remaining | 748 |
-| Unresolved candidate asset records (including duplicate references) | 754 |
+| Unique unresolved candidate images remaining | 744 |
+| Unresolved candidate asset records (including duplicate references) | 750 |
 
 The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
 
@@ -105,5 +107,16 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 - Six new image candidates have been visually reviewed and associated with active source-origin questions.
 - The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
-- The remaining 748 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
+- The remaining 744 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
 - The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
+
+
+## Image-informed questions with inferred answers
+
+The following candidate images were reviewed for prompt/diagram context, but the answer was derived from networking knowledge rather than a marked source answer key. These questions remain explicitly `ai-generated`:
+
+| Image reference | Active question ID | Applied concept |
+|---|---|---|
+| IMG-1576, IMG-1787 | `s4-utp-termination-diagnosis-applied-001` | Excessive untwisted wire length at an RJ-45 termination increases crosstalk risk |
+| IMG-1714 | `s1-network-characteristics-failover-applied-001` | Security, QoS, and fault tolerance in a redundant WAN scenario |
+| IMG-1088 | `s11-subnet-host-membership-matching-applied-001` | Match /27 subnet ranges to usable host addresses; reject broadcast/network addresses |
