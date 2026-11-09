@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 258 unique questions  
-**Concept tags:** 405 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 238 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 266 unique questions  
+**Concept tags:** 423 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 246 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -71,7 +71,7 @@ The Module 8 source inventory decomposes the IPv4 and IPv6 packet-header objecti
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
 
-The 249-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 266-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
@@ -86,3 +86,6 @@ The Network Layer bank now contains four additional applied route-configuration 
 
 
 IPv4 Addressing now includes five additional applied subnetting/VLSM exercises: /29 network and broadcast identification, /23 broadcast calculation, subnet count and usable-host capacity when splitting a /24 into /27s, sizing a subnet for 100 hosts, and allocating a second VLSM subnet after a /25 allocation. These are AI-generated practice items tied to the subnetting source screenshots. The lesson now has 20 active questions.
+
+
+The Physical Layer bank has now grown from 12 to 20 questions. Eight AI-generated items add copper limitation matching, STP selection, coaxial-cable applications, SMF/MMF characteristics, ST/SC/LC connector names, fiber dispersion, wireless-standard matching, and WLAN shared-medium troubleshooting. These items use existing Physical Layer image references already represented in the bank and are mapped in the Module 4 first-pass topic-to-question table. Visual confirmation of the exact connector and cable exhibits remains outstanding.
