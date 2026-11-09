@@ -1,16 +1,18 @@
 # Semester 1 question bank audit
 
-**Current bank:** 381 unique questions  
+**Current bank:** 387 unique questions  
 **Concept tags:** 605 unique concept identifiers  
-**Source provenance:** 24 source questions; 347 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions; 363 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Latest applied troubleshooting additions
+
+The latest six-question batch expands Address Resolution, IPv6 Addressing, and ICMP with applied scenarios for ARP forwarding and cache behavior, SLAAC and DAD, and traceroute hop discovery.
 
 Six new questions expand subnetting and switching practice: /27 usable host-range calculation, minimum prefix selection for a 28-host LAN, directed-broadcast calculation, off-subnet default-gateway diagnosis, router-on-a-stick inter-VLAN routing, and Layer 2 switch management default-gateway configuration.
 
 The preceding five-question Ethernet-switching batch added VLAN-scoped unknown-unicast flooding, trunk versus access selection, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping diagnosis.
 
-The bank now contains 381 questions across 605 distinct concept tags. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
+The bank now contains 387 questions across 605 distinct concept tags. The latest six-question batch adds remote-network ARP resolution, stale-cache recovery, local-link ARP boundaries, SLAAC Router Advertisement diagnosis, IPv6 Duplicate Address Detection, and traceroute TTL progression. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
 
 ## Recent expansion
 
