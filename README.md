@@ -69,7 +69,7 @@ The source-processing audit and repeatable OneNote image-recovery procedure are 
 
 The Cisco learning area includes a reconstructed 17-module Semester 1 course at `/cisco/learning/semester-1/`, adaptive practice at `/cisco/practice/`, and a learner dashboard at `/cisco/progress/`.
 
-The current practice bank contains 600 questions across 22 lesson IDs and 607 concept tags. Questions include single-choice, multiple-select, true/false, fill-in, matching, ordering, and scenario/troubleshooting formats. Source-origin questions are reserved for prompts and answers supported by recovered source text or visually checked source material. New questions whose answers are derived rather than explicitly supplied by the source are marked AI-generated.
+The current practice bank contains 602 questions across 22 lesson IDs and 607 concept tags. Questions include single-choice, multiple-select, true/false, fill-in, matching, ordering, and scenario/troubleshooting formats. Source-origin questions are reserved for prompts and answers supported by recovered source text or visually checked source material. New questions whose answers are derived rather than explicitly supplied by the source are marked AI-generated.
 
 Adaptive practice uses concept-level performance, recent accuracy, review due dates, difficulty fit, and question-history avoidance to select sessions. Progress, mastery, XP, streaks, and session history are stored in the current browser's local storage. There is no account system, backend, or cross-device synchronization in this release.
 
