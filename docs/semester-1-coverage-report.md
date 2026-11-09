@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 239
+- **Questions:** 244
 - **Lessons represented:** 22
 - **Distinct concept tags:** 373
 
@@ -18,7 +18,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
-| ipv6-addressing | 11 | 26 | fill: 4, matching: 2, scenario: 1, single: 4 | 2–5 |
+| ipv6-addressing | 16 | 29 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 18 | 37 | fill: 1, matching: 2, multiple: 2, scenario: 8, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
