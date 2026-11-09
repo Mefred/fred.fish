@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 324
+- **Questions:** 325
 - **Lessons represented:** 22
-- **Distinct concept tags:** 542
+- **Distinct concept tags:** 548
 
 ## Lesson coverage
 
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 9 | 25 | ordering: 2, scenario: 4, single: 3 | 1–4 |
+| small-network | 10 | 32 | matching: 1, ordering: 2, scenario: 4, single: 3 | 1–4 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
@@ -717,8 +717,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `redundancy`
 - `remote-network-communication`
 - `root-cause-analysis`
+- `show-arp`
 - `show-cdp-neighbors`
+- `show-interfaces`
+- `show-ip-interface`
 - `show-ip-interface-brief`
+- `show-ip-route`
+- `show-protocols`
+- `show-running-config`
+- `show-version`
 - `traceroute`
 - `troubleshooting`
 - `troubleshooting-methodology`
@@ -975,7 +982,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ios-interface-configuration` | 1 | basic-device-configuration |
 | `ios-navigation` | 1 | basic-device-configuration |
 | `ios-security-commands` | 1 | network-security |
-| `ios-verification-commands` | 10 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
+| `ios-verification-commands` | 11 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
 | `ip` | 2 | protocols-and-models |
 | `ip-addressing` | 2 | protocols-and-models |
 | `ip-addressing-services` | 1 | application-layer |
@@ -1213,10 +1220,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `shared-medium` | 2 | network-topologies, physical-layer |
 | `shared-memory-buffering` | 1 | ethernet-switching |
 | `shielded-twisted-pair` | 1 | physical-layer |
+| `show-arp` | 1 | small-network |
 | `show-cdp-neighbors` | 1 | small-network |
+| `show-interfaces` | 1 | small-network |
+| `show-ip-interface` | 1 | small-network |
 | `show-ip-interface-brief` | 3 | basic-device-configuration, router-configuration, small-network |
-| `show-ip-route` | 1 | network-layer |
+| `show-ip-route` | 2 | network-layer, small-network |
 | `show-ipv6-interface` | 2 | ipv6-addressing, router-configuration |
+| `show-protocols` | 1 | small-network |
+| `show-running-config` | 1 | small-network |
+| `show-version` | 1 | small-network |
 | `signal-integrity` | 2 | physical-layer |
 | `single-mode-fiber` | 3 | physical-layer |
 | `single-point-of-failure` | 2 | network-topologies |
@@ -1308,7 +1321,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 311. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 316. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1317,7 +1330,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 54 |
+| matching | 55 |
 | multiple | 18 |
 | ordering | 13 |
 | scenario | 85 |
@@ -1331,7 +1344,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 1 | 34 |
 | 2 | 85 |
 | 3 | 135 |
-| 4 | 63 |
+| 4 | 64 |
 | 5 | 7 |
 
 ## Interpretation and limits
