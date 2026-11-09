@@ -227,6 +227,19 @@ The recovered Module 15 objective is to explain how application-layer protocols 
 
 Four new AI-generated questions add HTTP method matching, presentation/session layer roles, nslookup troubleshooting, and FTP/TFTP/SMB comparison. They are based on recovered Module 15 notes and existing source references, not presented as verbatim source questions. The HTTP exchange, DNS hierarchy, and file-sharing diagrams still need direct visual verification.
 
+## Module 16 first-pass topic-to-question mapping
+
+The recovered Module 16 objective is to configure switches and routers with device-hardening features. Its source topics cover security threats and vulnerabilities, network attacks, attack mitigation, and device security. The active `network-security` lesson now has 11 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Security Threats and Vulnerabilities | Internal/external threat actors; technological, configuration, and policy vulnerabilities; physical hardware, environmental, electrical, and maintenance threats | `security-threat-vectors`, `insider-threat`, `vulnerabilities`, `technological-vulnerability`, `configuration-vulnerability`, `security-policy-vulnerability` | Improved; new matching item distinguishes all three vulnerability classes. Physical threat categories and specific threat outcomes still need direct question coverage. |
+| Network Attacks | Malware (virus, worm, Trojan); reconnaissance, access, and DoS; password, trust exploitation, port redirection, and man-in-the-middle attacks | `malware`, `virus`, `worm`, `trojan-horse`, `network-attacks`, `reconnaissance-attacks`, `access-attacks`, `denial-of-service` | Improved; new matching items cover malware behavior and the three major attack categories. Specific access-attack techniques and DoS examples remain under-practiced. |
+| Network Attack Mitigation | Defense in depth; firewalls and filtering; VPN; IPS; endpoint protection; AAA; physical controls | `defense-in-depth`, `firewall-filtering`, `endpoint-security`, `network-security-controls`, `aaa` | Represented for layered controls, firewall/endpoint protection, and AAA. VPN, IPS, and firewall filtering modes (packet, application, URL, stateful inspection) need more direct comparison. |
+| Device Security | Strong passwords/passphrases; disable unused services; secure management with SSH; local user database; RSA keys; VTY access; password protection, login blocking, exec timeout | `authentication`, `authorization`, `accounting`, `aaa` | Partial; AAA functions are tested, but the source's router/switch hardening commands and SSH configuration sequence need applied CLI practice. |
+
+Three new AI-generated questions add malware-type matching, attack-category matching, and vulnerability-category matching. They are derived from recovered Module 16 notes and existing source references, not presented as verbatim source questions. The SSH configuration Packet Tracer exhibit and device-hardening command examples still require direct visual review and a practical configuration question.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
