@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **600** |
-| Unique question IDs | 600 |
-| Unique normalized prompts | 600 |
+| Active questions | **602** |
+| Unique question IDs | 602 |
+| Unique normalized prompts | 602 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 607 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 560 |
+| AI-generated questions | 562 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -22,9 +22,9 @@ The current 607 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 414 |
-| 3 | 76 |
-| 4 | 34 |
+| 2 | 410 |
+| 3 | 78 |
+| 4 | 36 |
 | 5 | 21 |
 | 6 | 18 |
 | 7 | 9 |
@@ -41,7 +41,7 @@ The current 607 concept tags are not evenly represented. This distribution makes
 | 19 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 414 concepts (68.2%) sit exactly at the two-question minimum. Future expansion should prioritize concepts with thin coverage and add varied assessment modes or applied contexts only when the source supports the underlying learning objective.
+**Priority implication:** 410 concepts (67.5%) sit exactly at the two-question minimum. Future expansion should prioritize concepts with thin coverage and add varied assessment modes or applied contexts only when the source supports the underlying learning objective.
 
 ## Question formats
 
@@ -53,8 +53,8 @@ The current 607 concept tags are not evenly represented. This distribution makes
 | Fill in the blank | 52 |
 | Matching | 98 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 165 |
-| **Total** | **600** |
+| Scenario / troubleshooting | 167 |
+| **Total** | **602** |
 
 ## Difficulty
 
@@ -63,12 +63,12 @@ The current 607 concept tags are not evenly represented. This distribution makes
 | 1 — Introductory | 45 |
 | 2 — Foundational | 168 |
 | 3 — Applied | 263 |
-| 4 — Advanced | 102 |
+| 4 — Advanced | 104 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 600 questions during the full expansion. The 207 additions comprise 191 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 602 questions during the full expansion. The 209 additions comprise 193 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -77,7 +77,8 @@ The expansion adds distinct practice across:
 - IPv6 addressing, compression, EUI-64, SLAAC, DHCPv6, Neighbor Discovery, multicast, anycast, and coexistence.
 - TCP connection setup, sequence and acknowledgment numbers, SACK, receive windows, congestion control, MSS/MTU, UDP, ports, DNS, DHCP, HTTP, and file-sharing protocols.
 - AAA, ACLs, firewall filtering, VPN/IPS, malware, attack categories, vulnerabilities, and physical security.
-- DHCP/APIPA, DNS cache and scope faults, CDP, ping/traceroute, route-table analysis, traffic baselines, and multi-device VLAN troubleshooting.
+- DHCP/APIPA, DNS cache and scope faults, CDP, ping/traceroute, route-table analysis, traffic baselines, protocol-analyzer capture planning, and multi-device VLAN troubleshooting.
+- Two additional Module 17 applied scenarios compare measured latency with a documented baseline and select representative protocol-analyzer capture conditions.
 
 ## Additional visually verified source questions
 
@@ -123,7 +124,7 @@ Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Ded
 
 GitHub Actions run #42682183545 passed on commit `111bc2b`, including the matching-answer regression tests. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes. Later changes to matching-input validation and adaptive lesson diversity are checked by the current PR workflow; consult the PR Checks tab for the latest result.
 
-Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
+Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest two Module 17 additions bring the bank to 602 questions; the updated generated report records 48 questions in `small-network`.
 
 ## Remaining source and review limitations
 
