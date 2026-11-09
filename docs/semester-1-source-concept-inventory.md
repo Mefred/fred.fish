@@ -242,7 +242,7 @@ Five new AI-generated questions add malware-type matching, attack-category match
 
 ## Module 17 first-pass topic-to-question mapping
 
-The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson now has ten questions.
+The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson now has 17 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
