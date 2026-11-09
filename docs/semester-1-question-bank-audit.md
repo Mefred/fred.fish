@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 244 unique questions  
+**Current bank:** 249 unique questions  
 **Concept tags:** 373 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 224 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 229 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -19,6 +19,8 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 - 7 questions grounded in IPv4 addressing and Network Layer screenshots, covering /27 prefix notation, /26 usable host capacity, /22 broadcast calculation, sizing a subnet for 61 hosts, routing-table behavior, metric selection, and IP's connectionless/media-independent properties.
 - 6 questions grounded in routing and route-table screenshots, covering static-route syntax, default-route syntax, C/L route codes, administrative distance versus metric, no-route behavior, and next-hop resolution on Ethernet.
 
+A further five applied Network Layer scenarios exercise two-router static-route configuration, missing return paths, route-table interpretation, longest-prefix match, and configuration persistence after reload.
+
 ## Format coverage
 
 | Format | Questions |
@@ -29,8 +31,8 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 | Fill in the blank | 30 |
 | Matching | 20 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 54 |
-| **Total** | **244** |
+| Scenario / troubleshooting | 59 |
+| **Total** | **249** |
 
 ## Difficulty coverage
 
