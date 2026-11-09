@@ -61,11 +61,11 @@ async function improveLegacyAccessibility(directory) {
     );
     html = html.replace(
       /<div class="lesson-table-wrap"(?![^>]*tabindex)/g,
-      '<div class="lesson-table-wrap" role="region" aria-label="Scrollable lesson table" tabindex="0"',
+      '<div class="lesson-table-wrap" tabindex="0"',
     );
     html = html.replace(
       /<div class="media-table-wrap"(?![^>]*tabindex)/g,
-      '<div class="media-table-wrap" role="region" aria-label="Scrollable media table" tabindex="0"',
+      '<div class="media-table-wrap" tabindex="0"',
     );
     html = html.replace(/<pre(?![^>]*tabindex)([^>]*)>/g, '<pre$1 tabindex="0">');
     await writeFile(path, html);
