@@ -24,7 +24,7 @@ Every existing concept tag has at least two question records. This is a bank-cov
 | Multiple select | 33 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 97 |
+| Matching | 98 |
 | Ordering | 20 |
 | Scenario / troubleshooting | 165 |
 | **Total** | **600** |
