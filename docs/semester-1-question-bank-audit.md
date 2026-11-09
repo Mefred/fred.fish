@@ -192,3 +192,15 @@ Added six distinct questions to the small-network lesson, bringing it to 17 ques
 - One source-origin question (Q352) tests IOS extended ping and selecting a source address.
 - Five AI-generated applied questions test Windows APIPA/DHCP diagnosis from ipconfig /all, host ARP-cache inspection with arp -a, IOS extended traceroute source selection, small-network device-selection criteria, and first-step isolation when the host's physical link is down.
 - The source notes also identify ipconfig /displaydns, ipconfig /release, ipconfig /renew, Linux/macOS host commands, network baselines, and trace output interpretation as further practice targets. These are not claimed complete by this batch.
+
+
+## Module 17 DNS, baseline, trace, and performance troubleshooting
+
+Added five applied questions to the small-network lesson, bringing it to 22 questions:
+- DNS failure isolation with `nslookup` after numeric-IP reachability succeeds.
+- DHCP lease refresh using `ipconfig /release` followed by `ipconfig /renew`.
+- Interpreting a missing intermediate traceroute response when later hops and the destination respond.
+- Comparing abnormal WAN utilization against an established network baseline and identifying traffic sources.
+- Diagnosing a duplex mismatch from interface state and error/collision counters.
+
+These additions address several previously listed gaps. Remaining practice should include reading realistic interface-counter snapshots, distinguishing DNS cache from authoritative/query results, and longer multi-stage fault-isolation cases.
