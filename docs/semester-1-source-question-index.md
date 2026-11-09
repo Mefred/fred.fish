@@ -43,6 +43,15 @@ This index provides stable references for source questions promoted into the act
 - **Extracted answer:** `show ipv6 interface`
 - **Review status:** Promoted as a source-origin question. The active answer and explanation preserve the extracted command and clarify its interface-verification purpose.
 
+
+## Q352 — IOS extended ping source address
+
+- **Source line:** 27106
+- **Module:** Module 17: Build a Small Network
+- **Prompt:** Which method is used to send a ping message specifying the source address for the ping?
+- **Extracted answer:** Enter the IOS `ping` command without specifying a destination IP address, then use the extended prompts.
+- **Review status:** Promoted as a source-origin question. IOS extended ping is started from privileged EXEC mode by entering `ping` without a destination; the guided prompts allow the source address/interface and other parameters to be selected.
+
 ## Usage
 
 Question IDs such as `Q194` and `Q201` may appear in a question's `sourceRefs`. These IDs resolve to the entries in this index. When OCR answer text conflicts with a protocol definition, preserve the source text in this index and document the correction in the active question explanation; do not silently reproduce an incorrect answer.
