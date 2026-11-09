@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 274 unique questions  
-**Concept tags:** 434 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 254 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 279 unique questions  
+**Concept tags:** 449 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 259 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -29,23 +29,23 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 113 |
+| Single choice | 114 |
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 34 |
-| Matching | 29 |
+| Matching | 32 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 68 |
-| **Total** | **274** |
+| Scenario / troubleshooting | 69 |
+| **Total** | **279** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 82 |
-| 3 — Applied | 110 |
-| 4 — Advanced | 42 |
+| 2 — Foundational | 83 |
+| 3 — Applied | 113 |
+| 4 — Advanced | 43 |
 | 5 — Challenging | 6 |
 
 ## Source provenance audit
@@ -69,7 +69,7 @@ The Module 8 source inventory decomposes the IPv4 and IPv6 packet-header objecti
 
 ## Module 3 source mapping update
 
-Completed a first-pass topic-to-question mapping for all seven Module 3 (Protocols and Models) objectives in the source-concept inventory. The active lesson has 18 questions. Data Access and core encapsulation mechanics are represented; direct practice is still needed for the full communication-rule categories and the roles of ISOC, IAB, IETF, and IRTF. Protocol Suites and Reference Models have partial coverage, including a need for explicit TCP/IP layer responsibilities and layered-model benefits. No questions were added in this mapping pass; the gaps are recorded as targets for source-derived expansion and visual review.
+Completed a first-pass topic-to-question mapping for all seven Module 3 (Protocols and Models) objectives in the source-concept inventory. The lesson now has 23 questions. Five AI-generated questions address communication-rule categories, protocol-suite purpose, ISOC/IAB/IETF/IRTF responsibilities, TCP/IP layer roles, and decapsulation. All seven source topics now have direct practice evidence; remaining work is deeper applied variation, visual source verification, and quality review.
 
 ## Coverage and remaining work
 
