@@ -6,6 +6,8 @@ const output = new URL("../docs/semester-1-coverage-report.md", import.meta.url)
 const records = source.split(/\r?\n/).filter((line) => line.trim().startsWith("{ id:"));
 const lessons = new Map();
 const allConcepts = new Set();
+const conceptQuestionCounts = new Map();
+const conceptLessons = new Map();
 const formats = new Map();
 const difficulties = new Map();
 
@@ -21,7 +23,7 @@ for (const line of records) {
   if (!lessons.has(lessonId)) lessons.set(lessonId, { ids: [], concepts: new Set(), formats: new Map(), difficulties: new Map() });
   const lesson = lessons.get(lessonId);
   lesson.ids.push(id);
-  for (const concept of concepts) { lesson.concepts.add(concept); allConcepts.add(concept); }
+  for (const concept of concepts) {\n    lesson.concepts.add(concept);\n    allConcepts.add(concept);\n    conceptQuestionCounts.set(concept, (conceptQuestionCounts.get(concept) ?? 0) + 1);\n    if (!conceptLessons.has(concept)) conceptLessons.set(concept, new Set());\n    conceptLessons.get(concept).add(lessonId);\n  }
   lesson.formats.set(type, (lesson.formats.get(type) ?? 0) + 1);
   lesson.difficulties.set(difficulty, (lesson.difficulties.get(difficulty) ?? 0) + 1);
   formats.set(type, (formats.get(type) ?? 0) + 1);
@@ -53,7 +55,7 @@ for (const [lessonId, lesson] of [...lessons.entries()].sort((a, b) => a[0].loca
   lines.push(`### ${lessonId}`, "", [...lesson.concepts].sort().map((concept) => `- \`${concept}\``).join("\n"), "");
 }
 lines.push(
-  "## Bank-wide distribution",
+  "## Concept question exposure",\n  "",\n  "| Concept tag | Questions | Lesson(s) |",\n  "|---|---:|---|",\n  ...[...conceptQuestionCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([concept, count]) => `| \\`${concept}\\` | ${count} | ${[...conceptLessons.get(concept)].sort().join(", ")} |`),\n  "",\n  `**Single-question concepts:** ${[...conceptQuestionCounts.entries()].filter(([, count]) => count === 1).length}. These tags currently have only one active question and are the first candidates for additional varied practice.`,\n  "",\n  "## Bank-wide distribution",
   "",
   "### Question formats",
   "",
@@ -69,7 +71,7 @@ lines.push(
   "",
   "## Interpretation and limits",
   "",
-  "This report measures only the concepts currently tagged on active questions. It shows where the bank is concentrated and which tags are represented; it does **not** prove that every instructional concept in a lesson has been tested. A true syllabus-gap report requires an authoritative per-lesson concept inventory to compare against. Question counts are a useful triage signal, not a mastery or quality score.",
+  "This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A tag absent from this report cannot be assumed to be a source-material gap because no authoritative, reviewed per-lesson source-concept inventory is currently available. OCR-derived topic hints and question-candidate text are not sufficient evidence for such an inventory. Build that inventory through lesson-by-lesson source review before publishing a zero-coverage gap list. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.",
   "",
 );
 writeFileSync(output, lines.join("\n"));
