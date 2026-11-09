@@ -1,16 +1,16 @@
 # Semester 1 question bank audit
 
-**Current bank:** 365 unique questions  
-**Concept tags:** 578 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 341 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 371 unique questions  
+**Concept tags:** 605 unique concept identifiers  
+**Source provenance:** 24 source questions; 347 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Latest applied troubleshooting additions
 
-Five new Ethernet-switching scenarios cover VLAN-scoped unknown-unicast flooding, trunk versus access configuration, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping investigation. The active bank now contains 365 questions (24 source-origin and 341 AI-generated).
+Six new questions expand subnetting and switching practice: /27 usable host-range calculation, minimum prefix selection for a 28-host LAN, directed-broadcast calculation, off-subnet default-gateway diagnosis, router-on-a-stick inter-VLAN routing, and Layer 2 switch management default-gateway configuration.
 
-Five more applied scenarios expand Network Layer and Router Configuration: static-versus-OSPF administrative distance, recursive next-hop resolution, cautious interpretation of traceroute timeouts, SSH-only VTY authentication, and missing RSA/domain prerequisites for SSH. The active bank now contains 360 questions (24 source-origin and 336 AI-generated), with 578 concept tags.
+The preceding five-question Ethernet-switching batch added VLAN-scoped unknown-unicast flooding, trunk versus access selection, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping diagnosis.
 
-Five additional scenario questions deepen routing and router configuration practice: multi-route longest-prefix selection, return-path verification, Ethernet interface `up/down` diagnosis, inconsistent subnet masks/default-gateway reachability, and static-route next-hop selection. The active bank now contains 355 questions (24 source-origin and 331 AI-generated), with 578 concept tags.
+The bank now contains 371 questions across 605 distinct concept tags. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
 
 ## Recent expansion
 
@@ -35,26 +35,23 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 ## Format coverage
 
-| Format | Questions |
-|---|---:|
-| Single choice | 124 |
-| Multiple select | 19 |
-| True / false | 1 |
-| Fill in the blank | 34 |
-| Matching | 57 |
-| Ordering | 14 |
-| Scenario / troubleshooting | 101 |
-| **Total** | **350** |
+| single | 125 |
+| multiple | 19 |
+| true-false | 1 |
+| fill | 35 |
+| matching | 57 |
+| ordering | 14 |
+| scenario | 120 |
+
+| **Total** | **371** |
 
 ## Difficulty coverage
 
-| Difficulty | Questions |
-|---|---:|
-| 1 — Introductory | 34 |
-| 2 — Foundational | 90 |
-| 3 — Applied | 140 |
-| 4 — Advanced | 72 |
-| 5 — Challenging | 11 |
+| 1 | 34 |
+| 2 | 90 |
+| 3 | 142 |
+| 4 | 84 |
+| 5 | 21 |
 
 ## Source provenance audit
 
