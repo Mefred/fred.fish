@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 592
+- **Questions:** 593
 - **Lessons represented:** 22
 - **Distinct concept tags:** 607
 
@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
-| ipv4-addressing | 42 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 12, single: 14 | 2–5 |
+| ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 57 | 69 | fill: 3, matching: 7, multiple: 5, ordering: 1, scenario: 23, single: 18 | 1–5 |
@@ -37,16 +37,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 425 |
-| 3 | 71 |
-| 4 | 31 |
-| 5 | 21 |
+| 2 | 424 |
+| 3 | 72 |
+| 4 | 30 |
+| 5 | 22 |
 | 6 | 16 |
 | 7 | 9 |
 | 8 | 9 |
 | 9 | 1 |
-| 10 | 5 |
-| 11 | 5 |
+| 10 | 4 |
+| 11 | 6 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
@@ -54,7 +54,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 16 | 1 |
 | 18 | 1 |
 | 19 | 1 |
-| 30 | 1 |
+| 31 | 1 |
 
 **Concepts with fewer than two questions:** 0.
 
@@ -1158,7 +1158,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-routing-table` | 5 | network-layer |
 | `ipv4-source-destination` | 5 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
-| `ipv4-subnetting` | 30 | ipv4-addressing |
+| `ipv4-subnetting` | 31 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 4 | icmp, network-layer |
 | `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
@@ -1269,7 +1269,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
 | `network-security-controls` | 11 | network-security, network-types, reliable-networks |
-| `network-segmentation` | 2 | ipv4-addressing |
+| `network-segmentation` | 3 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 12 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | network-components |
@@ -1431,7 +1431,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `store-and-forward-switching` | 2 | ethernet-switching |
 | `straight-through-cable` | 2 | physical-layer |
 | `subinterfaces` | 2 | ethernet-switching |
-| `subnet-mask` | 10 | ipv4-addressing, router-configuration |
+| `subnet-mask` | 11 | ipv4-addressing, router-configuration |
 | `subnet-membership` | 4 | ipv4-addressing |
 | `subnet-overlap` | 2 | ipv4-addressing |
 | `subnet-sizing` | 11 | ipv4-addressing |
@@ -1475,7 +1475,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `unknown-unicast-flooding` | 2 | ethernet-switching |
 | `url-filtering` | 2 | network-security |
 | `usable-host-count` | 2 | ipv4-addressing |
-| `usable-host-range` | 4 | ipv4-addressing |
+| `usable-host-range` | 5 | ipv4-addressing |
 | `user-exec` | 2 | basic-device-configuration |
 | `utp-cabling` | 7 | physical-layer |
 | `vendor-identification` | 2 | ethernet-switching |
@@ -1526,7 +1526,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 97 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 158 |
+| scenario | 159 |
 | single | 231 |
 | true-false | 1 |
 
@@ -1536,7 +1536,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 45 |
 | 2 | 168 |
-| 3 | 255 |
+| 3 | 256 |
 | 4 | 102 |
 | 5 | 22 |
 
