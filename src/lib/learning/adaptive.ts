@@ -68,21 +68,40 @@ export function buildAdaptiveQuiz(
   progress: LearningProgress,
   count = 10,
   now = Date.now(),
+  random: () => number = Math.random,
 ): LearningQuestion[] {
   const recentWindow = progress.recentQuestionIds.slice(0, Math.min(40, count * 4));
   const candidates = bank.filter((q) => !recentWindow.includes(q.id));
   const pool = candidates.length >= count ? candidates : bank;
   const selected: LearningQuestion[] = [];
   const remaining = [...pool];
+  const selectedConceptCounts = new Map<string, number>();
+  const selectedLessonCounts = new Map<string, number>();
+
+  const selectionScore = (question: LearningQuestion): number => {
+    const overlap = question.concepts.filter((id) => (selectedConceptCounts.get(id) ?? 0) > 0).length
+      / Math.max(1, question.concepts.length);
+    const lessonRepeats = selectedLessonCounts.get(question.lessonId) ?? 0;
+    // Keep targeting weak concepts, but avoid spending a whole session on one lesson or repeated tags.
+    const diversityPenalty = overlap * 24 + Math.max(0, lessonRepeats - 1) * 6;
+    return priority(question, progress, now) + difficultyFit(question, progress) - diversityPenalty;
+  };
+
   while (selected.length < count && remaining.length) {
-    remaining.sort((a, b) => {
-      const score = (priority(b, progress, now) + difficultyFit(b, progress)) - (priority(a, progress, now) + difficultyFit(a, progress));
-      return score || a.id.localeCompare(b.id);
-    });
-    // A little controlled exploration prevents the same weakest topic from dominating every session.
+    remaining.sort((a, b) => selectionScore(b) - selectionScore(a) || a.id.localeCompare(b.id));
+    // Every fourth question explores within the high-priority quarter, rather than always taking
+    // the exact same rank. This adds controlled variety without abandoning weak or due concepts.
     const exploration = selected.length > 0 && selected.length % 4 === 3;
-    const index = exploration ? Math.min(remaining.length - 1, Math.floor(remaining.length * 0.25)) : 0;
-    selected.push(remaining.splice(index, 1)[0]);
+    const explorationPool = Math.max(1, Math.ceil(remaining.length * 0.25));
+    const index = exploration
+      ? Math.min(explorationPool - 1, Math.floor(clamp(random(), 0, 0.999999) * explorationPool))
+      : 0;
+    const [question] = remaining.splice(index, 1);
+    selected.push(question);
+    selectedLessonCounts.set(question.lessonId, (selectedLessonCounts.get(question.lessonId) ?? 0) + 1);
+    for (const conceptId of question.concepts) {
+      selectedConceptCounts.set(conceptId, (selectedConceptCounts.get(conceptId) ?? 0) + 1);
+    }
   }
   return selected;
 }
