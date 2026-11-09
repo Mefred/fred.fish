@@ -1,9 +1,13 @@
-export function isValidMatchingAnswer({ pairIds, pairAnswerIds, matchIds, answer }) {
+export function isValidMatchingAnswer(input) {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return false;
+  const { pairIds, pairAnswerIds, matchIds, answer } = input;
   if (!Array.isArray(pairIds) || !Array.isArray(pairAnswerIds)
     || !Array.isArray(matchIds) || !Array.isArray(answer)) return false;
   if (pairIds.length < 2 || matchIds.length < 2
     || pairAnswerIds.length !== pairIds.length
     || answer.length !== pairIds.length) return false;
+  if ([...pairIds, ...pairAnswerIds, ...matchIds]
+    .some((id) => typeof id !== "string" || !id.trim())) return false;
   if (new Set(pairIds).size !== pairIds.length
     || new Set(matchIds).size !== matchIds.length) return false;
 
@@ -11,7 +15,7 @@ export function isValidMatchingAnswer({ pairIds, pairAnswerIds, matchIds, answer
   for (const entry of answer) {
     if (typeof entry !== "string") return false;
     const parts = entry.split(":");
-    if (parts.length !== 2 || parts.some((part) => !part)) return false;
+    if (parts.length !== 2 || parts.some((part) => !part.trim())) return false;
     mappings.push(parts);
   }
 
