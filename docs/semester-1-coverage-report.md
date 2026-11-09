@@ -2,15 +2,15 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 291
+- **Questions:** 294
 - **Lessons represented:** 22
-- **Distinct concept tags:** 480
+- **Distinct concept tags:** 484
 
 ## Lesson coverage
 
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
-| address-resolution | 8 | 12 | fill: 1, matching: 1, scenario: 1, single: 5 | 1–3 |
+| address-resolution | 11 | 20 | fill: 1, matching: 2, scenario: 3, single: 5 | 1–4 |
 | application-layer | 10 | 26 | matching: 2, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
@@ -41,13 +41,21 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `arp`
 - `arp-cache`
 - `broadcast`
+- `cache-expiration`
+- `default-gateway`
 - `ethernet-broadcast`
 - `host-troubleshooting`
 - `icmpv6`
+- `icmpv6-redirect`
 - `ios-verification-commands`
 - `ipv6-neighbor-discovery`
 - `mac-addressing`
+- `neighbor-advertisement`
+- `neighbor-solicitation`
 - `network-efficiency`
+- `remote-network-communication`
+- `router-advertisement`
+- `router-solicitation`
 - `unicast`
 
 ### application-layer
@@ -684,13 +692,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `aaaa-record` | 1 | application-layer |
 | `access-control-lists` | 1 | network-security |
 | `accounting` | 1 | network-security |
-| `address-resolution` | 6 | address-resolution |
+| `address-resolution` | 8 | address-resolution |
 | `administrative-distance` | 3 | network-layer |
 | `aging-timer` | 1 | ethernet-switching |
 | `application-layer` | 2 | application-layer, protocols-and-models |
 | `application-layer-services` | 3 | application-layer |
-| `arp` | 8 | address-resolution, protocols-and-models |
-| `arp-cache` | 2 | address-resolution |
+| `arp` | 10 | address-resolution, protocols-and-models |
+| `arp-cache` | 3 | address-resolution |
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
@@ -714,6 +722,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `byod` | 1 | network-trends |
 | `cable-internet` | 2 | internet-connections, physical-layer |
 | `cabling-standards` | 1 | physical-layer |
+| `cache-expiration` | 1 | address-resolution |
 | `cdp` | 1 | small-network |
 | `cidr` | 1 | ipv4-addressing |
 | `circuit-switching` | 1 | reliable-networks |
@@ -753,7 +762,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decapsulation` | 2 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
-| `default-gateway` | 4 | basic-device-configuration, network-layer, protocols-and-models, small-network |
+| `default-gateway` | 5 | address-resolution, basic-device-configuration, network-layer, protocols-and-models, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
@@ -845,7 +854,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `icmp-echo` | 1 | icmp |
 | `icmp-filtering` | 2 | icmp |
 | `icmp-time-exceeded` | 1 | icmp |
-| `icmpv6` | 4 | address-resolution, icmp, ipv6-addressing |
+| `icmpv6` | 5 | address-resolution, icmp, ipv6-addressing |
+| `icmpv6-redirect` | 1 | address-resolution |
 | `ietf` | 2 | network-types, protocols-and-models |
 | `imap` | 2 | application-layer |
 | `insider-threat` | 1 | network-security |
@@ -904,7 +914,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-interface-id` | 1 | ipv6-addressing |
 | `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
 | `ipv6-multicast` | 1 | ipv6-addressing |
-| `ipv6-neighbor-discovery` | 2 | address-resolution |
+| `ipv6-neighbor-discovery` | 3 | address-resolution |
 | `ipv6-network-prefix` | 1 | ipv6-addressing |
 | `ipv6-next-header` | 1 | network-layer |
 | `ipv6-payload-length` | 1 | network-layer |
@@ -934,7 +944,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 3 | network-layer |
 | `loopback-address` | 1 | ipv6-addressing |
 | `mac-address-table` | 4 | ethernet-switching |
-| `mac-addressing` | 13 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
+| `mac-addressing` | 14 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
@@ -954,9 +964,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multiplexing` | 1 | transport-layer |
 | `mx-record` | 1 | application-layer |
 | `name-resolution` | 2 | application-layer, small-network |
-| `neighbor-advertisement` | 1 | icmp |
+| `neighbor-advertisement` | 2 | address-resolution, icmp |
 | `neighbor-discovery` | 1 | icmp |
-| `neighbor-solicitation` | 1 | icmp |
+| `neighbor-solicitation` | 2 | address-resolution, icmp |
 | `network-access` | 1 | network-types |
 | `network-access-layer` | 1 | protocols-and-models |
 | `network-address` | 6 | ipv4-addressing |
@@ -1035,7 +1045,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reliability-and-flow-control` | 1 | transport-layer |
 | `reliable-delivery` | 1 | transport-layer |
 | `remote-management` | 2 | basic-device-configuration, router-configuration |
-| `remote-network-communication` | 2 | protocols-and-models, small-network |
+| `remote-network-communication` | 3 | address-resolution, protocols-and-models, small-network |
 | `retransmission` | 1 | protocols-and-models |
 | `return-route` | 2 | network-layer |
 | `rfc1918` | 1 | ipv4-addressing |
@@ -1048,12 +1058,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `route-selection` | 2 | network-layer |
 | `route-sources` | 1 | network-layer |
 | `route-troubleshooting` | 3 | network-layer |
+| `router-advertisement` | 1 | address-resolution |
 | `router-boot-process` | 1 | router-configuration |
 | `router-functions` | 1 | router-configuration |
 | `router-interface-configuration` | 2 | router-configuration |
 | `router-interfaces` | 1 | icmp |
 | `router-memory` | 1 | router-configuration |
 | `router-role` | 2 | network-components |
+| `router-solicitation` | 1 | address-resolution |
 | `routing` | 5 | data-link-layer, network-layer, protocols-and-models |
 | `routing-configuration` | 1 | network-layer |
 | `routing-metric` | 2 | network-layer |
@@ -1160,7 +1172,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1169,10 +1181,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 38 |
+| matching | 39 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 73 |
+| scenario | 75 |
 | single | 116 |
 | true-false | 1 |
 
@@ -1182,10 +1194,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 84 |
-| 3 | 121 |
-| 4 | 46 |
+| 3 | 122 |
+| 4 | 48 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, 8, and 9 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
