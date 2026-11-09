@@ -1,4 +1,4 @@
-import { cp, access } from "node:fs/promises";
+import { cp, access, readdir, readFile, writeFile } from "node:fs/promises";
 import { resolve, sep } from "node:path";
 
 const root = process.cwd();
@@ -34,4 +34,44 @@ for (const directory of ["cisco", "reef", "assets"]) {
       throw error;
     }
   }
+}
+
+
+async function improveLegacyAccessibility(directory) {
+  let entries;
+  try {
+    entries = await readdir(directory, { withFileTypes: true });
+  } catch (error) {
+    if (error && typeof error === "object" && "code" in error && error.code === "ENOENT") return;
+    throw error;
+  }
+
+  for (const entry of entries) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) {
+      await improveLegacyAccessibility(path);
+      continue;
+    }
+    if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
+
+    let html = await readFile(path, "utf8");
+    html = html.replace(
+      /<aside class="sidebar" id="sidebar"(?![^>]*aria-label)/g,
+      '<aside class="sidebar" id="sidebar" aria-label="Workspace sidebar"',
+    );
+    html = html.replace(
+      /<div class="lesson-table-wrap"(?![^>]*tabindex)/g,
+      '<div class="lesson-table-wrap" role="region" aria-label="Scrollable lesson table" tabindex="0"',
+    );
+    html = html.replace(
+      /<div class="media-table-wrap"(?![^>]*tabindex)/g,
+      '<div class="media-table-wrap" role="region" aria-label="Scrollable media table" tabindex="0"',
+    );
+    html = html.replace(/<pre(?![^>]*tabindex)([^>]*)>/g, '<pre$1 tabindex="0">');
+    await writeFile(path, html);
+  }
+}
+
+for (const directory of ["cisco/learning/modules", "reef"]) {
+  await improveLegacyAccessibility(resolve(output, directory));
 }
