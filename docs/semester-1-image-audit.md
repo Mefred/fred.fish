@@ -129,7 +129,30 @@ Across batches 1–3, 108 candidate images have been screened at high-resolution
 
 The next 36 candidates (IMG-0518–IMG-0578) were screened. IMG-0545 was opened at native resolution and confirms the four twisted copper pairs in the existing UTP question. IMG-0557 was opened at native resolution and confirms coaxial construction; together with IMG-0324 it supports the new self-contained coaxial-identification question. The UTP update adds one source-image association and the new coax question adds two, bringing source-origin associations to 39 and total reviewed image-question associations to 48. The other 34 candidates are unmarked prompts or instructional slides. See [the batch 4 review log](./semester-1-image-review-batch-4.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale and twelve answer/visual items have been opened at native resolution. Eight marked-answer items were already linked to source questions; the four cable images now support the UTP and coaxial questions. The original OCR ZIP still labels 744 unique images (750 asset records) unresolved; that is the export's status count, not a post-review backlog. The original status fields remain unchanged in the Library.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. A native-resolution follow-up has now opened 24 of those images individually; eight marked-answer items were already linked to source questions, and the four cable images support the UTP and coaxial questions. The follow-up found no additional unambiguous answer marks or new source-image associations. The remaining 120 images from these four batches have contact-sheet-only review and still need native-resolution inspection where small marks or diagram details matter. The original OCR ZIP still labels 744 unique images (750 asset records) unresolved; that is the export's status count, not the post-review backlog. The original status fields remain unchanged in the Library.
+
+
+
+### Native-resolution follow-up — 12 additional images
+
+A second native-resolution pass opened twelve previously contact-sheet-only candidates from batches 1–4. None contains a clearly selected answer or a new marked matching key, so no new source-origin question or image-question association was added.
+
+| Image | Native-resolution finding | Review decision |
+|---|---|---|
+| IMG-0195 | ServerB-to-HostA addressing topology; all six answer boxes are empty | Diagram is legible; no marked answer key |
+| IMG-0291 | Repeated ServerB-to-HostA addressing prompt and topology; all six answer boxes are empty | Duplicate prompt variant; no marked answer key |
+| IMG-0241 | Web-response decapsulation order; all four checkboxes are empty | No marked answer key |
+| IMG-0344 | Fiber-optic cable characteristics; all five checkboxes are empty | No marked answer key |
+| IMG-0346 | Wireless-interference devices; all six checkboxes are empty | No marked answer key |
+| IMG-0347 | Physical-layer signaling lesson slide with fiber, digital/analog, microwave, and copper signal diagrams | Instructional exhibit; blue stars are decorative slide markers, not answer selections |
+| IMG-0367 | PC-console/switch/router UTP cable-selection topology; all four radio options are empty | Diagram is legible; no marked answer key |
+| IMG-0472 | Packet Tracer switch/MAC-table task screenshot; assessment response options are unselected | Activity prompt only; no solved state or answer key |
+| IMG-0518 | WAN partial-mesh topology question; all four radio options are empty | No marked answer key |
+| IMG-0562 | Web-server-to-PC1 destination-MAC topology; all four radio options are empty | Diagram is legible; no marked answer key |
+| IMG-0457 | Repeated web-server-to-PC1 destination-MAC prompt and topology; all four radio options are empty | Duplicate prompt variant of IMG-0562; no marked answer key |
+| IMG-0466 | Switch source-MAC-table behavior question; all four radio options are empty | No marked answer key |
+
+The 12 native-resolution checks are additional to the prior 12 checks. They do not change the 39 source-origin image-question associations or nine AI-generated visual-context references (48 reviewed associations total). See [the native-resolution follow-up log](./semester-1-image-review-native-followup-1.md).
 
 ## Module classification
 
