@@ -9,6 +9,7 @@ const indexedQuestionIds = new Set([...sourceIndex.matchAll(/^## (Q\d{3}) —/gm
 const lines = source.split(/\r?\n/).filter((line) => line.trim().startsWith("{ id:"));
 const errors = [];
 const ids = new Set();
+const conceptQuestionCounts = new Map();
 const normalizedPrompts = new Map();
 const allowedTypes = new Set(["single","multiple","true-false","fill","matching","ordering","scenario"]);
 const strings = (fragment) => fragment ? [...fragment.matchAll(/"([^"]+)"/g)].map((match) => match[1]) : [];
@@ -53,6 +54,7 @@ for (const [index, line] of lines.entries()) {
   if (!explanation.trim()) errors.push(`${label}: missing answer explanation`);
   if (!subject || !lessonId) errors.push(`${label}: missing subject or lesson mapping`);
   if (!Number.isInteger(difficulty) || difficulty < 1 || difficulty > 5) errors.push(`${label}: difficulty must be an integer from 1 to 5`);
+  for (const concept of concepts) conceptQuestionCounts.set(concept, (conceptQuestionCounts.get(concept) ?? 0) + 1);
   if (concepts.length !== new Set(concepts).size) errors.push(`${label}: duplicate concept tags`);
   if (sourceRefs.length !== new Set(sourceRefs).size) errors.push(`${label}: duplicate source references`);
   if (!allowedTypes.has(type)) errors.push(`${label}: unsupported type ${type}`);
@@ -86,8 +88,10 @@ for (const [index, line] of lines.entries()) {
 
 if (lines.length < 10) errors.push(`question bank too small: found ${lines.length}`);
 if (ids.size !== lines.length) errors.push(`question IDs are not unique: ${ids.size} unique IDs across ${lines.length} records`);
+const underPracticed = [...conceptQuestionCounts.entries()].filter(([, count]) => count < 2);
+if (underPracticed.length) errors.push(`concepts need at least two questions: ${underPracticed.map(([concept, count]) => `${concept} (${count})`).join(", ")}`);
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
-console.log(`Validated ${lines.length} questions, ${ids.size} unique IDs, ${normalizedPrompts.size} unique prompts, explanations, lesson/concept mappings, difficulty, answer keys, formats, provenance, and source references.`);
+console.log(`Validated ${lines.length} questions, ${ids.size} unique IDs, ${normalizedPrompts.size} unique prompts, ${conceptQuestionCounts.size} concepts (minimum exposure ${Math.min(...conceptQuestionCounts.values())}), explanations, lesson/concept mappings, difficulty, answer keys, formats, provenance, and source references.`);
