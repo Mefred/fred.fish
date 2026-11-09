@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync } from "node:fs";
 import { isValidMatchingAnswer } from "./matching-validation.mjs";
+import { isValidDistractorExplanations } from "./distractor-validation.mjs";
 
 const file = new URL("../src/data/learning/semester-1-seed.ts", import.meta.url);
 const source = readFileSync(file, "utf8");
@@ -39,6 +40,14 @@ for (const [index, line] of lines.entries()) {
   const difficulty = Number(line.match(/difficulty:(\d)/)?.[1] ?? 0);
   const choiceFragment = fieldArray(line, "choices", "answer");
   const choiceIds = choiceFragment ? [...choiceFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
+  const distractorFragment = line.match(/distractorExplanations:\\{([^}]*)\\}/)?.[1];
+  if (distractorFragment !== undefined) {
+    const distractorEntries = [...distractorFragment.matchAll(/([a-zA-Z0-9_-]+):"((?:\\\\.|[^"\\\\])*)"/g)];
+    const distractorExplanations = Object.fromEntries(distractorEntries.map((match) => [match[1], JSON.parse("\\"" + match[2] + "\\"")]));
+    if (distractorEntries.length === 0 || !isValidDistractorExplanations(choiceIds, Array.isArray(answer) ? answer : [answer], distractorExplanations)) {
+      errors.push(`${label}: distractor explanations must reference non-answer choice IDs and contain non-empty text`);
+    }
+  }
   const itemFragment = fieldArray(line, "items", "answer");
   const itemIds = itemFragment ? [...itemFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
   const pairFragment = fieldArray(line, "pairs", "matchOptions");
