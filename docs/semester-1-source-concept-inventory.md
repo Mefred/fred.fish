@@ -242,7 +242,7 @@ Five new AI-generated questions add malware-type matching, attack-category match
 
 ## Module 17 first-pass topic-to-question mapping
 
-The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson currently has nine questions.
+The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson now has ten questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -250,11 +250,11 @@ The recovered Module 17 objective is to build and troubleshoot a small network. 
 | Small Network Applications and Protocols | DHCP, DNS, common server roles and application services | `dns-troubleshooting`, `nslookup`, `name-resolution` | Partial; DNS troubleshooting is covered. DHCP-related host configuration failure and identifying services on multi-role servers remain gaps. |
 | Scale to Larger Networks | Network baseline, growth planning, redundancy, modular expansion, and fault tolerance | `redundancy`, `fault-tolerance`, `network-reliability` | Partial; redundancy is assessed, but baseline collection, expansion planning, and capacity constraints need more practice. |
 | Verify Connectivity | Ping and traceroute; IOS ping indicators; extended ping/traceroute; relative path performance | `ping`, `traceroute`, `network-troubleshooting` | Represented for choosing tools and identifying a failing routed hop. IOS ping indicators, extended command options, and interpreting round-trip-time changes remain gaps. |
-| Host and IOS Commands | ipconfig/ipconfig /all; ifconfig/ip; arp -a; show running-config, interfaces, ip route, protocols, version, CDP; debug/terminal monitor | `ios-verification-commands`, `show-ip-interface-brief`, `show-cdp-neighbors`, `cdp`, `ios-debug` | Partial; CDP, interface verification, and safe debug use are covered. Host-side address/cache commands and the wider show-command family need a command-selection/matching set. |
+| Host and IOS Commands | ipconfig/ipconfig /all; ifconfig/ip; arp -a; show running-config, interfaces, ip route, protocols, version, CDP; debug/terminal monitor | `ios-verification-commands`, `show-ip-interface-brief`, `show-running-config`, `show-interfaces`, `show-ip-route`, `show-arp`, `show-protocols`, `show-version`, `show-cdp-neighbors`, `cdp`, `ios-debug` | Improved; a new matching item maps seven show commands to their diagnostic purpose, alongside interface verification, CDP, and safe debug use. Host-side address/cache commands still need a command-selection item. |
 | Troubleshooting Methodologies | Identify problem; establish probable cause; test; plan; implement/escalate; verify and document | `troubleshooting-methodology`, `problem-identification`, `root-cause-analysis`, `verification` | Strong; ordering questions cover both the high-level and detailed troubleshooting sequences. |
 | Troubleshooting Scenarios | DNS failure; incorrect IP settings; DHCP issues; gateway problems; route/path failures; show-command diagnosis | `dns-troubleshooting`, `default-gateway`, `ipv4-troubleshooting`, `traceroute` | Represented for DNS, missing default gateway, interface status, and traceroute. Multi-symptom LAN fault isolation and a complete Packet Tracer troubleshooting challenge still need applied practice. |
 
-This completes the first-pass topic mapping for all 17 Semester 1 modules. Module 17 has nine active questions; its largest remaining gaps are device selection, host command interpretation, extended ping/traceroute, network baselines, and multi-symptom troubleshooting. These are recorded as follow-up work rather than assuming that a mapped topic is fully mastered.
+This completes the first-pass topic mapping for all 17 Semester 1 modules. Module 17 has ten active questions; its largest remaining gaps are device selection, host command interpretation, extended ping/traceroute, network baselines, and multi-symptom troubleshooting. These are recorded as follow-up work rather than assuming that a mapped topic is fully mastered.
 
 ## Module 1 first-pass topic-to-question comparison
 
