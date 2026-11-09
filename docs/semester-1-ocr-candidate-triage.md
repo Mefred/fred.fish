@@ -24,15 +24,15 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Visually verified image-question associations | 27 |
+| Visually verified image-question associations | 28 |
 | Candidate asset records visually reviewed as not questions | 4 |
-| Unique unresolved candidate images remaining | 761 |
+| Unique unresolved candidate images remaining | 760 |
 
 The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
 
 ## Newly visually verified source-question associations
 
-Eleven additional unique image candidates were inspected. Four were linked to existing source-origin questions to avoid duplicate prompts; six distinct prompts were added as source-origin questions, with the connector question supported by two separate image assets.
+Twelve additional unique image candidates were inspected. Four were linked to existing source-origin questions to avoid duplicate prompts; six distinct prompts were added as source-origin questions, with the connector question supported by two separate image assets.
 
 | Image reference | Active question ID | Visual finding |
 |---|---|---|
@@ -52,6 +52,7 @@ Eleven additional unique image candidates were inspected. Four were linked to ex
 | IMG-0306 | `s3-destination-ip-layer-source-001` | Circled answer: Network layer |
 | IMG-0314 | `s3-source-ip-layer-source-001` | Circled answer: Network layer |
 | IMG-0279 | `s3-application-data-layer-source-001` | Circled answer: Application layer |
+| IMG-0779 | `s8-diffserv-priority-source-001` | Source explanation/table identifies Differentiated Services as the 8-bit QoS field |
 
 The original OCR export's promotion status has not been rewritten in the Library ZIP; the current source-question associations are maintained in `src/data/learning/semester-1-seed.ts` and the question-bank audit.
 
@@ -98,5 +99,5 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 - Six new image candidates have been visually reviewed and associated with active source-origin questions.
 - The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
-- The remaining 761 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
+- The remaining 760 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
 - The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
