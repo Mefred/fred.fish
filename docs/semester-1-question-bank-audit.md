@@ -1,7 +1,7 @@
 # Semester 1 question bank audit
 
 **Current bank:** 249 unique questions  
-**Concept tags:** 373 unique concept identifiers  
+**Concept tags:** 380 unique concept identifiers  
 **Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 229 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
@@ -40,9 +40,9 @@ A further five applied Network Layer scenarios exercise two-router static-route 
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 75 |
-| 3 — Applied | 93 |
-| 4 — Advanced | 32 |
-| 5 — Challenging | 5 |
+| 3 — Applied | 96 |
+| 4 — Advanced | 38 |
+| 5 — Challenging | 6 |
 
 ## Source provenance audit
 
@@ -63,9 +63,9 @@ The first automated promotion map contained several incorrect image-to-question 
 
 ## Coverage and remaining work
 
-A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, and represented concept IDs is maintained in [the coverage report](./semester-1-coverage-report.md). The report is regenerated during the production build by `npm run report:learning`. It measures current question-tag coverage only; a true gap analysis still requires an authoritative lesson concept inventory.
+A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The report is regenerated during the production build by `npm run report:learning`. It measures current question-tag coverage only; a true zero-coverage gap analysis still requires an authoritative lesson concept inventory. Single-question concept tags are surfaced as under-practiced candidates, not mislabeled as missing source concepts.
 
-The 234-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 249-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
