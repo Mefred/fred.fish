@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 312
+- **Questions:** 315
 - **Lessons represented:** 22
-- **Distinct concept tags:** 504
+- **Distinct concept tags:** 516
 
 ## Lesson coverage
 
@@ -21,7 +21,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv6-addressing | 19 | 44 | fill: 6, matching: 4, scenario: 5, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
-| network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
+| network-security | 11 | 25 | matching: 5, multiple: 1, scenario: 1, single: 4 | 1–4 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
@@ -412,18 +412,30 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### network-security
 
 - `aaa`
+- `access-attacks`
 - `access-control-lists`
 - `accounting`
 - `authentication`
 - `authorization`
 - `confidentiality`
+- `configuration-vulnerability`
 - `defense-in-depth`
+- `denial-of-service`
 - `endpoint-security`
 - `firewall-filtering`
 - `insider-threat`
+- `malware`
 - `network-architecture-requirements`
+- `network-attacks`
 - `network-security-controls`
+- `reconnaissance-attacks`
+- `security-policy-vulnerability`
 - `security-threat-vectors`
+- `technological-vulnerability`
+- `trojan-horse`
+- `virus`
+- `vulnerabilities`
+- `worm`
 
 ### network-topologies
 
@@ -725,6 +737,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `a-record` | 1 | application-layer |
 | `aaa` | 1 | network-security |
 | `aaaa-record` | 1 | application-layer |
+| `access-attacks` | 1 | network-security |
 | `access-control-lists` | 1 | network-security |
 | `accounting` | 1 | network-security |
 | `address-resolution` | 8 | address-resolution |
@@ -773,6 +786,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `confidentiality` | 2 | network-security |
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
 | `configuration-persistence` | 3 | basic-device-configuration, network-layer |
+| `configuration-vulnerability` | 1 | network-security |
 | `congestion` | 1 | reliable-networks |
 | `congestion-control` | 1 | transport-layer |
 | `connected-route` | 1 | network-layer |
@@ -802,6 +816,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
+| `denial-of-service` | 1 | network-security |
 | `device-management` | 1 | basic-device-configuration |
 | `device-resource-management` | 1 | small-network |
 | `dhcp` | 3 | application-layer, basic-device-configuration |
@@ -993,6 +1008,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
+| `malware` | 1 | network-security |
 | `maximum-segment-size` | 1 | transport-layer |
 | `media-access-control` | 2 | data-link-layer |
 | `media-independent` | 1 | network-layer |
@@ -1018,6 +1034,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-access-layer` | 1 | protocols-and-models |
 | `network-address` | 6 | ipv4-addressing |
 | `network-architecture-requirements` | 1 | network-security |
+| `network-attacks` | 2 | network-security |
 | `network-components` | 3 | network-components |
 | `network-discovery` | 1 | small-network |
 | `network-efficiency` | 2 | address-resolution, protocols-and-models |
@@ -1031,7 +1048,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scalability` | 1 | network-components |
 | `network-scale` | 1 | network-components |
 | `network-scope` | 4 | network-types |
-| `network-security-controls` | 8 | network-security, network-types, reliable-networks |
+| `network-security-controls` | 9 | network-security, network-types, reliable-networks |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 6 | icmp, small-network |
 | `next-hop` | 4 | ipv6-addressing, network-layer |
@@ -1088,6 +1105,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `radix` | 1 | number-systems |
 | `ram` | 1 | router-configuration |
 | `real-time-applications` | 1 | transport-layer |
+| `reconnaissance-attacks` | 1 | network-security |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
 | `reference-models` | 1 | protocols-and-models |
 | `reliability` | 4 | transport-layer |
@@ -1130,7 +1148,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `satellite-internet` | 1 | internet-connections |
 | `sc-connector` | 1 | physical-layer |
 | `scalability` | 3 | reliable-networks |
-| `security-threat-vectors` | 1 | network-security |
+| `security-policy-vulnerability` | 1 | network-security |
+| `security-threat-vectors` | 2 | network-security |
 | `segmentation` | 1 | protocols-and-models |
 | `selective-acknowledgment` | 1 | transport-layer |
 | `sequence-numbers` | 1 | transport-layer |
@@ -1182,6 +1201,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 3 | transport-layer |
 | `tcp-windowing` | 2 | transport-layer |
+| `technological-vulnerability` | 1 | network-security |
 | `tftp` | 1 | application-layer |
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
@@ -1190,6 +1210,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
 | `transport-layer` | 13 | protocols-and-models, transport-layer |
+| `trojan-horse` | 1 | network-security |
 | `troubleshooting` | 3 | basic-device-configuration, small-network |
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 1 | icmp |
@@ -1203,7 +1224,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `vendor-identification` | 1 | ethernet-switching |
 | `verification` | 1 | small-network |
 | `video-communications` | 1 | network-trends |
+| `virus` | 1 | network-security |
 | `vlsm` | 4 | ipv4-addressing |
+| `vulnerabilities` | 1 | network-security |
 | `wan` | 5 | internet-connections, network-types |
 | `wan-topologies` | 1 | data-link-layer |
 | `web-protocols` | 2 | application-layer |
@@ -1223,11 +1246,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `wireless-standards` | 1 | physical-layer |
 | `wisp` | 1 | internet-connections |
 | `wlan` | 2 | physical-layer |
+| `worm` | 1 | network-security |
 | `zero-compression` | 1 | ipv6-addressing |
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 283. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 293. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1236,7 +1260,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 45 |
+| matching | 48 |
 | multiple | 18 |
 | ordering | 12 |
 | scenario | 83 |
@@ -1249,10 +1273,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 85 |
-| 3 | 131 |
-| 4 | 56 |
+| 3 | 133 |
+| 4 | 57 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 15 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 16 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
