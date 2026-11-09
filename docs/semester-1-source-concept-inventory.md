@@ -172,6 +172,22 @@ The recovered Module 11 objective is to calculate an IPv4 subnetting scheme to e
 
 The 20-question lesson has substantial calculation depth, but it does not yet cover every objective equally. The largest gaps are delivery semantics (unicast/broadcast/multicast), reserved/public IPv4 address categories, and the purpose and effect of network segmentation. These are recorded as explicit expansion targets rather than treating subnetting question volume as proof of complete Module 11 coverage.
 
+## Module 12 first-pass topic-to-question mapping
+
+The recovered Module 12 objective is to implement an IPv6 addressing scheme. Its source topics cover the need for IPv6, address representation and types, static and dynamic GUA/LLA configuration, multicast, and IPv6 subnetting.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| IPv4 Issues / Need for IPv6 | IPv4 address exhaustion; larger 128-bit address space; reduced reliance on NAT; transition methods | `ipv4-ipv6-coexistence`, `dual-stack`, `tunneling`, `translation` | Partial; coexistence methods are tested, but the motivation for IPv6 and the address-space implications need a more explicit applied comparison. |
+| IPv6 Address Representation | 128-bit address; eight hextets; hexadecimal notation; leading-zero omission; one longest zero-run compression | `ipv6-address-representation`, `zero-compression`, `zero-suppression`, `hextets` | Strong; multiple compression exercises include both leading-zero removal and longest-run compression. More expansion from compressed notation would add useful variety. |
+| IPv6 Address Types | GUA, LLA, multicast, anycast, loopback; prefix ranges; link-local scope | `ipv6-address-types`, `global-unicast-address`, `link-local-address`, `ipv6-multicast`, `multicast-address`, `loopback-address` | Broadly represented for GUA, LLA, multicast, and loopback. Anycast behavior and assigned multicast group scope (all-nodes/all-routers) remain gaps. |
+| GUA and LLA Static Configuration | Configure IPv6 address and prefix on interfaces; automatic LLA creation; EUI-64 or random interface IDs; interface verification | `ipv6-address-configuration`, `ipv6-interface-configuration`, `eui-64`, `ipv6-interface-id`, `show-ipv6-interface`, `no-shutdown` | Strong; includes interface configuration, EUI-64, link-local behavior, and verification commands. Random interface-ID generation could use a direct comparison question. |
+| Dynamic Addressing for IPv6 GUAs and LLAs | Router Solicitation/Advertisement; SLAAC; stateful and stateless DHCPv6; M/O flags; DAD | `slaac`, `ipv6-router-solicitation`, `ipv6-router-advertisement`, `dhcpv6`, `stateless-dhcpv6`, `stateful-dhcpv6`, `duplicate-address-detection` | Improved; new matching item distinguishes SLAAC-only, SLAAC with stateless DHCPv6, and stateful DHCPv6. A DAD scenario tests Neighbor Solicitation for address uniqueness. |
+| IPv6 Multicast Addresses | FF00::/8; all-nodes and all-routers groups; multicast group membership | `ipv6-multicast`, `multicast-address` | Partial; prefix recognition is covered, but assigned multicast group addresses and their scope should be added. |
+| Subnet an IPv6 Network | Global routing prefix; subnet ID; interface ID; hexadecimal subnet increments; /48-to-/64 planning | `ipv6-network-prefix`, `ipv6-prefix-length`, `ipv6-subnetting`, `ipv6-subnet-id` | Improved; a new scenario explains the 16-bit subnet ID between a /48 global routing prefix and /64 LAN prefixes. More hexadecimal subnet-allocation drills remain useful. |
+
+Three new AI-generated questions add RA M/O flag interpretation, IPv6 subnet-ID planning, and Duplicate Address Detection. They are based on recovered Module 12 notes and existing source references, not presented as verbatim source questions. Address-type, multicast, and subnetting exhibits still require direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
