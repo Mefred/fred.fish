@@ -67,6 +67,10 @@ The first automated promotion map contained several incorrect image-to-question 
 
 The Module 8 source inventory decomposes the IPv4 and IPv6 packet-header objectives into field-level concepts and maps the first five corresponding practice questions to those targets. The new items are AI-generated from recovered source notes and cite `block-0073`; they are not counted as source-origin questions. Diagram-level visual verification remains outstanding. See the Module 8 packet-header concept decomposition in the source-concept inventory.
 
+## Module 3 source mapping update
+
+Completed a first-pass topic-to-question mapping for all seven Module 3 (Protocols and Models) objectives in the source-concept inventory. The active lesson has 18 questions. Data Access and core encapsulation mechanics are represented; direct practice is still needed for the full communication-rule categories and the roles of ISOC, IAB, IETF, and IRTF. Protocol Suites and Reference Models have partial coverage, including a need for explicit TCP/IP layer responsibilities and layered-model benefits. No questions were added in this mapping pass; the gaps are recorded as targets for source-derived expansion and visual review.
+
 ## Coverage and remaining work
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
