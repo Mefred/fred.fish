@@ -88,7 +88,7 @@ There are now 34 source-origin image-question associations plus four visually re
 
 ## Validation
 
-GitHub Actions validates the question bank, adaptive-engine behavior, Astro type-check/build, generated links, Cisco lesson/quiz integrity, preserved routes, desktop/mobile browser behavior, and automated accessibility checks. The browser test suite runs a complete ten-question practice session at both desktop and mobile viewports and verifies feedback, local persistence, and dashboard updates.
+GitHub Actions Site CI run #522 passed. It validated the question bank, adaptive-engine behavior, dependency audit, Astro type-check/build, local links across 57 generated HTML pages, Cisco lesson/quiz integrity (30 lessons and 95 legacy quiz questions), and preserved routes. Playwright exercised all 57 routes at desktop and mobile sizes, completed a ten-question practice session at both viewports, and verified feedback, local persistence, and dashboard updates. axe-core reported zero violations across the tested routes.
 
 The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution.
 
