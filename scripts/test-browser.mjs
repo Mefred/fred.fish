@@ -128,7 +128,6 @@ try {
     await context.close();
   }
 
-  const serious = axeViolations.filter((item) => item.impact === "serious" || item.impact === "critical");
   console.log(JSON.stringify({
     browser: "Chromium",
     viewports: ["1440x900 desktop", "390x844 mobile"],
@@ -137,7 +136,7 @@ try {
     practiceInteraction: "complete ten-question session at both desktop and mobile viewports, keyboard answer selection, per-answer feedback, local persistence, and dashboard update",
     axeViolations,
   }, null, 2));
-  assert.equal(serious.length, 0, `Serious or critical accessibility violations: ${JSON.stringify(serious)}`);
+  assert.equal(axeViolations.length, 0, `Accessibility violations: ${JSON.stringify(axeViolations)}`);
 } finally {
   await browser?.close();
   if (server) {
