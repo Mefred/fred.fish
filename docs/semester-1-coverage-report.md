@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 607
+- **Questions:** 609
 - **Lessons represented:** 22
-- **Distinct concept tags:** 608
+- **Distinct concept tags:** 609
 
 ## Lesson coverage
 
@@ -30,19 +30,19 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 52 | 86 | fill: 4, matching: 4, multiple: 6, ordering: 4, scenario: 26, single: 8 | 1–5 |
+| small-network | 54 | 87 | fill: 4, matching: 4, multiple: 6, ordering: 4, scenario: 27, single: 9 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 409 |
+| 2 | 410 |
 | 3 | 76 |
 | 4 | 37 |
-| 5 | 24 |
+| 5 | 23 |
 | 6 | 18 |
-| 7 | 8 |
+| 7 | 9 |
 | 8 | 9 |
 | 9 | 1 |
 | 10 | 5 |
@@ -821,6 +821,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `mac-addressing`
 - `multi-device-troubleshooting`
 - `name-resolution`
+- `network-applications-vs-services`
 - `network-baselines`
 - `network-discovery`
 - `network-intermediary-devices`
@@ -928,7 +929,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `apipa` | 3 | small-network |
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
-| `application-layer-services` | 5 | application-layer, small-network |
+| `application-layer-services` | 7 | application-layer, small-network |
 | `arp` | 13 | address-resolution, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
@@ -1255,6 +1256,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-access` | 2 | network-types |
 | `network-access-layer` | 2 | protocols-and-models |
 | `network-address` | 10 | ipv4-addressing |
+| `network-applications-vs-services` | 2 | small-network |
 | `network-architecture-requirements` | 2 | network-security |
 | `network-attacks` | 2 | network-security |
 | `network-baselines` | 4 | small-network |
@@ -1531,8 +1533,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 99 |
 | multiple | 35 |
 | ordering | 20 |
-| scenario | 167 |
-| single | 233 |
+| scenario | 168 |
+| single | 234 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1540,8 +1542,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 168 |
-| 3 | 266 |
+| 2 | 169 |
+| 3 | 267 |
 | 4 | 105 |
 | 5 | 22 |
 
