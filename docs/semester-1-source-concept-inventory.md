@@ -385,3 +385,71 @@ Two AI-generated questions were added to the active `network-components` lesson 
 - `s1-networking-career-resource-applied-001` checks the source-era description of the Networking Academy Talent Bridge Matching Engine. Its explanation explicitly avoids claiming that the historical service is still available today.
 
 Both use existing source block `block-0002` and share the new `networking-careers` and `ccna-certification` concept tags, so each new concept has two questions. The separate “Networks Affect our Lives” slide (`IMG-0051`) contains only its title; further content for that objective cannot be reconstructed reliably from the supplied slide.
+
+## First-pass objective-to-question evidence map: Modules 5–17
+
+This matrix maps recovered topic objectives to representative active question IDs in the corresponding lesson. It is a direct evidence index, not a claim that every paragraph, visual, Packet Tracer activity, or source assessment item has been exhaustively checked. The coverage report contains the complete per-tag and per-lesson bank inventory.
+
+| Module / lesson | Source topic objective | Representative active question evidence | First-pass status |
+|---|---|---|---|
+| 5. Number Systems | Binary Number System | s5-binary-decimal-001, s5-binary-octet-001, s5-decimal-binary-001, s5-binary-applied-002 | Represented: positional notation, octet conversion, and IPv4 binary practice. |
+| 5. Number Systems | Hexadecimal Number System | s5-hex-decimal-001, s5-decimal-hex-convert-001, s5-hex-binary-convert-001, s5-hex-byte-inspect-001 | Represented: decimal/hex/binary conversion and byte interpretation. |
+| 6. Data Link Layer | Purpose of the Data Link Layer | s6-mac-sublayer-001, s6-llc-role-001, s6-fcs-purpose-001, s6-llc-protocol-demux-002 | Represented: LLC/MAC roles, upper-layer handoff, and frame integrity. |
+| 6. Data Link Layer | Topologies | s6-topology-types-001, s6-wan-topologies-match-001, s6-controlled-access-scenario-001, s6-multiaccess-topology-applied-002 | Represented: point-to-point, multiaccess, WAN/LAN, contention, and controlled access. |
+| 6. Data Link Layer | Data Link Frame | s6-frame-fields-match-001, s6-frame-fields-applied-002, s6-fcs-troubleshoot-001, s6-frame-processing-order-002 | Represented: frame fields, encapsulation, FCS, and receive processing. |
+| 7. Ethernet Switching | Ethernet Frame | s7-nic-frame-processing-applied-002, s7-frame-size-standards-applied-002, s7-frame-size-001 | Represented: frame processing, size, and Ethernet standards. |
+| 7. Ethernet Switching | Ethernet MAC Address | s7-broadcast-mac-001, s7-mac-length-001, s7-oui-purpose-001, s7-oui-vendor-identification-005 | Represented: address format, broadcast, and OUI/vendor identification. |
+| 7. Ethernet Switching | The MAC Address Table | s7-mac-learning-001, s7-unknown-unicast-001, s7-mac-flapping-troubleshoot-003, s7-mac-aging-timer-troubleshoot-005 | Represented: learning, flooding, aging, and MAC movement. |
+| 7. Ethernet Switching | Switch Speeds and Forwarding Methods | s7-switching-methods-001, s7-cut-through-variants-match-001, s7-buffering-match-001, s7-duplex-mismatch-001 | Represented: store-and-forward/cut-through, buffering, duplex, and port settings. |
+| 9. Address Resolution | MAC and IP | s9-arp-request-001, s9-arp-vs-nd-001, s9-remote-destination-arp-001, s9-arp-cache-aging-source-001 | Represented: local ARP, remote-gateway resolution, cache behavior, and L2/L3 roles. |
+| 9. Address Resolution | Neighbor Discovery | s9-ipv6-nd-001, s9-nd-message-roles-match-001, s9-nd-router-messages-applied-002 | Represented: Neighbor Solicitation/Advertisement and router discovery messages. |
+| 10. Basic Router Configuration | Configure Initial Router Settings | s10-router-boot-setup-001, s10-router-memory-match-001, s10-ssh-management-hardening-003, s10-router-boot-process-applied-002 | Represented: boot, memory, initial security, and remote management. |
+| 10. Basic Router Configuration | Configure Interfaces | s10-router-no-shutdown-001, s10-router-interface-config-order-001, s10-interface-verification-scenario-001 | Represented: interface addressing, activation, and verification. |
+| 10. Basic Router Configuration | Configure the Default Gateway | s10-host-default-gateway-001, s10-switch-default-gateway-001, s10-ip-default-gateway-applied-002 | Represented: host gateway and Layer 2 switch management gateway are distinguished. |
+| 11. IPv4 Addressing | IPv4 Address Structure | s11-subnet-network-001, s11-prefix-length-001, s11-prefix-hosts-001, s11-subnet-mask-40-hosts-source-001 | Represented: network/host portions, prefix length, masks, and host capacity. |
+| 11. IPv4 Addressing | IPv4 Unicast, Broadcast, and Multicast | s11-source-broadcast-delivery-001, s11-source-multicast-delivery-001, s11-unicast-delivery-001, s11-multicast-group-applied-002 | Represented: destination scope and delivery behavior. |
+| 11. IPv4 Addressing | Types of IPv4 Addresses | s11-private-ranges-001, s11-ipv4-special-ranges-match-001, s11-ipv4-address-categories-applied-002 | Represented: private, public, and special-use ranges. |
+| 11. IPv4 Addressing | Network Segmentation | s11-subnet-broadcast-domain-scenario-001, s11-network-segmentation-applied-002, s11-subnet-overlap-applied-002 | Represented: broadcast-domain segmentation, overlap, and allocation constraints. |
+| 11. IPv4 Addressing | Subnet an IPv4 Network | s11-vlsm-planning-001, s11-vlsm-allocation-001, s11-vlsm-two-stage-allocation-001, s11-subnet-host-membership-matching-applied-001 | Represented: /24 subnetting, VLSM, host ranges, and membership. |
+| 12. IPv6 Addressing | IPv4 Issues | s12-ipv6-coexistence-001, s12-ipv4-ipv6-coexistence-applied-002, s12-ipv6-tunneling-applied-002 | Represented: coexistence and transition mechanisms; check source lesson emphasis for each transition method. |
+| 12. IPv6 Addressing | IPv6 Address Representation | s12-ipv6-compress-001, s12-ipv6-compress-002, s12-zero-compression-applied-002, s12-zero-suppression-applied-002 | Represented: hextets, leading-zero suppression, and zero compression. |
+| 12. IPv6 Addressing | IPv6 Address Types | s12-link-local-001, s12-gua-prefix-001, s12-ipv6-address-types-match-001, s12-anycast-scenario-001 | Represented: GUA, LLA, multicast, and anycast. |
+| 12. IPv6 Addressing | GUA and LLA Static Configuration | s12-ipv6-interface-config-001, s12-ipv6-verify-001, s12-interface-id-applied-002 | Represented: static interface configuration and verification. |
+| 12. IPv6 Addressing | Dynamic Addressing for IPv6 GUAs | s12-slaac-scenario-001, s12-ra-dhcpv6-modes-match-001, s12-dhcpv6-mode-applied-002 | Represented: SLAAC, RA flags, and DHCPv6 modes. |
+| 12. IPv6 Addressing | Dynamic Addressing for IPv6 LLAs | s12-link-local-001, s12-eui64-001, s12-eui64-applied-002 | Represented: link-local addressing and interface-ID construction; operating-system random IDs are also addressed in lesson text. |
+| 12. IPv6 Addressing | IPv6 Multicast Addresses | s12-ipv6-multicast-prefix-001, s12-ipv6-assigned-multicast-match-001, s12-ipv6-multicast-groups-applied-002 | Represented: multicast prefix and common all-nodes/all-routers groups. |
+| 12. IPv6 Addressing | Subnet an IPv6 Network | s12-ipv6-subnet-id-scenario-001, s12-ipv6-subnet-id-applied-002 | Represented: /48-to-/64 subnet ID selection. |
+| 13. ICMP | ICMP Messages | s13-icmp-echo-001, s13-ttl-expired-001, s13-icmp-unreachable-001, s13-icmpv4-unreachable-codes-match-001 | Represented: Echo, Time Exceeded, Destination Unreachable, and ICMPv6-related behavior. |
+| 13. ICMP | Ping and Traceroute Testing | s13-ping-loopback-scenario-001, s13-ping-default-gateway-scenario-001, s13-traceroute-ttl-sequence-002, s13-traceroute-asterisk-001 | Represented: local-stack tests, gateway reachability, TTL progression, and timeout interpretation. |
+| 14. Transport Layer | Transportation of Data | s14-socket-pair-001, s14-multiplexing-applied-002, s14-transport-multiplexing-source-001 | Represented: process delivery, sockets, and multiplexing. |
+| 14. Transport Layer | TCP Overview | s14-tcp-udp-001, s14-tcp-header-fields-001, s14-tcp-http-reliability-001 | Represented: TCP service characteristics and header functions. |
+| 14. Transport Layer | UDP Overview | s14-udp-characteristics-001, s14-udp-applications-001, s14-udp-voice-traffic-002 | Represented: connectionless transport and real-time application selection. |
+| 14. Transport Layer | Port Numbers | s14-port-matching-001, s14-port-ranges-001, s14-well-known-ports-applied-002 | Represented: port ranges, common services, and IANA assignments. |
+| 14. Transport Layer | TCP Communication Process | s14-tcp-handshake-001, s14-tcp-handshake-applied-002, s14-sequence-numbers-applied-002 | Represented: connection establishment and sequence/acknowledgment behavior; explicit termination-state practice can be expanded. |
+| 14. Transport Layer | Reliability and Flow Control | s14-tcp-ack-001, s14-tcp-window-001, s14-sack-purpose-001, s14-flow-congestion-control-001 | Represented: acknowledgments, receive windows, SACK, retransmission, and congestion control. |
+| 14. Transport Layer | UDP Communication | s14-udp-applications-001, s14-connectionless-transport-applied-002, s14-realtime-apps-applied-002 | Represented: UDP behavior and application suitability. |
+| 15. Application Layer | Application, Presentation, and Session | s15-tcpip-app-layer-001, s15-presentation-session-match-001 | Represented: application/presentation/session roles. |
+| 15. Application Layer | Peer-to-Peer | s15-p2p-hybrid-001, s15-hybrid-p2p-applied-002 | Represented: pure and hybrid peer-to-peer models. |
+| 15. Application Layer | Web and Email Protocols | s15-http-request-001, s15-email-protocols-001, s15-pop-imap-compare-001, s15-email-port-matching-001 | Represented: HTTP and common mail protocols/ports. |
+| 15. Application Layer | IP Addressing Services | s15-dns-purpose-001, s15-dns-record-types-001, s15-dhcp-dora-001, s15-dns-nslookup-scenario-001 | Represented: DNS resolution/records and DHCP addressing. |
+| 15. Application Layer | File Sharing Services | s15-file-sharing-match-001, s15-file-sharing-protocols-applied-002 | Represented: FTP, TFTP, and SMB. |
+| 16. Network Security Fundamentals | Security Threats and Vulnerabilities | s1-security-threat-vectors-001, s16-vulnerability-types-match-001, s16-physical-threats-match-001 | Represented: threat sources, vulnerability categories, and physical/environmental threats. |
+| 16. Network Security Fundamentals | Network Attacks | s16-malware-types-match-001, s16-attack-categories-match-001, s16-insider-threat-applied-002 | Represented: malware, reconnaissance, access, DoS, and insider threats. |
+| 16. Network Security Fundamentals | Network Attack Mitigation | s16-defense-depth-001, s16-firewall-types-match-001, s16-vpn-ips-match-001, s16-acl-applied-002 | Represented: defense in depth, filtering, VPN, IPS, and ACL mitigation. |
+| 16. Network Security Fundamentals | Device Security | s16-device-hardening-commands-match-001, s16-ssh-config-order-001, s16-ios-ssh-hardening-applied-002 | Represented: IOS hardening, authentication, SSH-only management, and secure credentials. |
+| 17. Build a Small Network | Devices in a Small Network | s17-device-selection-criteria-match-001, s17-device-selection-applied-002 | Represented: device selection based on requirements and scale. |
+| 17. Build a Small Network | Small Network Applications and Protocols | s17-dns-troubleshooting-001, s17-host-dhcp-apipa-diagnosis-001, s17-host-dns-query-troubleshooting-001 | Represented: DHCP, DNS, ARP, and common host services. |
+| 17. Build a Small Network | Scale to Larger Networks | s17-redundancy-001, s17-device-selection-applied-002, s17-network-baseline-anomaly-001 | Represented: redundancy, scalability, capacity, and monitoring. |
+| 17. Build a Small Network | Verify Connectivity | s17-traceroute-001, s17-ip-interface-verify-001, s17-verification-applied-002, s17-trace-interpretation-applied-002 | Represented: ping/traceroute and IOS verification. |
+| 17. Build a Small Network | Host and IOS Commands | s17-ios-show-commands-match-001, s17-host-arp-cache-command-001, s17-source-ipv6-interface-show-001, s17-source-extended-ping-001 | Represented: host-side and IOS show/diagnostic commands. |
+| 17. Build a Small Network | Troubleshooting Methodologies | s17-troubleshooting-order-001, s17-troubleshooting-sequence-001, s17-problem-identification-applied-002 | Represented: evidence, hypothesis, remediation, and verification sequence. |
+| 17. Build a Small Network | Troubleshooting Scenarios | s17-multidevice-vlan-routing-fault-isolation-001, s17-packet-tracer-dhcp-relay-challenge-001, s17-multistage-dns-fault-isolation-001, s17-interface-crc-counter-diagnosis-001 | Represented: multi-device and staged Packet Tracer-style fault isolation. |
+
+### Scope and remaining source-verification limits
+
+- The objective headings for Modules 1–17 are transcribed from the recovered raw text. Module 8 uses its explicit “Module 8: Topics” block rather than a duplicated module-objectives block.
+- This matrix provides a first-pass objective-to-question map for every module. It is not a source-page-by-source-page verification of every active question.
+- Module 1's “Networks Affect our Lives” slide (IMG-0051) is only a title slide in the recovered notebook; the available source does not provide enough explanatory content to author a source-grounded assessment for that objective.
+- Module 2 and Module 3 contain cross-lesson and repeated source material; their existing topic-specific mapping sections above identify known partial and near-duplicate areas.
+- Remaining candidate image slides often contain unmarked questions, activities, or diagrams without answer keys. Do not convert those into source-origin questions unless the prompt and answer are directly supported by visible source evidence.
+- The 77-image visual triage described in the image audit is a screening pass only. The 744 remaining unique question-like images still require page-level review if the project requires a complete answer-key audit.
