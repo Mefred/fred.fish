@@ -83,7 +83,7 @@ export function buildAdaptiveQuiz(
       / Math.max(1, question.concepts.length);
     const lessonRepeats = selectedLessonCounts.get(question.lessonId) ?? 0;
     // Keep targeting weak concepts, but avoid spending a whole session on one lesson or repeated tags.
-    const diversityPenalty = overlap * 24 + Math.max(0, lessonRepeats - 1) * 6;
+    const diversityPenalty = overlap * 24 + lessonRepeats * 8;
     return priority(question, progress, now) + difficultyFit(question, progress) - diversityPenalty;
   };
 
