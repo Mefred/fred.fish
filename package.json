@@ -11,7 +11,8 @@
     "validate:links": "node scripts/validate-links.mjs",
     "validate:learning": "node scripts/validate-learning-data.mjs",
     "test:learning": "node --experimental-strip-types scripts/test-adaptive-engine.mjs",
-    "report:learning": "node scripts/report-learning-coverage.mjs"
+    "report:learning": "node scripts/report-learning-coverage.mjs",
+    "test:browser": "node scripts/test-browser.mjs"
   },
   "dependencies": {
     "astro": "^7.4.7"
