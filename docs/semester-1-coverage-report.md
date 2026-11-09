@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 566
+- **Questions:** 570
 - **Lessons represented:** 22
 - **Distinct concept tags:** 605
 
@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
-| ipv4-addressing | 39 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 12, single: 12 | 2–5 |
+| ipv4-addressing | 40 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 12, single: 13 | 2–5 |
 | ipv6-addressing | 33 | 47 | fill: 9, matching: 8, scenario: 8, single: 8 | 2–5 |
 | network-components | 13 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 2, single: 6 | 1–3 |
 | network-layer | 48 | 67 | fill: 3, matching: 7, multiple: 5, scenario: 22, single: 11 | 2–5 |
@@ -27,33 +27,33 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
 | number-systems | 21 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 7 | 1–4 |
 | physical-layer | 39 | 51 | matching: 12, multiple: 2, scenario: 10, single: 15 | 1–4 |
-| protocols-and-models | 33 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 14 | 1–4 |
+| protocols-and-models | 35 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 16 | 1–4 |
 | reliable-networks | 12 | 11 | ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
 | small-network | 44 | 82 | fill: 4, matching: 3, multiple: 4, ordering: 4, scenario: 22, single: 7 | 1–5 |
-| transport-layer | 35 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 5, single: 19 | 1–4 |
+| transport-layer | 36 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 5, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 444 |
-| 3 | 60 |
+| 2 | 438 |
+| 3 | 66 |
 | 4 | 26 |
 | 5 | 20 |
 | 6 | 19 |
-| 7 | 11 |
-| 8 | 4 |
+| 7 | 9 |
+| 8 | 6 |
 | 9 | 1 |
-| 10 | 6 |
+| 10 | 5 |
 | 11 | 3 |
-| 12 | 2 |
+| 12 | 3 |
 | 13 | 3 |
-| 14 | 2 |
-| 15 | 1 |
+| 14 | 1 |
+| 15 | 2 |
 | 18 | 1 |
 | 19 | 1 |
-| 27 | 1 |
+| 28 | 1 |
 
 **Concepts with fewer than two questions:** 0.
 
@@ -1018,7 +1018,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `enable-secret` | 2 | basic-device-configuration |
-| `encapsulation` | 11 | data-link-layer, protocols-and-models |
+| `encapsulation` | 12 | data-link-layer, protocols-and-models |
 | `end-devices` | 2 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
 | `environmental-threats` | 2 | network-security |
@@ -1150,7 +1150,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-routing-table` | 5 | network-layer |
 | `ipv4-source-destination` | 2 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
-| `ipv4-subnetting` | 27 | ipv4-addressing |
+| `ipv4-subnetting` | 28 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 3 | icmp, network-layer |
 | `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
@@ -1232,7 +1232,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multicast-address` | 2 | ipv6-addressing |
 | `multicast-group` | 2 | ipv4-addressing |
 | `multimode-fiber` | 3 | physical-layer |
-| `multiplexing` | 2 | transport-layer |
+| `multiplexing` | 3 | transport-layer |
 | `mx-record` | 2 | application-layer |
 | `name-resolution` | 6 | application-layer, small-network |
 | `native-vlan` | 2 | ethernet-switching |
@@ -1274,7 +1274,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `nvram` | 3 | router-configuration |
 | `octet` | 2 | number-systems |
 | `online-collaboration` | 2 | network-trends |
-| `open-standards` | 2 | protocols-and-models |
+| `open-standards` | 3 | protocols-and-models |
 | `osi-model` | 8 | application-layer, protocols-and-models |
 | `ospf` | 2 | network-layer |
 | `oui` | 2 | ethernet-switching |
@@ -1304,7 +1304,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `point-to-point-topology` | 2 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
-| `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
+| `port-numbers` | 8 | application-layer, protocols-and-models, transport-layer |
 | `port-unreachable` | 2 | icmp |
 | `positional-notation` | 2 | number-systems |
 | `powerline-networking` | 4 | network-trends |
@@ -1313,11 +1313,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `private-ipv4` | 2 | ipv4-addressing |
 | `privileged-exec` | 2 | basic-device-configuration |
 | `problem-identification` | 2 | small-network |
-| `protocol-data-units` | 2 | protocols-and-models |
-| `protocol-interaction` | 2 | protocols-and-models |
-| `protocol-suites` | 2 | protocols-and-models |
+| `protocol-data-units` | 3 | protocols-and-models |
+| `protocol-interaction` | 3 | protocols-and-models |
+| `protocol-suites` | 3 | protocols-and-models |
 | `protocol-unreachable` | 2 | icmp |
-| `protocols` | 2 | protocols-and-models |
+| `protocols` | 3 | protocols-and-models |
 | `public-ipv4` | 2 | ipv4-addressing |
 | `quality-of-service` | 6 | network-trends, reliable-networks |
 | `radio-frequency` | 2 | physical-layer |
@@ -1422,10 +1422,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `store-and-forward-switching` | 2 | ethernet-switching |
 | `straight-through-cable` | 2 | physical-layer |
 | `subinterfaces` | 2 | ethernet-switching |
-| `subnet-mask` | 7 | ipv4-addressing, router-configuration |
+| `subnet-mask` | 8 | ipv4-addressing, router-configuration |
 | `subnet-membership` | 2 | ipv4-addressing |
 | `subnet-overlap` | 2 | ipv4-addressing |
-| `subnet-sizing` | 10 | ipv4-addressing |
+| `subnet-sizing` | 11 | ipv4-addressing |
 | `svi` | 2 | basic-device-configuration |
 | `switch-configuration` | 2 | ethernet-switching |
 | `switch-default-gateway` | 2 | basic-device-configuration |
@@ -1454,7 +1454,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `traffic-analysis` | 2 | small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 2 | ipv6-addressing |
-| `transport-layer` | 14 | protocols-and-models, transport-layer |
+| `transport-layer` | 15 | protocols-and-models, transport-layer |
 | `trojan-horse` | 2 | network-security |
 | `troubleshooting` | 5 | basic-device-configuration, ipv4-addressing, small-network |
 | `troubleshooting-methodology` | 2 | small-network |
@@ -1518,7 +1518,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | multiple | 32 |
 | ordering | 19 |
 | scenario | 155 |
-| single | 211 |
+| single | 215 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1526,8 +1526,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 39 |
-| 2 | 159 |
-| 3 | 244 |
+| 2 | 160 |
+| 3 | 247 |
 | 4 | 102 |
 | 5 | 22 |
 
