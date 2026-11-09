@@ -1,10 +1,20 @@
 # Semester 1 OCR candidate triage
 
-This is a text-only triage pass over `fredfish_semester1_ocr_bundle.zip`. It is not a visual answer-key audit and must not be treated as approval to promote any OCR candidate into the active question bank.
+This audit combines OCR text analysis with a first visual answer-key pass against the original OneNote image assets. It does not approve every OCR candidate for promotion.
 
-## Bundle contents and coverage
+## Bundle contents and image recovery
 
-The archive contains `image-ocr.jsonl`, `image-audit.csv`, `question-candidates.jsonl`, `module-image-map.csv`, a classifier script, and this export's README. It does **not** contain the referenced `images/*.png` files. The CSV records image paths and hashes, but the image bytes are absent, so the visual content and marked answers cannot be inspected from this bundle.
+The OCR export ZIP contains `image-ocr.jsonl`, `image-audit.csv`, `question-candidates.jsonl`, `module-image-map.csv`, a classifier script, and its README. It does not contain the referenced `images/*.png` files.
+
+The original OneNote `.one` notebook contains the embedded image payloads. They were recovered using `scripts/recover-onenote-images.py` and checked against the OCR export's SHA-256 manifest:
+
+- 2,646 / 2,646 image assets matched by SHA-256.
+- 2,376 unique source image hashes matched.
+- The extraction scanned 2,727 PNG/JPEG signatures and ignored unmatched/invalid payloads.
+
+See [image recovery instructions](./semester-1-image-recovery.md) for the repeatable procedure.
+
+## Candidate coverage
 
 | Measure | Result |
 |---|---:|
@@ -14,11 +24,26 @@ The archive contains `image-ocr.jsonl`, `image-audit.csv`, `question-candidates.
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Candidate asset records already promoted after visual review | 10 |
+| Candidate asset records promoted after visual review | 16 |
 | Candidate asset records visually reviewed as not questions | 4 |
-| Candidate asset records still requiring visual answer verification | 778 |
+| Candidate asset records still requiring visual answer verification | 772 |
 
-The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Five promoted groups and two visually rejected groups also have duplicate asset records that remain marked for review, so per-record status counts should not be added as if they were mutually exclusive unique groups.
+The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
+
+## Newly visually verified source-question associations
+
+Six additional image candidates were inspected. Two were linked to existing source-origin questions to avoid duplicate prompts; four distinct prompts were added as source-origin questions.
+
+| Image reference | Active question ID | Visual finding |
+|---|---|---|
+| IMG-0063 | `s1-media-selection-001` | Marked answers: signal distance and installation environment |
+| IMG-0256 | `s3-destination-port-001` | Marked answer: transport layer |
+| IMG-0271 | `s3-decode-protocol-stack-source-001` | Marked answer: Ethernet, IP, TCP, HTTP |
+| IMG-0292 | `s3-open-standards-source-001` | Marked answer: cross-OS interoperability |
+| IMG-1315 | `s14-transport-multiplexing-source-001` | Marked answer: transport-layer application multiplexing |
+| IMG-1756 | `s11-subnet-mask-40-hosts-source-001` | Marked answer: 255.255.255.192 (/26) |
+
+The original OCR export's promotion status has not been rewritten in the Library ZIP; the current source-question associations are maintained in `src/data/learning/semester-1-seed.ts` and the question-bank audit.
 
 ## Text-only comparison against extracted source questions
 
@@ -38,7 +63,7 @@ This is a prioritization heuristic only. It can be distorted by OCR noise, long 
 
 ## Low-overlap candidates for first manual classification
 
-These eight normalized groups had a best token-overlap score of 0.20 or lower. They are listed first for human classification because they are less readily reconciled with the extracted numbered question blocks.
+These eight normalized groups had a best token-overlap score of 0.20 or lower. They remain first-priority review candidates because they are less readily reconciled with the extracted numbered question blocks.
 
 | Candidate | Image reference | Best overlap | Text-only observation |
 |---|---|---:|---|
@@ -53,15 +78,15 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 ## Promotion rules
 
-1. Do not infer the correct option from OCR ordering, text position, or a guessed answer key.
-2. Verify the question prompt, all answer choices, selected/circled answer, and any diagram labels against the original image.
-3. Preserve the original `IMG-XXXX` reference and map it to the correct active question ID only after visual verification.
-4. If the asset is a lesson summary, configuration example, lab instruction, or explanatory diagram, keep it as instructional material instead of forcing it into the quiz bank.
-5. For diagram-dependent questions, verify the complete diagram and its labels; OCR text alone is insufficient.
+1. Verify the question prompt, all answer choices, selected/circled answer, and any diagram labels against the original image.
+2. Preserve the original `IMG-XXXX` reference and map it to the correct active question ID only after visual verification.
+3. If the asset is a lesson summary, configuration example, lab instruction, or explanatory diagram, keep it as instructional material instead of forcing it into the quiz bank.
+4. For diagram-dependent questions, verify the complete diagram and its labels; OCR text alone is insufficient.
+5. If the correct answer is inferred from networking knowledge rather than visibly provided, mark the question `ai-generated`, not `source`.
 
 ## Current disposition
 
-- The ten already promoted image associations documented in the export README remain the only visually verified promoted set in this bundle.
-- The four manually rejected assets remain excluded as non-question slides.
-- The remaining candidates are not approved for source-question promotion.
-- The next required input for the image-audit phase is the original image files referenced by `image-audit.csv` (for example, `images/0000.png` through the exported asset range). This archive contains their metadata and OCR, but not the images themselves.
+- Six new image candidates have been visually reviewed and associated with active source-origin questions.
+- The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
+- The remaining 772 candidate asset records are not approved for source-question promotion.
+- The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
