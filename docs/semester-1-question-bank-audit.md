@@ -1,6 +1,6 @@
 # Semester 1 question bank audit
 
-**Current bank:** 371 unique questions  
+**Current bank:** 376 unique questions  
 **Concept tags:** 605 unique concept identifiers  
 **Source provenance:** 24 source questions; 347 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
@@ -10,7 +10,7 @@ Six new questions expand subnetting and switching practice: /27 usable host-rang
 
 The preceding five-question Ethernet-switching batch added VLAN-scoped unknown-unicast flooding, trunk versus access selection, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping diagnosis.
 
-The bank now contains 371 questions across 605 distinct concept tags. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
+The bank now contains 376 questions across 605 distinct concept tags. See the generated coverage report for current per-lesson, format, difficulty, and concept-exposure counts.
 
 ## Recent expansion
 
@@ -232,3 +232,8 @@ Added a difficult scenario requiring learners to correlate switch trunk output w
 ## Staged Packet Tracer troubleshooting challenge
 
 Added three connected stages to the Small Network lesson: (1) diagnose a missing DHCP relay on the client VLAN from APIPA and interface-configuration evidence; (2) correct an invalid DNS server option in the DHCP scope after IP reachability succeeds; and (3) configure a default route after local services and name resolution work but external reachability fails. Each stage includes a corrective action and explicit post-change verification guidance. The scenario assumes the stated access VLAN, trunk, and upstream next-hop conditions; learners should verify return routing in the final stage.
+
+
+## Data Link Layer continuation
+
+Added five applied questions for Ethernet frame source/destination addressing, LLC protocol identification, half-duplex collision handling versus full duplex, FCS corruption handling, and receive-side frame processing order. Module 6 now has 18 questions. These additions reuse existing concept tags, so the bank remains at 605 distinct concept identifiers.
