@@ -27,12 +27,13 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Visually verified image-question associations | 34 |
 | Candidate asset records visually reviewed as not questions | 4 |
 | Unique unresolved candidate images remaining | 748 |
+| Unresolved candidate asset records (including duplicate references) | 754 |
 
 The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
 
 ## Newly visually verified source-question associations
 
-Eighteen additional unique image candidates were inspected. Four were linked to existing source-origin questions to avoid duplicate prompts; six distinct prompts were added as source-origin questions, with the connector question supported by two separate image assets.
+Eighteen additional unique image candidates were inspected across three follow-up passes. Five images were linked to existing source-origin questions to avoid duplicate prompts; twelve distinct source-origin questions were added, with one connector question supported by two separate image assets.
 
 | Image reference | Active question ID | Visual finding |
 |---|---|---|
