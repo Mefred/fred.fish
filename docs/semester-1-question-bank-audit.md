@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 254 unique questions  
-**Concept tags:** 398 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 234 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 258 unique questions  
+**Concept tags:** 405 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 238 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -21,6 +21,8 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 
 A further five applied Network Layer scenarios exercise two-router static-route configuration, missing return paths, route-table interpretation, longest-prefix match, and configuration persistence after reload.
 
+Added four AI-generated Physical Layer questions covering the data-link-to-physical-layer handoff, bandwidth versus throughput, copper/fiber/wireless signal mapping, and TIA/EIA-568 UTP requirements. The lesson now has 12 questions, including explicit coverage for the physical-layer purpose and characteristics objectives.
+
 Added five AI-generated packet-header practice questions for Module 8. Two assess IPv4 field roles and packet inspection (including Protocol, TTL, and Header Checksum); three assess IPv6 field roles, Flow Label interpretation, and IPv4/IPv6 base-header differences. The additions use the recovered text block reference `block-0073`; they are not marked as verbatim source questions. The Network Layer lesson now has 28 questions and includes dedicated IPv4/IPv6 header concepts.
 
 ## Format coverage
@@ -31,18 +33,18 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 30 |
-| Matching | 22 |
+| Matching | 23 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 62 |
-| **Total** | **254** |
+| Scenario / troubleshooting | 65 |
+| **Total** | **258** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 75 |
-| 3 — Applied | 97 |
+| 2 — Foundational | 77 |
+| 3 — Applied | 99 |
 | 4 — Advanced | 42 |
 | 5 — Challenging | 6 |
 
