@@ -146,6 +146,18 @@ The recovered Module 9 objective is to explain how ARP and Neighbor Discovery en
 
 Three new AI-generated questions add remote-network gateway resolution, full ICMPv6 ND message-role matching, and ARP cache-expiration behavior. They are derived from recovered Module 9 notes and existing source references, not presented as verbatim source questions. The source includes topology exhibits for ARP requests and remote destinations; those diagrams still need direct visual verification.
 
+## Module 10 first-pass topic-to-question mapping
+
+The recovered Module 10 objective is to implement initial settings on a router and end devices. Its three source topics are initial router settings, interface configuration, and default-gateway configuration. The active `router-configuration` lesson now has 11 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Configure Initial Router Settings | Router boot/setup behavior; IOS image and configuration files; RAM, ROM, flash, NVRAM; saving running configuration; basic initial settings | `router-boot-process`, `startup-configuration`, `router-memory`, `ram`, `rom`, `flash`, `nvram`, `running-configuration` | Represented through boot/setup diagnosis, memory-role matching, and saving the active configuration. Initial security settings (hostname, privileged EXEC, console/VTY access, password protection, and banner) need more router-specific applied practice; some are covered in Module 2. |
+| Configure Interfaces | Configure two active router interfaces; IPv4/IPv6 interface addressing; activate interfaces; verify interface status and statistics | `router-interface-configuration`, `ipv4-interface-configuration`, `no-shutdown`, `interface-status`, `ios-verification-commands`, `show-ip-interface-brief` | Improved; a new ordering item tests interface mode, IPv4 address assignment, and no shutdown; a scenario selects show ip interface brief for fast verification. More complete two-interface lab scenarios remain useful. |
+| Configure the Default Gateway | Configure end devices to use the local router interface as the gateway; Layer 2 switch default-gateway for remote management | `default-gateway`, `ip-default-gateway`, `switch-management`, `remote-management` | Improved; new host scenario distinguishes the local router interface from a remote server or ISP address, alongside the existing Layer 2 switch management-gateway question. |
+
+Three new AI-generated questions add router interface command ordering, concise interface verification, and host default-gateway selection. They are derived from recovered Module 10 notes and existing source references, not presented as verbatim source questions. The Packet Tracer interface and default-gateway exhibits still need direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
