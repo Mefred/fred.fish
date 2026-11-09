@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 577 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 582 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -355,6 +355,11 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 3. Protocols and Models | `IMG-0282` | `s3-destination-mac-layer-002` | Destination MAC address is added at the Data Link layer |
 | 3. Protocols and Models | `IMG-0287` | `s3-destination-port-001` | Destination port number is added at the Transport layer |
 | 3. Protocols and Models | `IMG-0322` | `s3-source-port-layer-002` | Source port number is added at the Transport layer |
-| 8. Network Layer | `IMG-0779` | `s8-diffserv-priority-source-001` | Differentiated Services is the 8-bit IPv4 field for QoS classification and ECN |
+| 8. Network Layer | `IMG-0779`, `IMG-0624` | `s8-diffserv-priority-source-001` | Differentiated Services is the 8-bit IPv4 field for QoS classification and ECN |
+| 8. Network Layer | `IMG-0599` | `s8-ipv4-source-address-field-source-001` | Source IPv4 Address field contains the sending interface address |
+| 8. Network Layer | `IMG-0607` | `s8-ipv4-ttl-field-source-001` | TTL limits packet lifetime across routers |
+| 8. Network Layer | `IMG-0615` | `s8-ipv4-destination-address-field-source-001` | Destination IPv4 Address field contains the unicast/multicast/broadcast destination |
+| 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
+| 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-The latest pass brings the visually verified source-image set to 28 image-question associations. The question bank contains 576 records across 605 concept tags, with a minimum of two questions per tag. Of 772 unique unresolved question-like images, 760 still await visual review; do not infer complete source coverage from this verified subset.
+The latest pass brings the visually verified source-image set to 34 image-question associations. The question bank contains 576 records across 605 concept tags, with a minimum of two questions per tag. Of 772 unique unresolved question-like images, 748 still await visual review; do not infer complete source coverage from this verified subset.
