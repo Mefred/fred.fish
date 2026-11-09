@@ -23,14 +23,14 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 
 | Format | Questions |
 |---|---:|
-| Single choice | 108 |
+| Single choice | 110 |
 | Multiple select | 18 |
 | True / false | 1 |
-| Fill in the blank | 26 |
+| Fill in the blank | 27 |
 | Matching | 19 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 38 |
-| **Total** | **221** |
+| Scenario / troubleshooting | 48 |
+| **Total** | **234** |
 
 ## Difficulty coverage
 
@@ -38,8 +38,8 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 75 |
-| 3 — Applied | 85 |
-| 4 — Advanced | 23 |
+| 3 — Applied | 91 |
+| 4 — Advanced | 30 |
 | 5 — Challenging | 4 |
 
 ## Source provenance audit
@@ -74,4 +74,4 @@ The IPv4 Addressing bank was expanded with five applied subnetting items: locati
 The Basic Device Configuration lesson now includes four additional applied troubleshooting scenarios: configuring a management SVI, setting a Layer 2 switch default gateway for remote management, interpreting an `up/down` interface state after enabling a port, and diagnosing an unsaved hostname change after reload. The bank now contains 17 questions for this lesson. These items are marked AI-generated and are intended to test command selection and interpretation of IOS operational state rather than rote command recall.
 
 
-The Network Layer bank now contains five additional applied route-configuration and verification scenarios. These cover verifying static routes with `show ip route`, fault-isolating an unresolved static-route next hop, configuring a branch default route, and interpreting the `S*` default-route entry in IOS routing-table output. All five are marked AI-generated and cite the relevant routing screenshots; they test configuration and operational interpretation rather than verbatim source recall.
+The Network Layer bank now contains four additional applied route-configuration and verification scenarios. These cover verifying static routes with `show ip route`, fault-isolating an unresolved static-route next hop, configuring a branch default route, and interpreting the `S*` default-route entry in IOS routing-table output. All five are marked AI-generated and cite the relevant routing screenshots; they test configuration and operational interpretation rather than verbatim source recall.
