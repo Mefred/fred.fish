@@ -99,13 +99,13 @@ OCR still cannot reliably capture diagram relationships, handwritten annotations
 
 The first 36 unresolved candidate images were screened at 960×540 per image. Three answer-marked images were opened individually at native resolution and confirmed against existing source-origin questions: IMG-0063 (signal distance and installation environment), IMG-0279 (Application layer), and IMG-0282 (Data Link layer). All three are already linked in the active bank; no new source-origin association was added. The remaining 33 images in this batch are unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams. The full batch log is in [semester-1-image-review-batch-1.md](./semester-1-image-review-batch-1.md).
 
-This contact-sheet screen does not count as native-resolution review for the other 33 images. The previously reported 744 unique / 750 asset-record native-resolution backlog remains unchanged.
+This contact-sheet screen does not count as native-resolution review for the other 33 images. The original OCR export still marks 744 unique images (750 asset records including duplicate references) unresolved. This is an export-status count, not the number of images remaining in these four manual-review batches. Of the 36 candidates in batch 1, 33 were contact-sheet-only and had not yet been opened individually at native resolution.
 
 ### High-resolution contact-sheet review — batch 2
 
 The next 36 candidates (IMG-0287–IMG-0427) were screened. Five marked OSI-layer answers were opened at native resolution and confirmed against existing source-origin questions: destination port/Transport (IMG-0287), open standards/interoperability (IMG-0292), destination IP/Network (IMG-0306), source IP/Network (IMG-0314), and source port/Transport (IMG-0322). IMG-0348 was opened at native resolution and confirms the four twisted pairs in the existing UTP-identification visual. All six already belong to existing source-origin associations; no new association was added. The other 30 images are unmarked prompts, choices without selections, or instructional slides/diagrams. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1 and 2, 72 candidates have been screened at high-resolution contact-sheet scale and nine answer/visual items have been cross-checked at native resolution. The 744-unique-image / 750-asset-record native-resolution backlog remains unchanged because the remaining contact-sheet-only items still require native-resolution inspection where answer marks or diagram details matter.
+Across batches 1 and 2, 72 candidates have been screened at high-resolution contact-sheet scale and nine answer/visual items have been cross-checked at native resolution. The original export's 744-unique-image / 750-asset-record unresolved status count is unchanged; it should not be interpreted as the remaining manual-review count. Within these two batches, 63 images were not opened individually at native resolution.
 
 
 
@@ -123,7 +123,7 @@ Use `scripts/ingest-semester-images.py` to rerun OCR and `scripts/recover-onenot
 
 The next 36 candidates (IMG-0428–IMG-0511) were screened. No clearly marked answer-selection or matching key was visible; the images are unmarked LLC/MAC sublayer, frame-field, switching, topology, and MAC-learning prompts, plus lesson-summary and Packet Tracer activity slides. No new source-origin or visual-context association was added. See [the batch 3 review log](./semester-1-image-review-batch-3.md).
 
-Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items have been cross-checked at native resolution and were already linked to existing source-origin questions. The remaining 99 contact-sheet-only items still need native-resolution inspection where small answer marks or diagram details matter. The 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items have been cross-checked at native resolution and were already linked to existing source-origin questions. The remaining 99 images in these batches were contact-sheet-only; they still need native-resolution inspection where small answer marks or diagram details matter. The original OCR export's unresolved status count remains 744 unique images / 750 asset records.
 
 ## High-resolution contact-sheet review — batch 4
 
