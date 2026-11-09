@@ -43,8 +43,9 @@ See [the reproducible recovery procedure](./semester-1-image-recovery.md).
 - 792 image assets contain question-like OCR text.
 - Normalizing the OCR text yields 474 candidate groups.
 - These are candidate prompts, not 474 verified answer-key entries. Some are duplicate slides, matching activities, Packet Tracer instructions, lesson summaries, or questions whose answer depends on a diagram or visual mark.
-- Eighteen additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier source-origin associations, there are 34 source-origin image-question associations. Four further images were used as visual context for AI-generated applied questions, bringing the total reviewed image-question associations to 38. Four false-positive candidates remain excluded.
-- Of the 766 unique unresolved candidate images, 744 remain for visual answer-key review (750 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
+- Eighteen additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier source-origin associations and two newly verified Module 8 slides, there are **36 source-origin image-question associations**. Four further images were used as visual context for AI-generated applied questions, bringing the total reviewed image-question associations to **40**. Four false-positive candidates remain excluded.
+- A separate visual triage inspected 77 unique unresolved candidate images with prominent blue annotations or diagram components. Eighteen were already linked to active questions; the remaining 59 were checked for answer marks and diagram evidence. They did not yield additional unambiguous answer keys: most were unmarked question slides, repeated diagrams, or Packet Tracer task screens. These remain unresolved rather than being promoted on an inferred answer.
+- Of the 766 unique unresolved candidate images, 744 remain for visual answer-key review (750 asset records when duplicate references are counted). The 77-image triage above is a screening pass, not a full answer-key review of the remaining candidate corpus. New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
 
 ## Module sequence discovered
 
@@ -71,6 +72,8 @@ The images identify the Cisco Introduction to Networks sequence:
 ## Visual review status
 
 OCR is complete and all image bytes are now recoverable and hash-verified. A visual contact-sheet pass reviewed the 23 unique images without OCR text: 22 were identified as visual-only assets (including cable/connectors, switch hardware, certification badges, and diagrams) and one dark slide remains flagged for manual transcription.
+
+The latest image verification added two source-supported Module 8 questions: `IMG-0598` explicitly asks how hosts route packets and provides the answer (a host-local routing table with loopback, local, and default routes); `IMG-0639` explicitly enumerates router forwarding as decapsulation, route lookup, and re-encapsulation toward R2.
 
 The latest 11 image checks verified the exact prompt and answer marks/diagram details for:
 - Medium selection: signal distance and installation environment.
