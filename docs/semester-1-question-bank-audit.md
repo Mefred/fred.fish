@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 234 unique questions  
+**Current bank:** 239 unique questions  
 **Concept tags:** 373 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 214 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 219 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -26,11 +26,11 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 | Single choice | 110 |
 | Multiple select | 18 |
 | True / false | 1 |
-| Fill in the blank | 27 |
+| Fill in the blank | 28 |
 | Matching | 19 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 48 |
-| **Total** | **234** |
+| Scenario / troubleshooting | 52 |
+| **Total** | **239** |
 
 ## Difficulty coverage
 
@@ -38,9 +38,9 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 75 |
-| 3 — Applied | 91 |
-| 4 — Advanced | 30 |
-| 5 — Challenging | 4 |
+| 3 — Applied | 93 |
+| 4 — Advanced | 32 |
+| 5 — Challenging | 5 |
 
 ## Source provenance audit
 
@@ -75,3 +75,6 @@ The Basic Device Configuration lesson now includes four additional applied troub
 
 
 The Network Layer bank now contains four additional applied route-configuration and verification scenarios. These cover verifying static routes with `show ip route`, fault-isolating an unresolved static-route next hop, configuring a branch default route, and interpreting the `S*` default-route entry in IOS routing-table output. All five are marked AI-generated and cite the relevant routing screenshots; they test configuration and operational interpretation rather than verbatim source recall.
+
+
+IPv4 Addressing now includes five additional applied subnetting/VLSM exercises: /29 network and broadcast identification, /23 broadcast calculation, subnet count and usable-host capacity when splitting a /24 into /27s, sizing a subnet for 100 hosts, and allocating a second VLSM subnet after a /25 allocation. These are AI-generated practice items tied to the subnetting source screenshots. The lesson now has 20 active questions.
