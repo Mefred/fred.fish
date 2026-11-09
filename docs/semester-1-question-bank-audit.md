@@ -41,7 +41,7 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 587 questions during the full concept-depth effort. The 196 additions consist of 180 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. A provenance audit also reclassified two questions as AI-generated where the source image showed the prompt but not a marked answer key. All additions reuse existing concept identifiers; the number of distinct tags remains 605. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 589 questions during the full expansion. The 196 additions comprise 180 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -76,7 +76,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0279` | `s3-application-data-layer-source-001` | Application layer |
 | `IMG-0779`, `IMG-0624` | `s8-diffserv-priority-source-001` | Differentiated Services field carries QoS classification information |
 
-There are now 34 source-origin image-question associations plus four visually reviewed images used as context for AI-generated applied questions (38 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
+There are now 36 source-origin image-question associations plus four visually reviewed images used as context for AI-generated applied questions (40 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
 
 ## Provenance rules
 
@@ -96,7 +96,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
 - Twenty-two additional question-image associations have been manually checked across the follow-up passes. The remaining 744 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
-- The source-concept inventory is a first-pass transcription with explicit mappings for Modules 1–4 and 8; a complete atomic objective-to-question-tag matrix for every lesson remains outstanding.
+- The source-concept inventory now includes a first-pass objective-to-question map for all 17 modules. It is not yet a page-by-page audit of every question, answer, diagram, and Packet Tracer activity.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
 
