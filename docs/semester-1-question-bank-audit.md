@@ -4,14 +4,14 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **604** |
-| Unique question IDs | 604 |
-| Unique normalized prompts | 604 |
+| Active questions | **605** |
+| Unique question IDs | 605 |
+| Unique normalized prompts | 605 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 607 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 40 |
+| Source-origin questions | 41 |
 | AI-generated questions | 564 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
@@ -22,15 +22,15 @@ The current 607 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 409 |
-| 3 | 77 |
+| 2 | 408 |
+| 3 | 78 |
 | 4 | 37 |
 | 5 | 22 |
 | 6 | 18 |
 | 7 | 9 |
-| 8 | 8 |
+| 8 | 9 |
 | 9 | 1 |
-| 10 | 6 |
+| 10 | 5 |
 | 11 | 6 |
 | 12 | 3 |
 | 13 | 3 |
@@ -41,26 +41,26 @@ The current 607 concept tags are not evenly represented. This distribution makes
 | 19 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 409 concepts (67.4%) sit exactly at the two-question minimum. Future expansion should prioritize concepts with thin coverage and add varied assessment modes or applied contexts only when the source supports the underlying learning objective.
+**Priority implication:** 408 concepts (67.2%) sit exactly at the two-question minimum. Future expansion should prioritize concepts with thin coverage and add varied assessment modes or applied contexts only when the source supports the underlying learning objective.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 231 |
+| Single choice | 232 |
 | Multiple select | 34 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 99 |
 | Ordering | 20 |
 | Scenario / troubleshooting | 167 |
-| **Total** | **604** |
+| **Total** | **605** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
-| 1 — Introductory | 45 |
+| 1 — Introductory | 46 |
 | 2 — Foundational | 168 |
 | 3 — Applied | 264 |
 | 4 — Advanced | 105 |
@@ -68,7 +68,7 @@ The current 607 concept tags are not evenly represented. This distribution makes
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 604 questions during the full expansion. The 211 additions comprise 195 AI-generated questions and sixteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 605 questions during the full expansion. The 212 additions comprise 195 AI-generated questions and seventeen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 607 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -107,7 +107,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
-There are now 36 source-origin image-question associations plus nine visually reviewed images used as context for AI-generated applied questions (45 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question. The first 108 candidate images have also been screened at high-resolution contact-sheet scale. Nine answer/visual items were checked at native resolution and were already linked to existing questions; no new source-origin association was added. The other 99 candidates remain unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams and still require native-resolution review where diagram or fine-detail evidence matters. See the batch 1, batch 2, and batch 3 review logs for the decisions.
+There are now 39 source-origin image-question associations plus nine visually reviewed images used as context for AI-generated applied questions (48 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question. The first 108 candidate images have also been screened at high-resolution contact-sheet scale. Nine answer/visual items were checked at native resolution and were already linked to existing questions; no new source-origin association was added. The other 99 candidates remain unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams and still require native-resolution review where diagram or fine-detail evidence matters. See the batch 1, batch 2, and batch 3 review logs for the decisions.
 
 ## Provenance rules
 
@@ -119,13 +119,13 @@ There are now 36 source-origin image-question associations plus nine visually re
 
 ## Validation
 
-Distractor-feedback validation is isolated in `scripts/distractor-validation.mjs`. When a question supplies per-choice feedback, the data validator requires every feedback key to reference an existing incorrect choice and every explanation to contain non-empty text. Regression tests cover valid mappings, correct-answer IDs, unknown IDs, blank explanations, and malformed maps. Forty-four questions now include targeted explanations for incorrect choices, totaling 130 question-specific distractor explanations. Coverage includes ICMP troubleshooting, filtered ping, traceroute and TTL behavior, IPv6 Hop Limit, IOS interface verification and configuration saving, MAC learning and unknown-unicast forwarding, longest-prefix match, default-gateway addressing, ARP, DNS ports and troubleshooting, administratively disabled interfaces, DHCP relay and DNS option faults, missing routes, duplex mismatches, static-route next hops, Ethernet CRC/FCS errors, and multi-VLAN fault isolation. The feedback parser rejects malformed trailing entries, duplicate keys, invalid string escapes, and empty maps; dedicated regression tests cover these cases.
+Distractor-feedback validation is isolated in `scripts/distractor-validation.mjs`. When a question supplies per-choice feedback, the data validator requires every feedback key to reference an existing incorrect choice and every explanation to contain non-empty text. Regression tests cover valid mappings, correct-answer IDs, unknown IDs, blank explanations, and malformed maps. Forty-five questions now include targeted explanations for incorrect choices, totaling 133 question-specific distractor explanations. Coverage includes ICMP troubleshooting, filtered ping, traceroute and TTL behavior, IPv6 Hop Limit, IOS interface verification and configuration saving, MAC learning and unknown-unicast forwarding, longest-prefix match, default-gateway addressing, ARP, DNS ports and troubleshooting, administratively disabled interfaces, DHCP relay and DNS option faults, missing routes, duplex mismatches, static-route next hops, Ethernet CRC/FCS errors, and multi-VLAN fault isolation. The feedback parser rejects malformed trailing entries, duplicate keys, invalid string escapes, and empty maps; dedicated regression tests cover these cases.
 
 Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Dedicated regression tests reject missing or duplicate pair mappings, duplicate targets, unknown IDs, declared-answer mismatches, non-string or blank IDs, malformed top-level inputs, and mappings with extra delimiters. The learning test command runs these cases alongside adaptive-engine tests for weak/unseen-concept prioritization, bounded selection, recent-question fallback, progress immutability, mastery/review scheduling, ordering shuffles, and early lesson diversity.
 
 Site CI run #608 passed on commit `6351cbe`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. The run completed successfully with zero reported accessibility violations. The latest Module 17 lesson, question-bank additions, and PKA audit documentation are being checked by run #621 on commit `ae70232`; consult the PR Checks tab for the current result and do not treat #621 as passed until it completes.
 
-Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest four Module 17 additions bring the bank to 604 questions; the regenerated report records 50 questions across 85 concept tags in `small-network`.
+Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest four Module 17 additions bring the bank to 605 questions; the regenerated report records 50 questions across 85 concept tags in `small-network`. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
