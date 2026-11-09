@@ -188,6 +188,17 @@ The recovered Module 12 objective is to implement an IPv6 addressing scheme. Its
 
 Three new AI-generated questions add RA M/O flag interpretation, IPv6 subnet-ID planning, and Duplicate Address Detection. They are based on recovered Module 12 notes and existing source references, not presented as verbatim source questions. Address-type, multicast, and subnetting exhibits still require direct visual verification.
 
+## Module 13 first-pass topic-to-question mapping
+
+The recovered Module 13 objective is to use tools to test network connectivity. Its two source topics are ICMP messages and ping/traceroute testing. The active `icmp` lesson now has 13 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| ICMP Messages | Echo Request/Reply; Destination Unreachable codes; Time Exceeded; ICMPv4 and ICMPv6; IPv6 Neighbor Discovery messages | `icmp`, `icmp-echo`, `icmp-destination-unreachable`, `icmp-time-exceeded`, `icmpv6`, `neighbor-solicitation`, `neighbor-advertisement` | Improved; new matching question tests common ICMPv4 Destination Unreachable codes, and a new scenario tests IPv6 Hop Limit expiration. Existing questions cover Echo, Time Exceeded, unreachable conditions, and ICMPv6 NS/NA. More IPv6 Destination Unreachable code practice remains useful. |
+| Ping and Traceroute Testing | Ping success/round-trip time; loopback and default-gateway checks; traceroute hop discovery; TTL/Hop Limit; timeout/asterisk interpretation; source address selection | `ping`, `connectivity-testing`, `host-reachability`, `traceroute`, `ttl`, `ipv4-ttl`, `source-ip-selection`, `icmp-filtering` | Improved; new scenarios test loopback as a local-stack check and the default gateway as a local-network check. Existing scenarios cover traceroute asterisks, source address selection, and ICMP filtering. A complete multi-hop traceroute-output diagnosis exercise remains a gap. |
+
+Four new AI-generated questions add ICMPv4 unreachable-code matching, loopback testing, default-gateway testing, and IPv6 Hop Limit expiration. They are derived from recovered Module 13 notes and existing source references, not presented as verbatim source questions. The Packet Tracer ping/traceroute topology exhibits still need direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
