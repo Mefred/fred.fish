@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 266 unique questions  
-**Concept tags:** 423 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 246 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 274 unique questions  
+**Concept tags:** 434 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 254 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -89,3 +89,6 @@ IPv4 Addressing now includes five additional applied subnetting/VLSM exercises: 
 
 
 The Physical Layer bank has now grown from 12 to 20 questions. Eight AI-generated items add copper limitation matching, STP selection, coaxial-cable applications, SMF/MMF characteristics, ST/SC/LC connector names, fiber dispersion, wireless-standard matching, and WLAN shared-medium troubleshooting. These items use existing Physical Layer image references already represented in the bank and are mapped in the Module 4 first-pass topic-to-question table. Visual confirmation of the exact connector and cable exhibits remains outstanding.
+
+
+The Number Systems bank has grown from eight to 16 questions. Eight AI-generated items add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, IPv6 hextet identification and counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. The Module 5 first-pass topic mapping records the current coverage and remaining need for longer mixed-octet and IPv6 conversion drills.
