@@ -362,4 +362,4 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-The latest pass brings the visually verified source-image set to 34 image-question associations. The question bank contains 576 records across 605 concept tags, with a minimum of two questions per tag. Of 772 unique unresolved question-like images, 748 still await visual review; do not infer complete source coverage from this verified subset.
+The latest pass brings the visually verified source-image set to 34 image-question associations. The question bank contains 582 records across 605 concept tags, with a minimum of two questions per tag. Of 766 unique unresolved question-like images, 748 still await visual review; do not infer complete source coverage from this verified subset.
