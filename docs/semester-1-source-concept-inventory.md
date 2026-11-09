@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 585 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 176 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 585 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 178 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -363,3 +363,15 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
 There are 34 source-origin image-question associations plus four reviewed image references used by AI-generated applied questions (38 total). The question bank contains 585 records across 605 concept tags, with a minimum of two questions per tag. Of 766 unique unresolved question-like images, 744 still await visual review; do not infer complete source coverage from this verified subset.
+
+
+## Additional source-verified Module 8 questions
+
+Two source slides contain explicit, directly usable answer evidence and have been promoted to source-origin questions:
+
+| Source image | Question ID | Verified evidence |
+|---|---|---|
+| `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
+| `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
+
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 587 questions, 40 source-origin questions, and 547 AI-generated questions.
