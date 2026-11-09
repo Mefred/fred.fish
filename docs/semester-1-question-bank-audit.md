@@ -173,7 +173,7 @@ Added three additional AI-generated questions for firewall filtering modes, phys
 
 ## Module 17 host/IOS command expansion
 
-Added one AI-generated matching question for seven IOS show commands and their diagnostic purposes. The small-network lesson now has 10 questions. Host-side command interpretation, device selection, extended ping/traceroute, and multi-symptom troubleshooting remain gaps.
+At that stage, the lesson had ten questions after adding an AI-generated matching exercise for seven IOS show commands and their diagnostic purposes. The remaining gaps were addressed in later Module 17 expansions below.
 
 
 ## Source question indexing
@@ -183,7 +183,7 @@ Added `docs/semester-1-source-question-index.md` to preserve selected source-que
 
 ## Module 17 IPv6 interface verification
 
-Added one source-origin question mapped to Q357, which asks for the IOS command used to verify IPv6 interface addresses. The small-network lesson now contains 11 active questions.
+At that stage, the lesson had 11 questions after adding the source-origin Q357 item for IPv6 interface verification. Later Module 17 additions are documented below.
 
 
 ## Module 17 host, extended-command, and device-selection expansion
