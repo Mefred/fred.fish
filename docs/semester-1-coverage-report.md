@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 345
+- **Questions:** 346
 - **Lessons represented:** 22
-- **Distinct concept tags:** 564
+- **Distinct concept tags:** 565
 
 ## Lesson coverage
 
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 24 | 61 | matching: 2, ordering: 3, scenario: 12, single: 5 | 1–4 |
+| small-network | 25 | 66 | matching: 2, ordering: 3, scenario: 15, single: 5 | 1–5 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
@@ -480,6 +480,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `bus-topology`
 - `extended-star-topology`
 - `fault-isolation`
+- `fault-isolation`
 - `fault-tolerance`
 - `full-mesh`
 - `hierarchical-topology`
@@ -710,6 +711,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `connectivity-testing`
 - `default-gateway`
 - `device-resource-management`
+- `application-layer-services`
 - `device-selection`
 - `dhcp`
 - `dhcp-troubleshooting`
@@ -723,6 +725,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `host-troubleshooting`
 - `icmp`
 - `interface-errors`
+- `ipconfig-displaydns`
 - `ios-debug`
 - `ios-verification-commands`
 - `ipv4-addressing`
