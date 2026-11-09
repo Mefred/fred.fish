@@ -84,9 +84,71 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1 and 2, 72 candidate images have been screened at high-resolution contact-sheet scale, and nine answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale, and nine answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
 
-## Text-only comparison against extracted source questions
+## High-resolution contact-sheet review — batch 3
+
+The next 36 candidates (IMG-0428–IMG-0511) were screened. No clearly marked answer-selection or matching key was visible. The batch contains unmarked LLC/MAC sublayer, frame-field, switching, topology, and MAC-learning prompts plus lesson-summary and Packet Tracer activity slides. No new source-origin question or visual-context association was added. See [the batch 3 review log](./semester-1-image-review-batch-3.md).
+
+Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale. Nine answer/visual items were cross-checked at native resolution and are already linked to existing questions; the other 99 show unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+
+ against extracted source questions
+
+Each normalized OCR candidate was compared with all 612 numbered question blocks in `Sem1_Questions_and_Review_Material.md`. The best match was selected using token overlap:
+
+`intersection(candidate tokens, source-question tokens) / candidate token count`
+
+| Best token-overlap score | Candidate groups |
+|---|---:|
+| Greater than 0.80 | 55 |
+| Greater than 0.60 through 0.80 | 75 |
+| Greater than 0.40 through 0.60 | 37 |
+| Greater than 0.20 through 0.40 | 114 |
+| 0.20 or lower | 8 |
+
+This is a prioritization heuristic only. It can be distorted by OCR noise, long slide summaries, repeated vocabulary, diagram labels, and answer-option text. A high score does not prove the image is linked to the right source question or that an answer is correct. A low score does not prove that an asset is irrelevant.
+
+## Low-overlap candidates for first manual classification
+
+These eight normalized groups had a best token-overlap score of 0.20 or lower. They remain first-priority review candidates because they are less readily reconciled with the extracted numbered question blocks.
+
+| Candidate | Image reference | Best overlap | Text-only observation |
+|---|---|---:|---|
+| QIMG-2120 | IMG-2120 | 0.092 | Packet Tracer “Connect the Physical Layer” activity instructions; likely a lab asset rather than a standalone quiz question. |
+| QIMG-0598 | IMG-0598 | 0.150 | “How a Host Routes” routing-table teaching slide with explanatory diagram text; inspect before deciding whether to convert into a scenario question. |
+| QIMG-1398 | IMG-1398 | 0.152 | “What Did I Learn” module-summary slide listing IOS show commands and CDP details; retain as lesson material, not automatically as a question. |
+| QIMG-0935 | IMG-0935 | 0.169 | IPv4/IPv6 migration module-summary slide; retain as lesson material unless a distinct question is visible. |
+| QIMG-1226 | IMG-1226 | 0.192 | Application-layer module-summary slide; retain as lesson material unless a distinct question is visible. |
+| QIMG-1482 | IMG-1482 | 0.191 | IOS IPv4 troubleshooting instructional slide; potentially valuable scenario material, but OCR alone does not establish a question or answer key. |
+| QIMG-0808 | IMG-0808 | 0.192 | Initial router configuration command example with a partially OCR-read “What happens?” prompt; requires visual review before any question is authored. |
+| QIMG-1471 | IMG-1471 | 0.198 | Small-network device-selection module-summary slide; retain as lesson material, not automatically as a question. |
+
+## Promotion rules
+
+1. Verify the question prompt, all answer choices, selected/circled answer, and any diagram labels against the original image.
+2. Preserve the original `IMG-XXXX` reference and map it to the correct active question ID only after visual verification.
+3. If the asset is a lesson summary, configuration example, lab instruction, or explanatory diagram, keep it as instructional material instead of forcing it into the quiz bank.
+4. For diagram-dependent questions, verify the complete diagram and its labels; OCR text alone is insufficient.
+5. If the correct answer is inferred from networking knowledge rather than visibly provided, mark the question `ai-generated`, not `source`.
+
+## Current disposition
+
+- Six new image candidates have been visually reviewed and associated with active source-origin questions.
+- The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
+- The remaining 744 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
+- The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
+
+
+## Image-informed questions with inferred answers
+
+The following candidate images were reviewed for prompt/diagram context, but the answer was derived from networking knowledge rather than a marked source answer key. These questions remain explicitly `ai-generated`:
+
+| Image reference | Active question ID | Applied concept |
+|---|---|---|
+| IMG-1576, IMG-1787 | `s4-utp-termination-diagnosis-applied-001` | Excessive untwisted wire length at an RJ-45 termination increases crosstalk risk |
+| IMG-1714 | `s1-network-characteristics-failover-applied-001` | Security, QoS, and fault tolerance in a redundant WAN scenario |
+| IMG-1088 | `s11-subnet-host-membership-matching-applied-001` | Match /27 subnet ranges to usable host addresses; reject broadcast/network addresses |
+ against extracted source questions
 
 Each normalized OCR candidate was compared with all 612 numbered question blocks in `Sem1_Questions_and_Review_Material.md`. The best match was selected using token overlap:
 
