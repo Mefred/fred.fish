@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 244
+- **Questions:** 249
 - **Lessons represented:** 22
-- **Distinct concept tags:** 375
+- **Distinct concept tags:** 379
 
 ## Lesson coverage
 
@@ -20,7 +20,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
 | ipv6-addressing | 16 | 30 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
-| network-layer | 18 | 37 | fill: 1, matching: 2, multiple: 2, scenario: 8, single: 5 | 2–5 |
+| network-layer | 23 | 41 | fill: 1, matching: 2, multiple: 2, scenario: 8, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
@@ -316,6 +316,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `static-routes`
 - `static-routing`
 
+- `bidirectional-connectivity`
+- `return-route`
+- `route-configuration`
+- `routing-table-interpretation`
 ### network-security
 
 - `aaa`
