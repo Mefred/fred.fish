@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 582 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 585 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 176 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -362,4 +362,4 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-The latest pass brings the visually verified source-image set to 34 image-question associations. The question bank contains 582 records across 605 concept tags, with a minimum of two questions per tag. Of 766 unique unresolved question-like images, 748 still await visual review; do not infer complete source coverage from this verified subset.
+There are 34 source-origin image-question associations plus four reviewed image references used by AI-generated applied questions (38 total). The question bank contains 585 records across 605 concept tags, with a minimum of two questions per tag. Of 766 unique unresolved question-like images, 744 still await visual review; do not infer complete source coverage from this verified subset.
