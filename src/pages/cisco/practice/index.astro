@@ -125,6 +125,7 @@ import SiteLayout from "../../../layouts/SiteLayout.astro";
     }));
   };
   const checkAnswer = () => {
+    if (locked) return;
     const q = quiz[index];
     const expected = Array.isArray(q.answer) ? [...q.answer] : [q.answer];
     const actual = [...selected];
