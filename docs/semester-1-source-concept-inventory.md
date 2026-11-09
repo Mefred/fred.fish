@@ -122,6 +122,19 @@ The recovered Module 6 source identifies three main areas: the purpose of the Da
 
 Four new AI-generated questions add frame-field matching, WAN topology matching, controlled-access application, and duplex-mode matching. They are based on recovered Module 6 notes and existing Data Link Layer source references, not presented as verbatim source questions. Diagram-dependent topology and frame exhibits still require direct visual verification.
 
+## Module 7 first-pass topic-to-question mapping
+
+The recovered Module 7 material focuses on Ethernet frame structure and MAC addressing, switch MAC-table learning/forwarding, and switch forwarding methods and buffering. The active `ethernet-switching` lesson now has 16 questions after this expansion.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Ethernet Frames and MAC Addressing | Ethernet frame fields; source/destination MAC addresses; 48-bit address format; OUI; unicast, broadcast, and multicast | `ethernet-frame`, `mac-addressing`, `frame-size`, `oui`, `vendor-identification`, `broadcast` | Represented for frame sizing, MAC length, broadcast, and NIC frame filtering. New OUI practice distinguishes the 24-bit vendor identifier from the remaining vendor-assigned bits. Multicast recognition and full frame-field decomposition can be expanded further. |
+| MAC Address Table | Learning source MAC addresses and ingress ports; refreshing aging timers; moving learned addresses; known and unknown unicast forwarding; broadcast/multicast flooding | `mac-address-table`, `switch-learning`, `aging-timer`, `unknown-unicast-flooding`, `mac-move` | Improved; includes source learning, aging refresh, unknown-unicast flooding, and a new scenario where a learned MAC appears on a different switch port. A full Packet Tracer MAC-table investigation exercise remains useful. |
+| Switch Speeds and Forwarding Methods | Store-and-forward; cut-through; fast-forward; fragment-free; port-based and shared-memory buffering; latency and frame integrity | `store-and-forward-switching`, `cut-through-switching`, `fast-forward-switching`, `fragment-free-switching`, `switch-memory-buffering`, `port-based-memory`, `shared-memory-buffering` | Improved; new matching questions test the latency/integrity trade-offs between switching methods and compare the two buffering approaches. |
+| Duplex and Auto-MDIX | Full/half duplex; autonegotiation; duplex mismatch; automatic cable-pair crossover | `full-duplex`, `duplex`, `duplex-mismatch`, `auto-mdix`, `ethernet-troubleshooting` | Represented through full-duplex behavior, CSMA/CD relevance, duplex-mismatch troubleshooting, and Auto-MDIX. Further autonegotiation troubleshooting would improve depth. |
+
+Four new AI-generated questions add OUI identification, MAC-address movement between switch ports, forwarding-method trade-offs, and switch memory-buffering comparison. They are derived from recovered Module 7 notes and existing Ethernet Switching image references, not presented as verbatim source questions. Visual verification of the MAC-table and switch-buffer diagrams remains pending.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
