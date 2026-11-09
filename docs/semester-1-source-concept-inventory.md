@@ -11,8 +11,8 @@ This inventory is deliberately kept separate from the active question bank. A so
 | Source module | Source objective | Topic objectives recovered from source | Related Fred.fish lesson IDs | Inventory status |
 |---|---|---|---|---|
 | 1. Networking Today | Explain the advances in modern technologies. | Networks Affect our Lives; Network Components; Network Representations and Topologies; Common Types of Networks; Internet Connections; Reliable Networks; Network Trends; Network Security | `network-components`, `network-topologies`, `network-types`, `internet-connections`, `reliable-networks`, `network-trends`, `network-security` | Objective and topic list transcribed (source lines 343–363). |
-| 2. Basic Switch and End Device Configuration | Implement initial settings including passwords, IP addressing, and default gateway parameters on a network switch and end devices. | Cisco IOS Access; IOS Navigation; The Command Structure; Basic Device Configuration; Save Configurations; Ports and Addresses; Configure IP Addressing; Verify Connectivity | `basic-device-configuration` | Objective and topic list transcribed (source lines 1114–1140; topic list continues beyond the excerpt). |
-| 3. Protocols and Models | Explain how network protocols enable devices to access local and remote network resources. | The Rules; Protocols; Protocol Suites; Standards Organizations; Reference Models; Data Encapsulation; Data Access | `protocols-and-models` | Objective and topic list transcribed (source lines 2625–2644; remaining topic objectives require a second-pass line review). |
+| 2. Basic Switch and End Device Configuration | Implement initial settings including passwords, IP addressing, and default gateway parameters on a network switch and end devices. | Cisco IOS Access; IOS Navigation; The Command Structure; Basic Device Configuration; Save Configurations; Ports and Addresses; Configure IP Addressing; Verify Connectivity | `basic-device-configuration` | All eight topic objectives transcribed (source lines 1114–1140). |
+| 3. Protocols and Models | Explain how network protocols enable devices to access local and remote network resources. | The Rules; Protocols; Protocol Suites; Standards Organizations; Reference Models; Data Encapsulation; Data Access | `protocols-and-models` | All seven topic objectives transcribed (source lines 2625–2644). |
 | 4. Physical Layer | Explain how physical layer protocols, services, and network media support communications across data networks. | Purpose of the Physical Layer; Physical Layer Characteristics; Copper Cabling; UTP Cabling; Fiber-Optic Cabling; Wireless Media | `physical-layer` | Objective and topic list transcribed (source lines 4572–4593). |
 | 5. Number Systems | Calculate numbers between decimal, binary, and hexadecimal systems. | Binary Number System; Hexadecimal Number System | `number-systems` | Objective and topic list transcribed (source lines 4833–4848). |
 | 6. Data Link Layer | Explain how media access control in the data link layer supports communication across networks. | Purpose of the Data Link Layer; Topologies; Data Link Frame | `data-link-layer` | Objective and topic list transcribed (source lines 5344–5360). |
@@ -321,11 +321,11 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Next review work
 
-- Visually verify the Network Layer objective/topic block and attach exact source-page references; the recovered raw text includes duplicated/repeated Module 8 content.
-- Complete topic-objective transcription where an excerpt above is explicitly marked partial.
-- Split broad source topics into atomic assessable concepts only when the source material supports that split.
-- Add an explicit source-topic-to-question-concept mapping and use it to generate a real source coverage matrix.
-- Visually inspect source pages for topics whose instruction depends on diagrams, screenshots, or Packet Tracer exhibits.
+- Perform a page-by-page source review to validate that each mapped question tests what the lesson actually teaches, not merely a related concept tag.
+- Inspect the remaining 744 unique question-like image candidates for answer marks, diagram-dependent facts, and Packet Tracer instructions; do not promote inferred answers as source-origin.
+- Review cross-lesson placements and distinguish repeated source material from true objective coverage.
+- Add targeted questions only where the source text or a verified visual provides evidence for a missing objective or under-practiced detail.
+- Revisit the title-only Module 1 “Networks Affect our Lives” slide if a fuller source page or instructor notes become available.
 
 
 ## Latest question-depth completion
@@ -411,7 +411,7 @@ This matrix maps recovered topic objectives to representative active question ID
 | 11. IPv4 Addressing | Types of IPv4 Addresses | s11-private-ranges-001, s11-ipv4-special-ranges-match-001, s11-ipv4-address-categories-applied-002 | Represented: private, public, and special-use ranges. |
 | 11. IPv4 Addressing | Network Segmentation | s11-subnet-broadcast-domain-scenario-001, s11-network-segmentation-applied-002, s11-subnet-overlap-applied-002 | Represented: broadcast-domain segmentation, overlap, and allocation constraints. |
 | 11. IPv4 Addressing | Subnet an IPv4 Network | s11-vlsm-planning-001, s11-vlsm-allocation-001, s11-vlsm-two-stage-allocation-001, s11-subnet-host-membership-matching-applied-001 | Represented: /24 subnetting, VLSM, host ranges, and membership. |
-| 12. IPv6 Addressing | IPv4 Issues | s12-ipv6-coexistence-001, s12-ipv4-ipv6-coexistence-applied-002, s12-ipv6-tunneling-applied-002 | Represented: coexistence and transition mechanisms; check source lesson emphasis for each transition method. |
+| 12. IPv6 Addressing | IPv4 Issues | s12-ipv6-coexistence-001, s12-ipv4-ipv6-coexistence-applied-002, s12-ipv6-prefix-identification-001 | Represented: coexistence and transition mechanisms; check source lesson emphasis for each transition method. |
 | 12. IPv6 Addressing | IPv6 Address Representation | s12-ipv6-compress-001, s12-ipv6-compress-002, s12-zero-compression-applied-002, s12-zero-suppression-applied-002 | Represented: hextets, leading-zero suppression, and zero compression. |
 | 12. IPv6 Addressing | IPv6 Address Types | s12-link-local-001, s12-gua-prefix-001, s12-ipv6-address-types-match-001, s12-anycast-scenario-001 | Represented: GUA, LLA, multicast, and anycast. |
 | 12. IPv6 Addressing | GUA and LLA Static Configuration | s12-ipv6-interface-config-001, s12-ipv6-verify-001, s12-interface-id-applied-002 | Represented: static interface configuration and verification. |
