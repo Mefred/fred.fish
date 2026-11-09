@@ -102,6 +102,8 @@ try {
           const selects = page.locator("[data-pair]");
           for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: i + 1 });
         } else if (await page.locator("#ordering-list").count()) {
+          const moveDown = page.locator('[data-move="1"]').first();
+          if (await moveDown.count()) await moveDown.click();
         } else {
           throw new Error(`Question ${questionIndex + 1} has no recognized response control`);
         }
