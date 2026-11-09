@@ -1356,11 +1356,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 55 |
+| matching | 56 |
 | multiple | 18 |
 | ordering | 13 |
-| scenario | 85 |
-| single | 123 |
+| scenario | 89 |
+| single | 124 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1368,9 +1368,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 89 |
-| 3 | 135 |
-| 4 | 64 |
+| 2 | 90 |
+| 3 | 138 |
+| 4 | 66 |
 | 5 | 7 |
 
 ## Interpretation and limits
