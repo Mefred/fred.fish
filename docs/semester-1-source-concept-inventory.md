@@ -129,6 +129,25 @@ The Module 1 objective list is now compared against the active question records 
 **Module 1 result:** seven of nine topic objectives have related active practice, while “Networks Affect our Lives” and “The IT Professional” need direct question coverage. The seven related mappings are preliminary, not a completeness claim: the next pass must inspect the full lesson content and relevant diagrams, and should check that questions are placed in the intended lesson rather than merely sharing a broad concept tag. The network-types question set also needs a source check for dial-up and cellular access, and the Network Trends lesson needs a check for smart-home examples.
 
 
+
+## Module 2 first-pass topic-to-question comparison
+
+The Module 2 source objectives are mapped against the active basic-device-configuration question records. The source objective list contains eight topics. Several active questions are useful but currently live in other lesson IDs; this mapping records those cross-lesson links rather than treating them as lesson-local coverage.
+
+| Source topic objective | Active question-bank evidence | First-pass finding |
+|---|---|---|
+| Cisco IOS Access | s2-console-connection-001 tests console cabling and out-of-band CLI access. | Partial. The source covers console, SSH, and Telnet access; add direct secure-versus-insecure remote-access practice and verify the VTY/console login configuration material. |
+| IOS Navigation | s2-mode-order-001 and s2-ios-modes-order-001 test mode transitions and privilege ordering. | Represented for user EXEC, privileged EXEC, global configuration, and interface configuration. Add command-prompt recognition and exit/end/CTRL-Z navigation if these are emphasized in the lesson. |
+| The Command Structure | s2-config-keyword-001 and s2-ios-keyword-001 both test keyword identification in show running-config. | Partial and somewhat repetitive. The source also distinguishes keywords from user-supplied arguments and documents Tab completion, help, and editing shortcuts; add applied syntax/argument interpretation rather than another duplicate keyword question. |
+| Basic Device Configuration | s2-password-encryption-001, s2-enable-secret-001, s2-admin-down-001, and s2-svi-management-ip-001 test password encryption, privileged-mode protection, interface activation, and management SVI configuration. | Represented at a first-pass level. Verify hostname, MOTD banner, line passwords/login, and service password-encryption behavior against the source and add any uncovered configuration tasks. |
+| Save Configurations | s2-save-config-001 and s2-config-save-troubleshoot-001 test copying running-config to startup-config and diagnosing unsaved changes. | Represented for persistence and reload behavior. Add a question that distinguishes RAM/running-config from NVRAM/startup-config if the lesson explanation does not already make that distinction clear. |
+| Ports and Addresses | s2-console-connection-001 and s2-svi-management-ip-001 provide adjacent coverage; the source explains physical switch ports versus software SVIs and the role of network media. | Partial. Add direct physical port versus SVI comparison, and connect host/device interfaces, media, and MAC/IP addressing without conflating a Layer 2 physical switchport with a Layer 3 management SVI. |
+| Configure IP Addressing | s2-dhcp-purpose-002 and s2-ipv6-auto-config-001 test DHCP-provided IPv4 settings and SLAAC/DHCPv6 mechanisms. s2-svi-management-ip-001 tests static IPv4 management addressing. | Partial. Add host-side static IPv4 configuration and mask/default-gateway interpretation if taught here; verify whether the lesson covers IPv6 host configuration or whether that material belongs to a later module. |
+| Verify Connectivity | s2-interface-status-001 and s2-interface-verify-loop-001 test interface verification and an up/down fault-isolation step. s17-default-gateway-troubleshoot-001 tests local-versus-remote reachability but is assigned to the Small Network lesson. | Partial. Add an end-device-to-end-device verification scenario using the source's ping workflow, and keep interface-state checks distinct from end-to-end connectivity tests. |
+
+**Module 2 result:** all eight source topics now have an explicit first-pass mapping. Cisco IOS Access, Command Structure, Ports and Addresses, Configure IP Addressing, and Verify Connectivity have clear depth gaps; Basic Device Configuration and Save Configurations also need a source-level check for the full set of taught commands and file semantics. The two keyword questions are near-duplicates and should be consolidated or differentiated during question-quality review. Cross-lesson references are not counted as proof that the corresponding Module 2 lesson itself teaches the concept.
+
+
 ## Interpretation rules
 
 1. **Source topic present** means the topic heading/objective was recovered from the lecture-note source. It does not mean every detail, diagram, lab, or embedded question under that topic has been reviewed.
