@@ -98,6 +98,17 @@ The Module 4 objectives recovered from the lecture notes are now mapped against 
 
 The lesson currently has 20 active questions and 41 distinct concept tags. The eight latest additions are AI-generated from recovered Module 4 notes, not verbatim source questions. Their source references reuse existing Physical Layer image IDs already present in the question bank; connector diagrams and cable exhibits still need direct visual verification.
 
+## Module 5 first-pass topic-to-question mapping
+
+The Module 5 objectives recovered from the lecture notes are mapped against the active `number-systems` question bank.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Binary Number System | Base-2 digits; positional notation; bit values; 8-bit octets; IPv4 dotted-decimal notation; decimal/binary conversion | `binary`, `binary-to-decimal`, `decimal-to-binary`, `binary-positional-notation`, `octet`, `dotted-decimal-notation` | Represented with direct conversions and IPv4 octet interpretation. More mixed multi-octet conversion drills would improve fluency. |
+| Hexadecimal Number System | Base-16 digits 0–9/A–F; 4-bit nibbles; binary/hex conversion; decimal/hex conversion; IPv6 128-bit addresses and hextets | `hexadecimal`, `hexadecimal-to-decimal`, `decimal-to-hexadecimal`, `hexadecimal-to-binary`, `binary-to-hexadecimal`, `hextet`, `ipv6-address-structure` | Represented with conversions in both directions, hextet structure, and IPv6 digit counts. More long-form IPv6 address conversion practice remains useful. |
+
+The lesson now contains 16 active questions and 21 distinct concept tags. Eight new AI-generated questions add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, hextet identification/counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. They are derived from the recovered Module 5 notes, not verbatim source questions.
+
 ## Interpretation rules
 
 1. **Source topic present** means the topic heading/objective was recovered from the lecture-note source. It does not mean every detail, diagram, lab, or embedded question under that topic has been reviewed.
