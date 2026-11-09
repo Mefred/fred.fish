@@ -78,6 +78,14 @@ The other 33 candidates show unmarked question prompts, blank matching targets, 
 
 The 960×540 contact-sheet screen is not counted as native-resolution verification for the other 33 images. The 744-unique-image / 750-asset-record native-resolution backlog therefore remains unchanged. The original OCR ZIP candidate-status fields remain unchanged in the Library; this repository audit is the current review record.
 
+## High-resolution contact-sheet review — batch 2
+
+The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked OSI-layer answers were opened at native resolution and confirmed against existing source questions: IMG-0287 (Transport/destination port), IMG-0292 (open standards/interoperability), IMG-0306 (Network/destination IP), IMG-0314 (Network/source IP), and IMG-0322 (Transport/source port). IMG-0348 was also opened at native resolution and confirms the four twisted pairs in the existing UTP-identification visual.
+
+All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
+
+Across batches 1 and 2, 72 candidate images have been screened at high-resolution contact-sheet scale, and nine answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+
 ## Text-only comparison against extracted source questions
 
 Each normalized OCR candidate was compared with all 612 numbered question blocks in `Sem1_Questions_and_Review_Material.md`. The best match was selected using token overlap:
