@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 283
+- **Questions:** 287
 - **Lessons represented:** 22
-- **Distinct concept tags:** 458
+- **Distinct concept tags:** 470
 
 ## Lesson coverage
 
@@ -13,7 +13,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | address-resolution | 8 | 12 | fill: 1, matching: 1, scenario: 1, single: 5 | 1–3 |
 | application-layer | 10 | 26 | matching: 2, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
-| data-link-layer | 9 | 21 | matching: 1, multiple: 2, scenario: 3, single: 3 | 2–4 |
+| data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
 | ethernet-switching | 12 | 25 | fill: 1, scenario: 2, single: 9 | 1–4 |
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
@@ -128,24 +128,39 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - `collision-avoidance`
 - `contention-based-access`
+- `controlled-access`
 - `csma-ca`
 - `csma-cd`
+- `data-link-frame`
 - `data-link-layer`
 - `data-link-topologies`
+- `duplex-communication`
 - `encapsulation`
 - `error-detection`
 - `ethernet-frame`
 - `ethernet-media-access`
 - `fcs`
+- `frame-boundaries`
+- `frame-control-field`
 - `frame-encapsulation`
+- `frame-fields`
+- `frame-payload`
 - `frame-structure`
+- `frame-type-field`
+- `full-duplex`
+- `half-duplex`
+- `hub-and-spoke-topology`
 - `llc-sublayer`
 - `mac-addressing`
 - `mac-sublayer`
 - `media-access-control`
+- `mesh-topology`
 - `multiaccess-topology`
+- `network-redundancy`
 - `point-to-point-topology`
 - `routing`
+- `token-passing`
+- `wan-topologies`
 - `wireless-media-access`
 
 ### ethernet-switching
@@ -710,7 +725,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `connectionless-transport` | 1 | transport-layer |
 | `connectivity-testing` | 1 | icmp |
 | `console-access` | 1 | basic-device-configuration |
-| `contention-based-access` | 1 | data-link-layer |
+| `contention-based-access` | 2 | data-link-layer |
+| `controlled-access` | 1 | data-link-layer |
 | `copper-access` | 1 | internet-connections |
 | `copper-cabling` | 7 | physical-layer |
 | `copper-fiber-wireless` | 2 | network-components |
@@ -720,6 +736,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `csma-cd` | 2 | data-link-layer, ethernet-switching |
 | `cut-through-switching` | 1 | ethernet-switching |
 | `data-centers` | 2 | network-trends |
+| `data-link-frame` | 1 | data-link-layer |
 | `data-link-layer` | 9 | data-link-layer, protocols-and-models |
 | `data-link-topologies` | 1 | data-link-layer |
 | `decapsulation` | 2 | protocols-and-models |
@@ -741,6 +758,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dsl` | 1 | internet-connections |
 | `dual-stack` | 1 | ipv6-addressing |
 | `duplex` | 1 | ethernet-switching |
+| `duplex-communication` | 1 | data-link-layer |
 | `duplex-mismatch` | 1 | ethernet-switching |
 | `dynamic-routing` | 2 | network-layer |
 | `electromagnetic-interference` | 4 | physical-layer |
@@ -749,13 +767,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `encapsulation` | 10 | data-link-layer, protocols-and-models |
 | `end-devices` | 1 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
-| `error-detection` | 2 | data-link-layer |
+| `error-detection` | 3 | data-link-layer |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 1 | address-resolution |
 | `ethernet-cabling` | 1 | ethernet-switching |
 | `ethernet-frame` | 7 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 1 | ethernet-switching |
-| `ethernet-media-access` | 2 | data-link-layer, ethernet-switching |
+| `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 1 | network-layer |
 | `ethernet-standards` | 1 | ethernet-switching |
 | `ethernet-switching` | 4 | ethernet-switching |
@@ -776,15 +794,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `firewall-filtering` | 4 | network-security |
 | `flash` | 1 | router-configuration |
 | `flow-control` | 2 | transport-layer |
+| `frame-boundaries` | 1 | data-link-layer |
+| `frame-control-field` | 1 | data-link-layer |
 | `frame-encapsulation` | 1 | data-link-layer |
+| `frame-fields` | 1 | data-link-layer |
+| `frame-payload` | 1 | data-link-layer |
 | `frame-size` | 1 | ethernet-switching |
 | `frame-structure` | 1 | data-link-layer |
-| `full-duplex` | 2 | ethernet-switching |
+| `frame-type-field` | 1 | data-link-layer |
+| `full-duplex` | 3 | data-link-layer, ethernet-switching |
 | `full-mesh` | 1 | network-topologies |
 | `global-configuration` | 1 | basic-device-configuration |
 | `global-unicast-address` | 2 | ipv6-addressing |
 | `goodput` | 1 | physical-layer |
-| `half-duplex` | 1 | physical-layer |
+| `half-duplex` | 2 | data-link-layer, physical-layer |
 | `hexadecimal` | 3 | number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
 | `hexadecimal-to-binary` | 1 | number-systems |
@@ -798,6 +821,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-troubleshooting` | 1 | address-resolution |
 | `http` | 5 | application-layer, protocols-and-models, transport-layer |
 | `https` | 1 | transport-layer |
+| `hub-and-spoke-topology` | 1 | data-link-layer |
 | `hybrid-p2p` | 1 | application-layer |
 | `iab` | 1 | protocols-and-models |
 | `iana` | 1 | transport-layer |
@@ -896,13 +920,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 3 | network-layer |
 | `loopback-address` | 1 | ipv6-addressing |
 | `mac-address-table` | 3 | ethernet-switching |
-| `mac-addressing` | 11 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
+| `mac-addressing` | 12 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models |
 | `mac-learning` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
-| `media-access-control` | 1 | data-link-layer |
+| `media-access-control` | 2 | data-link-layer |
 | `media-independent` | 1 | network-layer |
 | `media-selection` | 2 | physical-layer |
-| `mesh-topology` | 1 | network-topologies |
+| `mesh-topology` | 2 | data-link-layer, network-topologies |
 | `message-delivery` | 1 | protocols-and-models |
 | `message-encoding` | 1 | protocols-and-models |
 | `message-formatting` | 1 | protocols-and-models |
@@ -930,6 +954,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-media-selection` | 5 | network-components, network-trends |
 | `network-operations` | 1 | small-network |
 | `network-performance` | 1 | physical-layer |
+| `network-redundancy` | 1 | data-link-layer |
 | `network-reliability` | 7 | reliable-networks, small-network |
 | `network-scalability` | 1 | network-components |
 | `network-scale` | 1 | network-components |
@@ -967,7 +992,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-troubleshooting` | 1 | basic-device-configuration |
 | `physical-topology` | 3 | network-topologies |
 | `ping` | 4 | icmp, small-network |
-| `point-to-point-topology` | 1 | data-link-layer |
+| `point-to-point-topology` | 2 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
 | `positional-notation` | 1 | number-systems |
@@ -1073,6 +1098,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp-windowing` | 1 | transport-layer |
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
+| `token-passing` | 1 | data-link-layer |
 | `traceroute` | 5 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
@@ -1091,6 +1117,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `video-communications` | 1 | network-trends |
 | `vlsm` | 4 | ipv4-addressing |
 | `wan` | 5 | internet-connections, network-types |
+| `wan-topologies` | 1 | data-link-layer |
 | `web-protocols` | 1 | application-layer |
 | `well-known-ports` | 1 | transport-layer |
 | `wifi` | 1 | physical-layer |
@@ -1112,7 +1139,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 266. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 273. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1121,10 +1148,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 33 |
+| matching | 36 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 71 |
+| scenario | 72 |
 | single | 115 |
 | true-false | 1 |
 
@@ -1133,11 +1160,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 83 |
-| 3 | 116 |
+| 2 | 84 |
+| 3 | 119 |
 | 4 | 44 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
