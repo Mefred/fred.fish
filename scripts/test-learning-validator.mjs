@@ -9,6 +9,12 @@ const base = {
 };
 
 assert.equal(isValidMatchingAnswer(base), true, "a complete one-to-one mapping matching declared answerIds should pass");
+assert.equal(isValidMatchingAnswer(null), false, "null input must fail without throwing");
+assert.equal(isValidMatchingAnswer(undefined), false, "undefined input must fail without throwing");
+assert.equal(isValidMatchingAnswer("not-an-object"), false, "primitive input must fail without throwing");
+assert.equal(isValidMatchingAnswer({ ...base, pairIds: ["p1", "", "p3"] }), false, "empty pair IDs must fail");
+assert.equal(isValidMatchingAnswer({ ...base, matchIds: ["m1", " ", "m3"] }), false, "blank match option IDs must fail");
+assert.equal(isValidMatchingAnswer({ ...base, pairAnswerIds: ["m2", "m1"] }), false, "declared answer arrays with missing entries must fail");
 assert.equal(isValidMatchingAnswer({ ...base, answer: ["p1:m2", "p2:m1", "p3:m3:extra"] }), false, "mapping entries with extra delimiters must fail");
 assert.equal(isValidMatchingAnswer({ ...base, answer: ["p1:m2", "p2:m1"] }), false, "missing pair mappings must fail");
 assert.equal(isValidMatchingAnswer({ ...base, answer: ["p1:m2", "p1:m1", "p3:m3"] }), false, "duplicate pair mappings must fail");
