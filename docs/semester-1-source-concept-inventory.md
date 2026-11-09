@@ -331,3 +331,19 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 ## Latest question-depth completion
 
 The active bank now contains 566 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+
+
+## Additional source-verified question mappings from recovered images
+
+The original OneNote image assets were recovered and hash-matched against all 2,646 OCR manifest records. Six image candidates were then inspected visually for their exact prompt and answer marks. Two images map to questions that already existed, so they were added as additional provenance references rather than duplicated.
+
+| Module | Source image | Active question | Source fact / verified answer |
+|---|---|---|---|
+| 1. Networking Today | `IMG-0063` | `s1-media-selection-001` | Select media using required signal distance and installation environment |
+| 3. Protocols and Models | `IMG-0256` | `s3-destination-port-001` | Destination port numbers are added at the transport layer |
+| 3. Protocols and Models | `IMG-0271` | `s3-decode-protocol-stack-source-001` | Receive-side decapsulation proceeds Ethernet → IP → TCP → HTTP |
+| 3. Protocols and Models | `IMG-0292` | `s3-open-standards-source-001` | Open standards enable interoperability between different operating systems |
+| 14. Transport Layer | `IMG-1315` | `s14-transport-multiplexing-source-001` | Transport ports deliver data to the correct browser/application process |
+| 11. IPv4 Addressing | `IMG-1756` | `s11-subnet-mask-40-hosts-source-001` | 40 hosts require at least a /26; 255.255.255.192 provides 62 usable addresses |
+
+These six image associations have been visually verified and are reflected in the active seed. The question bank contains 570 records across 605 concept tags, with a minimum of two questions per tag. The image audit still has 772 question-like asset records awaiting visual answer-key review; do not infer complete source coverage from this first verified subset.
