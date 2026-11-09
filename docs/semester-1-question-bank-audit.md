@@ -54,7 +54,7 @@ The expansion adds distinct practice across:
 
 ## Additional visually verified source questions
 
-The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across the three follow-up passes. Eleven new image-question associations were added in the latest pass: four images reinforce existing source questions and six new source-origin questions were added (one new question is supported by two connector images).
+The original OneNote image payloads were recovered and matched to the OCR export by SHA-256. Eighteen additional image assets have now been visually inspected across three follow-up passes. These include twelve new source-origin questions (one supported by two connector images) and five additional image references linked to existing questions.
 
 | Image reference | Active question | Verified answer |
 |---|---|---|
@@ -95,7 +95,7 @@ The coverage report is regenerated from the active seed data and lists per-lesso
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- Seventeen additional question-image associations have been manually checked across the follow-up passes. The remaining 748 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
+- Eighteen additional question-image associations have been manually checked across the follow-up passes. The remaining 748 unique unresolved candidate images still need visual review. Some are duplicate slides, lesson summaries, Packet Tracer activities, or diagram-dependent questions rather than standalone quiz questions.
 - The source-concept inventory is a first-pass transcription, not a fully reviewed atomic objective-to-question-tag matrix for every lesson.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
