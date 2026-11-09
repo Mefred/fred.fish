@@ -24,9 +24,9 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Visually verified source-origin image-question associations | 34 |
-| Visual references used by AI-generated questions | 4 |
-| Total visually reviewed image-question associations | 38 |
+| Visually verified source-origin image-question associations | 36 |
+| Visual references used by AI-generated questions | 9 |
+| Total visually reviewed image-question associations | 45 |
 | Candidate asset records visually reviewed as not questions | 4 |
 | Unique unresolved candidate images remaining | 744 |
 | Unresolved candidate asset records (including duplicate references) | 750 |
@@ -63,6 +63,8 @@ Eighteen additional unique image candidates were inspected across three follow-u
 | IMG-0647 | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
 The original OCR export's promotion status has not been rewritten in the Library ZIP; the current source-question associations are maintained in `src/data/learning/semester-1-seed.ts` and the question-bank audit.
+
+The current totals include later Module 8 and AI-generated visual-context reviews; the consolidated, current association list and provenance breakdown are maintained in [the image audit](./semester-1-image-audit.md).
 
 ## Text-only comparison against extracted source questions
 
