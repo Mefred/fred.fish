@@ -81,3 +81,10 @@ The following additional images were checked and linked to existing source-origi
 
 
 | IMG-0779 | `s8-diffserv-priority-source-001` | Differentiated Services field is the 8-bit IPv4 QoS field (modern DSCP + ECN) |
+
+
+| IMG-0599 | `s8-ipv4-source-address-field-source-001` | 32-bit address of the sending interface is the Source IPv4 Address field |
+| IMG-0607 | `s8-ipv4-ttl-field-source-001` | Time to Live limits packet lifetime across routers |
+| IMG-0615 | `s8-ipv4-destination-address-field-source-001` | Destination IPv4 Address field contains unicast, multicast, or broadcast destination |
+| IMG-0640 | `s8-ipv4-version-field-source-001` | Version field value 0100 identifies IPv4 |
+| IMG-0647 | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
