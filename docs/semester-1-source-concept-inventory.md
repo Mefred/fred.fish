@@ -28,6 +28,21 @@ This inventory is deliberately kept separate from the active question bank. A so
 | 16. Network Security Fundamentals | Configure switches and routers with device hardening features to enhance security. | Security Threats and Vulnerabilities; Network Attacks; Network Attack Mitigation; Device Security | `network-security` | Objective and topic list transcribed (source lines 24867–24881). |
 | 17. Build a Small Network | Implement a network design for a small network to include a router, a switch, and end devices. | Devices in a Small Network; Small Network Applications and Protocols; Scale to Larger Networks; Verify Connectivity; Host and IOS Commands; Troubleshooting Methodologies; Troubleshooting Scenarios | `small-network` | Objective and topic list transcribed (source lines 26892–26915). |
 
+## First-pass topic-to-question comparison: Module 4
+
+The Physical Layer module is now mapped to active question records. This is an initial mapping of the objective list to actual prompts and concepts, not a claim that every diagram, cable type, connector, or lab has been fully audited.
+
+| Source topic objective | Active question-bank evidence | First-pass finding |
+|---|---|---|
+| Purpose of the Physical Layer | `s4-physical-layer-role-001` assesses accepting a Layer 2 frame, encoding it as signals, and transmitting bits. | Represented at the core-function level; add more receiver-side encoding/decoding scenarios if needed. |
+| Physical Layer Characteristics | `s4-bandwidth-throughput-001` distinguishes rated bandwidth from achieved throughput; `s4-signal-attenuation-001` assesses attenuation and signal integrity. | Partially represented. Add practice on latency, jitter, and bandwidth units only where the source teaches them in this module. |
+| Copper Cabling | `s4-utp-distance-001`, `s4-utp-twist-001`, `s4-utp-crosstalk-001`, and `s4-signal-medium-match-001` assess copper distance, twisting, interference, and electrical signaling. | Represented at a first-pass level; exact copper cable-type and connector identification still needs review. |
+| UTP Cabling | `s4-utp-standard-001` tests TIA/EIA-568 scope; `s4-utp-twist-001` and `s4-utp-crosstalk-001` test UTP construction and interference reduction. | Partially represented; inspect the source's cable termination and pinout exhibits before declaring complete. |
+| Fiber-Optic Cabling | `s4-fiber-purpose-001`, `s4-media-scenario-001`, `s4-fiber-modes-001`, and `s4-signal-medium-match-001` assess light signaling, distance, EMI resistance, and single-mode versus multimode. | Broadly represented; connector types and visual identification still need review. |
+| Wireless Media | `s4-wireless-medium-001` and `s4-signal-medium-match-001` assess radio/microwave signaling and the wireless medium. | Partially represented; interference sources and practical placement/channel scenarios could use additional questions. |
+
+**Initial practice expansion:** four AI-generated questions were added for physical-layer function, bandwidth versus throughput, medium-to-signal mapping, and TIA/EIA-568 UTP requirements. The new questions cite the recovered text block `block-0073`; they are not verbatim source-origin questions. The lesson now has 12 active questions. Continue visual verification of cable and connector exhibits before adding image-specific references.
+
 ## First-pass topic-to-question comparison: Module 8
 
 The Module 8 objective list is now compared against the active `network-layer` question records and their concept tags. This is a narrow, explicit mapping pass; it is not yet generalized to the other modules.
