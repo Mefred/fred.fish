@@ -27,6 +27,7 @@ const fieldArray = (line, name, nextField) => {
 
 for (const [index, line] of lines.entries()) {
   const id = line.match(/id:"([^"]+)"/)?.[1];
+  const label = id || `question line ${index + 1}`;
   const type = line.match(/type:"([^"]+)"/)?.[1];
   const answerMatch = line.match(/answer:(\[[^\]]*\]|"[^"]*")/);
   const answer = answerMatch ? JSON.parse(answerMatch[1]) : null;
@@ -55,7 +56,6 @@ for (const [index, line] of lines.entries()) {
   const pairAnswerIds = pairFragment ? [...pairFragment.matchAll(/answerId:"([^"]+)"/g)].map((m) => m[1]) : [];
   const matchFragment = fieldArray(line, "matchOptions", "answer");
   const matchIds = matchFragment ? [...matchFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
-  const label = id || `question line ${index + 1}`;
 
   if (!id) errors.push(`${label}: missing id`);
   if (id && ids.has(id)) errors.push(`${id}: duplicate question id`);
