@@ -154,3 +154,8 @@ Completed a first-pass topic-to-question mapping for Module 15 Application Layer
 ## Module 16 source mapping update
 
 Completed a first-pass topic-to-question mapping for Module 16 Network Security Fundamentals. Three AI-generated questions add malware-type, attack-category, and vulnerability-category matching. The lesson now has 11 questions. Physical threat categories, specific attack techniques, firewall modes, and hands-on SSH/device-hardening commands remain gaps.
+
+
+## Module 17 source mapping update
+
+Completed a first-pass topic-to-question mapping for Module 17 Build a Small Network. The lesson has nine active questions covering troubleshooting methodology, DNS, default gateways, interface verification, traceroute, CDP, debug safety, and redundancy. Remaining gaps include device selection, host command interpretation, extended ping/traceroute, network baselines, and multi-symptom troubleshooting.
