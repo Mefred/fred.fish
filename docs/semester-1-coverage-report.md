@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 329
+- **Questions:** 335
 - **Lessons represented:** 22
-- **Distinct concept tags:** 550
+- **Distinct concept tags:** 556
 
 ## Lesson coverage
 
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 11 | 34 | matching: 1, ordering: 2, scenario: 4, single: 4 | 1–4 |
+| small-network | 17 | 51 | matching: 2, ordering: 2, scenario: 8, single: 5 | 2–4 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
@@ -703,21 +703,37 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### small-network
 
+- `arp-cache`
 - `cdp`
+- `connectivity-testing`
 - `default-gateway`
 - `device-resource-management`
+- `device-selection`
+- `dhcp`
+- `dhcp-troubleshooting`
 - `dns-troubleshooting`
+- `extended-ping`
+- `extended-traceroute`
 - `fault-tolerance`
+- `host-ip-configuration`
+- `host-troubleshooting`
 - `ios-debug`
 - `ios-verification-commands`
+- `ipv4-addressing`
 - `ipv4-troubleshooting`
 - `ipv6-interface-verification`
+- `link-local-address`
+- `mac-addressing`
 - `name-resolution`
 - `network-discovery`
+- `network-intermediary-devices`
 - `network-operations`
 - `network-reliability`
+- `network-requirements`
+- `network-scalability`
 - `network-troubleshooting`
 - `nslookup`
+- `physical-layer-troubleshooting`
 - `ping`
 - `problem-identification`
 - `redundancy`
@@ -733,6 +749,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `show-protocols`
 - `show-running-config`
 - `show-version`
+- `source-ip-selection`
 - `traceroute`
 - `troubleshooting`
 - `troubleshooting-methodology`
