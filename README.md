@@ -27,6 +27,8 @@ Useful commands:
 | `npm run build` | Check and build the static site into `dist/` |
 | `npm run preview` | Preview the generated production build |
 | `npm run validate:links` | Check generated local links and in-page fragment targets (after building) |
+| `npm run test:learning` | Run adaptive-engine regression tests |
+| `npm run test:browser` | Run desktop/mobile Chromium, practice-session, persistence, and axe accessibility smoke tests (requires Playwright and axe-core) |
 
 ## Project structure
 
@@ -49,9 +51,16 @@ Pull requests and pushes to the redesign branches run GitHub Actions checks for:
 - Astro diagnostics and static build
 - npm audit, with high and critical findings blocking CI
 - Local links, generated assets, and in-page fragment targets across every generated HTML page
+- Chromium browser checks at desktop and mobile viewport sizes across all generated HTML routes
+- A complete ten-question practice-session interaction, keyboard selection, answer feedback, local-storage persistence, and progress-dashboard update
+- Automated axe accessibility checks against WCAG 2.1 A/AA and best-practice rules, failing on serious or critical violations
 - 30 Cisco lesson routes and all 95 quiz questions
 - Quiz prompts, correct answers, options, radio names, and explanations
 - Lesson component/source parity and required published routes
 - GitHub Pages output and custom-domain file preservation
 
 Pushing to `main` builds and deploys `dist/` to GitHub Pages. The custom domain is configured through `public/CNAME`.
+
+## Semester 1 source recovery
+
+The source-processing audit and repeatable OneNote image-recovery procedure are documented in `docs/semester-1-image-audit.md`, `docs/semester-1-ocr-candidate-triage.md`, and `docs/semester-1-image-recovery.md`. The recovery script verifies extracted image bytes against the OCR export's SHA-256 manifest before accepting them.
