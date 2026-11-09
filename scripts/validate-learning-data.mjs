@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { readFileSync } from "node:fs";
+import { isValidMatchingAnswer } from "./matching-validation.mjs";
 
 const file = new URL("../src/data/learning/semester-1-seed.ts", import.meta.url);
 const source = readFileSync(file, "utf8");
@@ -83,27 +84,7 @@ for (const [index, line] of lines.entries()) {
     errors.push(`${label}: ordering answer must contain every item id exactly once`);
   }
   if (type === "matching") {
-    const validPairs = new Set(pairIds);
-    const validMatches = new Set(matchIds);
-    const mappings = Array.isArray(answer)
-      ? answer.map((entry) => String(entry).split(":"))
-      : [];
-    const mappedPairIds = mappings.map(([pairId]) => pairId);
-    const mappedMatchIds = mappings.map(([, matchId]) => matchId);
-    const mappingByPair = new Map(mappings);
-    const hasInvalidMapping = mappings.some(([pairId, matchId]) =>
-      !pairId || !matchId || !validPairs.has(pairId) || !validMatches.has(matchId));
-    const hasIncompletePairCoverage = mappedPairIds.length !== pairIds.length
-      || new Set(mappedPairIds).size !== pairIds.length
-      || pairIds.some((pairId) => !mappingByPair.has(pairId));
-    const hasDuplicateTargets = new Set(mappedMatchIds).size !== mappedMatchIds.length;
-    const hasMismatchedDeclaredAnswers = pairAnswerIds.length !== pairIds.length
-      || pairIds.some((pairId, pairIndex) =>
-        mappingByPair.get(pairId) !== pairAnswerIds[pairIndex]);
-    if (pairIds.length < 2 || new Set(pairIds).size !== pairIds.length
-      || matchIds.length < 2 || new Set(matchIds).size !== matchIds.length
-      || hasInvalidMapping || hasIncompletePairCoverage || hasDuplicateTargets
-      || hasMismatchedDeclaredAnswers) {
+    if (!isValidMatchingAnswer({ pairIds, pairAnswerIds, matchIds, answer })) {
       errors.push(`${label}: matching answer must map every pair exactly once to a unique valid option and agree with each pair's declared answerId`);
     }
   }
