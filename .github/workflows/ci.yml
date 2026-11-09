@@ -24,6 +24,10 @@ jobs:
           node-version: 22
       - name: Install dependencies
         run: npm install
+      - name: Install browser test tooling
+        run: |
+          npm install --no-save --package-lock=false playwright axe-core
+          npx playwright install --with-deps chromium
       - name: Summarize dependency audit findings
         shell: bash
         run: |
@@ -47,6 +51,8 @@ jobs:
         run: npm run build
       - name: Validate generated local links and fragments
         run: npm run validate:links
+      - name: Test desktop, mobile, and accessibility behavior
+        run: npm run test:browser
       - name: Validate Cisco lesson and quiz integrity
         run: node scripts/validate-lessons.mjs
       - name: Verify preserved routes and Cisco curriculum
