@@ -1,7 +1,7 @@
 # Semester 1 question bank audit
 
 **Current bank:** 345 unique questions  
-**Concept tags:** 563 unique concept identifiers  
+**Concept tags:** 564 unique concept identifiers  
 **Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 321 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
@@ -29,24 +29,24 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 123 |
+| Single choice | 124 |
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 34 |
-| Matching | 55 |
-| Ordering | 13 |
-| Scenario / troubleshooting | 85 |
-| **Total** | **329** |
+| Matching | 57 |
+| Ordering | 14 |
+| Scenario / troubleshooting | 97 |
+| **Total** | **345** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 89 |
+| 2 — Foundational | 90 |
 | 3 — Applied | 135 |
-| 4 — Advanced | 64 |
-| 5 — Challenging | 7 |
+| 4 — Advanced | 72 |
+| 5 — Challenging | 9 |
 
 ## Source provenance audit
 
