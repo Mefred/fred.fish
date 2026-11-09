@@ -35,23 +35,27 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 ## Format coverage
 
-| single | 125 |
-| multiple | 19 |
-| true-false | 1 |
-| fill | 35 |
-| matching | 57 |
-| ordering | 14 |
-| scenario | 120 |
+| Format | Questions |
+|---|---:|
+| Single choice | 125 |
+| Multiple select | 19 |
+| True / false | 1 |
+| Fill in the blank | 35 |
+| Matching | 57 |
+| Ordering | 14 |
+| Scenario / troubleshooting | 120 |
 
 | **Total** | **371** |
 
 ## Difficulty coverage
 
-| 1 | 34 |
-| 2 | 90 |
-| 3 | 142 |
-| 4 | 84 |
-| 5 | 21 |
+| Difficulty | Questions |
+|---|---:|
+| 1 — Introductory | 34 |
+| 2 — Foundational | 90 |
+| 3 — Applied | 142 |
+| 4 — Advanced | 84 |
+| 5 — Challenging | 21 |
 
 ## Source provenance audit
 
