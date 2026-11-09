@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 249
+- **Questions:** 254
 - **Lessons represented:** 22
-- **Distinct concept tags:** 380
+- **Distinct concept tags:** 398
 
 ## Lesson coverage
 
@@ -20,7 +20,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
 | ipv6-addressing | 16 | 36 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
-| network-layer | 23 | 42 | fill: 1, matching: 2, multiple: 2, scenario: 13, single: 5 | 2–5 |
+| network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
@@ -305,6 +305,24 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ios-verification-commands`
 - `ip-characteristics`
 - `ipv4-routing-table`
+- `ipv4-differentiated-services`
+- `ipv4-fragmentation-fields`
+- `ipv4-header-checksum`
+- `ipv4-header-fields`
+- `ipv4-protocol`
+- `ipv4-source-destination`
+- `ipv4-version`
+- `ipv4-vs-ipv6-header`
+- `ipv6-extension-headers`
+- `ipv6-fixed-header`
+- `ipv6-flow-label`
+- `ipv6-header-fields`
+- `ipv6-hop-limit`
+- `ipv6-next-header`
+- `ipv6-payload-length`
+- `ipv6-source-destination`
+- `ipv6-traffic-class`
+- `ipv6-version`
 - `ipv4-static-route`
 - `layer2-layer3-addressing`
 - `local-route`
@@ -729,12 +747,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-addressing` | 3 | basic-device-configuration, ipv4-addressing, number-systems |
 | `ipv4-interface-configuration` | 1 | basic-device-configuration |
 | `ipv4-ipv6-coexistence` | 1 | ipv6-addressing |
+| `ipv4-differentiated-services` | 1 | network-layer |
+| `ipv4-fragmentation-fields` | 1 | network-layer |
+| `ipv4-header-checksum` | 2 | network-layer |
+| `ipv4-header-fields` | 2 | network-layer |
+| `ipv4-protocol` | 2 | network-layer |
+| `ipv4-source-destination` | 1 | network-layer |
+| `ipv4-version` | 1 | network-layer |
+| `ipv4-vs-ipv6-header` | 1 | network-layer |
 | `ipv4-routing` | 1 | basic-device-configuration |
 | `ipv4-routing-table` | 4 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
 | `ipv4-subnetting` | 19 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
-| `ipv4-ttl` | 1 | icmp |
+| `ipv4-ttl` | 3 | icmp, network-layer |
 | `ipv6-address-configuration` | 2 | basic-device-configuration, ipv6-addressing |
 | `ipv6-address-representation` | 2 | ipv6-addressing |
 | `ipv6-address-resolution` | 1 | icmp |
@@ -744,6 +770,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-interface-configuration` | 2 | ipv6-addressing |
 | `ipv6-interface-id` | 1 | ipv6-addressing |
 | `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
+| `ipv6-extension-headers` | 1 | network-layer |
+| `ipv6-fixed-header` | 1 | network-layer |
+| `ipv6-flow-label` | 2 | network-layer |
+| `ipv6-header-fields` | 2 | network-layer |
+| `ipv6-hop-limit` | 1 | network-layer |
+| `ipv6-next-header` | 1 | network-layer |
+| `ipv6-payload-length` | 1 | network-layer |
+| `ipv6-source-destination` | 1 | network-layer |
+| `ipv6-traffic-class` | 1 | network-layer |
+| `ipv6-version` | 1 | network-layer |
 | `ipv6-multicast` | 1 | ipv6-addressing |
 | `ipv6-neighbor-discovery` | 2 | address-resolution |
 | `ipv6-network-prefix` | 1 | ipv6-addressing |
@@ -948,7 +984,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-compression` | 1 | ipv6-addressing |
 | `zero-suppression` | 1 | ipv6-addressing |
 
-**Single-question concepts:** 218. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 230. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -957,10 +993,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 30 |
-| matching | 20 |
+| matching | 22 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 59 |
+| scenario | 62 |
 | single | 110 |
 | true-false | 1 |
 
@@ -970,10 +1006,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 75 |
-| 3 | 96 |
-| 4 | 38 |
+| 3 | 97 |
+| 4 | 42 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is now maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. It is not yet a complete atomic-concept inventory, and source topics have not yet been mapped explicitly to question-bank tags. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is now maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. It is not yet a complete atomic-concept inventory, and Module 8 now has an explicit first-pass topic-to-question mapping for the IPv4 and IPv6 packet-header objectives; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
