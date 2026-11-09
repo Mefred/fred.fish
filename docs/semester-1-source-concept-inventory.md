@@ -158,6 +158,20 @@ The recovered Module 10 objective is to implement initial settings on a router a
 
 Three new AI-generated questions add router interface command ordering, concise interface verification, and host default-gateway selection. They are derived from recovered Module 10 notes and existing source references, not presented as verbatim source questions. The Packet Tracer interface and default-gateway exhibits still need direct visual verification.
 
+## Module 11 first-pass topic-to-question mapping
+
+The recovered Module 11 objective is to calculate an IPv4 subnetting scheme to efficiently segment a network. Its five source topics are IPv4 address structure, unicast/broadcast/multicast, IPv4 address types, network segmentation, and subnetting a /24. The active `ipv4-addressing` lesson currently has 20 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| IPv4 Address Structure | 32-bit address; network and host portions; subnet mask; prefix length; logical AND; network, broadcast, first/last usable addresses | `ipv4-addressing`, `subnet-mask`, `cidr`, `prefix-length`, `network-address`, `broadcast-address` | Strong calculation coverage for prefix interpretation, network/broadcast addresses, host ranges, and host capacity. Explicit bitwise ANDing and first/last usable-address drills could be added. |
+| IPv4 Unicast, Broadcast, and Multicast | One-to-one, one-to-all on a subnet, and one-to-many group delivery | No direct lesson-local tags for unicast, broadcast, or multicast in the current IPv4 Addressing bank | Gap: add explicit delivery-type comparison and destination-scope scenarios. Existing broadcast-address arithmetic does not by itself teach broadcast delivery semantics. |
+| Types of IPv4 Addresses | Public, private, reserved; RFC 1918; APIPA/link-local; loopback; classful ranges; IANA/RIR allocation | `private-ipv4`, `rfc1918` | Partial: RFC 1918 private blocks are practiced, but public/reserved classification, APIPA, loopback, and historical classful ranges are not directly assessed in this lesson. |
+| Network Segmentation | Subnetting reduces broadcast-domain size; supports policy boundaries and organization by location, group, or device type | No direct lesson-local segmentation/broadcast-domain concepts | Gap: add applied questions explaining why subnetting improves scale, performance, and policy separation, and how routers bound broadcasts. |
+| Subnet an IPv4 Network | /24 subnetting; prefix/mask conversion; number of subnets and hosts; VLSM; efficient allocation | `ipv4-subnetting`, `subnet-sizing`, `host-capacity`, `vlsm`, `prefix-length`, `network-address`, `broadcast-address` | Strong calculation coverage from /24-derived /23 through /29 exercises, capacity selection, and sequential VLSM allocation. More mixed address-type and first/last-host practice would round out the topic. |
+
+The 20-question lesson has substantial calculation depth, but it does not yet cover every objective equally. The largest gaps are delivery semantics (unicast/broadcast/multicast), reserved/public IPv4 address categories, and the purpose and effect of network segmentation. These are recorded as explicit expansion targets rather than treating subnetting question volume as proof of complete Module 11 coverage.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
