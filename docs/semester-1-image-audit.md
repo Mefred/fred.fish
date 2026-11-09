@@ -43,8 +43,8 @@ See [the reproducible recovery procedure](./semester-1-image-recovery.md).
 - 792 image assets contain question-like OCR text.
 - Normalizing the OCR text yields 474 candidate groups.
 - These are candidate prompts, not 474 verified answer-key entries. Some are duplicate slides, matching activities, Packet Tracer instructions, lesson summaries, or questions whose answer depends on a diagram or visual mark.
-- Eleven additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier associations, 27 image-question associations have visual verification. Four false-positive candidates remain excluded.
-- Of the 772 unique unresolved candidate images, 761 remain for visual answer-key review (767 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
+- Twelve additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier associations, 28 image-question associations have visual verification. Four false-positive candidates remain excluded.
+- Of the 772 unique unresolved candidate images, 760 remain for visual answer-key review (766 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
 
 ## Module sequence discovered
 
@@ -85,6 +85,7 @@ The latest 11 image checks verified the exact prompt and answer marks/diagram de
 - Application data enters the encapsulation process at the Application layer.
 - ARP cache entries age out after an operating-system-dependent timer.
 - A four-pair unshielded twisted-pair cable.
+- The IPv4 Differentiated Services field carries an 8-bit QoS classification/ECN value.
 - RJ-45/8P8C is the Ethernet twisted-pair connector.
 
 OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. The remaining question candidates and diagram-dependent lesson references still need visual review.
