@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 376
+- **Questions:** 381
 - **Lessons represented:** 22
 - **Distinct concept tags:** 605
 
@@ -14,7 +14,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | application-layer | 14 | 35 | matching: 5, multiple: 1, ordering: 1, scenario: 3, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 18 | 39 | matching: 4, multiple: 2, ordering: 1, scenario: 6, single: 5 | 2–4 |
-| ethernet-switching | 23 | 57 | fill: 1, matching: 2, scenario: 10, single: 10 | 1–5 |
+| ethernet-switching | 28 | 57 | fill: 2, matching: 2, scenario: 14, single: 10 | 1–5 |
 | icmp | 13 | 26 | matching: 1, scenario: 3, single: 9 | 1–4 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 32 | 32 | fill: 9, matching: 4, multiple: 1, scenario: 11, single: 7 | 2–5 |
@@ -883,7 +883,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `accounting` | 1 | network-security |
 | `address-resolution` | 8 | address-resolution |
 | `administrative-distance` | 4 | network-layer |
-| `aging-timer` | 1 | ethernet-switching |
+| `aging-timer` | 2 | ethernet-switching |
 | `all-nodes-multicast` | 1 | ipv6-addressing |
 | `all-routers-multicast` | 1 | ipv6-addressing |
 | `allowed-vlan-list` | 1 | small-network |
@@ -897,7 +897,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
-| `auto-mdix` | 1 | ethernet-switching |
+| `auto-mdix` | 2 | ethernet-switching |
 | `bandwidth` | 4 | physical-layer, reliable-networks |
 | `base-10` | 1 | number-systems |
 | `base-16` | 1 | number-systems |
@@ -929,7 +929,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `cloud-deployment-models` | 1 | network-trends |
 | `coaxial-cable` | 1 | physical-layer |
 | `collision-avoidance` | 1 | data-link-layer |
-| `collision-domains` | 1 | ethernet-switching |
+| `collision-domains` | 2 | ethernet-switching |
 | `command-keywords` | 2 | basic-device-configuration |
 | `communication-rules` | 1 | protocols-and-models |
 | `confidentiality` | 2 | network-security |
@@ -983,7 +983,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dotted-decimal-notation` | 1 | number-systems |
 | `dsl` | 1 | internet-connections |
 | `dual-stack` | 1 | ipv6-addressing |
-| `duplex` | 2 | data-link-layer, ethernet-switching |
+| `duplex` | 3 | data-link-layer, ethernet-switching |
 | `duplex-communication` | 1 | data-link-layer |
 | `duplex-mismatch` | 2 | ethernet-switching, small-network |
 | `duplicate-address-detection` | 1 | ipv6-addressing |
@@ -997,16 +997,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `endpoint-security` | 4 | network-security, network-trends |
 | `environmental-threats` | 1 | network-security |
 | `error-detection` | 4 | data-link-layer |
-| `etherchannel` | 1 | ethernet-switching |
+| `etherchannel` | 2 | ethernet-switching |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 1 | address-resolution |
-| `ethernet-cabling` | 1 | ethernet-switching |
+| `ethernet-cabling` | 2 | ethernet-switching |
 | `ethernet-frame` | 11 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 1 | ethernet-switching |
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 1 | network-layer |
 | `ethernet-standards` | 1 | ethernet-switching |
-| `ethernet-switching` | 5 | ethernet-switching |
+| `ethernet-switching` | 10 | ethernet-switching |
 | `ethernet-troubleshooting` | 3 | ethernet-switching, small-network |
 | `ethernet-wan` | 1 | internet-connections |
 | `eui-64` | 1 | ipv6-addressing |
@@ -1180,11 +1180,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `login-security` | 1 | network-security |
 | `longest-prefix-match` | 4 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
-| `mac-address-table` | 5 | ethernet-switching |
-| `mac-addressing` | 17 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
-| `mac-flapping` | 1 | ethernet-switching |
+| `mac-address-table` | 6 | ethernet-switching |
+| `mac-addressing` | 18 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
+| `mac-flapping` | 2 | ethernet-switching |
 | `mac-learning` | 2 | ethernet-switching |
-| `mac-move` | 1 | ethernet-switching |
+| `mac-move` | 2 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
 | `maintenance-threats` | 1 | network-security |
 | `malware` | 1 | network-security |
@@ -1251,7 +1251,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `open-standards` | 1 | protocols-and-models |
 | `osi-model` | 8 | application-layer, protocols-and-models |
 | `ospf` | 1 | network-layer |
-| `oui` | 1 | ethernet-switching |
+| `oui` | 2 | ethernet-switching |
 | `packet-filtering` | 1 | network-security |
 | `packet-forwarding` | 3 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
@@ -1302,7 +1302,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reconnaissance-attacks` | 1 | network-security |
 | `recursive-route-lookup` | 1 | network-layer |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
-| `redundant-links` | 1 | ethernet-switching |
+| `redundant-links` | 2 | ethernet-switching |
 | `reference-models` | 1 | protocols-and-models |
 | `reliability` | 4 | transport-layer |
 | `reliability-and-flow-control` | 1 | transport-layer |
@@ -1404,11 +1404,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-configuration` | 1 | ethernet-switching |
 | `switch-default-gateway` | 1 | basic-device-configuration |
 | `switch-forwarding` | 1 | ethernet-switching |
-| `switch-learning` | 2 | ethernet-switching |
+| `switch-learning` | 3 | ethernet-switching |
 | `switch-management` | 2 | basic-device-configuration, router-configuration |
 | `switch-management-svi` | 1 | ethernet-switching |
 | `switch-memory-buffering` | 1 | ethernet-switching |
-| `switch-port-settings` | 1 | ethernet-switching |
+| `switch-port-settings` | 2 | ethernet-switching |
 | `switch-troubleshooting` | 2 | ethernet-switching |
 | `switching-latency` | 1 | ethernet-switching |
 | `tcp` | 10 | protocols-and-models, transport-layer |
@@ -1443,7 +1443,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `usable-host-range` | 1 | ipv4-addressing |
 | `user-exec` | 1 | basic-device-configuration |
 | `utp-cabling` | 5 | physical-layer |
-| `vendor-identification` | 1 | ethernet-switching |
+| `vendor-identification` | 2 | ethernet-switching |
 | `verification` | 1 | small-network |
 | `video-communications` | 1 | network-trends |
 | `virus` | 1 | network-security |
@@ -1479,7 +1479,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 340. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 329. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1487,11 +1487,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 35 |
+| fill | 36 |
 | matching | 57 |
 | multiple | 19 |
 | ordering | 15 |
-| scenario | 122 |
+| scenario | 126 |
 | single | 127 |
 | true-false | 1 |
 
@@ -1501,9 +1501,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 90 |
-| 3 | 145 |
-| 4 | 86 |
-| 5 | 21 |
+| 3 | 147 |
+| 4 | 88 |
+| 5 | 22 |
 
 ## Interpretation and limits
 
