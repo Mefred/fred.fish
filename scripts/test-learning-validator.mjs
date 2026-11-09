@@ -36,8 +36,8 @@ assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, 
 assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, { b: "  " }), false, "blank distractor explanations must fail");
 assert.equal(isValidDistractorExplanations(distractorChoices, distractorAnswer, null), false, "malformed explanation maps must fail");
 
-assert.deepEqual(parseDistractorExplanations('b:"Wrong answer.",c:"Another explanation."), { b: "Wrong answer.", c: "Another explanation." }, "well-formed feedback maps should parse");
-assert.deepEqual(parseDistractorExplanations(String.raw`b:"Escaped quote: \"yes\"."`), { b: 'Escaped quote: "yes".' }, "escaped quotes should parse without truncation");
+assert.deepEqual(parseDistractorExplanations(String.raw`b:"Wrong answer.",c:"Another explanation."`), { b: "Wrong answer.", c: "Another explanation." }, "well-formed feedback maps should parse");
+assert.deepEqual(parseDistractorExplanations(String.raw`b:"Escaped quote: \\"yes\\"."`), { b: 'Escaped quote: "yes".' }, "escaped quotes should parse without truncation");
 assert.equal(parseDistractorExplanations('b:"Valid.",broken-entry'), null, "malformed trailing entries must not be silently ignored");
 assert.equal(parseDistractorExplanations('b:"First.",b:"Duplicate."'), null, "duplicate feedback keys must be rejected");
 assert.equal(parseDistractorExplanations('b:"Bad escape: \\q"'), null, "invalid JSON string escapes must be rejected");
