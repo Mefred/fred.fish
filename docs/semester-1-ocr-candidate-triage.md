@@ -28,8 +28,8 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Visual references used by AI-generated questions | 9 |
 | Total visually reviewed image-question associations | 48 |
 | Candidate asset records visually reviewed as not questions | 4 |
-| Unique unresolved candidate images remaining | 744 |
-| Unresolved candidate asset records (including duplicate references) | 750 |
+| Unique unresolved candidate images still marked unresolved in original export | 744 |
+| Candidate asset records still marked unresolved in original export | 750 |
 
 The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
 
@@ -86,7 +86,7 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–3, 108 candidate images have been screened at high-resolution contact-sheet scale, and nine answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the 744-unique-image / 750-asset-record native-resolution backlog remains unchanged.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale, and twelve answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the rest of the candidate corpus; the original export's 744-unique-image / 750-asset-record unresolved count remains unchanged.
 
 ## High-resolution contact-sheet review — batch 3
 
@@ -109,6 +109,14 @@ Each normalized OCR candidate was compared with all 612 numbered question blocks
 | 0.20 or lower | 8 |
 
 This is a prioritization heuristic only. It can be distorted by OCR noise, long slide summaries, repeated vocabulary, diagram labels, and answer-option text. A high score does not prove the image is linked to the right source question or that an answer is correct. A low score does not prove that an asset is irrelevant.
+
+## High-resolution contact-sheet review — batch 4
+
+The next 36 candidates (IMG-0518–IMG-0578) were screened. IMG-0545 was opened at native resolution and shows four color-coded twisted copper pairs; it is now linked as a second source image to the existing UTP-identification question. IMG-0557 was opened at native resolution and shows a central conductor, dielectric, and concentric metallic shield; together with IMG-0324 it supports the new self-contained coaxial-identification question. These add one source-origin question and three source-image associations in total (two coaxial images and one additional UTP image).
+
+The other 34 images are unmarked prompts or instructional slides; no additional answer-selection marks were found. See [the batch 4 review log](./semester-1-image-review-batch-4.md).
+
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. Twelve answer/visual items have been opened at native resolution: eight answer-marked items already linked to existing questions, two UTP cable visuals, and two coaxial cable visuals. The UTP and coaxial visuals are now represented in the active bank. The original OCR ZIP still labels 744 unique images (750 asset records) unresolved; this is the source-export count, not a live count after manual review. Manual review decisions are tracked in these repository logs, and the original ZIP status fields have not been rewritten.
 
 ## Low-overlap candidates for first manual classification
 
