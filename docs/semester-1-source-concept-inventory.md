@@ -135,6 +135,17 @@ The recovered Module 7 material focuses on Ethernet frame structure and MAC addr
 
 Four new AI-generated questions add OUI identification, MAC-address movement between switch ports, forwarding-method trade-offs, and switch memory-buffering comparison. They are derived from recovered Module 7 notes and existing Ethernet Switching image references, not presented as verbatim source questions. Visual verification of the MAC-table and switch-buffer diagrams remains pending.
 
+## Module 9 first-pass topic-to-question mapping
+
+The recovered Module 9 objective is to explain how ARP and Neighbor Discovery enable communication. Its two source topics are MAC/IP addressing and IPv6 Neighbor Discovery. The active `address-resolution` lesson now has 11 questions.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| MAC and IP | IPv4-to-MAC resolution; local versus remote destinations; default-gateway MAC; ARP requests and replies; ARP cache; cache expiration; ARP broadcast/security issues | `arp`, `address-resolution`, `broadcast`, `unicast`, `arp-cache`, `default-gateway`, `remote-network-communication` | Broadly represented; includes broadcast requests, unicast replies, cache use and expiration, IOS/host inspection commands, and a new remote-destination scenario requiring the default-gateway MAC rather than the remote server's MAC. ARP spoofing and cache-poisoning defense remain a practice gap. |
+| Neighbor Discovery | ICMPv6 NS/NA address resolution; RS/RA router discovery; Redirect for next-hop selection | `ipv6-neighbor-discovery`, `icmpv6`, `neighbor-solicitation`, `neighbor-advertisement`, `router-solicitation`, `router-advertisement`, `icmpv6-redirect` | Improved; a new matching item distinguishes all five message roles. A deeper DAD and solicited-node multicast scenario would strengthen practical understanding. |
+
+Three new AI-generated questions add remote-network gateway resolution, full ICMPv6 ND message-role matching, and ARP cache-expiration behavior. They are derived from recovered Module 9 notes and existing source references, not presented as verbatim source questions. The source includes topology exhibits for ARP requests and remote destinations; those diagrams still need direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
