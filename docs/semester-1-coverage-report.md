@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 266
+- **Questions:** 274
 - **Lessons represented:** 22
-- **Distinct concept tags:** 423
+- **Distinct concept tags:** 434
 
 ## Lesson coverage
 
@@ -25,7 +25,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
-| number-systems | 8 | 10 | fill: 5, single: 3 | 1–4 |
+| number-systems | 16 | 21 | fill: 9, matching: 1, scenario: 1, single: 5 | 1–4 |
 | physical-layer | 20 | 41 | matching: 6, scenario: 8, single: 6 | 1–4 |
 | protocols-and-models | 18 | 36 | matching: 3, multiple: 2, ordering: 3, scenario: 3, single: 7 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
@@ -419,16 +419,27 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### number-systems
 
+- `base-10`
+- `base-16`
+- `base-2`
 - `binary`
 - `binary-positional-notation`
 - `binary-to-decimal`
 - `binary-to-hexadecimal`
 - `decimal-to-binary`
+- `decimal-to-hexadecimal`
+- `dotted-decimal-notation`
 - `hexadecimal`
+- `hexadecimal-conversion`
+- `hexadecimal-to-binary`
 - `hexadecimal-to-decimal`
+- `hextet`
 - `ipv4-addressing`
 - `ipv6-address-structure`
 - `number-systems`
+- `octet`
+- `positional-notation`
+- `radix`
 
 ### physical-layer
 
@@ -631,12 +642,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `authorization` | 1 | network-security |
 | `auto-mdix` | 1 | ethernet-switching |
 | `bandwidth` | 2 | physical-layer, reliable-networks |
+| `base-10` | 1 | number-systems |
+| `base-16` | 1 | number-systems |
+| `base-2` | 1 | number-systems |
 | `best-effort` | 1 | network-layer |
 | `bidirectional-connectivity` | 1 | network-layer |
 | `binary` | 1 | number-systems |
-| `binary-positional-notation` | 1 | number-systems |
-| `binary-to-decimal` | 3 | number-systems |
-| `binary-to-hexadecimal` | 1 | number-systems |
+| `binary-positional-notation` | 3 | number-systems |
+| `binary-to-decimal` | 4 | number-systems |
+| `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 1 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
 | `broadcast` | 3 | address-resolution, ethernet-switching, protocols-and-models |
@@ -680,6 +694,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `data-link-topologies` | 1 | data-link-layer |
 | `decapsulation` | 1 | protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
+| `decimal-to-hexadecimal` | 1 | number-systems |
 | `default-gateway` | 4 | basic-device-configuration, network-layer, protocols-and-models, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
 | `defense-in-depth` | 2 | network-security |
@@ -691,6 +706,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dns-client-configuration` | 1 | basic-device-configuration |
 | `dns-resource-records` | 1 | application-layer |
 | `dns-troubleshooting` | 1 | small-network |
+| `dotted-decimal-notation` | 1 | number-systems |
 | `dsl` | 1 | internet-connections |
 | `dual-stack` | 1 | ipv6-addressing |
 | `duplex` | 1 | ethernet-switching |
@@ -737,8 +753,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `global-configuration` | 1 | basic-device-configuration |
 | `global-unicast-address` | 2 | ipv6-addressing |
 | `half-duplex` | 1 | physical-layer |
-| `hexadecimal` | 2 | number-systems |
-| `hexadecimal-to-decimal` | 2 | number-systems |
+| `hexadecimal` | 3 | number-systems |
+| `hexadecimal-conversion` | 3 | number-systems |
+| `hexadecimal-to-binary` | 1 | number-systems |
+| `hexadecimal-to-decimal` | 3 | number-systems |
+| `hextet` | 2 | number-systems |
 | `hextets` | 2 | ipv6-addressing |
 | `hierarchical-topology` | 1 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
@@ -780,7 +799,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ip-characteristics` | 1 | network-layer |
 | `ip-default-gateway` | 1 | router-configuration |
 | `ipv4-address-configuration` | 1 | basic-device-configuration |
-| `ipv4-addressing` | 3 | basic-device-configuration, ipv4-addressing, number-systems |
+| `ipv4-addressing` | 4 | basic-device-configuration, ipv4-addressing, number-systems |
 | `ipv4-differentiated-services` | 1 | network-layer |
 | `ipv4-fragmentation-fields` | 1 | network-layer |
 | `ipv4-header-checksum` | 2 | network-layer |
@@ -800,7 +819,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-address-configuration` | 2 | basic-device-configuration, ipv6-addressing |
 | `ipv6-address-representation` | 2 | ipv6-addressing |
 | `ipv6-address-resolution` | 1 | icmp |
-| `ipv6-address-structure` | 2 | ipv6-addressing, number-systems |
+| `ipv6-address-structure` | 4 | ipv6-addressing, number-systems |
 | `ipv6-address-types` | 4 | ipv6-addressing |
 | `ipv6-addressing` | 2 | ipv6-addressing |
 | `ipv6-extension-headers` | 1 | network-layer |
@@ -881,8 +900,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `no-shutdown` | 4 | basic-device-configuration, ipv6-addressing, router-configuration |
 | `ns-record` | 1 | application-layer |
 | `nslookup` | 1 | small-network |
-| `number-systems` | 8 | number-systems |
+| `number-systems` | 9 | number-systems |
 | `nvram` | 3 | router-configuration |
+| `octet` | 2 | number-systems |
 | `online-collaboration` | 1 | network-trends |
 | `open-standards` | 1 | protocols-and-models |
 | `osi-model` | 7 | application-layer, protocols-and-models |
@@ -907,6 +927,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `point-to-point-topology` | 1 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-numbers` | 7 | application-layer, protocols-and-models, transport-layer |
+| `positional-notation` | 1 | number-systems |
 | `powerline-networking` | 4 | network-trends |
 | `prefix-length` | 12 | ipv4-addressing |
 | `presentation-layer` | 1 | application-layer |
@@ -918,6 +939,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `quality-of-service` | 6 | network-trends, reliable-networks |
 | `radio-frequency` | 1 | physical-layer |
 | `radio-frequency-interference` | 1 | physical-layer |
+| `radix` | 1 | number-systems |
 | `ram` | 1 | router-configuration |
 | `real-time-applications` | 1 | transport-layer |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
@@ -1038,7 +1060,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 247. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 253. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1046,12 +1068,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|---|
-| fill | 30 |
-| matching | 28 |
+| fill | 34 |
+| matching | 29 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 67 |
-| single | 111 |
+| scenario | 68 |
+| single | 113 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1059,11 +1081,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 79 |
-| 3 | 105 |
+| 2 | 82 |
+| 3 | 110 |
 | 4 | 42 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is now maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. It is not yet a complete atomic-concept inventory, and Module 4 and Module 8 now have explicit first-pass topic-to-question mappings for the Physical Layer and IPv4/IPv6 packet-header objectives; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 4, 5, and 8 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
