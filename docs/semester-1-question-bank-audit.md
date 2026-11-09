@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 342 unique questions  
+**Current bank:** 345 unique questions  
 **Concept tags:** 563 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 318 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 321 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -212,4 +212,4 @@ Added two applied scenarios to the Small Network question bank, bringing it to 2
 - A controlled interface-counter diagnosis uses rising CRC/input errors, matching duplex settings, and no late collisions to distinguish physical-path faults from an assumed duplex mismatch.
 - A staged host-to-router diagnosis uses successful local reachability and an inspected routing table with no matching/default route to identify the missing remote route as the next issue to investigate.
 
-These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 342 questions: 24 source-origin and 318 AI-generated.
+These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 345 questions: 24 source-origin and 321 AI-generated. The IPv4 Addressing lesson now has 28 questions.
