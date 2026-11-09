@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 297
+- **Questions:** 300
 - **Lessons represented:** 22
-- **Distinct concept tags:** 484
+- **Distinct concept tags:** 489
 
 ## Lesson coverage
 
@@ -18,7 +18,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
 | ipv4-addressing | 20 | 12 | fill: 8, matching: 2, multiple: 1, scenario: 6, single: 3 | 2–5 |
-| ipv6-addressing | 16 | 36 | fill: 6, matching: 3, scenario: 3, single: 4 | 2–5 |
+| ipv6-addressing | 19 | 44 | fill: 6, matching: 4, scenario: 5, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
 | network-security | 8 | 13 | matching: 2, multiple: 1, scenario: 1, single: 4 | 1–4 |
@@ -270,7 +270,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### ipv6-addressing
 
 - `default-route`
+- `dhcpv6`
 - `dual-stack`
+- `duplicate-address-detection`
 - `eui-64`
 - `global-unicast-address`
 - `hextets`
@@ -286,6 +288,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ipv6-interface-id`
 - `ipv6-interface-verification`
 - `ipv6-multicast`
+- `ipv6-neighbor-discovery`
 - `ipv6-network-prefix`
 - `ipv6-prefix-length`
 - `ipv6-prefixes`
@@ -293,14 +296,19 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ipv6-router-solicitation`
 - `ipv6-routing`
 - `ipv6-static-route`
+- `ipv6-subnet-id`
+- `ipv6-subnetting`
 - `link-local-address`
 - `loopback-address`
 - `mac-addressing`
 - `multicast-address`
+- `neighbor-solicitation`
 - `next-hop`
 - `no-shutdown`
 - `show-ipv6-interface`
 - `slaac`
+- `stateful-dhcpv6`
+- `stateless-dhcpv6`
 - `translation`
 - `tunneling`
 - `zero-compression`
@@ -774,7 +782,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `device-management` | 1 | basic-device-configuration |
 | `device-resource-management` | 1 | small-network |
 | `dhcp` | 3 | application-layer, basic-device-configuration |
-| `dhcpv6` | 1 | basic-device-configuration |
+| `dhcpv6` | 2 | basic-device-configuration, ipv6-addressing |
 | `dns` | 5 | application-layer, network-types, transport-layer |
 | `dns-client-configuration` | 1 | basic-device-configuration |
 | `dns-resource-records` | 1 | application-layer |
@@ -785,6 +793,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `duplex` | 1 | ethernet-switching |
 | `duplex-communication` | 1 | data-link-layer |
 | `duplex-mismatch` | 1 | ethernet-switching |
+| `duplicate-address-detection` | 1 | ipv6-addressing |
 | `dynamic-routing` | 2 | network-layer |
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
@@ -859,7 +868,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `icmp-echo` | 1 | icmp |
 | `icmp-filtering` | 2 | icmp |
 | `icmp-time-exceeded` | 1 | icmp |
-| `icmpv6` | 5 | address-resolution, icmp, ipv6-addressing |
+| `icmpv6` | 6 | address-resolution, icmp, ipv6-addressing |
 | `icmpv6-redirect` | 1 | address-resolution |
 | `ietf` | 2 | network-types, protocols-and-models |
 | `imap` | 2 | application-layer |
@@ -904,7 +913,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-ttl` | 3 | icmp, network-layer |
 | `ipv4-version` | 1 | network-layer |
 | `ipv4-vs-ipv6-header` | 1 | network-layer |
-| `ipv6-address-configuration` | 2 | basic-device-configuration, ipv6-addressing |
+| `ipv6-address-configuration` | 4 | basic-device-configuration, ipv6-addressing |
 | `ipv6-address-representation` | 2 | ipv6-addressing |
 | `ipv6-address-resolution` | 1 | icmp |
 | `ipv6-address-structure` | 4 | ipv6-addressing, number-systems |
@@ -919,17 +928,19 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-interface-id` | 1 | ipv6-addressing |
 | `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
 | `ipv6-multicast` | 1 | ipv6-addressing |
-| `ipv6-neighbor-discovery` | 3 | address-resolution |
-| `ipv6-network-prefix` | 1 | ipv6-addressing |
+| `ipv6-neighbor-discovery` | 4 | address-resolution, ipv6-addressing |
+| `ipv6-network-prefix` | 2 | ipv6-addressing |
 | `ipv6-next-header` | 1 | network-layer |
 | `ipv6-payload-length` | 1 | network-layer |
-| `ipv6-prefix-length` | 1 | ipv6-addressing |
+| `ipv6-prefix-length` | 2 | ipv6-addressing |
 | `ipv6-prefixes` | 2 | ipv6-addressing |
-| `ipv6-router-advertisement` | 3 | ipv6-addressing |
+| `ipv6-router-advertisement` | 4 | ipv6-addressing |
 | `ipv6-router-solicitation` | 2 | ipv6-addressing |
 | `ipv6-routing` | 2 | ipv6-addressing |
 | `ipv6-source-destination` | 1 | network-layer |
 | `ipv6-static-route` | 1 | ipv6-addressing |
+| `ipv6-subnet-id` | 1 | ipv6-addressing |
+| `ipv6-subnetting` | 1 | ipv6-addressing |
 | `ipv6-traffic-class` | 1 | network-layer |
 | `ipv6-version` | 1 | network-layer |
 | `irtf` | 1 | protocols-and-models |
@@ -971,7 +982,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `name-resolution` | 2 | application-layer, small-network |
 | `neighbor-advertisement` | 2 | address-resolution, icmp |
 | `neighbor-discovery` | 1 | icmp |
-| `neighbor-solicitation` | 2 | address-resolution, icmp |
+| `neighbor-solicitation` | 3 | address-resolution, icmp, ipv6-addressing |
 | `network-access` | 1 | network-types |
 | `network-access-layer` | 1 | protocols-and-models |
 | `network-address` | 6 | ipv4-addressing |
@@ -1101,7 +1112,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `signal-integrity` | 2 | physical-layer |
 | `single-mode-fiber` | 3 | physical-layer |
 | `single-point-of-failure` | 2 | network-topologies |
-| `slaac` | 4 | basic-device-configuration, ipv6-addressing |
+| `slaac` | 5 | basic-device-configuration, ipv6-addressing |
 | `smtp` | 2 | application-layer |
 | `socket-pairs` | 1 | transport-layer |
 | `source-destination-addressing` | 1 | protocols-and-models |
@@ -1112,6 +1123,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `star-topology` | 2 | network-topologies |
 | `startup-config` | 2 | basic-device-configuration |
 | `startup-configuration` | 3 | router-configuration |
+| `stateful-dhcpv6` | 1 | ipv6-addressing |
+| `stateless-dhcpv6` | 1 | ipv6-addressing |
 | `static-route` | 1 | network-layer |
 | `static-routes` | 1 | network-layer |
 | `static-routing` | 10 | network-layer |
@@ -1177,7 +1190,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1186,10 +1199,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 39 |
+| matching | 40 |
 | multiple | 18 |
 | ordering | 12 |
-| scenario | 77 |
+| scenario | 79 |
 | single | 116 |
 | true-false | 1 |
 
@@ -1200,9 +1213,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 1 | 34 |
 | 2 | 85 |
 | 3 | 124 |
-| 4 | 48 |
+| 4 | 51 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3, 4, 5, 6, 7, 8, 9, 10, and 11 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 12 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
