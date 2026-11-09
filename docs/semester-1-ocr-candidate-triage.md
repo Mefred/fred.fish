@@ -24,15 +24,15 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Candidate asset records promoted after visual review | 16 |
+| Visually verified image-question associations | 27 |
 | Candidate asset records visually reviewed as not questions | 4 |
-| Candidate asset records still requiring visual answer verification | 772 |
+| Unique unresolved candidate images remaining | 761 |
 
 The 792 records collapse to 474 unique OCR-text groups after Unicode normalization, lowercasing, punctuation removal, and whitespace normalization. Duplicate asset records remain linked to their canonical image and are not counted as independent question ideas.
 
 ## Newly visually verified source-question associations
 
-Six additional image candidates were inspected. Two were linked to existing source-origin questions to avoid duplicate prompts; four distinct prompts were added as source-origin questions.
+Eleven additional unique image candidates were inspected. Four were linked to existing source-origin questions to avoid duplicate prompts; six distinct prompts were added as source-origin questions, with the connector question supported by two separate image assets.
 
 | Image reference | Active question ID | Visual finding |
 |---|---|---|
@@ -42,6 +42,16 @@ Six additional image candidates were inspected. Two were linked to existing sour
 | IMG-0292 | `s3-open-standards-source-001` | Marked answer: cross-OS interoperability |
 | IMG-1315 | `s14-transport-multiplexing-source-001` | Marked answer: transport-layer application multiplexing |
 | IMG-1756 | `s11-subnet-mask-40-hosts-source-001` | Marked answer: 255.255.255.192 (/26) |
+| IMG-0270 | `s3-source-mac-001` | Circled answer: Data Link layer |
+| IMG-0282 | `s3-destination-mac-layer-002` | Circled answer: Data Link layer |
+| IMG-0287 | `s3-destination-port-001` | Circled answer: Transport layer |
+| IMG-0322 | `s3-source-port-layer-002` | Circled answer: Transport layer |
+| IMG-0816 | `s9-arp-cache-aging-source-001` | Explanatory slide confirms ARP cache aging timer and manual removal |
+| IMG-0348 | `s4-utp-identification-source-001` | Diagram shows four unshielded twisted copper pairs |
+| IMG-1725, IMG-1872 | `s4-rj45-connector-source-001` | Connector comparison identifies RJ-45/8P8C for twisted-pair Ethernet |
+| IMG-0306 | `s3-destination-ip-layer-source-001` | Circled answer: Network layer |
+| IMG-0314 | `s3-source-ip-layer-source-001` | Circled answer: Network layer |
+| IMG-0279 | `s3-application-data-layer-source-001` | Circled answer: Application layer |
 
 The original OCR export's promotion status has not been rewritten in the Library ZIP; the current source-question associations are maintained in `src/data/learning/semester-1-seed.ts` and the question-bank audit.
 
@@ -88,5 +98,5 @@ These eight normalized groups had a best token-overlap score of 0.20 or lower. T
 
 - Six new image candidates have been visually reviewed and associated with active source-origin questions.
 - The original export's ten previously promoted candidate records remain; four false-positive candidates remain excluded.
-- The remaining 772 candidate asset records are not approved for source-question promotion.
+- The remaining 761 unique unresolved candidate images are not approved for source-question promotion. The original OCR export status labels remain unchanged in the Library ZIP; this triage document and the active question bank record the additional reviews.
 - The next review stage should prioritize diagram-dependent candidates and answer marks, then map visually relevant non-question images to lesson figures.
