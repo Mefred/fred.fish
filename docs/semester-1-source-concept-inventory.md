@@ -17,7 +17,7 @@ This inventory is deliberately kept separate from the active question bank. A so
 | 5. Number Systems | Calculate numbers between decimal, binary, and hexadecimal systems. | Binary Number System; Hexadecimal Number System | `number-systems` | Objective and topic list transcribed (source lines 4833–4848). |
 | 6. Data Link Layer | Explain how media access control in the data link layer supports communication across networks. | Purpose of the Data Link Layer; Topologies; Data Link Frame | `data-link-layer` | Objective and topic list transcribed (source lines 5344–5360). |
 | 7. Ethernet Switching | Explain how Ethernet works in a switched network. | Ethernet Frame; Ethernet MAC Address; The MAC Address Table; Switch Speeds and Forwarding Methods | `ethernet-switching` | Objective and topic list transcribed (source lines 5953–5965). |
-| 8. Network Layer | Source module objective/topic block not located in the recovered raw-text search used for this pass. | Do not infer a canonical topic list from the lesson title or current question tags. Locate the original module pages and verify the objective block before marking this inventory complete. | `network-layer` | **Pending source verification.** |
+| 8. Network Layer | Explain how the network layer uses IP protocols for reliable communications. | Network Layer Characteristics; IPv4 Packet; IPv6 Packet; How a Host Routes; Router Routing Tables | `network-layer` | Objective and topic list recovered from the explicit “Module 8: Topics” block (source lines approximately 20,700 and surrounding Module 8 content). The OCR contains a second repeated copy; reconcile source page provenance in the visual pass. |
 | 9. Address Resolution | Explain how ARP and ND enable communication on a network. | MAC and IP; Neighbor Discovery | `address-resolution` | Objective and topic list transcribed (source lines 8545–8558). |
 | 10. Basic Router Configuration | Implement initial settings on a router and end devices. | Configure Initial Router Settings; Configure Interfaces; Configure the Default Gateway | `router-configuration` | Objective and topic list transcribed (source lines 9391–9406). |
 | 11. IPv4 Addressing | Calculate an IPv4 subnetting scheme to efficiently segment your network. | IPv4 Address Structure; IPv4 Unicast, Broadcast, and Multicast; Types of IPv4 Addresses; Network Segmentation; Subnet an IPv4 Network | `ipv4-addressing` | Objective and topic list transcribed (source lines 11828–11849). |
@@ -39,7 +39,7 @@ This inventory is deliberately kept separate from the active question bank. A so
 
 ## Next review work
 
-- Recover and verify the Network Layer module objective/topic block (Module 8).
+- Visually verify the Network Layer objective/topic block and attach exact source-page references; the recovered raw text includes duplicated/repeated Module 8 content.
 - Complete topic-objective transcription where an excerpt above is explicitly marked partial.
 - Split broad source topics into atomic assessable concepts only when the source material supports that split.
 - Add an explicit source-topic-to-question-concept mapping and use it to generate a real source coverage matrix.
