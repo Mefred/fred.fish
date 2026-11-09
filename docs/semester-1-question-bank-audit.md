@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 325 unique questions  
-**Concept tags:** 548 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 305 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 328 unique questions  
+**Concept tags:** 550 unique concept identifiers  
+**Source provenance:** 22 source questions with prompt/answer support from recovered text or visually checked source screenshots; 306 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -29,21 +29,21 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 119 |
+| Single choice | 122 |
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 34 |
 | Matching | 55 |
 | Ordering | 13 |
 | Scenario / troubleshooting | 85 |
-| **Total** | **325** |
+| **Total** | **328** |
 
 ## Difficulty coverage
 
 | Difficulty | Questions |
 |---|---:|
 | 1 — Introductory | 34 |
-| 2 — Foundational | 85 |
+| 2 — Foundational | 88 |
 | 3 — Applied | 135 |
 | 4 — Advanced | 64 |
 | 5 — Challenging | 7 |
@@ -75,7 +75,7 @@ Completed a first-pass topic-to-question mapping for all seven Module 3 (Protoco
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, represented concept IDs, and per-concept question exposure is maintained in [the coverage report](./semester-1-coverage-report.md). The first-pass [source-concept inventory](./semester-1-source-concept-inventory.md) now transcribes the recovered module/topic objectives and records source-review status. It is not yet a complete atomic-concept inventory or a topic-to-question-tag mapping, so it must not be used to claim definitive zero-coverage gaps. Single-question concept tags remain under-practiced candidates, not proof of missing source concepts.
 
-The 325-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 328-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank now has 13 questions. Four new AI-generated items add frame-field matching, WAN topology matching, controlled-access application, and half/full-duplex matching. Existing questions cover LLC/MAC roles, CSMA/CD versus CSMA/CA, point-to-point versus multi-access links, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
@@ -174,3 +174,8 @@ Added three additional AI-generated questions for firewall filtering modes, phys
 ## Module 17 host/IOS command expansion
 
 Added one AI-generated matching question for seven IOS show commands and their diagnostic purposes. The small-network lesson now has 10 questions. Host-side command interpretation, device selection, extended ping/traceroute, and multi-symptom troubleshooting remain gaps.
+
+
+## Source question indexing
+
+Added `docs/semester-1-source-question-index.md` to preserve selected source-question identifiers, source line locations, extracted answer text, and answer-quality corrections. Module 11 now includes source-origin broadcast and multicast questions (Q194 and Q201) plus an AI-generated unicast item that explicitly corrects the conflicting extracted answer associated with Q189. Q190 was not promoted because its extracted multicast range is incorrect.
