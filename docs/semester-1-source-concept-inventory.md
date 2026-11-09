@@ -315,7 +315,7 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 1. **Source topic present** means the topic heading/objective was recovered from the lecture-note source. It does not mean every detail, diagram, lab, or embedded question under that topic has been reviewed.
 2. **Question-tag match** must be established explicitly. Similar wording is not enough; maintain a mapping from each source topic to the question bank's stable concept identifiers.
 3. **Question coverage** must count distinct active question IDs, not the number of tags or the number of times a tag appears in a single question.
-4. **One-question coverage** is a fragile signal. It should be reported as low practice depth, not as mastery or adequate coverage.
+4. **One-question coverage** is a fragile signal. The current bank has eliminated singleton tags by bringing every existing concept identifier to at least two questions; this is an exposure floor, not mastery or proof of source completeness.
 5. **Pending source verification** is not a zero-question source gap. Module 8 remains pending until its original pages/objectives are located and reviewed.
 6. OCR text can locate candidate material, but diagrams, screenshots, tables, and question exhibits require visual inspection before their details are treated as verified.
 
@@ -326,3 +326,8 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 - Split broad source topics into atomic assessable concepts only when the source material supports that split.
 - Add an explicit source-topic-to-question-concept mapping and use it to generate a real source coverage matrix.
 - Visually inspect source pages for topics whose instruction depends on diagrams, screenshots, or Packet Tracer exhibits.
+
+
+## Latest question-depth completion
+
+The active bank now contains 566 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
