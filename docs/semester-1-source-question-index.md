@@ -88,3 +88,14 @@ The following additional images were checked and linked to existing source-origi
 | IMG-0615 | `s8-ipv4-destination-address-field-source-001` | Destination IPv4 Address field contains unicast, multicast, or broadcast destination |
 | IMG-0640 | `s8-ipv4-version-field-source-001` | Version field value 0100 identifies IPv4 |
 | IMG-0647 | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
+
+
+## AI-generated questions informed by reviewed image scenarios
+
+These questions use image references for scenario/diagram context, but their answer keys were derived from networking knowledge rather than a marked answer key. Their provenance therefore remains `ai-generated`.
+
+| Image reference | Active question ID | Applied concept |
+|---|---|---|
+| IMG-1576, IMG-1787 | `s4-utp-termination-diagnosis-applied-001` | Excessive untwisted pair length at cable termination |
+| IMG-1714 | `s1-network-characteristics-failover-applied-001` | Security, QoS, and fault tolerance during ISP failover |
+| IMG-1088 | `s11-subnet-host-membership-matching-applied-001` | /27 subnet-to-host membership matching |
