@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 345 unique questions  
-**Concept tags:** 564 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 321 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 346 unique questions  
+**Concept tags:** 565 unique concept identifiers  
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 322 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -35,8 +35,8 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 | Fill in the blank | 34 |
 | Matching | 57 |
 | Ordering | 14 |
-| Scenario / troubleshooting | 97 |
-| **Total** | **345** |
+| Scenario / troubleshooting | 98 |
+| **Total** | **346** |
 
 ## Difficulty coverage
 
@@ -44,9 +44,9 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 90 |
-| 3 — Applied | 135 |
+| 3 — Applied | 140 |
 | 4 — Advanced | 72 |
-| 5 — Challenging | 9 |
+| 5 — Challenging | 10 |
 
 ## Source provenance audit
 
@@ -212,4 +212,4 @@ Added two applied scenarios to the Small Network question bank, bringing it to 2
 - A controlled interface-counter diagnosis uses rising CRC/input errors, matching duplex settings, and no late collisions to distinguish physical-path faults from an assumed duplex mismatch.
 - A staged host-to-router diagnosis uses successful local reachability and an inspected routing table with no matching/default route to identify the missing remote route as the next issue to investigate.
 
-These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 345 questions: 24 source-origin and 321 AI-generated. The IPv4 Addressing lesson now has 28 questions.
+These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 346 questions: 24 source-origin and 322 AI-generated. The IPv4 Addressing lesson has 28 questions and Small Network has 25. The newest Small Network addition is a staged DNS fault-isolation scenario using ipconfig /all, ping, nslookup, and ipconfig /displaydns evidence to distinguish DNS-service failure from routing, link, and endpoint-cache issues.
