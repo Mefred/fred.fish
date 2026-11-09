@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 371
+- **Questions:** 376
 - **Lessons represented:** 22
 - **Distinct concept tags:** 605
 
@@ -13,7 +13,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | address-resolution | 11 | 20 | fill: 1, matching: 2, scenario: 3, single: 5 | 1–4 |
 | application-layer | 14 | 35 | matching: 5, multiple: 1, ordering: 1, scenario: 3, single: 4 | 1–4 |
 | basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
-| data-link-layer | 13 | 36 | matching: 4, multiple: 2, scenario: 4, single: 3 | 2–4 |
+| data-link-layer | 18 | 39 | matching: 4, multiple: 2, ordering: 1, scenario: 6, single: 5 | 2–4 |
 | ethernet-switching | 23 | 57 | fill: 1, matching: 2, scenario: 10, single: 10 | 1–5 |
 | icmp | 13 | 26 | matching: 1, scenario: 3, single: 9 | 1–4 |
 | internet-connections | 8 | 16 | scenario: 2, single: 6 | 1–3 |
@@ -151,6 +151,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `data-link-frame`
 - `data-link-layer`
 - `data-link-topologies`
+- `decapsulation`
+- `duplex`
 - `duplex-communication`
 - `encapsulation`
 - `error-detection`
@@ -176,6 +178,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `network-redundancy`
 - `point-to-point-topology`
 - `routing`
+- `source-destination-addressing`
 - `token-passing`
 - `wan-topologies`
 - `wireless-media-access`
@@ -953,9 +956,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `cut-through-switching` | 2 | ethernet-switching |
 | `data-centers` | 2 | network-trends |
 | `data-link-frame` | 1 | data-link-layer |
-| `data-link-layer` | 9 | data-link-layer, protocols-and-models |
+| `data-link-layer` | 14 | data-link-layer, protocols-and-models |
 | `data-link-topologies` | 1 | data-link-layer |
-| `decapsulation` | 2 | protocols-and-models |
+| `decapsulation` | 3 | data-link-layer, protocols-and-models |
 | `decimal-to-binary` | 1 | number-systems |
 | `decimal-to-hexadecimal` | 1 | number-systems |
 | `default-gateway` | 11 | address-resolution, basic-device-configuration, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
@@ -980,7 +983,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dotted-decimal-notation` | 1 | number-systems |
 | `dsl` | 1 | internet-connections |
 | `dual-stack` | 1 | ipv6-addressing |
-| `duplex` | 1 | ethernet-switching |
+| `duplex` | 2 | data-link-layer, ethernet-switching |
 | `duplex-communication` | 1 | data-link-layer |
 | `duplex-mismatch` | 2 | ethernet-switching, small-network |
 | `duplicate-address-detection` | 1 | ipv6-addressing |
@@ -989,16 +992,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `enable-secret` | 1 | basic-device-configuration |
-| `encapsulation` | 10 | data-link-layer, protocols-and-models |
+| `encapsulation` | 11 | data-link-layer, protocols-and-models |
 | `end-devices` | 1 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
 | `environmental-threats` | 1 | network-security |
-| `error-detection` | 3 | data-link-layer |
+| `error-detection` | 4 | data-link-layer |
 | `etherchannel` | 1 | ethernet-switching |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 1 | address-resolution |
 | `ethernet-cabling` | 1 | ethernet-switching |
-| `ethernet-frame` | 7 | data-link-layer, ethernet-switching |
+| `ethernet-frame` | 11 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 1 | ethernet-switching |
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 1 | network-layer |
@@ -1014,7 +1017,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fast-forward-switching` | 1 | ethernet-switching |
 | `fault-isolation` | 3 | network-topologies, small-network |
 | `fault-tolerance` | 7 | network-topologies, reliable-networks, small-network |
-| `fcs` | 2 | data-link-layer |
+| `fcs` | 4 | data-link-layer |
 | `fiber-core` | 1 | physical-layer |
 | `fiber-dispersion` | 1 | physical-layer |
 | `fiber-internet` | 1 | internet-connections |
@@ -1036,12 +1039,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `frame-structure` | 1 | data-link-layer |
 | `frame-type-field` | 1 | data-link-layer |
 | `ftp` | 1 | application-layer |
-| `full-duplex` | 3 | data-link-layer, ethernet-switching |
+| `full-duplex` | 4 | data-link-layer, ethernet-switching |
 | `full-mesh` | 1 | network-topologies |
 | `global-configuration` | 1 | basic-device-configuration |
 | `global-unicast-address` | 2 | ipv6-addressing |
 | `goodput` | 1 | physical-layer |
-| `half-duplex` | 2 | data-link-layer, physical-layer |
+| `half-duplex` | 3 | data-link-layer, physical-layer |
 | `hardware-threats` | 1 | network-security |
 | `hexadecimal` | 4 | ethernet-switching, number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
@@ -1170,7 +1173,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `leased-line` | 1 | internet-connections |
 | `line-protocol` | 2 | basic-device-configuration, router-configuration |
 | `link-local-address` | 5 | ipv4-addressing, ipv6-addressing, small-network |
-| `llc-sublayer` | 2 | data-link-layer, protocols-and-models |
+| `llc-sublayer` | 3 | data-link-layer, protocols-and-models |
 | `local-authentication` | 2 | network-security, router-configuration |
 | `local-route` | 1 | network-layer |
 | `logical-topology` | 2 | network-topologies |
@@ -1178,7 +1181,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 4 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 5 | ethernet-switching |
-| `mac-addressing` | 15 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
+| `mac-addressing` | 17 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
 | `mac-flapping` | 1 | ethernet-switching |
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
@@ -1375,7 +1378,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `smb` | 1 | application-layer |
 | `smtp` | 2 | application-layer |
 | `socket-pairs` | 1 | transport-layer |
-| `source-destination-addressing` | 1 | protocols-and-models |
+| `source-destination-addressing` | 2 | data-link-layer, protocols-and-models |
 | `source-ip-selection` | 3 | icmp, small-network |
 | `spanning-tree` | 1 | ethernet-switching |
 | `ssh` | 5 | network-security, router-configuration, transport-layer |
@@ -1465,7 +1468,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `wireless-installations` | 1 | physical-layer |
 | `wireless-interference` | 1 | physical-layer |
 | `wireless-media` | 3 | physical-layer |
-| `wireless-media-access` | 1 | data-link-layer |
+| `wireless-media-access` | 2 | data-link-layer |
 | `wireless-nic` | 1 | physical-layer |
 | `wireless-security` | 1 | physical-layer |
 | `wireless-standards` | 1 | physical-layer |
@@ -1476,7 +1479,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 343. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 340. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1487,9 +1490,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | fill | 35 |
 | matching | 57 |
 | multiple | 19 |
-| ordering | 14 |
-| scenario | 120 |
-| single | 125 |
+| ordering | 15 |
+| scenario | 122 |
+| single | 127 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1498,8 +1501,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 90 |
-| 3 | 142 |
-| 4 | 84 |
+| 3 | 145 |
+| 4 | 86 |
 | 5 | 21 |
 
 ## Interpretation and limits
