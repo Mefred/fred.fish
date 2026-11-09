@@ -196,7 +196,7 @@ for (const slug of migratedLessons) {
 
   const sourceWithoutCommandBlocks = legacyHtml.replace(/<div class="command-block">[\s\S]*?<\/div>/g, "");
   const sourceCodeBlockCount = [...sourceWithoutCommandBlocks.matchAll(/<pre>/g)].length;
-  const builtCodeBlockCount = [...html.matchAll(/<pre\\b(?=[^>]*\\bdata-lesson-code-block\\b)[^>]*>/g)].length;
+  const builtCodeBlockCount = [...html.matchAll(/<pre\b(?=[^>]*\bdata-lesson-code-block\b)[^>]*>/g)].length;
   if (builtCodeBlockCount !== sourceCodeBlockCount) {
     fail(slug, `generated route contains ${builtCodeBlockCount} component code blocks; legacy source contains ${sourceCodeBlockCount} standalone code blocks`);
   }
