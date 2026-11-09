@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 249 unique questions  
-**Concept tags:** 380 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 229 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 254 unique questions  
+**Concept tags:** 398 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 234 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -21,6 +21,8 @@ The latest twelve source-grounded batches added 120 distinct questions, followed
 
 A further five applied Network Layer scenarios exercise two-router static-route configuration, missing return paths, route-table interpretation, longest-prefix match, and configuration persistence after reload.
 
+Added five AI-generated packet-header practice questions for Module 8. Two assess IPv4 field roles and packet inspection (including Protocol, TTL, and Header Checksum); three assess IPv6 field roles, Flow Label interpretation, and IPv4/IPv6 base-header differences. The additions use the recovered text block reference `block-0073`; they are not marked as verbatim source questions. The Network Layer lesson now has 28 questions and includes dedicated IPv4/IPv6 header concepts.
+
 ## Format coverage
 
 | Format | Questions |
@@ -29,10 +31,10 @@ A further five applied Network Layer scenarios exercise two-router static-route 
 | Multiple select | 18 |
 | True / false | 1 |
 | Fill in the blank | 30 |
-| Matching | 20 |
+| Matching | 22 |
 | Ordering | 11 |
-| Scenario / troubleshooting | 59 |
-| **Total** | **249** |
+| Scenario / troubleshooting | 62 |
+| **Total** | **254** |
 
 ## Difficulty coverage
 
@@ -61,7 +63,7 @@ The first automated promotion map contained several incorrect image-to-question 
 - OCR question candidates are not promoted into the active bank merely because OCR found a question mark. They remain candidates until their wording, visual dependencies, and answer key have been reviewed.
 - Every active question is mapped to one or more concepts. The adaptive engine updates each mapped concept from the response.
 
-The Module 8 source inventory now decomposes the IPv4 and IPv6 packet-header objectives into field-level concepts (Version, Differentiated Services / Traffic Class, Header Checksum, TTL / Hop Limit, Protocol / Next Header, addresses, Flow Label, Payload Length, fragmentation fields, and the fixed IPv6 base header). These are documented as source-backed targets, not counted as active questions. The exact image-asset IDs for the packet-header diagrams have not yet been visually verified, so no new question has been given an unverified image reference. See the Module 8 packet-header concept decomposition in the source-concept inventory.
+The Module 8 source inventory decomposes the IPv4 and IPv6 packet-header objectives into field-level concepts and maps the first five corresponding practice questions to those targets. The new items are AI-generated from recovered source notes and cite `block-0073`; they are not counted as source-origin questions. Diagram-level visual verification remains outstanding. See the Module 8 packet-header concept decomposition in the source-concept inventory.
 
 ## Coverage and remaining work
 
