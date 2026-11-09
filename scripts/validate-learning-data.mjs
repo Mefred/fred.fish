@@ -8,7 +8,7 @@ const errors = [];
 const ids = new Set();
 const normalizedPrompts = new Map();
 const allowedTypes = new Set(["single","multiple","true-false","fill","matching","ordering","scenario"]);
-const strings = (fragment) => [...fragment.matchAll(/"([^"]+)"/g)].map((match) => match[1]);
+const strings = (fragment) => fragment ? [...fragment.matchAll(/"([^"]+)"/g)].map((match) => match[1]) : [];
 const fieldArray = (line, name, nextField) => {
   const pattern = nextField
     ? new RegExp(name + ":\\[(.*?)\\]," + nextField + ":")
