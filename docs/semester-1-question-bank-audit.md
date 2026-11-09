@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 329 unique questions  
-**Concept tags:** 550 unique concept identifiers  
-**Source provenance:** 23 source questions with prompt/answer support from recovered text or visually checked source screenshots; 306 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 335 unique questions  
+**Concept tags:** 558 unique concept identifiers  
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 311 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -184,3 +184,11 @@ Added `docs/semester-1-source-question-index.md` to preserve selected source-que
 ## Module 17 IPv6 interface verification
 
 Added one source-origin question mapped to Q357, which asks for the IOS command used to verify IPv6 interface addresses. The small-network lesson now contains 11 active questions.
+
+
+## Module 17 host, extended-command, and device-selection expansion
+
+Added six distinct questions to the small-network lesson, bringing it to 17 questions:
+- One source-origin question (Q352) tests IOS extended ping and selecting a source address.
+- Five AI-generated applied questions test Windows APIPA/DHCP diagnosis from ipconfig /all, host ARP-cache inspection with arp -a, IOS extended traceroute source selection, small-network device-selection criteria, and first-step isolation when the host's physical link is down.
+- The source notes also identify ipconfig /displaydns, ipconfig /release, ipconfig /renew, Linux/macOS host commands, network baselines, and trace output interpretation as further practice targets. These are not claimed complete by this batch.
