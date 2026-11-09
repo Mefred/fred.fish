@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 226 unique questions  
-**Concept tags:** 362 unique concept identifiers  
-**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 201 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 234 unique questions  
+**Concept tags:** 373 unique concept identifiers  
+**Source provenance:** 20 source questions with prompt/answer support from recovered text or visually checked source screenshots; 214 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -63,7 +63,7 @@ The first automated promotion map contained several incorrect image-to-question 
 
 A generated per-lesson breakdown of active question counts, distinct concept tags, format/difficulty distribution, and represented concept IDs is maintained in [the coverage report](./semester-1-coverage-report.md). The report is regenerated during the production build by `npm run report:learning`. It measures current question-tag coverage only; a true gap analysis still requires an authoritative lesson concept inventory.
 
-The 226-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
+The 234-question bank is an implementation-stage bank, not the final target. The source archive contains substantial diagram-dependent content and question-like screenshots that still need visual answer-key review. Continue expanding the bank only with distinct, concept-tagged items; do not treat raw OCR candidates as verified questions.
 
 Screenshot-derived additions now cover selected Basic Switch and End Device Configuration, Protocols and Models, Physical Layer, Data Link Layer, Ethernet Switching, Build a Small Network, Number Systems, ICMP, IPv6 Addressing, Application Layer, Transport Layer, router configuration, Address Resolution, IPv4 addressing, and Network Layer concepts. The Data Link Layer bank was expanded with six items covering MAC sublayer responsibilities, CSMA/CD versus CSMA/CA, point-to-point versus multi-access topologies, Ethernet frame fields, and FCS error handling. The Network Topologies lesson was expanded from two to seven questions covering star, full-mesh, bus, ring, and extended-star layouts, including redundancy and failure scenarios. Internet Connections and Address Resolution were each expanded from five to eight questions, adding cable/DSL/fiber access comparisons and ARP broadcast/reply/cache behavior. Physical Layer grew from six to eight questions with single-mode fiber and attenuation scenarios; ICMP grew from seven to nine with Destination Unreachable and ICMP filtering troubleshooting. Remaining work includes deeper route-configuration labs, practical subnetting variants, and comparison against an authoritative concept inventory for every lesson.
 
@@ -72,3 +72,6 @@ The IPv4 Addressing bank was expanded with five applied subnetting items: locati
 
 
 The Basic Device Configuration lesson now includes four additional applied troubleshooting scenarios: configuring a management SVI, setting a Layer 2 switch default gateway for remote management, interpreting an `up/down` interface state after enabling a port, and diagnosing an unsaved hostname change after reload. The bank now contains 17 questions for this lesson. These items are marked AI-generated and are intended to test command selection and interpretation of IOS operational state rather than rote command recall.
+
+
+The Network Layer bank now contains five additional applied route-configuration and verification scenarios. These cover verifying static routes with `show ip route`, fault-isolating an unresolved static-route next hop, configuring a branch default route, and interpreting the `S*` default-route entry in IOS routing-table output. All five are marked AI-generated and cite the relevant routing screenshots; they test configuration and operational interpretation rather than verbatim source recall.
