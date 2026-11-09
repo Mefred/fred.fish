@@ -110,6 +110,18 @@ The Module 5 objectives recovered from the lecture notes are mapped against the 
 The lesson now contains 16 active questions and 21 distinct concept tags. Eight new AI-generated questions add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, hextet identification/counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. They are derived from the recovered Module 5 notes, not verbatim source questions.
 
 
+## Module 6 first-pass topic-to-question mapping
+
+The recovered Module 6 source identifies three main areas: the purpose of the Data Link Layer, LAN/WAN topologies and media-access methods, and the structure and functions of the data-link frame. The active `data-link-layer` lesson now has 13 questions after this expansion.
+
+| Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
+|---|---|---|---|
+| Purpose of the Data Link Layer | NIC-to-NIC communication; preparation of network data for the physical network; LLC and MAC sublayers | `llc-sublayer`, `mac-sublayer`, `frame-encapsulation`, `media-access-control` | Represented through LLC/MAC role questions and practical re-encapsulation across router links. The broader NIC-to-NIC role could use another applied troubleshooting item. |
+| Topologies | Point-to-point, multi-access, point-to-multipoint, hub-and-spoke, mesh; contention-based and controlled access; half/full duplex; CSMA/CD and CSMA/CA | `point-to-point-topology`, `multiaccess-topology`, `wan-topologies`, `hub-and-spoke-topology`, `mesh-topology`, `contention-based-access`, `controlled-access`, `csma-cd`, `csma-ca`, `half-duplex`, `full-duplex` | Improved; matching now covers the three common physical WAN topologies and duplex modes, while scenarios distinguish deterministic controlled access from contention-based methods. |
+| Data Link Frame | Frame header, data and trailer; start/stop boundaries; source/destination MAC addressing; type, control, payload, error detection and FCS | `data-link-frame`, `frame-fields`, `frame-structure`, `mac-addressing`, `frame-type-field`, `frame-control-field`, `frame-payload`, `fcs`, `error-detection` | Improved; matching directly assesses six frame-field roles, alongside existing frame structure, MAC addressing, FCS purpose, and corrupted-frame handling. |
+
+Four new AI-generated questions add frame-field matching, WAN topology matching, controlled-access application, and duplex-mode matching. They are based on recovered Module 6 notes and existing Data Link Layer source references, not presented as verbatim source questions. Diagram-dependent topology and frame exhibits still require direct visual verification.
+
 ## Module 1 first-pass topic-to-question comparison
 
 The Module 1 objective list is now compared against the active question records for the seven lesson IDs associated with Networking Today. This mapping uses actual question IDs and concept tags from the seed bank. It distinguishes a topic that has some related questions from one that has been adequately taught and practiced.
