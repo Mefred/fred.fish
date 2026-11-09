@@ -5,7 +5,7 @@ const file = new URL("../src/data/learning/semester-1-seed.ts", import.meta.url)
 const source = readFileSync(file, "utf8");
 const sourceIndexFile = new URL("../docs/semester-1-source-question-index.md", import.meta.url);
 const sourceIndex = readFileSync(sourceIndexFile, "utf8");
-const indexedQuestionIds = new Set([...sourceIndex.matchAll(/^## (Q\\d{3}) —/gm)].map((match) => match[1]));
+const indexedQuestionIds = new Set([...sourceIndex.matchAll(/^## (Q\d{3}) —/gm)].map((match) => match[1]));
 const lines = source.split(/\r?\n/).filter((line) => line.trim().startsWith("{ id:"));
 const errors = [];
 const ids = new Set();
