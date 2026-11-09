@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 340 unique questions  
+**Current bank:** 342 unique questions  
 **Concept tags:** 563 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 316 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 318 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -204,3 +204,12 @@ Added five applied questions to the small-network lesson, bringing it to 22 ques
 - Diagnosing a duplex mismatch from interface state and error/collision counters.
 
 These additions address several previously listed gaps. Remaining practice should include reading realistic interface-counter snapshots, distinguishing DNS cache from authoritative/query results, and longer multi-stage fault-isolation cases.
+
+
+## Module 17 fault-isolation expansion
+
+Added two applied scenarios to the Small Network question bank, bringing it to 24 questions:
+- A controlled interface-counter diagnosis uses rising CRC/input errors, matching duplex settings, and no late collisions to distinguish physical-path faults from an assumed duplex mismatch.
+- A staged host-to-router diagnosis uses successful local reachability and an inspected routing table with no matching/default route to identify the missing remote route as the next issue to investigate.
+
+These questions use the recovered small-network source block as conceptual grounding, but are AI-generated practice rather than verbatim source questions. The active bank now contains 342 questions: 24 source-origin and 318 AI-generated.
