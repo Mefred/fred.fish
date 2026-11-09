@@ -1,8 +1,12 @@
 # Semester 1 question bank audit
 
-**Current bank:** 350 unique questions  
+**Current bank:** 355 unique questions  
 **Concept tags:** 578 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 326 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 331 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+
+## Latest applied troubleshooting additions
+
+Five additional scenario questions deepen routing and router configuration practice: multi-route longest-prefix selection, return-path verification, Ethernet interface `up/down` diagnosis, inconsistent subnet masks/default-gateway reachability, and static-route next-hop selection. The active bank now contains 355 questions (24 source-origin and 331 AI-generated), with 578 concept tags.
 
 ## Recent expansion
 
