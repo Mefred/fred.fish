@@ -2,7 +2,7 @@
 
 **Current bank:** 393 unique questions across 22 lesson IDs and 605 distinct concept tags
 **Concept tags:** 605 unique concept identifiers  
-**Source provenance:** 24 source questions; 363 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions; 369 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Latest applied troubleshooting additions
 
@@ -39,15 +39,15 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 
 | Format | Questions |
 |---|---:|
-| Single choice | 125 |
+| Single choice | 128 |
 | Multiple select | 19 |
 | True / false | 1 |
-| Fill in the blank | 35 |
+| Fill in the blank | 36 |
 | Matching | 57 |
-| Ordering | 14 |
-| Scenario / troubleshooting | 120 |
+| Ordering | 15 |
+| Scenario / troubleshooting | 137 |
 
-| **Total** | **371** |
+| **Total** | **393** |
 
 ## Difficulty coverage
 
@@ -55,9 +55,9 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 |---|---:|
 | 1 — Introductory | 34 |
 | 2 — Foundational | 90 |
-| 3 — Applied | 142 |
-| 4 — Advanced | 84 |
-| 5 — Challenging | 21 |
+| 3 — Applied | 150 |
+| 4 — Advanced | 97 |
+| 5 — Challenging | 22 |
 
 ## Source provenance audit
 
