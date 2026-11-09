@@ -799,6 +799,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `dhcp-troubleshooting`
 - `dns-troubleshooting`
 - `duplex-mismatch`
+- `employee-network-utilization`
 - `ethernet-troubleshooting`
 - `extended-ping`
 - `extended-traceroute`
@@ -867,7 +868,6 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `vlan-troubleshooting`
 - `vlan-trunking`
 - `windows-network-commands`
-- `employee-network-utilization`
 
 ### transport-layer
 
@@ -1029,6 +1029,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `electrical-threats` | 2 | network-security |
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
+| `employee-network-utilization` | 2 | small-network |
 | `enable-secret` | 2 | basic-device-configuration |
 | `encapsulation` | 16 | data-link-layer, network-layer, protocols-and-models |
 | `end-devices` | 2 | network-components |
@@ -1263,7 +1264,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-intermediary-devices` | 4 | network-components, small-network |
 | `network-layer` | 15 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
-| `network-monitoring` | 3 | small-network |
+| `network-monitoring` | 5 | small-network |
 | `network-operations` | 2 | small-network |
 | `network-performance` | 2 | physical-layer, transport-layer |
 | `network-redundancy` | 2 | data-link-layer |
@@ -1464,7 +1465,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `token-passing` | 2 | data-link-layer |
 | `trace-interpretation` | 2 | small-network |
 | `traceroute` | 10 | icmp, network-layer, small-network |
-| `traffic-analysis` | 3 | small-network |
+| `traffic-analysis` | 5 | small-network |
 | `traffic-prioritization` | 5 | reliable-networks, small-network |
 | `translation` | 2 | ipv6-addressing |
 | `transport-layer` | 15 | protocols-and-models, transport-layer |
@@ -1526,13 +1527,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| Fill | 52 |
-| Matching | 99 |
-| Multiple | 35 |
-| Ordering | 20 |
-| Scenario | 167 |
-| Single | 233 |
-| True / false | 1 |
+| fill | 52 |
+| matching | 99 |
+| multiple | 35 |
+| ordering | 20 |
+| scenario | 167 |
+| single | 233 |
+| true-false | 1 |
 
 ### Difficulty
 
