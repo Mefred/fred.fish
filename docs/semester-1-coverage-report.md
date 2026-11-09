@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 226
+- **Questions:** 230
 - **Lessons represented:** 22
-- **Distinct concept tags:** 362
+- **Distinct concept tags:** 368
 
 ## Lesson coverage
 
@@ -12,7 +12,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|---:|---|---|
 | address-resolution | 8 | 12 | fill: 1, matching: 1, scenario: 1, single: 5 | 1–3 |
 | application-layer | 10 | 26 | matching: 2, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–4 |
-| basic-device-configuration | 13 | 33 | fill: 1, multiple: 1, ordering: 2, scenario: 2, single: 7 | 1–5 |
+| basic-device-configuration | 17 | 42 | fill: 1, multiple: 1, ordering: 2, scenario: 6, single: 7 | 1–5 |
 | data-link-layer | 9 | 21 | matching: 1, multiple: 2, scenario: 3, single: 3 | 2–4 |
 | ethernet-switching | 12 | 25 | fill: 1, scenario: 2, single: 9 | 1–4 |
 | icmp | 9 | 20 | scenario: 1, single: 8 | 1–3 |
@@ -102,16 +102,25 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ios-verification-commands`
 - `ipv4-address-configuration`
 - `ipv4-addressing`
+- `ipv4-interface-configuration`
+- `ipv4-routing`
 - `ipv6-address-configuration`
+- `line-protocol`
+- `no-shutdown`
 - `password-encryption`
 - `password-security`
 - `physical-layer-cabling`
+- `physical-layer-troubleshooting`
 - `privileged-exec`
+- `remote-management`
 - `running-config`
 - `running-configuration`
 - `show-ip-interface-brief`
 - `slaac`
 - `startup-config`
+- `svi`
+- `switch-default-gateway`
+- `switch-management`
 - `troubleshooting`
 - `user-exec`
 
@@ -543,7 +552,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 19 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 40 |
+| scenario | 44 |
 | single | 110 |
 | true-false | 1 |
 
@@ -553,8 +562,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 75 |
-| 3 | 89 |
-| 4 | 24 |
+| 3 | 90 |
+| 4 | 27 |
 | 5 | 4 |
 
 ## Interpretation and limits
