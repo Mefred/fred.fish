@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 321
+- **Questions:** 324
 - **Lessons represented:** 22
-- **Distinct concept tags:** 530
+- **Distinct concept tags:** 542
 
 ## Lesson coverage
 
@@ -21,7 +21,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv6-addressing | 21 | 47 | fill: 6, matching: 5, scenario: 6, single: 4 | 2–5 |
 | network-components | 10 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 1, single: 4 | 1–3 |
 | network-layer | 28 | 61 | fill: 1, matching: 4, multiple: 2, scenario: 16, single: 5 | 2–5 |
-| network-security | 13 | 33 | matching: 6, multiple: 1, ordering: 1, scenario: 1, single: 4 | 1–5 |
+| network-security | 16 | 45 | matching: 9, multiple: 1, ordering: 1, scenario: 1, single: 4 | 1–5 |
 | network-topologies | 7 | 14 | scenario: 2, single: 5 | 1–3 |
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
@@ -426,6 +426,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `access-attacks`
 - `access-control-lists`
 - `accounting`
+- `application-filtering`
 - `authentication`
 - `authorization`
 - `confidentiality`
@@ -433,26 +434,37 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `defense-in-depth`
 - `denial-of-service`
 - `device-hardening`
+- `electrical-threats`
 - `endpoint-security`
+- `environmental-threats`
 - `firewall-filtering`
+- `hardware-threats`
 - `insider-threat`
+- `intrusion-prevention-system`
 - `ios-security-commands`
+- `ips`
 - `local-authentication`
 - `login-security`
+- `maintenance-threats`
 - `malware`
 - `network-architecture-requirements`
 - `network-attacks`
 - `network-security-controls`
+- `packet-filtering`
 - `password-security`
+- `physical-security`
 - `reconnaissance-attacks`
 - `rsa-keys`
 - `secure-management`
 - `security-policy-vulnerability`
 - `security-threat-vectors`
 - `ssh`
+- `stateful-packet-inspection`
 - `technological-vulnerability`
 - `trojan-horse`
+- `url-filtering`
 - `virus`
+- `vpn`
 - `vulnerabilities`
 - `worm`
 
@@ -765,6 +777,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `all-nodes-multicast` | 1 | ipv6-addressing |
 | `all-routers-multicast` | 1 | ipv6-addressing |
 | `anycast` | 1 | ipv6-addressing |
+| `application-filtering` | 1 | network-security |
 | `application-layer` | 3 | application-layer, protocols-and-models |
 | `application-layer-services` | 3 | application-layer |
 | `arp` | 10 | address-resolution, protocols-and-models |
@@ -837,7 +850,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decimal-to-hexadecimal` | 1 | number-systems |
 | `default-gateway` | 7 | address-resolution, basic-device-configuration, icmp, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 6 | ipv6-addressing, network-layer |
-| `defense-in-depth` | 2 | network-security |
+| `defense-in-depth` | 3 | network-security |
 | `delivery-options` | 1 | protocols-and-models |
 | `denial-of-service` | 1 | network-security |
 | `device-hardening` | 2 | network-security |
@@ -857,12 +870,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `duplex-mismatch` | 1 | ethernet-switching |
 | `duplicate-address-detection` | 1 | ipv6-addressing |
 | `dynamic-routing` | 2 | network-layer |
+| `electrical-threats` | 1 | network-security |
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `enable-secret` | 1 | basic-device-configuration |
 | `encapsulation` | 10 | data-link-layer, protocols-and-models |
 | `end-devices` | 1 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
+| `environmental-threats` | 1 | network-security |
 | `error-detection` | 3 | data-link-layer |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 1 | address-resolution |
@@ -889,7 +904,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fiber-optic-connectors` | 1 | physical-layer |
 | `fiber-optic-media` | 1 | internet-connections |
 | `file-sharing-services` | 1 | application-layer |
-| `firewall-filtering` | 4 | network-security |
+| `firewall-filtering` | 5 | network-security |
 | `flash` | 1 | router-configuration |
 | `flow-control` | 3 | transport-layer |
 | `fragment-free-switching` | 1 | ethernet-switching |
@@ -909,6 +924,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `global-unicast-address` | 2 | ipv6-addressing |
 | `goodput` | 1 | physical-layer |
 | `half-duplex` | 2 | data-link-layer, physical-layer |
+| `hardware-threats` | 1 | network-security |
 | `hexadecimal` | 4 | ethernet-switching, number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
 | `hexadecimal-to-binary` | 1 | number-systems |
@@ -950,6 +966,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `internet-standards` | 1 | protocols-and-models |
 | `interoperability` | 2 | protocols-and-models |
 | `intranet` | 2 | network-types |
+| `intrusion-prevention-system` | 1 | network-security |
 | `ios-command-modes` | 3 | basic-device-configuration, router-configuration |
 | `ios-command-syntax` | 2 | basic-device-configuration |
 | `ios-commands` | 1 | router-configuration |
@@ -964,6 +981,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ip-addressing-services` | 1 | application-layer |
 | `ip-characteristics` | 1 | network-layer |
 | `ip-default-gateway` | 1 | router-configuration |
+| `ips` | 1 | network-security |
 | `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 1 | ipv4-addressing |
 | `ipv4-addressing` | 4 | basic-device-configuration, ipv4-addressing, number-systems |
@@ -1036,6 +1054,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
+| `maintenance-threats` | 1 | network-security |
 | `malware` | 1 | network-security |
 | `maximum-segment-size` | 1 | transport-layer |
 | `media-access-control` | 2 | data-link-layer |
@@ -1076,7 +1095,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scalability` | 2 | ipv4-addressing, network-components |
 | `network-scale` | 1 | network-components |
 | `network-scope` | 4 | network-types |
-| `network-security-controls` | 9 | network-security, network-types, reliable-networks |
+| `network-security-controls` | 10 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 1 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 6 | icmp, small-network |
@@ -1093,6 +1112,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `open-standards` | 1 | protocols-and-models |
 | `osi-model` | 8 | application-layer, protocols-and-models |
 | `oui` | 1 | ethernet-switching |
+| `packet-filtering` | 1 | network-security |
 | `packet-forwarding` | 2 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
 | `password-encryption` | 1 | basic-device-configuration |
@@ -1109,6 +1129,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-purpose` | 1 | physical-layer |
 | `physical-layer-signaling` | 1 | physical-layer |
 | `physical-layer-troubleshooting` | 1 | basic-device-configuration |
+| `physical-security` | 1 | network-security |
 | `physical-topology` | 3 | network-topologies |
 | `ping` | 6 | icmp, small-network |
 | `point-to-point-topology` | 2 | data-link-layer |
@@ -1212,6 +1233,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `startup-config` | 2 | basic-device-configuration |
 | `startup-configuration` | 3 | router-configuration |
 | `stateful-dhcpv6` | 1 | ipv6-addressing |
+| `stateful-packet-inspection` | 1 | network-security |
 | `stateless-dhcpv6` | 1 | ipv6-addressing |
 | `static-route` | 1 | network-layer |
 | `static-routes` | 1 | network-layer |
@@ -1252,6 +1274,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `udp-header` | 1 | transport-layer |
 | `unicast` | 2 | address-resolution, protocols-and-models |
 | `unknown-unicast-flooding` | 1 | ethernet-switching |
+| `url-filtering` | 1 | network-security |
 | `user-exec` | 1 | basic-device-configuration |
 | `utp-cabling` | 5 | physical-layer |
 | `vendor-identification` | 1 | ethernet-switching |
@@ -1259,6 +1282,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `video-communications` | 1 | network-trends |
 | `virus` | 1 | network-security |
 | `vlsm` | 4 | ipv4-addressing |
+| `vpn` | 1 | network-security |
 | `vulnerabilities` | 1 | network-security |
 | `wan` | 5 | internet-connections, network-types |
 | `wan-topologies` | 1 | data-link-layer |
@@ -1284,7 +1308,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 299. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 311. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1293,7 +1317,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 51 |
+| matching | 54 |
 | multiple | 18 |
 | ordering | 13 |
 | scenario | 85 |
@@ -1306,8 +1330,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 85 |
-| 3 | 134 |
-| 4 | 61 |
+| 3 | 135 |
+| 4 | 63 |
 | 5 | 7 |
 
 ## Interpretation and limits
