@@ -42,6 +42,7 @@ for (const [index, line] of lines.entries()) {
   const itemIds = itemFragment ? [...itemFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
   const pairFragment = fieldArray(line, "pairs", "matchOptions");
   const pairIds = pairFragment ? [...pairFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
+  const pairAnswerIds = pairFragment ? [...pairFragment.matchAll(/answerId:"([^"]+)"/g)].map((m) => m[1]) : [];
   const matchFragment = fieldArray(line, "matchOptions", "answer");
   const matchIds = matchFragment ? [...matchFragment.matchAll(/id:"([^"]+)"/g)].map((m) => m[1]) : [];
   const label = id || `question line ${index + 1}`;
@@ -82,12 +83,29 @@ for (const [index, line] of lines.entries()) {
     errors.push(`${label}: ordering answer must contain every item id exactly once`);
   }
   if (type === "matching") {
-    const validPairs = new Set(pairIds.map((pairId) => pairId));
+    const validPairs = new Set(pairIds);
     const validMatches = new Set(matchIds);
-    if (pairIds.length < 2 || matchIds.length < 2 || !Array.isArray(answer) || answer.length !== pairIds.length || new Set(answer).size !== answer.length || answer.some((entry) => {
-      const [pairId, matchId] = String(entry).split(":");
-      return !validPairs.has(pairId) || !validMatches.has(matchId);
-    })) errors.push(`${label}: matching answer must map every pair to a valid match`);
+    const mappings = Array.isArray(answer)
+      ? answer.map((entry) => String(entry).split(":"))
+      : [];
+    const mappedPairIds = mappings.map(([pairId]) => pairId);
+    const mappedMatchIds = mappings.map(([, matchId]) => matchId);
+    const mappingByPair = new Map(mappings);
+    const hasInvalidMapping = mappings.some(([pairId, matchId]) =>
+      !pairId || !matchId || !validPairs.has(pairId) || !validMatches.has(matchId));
+    const hasIncompletePairCoverage = mappedPairIds.length !== pairIds.length
+      || new Set(mappedPairIds).size !== pairIds.length
+      || pairIds.some((pairId) => !mappingByPair.has(pairId));
+    const hasDuplicateTargets = new Set(mappedMatchIds).size !== mappedMatchIds.length;
+    const hasMismatchedDeclaredAnswers = pairAnswerIds.length !== pairIds.length
+      || pairIds.some((pairId, pairIndex) =>
+        mappingByPair.get(pairId) !== pairAnswerIds[pairIndex]);
+    if (pairIds.length < 2 || new Set(pairIds).size !== pairIds.length
+      || matchIds.length < 2 || new Set(matchIds).size !== matchIds.length
+      || hasInvalidMapping || hasIncompletePairCoverage || hasDuplicateTargets
+      || hasMismatchedDeclaredAnswers) {
+      errors.push(`${label}: matching answer must map every pair exactly once to a unique valid option and agree with each pair's declared answerId`);
+    }
   }
 }
 
