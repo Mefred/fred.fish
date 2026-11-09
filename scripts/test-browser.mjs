@@ -102,7 +102,7 @@ try {
         } else if (await page.locator("[data-pair]").count()) {
           seenFormats.add("matching");
           const selects = page.locator("[data-pair]");
-          for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: 1 });
+          for (let i = 0; i < await selects.count(); i++) await selects.nth(i).selectOption({ index: i + 1 });
         } else if (await page.locator("#ordering-list").count()) {
           seenFormats.add("ordering");
         } else {
