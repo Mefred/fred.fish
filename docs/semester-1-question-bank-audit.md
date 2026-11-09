@@ -96,3 +96,7 @@ The Number Systems bank has grown from eight to 16 questions. Eight AI-generated
 ## Module 1 source mapping update
 
 Completed a first-pass topic-to-question mapping for all nine Module 1 (Networking Today) topic objectives in docs/semester-1-source-concept-inventory.md. Seven objectives have related active questions; two currently lack direct practice: **Networks Affect our Lives** and **The IT Professional**. The mapping also records follow-up checks for dial-up/cellular access, smart-home examples, and lesson-scope alignment. These are source-audit findings, not a claim that Module 1 is complete.
+
+## Module 2 source mapping update
+
+Completed a first-pass topic-to-question mapping for all eight Module 2 (Basic Switch and End Device Configuration) objectives in docs/semester-1-source-concept-inventory.md. The mapping identifies partial coverage for IOS access, command syntax, ports/SVIs, host IP configuration, and connectivity verification. It also flags two near-duplicate command-keyword questions and distinguishes cross-lesson references from coverage inside the intended Module 2 lesson. No questions were added in this mapping pass; the recorded gaps are targets for source-verified expansion.
