@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 340
+- **Questions:** 342
 - **Lessons represented:** 22
 - **Distinct concept tags:** 563
 
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 23 | 54 | matching: 6, multiple: 2, ordering: 3, scenario: 4, single: 8 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
-| small-network | 22 | 61 | matching: 2, ordering: 3, scenario: 12, single: 5 | 1–4 |
+| small-network | 24 | 61 | matching: 2, ordering: 3, scenario: 12, single: 5 | 1–4 |
 | transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
