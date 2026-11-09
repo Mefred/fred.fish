@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 304
+- **Questions:** 308
 - **Lessons represented:** 22
-- **Distinct concept tags:** 492
+- **Distinct concept tags:** 497
 
 ## Lesson coverage
 
@@ -31,7 +31,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 11 | 27 | fill: 2, matching: 1, multiple: 1, ordering: 1, scenario: 2, single: 4 | 1–3 |
 | small-network | 9 | 25 | ordering: 2, scenario: 4, single: 3 | 1–4 |
-| transport-layer | 13 | 27 | fill: 2, matching: 1, multiple: 3, ordering: 1, single: 6 | 1–4 |
+| transport-layer | 17 | 34 | fill: 2, matching: 2, multiple: 3, ordering: 1, scenario: 1, single: 8 | 1–4 |
 
 ## Concepts represented by lesson
 
@@ -674,6 +674,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### transport-layer
 
+- `congestion-control`
 - `connectionless-transport`
 - `dns`
 - `flow-control`
@@ -681,12 +682,18 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `https`
 - `iana`
 - `latency`
+- `maximum-segment-size`
+- `mtu`
 - `multiplexing`
+- `network-performance`
 - `port-numbers`
 - `real-time-applications`
 - `reliability`
 - `reliability-and-flow-control`
 - `reliable-delivery`
+- `retransmission`
+- `sack`
+- `selective-acknowledgment`
 - `sequence-numbers`
 - `socket-pairs`
 - `ssh`
@@ -758,6 +765,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
 | `configuration-persistence` | 3 | basic-device-configuration, network-layer |
 | `congestion` | 1 | reliable-networks |
+| `congestion-control` | 1 | transport-layer |
 | `connected-route` | 1 | network-layer |
 | `connected-routes` | 1 | network-layer |
 | `connectionless` | 1 | network-layer |
@@ -834,7 +842,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fiber-optic-media` | 1 | internet-connections |
 | `firewall-filtering` | 4 | network-security |
 | `flash` | 1 | router-configuration |
-| `flow-control` | 2 | transport-layer |
+| `flow-control` | 3 | transport-layer |
 | `fragment-free-switching` | 1 | ethernet-switching |
 | `frame-boundaries` | 1 | data-link-layer |
 | `frame-control-field` | 1 | data-link-layer |
@@ -971,6 +979,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 1 | ethernet-switching |
 | `mac-sublayer` | 1 | data-link-layer |
+| `maximum-segment-size` | 1 | transport-layer |
 | `media-access-control` | 2 | data-link-layer |
 | `media-independent` | 1 | network-layer |
 | `media-selection` | 2 | physical-layer |
@@ -980,6 +989,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `message-formatting` | 1 | protocols-and-models |
 | `message-size` | 1 | protocols-and-models |
 | `message-timing` | 1 | protocols-and-models |
+| `mtu` | 1 | transport-layer |
 | `multiaccess-topology` | 1 | data-link-layer |
 | `multicast` | 1 | protocols-and-models |
 | `multicast-address` | 1 | ipv6-addressing |
@@ -1001,7 +1011,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-layer` | 6 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
 | `network-operations` | 1 | small-network |
-| `network-performance` | 1 | physical-layer |
+| `network-performance` | 2 | physical-layer, transport-layer |
 | `network-redundancy` | 1 | data-link-layer |
 | `network-reliability` | 7 | reliable-networks, small-network |
 | `network-scalability` | 1 | network-components |
@@ -1066,12 +1076,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `real-time-applications` | 1 | transport-layer |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
 | `reference-models` | 1 | protocols-and-models |
-| `reliability` | 2 | transport-layer |
+| `reliability` | 4 | transport-layer |
 | `reliability-and-flow-control` | 1 | transport-layer |
 | `reliable-delivery` | 1 | transport-layer |
 | `remote-management` | 3 | basic-device-configuration, router-configuration |
 | `remote-network-communication` | 3 | address-resolution, protocols-and-models, small-network |
-| `retransmission` | 1 | protocols-and-models |
+| `retransmission` | 3 | protocols-and-models, transport-layer |
 | `return-route` | 2 | network-layer |
 | `rfc1918` | 1 | ipv4-addressing |
 | `ring-topology` | 1 | network-topologies |
@@ -1101,12 +1111,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `routing-table-troubleshooting` | 1 | network-layer |
 | `running-config` | 2 | basic-device-configuration |
 | `running-configuration` | 2 | basic-device-configuration, router-configuration |
+| `sack` | 1 | transport-layer |
 | `same-subnet-communication` | 1 | protocols-and-models |
 | `satellite-internet` | 1 | internet-connections |
 | `sc-connector` | 1 | physical-layer |
 | `scalability` | 3 | reliable-networks |
 | `security-threat-vectors` | 1 | network-security |
 | `segmentation` | 1 | protocols-and-models |
+| `selective-acknowledgment` | 1 | transport-layer |
 | `sequence-numbers` | 1 | transport-layer |
 | `server-role` | 1 | network-components |
 | `session-layer` | 1 | application-layer |
@@ -1148,20 +1160,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-memory-buffering` | 1 | ethernet-switching |
 | `switch-port-settings` | 1 | ethernet-switching |
 | `switching-latency` | 1 | ethernet-switching |
-| `tcp` | 7 | protocols-and-models, transport-layer |
-| `tcp-acknowledgments` | 2 | transport-layer |
+| `tcp` | 10 | protocols-and-models, transport-layer |
+| `tcp-acknowledgments` | 3 | transport-layer |
 | `tcp-connection-establishment` | 1 | transport-layer |
 | `tcp-header` | 1 | transport-layer |
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
-| `tcp-sequence-numbers` | 2 | transport-layer |
-| `tcp-windowing` | 1 | transport-layer |
+| `tcp-sequence-numbers` | 3 | transport-layer |
+| `tcp-windowing` | 2 | transport-layer |
 | `throughput` | 3 | physical-layer |
 | `tia-eia-568` | 2 | physical-layer |
 | `token-passing` | 1 | data-link-layer |
 | `traceroute` | 6 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
-| `transport-layer` | 12 | protocols-and-models, transport-layer |
+| `transport-layer` | 13 | protocols-and-models, transport-layer |
 | `troubleshooting` | 3 | basic-device-configuration, small-network |
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 1 | icmp |
@@ -1199,7 +1211,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `zero-suppression` | 1 | ipv6-addressing |
 | `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 279. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 281. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
@@ -1208,11 +1220,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 34 |
-| matching | 41 |
+| matching | 42 |
 | multiple | 18 |
 | ordering | 12 |
-| scenario | 81 |
-| single | 117 |
+| scenario | 82 |
+| single | 119 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1221,10 +1233,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 34 |
 | 2 | 85 |
-| 3 | 127 |
-| 4 | 52 |
+| 3 | 128 |
+| 4 | 55 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 13 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. Modules 3 through 14 now have explicit first-pass topic-to-question mappings; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
