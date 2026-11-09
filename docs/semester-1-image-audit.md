@@ -43,8 +43,8 @@ See [the reproducible recovery procedure](./semester-1-image-recovery.md).
 - 792 image assets contain question-like OCR text.
 - Normalizing the OCR text yields 474 candidate groups.
 - These are candidate prompts, not 474 verified answer-key entries. Some are duplicate slides, matching activities, Packet Tracer instructions, lesson summaries, or questions whose answer depends on a diagram or visual mark.
-- Six additional candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the ten previous promotions, 16 image-question associations have visual verification. Four false-positive candidates remain excluded.
-- The remaining 772 candidate asset records still require visual answer-key review. New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
+- Eleven additional unique candidate images have now been visually inspected and linked to existing or newly added source questions. Combined with the 16 earlier associations, 27 image-question associations have visual verification. Four false-positive candidates remain excluded.
+- Of the 772 unique unresolved candidate images, 761 remain for visual answer-key review (767 asset records when duplicate references are counted). New explanations or answers derived from networking knowledge remain labeled `ai-generated`.
 
 ## Module sequence discovered
 
@@ -72,13 +72,20 @@ The images identify the Cisco Introduction to Networks sequence:
 
 OCR is complete and all image bytes are now recoverable and hash-verified. A visual contact-sheet pass reviewed the 23 unique images without OCR text: 22 were identified as visual-only assets (including cable/connectors, switch hardware, certification badges, and diagrams) and one dark slide remains flagged for manual transcription.
 
-The six new question-image checks verified the exact prompt and answer marks for:
+The latest 11 image checks verified the exact prompt and answer marks/diagram details for:
 - Medium selection: signal distance and installation environment.
 - Destination port layer: transport.
 - Receive-side protocol decapsulation: Ethernet, IP, TCP, HTTP.
 - Open standards: interoperability across operating systems.
 - Transport-layer multiplexing: delivery to the correct browser/application.
 - IPv4 subnet sizing for 40 hosts: /26.
+- Source and destination MAC addresses are added at the Data Link layer.
+- Source and destination port numbers are added at the Transport layer.
+- Source and destination IP addresses are added at the Network layer.
+- Application data enters the encapsulation process at the Application layer.
+- ARP cache entries age out after an operating-system-dependent timer.
+- A four-pair unshielded twisted-pair cable.
+- RJ-45/8P8C is the Ethernet twisted-pair connector.
 
 OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. The remaining question candidates and diagram-dependent lesson references still need visual review.
 
