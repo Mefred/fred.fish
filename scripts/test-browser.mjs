@@ -84,6 +84,9 @@ try {
     if (viewport.name === "desktop") {
       await page.goto(new URL("/cisco/practice/", baseUrl).href, { waitUntil: "networkidle" });
       await page.evaluate(() => localStorage.removeItem("fredfish.learning.progress.v1"));
+      await page.reload({ waitUntil: "networkidle" });
+      const initialAnswers = await page.evaluate(() => JSON.parse(localStorage.getItem("fredfish.learning.progress.v1") || "{}").totalAnswers || 0);
+      assert.equal(initialAnswers, 0, "browser practice should start with a clean learner profile");
       await page.getByRole("button", { name: /Start 10-question practice/i }).click();
       assert.equal(await page.locator(".quiz-prompt").count(), 1, "starting practice should render a question");
       const seenFormats = new Set();
@@ -108,8 +111,6 @@ try {
         await page.locator("#submit-answer").click();
         assert.equal(await page.locator("#answer-feedback[hidden]").count(), 0, "submitting an answer should show feedback");
         assert.ok(await page.locator("#answer-feedback").innerText(), "answer feedback should include an explanation");
-        const answerCount = await page.evaluate(() => JSON.parse(localStorage.getItem("fredfish.learning.progress.v1") || "{}").totalAnswers);
-        console.log(`Browser practice answer ${questionIndex + 1}: persisted totalAnswers=${answerCount}`);
         if (questionIndex < 9) await page.locator("#submit-answer").click();
       }
       await page.locator("#submit-answer").click();
