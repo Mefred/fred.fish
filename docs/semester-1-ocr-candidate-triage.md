@@ -66,6 +66,18 @@ The original OCR export's promotion status has not been rewritten in the Library
 
 The current totals include later Module 8 and AI-generated visual-context reviews; the consolidated, current association list and provenance breakdown are maintained in [the image audit](./semester-1-image-audit.md).
 
+## High-resolution contact-sheet review — batch 1
+
+The first 36 unique unresolved question-candidate images were screened on contact sheets at 960×540 per image. Three marked slides were also opened individually at native resolution:
+
+- IMG-0063 — blue checks mark signal distance and installation environment; already linked to source question s1-media-selection-001.
+- IMG-0279 — blue oval marks the Application layer; already linked to source question s3-application-data-layer-source-001.
+- IMG-0282 — blue oval marks the Data Link layer; already linked to source question s3-destination-mac-layer-002.
+
+The other 33 candidates show unmarked question prompts, blank matching targets, lesson summaries, or diagrams without an answer mark. No new source-origin questions were added. See [the batch-by-batch review log](./semester-1-image-review-batch-1.md) for all 36 references and decisions.
+
+The 960×540 contact-sheet screen is not counted as native-resolution verification for the other 33 images. The 744-unique-image / 750-asset-record native-resolution backlog therefore remains unchanged. The original OCR ZIP candidate-status fields remain unchanged in the Library; this repository audit is the current review record.
+
 ## Text-only comparison against extracted source questions
 
 Each normalized OCR candidate was compared with all 612 numbered question blocks in `Sem1_Questions_and_Review_Material.md`. The best match was selected using token overlap:
