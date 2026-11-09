@@ -330,12 +330,12 @@ The Module 3 source objectives are compared with 23 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 566 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 576 questions across 22 lesson IDs and 605 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every existing identifier is represented by at least two distinct question records. The latest 173 AI-generated additions reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
 
-The original OneNote image assets were recovered and hash-matched against all 2,646 OCR manifest records. Six image candidates were then inspected visually for their exact prompt and answer marks. Two images map to questions that already existed, so they were added as additional provenance references rather than duplicated.
+The original OneNote image assets were recovered and hash-matched against all 2,646 OCR manifest records. Seventeen additional image candidates have now been inspected visually across the follow-up passes. The latest 11-image pass adds six new source-origin questions and links four more images to existing questions, avoiding duplicate prompts.
 
 | Module | Source image | Active question | Source fact / verified answer |
 |---|---|---|---|
@@ -345,5 +345,15 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 3. Protocols and Models | `IMG-0292` | `s3-open-standards-source-001` | Open standards enable interoperability between different operating systems |
 | 14. Transport Layer | `IMG-1315` | `s14-transport-multiplexing-source-001` | Transport ports deliver data to the correct browser/application process |
 | 11. IPv4 Addressing | `IMG-1756` | `s11-subnet-mask-40-hosts-source-001` | 40 hosts require at least a /26; 255.255.255.192 provides 62 usable addresses |
+| 9. Address Resolution | `IMG-0816` | `s9-arp-cache-aging-source-001` | Dynamic ARP mappings age out after an OS-dependent timer |
+| 4. Physical Layer | `IMG-0348` | `s4-utp-identification-source-001` | Image shows four unshielded twisted copper pairs |
+| 4. Physical Layer | `IMG-1725`, `IMG-1872` | `s4-rj45-connector-source-001` | RJ-45/8P8C connector is used for twisted-pair Ethernet |
+| 3. Protocols and Models | `IMG-0306` | `s3-destination-ip-layer-source-001` | Destination IP address is added at the Network layer |
+| 3. Protocols and Models | `IMG-0314` | `s3-source-ip-layer-source-001` | Source IP address is added at the Network layer |
+| 3. Protocols and Models | `IMG-0279` | `s3-application-data-layer-source-001` | Application data enters encapsulation at the Application layer |
+| 3. Protocols and Models | `IMG-0270` | `s3-source-mac-001` | Source MAC address is added at the Data Link layer |
+| 3. Protocols and Models | `IMG-0282` | `s3-destination-mac-layer-002` | Destination MAC address is added at the Data Link layer |
+| 3. Protocols and Models | `IMG-0287` | `s3-destination-port-001` | Destination port number is added at the Transport layer |
+| 3. Protocols and Models | `IMG-0322` | `s3-source-port-layer-002` | Source port number is added at the Transport layer |
 
-These six image associations have been visually verified and are reflected in the active seed. The question bank contains 570 records across 605 concept tags, with a minimum of two questions per tag. The image audit still has 772 question-like asset records awaiting visual answer-key review; do not infer complete source coverage from this first verified subset.
+The latest pass brings the visually verified source-image set to 27 image-question associations. The question bank contains 576 records across 605 concept tags, with a minimum of two questions per tag. Of 772 unique unresolved question-like images, 761 still await visual review; do not infer complete source coverage from this verified subset.
