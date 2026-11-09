@@ -27,11 +27,11 @@ The current 607 concept tags are not evenly represented. This distribution makes
 | 4 | 37 |
 | 5 | 22 |
 | 6 | 18 |
-| 7 | 9 |
+| 7 | 8 |
 | 8 | 9 |
 | 9 | 1 |
 | 10 | 5 |
-| 11 | 6 |
+| 11 | 7 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
@@ -107,7 +107,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
-There are now 39 source-origin image-question associations plus nine visually reviewed images used as context for AI-generated applied questions (48 total image-question associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records) as unresolved; manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. The first 144 candidate images have been screened at high-resolution contact-sheet scale. Twelve answer/visual items were opened at native resolution: eight answer-marked items already linked to existing questions, two UTP cable images, and two coaxial cable images. The cable images now support one new source-origin coaxial question and the existing UTP question. The other 132 candidates remain unmarked prompts, blank matching activities, lesson summaries, or unmarked diagrams. See the batch 1–4 review logs for the decisions.
+There are now 39 source-origin image-question associations plus nine visually reviewed images used as context for AI-generated applied questions (48 total image-question associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records including duplicate references) as unresolved; this is an export-status count, not the current manual-review backlog. Manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. Across batches 1–4, 144 candidates were screened at high-resolution contact-sheet scale. Twelve items were opened at native resolution: eight answer-marked items already linked to existing questions, two UTP cable images, and two coaxial cable images. The cable images now support one new source-origin coaxial question and the existing UTP question. The remaining 132 candidates in those four batches were not individually opened at native resolution; contact-sheet screening alone is not sufficient to rule out small answer marks or diagram details. See the batch 1–4 review logs for the decisions.
 
 ## Provenance rules
 
@@ -130,7 +130,7 @@ Five additional diagram-based AI-generated questions now use verified visual con
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- Twenty-two additional question-image associations have been manually checked across the follow-up passes. All 772 unresolved candidate records have been screened at thumbnail resolution. The remaining 744 unique images still require full-size review where an answer or concept depends on a diagram, screenshot, or answer mark. Many are repeated unmarked question slides, lesson summaries, or Packet Tracer activity screens.
+- All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened 144 candidates at contact-sheet scale, with 12 opened at native resolution and 132 not yet individually opened at native resolution. Continue native-size inspection where small answer marks or diagram details could change question provenance or correctness.
 - The source-concept inventory includes a first-pass objective-to-question map for all 17 modules. It is not yet a page-by-page audit of every question, answer, diagram, and Packet Tracer activity.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
