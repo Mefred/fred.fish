@@ -75,6 +75,8 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0314` | `s3-source-ip-layer-source-001` | Network layer |
 | `IMG-0279` | `s3-application-data-layer-source-001` | Application layer |
 | `IMG-0779`, `IMG-0624` | `s8-diffserv-priority-source-001` | Differentiated Services field carries QoS classification information |
+| `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
+| `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
 There are now 36 source-origin image-question associations plus four visually reviewed images used as context for AI-generated applied questions (40 total image-question associations). Four false-positive image candidates remain excluded. Of the 766 unique unresolved candidate images, 744 remain for visual review; duplicate asset records mean 750 unresolved records remain. Do not promote an OCR candidate solely because its text resembles an active question.
 
