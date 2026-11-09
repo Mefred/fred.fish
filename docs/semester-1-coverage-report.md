@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 258
+- **Questions:** 266
 - **Lessons represented:** 22
-- **Distinct concept tags:** 405
+- **Distinct concept tags:** 423
 
 ## Lesson coverage
 
@@ -26,7 +26,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-trends | 10 | 13 | fill: 2, matching: 1, scenario: 2, single: 4, true-false: 1 | 1–3 |
 | network-types | 8 | 13 | multiple: 1, scenario: 2, single: 5 | 1–3 |
 | number-systems | 8 | 10 | fill: 5, single: 3 | 1–4 |
-| physical-layer | 12 | 21 | matching: 1, scenario: 6, single: 5 | 1–4 |
+| physical-layer | 20 | 41 | matching: 6, scenario: 8, single: 6 | 1–4 |
 | protocols-and-models | 18 | 36 | matching: 3, multiple: 2, ordering: 3, scenario: 3, single: 7 | 1–4 |
 | reliable-networks | 10 | 11 | ordering: 2, scenario: 2, single: 6 | 1–4 |
 | router-configuration | 8 | 22 | fill: 2, matching: 1, multiple: 1, single: 4 | 1–3 |
@@ -304,13 +304,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `icmp-destination-unreachable`
 - `ios-verification-commands`
 - `ip-characteristics`
-- `ipv4-routing-table`
 - `ipv4-differentiated-services`
 - `ipv4-fragmentation-fields`
 - `ipv4-header-checksum`
 - `ipv4-header-fields`
 - `ipv4-protocol`
+- `ipv4-routing-table`
 - `ipv4-source-destination`
+- `ipv4-static-route`
+- `ipv4-ttl`
 - `ipv4-version`
 - `ipv4-vs-ipv6-header`
 - `ipv6-extension-headers`
@@ -323,7 +325,6 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ipv6-source-destination`
 - `ipv6-traffic-class`
 - `ipv6-version`
-- `ipv4-static-route`
 - `layer2-layer3-addressing`
 - `local-route`
 - `longest-prefix-match`
@@ -432,25 +433,46 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### physical-layer
 
 - `attenuation`
+- `bandwidth`
+- `bluetooth`
+- `cable-internet`
+- `cabling-standards`
+- `coaxial-cable`
 - `copper-cabling`
 - `crosstalk`
 - `electromagnetic-interference`
+- `fiber-core`
+- `fiber-dispersion`
 - `fiber-optic-cabling`
+- `fiber-optic-connectors`
+- `half-duplex`
+- `lc-connector`
 - `media-selection`
 - `multimode-fiber`
+- `physical-layer-characteristics`
+- `physical-layer-encoding`
 - `physical-layer-media`
 - `physical-layer-purpose`
-- `physical-layer-encoding`
-- `physical-layer-characteristics`
 - `physical-layer-signaling`
-- `throughput`
-- `tia-eia-568`
-- `cabling-standards`
 - `radio-frequency`
+- `radio-frequency-interference`
+- `sc-connector`
+- `shared-medium`
+- `shielded-twisted-pair`
 - `signal-integrity`
 - `single-mode-fiber`
+- `st-connector`
+- `throughput`
+- `tia-eia-568`
 - `utp-cabling`
+- `wifi`
+- `wimax`
+- `wireless-installations`
+- `wireless-interference`
 - `wireless-media`
+- `wireless-standards`
+- `wlan`
+- `zigbee`
 
 ### protocols-and-models
 
@@ -604,7 +626,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `application-layer-services` | 3 | application-layer |
 | `arp` | 8 | address-resolution, protocols-and-models |
 | `arp-cache` | 2 | address-resolution |
-| `attenuation` | 1 | physical-layer |
+| `attenuation` | 2 | physical-layer |
 | `authentication` | 1 | network-security |
 | `authorization` | 1 | network-security |
 | `auto-mdix` | 1 | ethernet-switching |
@@ -615,13 +637,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `binary-positional-notation` | 1 | number-systems |
 | `binary-to-decimal` | 3 | number-systems |
 | `binary-to-hexadecimal` | 1 | number-systems |
+| `bluetooth` | 1 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
 | `broadcast` | 3 | address-resolution, ethernet-switching, protocols-and-models |
 | `broadcast-address` | 6 | ipv4-addressing |
 | `bus-topology` | 1 | network-topologies |
 | `business-internet-connections` | 3 | internet-connections |
 | `byod` | 1 | network-trends |
-| `cable-internet` | 1 | internet-connections |
+| `cable-internet` | 2 | internet-connections, physical-layer |
+| `cabling-standards` | 1 | physical-layer |
 | `cdp` | 1 | small-network |
 | `cidr` | 1 | ipv4-addressing |
 | `circuit-switching` | 1 | reliable-networks |
@@ -629,6 +653,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `client-server-model` | 6 | application-layer, network-components |
 | `cloud-computing` | 3 | network-trends |
 | `cloud-deployment-models` | 1 | network-trends |
+| `coaxial-cable` | 1 | physical-layer |
 | `collision-avoidance` | 1 | data-link-layer |
 | `collision-domains` | 1 | ethernet-switching |
 | `command-keywords` | 2 | basic-device-configuration |
@@ -644,9 +669,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `console-access` | 1 | basic-device-configuration |
 | `contention-based-access` | 1 | data-link-layer |
 | `copper-access` | 1 | internet-connections |
-| `copper-cabling` | 2 | physical-layer |
+| `copper-cabling` | 7 | physical-layer |
 | `copper-fiber-wireless` | 2 | network-components |
-| `crosstalk` | 2 | physical-layer |
+| `crosstalk` | 3 | physical-layer |
 | `csma-ca` | 1 | data-link-layer |
 | `csma-cd` | 2 | data-link-layer, ethernet-switching |
 | `cut-through-switching` | 1 | ethernet-switching |
@@ -671,7 +696,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `duplex` | 1 | ethernet-switching |
 | `duplex-mismatch` | 1 | ethernet-switching |
 | `dynamic-routing` | 2 | network-layer |
-| `electromagnetic-interference` | 2 | physical-layer |
+| `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `enable-secret` | 1 | basic-device-configuration |
 | `encapsulation` | 9 | data-link-layer, protocols-and-models |
@@ -695,8 +720,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fault-isolation` | 1 | network-topologies |
 | `fault-tolerance` | 7 | network-topologies, reliable-networks, small-network |
 | `fcs` | 2 | data-link-layer |
+| `fiber-core` | 1 | physical-layer |
+| `fiber-dispersion` | 1 | physical-layer |
 | `fiber-internet` | 1 | internet-connections |
-| `fiber-optic-cabling` | 4 | physical-layer |
+| `fiber-optic-cabling` | 6 | physical-layer |
+| `fiber-optic-connectors` | 1 | physical-layer |
 | `fiber-optic-media` | 1 | internet-connections |
 | `firewall-filtering` | 4 | network-security |
 | `flash` | 1 | router-configuration |
@@ -708,6 +736,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `full-mesh` | 1 | network-topologies |
 | `global-configuration` | 1 | basic-device-configuration |
 | `global-unicast-address` | 2 | ipv6-addressing |
+| `half-duplex` | 1 | physical-layer |
 | `hexadecimal` | 2 | number-systems |
 | `hexadecimal-to-decimal` | 2 | number-systems |
 | `hextets` | 2 | ipv6-addressing |
@@ -752,55 +781,56 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ip-default-gateway` | 1 | router-configuration |
 | `ipv4-address-configuration` | 1 | basic-device-configuration |
 | `ipv4-addressing` | 3 | basic-device-configuration, ipv4-addressing, number-systems |
-| `ipv4-interface-configuration` | 1 | basic-device-configuration |
-| `ipv4-ipv6-coexistence` | 1 | ipv6-addressing |
 | `ipv4-differentiated-services` | 1 | network-layer |
 | `ipv4-fragmentation-fields` | 1 | network-layer |
 | `ipv4-header-checksum` | 2 | network-layer |
 | `ipv4-header-fields` | 2 | network-layer |
+| `ipv4-interface-configuration` | 1 | basic-device-configuration |
+| `ipv4-ipv6-coexistence` | 1 | ipv6-addressing |
 | `ipv4-protocol` | 2 | network-layer |
-| `ipv4-source-destination` | 1 | network-layer |
-| `ipv4-version` | 1 | network-layer |
-| `ipv4-vs-ipv6-header` | 1 | network-layer |
 | `ipv4-routing` | 1 | basic-device-configuration |
 | `ipv4-routing-table` | 4 | network-layer |
+| `ipv4-source-destination` | 1 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
 | `ipv4-subnetting` | 19 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 3 | icmp, network-layer |
+| `ipv4-version` | 1 | network-layer |
+| `ipv4-vs-ipv6-header` | 1 | network-layer |
 | `ipv6-address-configuration` | 2 | basic-device-configuration, ipv6-addressing |
 | `ipv6-address-representation` | 2 | ipv6-addressing |
 | `ipv6-address-resolution` | 1 | icmp |
 | `ipv6-address-structure` | 2 | ipv6-addressing, number-systems |
 | `ipv6-address-types` | 4 | ipv6-addressing |
 | `ipv6-addressing` | 2 | ipv6-addressing |
-| `ipv6-interface-configuration` | 2 | ipv6-addressing |
-| `ipv6-interface-id` | 1 | ipv6-addressing |
-| `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
 | `ipv6-extension-headers` | 1 | network-layer |
 | `ipv6-fixed-header` | 1 | network-layer |
 | `ipv6-flow-label` | 2 | network-layer |
 | `ipv6-header-fields` | 2 | network-layer |
 | `ipv6-hop-limit` | 1 | network-layer |
-| `ipv6-next-header` | 1 | network-layer |
-| `ipv6-payload-length` | 1 | network-layer |
-| `ipv6-source-destination` | 1 | network-layer |
-| `ipv6-traffic-class` | 1 | network-layer |
-| `ipv6-version` | 1 | network-layer |
+| `ipv6-interface-configuration` | 2 | ipv6-addressing |
+| `ipv6-interface-id` | 1 | ipv6-addressing |
+| `ipv6-interface-verification` | 2 | ipv6-addressing, router-configuration |
 | `ipv6-multicast` | 1 | ipv6-addressing |
 | `ipv6-neighbor-discovery` | 2 | address-resolution |
 | `ipv6-network-prefix` | 1 | ipv6-addressing |
+| `ipv6-next-header` | 1 | network-layer |
+| `ipv6-payload-length` | 1 | network-layer |
 | `ipv6-prefix-length` | 1 | ipv6-addressing |
 | `ipv6-prefixes` | 2 | ipv6-addressing |
 | `ipv6-router-advertisement` | 3 | ipv6-addressing |
 | `ipv6-router-solicitation` | 2 | ipv6-addressing |
 | `ipv6-routing` | 2 | ipv6-addressing |
+| `ipv6-source-destination` | 1 | network-layer |
 | `ipv6-static-route` | 1 | ipv6-addressing |
+| `ipv6-traffic-class` | 1 | network-layer |
+| `ipv6-version` | 1 | network-layer |
 | `isp-role` | 1 | internet-connections |
 | `jitter` | 1 | network-trends |
 | `lan` | 4 | network-types |
 | `latency` | 2 | network-trends, transport-layer |
 | `layer2-layer3-addressing` | 1 | network-layer |
+| `lc-connector` | 1 | physical-layer |
 | `leased-line` | 1 | internet-connections |
 | `line-protocol` | 1 | basic-device-configuration |
 | `link-local-address` | 3 | ipv6-addressing |
@@ -821,7 +851,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multiaccess-topology` | 1 | data-link-layer |
 | `multicast` | 1 | protocols-and-models |
 | `multicast-address` | 1 | ipv6-addressing |
-| `multimode-fiber` | 1 | physical-layer |
+| `multimode-fiber` | 3 | physical-layer |
 | `multiplexing` | 1 | transport-layer |
 | `mx-record` | 1 | application-layer |
 | `name-resolution` | 2 | application-layer, small-network |
@@ -866,10 +896,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `peer-to-peer` | 3 | application-layer, network-components |
 | `physical-layer` | 2 | protocols-and-models |
 | `physical-layer-cabling` | 1 | basic-device-configuration |
-| `physical-layer-media` | 3 | physical-layer |
-| `cabling-standards` | 1 | physical-layer |
 | `physical-layer-characteristics` | 1 | physical-layer |
 | `physical-layer-encoding` | 1 | physical-layer |
+| `physical-layer-media` | 5 | physical-layer |
 | `physical-layer-purpose` | 1 | physical-layer |
 | `physical-layer-signaling` | 1 | physical-layer |
 | `physical-layer-troubleshooting` | 1 | basic-device-configuration |
@@ -888,6 +917,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `protocols` | 1 | protocols-and-models |
 | `quality-of-service` | 6 | network-trends, reliable-networks |
 | `radio-frequency` | 1 | physical-layer |
+| `radio-frequency-interference` | 1 | physical-layer |
 | `ram` | 1 | router-configuration |
 | `real-time-applications` | 1 | transport-layer |
 | `redundancy` | 4 | network-topologies, reliable-networks, small-network |
@@ -925,6 +955,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `running-configuration` | 2 | basic-device-configuration, router-configuration |
 | `same-subnet-communication` | 1 | protocols-and-models |
 | `satellite-internet` | 1 | internet-connections |
+| `sc-connector` | 1 | physical-layer |
 | `scalability` | 3 | reliable-networks |
 | `security-threat-vectors` | 1 | network-security |
 | `segmentation` | 1 | protocols-and-models |
@@ -932,13 +963,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `server-role` | 1 | network-components |
 | `session-layer` | 1 | application-layer |
 | `shared-bandwidth` | 1 | internet-connections |
-| `shared-medium` | 1 | network-topologies |
+| `shared-medium` | 2 | network-topologies, physical-layer |
+| `shielded-twisted-pair` | 1 | physical-layer |
 | `show-cdp-neighbors` | 1 | small-network |
 | `show-ip-interface-brief` | 2 | basic-device-configuration, small-network |
 | `show-ip-route` | 1 | network-layer |
 | `show-ipv6-interface` | 2 | ipv6-addressing, router-configuration |
-| `signal-integrity` | 1 | physical-layer |
-| `single-mode-fiber` | 1 | physical-layer |
+| `signal-integrity` | 2 | physical-layer |
+| `single-mode-fiber` | 3 | physical-layer |
 | `single-point-of-failure` | 2 | network-topologies |
 | `slaac` | 4 | basic-device-configuration, ipv6-addressing |
 | `smtp` | 2 | application-layer |
@@ -946,6 +978,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `source-destination-addressing` | 1 | protocols-and-models |
 | `source-ip-selection` | 1 | icmp |
 | `ssh` | 1 | transport-layer |
+| `st-connector` | 1 | physical-layer |
 | `standards-organizations` | 1 | network-types |
 | `star-topology` | 2 | network-topologies |
 | `startup-config` | 2 | basic-device-configuration |
@@ -968,6 +1001,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp-ip-model` | 5 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 2 | transport-layer |
 | `tcp-windowing` | 1 | transport-layer |
+| `throughput` | 1 | physical-layer |
+| `tia-eia-568` | 1 | physical-layer |
 | `traceroute` | 5 | icmp, small-network |
 | `traffic-prioritization` | 3 | reliable-networks |
 | `translation` | 1 | ipv6-addressing |
@@ -981,35 +1016,42 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `unicast` | 2 | address-resolution, protocols-and-models |
 | `unknown-unicast-flooding` | 1 | ethernet-switching |
 | `user-exec` | 1 | basic-device-configuration |
-| `utp-cabling` | 2 | physical-layer |
+| `utp-cabling` | 4 | physical-layer |
 | `verification` | 1 | small-network |
 | `video-communications` | 1 | network-trends |
 | `vlsm` | 4 | ipv4-addressing |
 | `wan` | 5 | internet-connections, network-types |
 | `web-protocols` | 1 | application-layer |
 | `well-known-ports` | 1 | transport-layer |
+| `wifi` | 1 | physical-layer |
+| `wimax` | 1 | physical-layer |
 | `windowing` | 1 | transport-layer |
 | `wireless-broadband` | 1 | internet-connections |
-| `wireless-media` | 1 | physical-layer |
+| `wireless-installations` | 1 | physical-layer |
+| `wireless-interference` | 1 | physical-layer |
+| `wireless-media` | 3 | physical-layer |
 | `wireless-media-access` | 1 | data-link-layer |
+| `wireless-standards` | 1 | physical-layer |
 | `wisp` | 1 | internet-connections |
+| `wlan` | 1 | physical-layer |
 | `zero-compression` | 1 | ipv6-addressing |
 | `zero-suppression` | 1 | ipv6-addressing |
+| `zigbee` | 1 | physical-layer |
 
-**Single-question concepts:** 235. These tags currently have only one active question and are the first candidates for additional varied practice.
+**Single-question concepts:** 247. These tags currently have only one active question and are the first candidates for additional varied practice.
 
 ## Bank-wide distribution
 
 ### Question formats
 
 | Format | Count |
-|---|---:|
+|---|---:|---|
 | fill | 30 |
-| matching | 23 |
+| matching | 28 |
 | multiple | 18 |
 | ordering | 11 |
-| scenario | 65 |
-| single | 110 |
+| scenario | 67 |
+| single | 111 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1017,11 +1059,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 34 |
-| 2 | 77 |
-| 3 | 99 |
+| 2 | 79 |
+| 3 | 105 |
 | 4 | 42 |
 | 5 | 6 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is now maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. It is not yet a complete atomic-concept inventory, and Module 8 now has an explicit first-pass topic-to-question mapping for the IPv4 and IPv6 packet-header objectives; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery, question quality, or complete instructional coverage. A first-pass source-topic inventory is now maintained in `docs/semester-1-source-concept-inventory.md`, based on recovered module and topic objectives. It is not yet a complete atomic-concept inventory, and Module 4 and Module 8 now have explicit first-pass topic-to-question mappings for the Physical Layer and IPv4/IPv6 packet-header objectives; equivalent mappings for the other modules remain incomplete. Therefore, a tag absent from this report cannot yet be called an untested source concept. OCR-derived topic hints and question-candidate text are not sufficient evidence for that claim; diagram-dependent material also requires visual review. Question counts are a triage signal: single-question concepts are under-practiced candidates, not proof of missing content.
