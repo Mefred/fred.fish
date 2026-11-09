@@ -52,7 +52,7 @@ try {
     { name: "desktop", width: 1440, height: 900 },
     { name: "mobile", width: 390, height: 844 },
   ]) {
-    const context = await browser.newContext({ viewport, deviceScaleFactor: viewport.name === "mobile" ? 2 : 1 });
+    const context = await browser.newContext({ viewport, deviceScaleFactor: viewport.name === "mobile" ? 2 : 1, isMobile: viewport.name === "mobile", hasTouch: viewport.name === "mobile" });
     const page = await context.newPage();
     const pageErrors = [];
     page.on("pageerror", (error) => pageErrors.push(error.message));
@@ -94,8 +94,11 @@ try {
         assert.equal(await page.locator(".quiz-prompt").count(), 1, `question ${questionIndex + 1} should render`);
         if (await page.locator("[data-choice]").count()) {
           seenFormats.add("choice / multiple-select / true-false / scenario");
-          await page.locator("[data-choice]").first().focus();
-          await page.keyboard.press("Enter");
+          if (viewport.name === "mobile") await page.locator("[data-choice]").first().tap();
+          else {
+            await page.locator("[data-choice]").first().focus();
+            await page.keyboard.press("Enter");
+          }
         } else if (await page.locator("#fill-answer").count()) {
           seenFormats.add("fill-in");
           await page.locator("#fill-answer").fill("test response");
