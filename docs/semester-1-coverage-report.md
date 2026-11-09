@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 587
+- **Questions:** 589
 - **Lessons represented:** 22
-- **Distinct concept tags:** 605
+- **Distinct concept tags:** 607
 
 ## Lesson coverage
 
@@ -19,7 +19,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
 | ipv4-addressing | 41 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 12, single: 13 | 2–5 |
 | ipv6-addressing | 33 | 47 | fill: 9, matching: 8, scenario: 8, single: 8 | 2–5 |
-| network-components | 13 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 2, single: 6 | 1–3 |
+| network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 56 | 69 | fill: 3, matching: 7, multiple: 5, ordering: 1, scenario: 22, single: 18 | 1–5 |
 | network-security | 27 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 3, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
@@ -37,10 +37,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 427 |
-| 3 | 70 |
+| 2 | 429 |
+| 3 | 69 |
 | 4 | 31 |
-| 5 | 18 |
+| 5 | 19 |
 | 6 | 16 |
 | 7 | 10 |
 | 8 | 8 |
@@ -404,6 +404,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### network-components
 
+- `ccna-certification`
 - `client-role`
 - `client-server-model`
 - `copper-fiber-wireless`
@@ -414,6 +415,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `network-media-selection`
 - `network-scalability`
 - `network-scale`
+- `networking-careers`
 - `peer-to-peer`
 - `router-role`
 - `server-role`
@@ -951,6 +953,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `cable-internet` | 2 | internet-connections, physical-layer |
 | `cabling-standards` | 2 | physical-layer |
 | `cache-expiration` | 3 | address-resolution |
+| `ccna-certification` | 2 | network-components |
 | `cdp` | 2 | small-network |
 | `cidr` | 2 | ipv4-addressing |
 | `circuit-switching` | 2 | reliable-networks |
@@ -1250,7 +1253,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-architecture-requirements` | 2 | network-security |
 | `network-attacks` | 2 | network-security |
 | `network-baselines` | 2 | small-network |
-| `network-components` | 3 | network-components |
+| `network-components` | 5 | network-components |
 | `network-discovery` | 2 | small-network |
 | `network-efficiency` | 2 | address-resolution, protocols-and-models |
 | `network-intermediary-devices` | 4 | network-components, small-network |
@@ -1269,6 +1272,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-segmentation` | 2 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 12 | icmp, internet-connections, small-network |
+| `networking-careers` | 2 | network-components |
 | `next-hop` | 7 | ipv6-addressing, network-layer, small-network |
 | `next-hop-resolution` | 3 | network-layer |
 | `nic` | 2 | ethernet-switching |
@@ -1522,8 +1526,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 97 |
 | multiple | 33 |
 | ordering | 20 |
-| scenario | 155 |
-| single | 229 |
+| scenario | 156 |
+| single | 230 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1531,8 +1535,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 45 |
-| 2 | 167 |
-| 3 | 251 |
+| 2 | 168 |
+| 3 | 252 |
 | 4 | 102 |
 | 5 | 22 |
 
