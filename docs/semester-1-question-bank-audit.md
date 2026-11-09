@@ -1,8 +1,8 @@
 # Semester 1 question bank audit
 
-**Current bank:** 347 unique questions  
-**Concept tags:** 571 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 323 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Current bank:** 350 unique questions  
+**Concept tags:** 578 unique concept identifiers  
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 326 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Recent expansion
 
@@ -35,8 +35,8 @@ Added five AI-generated packet-header practice questions for Module 8. Two asses
 | Fill in the blank | 34 |
 | Matching | 57 |
 | Ordering | 14 |
-| Scenario / troubleshooting | 98 |
-| **Total** | **347** |
+| Scenario / troubleshooting | 101 |
+| **Total** | **350** |
 
 ## Difficulty coverage
 
@@ -218,3 +218,8 @@ These questions use the recovered small-network source block as conceptual groun
 ## Multi-device troubleshooting expansion
 
 Added a difficult scenario requiring learners to correlate switch trunk output with router routing-table evidence. The case separates a VLAN 10 trunk-allow-list fault affecting PC-A from a missing default route affecting PC-B's external connectivity. It requires selecting both independent faults without changing correct host addressing or masking the VLAN issue.
+
+
+## Staged Packet Tracer troubleshooting challenge
+
+Added three connected stages to the Small Network lesson: (1) diagnose a missing DHCP relay on the client VLAN from APIPA and interface-configuration evidence; (2) correct an invalid DNS server option in the DHCP scope after IP reachability succeeds; and (3) configure a default route after local services and name resolution work but external reachability fails. Each stage includes a corrective action and explicit post-change verification guidance. The scenario assumes the stated access VLAN, trunk, and upstream next-hop conditions; learners should verify return routing in the final stage.
