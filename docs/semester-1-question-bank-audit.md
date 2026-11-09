@@ -1,10 +1,12 @@
 # Semester 1 question bank audit
 
-**Current bank:** 360 unique questions  
+**Current bank:** 365 unique questions  
 **Concept tags:** 578 unique concept identifiers  
-**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 336 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
+**Source provenance:** 24 source questions with prompt/answer support from recovered text or visually checked source screenshots; 341 AI-generated questions derived from recovered notes, source screenshots, and lesson concepts.
 
 ## Latest applied troubleshooting additions
+
+Five new Ethernet-switching scenarios cover VLAN-scoped unknown-unicast flooding, trunk versus access configuration, native VLAN mismatch, spanning-tree loop prevention, and MAC flapping investigation. The active bank now contains 365 questions (24 source-origin and 341 AI-generated).
 
 Five more applied scenarios expand Network Layer and Router Configuration: static-versus-OSPF administrative distance, recursive next-hop resolution, cautious interpretation of traceroute timeouts, SSH-only VTY authentication, and missing RSA/domain prerequisites for SSH. The active bank now contains 360 questions (24 source-origin and 336 AI-generated), with 578 concept tags.
 
