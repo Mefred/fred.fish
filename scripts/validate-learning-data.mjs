@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 const file = new URL("../src/data/learning/semester-1-seed.ts", import.meta.url);
 const source = readFileSync(file, "utf8");
 const sourceIndexFile = new URL("../docs/semester-1-source-question-index.md", import.meta.url);
+const sourceInventoryFile = new URL("../docs/semester-1-source-concept-inventory.md", import.meta.url);
 const sourceIndex = readFileSync(sourceIndexFile, "utf8");
 const indexedQuestionIds = new Set([...sourceIndex.matchAll(/^## (Q\d{3}) —/gm)].map((match) => match[1]));
 const lines = source.split(/\r?\n/).filter((line) => line.trim().startsWith("{ id:"));
@@ -63,6 +64,9 @@ for (const [index, line] of lines.entries()) {
   if (sourceRefs.some((ref) => !/^(block-\d{4}|IMG-\d{4}|Q\d{3})$/.test(ref))) errors.push(`${label}: malformed source reference`);
   if (sourceRefs.some((ref) => /^Q\d{3}$/.test(ref) && !indexedQuestionIds.has(ref))) errors.push(`${label}: source question reference ${ref} is missing from the source-question index`);
   if (!["source","ai-generated"].includes(origin)) errors.push(`${label}: invalid origin`);
+  if (origin === "source" && /AI-generated|answer is inferred|no (?:visible )?answer key|not marked in (?:the )?source/i.test(explanation)) {
+    errors.push(`${label}: source-origin explanation contradicts its provenance`);
+  }
   if (answer === null) errors.push(`${label}: missing answer`);
 
   if (["single","scenario"].includes(type) && (choiceIds.length < 2 || new Set(choiceIds).size !== choiceIds.length || typeof answer !== "string" || !choiceIds.includes(answer))) {
@@ -90,8 +94,12 @@ if (lines.length < 10) errors.push(`question bank too small: found ${lines.lengt
 if (ids.size !== lines.length) errors.push(`question IDs are not unique: ${ids.size} unique IDs across ${lines.length} records`);
 const underPracticed = [...conceptQuestionCounts.entries()].filter(([, count]) => count < 2);
 if (underPracticed.length) errors.push(`concepts need at least two questions: ${underPracticed.map(([concept, count]) => `${concept} (${count})`).join(", ")}`);
+const inventoryQuestionIds = [...sourceInventory.matchAll(/\\b(s\\d{1,2}-[a-z0-9-]+-\\d{3})\\b/g)].map((match) => match[1]);
+for (const inventoryId of new Set(inventoryQuestionIds)) {
+  if (!ids.has(inventoryId)) errors.push(`source-concept inventory references missing question ${inventoryId}`);
+}
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
 }
-console.log(`Validated ${lines.length} questions, ${ids.size} unique IDs, ${normalizedPrompts.size} unique prompts, ${conceptQuestionCounts.size} concepts (minimum exposure ${Math.min(...conceptQuestionCounts.values())}), explanations, lesson/concept mappings, difficulty, answer keys, formats, provenance, and source references.`);
+console.log(`Validated ${lines.length} questions, ${ids.size} unique IDs, ${normalizedPrompts.size} unique prompts, ${conceptQuestionCounts.size} concepts (minimum exposure ${Math.min(...conceptQuestionCounts.values())}), explanations, lesson/concept mappings, difficulty, answer keys, formats, provenance, source references, and source-inventory question links.`);
