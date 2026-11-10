@@ -23,16 +23,16 @@ The current 614 concept tags are not evenly represented. This distribution makes
 | Questions per concept | Concept tags |
 |---:|---:|
 | 2 | 387 |
-| 3 | 90 |
-| 4 | 39 |
+| 3 | 89 |
+| 4 | 40 |
 | 5 | 28 |
 | 6 | 18 |
 | 7 | 9 |
 | 8 | 8 |
 | 9 | 7 |
-| 10 | 7 |
-| 11 | 4 |
-| 12 | 1 |
+| 10 | 6 |
+| 11 | 3 |
+| 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
@@ -40,7 +40,7 @@ The current 614 concept tags are not evenly represented. This distribution makes
 | 17 | 2 |
 | 18 | 1 |
 | 20 | 1 |
-| 31 | 1 |
+| 33 | 1 |
 
 **Priority implication:** 387 concepts (63.0%) sit exactly at the two-question minimum.
 
@@ -48,13 +48,13 @@ The current 614 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 221 |
+| Single choice | 219 |
 | Multiple select | 35 |
 | True / false | 1 |
 | Fill in the blank | 48 |
-| Matching | 79 |
+| Matching | 78 |
 | Ordering | 25 |
-| Scenario / troubleshooting | 229 |
+| Scenario / troubleshooting | 232 |
 | **Total** | **638** |
 
 ## Difficulty
