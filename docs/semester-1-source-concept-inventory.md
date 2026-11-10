@@ -691,7 +691,7 @@ Module 7 is **partially audited, not signed off**. The next audit target is Modu
 
 ### Active lesson inventory
 
-The active `network-layer` lesson contains **62 questions**: 7 source-origin and 55 AI-generated. It covers IP delivery characteristics, packet encapsulation, host-versus-remote destination handling, default gateways, routing-table entries and codes, longest-prefix match, static/default routes, administrative distance and metric, route verification and troubleshooting, IPv4/IPv6 header fields, IPv4 fragmentation, MTU handling, and router forwarding steps.
+The active `network-layer` lesson contains **62 questions**: 9 source-origin and 53 AI-generated. It covers IP delivery characteristics, packet encapsulation, host-versus-remote destination handling, default gateways, routing-table entries and codes, longest-prefix match, static/default routes, administrative distance and metric, route verification and troubleshooting, IPv4/IPv6 header fields, IPv4 fragmentation, MTU handling, and router forwarding steps.
 
 ### Objective-to-question findings
 
@@ -712,7 +712,7 @@ The active `network-layer` lesson contains **62 questions**: 7 source-origin and
 - **Header-field distinction:** one IPv4 and one IPv6 matching item remain for retrieval; each companion is now a packet-capture interpretation scenario with explicit field values and assumptions.
 - **Potential scope overlap:** Switch default-gateway management, static-route command syntax, route administrative distance, and metric are useful network-layer routing skills but should be checked against the exact Module 8 topic/objective pages before being treated as core objectives. Do not import later routing-protocol configuration (for example, OSPF neighbor setup) into this lesson merely because OSPF appears as a route source.
 - **New applied MTU item:** `s8-mtu-fragmentation-applied-003` tests IPv4 fragmentation when a datagram exceeds the outgoing MTU and DF is clear.
-- **Provenance:** All seven source-origin items remain tied to their exact source images/blocks. The remaining 55 questions are AI-generated; the review extract does not establish marked answers for every item.
+- **Provenance:** All nine source-origin items remain tied to their exact source images/blocks: seven IPv4 header-field items plus the host-routing-table and router-forwarding items. The remaining 53 questions are AI-generated; the review extract does not establish marked answers for every item.
 
 ### Remaining work before sign-off
 
