@@ -731,12 +731,12 @@ Module 8 is **partially audited, not signed off**. Continue next with Module 9 �
 
 ### Active lesson inventory
 
-The active `address-resolution` lesson contains **17 questions** in `src/data/learning/semester-1-seed.ts`: **1 source-origin** and **16 AI-generated**.
+The active `address-resolution` lesson contains **19 questions** in `src/data/learning/semester-1-seed.ts`: **1 source-origin** and **18 AI-generated**.
 
 | Active question | What it assesses | Audit finding |
 |---|---|---|
 | `s9-arp-request-001` | ARP request for a local IPv4-to-MAC mapping | Correct core concept, but overlaps with the two Ethernet-broadcast questions below. |
-| `s9-ipv6-nd-001` | NS request and NA response matching | Correct, but the broader message-role question also includes NS/NA. |
+| `s9-ipv6-nd-001` | Applied NS/NA neighbor-resolution exchange using solicited-node multicast | Now distinct from the broader five-message role-matching question. |
 | `s9-arp-vs-nd-001` | IPv4 ARP versus IPv6 ICMPv6 ND | Correct high-level distinction; useful as a concise comparison. |
 | `s9-arp-command-001` | Cisco IOS `show ip arp` | Correct router-side verification; retain separately from host `arp -a`. |
 | `s9-arp-cache-001` | Host `arp -a` | Correct host-side cache inspection; wording should avoid implying identical command availability/format on every OS. |
@@ -745,22 +745,24 @@ The active `address-resolution` lesson contains **17 questions** in `src/data/le
 | `s9-arp-cache-purpose-001` | Why hosts cache mappings | Correct efficiency rationale; retain as distinct from expiry/remediation. |
 | `s9-remote-destination-arp-001` | Resolve local gateway MAC for remote IPv4 destination | Correct; near-duplicate of two later remote-destination questions. |
 | `s9-nd-message-roles-match-001` | NS, NA, RS, RA, and Redirect roles | Correct and broader than the NS/NA-only matching question; consider consolidating. |
-| `s9-arp-cache-expiry-001` | Re-resolve after a dynamic entry expires | Correct behavior, but overlaps with the source-origin aging question and stale-entry scenario. |
+| `s9-arp-cache-expiry-001` | Static versus dynamic ARP cache entries | Differentiates manual entries from dynamically learned mappings that age out. |
 | `s9-arp-remote-forwarding-002` | Concrete remote-destination first-hop mapping | Correct; overlaps with the other remote-gateway ARP scenarios. |
 | `s9-arp-cache-stale-002` | Recover from a stale IP-to-MAC mapping | Correct applied troubleshooting; keep distinct by requiring cache removal/expiry followed by fresh resolution. |
-| `s9-arp-proxy-boundary-001` | ARP's local-link boundary and default-gateway use | Correct; largely repeats the remote-destination scenario. |
-| `s9-ethernet-broadcast-applied-002` | Ethernet broadcast destination for ARP | Correct; duplicate coverage of `s9-arp-broadcast-mac-001`. |
-| `s9-nd-router-messages-applied-002` | RS, RA, and Redirect roles | Correct; overlaps with the five-message matching question, but may be retained if the broader item is revised to avoid repeated pairings. |
+| `s9-arp-proxy-boundary-001` | Paired local-versus-remote destination resolution | Compares the destination host's MAC for on-link traffic with the gateway MAC for off-link traffic. |
+| `s9-ethernet-broadcast-applied-002` | ARP packet-field interpretation | Distinguishes the Ethernet broadcast destination, ARP Target Protocol Address, and unknown Target Hardware Address. |
+| `s9-nd-router-messages-applied-002` | Applied router-discovery and Redirect sequence | Uses an RS/RA exchange context to identify a later Redirect as a better-next-hop message. |
 | `s9-arp-cache-aging-source-001` | ARP cache aging timer | **Source-origin**, visually associated with IMG-0816. The answer is supported: dynamic entries expire after a time; duration varies by OS and administrators can remove entries manually. |
+| `s9-arp-poisoning-applied-003` | ARP spoofing/cache poisoning scenario | New AI-generated item distinguishes forged IP-to-MAC mappings from CAM-table flooding. |
+| `s9-arp-broadcast-overhead-applied-003` | Performance impact of excessive ARP broadcasts | New AI-generated item tests local broadcast-domain bandwidth and host-processing cost. |
 
 ### Objective-to-question findings
 
-1. **MAC versus IP addressing:** The source summary establishes that Layer 2 MAC addresses deliver a frame between NICs on the same link, while IP addresses identify the network-layer destination. For an on-link destination, the frame uses the destination host's MAC. For an off-link destination, the first-hop frame uses the local default gateway's MAC while the IP packet retains the remote destination IP. The current bank tests the remote case repeatedly, but lacks a direct, paired local-versus-remote decision that makes both address layers explicit in one scenario.
-2. **ARP purpose and request/reply mechanics:** The bank covers IPv4-to-MAC resolution, Ethernet broadcast destination, unicast reply delivery, and the cache. Add or revise a packet-field scenario that distinguishes the ARP target protocol address (the IPv4 address being queried), the Ethernet destination MAC (`FF:FF:FF:FF:FF:FF` for a normal request), and the sender's MAC/IP fields. Do not describe the IPv4 target address as the Ethernet destination address.
-3. **ARP cache operation:** The lesson has host and IOS inspection commands, cache purpose, aging, expiry, and stale-entry recovery. The source also includes static entries and manual removal. The active bank does not directly assess static versus dynamic entries, `arp -s` / `arp -d` behavior, or why a manually configured static mapping must be managed carefully. Keep host command syntax platform-qualified; `show ip arp` is the Cisco IOS command shown in the source.
-4. **Remote communication:** Three active questions (`s9-remote-destination-arp-001`, `s9-arp-remote-forwarding-002`, and `s9-arp-proxy-boundary-001`) test essentially the same decision: resolve the local gateway's MAC, not the remote server's MAC. Retain one direct concept check and one materially different multi-hop/PDU scenario; repurpose the third for local-versus-remote comparison or packet-header interpretation.
-5. **IPv6 Neighbor Discovery:** NS and NA support neighbor/address resolution; RS and RA support router discovery; Redirect informs a host of a better next hop. The five-message matching question covers all three functions. The two additional ND questions repeat NS/NA or RS/RA/Redirect subsets. Preserve the distinction between neighbor discovery and router discovery, and do not call ND “IPv6 ARP”: it is an ICMPv6 protocol suite with additional functions.
-6. **ARP security and operational impact:** The source explicitly covers ARP spoofing/poisoning, malicious IP-to-MAC mapping manipulation, and the performance impact of excessive broadcasts. These are not directly assessed by the 17 active questions. Add a focused poisoning scenario only if the source page and intended Module 9 scope support it; distinguish poisoning (false IP-to-MAC associations, potentially enabling interception) from switch CAM-table flooding and from a simple ARP broadcast.
+1. **MAC versus IP addressing:** The source summary establishes that Layer 2 MAC addresses deliver a frame between NICs on the same link, while IP addresses identify the network-layer destination. For an on-link destination, the frame uses the destination host's MAC. For an off-link destination, the first-hop frame uses the local default gateway's MAC while the IP packet retains the remote destination IP. `s9-arp-proxy-boundary-001` now compares both cases in one scenario.
+2. **ARP purpose and request/reply mechanics:** The bank covers IPv4-to-MAC resolution, Ethernet broadcast destination, unicast reply delivery, and the cache. `s9-ethernet-broadcast-applied-002` now distinguishes the Ethernet destination MAC (`FF:FF:FF:FF:FF:FF`), the ARP Target Protocol Address (the IPv4 address being queried), and the zero/unknown Target Hardware Address in a normal request. Do not describe the IPv4 target address as the Ethernet destination address.
+3. **ARP cache operation:** The lesson and bank now distinguish dynamic entries that age out from static entries that remain until manually removed. Host cache inspection uses platform-qualified `arp -a`; supported systems may use `arp -s` and `arp -d`. Cisco IOS uses `show ip arp`. The stale-entry scenario separately tests clearing or waiting for re-resolution.
+4. **Remote communication:** `s9-remote-destination-arp-001` remains the direct gateway-MAC concept check; `s9-arp-remote-forwarding-002` supplies a concrete host/PDU address scenario; `s9-arp-proxy-boundary-001` now compares local and remote destinations in one question. The three items have distinct retrieval goals.
+5. **IPv6 Neighbor Discovery:** NS and NA support neighbor/address resolution; RS and RA support router discovery; Redirect informs a host of a better next hop. The five-message matching question retains the broad message-role review. `s9-ipv6-nd-001` applies NS/NA to a solicited-node multicast resolution exchange, while `s9-nd-router-messages-applied-002` applies RS/RA and Redirect to a router-discovery sequence. Do not call ND “IPv6 ARP”: it is an ICMPv6 protocol suite with additional functions.
+6. **ARP security and operational impact:** New questions assess forged ARP replies that poison IP-to-MAC mappings and the local capacity/processing cost of excessive ARP broadcasts. The poisoning explanation distinguishes ARP cache manipulation from switch CAM-table flooding.
 7. **Layer 2 switch behavior:** The extracted review set includes separate questions about switch MAC-table forwarding and which Ethernet header field a Layer 2 device examines. These are Ethernet-switching concepts, not evidence of ARP/ND coverage. The extracted answer “source MAC address” for the forwarding question conflicts with normal switch forwarding behavior: switches learn from source MAC addresses but forward/filter using the destination MAC address. Keep this item out of the Module 9 answer bank unless the original marked exhibit and question wording are verified.
 
 ### Source-answer and OCR hazards
@@ -774,10 +776,10 @@ The active `address-resolution` lesson contains **17 questions** in `src/data/le
 
 ### Remaining work before sign-off
 
-- Reduce the duplicated remote-gateway ARP scenarios and repeated Ethernet-broadcast/ND message questions; use the freed slots for local-versus-remote MAC/IP reasoning, ARP packet-field interpretation, and cache management.
-- Add explicit static/dynamic ARP entry and manual cache-removal practice if confirmed on the source pages.
+- Review the local-versus-remote and packet-field scenarios in a learner session; the former duplicate remote-gateway, Ethernet-broadcast, and ND prompts have been differentiated.
+- Confirm static/dynamic cache behavior and platform-qualified manual cache commands against the original source pages.
 - Verify the original images for the ARP request/reply and PC1/File_server1 exhibits, especially IMG-0651 and IMG-0660, before adding any source-origin question or asserting an exhibit-specific answer.
-- Verify the source treatment of ARP poisoning and excessive broadcast overhead; do not reuse incorrect extracted answer fragments.
+- Verify the source treatment of ARP poisoning and excessive broadcast overhead; the new questions remain AI-generated until the source exhibits visibly establish their marked answers.
 - Execute both source Packet Tracer activities: **Identify MAC and IP Addresses** (local and remote PDU information) and **Examine the ARP Table** (ARP request, switch MAC table, and remote communications). Record actual packet fields and command outputs; the source notes alone do not establish that these activities have been run.
 - Run the learning-data validator and regenerate the coverage report after any question-bank changes.
 
