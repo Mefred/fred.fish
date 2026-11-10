@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **619** |
-| Unique question IDs | 619 |
-| Unique normalized prompts | 619 |
+| Active questions | **629** |
+| Unique question IDs | 629 |
+| Unique normalized prompts | 629 |
 | Lesson IDs represented | 22 |
-| Distinct concept tags | 610 |
+| Distinct concept tags | 613 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 42 |
-| AI-generated questions | 577 |
+| AI-generated questions | 587 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -22,39 +22,39 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 407 |
-| 3 | 79 |
-| 4 | 36 |
-| 5 | 21 |
-| 6 | 22 |
-| 7 | 8 |
+| 2 | 406 |
+| 3 | 78 |
+| 4 | 38 |
+| 5 | 23 |
+| 6 | 21 |
+| 7 | 6 |
 | 8 | 8 |
-| 9 | 3 |
-| 10 | 4 |
-| 11 | 7 |
-| 12 | 3 |
-| 13 | 1 |
+| 9 | 6 |
+| 10 | 5 |
+| 11 | 6 |
+| 12 | 2 |
+| 13 | 2 |
 | 14 | 3 |
-| 15 | 2 |
+| 15 | 3 |
 | 16 | 3 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 407 concepts (66.7%) sit exactly at the two-question minimum.
+**Priority implication:** 406 concepts (66.2%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 236 |
-| Multiple select | 36 |
+| Single choice | 237 |
+| Multiple select | 37 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 100 |
-| Ordering | 19 |
-| Scenario / troubleshooting | 175 |
-| **Total** | **619** |
+| Ordering | 22 |
+| Scenario / troubleshooting | 180 |
+| **Total** | **629** |
 
 ## Difficulty
 
@@ -62,8 +62,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 |---|---:|
 | 1 — Introductory | 46 |
 | 2 — Foundational | 171 |
-| 3 — Applied | 270 |
-| 4 — Advanced | 110 |
+| 3 — Applied | 274 |
+| 4 — Advanced | 116 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
@@ -185,3 +185,13 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - The revised baseline and traceroute interpretation questions are now difficulty 4; the DHCP lease verification scenario is difficulty 3. The bank-wide difficulty totals therefore reconcile to **46 introductory, 171 foundational, 270 applied, 110 advanced, and 22 challenging**.
 - Question count, concept-tag count, and provenance totals are unchanged.
+
+
+### Focused question-bank expansion — Modules 14–16
+
+- Added 10 AI-generated questions without changing existing IDs or source-origin classifications:
+  - Module 14: TCP FIN/ACK termination order, RST versus FIN, UDP header field identification, and UDP Length/payload arithmetic.
+  - Module 15: DNS hierarchy referrals, authoritative DNS answer interpretation, DHCPv6 message order, and stateless DHCPv6 with SLAAC.
+  - Module 16: endpoint protection and EDR containment/telemetry preservation.
+- Recomputed snapshot: **629 questions, 629 unique IDs/prompts, 613 concept tags, 42 source-origin, 587 AI-generated**. All concept tags remain at or above the two-question minimum.
+- Updated bank-wide format and difficulty distributions from the active seed; the coverage report was reconciled separately.
