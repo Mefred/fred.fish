@@ -15,7 +15,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
 | ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
-| icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
+| icmp | 18 | 28 | matching: 1, scenario: 9, single: 8 | 2–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 16, single: 12 | 2–5 |
 | ipv6-addressing | 35 | 47 | fill: 6, matching: 5, scenario: 17, single: 7 | 2–5 |
@@ -37,23 +37,23 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 386 |
-| 3 | 89 |
-| 4 | 41 |
-| 5 | 27 |
-| 6 | 17 |
-| 7 | 11 |
+| 2 | 384 |
+| 3 | 88 |
+| 4 | 44 |
+| 5 | 26 |
+| 6 | 18 |
+| 7 | 10 |
 | 8 | 8 |
-| 9 | 7 |
-| 10 | 6 |
-| 11 | 3 |
+| 9 | 8 |
+| 10 | 5 |
+| 11 | 4 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
-| 16 | 3 |
+| 16 | 2 |
 | 17 | 2 |
-| 18 | 1 |
+| 18 | 2 |
 | 20 | 1 |
 | 33 | 1 |
 
@@ -281,8 +281,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### icmp
 
+- `arp`
 - `connectivity-testing`
 - `default-gateway`
+- `duplicate-address-detection`
 - `host-reachability`
 - `icmp`
 - `icmp-destination-unreachable`
@@ -948,7 +950,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
 | `application-layer-services` | 10 | application-layer, small-network |
-| `arp` | 17 | address-resolution, data-link-layer, protocols-and-models |
+| `arp` | 18 | address-resolution, data-link-layer, icmp, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 2 | network-security |
@@ -1000,7 +1002,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `connected-routes` | 2 | network-layer |
 | `connectionless` | 2 | network-layer |
 | `connectionless-transport` | 2 | transport-layer |
-| `connectivity-testing` | 5 | icmp, small-network |
+| `connectivity-testing` | 6 | icmp, small-network |
 | `console-access` | 2 | basic-device-configuration |
 | `contention-based-access` | 2 | data-link-layer |
 | `controlled-access` | 2 | data-link-layer |
@@ -1045,7 +1047,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `duplex` | 3 | data-link-layer, ethernet-switching |
 | `duplex-communication` | 2 | data-link-layer |
 | `duplex-mismatch` | 2 | ethernet-switching, small-network |
-| `duplicate-address-detection` | 2 | ipv6-addressing |
+| `duplicate-address-detection` | 3 | icmp, ipv6-addressing |
 | `dynamic-routing` | 2 | network-layer |
 | `electrical-threats` | 2 | network-security |
 | `electromagnetic-interference` | 4 | physical-layer |
@@ -1116,7 +1118,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-capacity` | 7 | ipv4-addressing |
 | `host-configuration` | 3 | ipv4-addressing, small-network |
 | `host-ip-configuration` | 7 | small-network |
-| `host-reachability` | 3 | icmp |
+| `host-reachability` | 4 | icmp |
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 9 | address-resolution, router-configuration, small-network |
 | `hostname-domain-name` | 5 | router-configuration |
@@ -1131,12 +1133,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `iana` | 2 | transport-layer |
 | `icann` | 2 | network-types |
 | `icmp` | 4 | icmp, network-layer, small-network |
-| `icmp-destination-unreachable` | 3 | icmp, network-layer |
+| `icmp-destination-unreachable` | 4 | icmp, network-layer |
 | `icmp-echo` | 2 | icmp |
-| `icmp-filtering` | 2 | icmp |
+| `icmp-filtering` | 3 | icmp |
 | `icmp-time-exceeded` | 3 | icmp |
 | `icmpv4` | 2 | icmp |
-| `icmpv6` | 8 | address-resolution, icmp, ipv6-addressing |
+| `icmpv6` | 9 | address-resolution, icmp, ipv6-addressing |
 | `icmpv6-redirect` | 2 | address-resolution |
 | `ietf` | 2 | network-types, protocols-and-models |
 | `imap` | 2 | application-layer |
@@ -1299,7 +1301,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-security-controls` | 13 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
-| `network-troubleshooting` | 16 | icmp, internet-connections, small-network |
+| `network-troubleshooting` | 17 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | network-components |
 | `next-hop` | 9 | data-link-layer, ipv6-addressing, network-layer, small-network |
 | `next-hop-resolution` | 3 | network-layer |
@@ -1337,7 +1339,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-troubleshooting` | 5 | basic-device-configuration, router-configuration, small-network |
 | `physical-security` | 2 | network-security |
 | `physical-topology` | 3 | network-topologies |
-| `ping` | 7 | icmp, small-network |
+| `ping` | 8 | icmp, small-network |
 | `point-to-point-topology` | 3 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
@@ -1442,7 +1444,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `smtp` | 2 | application-layer |
 | `socket-pairs` | 2 | transport-layer |
 | `source-destination-addressing` | 2 | data-link-layer, protocols-and-models |
-| `source-ip-selection` | 3 | icmp, small-network |
+| `source-ip-selection` | 4 | icmp, small-network |
 | `spanning-tree` | 2 | ethernet-switching |
 | `ssh` | 5 | network-security, router-configuration, transport-layer |
 | `st-connector` | 2 | physical-layer |
@@ -1489,7 +1491,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tia-eia-568` | 2 | physical-layer |
 | `token-passing` | 2 | data-link-layer |
 | `trace-interpretation` | 2 | small-network |
-| `traceroute` | 10 | icmp, network-layer, small-network |
+| `traceroute` | 11 | icmp, network-layer, small-network |
 | `traffic-analysis` | 5 | small-network |
 | `traffic-prioritization` | 5 | reliable-networks, small-network |
 | `translation` | 2 | ipv6-addressing |
@@ -1553,21 +1555,21 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 45 |
-| matching | 75 |
+| matching | 74 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 240 |
-| single | 218 |
+| scenario | 245 |
+| single | 214 |
 | true-false | 1 |
 
 ### Difficulty
 
 | Level | Count |
 |---:|---:|
-| 1 | 45 |
-| 2 | 159 |
-| 3 | 275 |
-| 4 | 138 |
+| 1 | 44 |
+| 2 | 158 |
+| 3 | 274 |
+| 4 | 141 |
 | 5 | 22 |
 
 ## Interpretation and limits
