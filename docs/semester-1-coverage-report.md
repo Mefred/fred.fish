@@ -1549,9 +1549,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 172 |
-| 3 | 271 |
-| 4 | 108 |
+| 2 | 171 |
+| 3 | 270 |
+| 4 | 110 |
 | 5 | 22 |
 
 ## Interpretation and limits
