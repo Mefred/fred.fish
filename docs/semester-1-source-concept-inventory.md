@@ -1028,7 +1028,7 @@ The active `transport-layer` lesson contains **44 questions** in `src/data/learn
 - **TCP/UDP header fields:** TCP sequence/window and sequence/ACK contrasts remain distinct; UDP now has separate four-field and Length/payload calculations.
 - **Source answer-key hazards:** The recovered question-review material contains window-size questions whose extracted answer fragments conflict across near-identical prompts. One 6,000-byte-window/1,500-byte-packet question reports 4,501 after three packets, while another related extract reports 3,001 or 6,001 under different wording. These items are ambiguous unless “packet size” is explicitly defined as TCP payload bytes versus full IP packet size and the starting sequence number is stated. Do not promote these answer fragments into source-origin items. The source review's “Which factor determines TCP window size?” answer fragment (“amount of data to be transmitted”) is too imprecise for the current explanation; the receiver-advertised window is tied to receiver receive capacity/buffer availability, while congestion window is sender/path-side.
 - **Source TCP/HTTP answer hazard:** A source review extract says HTTP uses TCP “to ensure the fastest possible download speed.” That is incorrect. Traditional HTTP/1.1 and HTTP/2 commonly use TCP because reliable ordered delivery is useful; HTTP/3 uses QUIC over UDP. The active `s14-tcp-http-reliability-001` correctly scopes its explanation to traditional HTTP and modern HTTP/3 exception.
-- **Source-origin:** Only `s14-transport-multiplexing-source-001` is marked source-origin. The other 37 items are AI-generated; sourceRefs alone do not establish source answer provenance.
+- **Source-origin:** Only `s14-transport-multiplexing-source-001` is marked source-origin. The other 43 items are AI-generated; sourceRefs alone do not establish source answer provenance.
 
 ### Remaining work before sign-off
 
@@ -1037,7 +1037,7 @@ The active `transport-layer` lesson contains **44 questions** in `src/data/learn
 - Verify UDP checksum wording and the IPv4/IPv6 checksum distinction against the native UDP header exhibit.
 - Review TCP byte-stream framing with a learner exercise and verify that the read/write example is unambiguous.
 - Validate the socket-table example on Windows `netstat -ano` or Linux `ss -tunap` and compare local/foreign endpoints with a live connection.
-- Expand port retrieval to cover the source's service list, including FTP 20/21, Telnet 23, SMTP 25, DNS 53 TCP/UDP, DHCP 67/68 UDP, TFTP 69 UDP, HTTP 80, POP3 110, IMAP 143, SNMP 161 UDP, and HTTPS 443 with explicit version/protocol caveats where appropriate.
+- Verify the expanded service-port matching against the native source table, including FTP 20/21 and the protocol-specific DHCP/TFTP/SNMP assignments.
 - Inspect original TCP header, UDP header, handshake/termination, and sliding-window exhibits at native resolution before creating any additional source-origin questions.
 - Execute Packet Tracer **14.8.1 — TCP and UDP Communications**. Generate the required traffic in Simulation Mode, inspect TCP and UDP PDUs, compare headers/ports, and record the observed session/reliability behavior. This activity has not been executed or independently verified in this audit.
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
