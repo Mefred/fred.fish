@@ -22,13 +22,13 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 406 |
+| 2 | 405 |
 | 3 | 78 |
-| 4 | 38 |
+| 4 | 39 |
 | 5 | 23 |
-| 6 | 21 |
+| 6 | 20 |
 | 7 | 6 |
-| 8 | 8 |
+| 8 | 9 |
 | 9 | 6 |
 | 10 | 5 |
 | 11 | 6 |
@@ -41,19 +41,19 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 20 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 406 concepts (66.2%) sit exactly at the two-question minimum.
+**Priority implication:** 405 concepts (66.1%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 237 |
-| Multiple select | 37 |
+| Single choice | 236 |
+| Multiple select | 38 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 100 |
+| Matching | 91 |
 | Ordering | 22 |
-| Scenario / troubleshooting | 180 |
+| Scenario / troubleshooting | 189 |
 | **Total** | **629** |
 
 ## Difficulty
@@ -62,8 +62,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 |---|---:|
 | 1 — Introductory | 46 |
 | 2 — Foundational | 171 |
-| 3 — Applied | 274 |
-| 4 — Advanced | 116 |
+| 3 — Applied | 270 |
+| 4 — Advanced | 120 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
@@ -195,3 +195,13 @@ Six additional diagram-based AI-generated questions now use verified visual cont
   - Module 16: endpoint protection and EDR containment/telemetry preservation.
 - Recomputed snapshot: **629 questions, 629 unique IDs/prompts, 613 concept tags, 42 source-origin, 587 AI-generated**. All concept tags remain at or above the two-question minimum.
 - Updated bank-wide format and difficulty distributions from the active seed; the coverage report was reconciled separately.
+
+
+### Duplicate cleanup — Modules 15–16
+
+- Reworked `s15-hybrid-p2p-applied-002` to test pure P2P without a central index, distinct from the hybrid-P2P architecture question.
+- Reworked `s15-http-methods-applied-002` into an applied PUT/idempotency scenario; the HTTP method matching item remains the broad method map.
+- Reworked `s15-file-sharing-protocols-applied-002` into an FTP control-versus-data connection troubleshooting scenario.
+- Reworked six Module 16 matching duplicates into applied scenarios: AAA authorization, Trojan behavior, denial-of-service objective, technological vulnerability, stateful firewall inspection, and environmental threat mitigation.
+- Reworked `s16-vpn-ips-applied-002` into a two-control selection scenario. Existing question IDs and provenance remain unchanged.
+- Recomputed formats and difficulty from the active seed: **236 single, 38 multiple, 1 true/false, 52 fill, 91 matching, 22 ordering, 189 scenario**; difficulty **46 / 171 / 270 / 120 / 22**. The 629-question and 613-concept totals remain unchanged, with no under-practiced tags.
