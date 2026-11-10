@@ -10,7 +10,7 @@
 - IMG-0348 is a source visual of a four-pair UTP cable and is already linked to an active source question.
 - The other 30 images are unmarked question prompts, answer-option screens without selected choices, or instructional slides/diagrams. They do not provide a new unambiguous answer key.
 - This batch originally added no question; a later visual review linked IMG-0324 with IMG-0557 to a new source-origin coaxial question. The existing UTP question was also linked to IMG-0545 in batch 4. Current totals are 39 source-origin image-question associations and fourteen unique AI-generated visual-context image references (53 combined reviewed associations).
-- Across batches 1–4, 63 of 144 candidates have now been opened at native resolution; 81 remain contact-sheet-only. Continue native-resolution review where small answer marks or diagram details could affect interpretation.
+- Across batches 1–4, 76 of 144 candidates have now been opened at native resolution; 68 remain contact-sheet-only. Continue native-resolution review where small answer marks or diagram details could affect interpretation.
 
 ## Candidate-by-candidate log
 
