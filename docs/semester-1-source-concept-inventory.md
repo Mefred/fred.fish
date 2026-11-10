@@ -826,6 +826,7 @@ The active `router-configuration` lesson contains **27 questions** in `src/data/
 
 ### Duplicate, scope, and source-answer findings
 
+- **Legacy ID naming:** `s10-router-no-shutdown-001` retains a historical ID whose prompt now tests hostname and enable-secret baseline configuration; `s10-interface-no-shutdown-001` is the actual `no shutdown` question. Preserve both IDs for learner-progress stability and use the prompt/lesson mapping as authoritative.
 - **Interface activation:** `s10-interface-no-shutdown-001` retains direct `no shutdown` retrieval; `s10-router-no-shutdown-001` now tests hostname and enable secret, while the ordering and two-interface tasks assess configuration workflow and application.
 - **Router memory:** the four-memory matching item remains the comprehensive mapping; the setup-dialog scenario tests missing startup-config, and the ordering item tests the ROM/bootstrap → IOS image → startup-config → CLI sequence.
 - **Interface verification:** `s10-ios-commands-applied-002` now interprets up/up, administratively down/down, and up/down states instead of repeating the brief-command prompt.
@@ -834,7 +835,7 @@ The active `router-configuration` lesson contains **27 questions** in `src/data/
 - **SSH setup:** `s10-ssh-management-hardening-003` now orders the full hostname/domain, secret, RSA, VTY local-authentication, SSH-only transport, and save sequence. The VTY configuration and prerequisite-diagnosis items remain distinct.
 - **Potential scope bleed:** Switch `ip default-gateway` is included in the Module 10 source content, but label it explicitly as Layer 2 switch management. Do not turn it into a router default-route question.
 - **Review extract hazards:** The extracted review answer for the NVRAM question includes “to store the routing table,” which is incorrect; NVRAM retains startup configuration, while the active routing table is in RAM. The extracted banner-test answer says reboot the device; a banner can be tested by exiting configuration mode and opening a new session (for a login banner, initiate a new login), without rebooting. The extracted default-gateway question says an incorrect gateway prevents communication with other local hosts; that is generally false for same-subnet communication, which does not require the default gateway. It primarily breaks off-subnet reachability.
-- **Provenance:** Only `s10-show-ipv6-interface-001` is marked source-origin. The other 28 questions are AI-generated
+- **Provenance:** Only `s10-show-ipv6-interface-001` is marked source-origin. The other 26 questions are AI-generated
 
 ### Remaining work before sign-off
 
