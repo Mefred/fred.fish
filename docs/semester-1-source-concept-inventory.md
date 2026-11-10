@@ -1105,7 +1105,7 @@ Module 15 is **partially audited, not signed off**. Continue next with Module 16
 
 ### Active lesson inventory
 
-The active `network-security` lesson contains **31 questions** after the two new security-impact/MITM scenarios: **2 source-origin** and **29 AI-generated**. Six questions retain legacy `s1-*` identifiers; two are source-origin (`s1-security-001`, `s1-security-clinic-001`) and four are AI-generated (`s1-security-threat-vectors-001`, `s1-security-defense-layers-001`, `s1-security-mapping-001`, `s1-architecture-requirements-applied-002`). The remaining 23 questions use `s16-*` IDs and are AI-generated. Treat the legacy IDs as stable question identifiers; the `lessonId` is authoritative for current curriculum placement.
+The active `network-security` lesson contains **31 questions** after the two new security-impact/MITM scenarios: **2 source-origin** and **29 AI-generated**. Six questions retain legacy `s1-*` identifiers; two are source-origin (`s1-security-001`, `s1-security-clinic-001`) and four are AI-generated (`s1-security-threat-vectors-001`, `s1-security-defense-layers-001`, `s1-security-mapping-001`, `s1-architecture-requirements-applied-002`). The remaining 25 questions use `s16-*` IDs and are AI-generated. Treat the legacy IDs as stable question identifiers; the `lessonId` is authoritative for current curriculum placement.
 
 ### Objective-to-question findings
 
@@ -1138,8 +1138,8 @@ The active `network-security` lesson contains **31 questions** after the two new
 - **ACL overlap:** `s16-acl-scenario-001` and `s16-acl-applied-002` both test extended packet filtering. Differentiate a conceptual match from a rule-order/implicit-deny application.
 - **Source-answer hazard:** The source review extract for `service password-encryption` says it “requires encrypted passwords to be used when connecting.” This is inaccurate. The command obscures plaintext passwords in the configuration using weak reversible Type 7 encoding; it does not force encrypted authentication on the wire and does not replace SSH or strong secret hashes.
 - **Source malware hazard:** The source lecture describes Trojan horses as self-replicating. Do not repeat this as a defining property; a Trojan is malware disguised as legitimate software, and it does not inherently self-replicate.
-- **Legacy identifiers:** `s1-security-001` and `s1-security-clinic-001` are assigned to the `network-security` lesson despite their Module 1-style IDs. Keep their source provenance only if their original source questions are verified, and either rename with references updated or document the deliberate cross-module carryover.
-- **Provenance:** Two of 27 active lesson questions are source-origin, but both are legacy `s1-*` questions. None of the 25 `s16-*` questions is currently marked source-origin.
+- **Legacy identifiers:** Six `s1-*` IDs are assigned to the `network-security` lesson despite their Module 1-style prefixes. Their original IDs are deliberately retained for progress/history stability; `lessonId` is authoritative for curriculum placement. Two are source-origin and four are AI-generated.
+- **Provenance:** Two of 31 active lesson questions are source-origin, and both are legacy `s1-*` questions. None of the 25 `s16-*` questions is currently marked source-origin.
 
 ### Remaining work before sign-off
 
