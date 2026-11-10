@@ -190,12 +190,12 @@ The Module 5 objectives recovered from the lecture notes are mapped against the 
 | Binary Number System | Base-2 digits; positional notation; bit values; 8-bit octets; IPv4 dotted-decimal notation; decimal/binary conversion | `binary`, `binary-to-decimal`, `decimal-to-binary`, `binary-positional-notation`, `octet`, `dotted-decimal-notation` | Represented with direct conversions and IPv4 octet interpretation. More mixed multi-octet conversion drills would improve fluency. |
 | Hexadecimal Number System | Base-16 digits 0–9/A–F; 4-bit nibbles; binary/hex conversion; decimal/hex conversion; IPv6 128-bit addresses and hextets | `hexadecimal`, `hexadecimal-to-decimal`, `decimal-to-hexadecimal`, `hexadecimal-to-binary`, `binary-to-hexadecimal`, `hextet`, `ipv6-address-structure` | Represented with conversions in both directions, hextet structure, and IPv6 digit counts. More long-form IPv6 address conversion practice remains useful. |
 
-The lesson now contains 21 active questions and 21 distinct concept tags. Eight new AI-generated questions add decimal/hexadecimal and hexadecimal/binary conversions, positional-notation matching, hextet identification/counting, binary-octet arithmetic, and IPv4 dotted-decimal reasoning. They are derived from the recovered Module 5 notes, not verbatim source questions.
+The active `number-systems` lesson contains **22 questions** and **21 distinct concept tags**. Its bank includes direct binary/decimal conversions, multi-octet IPv4 conversion, decimal/hexadecimal conversion, hexadecimal/binary conversion, nibble grouping, IPv6 hextet structure, MAC-address hexadecimal length, and positional-notation matching. The applied dotted-decimal item tests the 0–255 octet boundary. All active items remain AI-generated and are derived from the recovered Module 5 notes, not presented as verbatim source questions.
 
 
 ## Module 6 first-pass topic-to-question mapping
 
-The recovered Module 6 source identifies three main areas: the purpose of the Data Link Layer, LAN/WAN topologies and media-access methods, and the structure and functions of the data-link frame. The active `data-link-layer` lesson now has 26 questions.
+The recovered Module 6 source identifies three main areas: the purpose of the Data Link Layer, LAN/WAN topologies and media-access methods, and the structure and functions of the data-link frame. The active `data-link-layer` lesson has **27 assigned questions**, including the cross-module first-hop MAC scenario.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -203,7 +203,7 @@ The recovered Module 6 source identifies three main areas: the purpose of the Da
 | Topologies | Point-to-point, multi-access, point-to-multipoint, hub-and-spoke, mesh; contention-based and controlled access; half/full duplex; CSMA/CD and CSMA/CA | `point-to-point-topology`, `multiaccess-topology`, `wan-topologies`, `hub-and-spoke-topology`, `mesh-topology`, `contention-based-access`, `controlled-access`, `csma-cd`, `csma-ca`, `half-duplex`, `full-duplex` | Improved; matching now covers the three common physical WAN topologies and duplex modes, while scenarios distinguish deterministic controlled access from contention-based methods. |
 | Data Link Frame | Frame header, data and trailer; start/stop boundaries; source/destination MAC addressing; type, control, payload, error detection and FCS | `data-link-frame`, `frame-fields`, `frame-structure`, `mac-addressing`, `frame-type-field`, `frame-control-field`, `frame-payload`, `fcs`, `error-detection` | Improved; matching directly assesses six frame-field roles, alongside existing frame structure, MAC addressing, FCS purpose, and corrupted-frame handling. |
 
-Four new AI-generated questions add frame-field matching, WAN topology matching, controlled-access application, and duplex-mode matching. They are based on recovered Module 6 notes and existing Data Link Layer source references, not presented as verbatim source questions. Diagram-dependent topology and frame exhibits still require direct visual verification.
+Seven focused AI-generated additions/rewrites now cover generic frame-field roles, Ethernet II component roles, WAN topology matching, controlled-access application, duplex-mode matching/troubleshooting, and topology application. They are based on recovered Module 6 notes and existing Data Link Layer source references, not presented as verbatim source questions. Diagram-dependent topology and frame exhibits still require direct visual verification.
 
 ## Module 7 first-pass topic-to-question mapping
 
@@ -632,13 +632,14 @@ The active `data-link-layer` lesson contains **27 assigned questions**: 26 `s6-*
 - **FCS repetition:** `s6-fcs-corruption-response-002` has been repurposed to IEEE standards; `s6-frame-structure-applied-002` now tests PPP on a serial WAN. The remaining FCS items retain a definition, corrupted-frame response, and receive-processing sequence; check for overlap during learner review.
 - **MAC/LLC repetition:** the direct MAC/LLC questions now pair with medium-specific MAC application and precise 802.2 SAP interpretation.
 - **Topology repetition:** the applied items now test physical-versus-logical topology and a redundancy/cost decision, distinct from basic topology matching.
+- **Frame-field matching overlap — resolved:** `s6-frame-fields-match-001` remains a generic data-link frame-field exercise, while `s6-frame-fields-applied-002` now specifically matches Ethernet II preamble/SFD, source/destination MAC addresses, EtherType, payload, and FCS. The second item no longer repeats the generic Type/Control/Data/Boundary exercise.
 - **All 27 assigned questions remain AI-generated.** The lecture notes and review questions contain unmarked or ambiguous answer content; provenance must remain AI-generated until a source image or authoritative answer state visibly establishes the answer.
 - **Module boundary:** Keep switch MAC-table learning, unknown-unicast flooding, VLAN forwarding, and switching methods primarily in Module 7 (Ethernet Switching). The Module 6 router re-encapsulation and local-link MAC framing questions are appropriate reinforcement, but avoid letting the Data Link lesson become a duplicate Ethernet-switching lesson.
 
 ### Remaining work before sign-off
 
 - Verify the native-resolution diagrams for the frame-field layout and topology exhibits; text extraction alone does not establish diagram fidelity.
-- Review the remaining frame-field matching overlap and FCS receive-processing sequence in a learner session; the identified LLC/MAC, CSMA/CA, controlled-access, duplex, and topology duplicates have been differentiated.
+- Review the generic frame-field and Ethernet II component matching exercises plus the FCS receive-processing sequence in a learner session; their content scopes are now explicitly differentiated.
 - Locate and execute the Module 6 Packet Tracer switch-port activity, then verify the source answer state.
 - Run the question-bank validator and regenerate coverage documentation after any content edits.
 
