@@ -4,7 +4,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - **Questions:** 630
 - **Lessons represented:** 22
-- **Distinct concept tags:** 613
+- **Distinct concept tags:** 614
 
 ## Lesson coverage
 
@@ -14,7 +14,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | application-layer | 27 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 11, single: 7 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 43 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
-| ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
+| ethernet-switching | 38 | 58 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
@@ -38,9 +38,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Questions per concept | Number of concepts |
 |---:|---:|
 | 2 | 399 |
-| 3 | 85 |
-| 4 | 37 |
-| 5 | 24 |
+| 3 | 86 |
+| 4 | 36 |
+| 5 | 25 |
 | 6 | 18 |
 | 7 | 8 |
 | 8 | 9 |
@@ -944,6 +944,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 2 | network-security |
 | `authorization` | 2 | network-security |
+| `autonegotiation` | 2 | ethernet-switching |
 | `auto-mdix` | 2 | ethernet-switching |
 | `bandwidth` | 4 | physical-layer, reliable-networks |
 | `base-10` | 2 | number-systems |
@@ -957,7 +958,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 2 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
-| `broadcast` | 4 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
+| `broadcast` | 5 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
 | `broadcast-address` | 8 | ipv4-addressing |
 | `broadcast-domains` | 2 | ipv4-addressing |
 | `broadcast-storm` | 2 | ethernet-switching |
@@ -1253,7 +1254,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multi-device-troubleshooting` | 2 | small-network |
 | `multi-service-server` | 2 | small-network |
 | `multiaccess-topology` | 2 | data-link-layer |
-| `multicast` | 2 | ipv4-addressing, protocols-and-models |
+| `multicast` | 3 | ethernet-switching, ipv4-addressing, protocols-and-models |
 | `multicast-address` | 2 | ipv6-addressing |
 | `multicast-group` | 2 | ipv4-addressing |
 | `multimode-fiber` | 3 | physical-layer |
@@ -1546,8 +1547,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 85 |
 | multiple | 36 |
 | ordering | 23 |
-| scenario | 205 |
-| single | 228 |
+| scenario | 207 |
+| single | 226 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1555,8 +1556,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 164 |
-| 3 | 270 |
+| 2 | 163 |
+| 3 | 271 |
 | 4 | 128 |
 | 5 | 22 |
 
