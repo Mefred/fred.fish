@@ -31,7 +31,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
 | small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
-| transport-layer | 42 | 36 | fill: 2, matching: 3, multiple: 6, ordering: 2, scenario: 8, single: 21 | 1–4 |
+| transport-layer | 42 | 36 | fill: 2, matching: 3, multiple: 6, ordering: 2, scenario: 9, single: 20 | 1–4 |
 
 ## Concept exposure distribution
 
@@ -41,8 +41,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 3 | 78 |
 | 4 | 39 |
 | 5 | 23 |
-| 6 | 20 |
-| 7 | 6 |
+| 6 | 19 |
+| 7 | 7 |
 | 8 | 9 |
 | 9 | 6 |
 | 10 | 5 |
@@ -50,8 +50,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 12 | 2 |
 | 13 | 2 |
 | 14 | 3 |
-| 15 | 3 |
-| 16 | 3 |
+| 15 | 2 |
+| 16 | 4 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
@@ -1546,8 +1546,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 91 |
 | multiple | 38 |
 | ordering | 22 |
-| scenario | 189 |
-| single | 236 |
+| scenario | 190 |
+| single | 235 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1555,9 +1555,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 171 |
-| 3 | 270 |
-| 4 | 120 |
+| 2 | 169 |
+| 3 | 271 |
+| 4 | 121 |
 | 5 | 22 |
 
 ## Interpretation and limits
