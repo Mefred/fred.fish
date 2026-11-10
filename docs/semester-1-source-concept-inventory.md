@@ -60,13 +60,13 @@ This pass identifies content-level coverage and taxonomy problems; it does not m
 
 **Review status:** first content-level pass completed against the recovered Module 2 objectives, IOS navigation/configuration explanations, configuration-file material, and active question records. Visual exhibits and execution of the source Packet Tracer activities have not yet been signed off.
 
-The active seed contains **28** records assigned to `basic-device-configuration`. This is a useful base, but some questions appear to extend beyond the eight Module 2 topic objectives and should be treated as scope checks rather than automatic coverage.
+The active seed contains **30** records assigned to `basic-device-configuration`. This is a useful base, but some questions appear to extend beyond the eight Module 2 topic objectives and should be treated as scope checks rather than automatic coverage.
 
 | Topic objective | Active question evidence | Source alignment and gaps |
 |---|---|---|
 | Cisco IOS Access | `s2-console-connection-001`, `s2-console-access-applied-002`. | **Partially represented:** out-of-band console access is assessed. The objective also requires explaining access methods; verify lesson coverage of console versus remote access and the role of terminal-emulation software. |
 | IOS Navigation | `s2-mode-order-001`, `s2-ios-modes-order-001`, `s2-ios-navigation-applied-002`, `s2-ios-modes-applied-002`. | **Represented:** User EXEC, Privileged EXEC, global configuration, and interface configuration progression are assessed. Check that learners distinguish `exit`, `end` / Ctrl-Z, and moving between nested configuration modes. |
-| The Command Structure | `s2-config-keyword-001`, `s2-ios-keyword-001`. | **Improved:** one item identifies `running-config` as a fixed keyword; the other distinguishes the `ping` command from its user-supplied destination IP argument. Context-sensitive `?` help and unique-prefix completion still need explicit learner practice if retained in the lesson objective. |
+| The Command Structure | `s2-config-keyword-001`, `s2-ios-keyword-001`, `s2-context-help-applied-001`, `s2-tab-completion-applied-001`. | **Covered at a first-pass level:** fixed keywords, user-supplied IP arguments, context-sensitive `?` help, and unique-prefix Tab completion each have practice. These are AI-generated/ source-supported distinctions as labeled in the seed; check actual device output during a learner session. |
 | Basic Device Configuration | `s2-password-encryption-001`, `s2-admin-down-001`, `s2-enable-secret-001`, `s2-enable-secret-applied-002`, `s2-password-encryption-applied-002`, `s2-ios-interface-config-applied-002`. | **Partially represented:** hostname/password hardening and interface activation appear in the bank. The source also includes a legal MOTD banner and basic device setup; verify direct practice for hostname, banner, console/VTY line passwords, and privileged EXEC protection. |
 | Save Configurations | `s2-save-config-001`, `s2-config-save-troubleshoot-001`. | **Represented at core level:** startup-config versus running-config and persistence across reboot are tested. Add verification/backup workflow only if it is present in the source lesson; the source also describes capturing displayed configuration text to a file. |
 | Ports and Addresses | `s2-interface-status-001`, `s2-console-connection-001`, `s2-interface-verify-loop-001`, `s2-interface-configuration-applied-002`, `s2-ios-interface-config-applied-002`, `s2-console-access-applied-002`. | **Partially represented:** interface state and console connection are tested. The source explains physical ports versus switch virtual interfaces and media-selection factors; avoid conflating a physical Layer 2 switch port with an SVI. The access-port/VLAN 30 question may be beyond this module's stated scope and should be checked against the source sequence. |
@@ -75,13 +75,13 @@ The active seed contains **28** records assigned to `basic-device-configuration`
 
 ### Module 2 scope and quality findings
 
-1. **Command-syntax coverage:** the former duplicate has been replaced with a `ping 10.10.10.5` argument-identification scenario. The source also teaches context-sensitive `?` help and Tab completion; consider adding those as a distinct interactive practice task rather than another keyword definition.
+1. **Command-syntax coverage:** the former duplicate has been replaced with a `ping 10.10.10.5` argument-identification scenario. Two additional scenarios assess context-sensitive `?` help and unique-prefix Tab completion.
 2. **Potential curriculum bleed:** `s2-dhcp-purpose-002`, `s2-ipv6-auto-config-001`, and `s2-dns-client-config-applied-002` are included in the 27-record lesson assignment, but their primary concepts extend into address-configuration/application-service topics elsewhere in the course. Confirm the actual Module 2 source pages before counting them toward this objective.
 3. **Potential later-module configuration:** `s2-interface-configuration-applied-002` tests assigning an access switchport to VLAN 30. The Module 2 objective is initial switch/end-device configuration; verify whether this VLAN task is present in the source material before retaining it in this lesson.
 4. **Command-mode precision:** the source identifies User EXEC and Privileged EXEC as the two primary management access modes, with global and subconfiguration modes entered from Privileged EXEC. Ensure question explanations do not imply global configuration is a peer of the two EXEC modes.
 5. **Operational safety:** the source Packet Tracer tasks include basic configuration and saving to NVRAM. The learning content should distinguish a change to running-config (immediate operational effect) from an explicit save to startup-config (persistence after reboot).
 
-Module 2 is **partially audited, not signed off**. The command-syntax duplicate and missing end-to-end ping scenario have been addressed. Remaining work is source-scope reconciliation, `?`/Tab practice, visual exhibit checks, and execution of the source Packet Tracer activity.
+Module 2 is **partially audited, not signed off**. The command-syntax duplicate, context-sensitive help/Tab gaps, and missing end-to-end ping scenario have been addressed. Remaining work is source-scope reconciliation, visual exhibit checks, and execution of the source Packet Tracer activity.
 
 ## Page-by-page source verification: Module 3
 
@@ -413,7 +413,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 646 questions across 24 lesson IDs and 616 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 253 additions over the original 393-question bank comprise 235 AI-generated and 18 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 648 questions across 24 lesson IDs and 617 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 255 additions over the original 393-question bank comprise 237 AI-generated and 18 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -445,7 +445,7 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-There are 40 source-origin image-question associations plus fifteen unique reviewed image references used by AI-generated applied questions (55 total). The question bank contains 646 records across 616 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
+There are 40 source-origin image-question associations plus fifteen unique reviewed image references used by AI-generated applied questions (55 total). The question bank contains 648 records across 617 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
 
 
 ## Additional source-verified Module 8 questions
@@ -457,7 +457,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 646 questions, 42 source-origin questions, and 604 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 648 questions, 42 source-origin questions, and 606 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
@@ -576,7 +576,7 @@ The recovered IMG-0601 exhibit contains an unfilled matching activity and a visi
 
 ### IPv4 Protocol-field source question
 
-IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. This increases the source-origin count to 42; the current bank now contains 646 questions across 616 concept identifiers. It does not add a new concept identifier.
+IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. This increases the source-origin count to 42; the current bank now contains 648 questions across 617 concept identifiers. It does not add a new concept identifier.
 
 
 ### IMG-0562 first-hop Layer 2 destination scenario
@@ -1278,4 +1278,4 @@ Module 4 is **partially audited, not signed off**. With this section added, the 
 - Reworked `s15-http-methods-applied-002` into a PUT/idempotency scenario and `s15-file-sharing-protocols-applied-002` into an FTP control/data-channel troubleshooting scenario.
 - Reworked `s16-aaa-functions-applied-002`, `s16-malware-types-applied-002`, `s16-attack-categories-applied-002`, `s16-vulnerability-types-applied-002`, `s16-firewall-filtering-applied-002`, and `s16-physical-threats-applied-002` from duplicate matching tasks into concrete scenarios.
 - Reworked `s16-vpn-ips-applied-002` into a two-control selection item. The original broad matching questions remain as retrieval practice; the revised items now test application of those distinctions.
-- No question IDs were removed or duplicated. The active bank now contains 646 questions and 616 concept tags; all concepts retain at least two questions.
+- No question IDs were removed or duplicated. The active bank now contains 648 questions and 617 concept tags; all concepts retain at least two questions.
