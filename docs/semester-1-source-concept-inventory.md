@@ -792,7 +792,7 @@ Module 9 is **partially audited, not signed off**. Continue next with Module 10 
 
 ### Active lesson inventory
 
-The active `router-configuration` lesson contains **29 questions** in `src/data/learning/semester-1-seed.ts`: **1 source-origin** and **28 AI-generated**.
+The active `router-configuration` lesson contains **27 questions** in `src/data/learning/semester-1-seed.ts`: **1 source-origin** and **26 AI-generated**.
 
 | Active question group | IDs | Audit finding |
 |---|---|---|
@@ -837,7 +837,7 @@ The active `router-configuration` lesson contains **29 questions** in `src/data/
 
 - Review the two-interface addressing scenario and secure-baseline commands in a learner session; the identified no-shutdown, memory, interface-verification, switch-gateway, router-function, and SSH duplicates have been differentiated.
 - Verify hostname, enable secret, console authentication, Type 7 password obfuscation, and banner testing against the native source exhibits before sign-off.
-- Add a two-interface configuration scenario using a supplied topology/addressing table and a verification-output interpretation task.
+- Review the two-interface addressing scenario and mixed interface-status output in a learner session.
 - Inspect the router/interface/default-gateway source exhibits at native resolution before adding any source-origin items.
 - Execute the source Packet Tracer activities **Build a Switch and Router Network (Lab 10.4.4)**, **Connect a Router to a LAN**, and **Troubleshoot Default Gateway Issues**. Record actual interface states, configuration commands, end-to-end connectivity, and the troubleshooting/documentation workflow. These are not complete merely because their text appears in the lecture notes.
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
