@@ -86,7 +86,7 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. One hundred nineteen have now been opened individually at native resolution, leaving 25 contact-sheet-only candidates in these four batches. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. One hundred twenty-nine have now been opened individually at native resolution, leaving 15 contact-sheet-only candidates in these four batches. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
 
 ## High-resolution contact-sheet review — batch 3
 
@@ -229,3 +229,8 @@ Ten more images, IMG-0590–IMG-0599, were opened individually at native resolut
 ## Native-resolution follow-up — ten additional images (follow-up 9)
 
 Ten more images, IMG-0600–IMG-0609, were opened individually at native resolution after SHA-256-verified recovery. IMG-0600, IMG-0602–0606, IMG-0608, and IMG-0609 are instructional slides, diagrams, terminology summaries, or section markers. IMG-0601 is an unfilled routing-table matching activity; its table is legible, so one AI-generated applied matching question now uses the five destination/interface mappings without claiming a source answer key. IMG-0607 contains an IPv4 TTL prompt whose adjacent table explicitly identifies the answer and is already linked to source-origin question s8-ipv4-ttl-field-source-001. No new source-origin association was needed. The cumulative total for the 144 candidates in batches 1–4 is now **119 opened at native resolution / 25 contact-sheet-only**. See [native-resolution follow-up 9](./semester-1-image-review-native-followup-9.md).
+
+
+## Native-resolution follow-up — ten additional images (follow-up 10)
+
+Ten more images, IMG-0610–IMG-0619, were opened individually at native resolution after SHA-256-verified recovery. IMG-0610 is a video-introduction slide; IMG-0611–0614 and IMG-0616–0618 are instructional material or module-review slides. IMG-0615's destination-address question and answer are already represented by source-origin question s8-ipv4-destination-address-field-source-001. IMG-0619 explicitly asks for the IPv4 field identifying the next-level protocol, and the adjacent table supplies the answer (Protocol); this is now source-origin question s8-ipv4-protocol-field-source-001. The cumulative total for the 144 candidates in batches 1–4 is now **129 opened at native resolution / 15 contact-sheet-only**. See [native-resolution follow-up 10](./semester-1-image-review-native-followup-10.md).
