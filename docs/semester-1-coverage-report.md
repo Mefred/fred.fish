@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 654
+- **Questions:** 656
 - **Lessons represented:** 24
-- **Distinct concept tags:** 619
+- **Distinct concept tags:** 620
 
 ## Lesson coverage
 
@@ -32,30 +32,30 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 11, multiple: 2, ordering: 3, scenario: 5, single: 17 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 27 | 40 | fill: 1, matching: 1, multiple: 1, ordering: 3, scenario: 16, single: 5 | 1–5 |
-| small-network | 61 | 89 | fill: 3, matching: 4, multiple: 6, ordering: 3, scenario: 35, single: 10 | 1–5 |
+| small-network | 63 | 90 | fill: 3, matching: 4, multiple: 6, ordering: 3, scenario: 36, single: 11 | 1–5 |
 | transport-layer | 44 | 37 | fill: 2, matching: 2, multiple: 6, ordering: 2, scenario: 14, single: 18 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 375 |
+| 2 | 376 |
 | 3 | 96 |
 | 4 | 47 |
 | 5 | 26 |
 | 6 | 15 |
-| 7 | 13 |
+| 7 | 12 |
 | 8 | 9 |
-| 9 | 5 |
+| 9 | 6 |
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 5 |
 | 13 | 2 |
 | 14 | 1 |
 | 15 | 4 |
-| 17 | 3 |
+| 17 | 2 |
 | 18 | 3 |
-| 19 | 1 |
+| 19 | 2 |
 | 21 | 1 |
 | 33 | 1 |
 
@@ -851,6 +851,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `ipv4-troubleshooting`
 - `ipv6-interface-verification`
 - `link-local-address`
+- `linux-network-commands`
 - `mac-addressing`
 - `multi-device-troubleshooting`
 - `multi-service-server`
@@ -1138,7 +1139,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hierarchical-topology` | 2 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
 | `host-configuration` | 4 | basic-device-configuration, ipv4-addressing, small-network |
-| `host-ip-configuration` | 7 | small-network |
+| `host-ip-configuration` | 9 | small-network |
 | `host-reachability` | 4 | icmp |
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 9 | address-resolution, router-configuration, small-network |
@@ -1256,6 +1257,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `leased-line` | 2 | internet-connections |
 | `line-protocol` | 2 | basic-device-configuration, router-configuration |
 | `link-local-address` | 7 | ipv4-addressing, ipv6-addressing, small-network |
+| `linux-network-commands` | 2 | small-network |
 | `llc-sublayer` | 3 | data-link-layer, protocols-and-models |
 | `local-authentication` | 3 | network-security, router-configuration |
 | `local-route` | 2 | network-layer |
@@ -1322,7 +1324,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-security-controls` | 19 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
-| `network-troubleshooting` | 17 | icmp, internet-connections, small-network |
+| `network-troubleshooting` | 19 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | it-professional |
 | `networks-affect-lives` | 2 | networks-connect-us |
 | `next-hop` | 9 | data-link-layer, ipv6-addressing, network-layer, small-network |
@@ -1580,8 +1582,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 75 |
 | multiple | 36 |
 | ordering | 25 |
-| scenario | 268 |
-| single | 205 |
+| scenario | 269 |
+| single | 206 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1590,10 +1592,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 43 |
 | 2 | 154 |
-| 3 | 279 |
-| 4 | 156 |
+| 3 | 280 |
+| 4 | 157 |
 | 5 | 22 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory now documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
