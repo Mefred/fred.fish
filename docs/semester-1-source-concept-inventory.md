@@ -317,7 +317,7 @@ The recovered Module 16 objective is to configure switches and routers with devi
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
 | Security Threats and Vulnerabilities | Internal/external threat actors; technological, configuration, and policy vulnerabilities; physical hardware, environmental, electrical, and maintenance threats | `security-threat-vectors`, `insider-threat`, `vulnerabilities`, `technological-vulnerability`, `configuration-vulnerability`, `security-policy-vulnerability`, `physical-security` | Improved; matching distinguishes all three vulnerability classes and all four physical threat categories. Specific threat outcomes and incident response remain possible additions. |
-| Network Attacks | Malware (virus, worm, Trojan); reconnaissance, access, and DoS; password, trust exploitation, port redirection, and man-in-the-middle attacks | `malware`, `virus`, `worm`, `trojan-horse`, `network-attacks`, `reconnaissance-attacks`, `access-attacks`, `denial-of-service` | Improved; new matching items cover malware behavior and the three major attack categories. Specific access-attack techniques and DoS examples remain under-practiced. Endpoint protection now has host-based prevention and EDR containment scenarios. |
+| Network Attacks | Malware (virus, worm, Trojan); reconnaissance, access, and DoS; password, trust exploitation, port redirection, and man-in-the-middle attacks | `malware`, `virus`, `worm`, `trojan-horse`, `network-attacks`, `reconnaissance-attacks`, `access-attacks`, `denial-of-service` | Improved; new matching items cover malware behavior and the three major attack categories. Specific access-attack techniques and DoS examples remain under-practiced. Endpoint protection now has host-based prevention and EDR containment scenarios. Endpoint protection now has host-based prevention and EDR containment scenarios. |
 | Network Attack Mitigation | Defense in depth; firewalls and filtering; VPN; IPS; endpoint protection; AAA; physical controls | `defense-in-depth`, `firewall-filtering`, `endpoint-security`, `network-security-controls`, `aaa`, `vpn`, `ips`, `packet-filtering`, `application-filtering`, `url-filtering`, `stateful-packet-inspection` | Improved; new matching questions compare packet, application, URL, and stateful filtering and distinguish VPN, IPS, and AAA roles. |
 | Device Security | Strong passwords/passphrases; disable unused services; secure management with SSH; local user database; RSA keys; VTY access; password protection, login blocking, exec timeout | `authentication`, `authorization`, `accounting`, `aaa`, `device-hardening`, `ios-security-commands`, `ssh`, `rsa-keys` | Improved; new matching and ordering items test password protection, minimum length, login blocking, exec timeout, SSH-only VTY access, local user setup, RSA key generation, and SSH configuration order. |
 
@@ -1253,6 +1253,15 @@ The active `physical-layer` lesson contains **44 questions**: **3 source-origin*
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
 
 Module 4 is **partially audited, not signed off**. With this section added, the source-concept inventory has detailed audit sections for Modules 1–17. Remaining work is content correction and deduplication, native-image verification, source lab execution, accessibility/learner testing, and final PR validation.
+
+
+### Focused question-bank expansion — Modules 14–16 (November 10, 2026)
+
+- **Module 14:** Added four AI-generated items: a typical FIN/ACK four-message close sequence, RST versus orderly FIN interpretation, UDP Length-field payload calculation, and UDP's four basic header fields. The FIN sequence is explicitly described as a typical client-initiated close; each direction closes independently.
+- **Module 15:** Added four AI-generated items: DNS root-to-TLD-to-authoritative referral ordering, an authoritative-answer trace, DHCPv6 four-message address assignment, and stateless DHCPv6 alongside SLAAC when the RA flags are M=0/O=1.
+- **Module 16:** Added two AI-generated endpoint-defense scenarios: host-based endpoint protection and EDR network isolation while preserving telemetry during incident response.
+- The additions use existing source references as topic anchors and remain labeled AI-generated; none is represented as a verbatim source question.
+- All new concept tags are covered by at least two active questions. The existing validator's two-question minimum remains satisfied.
 
 
 ### Focused question-bank expansion — Modules 14–16 (November 10, 2026)
