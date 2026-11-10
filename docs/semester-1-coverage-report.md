@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 645
+- **Questions:** 646
 - **Lessons represented:** 24
-- **Distinct concept tags:** 615
+- **Distinct concept tags:** 616
 
 ## Lesson coverage
 
@@ -12,7 +12,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|---:|---|---|
 | address-resolution | 19 | 20 | fill: 1, matching: 1, scenario: 11, single: 6 | 1–4 |
 | application-layer | 29 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 15, single: 5 | 1–4 |
-| basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
+| basic-device-configuration | 28 | 46 | fill: 4, multiple: 1, ordering: 4, scenario: 11, single: 8 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
 | ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
 | icmp | 18 | 28 | matching: 1, scenario: 9, single: 8 | 2–4 |
@@ -41,12 +41,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 2 | 381 |
 | 3 | 93 |
-| 4 | 41 |
+| 4 | 42 |
 | 5 | 27 |
-| 6 | 18 |
-| 7 | 10 |
-| 8 | 8 |
-| 9 | 4 |
+| 6 | 17 |
+| 7 | 11 |
+| 8 | 7 |
+| 9 | 5 |
 | 10 | 6 |
 | 11 | 7 |
 | 12 | 4 |
@@ -129,9 +129,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### basic-device-configuration
 
+- `command-arguments`
 - `command-keywords`
 - `configuration-commands`
 - `configuration-persistence`
+- `connectivity-testing`
 - `console-access`
 - `default-gateway`
 - `device-management`
@@ -140,6 +142,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `dns-client-configuration`
 - `enable-secret`
 - `global-configuration`
+- `host-configuration`
 - `interface-configuration`
 - `interface-status`
 - `ios-command-modes`
@@ -159,6 +162,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `password-security`
 - `physical-layer-cabling`
 - `physical-layer-troubleshooting`
+- `ping`
 - `privileged-exec`
 - `remote-management`
 - `running-config`
@@ -1001,6 +1005,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `coaxial-cable` | 3 | physical-layer |
 | `collision-avoidance` | 2 | data-link-layer |
 | `collision-domains` | 2 | ethernet-switching |
+| `command-arguments` | 2 | basic-device-configuration |
 | `command-keywords` | 2 | basic-device-configuration |
 | `communication-rules` | 2 | protocols-and-models |
 | `confidentiality` | 2 | network-security |
@@ -1013,7 +1018,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `connected-routes` | 2 | network-layer |
 | `connectionless` | 2 | network-layer |
 | `connectionless-transport` | 2 | transport-layer |
-| `connectivity-testing` | 6 | icmp, small-network |
+| `connectivity-testing` | 7 | basic-device-configuration, icmp, small-network |
 | `console-access` | 2 | basic-device-configuration |
 | `contention-based-access` | 2 | data-link-layer |
 | `controlled-access` | 2 | data-link-layer |
@@ -1127,7 +1132,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hextets` | 2 | ipv6-addressing |
 | `hierarchical-topology` | 2 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
-| `host-configuration` | 3 | ipv4-addressing, small-network |
+| `host-configuration` | 4 | basic-device-configuration, ipv4-addressing, small-network |
 | `host-ip-configuration` | 7 | small-network |
 | `host-reachability` | 4 | icmp |
 | `host-role` | 2 | network-components |
@@ -1183,7 +1188,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ip-helper-address` | 2 | small-network |
 | `ipconfig-displaydns` | 3 | small-network |
 | `ips` | 2 | network-security |
-| `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
+| `ipv4-address-configuration` | 3 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 2 | ipv4-addressing |
 | `ipv4-addressing` | 7 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
 | `ipv4-differentiated-services` | 3 | network-layer |
@@ -1351,7 +1356,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-layer-troubleshooting` | 5 | basic-device-configuration, router-configuration, small-network |
 | `physical-security` | 2 | network-security |
 | `physical-topology` | 3 | network-topologies |
-| `ping` | 8 | icmp, small-network |
+| `ping` | 9 | basic-device-configuration, icmp, small-network |
 | `point-to-point-topology` | 3 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
@@ -1570,8 +1575,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 73 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 256 |
-| single | 210 |
+| scenario | 258 |
+| single | 209 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1579,8 +1584,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 43 |
-| 2 | 158 |
-| 3 | 277 |
+| 2 | 157 |
+| 3 | 279 |
 | 4 | 145 |
 | 5 | 22 |
 
