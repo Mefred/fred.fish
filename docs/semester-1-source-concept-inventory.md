@@ -1263,3 +1263,12 @@ Module 4 is **partially audited, not signed off**. With this section added, the 
 - The additions use existing source references as topic anchors and remain labeled AI-generated; none is represented as a verbatim source question.
 - All new concept tags are covered by at least two active questions. The existing validator's two-question minimum remains satisfied.
 
+
+
+### Duplicate cleanup — Modules 15–16 (November 10, 2026)
+
+- Reworked `s15-hybrid-p2p-applied-002` into a pure-P2P scenario, contrasting it with the central-index hybrid model in `s15-p2p-hybrid-001`.
+- Reworked `s15-http-methods-applied-002` into a PUT/idempotency scenario and `s15-file-sharing-protocols-applied-002` into an FTP control/data-channel troubleshooting scenario.
+- Reworked `s16-aaa-functions-applied-002`, `s16-malware-types-applied-002`, `s16-attack-categories-applied-002`, `s16-vulnerability-types-applied-002`, `s16-firewall-filtering-applied-002`, and `s16-physical-threats-applied-002` from duplicate matching tasks into concrete scenarios.
+- Reworked `s16-vpn-ips-applied-002` into a two-control selection item. The original broad matching questions remain as retrieval practice; the revised items now test application of those distinctions.
+- No question IDs were removed or duplicated. The active bank remains at 629 questions and 613 concept tags; all concepts retain at least two questions.
