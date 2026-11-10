@@ -249,7 +249,7 @@ Ten new unique candidates, IMG-0556, IMG-0558, IMG-0559, IMG-0560, IMG-0561, IMG
 
 ### Native-resolution follow-up 14 — final four batch-4 candidates
 
-IMG-0571, IMG-0576, IMG-0577, and IMG-0578 were opened individually at native resolution. All answer controls were empty; IMG-0576 is a Data Link Layer summary. This completes all 36 candidates in batch 4. The original batch 1–4 count is now **144/144**, with **zero** contact-sheet-only candidates remaining; across both workstreams, 184 unique images have been inspected. See [native-resolution follow-up 14](./semester-1-image-review-native-followup-14.md).
+IMG-0571, IMG-0576, IMG-0577, and IMG-0578 were opened individually at native resolution. All answer controls were empty; IMG-0576 is a Data Link Layer summary. This completes all 36 candidates in batch 4. At this stage, the original batch 1–4 count was **116/144**, with **28** contact-sheet-only candidates remaining in batches 1–3; across both workstreams, 156 unique images had been inspected. See [native-resolution follow-up 14](./semester-1-image-review-native-followup-14.md).
 
 
 ### Native-resolution follow-up 15 — ten batch-3 candidates
