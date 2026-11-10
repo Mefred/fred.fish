@@ -657,7 +657,7 @@ The active `ethernet-switching` lesson contains **38 questions**. The seed also 
 ### Objective-to-question findings
 
 1. **Ethernet frame and addressing:** The lesson assesses 48-bit/6-byte MAC addresses, OUI, broadcast, multicast, NIC filtering, and frame-size limits. The NIC pair now distinguishes ordinary unicast filtering from acceptance of a subscribed multicast group. The frame-size pair now separates the source's 64–1,518-byte untagged range (excluding preamble/SFD) from the 1,522-byte 802.1Q-tagged maximum under the same counting convention. Keep Ethernet broadcast (`FF:FF:FF:FF:FF:FF`) distinct from IPv4 broadcast and multicast.
-2. **MAC address table learning and forwarding:** Dynamic learning from the source MAC plus ingress port, refresh/aging, MAC moves, known unicast forwarding, and unknown-unicast flooding are represented. Add or retain a complete decision-table scenario that compares known unicast, unknown unicast, broadcast, and multicast, with VLAN and ingress-port constraints explicit. Do not teach that a switch learns from the destination MAC.
+2. **MAC address table learning and forwarding:** Dynamic learning from the source MAC plus ingress port, refresh/aging, MAC moves, known unicast forwarding, and unknown-unicast flooding are represented. `s7-vlan-membership-forwarding-applied-002` now compares known unicast, unknown unicast, broadcast, and multicast forwarding, with VLAN and ingress-port constraints explicit. Multicast behavior is qualified by IGMP/MLD snooping and available forwarding state. Do not teach that a switch learns from the destination MAC.
 3. **Multicast and broadcast:** The lesson now states that IGMP/MLD snooping can affect multicast forwarding; it does not claim every multicast frame is always flooded. The applied NIC item tests acceptance of a subscribed multicast group. Exact IPv4/IPv6 multicast MAC mappings still require native-exhibit verification before sign-off.
 4. **Forwarding methods:** Store-and-forward, fast-forward/cut-through, and fragment-free are covered. The lesson now explains fragment-free's 64-byte wait; verify that numeric detail against the native source diagram before sign-off.
 5. **Switch memory buffering:** Port-based and shared-memory buffering remain represented by the matching question; the lesson now explains per-port queues versus a common dynamically allocated pool. An applied egress-contention scenario is optional pending source-diagram review.
@@ -667,6 +667,7 @@ The active `ethernet-switching` lesson contains **38 questions**. The seed also 
 ### Duplicate and scope review
 
 - **NIC filtering:** `s7-host-unknown-mac-001` tests discarding an ordinary unicast frame for another host; `s7-nic-frame-processing-applied-002` now tests acceptance of a subscribed multicast frame.
+- **Forwarding-decision coverage — addressed:** `s7-unknown-unicast-001` and `s7-vlan-unknown-unicast-isolation-003` retain direct unknown-unicast and VLAN-scope scenarios; `s7-vlan-membership-forwarding-applied-002` now provides the distinct four-way known-unicast/unknown-unicast/broadcast/multicast comparison.
 - **Auto-negotiation:** `s7-full-duplex-001` tests capability negotiation; `s7-full-duplex-access-001` applies the result to compatible 1000BASE-T partners. They no longer repeat the same collision explanation.
 - **Frame-size distinction:** `s7-frame-size-001` tests the source's 64–1,518-byte untagged range; `s7-frame-size-standards-applied-002` calculates the 1,522-byte 802.1Q-tagged maximum. Both explicitly exclude preamble/SFD.
 - **Auto-MDIX:** `s7-auto-mdix-001` tests the feature's purpose; `s7-auto-mdix-verification-005` diagnoses a link failure when Auto-MDIX is disabled and cable pinout must be checked.
@@ -677,13 +678,13 @@ The active `ethernet-switching` lesson contains **38 questions**. The seed also 
 ### Remaining work before sign-off
 
 - Review all 38 active lesson records against the full Module 7 source pages, not just the summary and extracted snippets.
-- Recheck the remaining decision-table coverage for known unicast, unknown unicast, broadcast, and multicast with VLAN/ingress constraints explicit; confirm the OUI and frame-size examples in a learner session.
+- Confirm the four-way forwarding comparison, OUI interpretation, and frame-size examples in a learner session; the question-bank decision table now covers all four destination types with VLAN/ingress constraints.
 - The VLAN/STP/inter-VLAN material is now explicitly labeled enrichment in the lesson; keep that boundary visible in future edits.
 - Inspect the MAC address, multicast, switching-method, and buffering exhibits at native resolution.
 - Locate and execute the “View the Switch MAC Address Table” Packet Tracer lab; record the actual command output and expected learning behavior.
 - Run the question-bank validator and regenerate coverage documentation after content changes.
 
-Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab and taxonomy cleanup remain open.
+Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab, native-resolution exhibit review, and taxonomy cleanup remain open.
 
 
 ## Page-by-page source verification: Module 8 — Network Layer
