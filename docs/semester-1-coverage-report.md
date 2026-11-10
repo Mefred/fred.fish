@@ -50,8 +50,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 12 | 2 |
 | 13 | 3 |
 | 14 | 1 |
-| 15 | 4 |
-| 16 | 1 |
+| 15 | 3 |
+| 16 | 2 |
 | 18 | 1 |
 | 19 | 1 |
 | 31 | 1 |
