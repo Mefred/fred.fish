@@ -1128,7 +1128,7 @@ The active `network-security` lesson contains **35 questions** after the CIA-imp
 ### Duplicate, scope, and provenance findings
 
 - **AAA distinction:** `s16-aaa-match-001` tests the three definitions; `s16-aaa-functions-applied-002` applies authorization to a restricted administrator account.
-- **Malware duplicate:** `s16-malware-types-match-001` retains the broad virus/worm/Trojan comparison; `s16-malware-types-applied-002` applies the Trojan concept to a disguised document viewer with a hidden backdoor. Retain both.
+- **Malware distinction:** `s16-malware-types-match-001` retains the broad virus/worm/Trojan comparison; `s16-malware-types-applied-002` applies the Trojan concept to a disguised document viewer with a hidden backdoor. Retain both.
 - **Attack-category distinction:** `s16-attack-categories-match-001` retains the reconnaissance/access/DoS category map; `s16-attack-categories-applied-002` applies the DoS category to a specific availability incident.
 - **Vulnerability-category distinction:** `s16-vulnerability-types-match-001` maps the three weakness categories; `s16-vulnerability-types-applied-002` applies the technology/design weakness category to an unpatchable protocol weakness.
 - **Firewall filtering distinction corrected:** `s16-firewall-types-match-001` retains the source-level application/port filtering definition; `s16-firewall-filtering-applied-002` now explicitly labels payload inspection as deep application-aware inspection. The two items test different levels of filtering.
@@ -1147,12 +1147,12 @@ The active `network-security` lesson contains **35 questions** after the CIA-imp
 - Recheck the revised deep application-aware inspection wording in the next full question-bank validation.
 - Add further source-aligned practice for integrated device hardening. CIA impacts, MITM, endpoint protection/NAC, patching, DMZ placement, configuration-backup recovery, and ACL first-match/implicit-deny behavior now have applied questions.
 - Check every device-hardening explanation for the Type 7 limitation and every malware explanation for the Trojan self-replication misconception; the lesson now documents these source inaccuracies and the legacy RSA lab caveat.
-- Reconcile the two legacy `s1-*` IDs assigned to `network-security`.
+- Keep the six legacy `s1-*` identifiers documented and stable; do not rename them without a migration plan for persisted learner progress.
 - Inspect original firewall, attack, SSH, and device-hardening exhibits at native resolution before creating any source-origin questions.
 - Execute Packet Tracer **Configure Secure Passwords and SSH** and **Secure Network Devices**, plus the labs **Research Network Security Threats** and **Configure Network Devices with SSH**. Record the resulting router/switch configuration, SSH connectivity, security controls, and any test evidence. The source text identifies these activities; it does not establish that they have been executed.
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
 
-Module 16 is **partially audited, not signed off**. Continue next with Module 17 — Build a Small Network, while keeping duplicate cleanup, hardening accuracy, endpoint mitigation coverage, source-exhibit verification, and practical testing open.
+Module 16 is **partially audited, not signed off**. Continue next with Module 17 — Build a Small Network, while keeping integrated device-hardening practice, hardening-explanation accuracy, source-exhibit verification, and practical testing open.
 
 
 ## Page-by-page source verification: Module 17 — Build a Small Network
