@@ -12,7 +12,7 @@
 - Three images are instructional slides: a section title (IMG-0580), a section summary title (IMG-0586), and a data-link frame explanation (IMG-0588).
 - The blue star graphics are decorative and do not identify selected answers.
 - No new source-origin answer key, source-image association, or AI visual-context association was found.
-- Cumulative native-resolution review across the 144 candidates in batches 1–4 is now 99 of 144; 45 remain contact-sheet-only.
+- The 144-candidate batch 1–4 count remains 89/144 opened at native resolution, with 55 contact-sheet-only. This follow-up opened ten additional images (IMG-0580–IMG-0589) outside those four contact-sheet batches; across both workstreams, 99 unique images have now been individually inspected (89 + 10).
 - No active question text, answer key, provenance label, or question count changed.
 
 ## Candidate-by-candidate log
