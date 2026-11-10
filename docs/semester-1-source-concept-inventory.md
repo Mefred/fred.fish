@@ -322,7 +322,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 ## Next review work
 
 - Perform a page-by-page source review to validate that each mapped question tests what the lesson actually teaches, not merely a related concept tag.
-- Continue native-resolution review of the 55 contact-sheet-only candidates from batches 1–4 where answer marks or diagram details could affect interpretation, then select further unresolved candidates for review. The OCR export's 744-unique-image status is not the current manual-review backlog; do not promote inferred answers as source-origin.
+- Continue native-resolution review of the 35 contact-sheet-only candidates from batches 1–4 where answer marks or diagram details could affect interpretation, then select further unresolved candidates for review. The OCR export's 744-unique-image status is not the current manual-review backlog; do not promote inferred answers as source-origin.
 - Review cross-lesson placements and distinguish repeated source material from true objective coverage.
 - Add targeted questions only where the source text or a verified visual provides evidence for a missing objective or under-practiced detail.
 - Revisit the title-only Module 1 “Networks Affect our Lives” slide if a fuller source page or instructor notes become available.
@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 616 questions across 22 lesson IDs and 610 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 223 additions over the original 393-question bank comprise 206 AI-generated and 17 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 617 questions across 22 lesson IDs and 610 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 224 additions over the original 393-question bank comprise 207 AI-generated and 17 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -362,7 +362,7 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-There are 39 source-origin image-question associations plus fourteen unique reviewed image references used by AI-generated applied questions (53 total). The question bank contains 616 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
+There are 39 source-origin image-question associations plus fourteen unique reviewed image references used by AI-generated applied questions (53 total). The question bank contains 617 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
 
 
 ## Additional source-verified Module 8 questions
@@ -374,7 +374,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 616 questions, 41 source-origin questions, and 575 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 617 questions, 41 source-origin questions, and 576 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
@@ -484,3 +484,8 @@ Three AI-generated questions now cover the macOS host commands explicitly named 
 ### Module 17 device-selection and addressing-plan expansion
 
 Two AI-generated scenarios now assess the source's small-network design criteria in context. The device-selection case requires weighing cost, interface types/speeds, expandability, and operating-system features/services against planned growth. The addressing-plan case requires unique addresses for end devices, servers/peripherals, and intermediary devices, with a documented scheme organized by device type. Both are linked to the recovered Module 17 source block; neither is presented as a verbatim source quiz question.
+
+
+### Module 8 routing-table output matching expansion
+
+The recovered IMG-0601 exhibit contains an unfilled matching activity and a visible IOS routing-table excerpt. No answer key is marked in the image, so the new item s8-routing-table-destination-interface-001 is explicitly AI-generated rather than source-origin. It uses the visible /24 routes and candidate default route to match five destination addresses to FastEthernet0/0, FastEthernet1/1, FastEthernet1/0, FastEthernet0/1, and Serial0/0/0. The item is linked to IMG-0601 and reinforces route-table lookup, longest-prefix match, default-route selection, and packet forwarding. The generated coverage report now records 60 active questions in network-layer; the concept exposure floor remains satisfied.
