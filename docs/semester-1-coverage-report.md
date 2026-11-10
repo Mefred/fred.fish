@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 631
+- **Questions:** 633
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -10,7 +10,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
-| address-resolution | 17 | 20 | fill: 1, matching: 3, scenario: 5, single: 8 | 1–4 |
+| address-resolution | 19 | 20 | fill: 1, matching: 1, scenario: 11, single: 6 | 1–4 |
 | application-layer | 27 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 11, single: 7 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
@@ -37,22 +37,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 397 |
-| 3 | 87 |
+| 2 | 396 |
+| 3 | 88 |
 | 4 | 35 |
-| 5 | 27 |
-| 6 | 18 |
+| 5 | 26 |
+| 6 | 19 |
 | 7 | 8 |
-| 8 | 8 |
-| 9 | 6 |
+| 8 | 7 |
+| 9 | 7 |
 | 10 | 7 |
 | 11 | 4 |
-| 12 | 2 |
+| 12 | 1 |
 | 13 | 3 |
-| 14 | 2 |
-| 15 | 3 |
+| 14 | 1 |
+| 15 | 4 |
 | 16 | 3 |
-| 17 | 1 |
+| 17 | 2 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
@@ -934,7 +934,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `access-control-lists` | 2 | network-security |
 | `access-ports` | 2 | ethernet-switching |
 | `accounting` | 2 | network-security |
-| `address-resolution` | 12 | address-resolution |
+| `address-resolution` | 15 | address-resolution |
 | `administrative-distance` | 4 | network-layer |
 | `aging-timer` | 2 | ethernet-switching |
 | `all-nodes-multicast` | 2 | ipv6-addressing |
@@ -945,7 +945,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
 | `application-layer-services` | 10 | application-layer, small-network |
-| `arp` | 14 | address-resolution, data-link-layer, protocols-and-models |
+| `arp` | 17 | address-resolution, data-link-layer, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 2 | network-security |
@@ -964,7 +964,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 2 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
-| `broadcast` | 5 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
+| `broadcast` | 6 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
 | `broadcast-address` | 8 | ipv4-addressing |
 | `broadcast-domains` | 2 | ipv4-addressing |
 | `broadcast-storm` | 2 | ethernet-switching |
@@ -1115,7 +1115,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-ip-configuration` | 7 | small-network |
 | `host-reachability` | 3 | icmp |
 | `host-role` | 2 | network-components |
-| `host-troubleshooting` | 8 | address-resolution, router-configuration, small-network |
+| `host-troubleshooting` | 9 | address-resolution, router-configuration, small-network |
 | `hostname-domain-name` | 2 | router-configuration |
 | `http` | 7 | application-layer, protocols-and-models, transport-layer |
 | `http-get` | 2 | application-layer |
@@ -1280,7 +1280,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-baselines` | 4 | small-network |
 | `network-components` | 5 | network-components |
 | `network-discovery` | 2 | small-network |
-| `network-efficiency` | 2 | address-resolution, protocols-and-models |
+| `network-efficiency` | 3 | address-resolution, protocols-and-models |
 | `network-intermediary-devices` | 4 | network-components, small-network |
 | `network-layer` | 17 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
@@ -1548,23 +1548,23 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### Question formats
 
 | Format | Count |
-|---|---:|---|
+|---|---:|
 | fill | 51 |
-| matching | 83 |
+| matching | 81 |
 | multiple | 36 |
 | ordering | 23 |
-| scenario | 214 |
-| single | 223 |
+| scenario | 220 |
+| single | 221 |
 | true-false | 1 |
 
 ### Difficulty
 
 | Level | Count |
 |---:|---:|
-| 1 | 46 |
+| 1 | 45 |
 | 2 | 163 |
 | 3 | 269 |
-| 4 | 131 |
+| 4 | 134 |
 | 5 | 22 |
 
 ## Interpretation and limits
