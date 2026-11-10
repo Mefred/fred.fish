@@ -1,6 +1,6 @@
 # Semester 1 source-concept inventory
 
-**Status:** all 17 module objectives transcribed; first-pass objective-to-question map complete; page-by-page source verification remains incomplete  
+**Status:** all 17 module objectives transcribed; content-level audit sections documented for all 17 modules; native-image verification, source activity execution, and final sign-off remain incomplete  
 **Primary evidence:** `Sem1_Lecture_Notes_Raw_Text.txt` in the Semester 1 source package  
 **Method:** transcribe module objectives and topic objectives from the recovered lecture-note text. The line numbers below refer to that source text as indexed in the Library. Repeated objective blocks are treated as one module objective, not as additional concepts.
 
@@ -1245,7 +1245,7 @@ The active `physical-layer` lesson contains **44 questions**: **3 source-origin*
 
 ### Remaining work before sign-off
 
-- Correct the reversed straight-through/crossover answer in `s4-utp-cable-types-applied-002` and add a validator/test that catches conflicting matching keys for the same concept.
+- Decide whether to retain both UTP cable-type questions as distinct pinout-versus-device-role retrieval practice or consolidate them.
 - Consolidate the duplicated physical-layer role, signaling, standards, STP, fiber connector, fiber dispersion, wireless standard, goodput, UTP cable type, and WLAN deployment questions.
 - Add or refine a bandwidth/throughput/goodput scenario that explicitly distinguishes rated capacity, measured transfer rate, and useful application data.
 - Verify the original UTP termination and cable-selection exhibits at native resolution, including T568A/T568B pinouts and the rollover cable diagram.
