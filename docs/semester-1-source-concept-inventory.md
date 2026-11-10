@@ -405,7 +405,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 ## Next review work
 
 - Perform a page-by-page source review to validate that each mapped question tests what the lesson actually teaches, not merely a related concept tag.
-- Continue native-resolution review of the 55 contact-sheet-only candidates from batches 1–4 where answer marks or diagram details could affect interpretation, then select further unresolved candidates for review. The OCR export's 744-unique-image status is not the current manual-review backlog; do not promote inferred answers as source-origin.
+- Complete: all 144 candidates from batches 1–4 have been opened individually at native resolution, and 40 additional images were reviewed separately (184 unique images total). No native-resolution backlog remains from the original batches. Any further review must be a newly scoped batch; the OCR export's 744-unique-image unresolved status is not a current manual-review backlog. Do not promote inferred answers as source-origin.
 - Review cross-lesson placements and distinguish repeated source material from true objective coverage.
 - Add targeted questions only where the source text or a verified visual provides evidence for a missing objective or under-practiced detail.
 - Revisit the title-only Module 1 “Networks Affect our Lives” slide if a fuller source page or instructor notes become available.
