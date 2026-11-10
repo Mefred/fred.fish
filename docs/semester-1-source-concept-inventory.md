@@ -330,7 +330,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 618 questions across 22 lesson IDs and 610 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 225 additions over the original 393-question bank comprise 207 AI-generated and 18 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 619 questions across 22 lesson IDs and 610 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 226 additions over the original 393-question bank comprise 208 AI-generated and 18 source-origin questions. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -362,7 +362,7 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-There are 40 source-origin image-question associations plus fourteen unique reviewed image references used by AI-generated applied questions (54 total). The question bank contains 618 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
+There are 40 source-origin image-question associations plus fifteen unique reviewed image references used by AI-generated applied questions (55 total). The question bank contains 619 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
 
 
 ## Additional source-verified Module 8 questions
@@ -374,7 +374,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 618 questions, 42 source-origin questions, and 576 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The final bank contains 619 questions, 42 source-origin questions, and 577 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
@@ -494,3 +494,8 @@ The recovered IMG-0601 exhibit contains an unfilled matching activity and a visi
 ### IPv4 Protocol-field source question
 
 IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. This increases the source-origin count to 42 and the total bank to 618; it does not add a new concept identifier.
+
+
+### IMG-0562 first-hop Layer 2 destination scenario
+
+IMG-0562 shows a web server on 192.168.5.0/24, its default gateway router R2, and a remote PC1 on 192.168.1.0/24. The source radio controls are unselected, so the new question s4-first-hop-destination-mac-scenario-001 is explicitly AI-generated. It asks for the destination MAC in the server's first Ethernet frame and explains why that frame uses R2's local MAC (00-60-2F-3A-07-CC), while the IP destination remains PC1. This adds the fifteenth unique visual-context image for AI-generated applied questions; the source-origin image association count remains 40.
