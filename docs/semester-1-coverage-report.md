@@ -26,7 +26,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
 | number-systems | 21 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 7 | 1–4 |
-| physical-layer | 44 | 53 | matching: 12, multiple: 2, scenario: 11, single: 19 | 1–4 |
+| physical-layer | 44 | 53 | matching: 9, multiple: 1, scenario: 19, single: 15 | 1–4 |
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
