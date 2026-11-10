@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 630
+- **Questions:** 631
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -20,7 +20,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
-| network-layer | 61 | 69 | fill: 3, matching: 9, multiple: 5, ordering: 1, scenario: 24, single: 19 | 1–5 |
+| network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
 | network-security | 29 | 45 | matching: 9, multiple: 3, ordering: 1, scenario: 11, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
@@ -37,21 +37,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 399 |
-| 3 | 86 |
-| 4 | 36 |
-| 5 | 25 |
+| 2 | 397 |
+| 3 | 87 |
+| 4 | 35 |
+| 5 | 27 |
 | 6 | 18 |
 | 7 | 8 |
-| 8 | 9 |
-| 9 | 5 |
+| 8 | 8 |
+| 9 | 6 |
 | 10 | 7 |
-| 11 | 5 |
+| 11 | 4 |
 | 12 | 2 |
-| 13 | 2 |
+| 13 | 3 |
 | 14 | 2 |
 | 15 | 3 |
-| 16 | 4 |
+| 16 | 3 |
+| 17 | 1 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
@@ -1011,7 +1012,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decimal-to-binary` | 2 | number-systems |
 | `decimal-to-hexadecimal` | 2 | number-systems |
 | `default-gateway` | 14 | address-resolution, basic-device-configuration, data-link-layer, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
-| `default-route` | 12 | ipv6-addressing, network-layer, small-network |
+| `default-route` | 13 | ipv6-addressing, network-layer, small-network |
 | `defense-in-depth` | 3 | network-security |
 | `delivery-options` | 2 | protocols-and-models |
 | `denial-of-service` | 2 | network-security |
@@ -1165,19 +1166,19 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-address-types` | 2 | ipv4-addressing |
 | `ipv4-addressing` | 7 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
 | `ipv4-differentiated-services` | 3 | network-layer |
-| `ipv4-fragmentation-fields` | 4 | network-layer |
+| `ipv4-fragmentation-fields` | 5 | network-layer |
 | `ipv4-header-checksum` | 3 | network-layer |
-| `ipv4-header-fields` | 11 | network-layer |
+| `ipv4-header-fields` | 12 | network-layer |
 | `ipv4-interface-configuration` | 3 | basic-device-configuration, router-configuration |
 | `ipv4-ipv6-coexistence` | 2 | ipv6-addressing |
-| `ipv4-protocol` | 3 | network-layer |
+| `ipv4-protocol` | 4 | network-layer |
 | `ipv4-routing` | 2 | basic-device-configuration |
 | `ipv4-routing-table` | 5 | network-layer |
 | `ipv4-source-destination` | 5 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
 | `ipv4-subnetting` | 31 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
-| `ipv4-ttl` | 4 | icmp, network-layer |
+| `ipv4-ttl` | 5 | icmp, network-layer |
 | `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
 | `ipv4-version` | 3 | network-layer |
 | `ipv4-vs-ipv6-header` | 2 | network-layer |
@@ -1191,7 +1192,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-fixed-header` | 2 | network-layer |
 | `ipv6-flow-label` | 2 | network-layer |
 | `ipv6-header-fields` | 2 | network-layer |
-| `ipv6-hop-limit` | 2 | icmp, network-layer |
+| `ipv6-hop-limit` | 3 | icmp, network-layer |
 | `ipv6-interface-configuration` | 2 | ipv6-addressing |
 | `ipv6-interface-id` | 2 | ipv6-addressing |
 | `ipv6-interface-verification` | 3 | ipv6-addressing, router-configuration, small-network |
@@ -1276,7 +1277,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-discovery` | 2 | small-network |
 | `network-efficiency` | 2 | address-resolution, protocols-and-models |
 | `network-intermediary-devices` | 4 | network-components, small-network |
-| `network-layer` | 16 | network-layer, protocols-and-models |
+| `network-layer` | 17 | network-layer, protocols-and-models |
 | `network-media-selection` | 5 | network-components, network-trends |
 | `network-monitoring` | 5 | small-network |
 | `network-operations` | 2 | small-network |
@@ -1386,8 +1387,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `router-solicitation` | 2 | address-resolution |
 | `routing` | 6 | data-link-layer, ipv4-addressing, network-layer, protocols-and-models |
 | `routing-configuration` | 2 | network-layer |
-| `routing-metric` | 2 | network-layer |
-| `routing-table` | 8 | network-layer |
+| `routing-metric` | 3 | network-layer |
+| `routing-table` | 9 | network-layer |
 | `routing-table-codes` | 2 | network-layer |
 | `routing-table-interpretation` | 2 | network-layer |
 | `routing-table-lookup` | 6 | icmp, network-layer |
@@ -1543,12 +1544,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 52 |
-| matching | 85 |
+| fill | 51 |
+| matching | 83 |
 | multiple | 36 |
 | ordering | 23 |
-| scenario | 207 |
-| single | 226 |
+| scenario | 214 |
+| single | 223 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1557,8 +1558,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 46 |
 | 2 | 163 |
-| 3 | 271 |
-| 4 | 128 |
+| 3 | 269 |
+| 4 | 131 |
 | 5 | 22 |
 
 ## Interpretation and limits
