@@ -6,13 +6,13 @@
 |---|---:|
 | Active questions | **614** |
 | Unique question IDs | 614 |
-| Unique normalized prompts | 611 |
+| Unique normalized prompts | 614 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 610 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 41 |
-| AI-generated questions | 570 |
+| AI-generated questions | 573 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -23,19 +23,19 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | Questions per concept | Concept tags |
 |---:|---:|
 | 2 | 411 |
-| 3 | 76 |
+| 3 | 75 |
 | 4 | 37 |
 | 5 | 23 |
-| 6 | 18 |
+| 6 | 19 |
 | 7 | 8 |
 | 8 | 9 |
 | 9 | 2 |
 | 10 | 5 |
 | 11 | 7 |
-| 12 | 3 |
+| 12 | 2 |
 | 13 | 3 |
 | 14 | 1 |
-| 15 | 3 |
+| 15 | 4 |
 | 16 | 1 |
 | 18 | 1 |
 | 19 | 1 |
