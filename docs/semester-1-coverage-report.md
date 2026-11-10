@@ -37,20 +37,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 407 |
-| 3 | 79 |
-| 4 | 36 |
-| 5 | 21 |
-| 6 | 22 |
-| 7 | 8 |
+| 2 | 406 |
+| 3 | 78 |
+| 4 | 38 |
+| 5 | 23 |
+| 6 | 21 |
+| 7 | 6 |
 | 8 | 8 |
-| 9 | 3 |
-| 10 | 4 |
-| 11 | 7 |
-| 12 | 3 |
-| 13 | 1 |
+| 9 | 6 |
+| 10 | 5 |
+| 11 | 6 |
+| 12 | 2 |
+| 13 | 2 |
 | 14 | 3 |
-| 15 | 2 |
+| 15 | 3 |
 | 16 | 3 |
 | 18 | 1 |
 | 20 | 1 |
@@ -92,6 +92,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `client-server-model`
 - `dhcp`
 - `dns`
+- `dns-hierarchy`
 - `dns-resource-records`
 - `dns-troubleshooting`
 - `email-protocols`
@@ -904,6 +905,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `tcp`
 - `tcp-acknowledgments`
 - `tcp-connection-establishment`
+- `tcp-connection-termination`
+- `tcp-control-flags`
 - `tcp-header`
 - `tcp-sequence-numbers`
 - `tcp-windowing`
@@ -1022,6 +1025,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `dhcp-troubleshooting` | 4 | small-network |
 | `dhcpv6` | 2 | basic-device-configuration, ipv6-addressing |
 | `dns` | 7 | application-layer, network-types, transport-layer |
+| `dns-hierarchy` | 2 | application-layer |
 | `dns-client-configuration` | 2 | basic-device-configuration |
 | `dns-resource-records` | 2 | application-layer |
 | `dns-troubleshooting` | 6 | application-layer, small-network |
@@ -1463,6 +1467,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `tcp` | 13 | protocols-and-models, transport-layer |
 | `tcp-acknowledgments` | 6 | transport-layer |
 | `tcp-connection-establishment` | 2 | transport-layer |
+| `tcp-connection-termination` | 2 | transport-layer |
+| `tcp-control-flags` | 2 | transport-layer |
 | `tcp-header` | 2 | transport-layer |
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 4 | transport-layer |
