@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 650
+- **Questions:** 653
 - **Lessons represented:** 24
 - **Distinct concept tags:** 617
 
@@ -22,7 +22,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | it-professional | 2 | 2 | scenario: 1, single: 1 | 2–3 |
 | network-components | 13 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 2, single: 6 | 1–3 |
 | network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
-| network-security | 31 | 45 | matching: 9, multiple: 4, ordering: 1, scenario: 12, single: 5 | 1–5 |
+| network-security | 34 | 45 | matching: 9, multiple: 5, ordering: 1, scenario: 15, single: 4 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
@@ -39,22 +39,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 376 |
-| 3 | 93 |
-| 4 | 48 |
-| 5 | 27 |
+| 2 | 375 |
+| 3 | 94 |
+| 4 | 47 |
+| 5 | 26 |
 | 6 | 16 |
-| 7 | 11 |
-| 8 | 8 |
+| 7 | 12 |
+| 8 | 9 |
 | 9 | 5 |
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 5 |
 | 13 | 2 |
 | 14 | 1 |
-| 15 | 5 |
+| 15 | 4 |
 | 17 | 3 |
-| 18 | 3 |
+| 18 | 4 |
 | 21 | 1 |
 | 33 | 1 |
 
@@ -1039,10 +1039,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decimal-to-hexadecimal` | 2 | number-systems |
 | `default-gateway` | 14 | address-resolution, basic-device-configuration, data-link-layer, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 13 | ipv6-addressing, network-layer, small-network |
-| `defense-in-depth` | 5 | network-security |
+| `defense-in-depth` | 7 | network-security |
 | `delivery-options` | 2 | protocols-and-models |
 | `denial-of-service` | 2 | network-security |
-| `device-hardening` | 2 | network-security |
+| `device-hardening` | 3 | network-security |
 | `device-management` | 2 | basic-device-configuration |
 | `device-resource-management` | 2 | small-network |
 | `device-selection` | 3 | small-network |
@@ -1072,7 +1072,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `enable-secret` | 4 | basic-device-configuration, router-configuration |
 | `encapsulation` | 17 | data-link-layer, network-layer, protocols-and-models |
 | `end-devices` | 2 | network-components |
-| `endpoint-security` | 6 | network-security, network-trends |
+| `endpoint-security` | 8 | network-security, network-trends |
 | `environmental-threats` | 2 | network-security |
 | `error-detection` | 3 | data-link-layer |
 | `etherchannel` | 2 | ethernet-switching |
@@ -1103,7 +1103,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fiber-optic-connectors` | 2 | physical-layer |
 | `fiber-optic-media` | 2 | internet-connections |
 | `file-sharing-services` | 2 | application-layer |
-| `firewall-filtering` | 5 | network-security |
+| `firewall-filtering` | 6 | network-security |
 | `flash` | 2 | router-configuration |
 | `flow-control` | 8 | transport-layer |
 | `fragment-free-switching` | 2 | ethernet-switching |
@@ -1314,7 +1314,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scalability` | 3 | ipv4-addressing, network-components, small-network |
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
-| `network-security-controls` | 15 | network-security, network-types, reliable-networks |
+| `network-security-controls` | 18 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 17 | icmp, internet-connections, small-network |
@@ -1431,7 +1431,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `secure-device-management` | 5 | router-configuration |
 | `secure-management` | 2 | network-security |
 | `security-policy-vulnerability` | 2 | network-security |
-| `security-threat-vectors` | 4 | network-security |
+| `security-threat-vectors` | 5 | network-security |
 | `segmentation` | 2 | protocols-and-models |
 | `selective-acknowledgment` | 2 | transport-layer |
 | `sequence-numbers` | 2 | transport-layer |
@@ -1573,10 +1573,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|
 | fill | 44 |
 | matching | 75 |
-| multiple | 35 |
+| multiple | 36 |
 | ordering | 25 |
-| scenario | 264 |
-| single | 206 |
+| scenario | 267 |
+| single | 205 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1584,9 +1584,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 43 |
-| 2 | 155 |
+| 2 | 154 |
 | 3 | 279 |
-| 4 | 151 |
+| 4 | 155 |
 | 5 | 22 |
 
 ## Interpretation and limits
