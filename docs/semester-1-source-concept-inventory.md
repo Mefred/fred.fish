@@ -1202,9 +1202,9 @@ The active `small-network` lesson contains **61 questions**, including **3 sourc
 
 ### Remaining work before sign-off
 
-- Review the remaining extended-ping, DHCP-relay, and troubleshooting-order pairs for genuinely distinct learning objectives. The device-selection/scaling overlap has been addressed by separating general selection criteria, PoE switch requirements, and evidence-based capacity planning. The IOS show-command and DHCP lease pairs test distinct retrieval-versus-application skills; the baseline and traceroute scenarios have also been differentiated.
-- Verify the DNS multi-stage fault answer: resolver IP reachability does not establish DNS service health; distinguish server timeout from stale local cache.
-- Device-role coverage is now explicit in the Module 17 lesson (end devices, switches, wireless access points, routers, and passive media). Still align lesson navigation and section grouping with the seven source topic objectives.
+- **Reviewed:** extended ping now separates source-origin command recognition from applied return-path diagnosis; DHCP relay questions test a missing helper versus a helper on the wrong interface; troubleshooting ordering separates the source's four-step sequence from the full operational workflow. Device selection, IOS show-command retrieval/application, DHCP lease verification, baseline trend/anomaly, and traceroute timeout/RTT patterns also have distinct objectives.
+- **Verified:** the DNS multi-stage answer correctly distinguishes resolver IP reachability from DNS service health and does not mistake a stale local cache for the cause of a fresh `nslookup` timeout.
+- **Completed:** device-role coverage is explicit, and the Module 17 lesson now has a seven-item objective navigation map linking to the corresponding teaching sections.
 - Verify Linux/macOS/Windows command names and clearly label legacy versus current commands.
 - Preserve the high-value multi-device VLAN fault scenario and three-stage DHCP/DNS/default-route challenge; ensure each stage's evidence and answer remain internally consistent.
 - Execute Packet Tracer **Interpret show Command Output**, **Troubleshoot Connectivity Issues**, and **Skills Integration Challenge**. For the capstone, record the VLSM allocation, router interface/security configuration, switch SVI/security configuration, end-to-end tests, and troubleshooting evidence.
