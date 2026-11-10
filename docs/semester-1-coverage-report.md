@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 648
+- **Questions:** 650
 - **Lessons represented:** 24
 - **Distinct concept tags:** 617
 
@@ -22,7 +22,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | it-professional | 2 | 2 | scenario: 1, single: 1 | 2–3 |
 | network-components | 13 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 2, single: 6 | 1–3 |
 | network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
-| network-security | 29 | 45 | matching: 9, multiple: 3, ordering: 1, scenario: 11, single: 5 | 1–5 |
+| network-security | 31 | 45 | matching: 9, multiple: 4, ordering: 1, scenario: 12, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
@@ -32,16 +32,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 11, multiple: 2, ordering: 3, scenario: 5, single: 17 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 27 | 40 | fill: 1, matching: 1, multiple: 1, ordering: 3, scenario: 16, single: 5 | 1–5 |
-| small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
+| small-network | 61 | 89 | fill: 3, matching: 4, multiple: 6, ordering: 3, scenario: 35, single: 10 | 1–5 |
 | transport-layer | 44 | 37 | fill: 2, matching: 2, multiple: 6, ordering: 2, scenario: 14, single: 18 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 378 |
+| 2 | 376 |
 | 3 | 93 |
-| 4 | 46 |
+| 4 | 48 |
 | 5 | 27 |
 | 6 | 16 |
 | 7 | 11 |
@@ -50,9 +50,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 5 |
-| 13 | 3 |
+| 13 | 2 |
 | 14 | 1 |
-| 15 | 4 |
+| 15 | 5 |
 | 17 | 3 |
 | 18 | 3 |
 | 21 | 1 |
@@ -1008,7 +1008,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `command-help` | 2 | basic-device-configuration |
 | `command-keywords` | 4 | basic-device-configuration |
 | `communication-rules` | 3 | protocols-and-models |
-| `confidentiality` | 2 | network-security |
+| `confidentiality` | 4 | network-security |
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
 | `configuration-persistence` | 3 | basic-device-configuration, network-layer |
 | `configuration-vulnerability` | 2 | network-security |
@@ -1314,7 +1314,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scalability` | 3 | ipv4-addressing, network-components, small-network |
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
-| `network-security-controls` | 13 | network-security, network-types, reliable-networks |
+| `network-security-controls` | 15 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 17 | icmp, internet-connections, small-network |
@@ -1431,7 +1431,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `secure-device-management` | 5 | router-configuration |
 | `secure-management` | 2 | network-security |
 | `security-policy-vulnerability` | 2 | network-security |
-| `security-threat-vectors` | 2 | network-security |
+| `security-threat-vectors` | 4 | network-security |
 | `segmentation` | 2 | protocols-and-models |
 | `selective-acknowledgment` | 2 | transport-layer |
 | `sequence-numbers` | 2 | transport-layer |
@@ -1571,11 +1571,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 45 |
+| fill | 44 |
 | matching | 75 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 261 |
+| scenario | 264 |
 | single | 206 |
 | true-false | 1 |
 
@@ -1584,9 +1584,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 43 |
-| 2 | 156 |
-| 3 | 281 |
-| 4 | 146 |
+| 2 | 155 |
+| 3 | 279 |
+| 4 | 151 |
 | 5 | 22 |
 
 ## Interpretation and limits
