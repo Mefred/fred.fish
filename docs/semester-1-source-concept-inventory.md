@@ -1105,7 +1105,7 @@ Module 15 is **partially audited, not signed off**. Continue next with Module 16
 
 ### Active lesson inventory
 
-The active `network-security` lesson contains **34 questions** after the CIA-impact, MITM, DMZ, backup-recovery, and endpoint-patching/NAC improvements: **2 source-origin** and **32 AI-generated**. Six questions retain legacy `s1-*` identifiers; two are source-origin (`s1-security-001`, `s1-security-clinic-001`) and four are AI-generated (`s1-security-threat-vectors-001`, `s1-security-defense-layers-001`, `s1-security-mapping-001`, `s1-architecture-requirements-applied-002`). The remaining 28 questions use `s16-*` IDs and are AI-generated. Treat the legacy IDs as stable question identifiers; the `lessonId` is authoritative for current curriculum placement.
+The active `network-security` lesson contains **35 questions** after the CIA-impact, MITM, DMZ, backup-recovery, endpoint-patching/NAC, and ACL implicit-deny improvements: **2 source-origin** and **33 AI-generated**. Six questions retain legacy `s1-*` identifiers; two are source-origin (`s1-security-001`, `s1-security-clinic-001`) and four are AI-generated (`s1-security-threat-vectors-001`, `s1-security-defense-layers-001`, `s1-security-mapping-001`, `s1-architecture-requirements-applied-002`). The remaining 29 questions use `s16-*` IDs and are AI-generated. Treat the legacy IDs as stable question identifiers; the `lessonId` is authoritative for current curriculum placement.
 
 ### Objective-to-question findings
 
@@ -1135,7 +1135,7 @@ The active `network-security` lesson contains **34 questions** after the CIA-imp
 - **Physical-threat duplicate:** `s16-physical-threats-match-001` retains the four-category physical threat map; `s16-physical-threats-applied-002` applies environmental threat reasoning to a cooling failure. Retain both.
 - **Defense-in-depth overlap:** `s16-defense-depth-001`, `s1-security-defense-layers-001`, and `s1-security-mapping-001` overlap in layered controls. The two `s1-*` items are Module 1 carryover, not native Module 16 source evidence.
 - **SSH overlap:** `s16-ssh-config-order-001` tests the setup sequence; `s16-ios-ssh-hardening-applied-002` selects the required VTY/local-user/SSH controls. They are related but test different operations; review the exact sequence against supported IOS variants.
-- **ACL overlap:** `s16-acl-scenario-001` tests choosing an ACL for source/destination/protocol/port filtering; `s16-acl-applied-002` applies those fields to a specific Telnet-deny policy. They are general and concrete forms of the same skill; a rule-order/implicit-deny item would provide more distinct coverage.
+- **ACL overlap:** `s16-acl-scenario-001` tests choosing an ACL for source/destination/protocol/port filtering; `s16-acl-applied-002` applies those fields to a specific Telnet-deny policy; `s16-acl-implicit-deny-applied-005` now tests top-to-bottom first-match processing and the implicit deny when no permit matches.
 - **Source-answer hazard:** The source review extract for `service password-encryption` says it “requires encrypted passwords to be used when connecting.” This is inaccurate. The command obscures plaintext passwords in the configuration using weak reversible Type 7 encoding; it does not force encrypted authentication on the wire and does not replace SSH or strong secret hashes.
 - **Source malware hazard:** The source lecture describes Trojan horses as self-replicating. Do not repeat this as a defining property; a Trojan is malware disguised as legitimate software, and it does not inherently self-replicate.
 - **Legacy identifiers:** Six `s1-*` IDs are assigned to the `network-security` lesson despite their Module 1-style prefixes. Their original IDs are deliberately retained for progress/history stability; `lessonId` is authoritative for curriculum placement. Two are source-origin and four are AI-generated.
@@ -1145,7 +1145,7 @@ The active `network-security` lesson contains **34 questions** after the CIA-imp
 
 - Consolidate the duplicate AAA, malware, attack-category, vulnerability-category, firewall, physical-threat, SSH, and ACL question pairs.
 - Recheck the revised deep application-aware inspection wording in the next full question-bank validation.
-- Add further source-aligned practice for integrated device hardening and ACL rule ordering/implicit deny. CIA impacts, MITM, endpoint protection/NAC, patching, DMZ placement, and configuration-backup recovery now have applied questions.
+- Add further source-aligned practice for integrated device hardening. CIA impacts, MITM, endpoint protection/NAC, patching, DMZ placement, configuration-backup recovery, and ACL first-match/implicit-deny behavior now have applied questions.
 - Correct explanations that overstate `service password-encryption` and Trojan self-replication; modernize the RSA key-size guidance while preserving the source's historical context.
 - Reconcile the two legacy `s1-*` IDs assigned to `network-security`.
 - Inspect original firewall, attack, SSH, and device-hardening exhibits at native resolution before creating any source-origin questions.
