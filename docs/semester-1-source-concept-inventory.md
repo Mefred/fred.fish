@@ -1037,7 +1037,7 @@ The active `transport-layer` lesson contains **44 questions** in `src/data/learn
 
 - Review the revised byte-stream, UDP-header, connection-close, effective-window, MSS, service-port, and socket-table scenarios in a learner session; the identified duplicate pairs now assess distinct decisions.
 - Execute and inspect the FIN/ACK and RST scenarios against the native TCP termination exhibit, including any simultaneous-close variation shown in the source.
-- Verify UDP checksum wording and the IPv4/IPv6 checksum distinction against the native UDP header exhibit.
+- Verify the newly clarified UDP checksum distinction (IPv4 zero-checksum option versus generally mandatory IPv6 checksum, with tunnel-specific exceptions) against the native UDP header exhibit.
 - Review TCP byte-stream framing with a learner exercise and verify that the read/write example is unambiguous.
 - Validate the socket-table example on Windows `netstat -ano` or Linux `ss -tunap` and compare local/foreign endpoints with a live connection.
 - Verify the expanded service-port matching against the native source table, including FTP 20/21 and the protocol-specific DHCP/TFTP/SNMP assignments.
