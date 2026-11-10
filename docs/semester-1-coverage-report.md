@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 653
+- **Questions:** 654
 - **Lessons represented:** 24
-- **Distinct concept tags:** 617
+- **Distinct concept tags:** 619
 
 ## Lesson coverage
 
@@ -22,7 +22,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | it-professional | 2 | 2 | scenario: 1, single: 1 | 2–3 |
 | network-components | 13 | 13 | fill: 1, matching: 1, multiple: 3, scenario: 2, single: 6 | 1–3 |
 | network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
-| network-security | 34 | 45 | matching: 9, multiple: 5, ordering: 1, scenario: 15, single: 4 | 1–5 |
+| network-security | 35 | 47 | matching: 9, multiple: 5, ordering: 1, scenario: 16, single: 4 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
@@ -40,11 +40,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Questions per concept | Number of concepts |
 |---:|---:|
 | 2 | 375 |
-| 3 | 94 |
+| 3 | 96 |
 | 4 | 47 |
 | 5 | 26 |
-| 6 | 16 |
-| 7 | 12 |
+| 6 | 15 |
+| 7 | 13 |
 | 8 | 9 |
 | 9 | 5 |
 | 10 | 5 |
@@ -54,7 +54,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 14 | 1 |
 | 15 | 4 |
 | 17 | 3 |
-| 18 | 4 |
+| 18 | 3 |
+| 19 | 1 |
 | 21 | 1 |
 | 33 | 1 |
 
@@ -518,8 +519,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - `aaa`
 - `access-attacks`
+- `access-control-list`
 - `access-control-lists`
 - `accounting`
+- `acl`
 - `application-filtering`
 - `authentication`
 - `authorization`
@@ -950,9 +953,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `aaa` | 2 | network-security |
 | `aaaa-record` | 3 | application-layer |
 | `access-attacks` | 2 | network-security |
+| `access-control-list` | 3 | network-security |
 | `access-control-lists` | 2 | network-security |
 | `access-ports` | 2 | ethernet-switching |
 | `accounting` | 2 | network-security |
+| `acl` | 3 | network-security |
 | `address-resolution` | 15 | address-resolution |
 | `administrative-distance` | 4 | network-layer |
 | `aging-timer` | 2 | ethernet-switching |
@@ -1103,7 +1108,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fiber-optic-connectors` | 2 | physical-layer |
 | `fiber-optic-media` | 2 | internet-connections |
 | `file-sharing-services` | 2 | application-layer |
-| `firewall-filtering` | 6 | network-security |
+| `firewall-filtering` | 7 | network-security |
 | `flash` | 2 | router-configuration |
 | `flow-control` | 8 | transport-layer |
 | `fragment-free-switching` | 2 | ethernet-switching |
@@ -1314,7 +1319,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scalability` | 3 | ipv4-addressing, network-components, small-network |
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
-| `network-security-controls` | 18 | network-security, network-types, reliable-networks |
+| `network-security-controls` | 19 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 17 | icmp, internet-connections, small-network |
@@ -1575,7 +1580,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 75 |
 | multiple | 36 |
 | ordering | 25 |
-| scenario | 267 |
+| scenario | 268 |
 | single | 205 |
 | true-false | 1 |
 
@@ -1586,7 +1591,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 1 | 43 |
 | 2 | 154 |
 | 3 | 279 |
-| 4 | 155 |
+| 4 | 156 |
 | 5 | 22 |
 
 ## Interpretation and limits
