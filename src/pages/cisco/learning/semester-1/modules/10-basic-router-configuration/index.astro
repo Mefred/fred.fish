@@ -15,11 +15,13 @@ import Eyebrow from "../../../../../../components/Eyebrow.astro";
 ip domain-name example.local
 enable secret &lt;strong-secret&gt;
 username admin secret &lt;user-secret&gt;
+crypto key generate rsa
 line console 0
  login local
 line vty 0 4
  login local
  transport input ssh
+banner motd ^CAuthorized access only.^C
 service password-encryption
 copy running-config startup-config</code></pre><p>Command availability and VTY line ranges vary by IOS platform. Verify the actual device before applying a template.</p><div class="lesson-source"><span>SOURCE TOPICS</span><code>Initial router settings · Console/VTY · SSH · MOTD · Save configuration</code></div></div></section>
 </section>
