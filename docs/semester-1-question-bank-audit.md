@@ -4,68 +4,66 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **648** |
-| Unique question IDs | 648 |
-| Unique normalized prompts | 648 |
+| Active questions | **653** |
+| Unique question IDs | 653 |
+| Unique normalized prompts | 653 |
 | Lesson IDs represented | 24 |
 | Distinct concept tags | 617 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 41 |
-| AI-generated questions | 607 |
+| Source-origin questions | 40 |
+| AI-generated questions | 613 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
 ### Concept exposure distribution
 
-The current 616 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
+The current concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 380 |
-| 3 | 93 |
-| 4 | 44 |
-| 5 | 27 |
-| 6 | 17 |
-| 7 | 11 |
-| 8 | 7 |
+| 2 | 375 |
+| 3 | 94 |
+| 4 | 47 |
+| 5 | 26 |
+| 6 | 16 |
+| 7 | 12 |
+| 8 | 9 |
 | 9 | 5 |
-| 10 | 6 |
+| 10 | 5 |
 | 11 | 7 |
-| 12 | 4 |
-| 13 | 3 |
+| 12 | 5 |
+| 13 | 2 |
 | 14 | 1 |
 | 15 | 4 |
-| 16 | 1 |
-| 17 | 2 |
-| 18 | 2 |
-| 19 | 1 |
-| 20 | 1 |
+| 17 | 3 |
+| 18 | 4 |
+| 21 | 1 |
 | 33 | 1 |
 
-**Priority implication:** 380 concepts (61.6%) sit exactly at the two-question minimum.
+**Priority implication:** 375 concepts (60.8%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 209 |
-| Multiple select | 35 |
-| True / false | 1 |
-| Fill in the blank | 45 |
-| Matching | 73 |
+| Fill in the blank | 44 |
+| Matching | 75 |
+| Multiple select | 36 |
 | Ordering | 25 |
-| Scenario / troubleshooting | 260 |
-| **Total** | **648** |
+| Scenario / troubleshooting | 267 |
+| Single choice | 205 |
+| True / false | 1 |
+| **Total** | **653** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 43 |
-| 2 — Foundational | 158 |
-| 3 — Applied | 280 |
-| 4 — Advanced | 145 |
+| 2 — Foundational | 154 |
+| 3 — Applied | 279 |
+| 4 — Advanced | 155 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
@@ -242,3 +240,12 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - Reclassified `s2-config-keyword-001` from source-origin to AI-generated after rewriting it as a derived fixed-keyword distinction. Its `IMG-0122` reference is contextual support, not a source-marked answer key for that exact prompt.
 - Current provenance is **41 source-origin and 607 AI-generated** across 648 questions. The 40 documented source-origin image-question associations in the image audit are a separate count and do not include `IMG-0122`.
+
+
+### Current continuation reconciliation — November 10, 2026
+
+- The latest active seed contains **653 questions**, **653 unique IDs**, **653 unique normalized prompts**, **617 concepts**, **40 source-origin**, and **613 AI-generated** questions.
+- Current format totals: Single choice: 205; Multiple select: 36; True / false: 1; Matching: 75; Fill in the blank: 44; Ordering: 25; Scenario / troubleshooting: 267.
+- Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 155; 5: 22.
+- Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
+- This structural cross-check is not a substitute for executing the repository validator, adaptive-engine tests, Astro check/build, browser tests, or Packet Tracer labs.
