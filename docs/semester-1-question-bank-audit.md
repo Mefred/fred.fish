@@ -159,3 +159,9 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Latest-head CI run #758 failed during `validate:learning` because the source inventory referenced two nonexistent Module 4 question IDs: `s4-fiber-modes-match-001` and `s4-wireless-deployment-001`. Both were corrected to the actual active IDs (`s4-fiber-mode-match-001` and `s4-wlan-deployment-security-001`) in commit `370b289`. A direct cross-check found **503 unique question references in the inventory and zero missing active IDs**.
 - CI run **#759** is queued against the corrected head `370b2893596e015b38a69892bdae8cd814282741`. Its result is not yet confirmed.
 - The PR remains draft and unmerged. Remaining work: question-bank duplicate cleanup/corrections, native-resolution exhibit review, Packet Tracer/source activity execution, physical-device/accessibility/learner testing, and final human review.
+
+
+### Content correction — Module 16 firewall filtering
+
+- Updated `s16-firewall-filtering-applied-002` to label payload inspection as **Deep application-aware inspection**. Its explanation now distinguishes this advanced capability from the source-level application filtering example, which evaluates application types/services using port numbers.
+- No question count, concept tags, difficulty, answer key, or provenance changed. The correction is an instructional distinction, not a new source-origin claim.
