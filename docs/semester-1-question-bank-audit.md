@@ -172,3 +172,10 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s17-baseline-monitoring-applied-002` from a paraphrase of the 25%-to-90% anomaly question into a five-week utilization trend/capacity-forecasting scenario.
 - Reworked `s17-trace-interpretation-applied-002` from a duplicate intermediate-hop timeout into a multi-hop RTT interpretation scenario where the large latency increase first appears at hop 2.
 - Question count, concept tags, difficulty range, and source provenance remain unchanged. These are AI-generated applied scenarios, not new source-origin questions.
+
+
+### Question-bank cleanup — Module 17 command and DHCP verification
+
+- Reworked `s17-windows-dhcp-command-applied-002` from a duplicate `ipconfig /release` / `ipconfig /renew` ordering question into verification of the new lease using `ipconfig /all`.
+- Reworked `s17-ios-show-commands-applied-002` from a second command-matching task into direct selection of `show ip interface brief` for concise IPv4 interface/status verification. The full IOS command map remains in `s17-ios-show-commands-match-001`.
+- These edits retain the same question count and existing concept tags; provenance remains AI-generated.
