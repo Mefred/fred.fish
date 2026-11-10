@@ -187,7 +187,7 @@ The Module 5 objectives recovered from the lecture notes are mapped against the 
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
-| Binary Number System | Base-2 digits; positional notation; bit values; 8-bit octets; IPv4 dotted-decimal notation; decimal/binary conversion | `binary`, `binary-to-decimal`, `decimal-to-binary`, `binary-positional-notation`, `octet`, `dotted-decimal-notation` | Represented with direct conversions and IPv4 octet interpretation. More mixed multi-octet conversion drills would improve fluency. |
+| Binary Number System | Base-2 digits; positional notation; bit values; 8-bit octets; IPv4 dotted-decimal notation; decimal/binary conversion | `binary`, `binary-to-decimal`, `decimal-to-binary`, `binary-positional-notation`, `octet`, `dotted-decimal-notation` | Represented with direct conversions and IPv4 octet interpretation, including a complete four-octet IPv4 binary-to-decimal conversion. Further spaced practice remains useful for fluency. |
 | Hexadecimal Number System | Base-16 digits 0–9/A–F; 4-bit nibbles; binary/hex conversion; decimal/hex conversion; IPv6 128-bit addresses and hextets | `hexadecimal`, `hexadecimal-to-decimal`, `decimal-to-hexadecimal`, `hexadecimal-to-binary`, `binary-to-hexadecimal`, `hextet`, `ipv6-address-structure` | Represented with conversions in both directions, hextet structure, and IPv6 digit counts. More long-form IPv6 address conversion practice remains useful. |
 
 The active `number-systems` lesson contains **22 questions** and **21 distinct concept tags**. Its bank includes direct binary/decimal conversions, multi-octet IPv4 conversion, decimal/hexadecimal conversion, hexadecimal/binary conversion, nibble grouping, IPv6 hextet structure, MAC-address hexadecimal length, and positional-notation matching. The applied dotted-decimal item tests the 0–255 octet boundary. All active items remain AI-generated and are derived from the recovered Module 5 notes, not presented as verbatim source questions.
@@ -643,7 +643,7 @@ The active `data-link-layer` lesson contains **27 assigned questions**: 26 `s6-*
 - Locate and execute the Module 6 Packet Tracer switch-port activity, then verify the source answer state.
 - Run the question-bank validator and regenerate coverage documentation after any content edits.
 
-Module 6 is **question-quality revised but not signed off**. The identified standards, protocol-selection, LLC/MAC, media-access, duplex, and topology gaps have been addressed. Native-resolution exhibit review, remaining frame-field overlap review, and Packet Tracer activity execution remain open; continue with Module 7 — Ethernet Switching.
+Module 6 is **question-quality revised but not signed off**. The identified standards, protocol-selection, LLC/MAC, media-access, duplex, topology, and frame-field scope gaps have been addressed. Native-resolution exhibit review, learner-session verification of the differentiated frame-field items, and Packet Tracer activity execution remain open; continue with Module 7 — Ethernet Switching.
 
 
 ## Page-by-page source verification: Module 7 — Ethernet Switching
@@ -684,7 +684,7 @@ The active `ethernet-switching` lesson contains **38 questions**. The seed also 
 - Locate and execute the “View the Switch MAC Address Table” Packet Tracer lab; record the actual command output and expected learning behavior.
 - Run the question-bank validator and regenerate coverage documentation after content changes.
 
-Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab, native-resolution exhibit review, and taxonomy cleanup remain open.
+Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab and native-resolution exhibit review remain open. The ten legacy `s7-subnet-*` / `s7-vlsm-*` IDs assigned to `ipv4-addressing` are not counted as Module 7 questions. Preserve those IDs to avoid breaking learner progress; treat `lessonId` as the authoritative curriculum assignment and document the prefix mismatch rather than renaming published IDs.
 
 
 ## Page-by-page source verification: Module 8 — Network Layer
