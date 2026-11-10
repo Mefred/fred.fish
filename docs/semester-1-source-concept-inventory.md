@@ -1068,7 +1068,7 @@ The active `application-layer` lesson contains **29 questions** in `src/data/lea
 8. **DHCPv4 operation:** DORA ordering, UDP 67/68, and T1 unicast renewal remain. New `s15-dhcp-discover-packet-applied-003` interprets the initial DHCPDISCOVER: client MAC as Ethernet source, all-ones MAC as Ethernet destination, IPv4 source 0.0.0.0, IPv4 destination 255.255.255.255, and UDP 68→67. The answer is AI-generated until the original exhibit is checked.
 9. **DHCPv6:** New `s15-dhcpv6-info-request-applied-003` distinguishes INFORMATION-REQUEST/REPLY for stateless additional configuration from DHCPv4 DORA. The lesson also identifies DHCPv6 UDP 546/547 and the common SOLICIT/ADVERTISE/REQUEST/REPLY stateful exchange.
 10. **File-sharing protocols:** `s15-file-sharing-match-001` retains FTP/TFTP/SMB comparison. `s15-file-sharing-protocols-applied-002` tests a working FTP control connection with a blocked separate data connection. The lesson explains active/passive FTP, TFTP's initial UDP 69 request and negotiated transfer ports, and SMB authenticated sharing.
-11. **Hybrid P2P:** `s15-p2p-hybrid-001` and `s15-hybrid-p2p-applied-002` describe the same central-index/direct-peer-transfer model. Keep one. A hybrid design uses a central index/directory to help locate a resource, while the peers transfer the actual data directly. Do not describe this as a fully centralized client/server file transfer.
+11. **P2P models — distinct coverage:** `s15-p2p-hybrid-001` tests a hybrid model with a central index and direct peer-to-peer data transfer. `s15-hybrid-p2p-applied-002` tests pure P2P behavior in which peers both request and serve content without a central index. Retain both; they test different architectures.
 12. **Source lab and practical workflow:** The source's **Observe DNS Resolution** lab asks the learner to observe URL conversion to an IP address and use `nslookup` on a website and mail servers. The current bank has one `nslookup` troubleshooting scenario but does not require an end-to-end DNS resolution trace, compare A/AAAA/MX answers, or record which DNS server answered. The lab should be executed and evidence captured before the module is signed off.
 
 ### Duplicate, scope, and source-answer findings
@@ -1081,7 +1081,7 @@ The active `application-layer` lesson contains **29 questions** in `src/data/lea
 - **DNS record interpretation:** The MX question should explicitly test preference ordering and a hostname target, not an IP address. The NS question should distinguish the zone's authoritative server name from its glue address record.
 - **DHCP Discover answer hazard:** the new applied question correctly separates the client's source MAC from the broadcast destination MAC and distinguishes Ethernet, IPv4, and UDP fields. Keep it AI-generated until the original exhibit visibly confirms the answer.
 - **Source summary simplification:** The source summary says POP downloads messages and they are then deleted on the server. Treat this as a simplified default/legacy teaching description, not an invariant of POP3; clients can request that messages remain on the server.
-- **Source-origin:** All 23 active questions are marked AI-generated. No item should be upgraded to source-origin without a visibly verified answer key or source exhibit.
+- **Source-origin:** All 29 active questions are AI-generated; no source-origin answer key is established for this lesson. Do not upgrade provenance without a visibly verified answer key or source exhibit.
 
 ### Remaining work before sign-off
 
