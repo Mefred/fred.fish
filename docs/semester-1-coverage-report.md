@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 633
+- **Questions:** 638
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -29,7 +29,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | physical-layer | 44 | 53 | matching: 9, multiple: 1, scenario: 19, single: 15 | 1–4 |
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
-| router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
+| router-configuration | 27 | 40 | fill: 1, matching: 1, multiple: 1, ordering: 3, scenario: 16, single: 5 | 1–5 |
 | small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
 | transport-layer | 42 | 36 | fill: 2, matching: 3, multiple: 6, ordering: 2, scenario: 9, single: 20 | 1–4 |
 
@@ -37,13 +37,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 396 |
-| 3 | 88 |
-| 4 | 35 |
-| 5 | 26 |
-| 6 | 19 |
-| 7 | 8 |
-| 8 | 7 |
+| 2 | 387 |
+| 3 | 90 |
+| 4 | 39 |
+| 5 | 28 |
+| 6 | 18 |
+| 7 | 9 |
+| 8 | 8 |
 | 9 | 7 |
 | 10 | 7 |
 | 11 | 4 |
@@ -753,8 +753,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### router-configuration
 
+- `broadcast-domains`
 - `configuration-commands`
 - `default-gateway`
+- `enable-secret`
 - `flash`
 - `host-troubleshooting`
 - `hostname-domain-name`
@@ -771,6 +773,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `no-shutdown`
 - `nvram`
 - `packet-forwarding`
+- `password-encryption`
 - `path-selection`
 - `physical-layer-troubleshooting`
 - `ram`
@@ -966,7 +969,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `broadband-access` | 3 | internet-connections |
 | `broadcast` | 6 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
 | `broadcast-address` | 8 | ipv4-addressing |
-| `broadcast-domains` | 2 | ipv4-addressing |
+| `broadcast-domains` | 3 | ipv4-addressing, router-configuration |
 | `broadcast-storm` | 2 | ethernet-switching |
 | `bus-topology` | 2 | network-topologies |
 | `business-internet-connections` | 4 | internet-connections |
@@ -1048,7 +1051,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `electromagnetic-interference` | 4 | physical-layer |
 | `email-protocols` | 3 | application-layer |
 | `employee-network-utilization` | 2 | small-network |
-| `enable-secret` | 2 | basic-device-configuration |
+| `enable-secret` | 4 | basic-device-configuration, router-configuration |
 | `encapsulation` | 16 | data-link-layer, network-layer, protocols-and-models |
 | `end-devices` | 2 | network-components |
 | `endpoint-security` | 6 | network-security, network-trends |
@@ -1116,7 +1119,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-reachability` | 3 | icmp |
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 9 | address-resolution, router-configuration, small-network |
-| `hostname-domain-name` | 2 | router-configuration |
+| `hostname-domain-name` | 5 | router-configuration |
 | `http` | 7 | application-layer, protocols-and-models, transport-layer |
 | `http-get` | 2 | application-layer |
 | `http-post` | 2 | application-layer |
@@ -1141,7 +1144,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `inter-vlan-routing` | 2 | ethernet-switching, small-network |
 | `interface-configuration` | 2 | basic-device-configuration |
 | `interface-errors` | 2 | small-network |
-| `interface-status` | 6 | basic-device-configuration, router-configuration |
+| `interface-status` | 8 | basic-device-configuration, router-configuration |
 | `internet-access` | 3 | internet-connections |
 | `internet-architecture` | 2 | network-types |
 | `internet-governance` | 2 | network-types |
@@ -1152,7 +1155,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `intrusion-prevention-system` | 2 | network-security |
 | `ios-command-modes` | 3 | basic-device-configuration, router-configuration |
 | `ios-command-syntax` | 2 | basic-device-configuration |
-| `ios-commands` | 2 | router-configuration |
+| `ios-commands` | 6 | router-configuration |
 | `ios-debug` | 2 | small-network |
 | `ios-device-hardening` | 2 | basic-device-configuration |
 | `ios-interface-configuration` | 2 | basic-device-configuration |
@@ -1231,7 +1234,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `line-protocol` | 2 | basic-device-configuration, router-configuration |
 | `link-local-address` | 6 | ipv4-addressing, ipv6-addressing, small-network |
 | `llc-sublayer` | 3 | data-link-layer, protocols-and-models |
-| `local-authentication` | 2 | network-security, router-configuration |
+| `local-authentication` | 3 | network-security, router-configuration |
 | `local-route` | 2 | network-layer |
 | `logical-topology` | 2 | network-topologies |
 | `login-security` | 2 | network-security |
@@ -1301,11 +1304,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `next-hop` | 9 | data-link-layer, ipv6-addressing, network-layer, small-network |
 | `next-hop-resolution` | 3 | network-layer |
 | `nic` | 2 | ethernet-switching |
-| `no-shutdown` | 5 | basic-device-configuration, ipv6-addressing, router-configuration |
+| `no-shutdown` | 4 | basic-device-configuration, ipv6-addressing, router-configuration |
 | `ns-record` | 2 | application-layer |
 | `nslookup` | 5 | application-layer, small-network |
 | `number-systems` | 10 | number-systems |
-| `nvram` | 3 | router-configuration |
+| `nvram` | 4 | router-configuration |
 | `octet` | 3 | number-systems |
 | `online-collaboration` | 2 | network-trends |
 | `open-standards` | 3 | protocols-and-models |
@@ -1316,7 +1319,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `packet-forwarding` | 6 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
 | `packet-tracer-challenge` | 3 | small-network |
-| `password-encryption` | 2 | basic-device-configuration |
+| `password-encryption` | 3 | basic-device-configuration, router-configuration |
 | `password-security` | 2 | basic-device-configuration, network-security |
 | `path-selection` | 2 | router-configuration |
 | `path-troubleshooting` | 2 | network-layer, small-network |
@@ -1367,7 +1370,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reliability` | 6 | transport-layer |
 | `reliability-and-flow-control` | 3 | transport-layer |
 | `reliable-delivery` | 2 | transport-layer |
-| `remote-management` | 3 | basic-device-configuration, router-configuration |
+| `remote-management` | 4 | basic-device-configuration, router-configuration |
 | `remote-network-communication` | 6 | address-resolution, data-link-layer, protocols-and-models, small-network |
 | `retransmission` | 3 | protocols-and-models, transport-layer |
 | `return-route` | 3 | network-layer |
@@ -1384,9 +1387,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `router-advertisement` | 2 | address-resolution |
 | `router-boot-process` | 2 | router-configuration |
 | `router-functions` | 2 | router-configuration |
-| `router-interface-configuration` | 6 | router-configuration |
+| `router-interface-configuration` | 7 | router-configuration |
 | `router-interfaces` | 2 | icmp |
-| `router-memory` | 2 | router-configuration |
+| `router-memory` | 3 | router-configuration |
 | `router-on-a-stick` | 3 | ethernet-switching, small-network |
 | `router-role` | 2 | network-components |
 | `router-solicitation` | 2 | address-resolution |
@@ -1406,7 +1409,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `satellite-internet` | 2 | internet-connections |
 | `sc-connector` | 2 | physical-layer |
 | `scalability` | 3 | reliable-networks |
-| `secure-device-management` | 2 | router-configuration |
+| `secure-device-management` | 5 | router-configuration |
 | `secure-management` | 2 | network-security |
 | `security-policy-vulnerability` | 2 | network-security |
 | `security-threat-vectors` | 2 | network-security |
@@ -1446,7 +1449,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `standards-organizations` | 3 | data-link-layer, network-types, protocols-and-models |
 | `star-topology` | 2 | network-topologies |
 | `startup-config` | 2 | basic-device-configuration |
-| `startup-configuration` | 3 | router-configuration |
+| `startup-configuration` | 5 | router-configuration |
 | `stateful-dhcpv6` | 2 | ipv6-addressing |
 | `stateful-packet-inspection` | 2 | network-security |
 | `stateless-dhcpv6` | 2 | ipv6-addressing |
@@ -1465,7 +1468,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-default-gateway` | 2 | basic-device-configuration |
 | `switch-forwarding` | 2 | ethernet-switching |
 | `switch-learning` | 3 | ethernet-switching |
-| `switch-management` | 2 | basic-device-configuration, router-configuration |
+| `switch-management` | 3 | basic-device-configuration, router-configuration |
 | `switch-management-svi` | 2 | ethernet-switching |
 | `switch-memory-buffering` | 2 | ethernet-switching |
 | `switch-port-settings` | 2 | ethernet-switching |
@@ -1549,11 +1552,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 51 |
-| matching | 81 |
-| multiple | 36 |
-| ordering | 23 |
-| scenario | 220 |
+| fill | 48 |
+| matching | 79 |
+| multiple | 35 |
+| ordering | 25 |
+| scenario | 229 |
 | single | 221 |
 | true-false | 1 |
 
@@ -1562,9 +1565,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 45 |
-| 2 | 163 |
-| 3 | 269 |
-| 4 | 134 |
+| 2 | 160 |
+| 3 | 274 |
+| 4 | 137 |
 | 5 | 22 |
 
 ## Interpretation and limits
