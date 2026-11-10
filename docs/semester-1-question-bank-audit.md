@@ -252,7 +252,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 ### Current continuation reconciliation — November 10, 2026
 
-- The latest active seed contains **654 questions**, **654 unique IDs**, **654 unique normalized prompts**, **619 concepts**, **40 source-origin**, and **614 AI-generated** questions.
+- The latest active seed contains **656 questions**, **656 unique IDs**, **656 unique normalized prompts**, **620 concepts**, **40 source-origin**, and **616 AI-generated** questions. The two newest Module 17 Linux host-command questions are included in this snapshot.
 - Current format totals: Single choice: 205; Multiple select: 36; True / false: 1; Matching: 75; Fill in the blank: 44; Ordering: 25; Scenario / troubleshooting: 268.
 - Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 156; 5: 22.
 - Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
