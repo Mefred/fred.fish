@@ -249,7 +249,7 @@ Ten new unique candidates, IMG-0556, IMG-0558, IMG-0559, IMG-0560, IMG-0561, IMG
 
 ### Native-resolution follow-up 14 — final four batch-4 candidates
 
-IMG-0571, IMG-0576, IMG-0577, and IMG-0578 were opened individually at native resolution. All answer controls were empty; IMG-0576 is a Data Link Layer summary. This completes all 36 candidates in batch 4. The original batch 1–4 count is now **136/144**, with **8** contact-sheet-only candidates remaining in batch 3; across both workstreams, 176 unique images have been inspected. See [native-resolution follow-up 14](./semester-1-image-review-native-followup-14.md).
+IMG-0571, IMG-0576, IMG-0577, and IMG-0578 were opened individually at native resolution. All answer controls were empty; IMG-0576 is a Data Link Layer summary. This completes all 36 candidates in batch 4. The original batch 1–4 count is now **144/144**, with **zero** contact-sheet-only candidates remaining; across both workstreams, 184 unique images have been inspected. See [native-resolution follow-up 14](./semester-1-image-review-native-followup-14.md).
 
 
 ### Native-resolution follow-up 15 — ten batch-3 candidates
@@ -260,3 +260,8 @@ Ten new unique batch-3 candidates—IMG-0431, IMG-0432, IMG-0433, IMG-0435, IMG-
 ### Native-resolution follow-up 16 — ten batch-3 candidates
 
 Ten new unique batch-3 candidates—IMG-0449, IMG-0452, IMG-0454, IMG-0455, IMG-0457, IMG-0466, IMG-0470, IMG-0483, IMG-0488, and IMG-0489—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. IMG-0457 repeats the topology already used for IMG-0562 and does not create a new visual-context association. No new source-origin association, AI visual-context association, or question was added. Batch 3 now has 28/36 candidates opened at native resolution. The original 144-candidate set stands at **136/144 native-resolution / 8 contact-sheet-only**. Follow-ups 7–10 separately inspected 40 images outside that set; across both workstreams, 176 unique images have been inspected. See [native-resolution follow-up 16](./semester-1-image-review-native-followup-16.md).
+
+
+### Native-resolution follow-up 17 — final eight batch-3 candidates
+
+The final eight candidates—IMG-0494, IMG-0496, IMG-0501, IMG-0503, IMG-0506, IMG-0507, IMG-0508, and IMG-0511—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. IMG-0496 and IMG-0501 are duplicate CRC-switching-method prompts, and IMG-0508 is a Physical Layer summary slide. No new source-origin association, AI visual-context association, or question was added. Batch 3 is now 36/36 native-resolution. The original 144-candidate set is **144/144 opened at native resolution**, with **zero contact-sheet-only candidates remaining**. Follow-ups 7–10 separately inspected 40 additional images outside that set; across both workstreams, 184 unique images have been inspected. See [native-resolution follow-up 17](./semester-1-image-review-native-followup-17.md).
