@@ -177,5 +177,5 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 ### Question-bank cleanup — Module 17 command and DHCP verification
 
 - Reworked `s17-windows-dhcp-command-applied-002` from a duplicate `ipconfig /release` / `ipconfig /renew` ordering question into verification of the new lease using `ipconfig /all`.
-- Reworked `s17-ios-show-commands-applied-002` from a second command-matching task into direct selection of `show ip interface brief` for concise IPv4 interface/status verification. The full IOS command map remains in `s17-ios-show-commands-match-001`.
+- Reworked `s17-ios-show-commands-applied-002` from a second command-matching task into a five-command collection scenario covering active configuration, ARP mappings, protocol state, IOS/platform details, and concise IPv4 interface status. The full IOS command map remains in `s17-ios-show-commands-match-001`.
 - These edits retain the same question count and existing concept tags; provenance remains AI-generated.
