@@ -325,7 +325,7 @@ Five new AI-generated questions add malware-type matching, attack-category match
 
 ## Module 17 first-pass topic-to-question mapping
 
-The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson now has 61 questions. A three-stage Packet Tracer-style challenge now practices DHCP relay, DHCP-provided DNS settings, and default-route configuration, with validation steps after each correction.
+The recovered Module 17 objective is to build and troubleshoot a small network. Its source topics cover small-network devices and applications, scaling, connectivity verification, host/IOS commands, troubleshooting methodology, and troubleshooting scenarios. The active `small-network` lesson now has 63 questions. A three-stage Packet Tracer-style challenge now practices DHCP relay, DHCP-provided DNS settings, and default-route configuration, with validation steps after each correction.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
 |---|---|---|---|
@@ -1161,7 +1161,7 @@ Module 16 is **partially audited, not signed off**. Continue next with Module 17
 
 ### Active lesson inventory
 
-The active `small-network` lesson contains **61 questions**, including **3 source-origin** items: `s17-troubleshooting-order-001`, `s17-source-ipv6-interface-show-001`, and `s17-source-extended-ping-001`. The remaining 58 questions are AI-generated. This lesson is broader than a simple “small network” introduction: it includes device selection, QoS/real-time traffic, macOS/Windows/Linux host commands, DHCP relay, DNS, VLAN trunking, routing, and multi-stage Packet Tracer troubleshooting. Preserve the breadth, but organize the lesson by the seven source topics so question routing and progress reports remain understandable.
+The active `small-network` lesson contains **63 questions**, including **3 source-origin** items: `s17-troubleshooting-order-001`, `s17-source-ipv6-interface-show-001`, and `s17-source-extended-ping-001`. The remaining 60 questions are AI-generated. This lesson is broader than a simple “small network” introduction: it includes device selection, QoS/real-time traffic, macOS/Windows/Linux host commands, DHCP relay, DNS, VLAN trunking, routing, and multi-stage Packet Tracer troubleshooting. Preserve the breadth, but organize the lesson by the seven source topics so question routing and progress reports remain understandable.
 
 ### Objective-to-question findings
 
@@ -1198,7 +1198,7 @@ The active `small-network` lesson contains **61 questions**, including **3 sourc
 - **Troubleshooting sequence overlap:** `s17-troubleshooting-order-001` and `s17-troubleshooting-sequence-001` are related; retain both only if they test distinct steps and not the same ordered checklist.
 - **DNS fault logic:** `s17-multistage-dns-fault-isolation-001` includes a stale cached record but `nslookup` to the configured DNS server times out even though the server IP responds to ping. The likely fault is DNS service/query response or server-side policy, not merely the workstation's stale cache. Ensure the answer does not recommend only flushing the client cache when direct queries to the resolver time out.
 - **Source command scope:** The source's Linux section includes both legacy `ifconfig` and the `ip address` command; current Linux systems generally prefer `ip`. Keep command behavior distribution-qualified.
-- **Source-origin:** The three source-origin items are `s17-troubleshooting-order-001`, `s17-source-ipv6-interface-show-001`, and `s17-source-extended-ping-001`. The remaining 58 questions are AI-generated even when they align to source content.
+- **Source-origin:** The three source-origin items are `s17-troubleshooting-order-001`, `s17-source-ipv6-interface-show-001`, and `s17-source-extended-ping-001`. The remaining 60 questions are AI-generated even when they align to source content.
 
 ### Remaining work before sign-off
 
