@@ -7,12 +7,14 @@
 ## Results
 
 - Ten candidate images from the original 144-image batch set opened individually at native resolution.
+- Six of these images (IMG-0519, IMG-0520, IMG-0523, IMG-0524, IMG-0529, and IMG-0531) had already been opened in follow-up 6. They were rechecked but are not counted as new unique inspections.
+- Four images (IMG-0518, IMG-0522, IMG-0535, and IMG-0537) are new unique native-resolution inspections.
 - All visible radio buttons and checkboxes are unselected.
 - Blue star graphics on IMG-0518, IMG-0522, IMG-0523, IMG-0524, IMG-0529, IMG-0531, IMG-0535, and IMG-0537 are decorative and do not indicate selected answers.
 - IMG-0519 is an Ethernet module review slide, not an answer key.
 - No new source-origin association, AI visual-context association, or active question was added.
-- The original batch 1–4 native-resolution count is now 99 of 144, leaving 45 contact-sheet-only.
-- Follow-ups 7–10 separately inspected 40 additional images outside the original 144-candidate set. Across both workstreams, 139 unique images have now been individually inspected (99 + 40).
+- The original batch 1–4 native-resolution count is now 93 of 144, leaving 51 contact-sheet-only.
+- Follow-ups 7–10 separately inspected 40 additional images outside the original 144-candidate set. Across both workstreams, 133 unique images have now been individually inspected (93 + 40).
 - No question count or provenance label changed.
 
 ## Candidate-by-candidate log
