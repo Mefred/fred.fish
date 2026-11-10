@@ -684,3 +684,42 @@ The active `ethernet-switching` lesson contains **38 questions**. The seed also 
 - Run the question-bank validator and regenerate coverage documentation after content changes.
 
 Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab and taxonomy cleanup remain open.
+
+
+## Page-by-page source verification: Module 8 — Network Layer
+
+**Status: partially audited; not signed off.** The recovered source pages include 8.1 *Network Layer Characteristics*, *Introduction to Routing*, *IPv4 Packet*, and *IPv6 Packets*. The module summary identifies IP as connectionless, best-effort, and media-independent; the network layer's addressing, encapsulation, routing, and de-encapsulation functions; default-gateway behavior; routing-table lookup using longest-prefix match; and the important IPv4/IPv6 header characteristics.
+
+### Active lesson inventory
+
+The active `network-layer` lesson contains **61 questions**: 7 source-origin and 54 AI-generated. It covers IP delivery characteristics, packet encapsulation, host-versus-remote destination handling, default gateways, routing-table entries and codes, longest-prefix match, static/default routes, administrative distance and metric, route verification and troubleshooting, IPv4/IPv6 header fields, IPv4 fragmentation, and router forwarding steps.
+
+### Objective-to-question findings
+
+1. **Network-layer role and IP characteristics:** The bank tests connectionless, best-effort, and media-independent delivery, as well as encapsulation and routing. Preserve the distinction between the network layer providing best-effort delivery and lower-layer/link-specific reliability; IP itself does not guarantee delivery, retransmission, or error recovery.
+2. **Host delivery and default gateway:** First-hop Layer 2 versus end-to-end Layer 3 addressing is covered, as is the purpose of a host's default gateway. A switch management default gateway is a separate control-plane management setting; do not conflate it with a host's gateway or with a router's default route.
+3. **Routing table and route selection:** Connected/local, static, dynamic, and default route concepts are present. Longest-prefix match, administrative distance, and metric are represented. The bank should explicitly keep these as distinct decision stages: administrative distance selects between route sources for the same prefix; metric compares paths within a routing protocol; longest-prefix match selects the most specific installed route for a destination. Several questions currently repeat these distinctions without adding new reasoning.
+4. **Static-route configuration and verification:** The lesson includes next-hop static routes, default static routes, route persistence, recursive next-hop resolution, return-path failures, and `show ip route` interpretation. There is substantial repetition: the base and applied questions for static-route command, default-route command, route-code interpretation, AD comparison, recursive resolution, and route-entry interpretation largely assess the same decision. Retain a small number of varied configuration, verification, and fault-isolation tasks rather than parallel paraphrases.
+5. **IPv4 header fields:** Source/destination address, Version, DS/Differentiated Services, Protocol, TTL, and Header Checksum are assessed. The source-aligned field questions have explicit one-to-one mappings; the two matching questions `s8-ipv4-header-fields-match-001` and `s8-ipv4-header-fields-applied-002` overlap. The applied packet-inspection item should require interpretation of multiple fields together rather than merely repeat definitions.
+6. **IPv6 header:** The lesson covers Version, Traffic Class, Flow Label, Payload Length, Next Header, and Hop Limit, plus comparison with IPv4. Keep the fixed 40-byte base-header claim distinct from total packet size; extension headers are separate from the base header. Avoid suggesting the Flow Label guarantees a path or forces every router to preserve one; it identifies a flow for consistent handling.
+7. **Fragmentation and MTU:** IPv4 Identification, Flags, and Fragment Offset are assessed, with the offset expressed in 8-byte units. Add a source-verified MTU/fragmentation scenario if the current bank does not require learners to reason through the relationship between an outgoing link MTU and packet handling. Be precise that IPv6 routers do not fragment packets in transit; IPv6 source hosts may use a Fragment extension header.
+8. **Router forwarding:** A source-origin ordering question covers receiving a frame, de-encapsulating, route lookup, selecting an exit interface/next hop, and re-encapsulating for the outgoing link. Keep the Ethernet source/destination addresses hop-local while the IP source/destination addresses normally remain end-to-end, absent NAT.
+
+### Duplicate and scope review
+
+- **Static-route repetition:** `s8-static-route-command-001` / `s8-static-routes-applied-002`, `s8-default-static-route-command-001` / `s8-routing-config-applied-002`, and `s8-static-route-persistence-001` / `s8-static-route-verify-001` repeat configuration or verification skills. Differentiate command construction, operational persistence, and verification rather than using near-identical prompts.
+- **Route-choice repetition:** `s8-route-administrative-distance-001` / `s8-route-admin-distance-compare-003` / `s8-ospf-static-distance-applied-002` repeat AD selection. `s8-metric-selection-001` should remain clearly distinct from AD. `s8-longest-prefix-001`, `s8-prefix-choice-001`, `s8-longest-prefix-troubleshoot-001`, and `s8-route-lookup-multi-match-002` all test longest-prefix match; use varied prefix sets and avoid simply changing addresses.
+- **Route interpretation repetition:** `s8-route-source-code-interpret-001` and `s8-static-route-code-applied-002` both interpret an S* default route. `s8-two-router-route-table-001` and `s8-routing-table-interpretation-applied-002` both ask what a static route entry alone proves. Consolidate or make the later item test a different diagnostic step.
+- **Header-field repetition:** The IPv4 and IPv6 matching pairs are close duplicates. Use one matching exercise per header and turn the companion into a packet-capture interpretation scenario with realistic field values and clear assumptions.
+- **Potential scope overlap:** Switch default-gateway management, static-route command syntax, route administrative distance, and metric are useful network-layer routing skills but should be checked against the exact Module 8 topic/objective pages before being treated as core objectives. Do not import later routing-protocol configuration (for example, OSPF neighbor setup) into this lesson merely because OSPF appears as a route source.
+- **Provenance:** The six source-origin IPv4 field items and the source-origin host-routing/forwarding items should remain tied to their exact source images/blocks. The remaining questions are AI-generated; the review extract does not establish marked answers for every item.
+
+### Remaining work before sign-off
+
+- Complete a question-by-question comparison against all Module 8 source pages and topic objective text.
+- Consolidate the repeated static-route, AD, longest-prefix, route-code, and IPv4/IPv6 header prompts.
+- Verify the routing-table and router-forwarding diagrams at native resolution.
+- Add or refine an MTU/fragmentation application question only after checking the source exhibit and stated IPv4/IPv6 scope.
+- Run the question-bank validator and regenerate coverage documentation after content edits.
+
+Module 8 is **partially audited, not signed off**. Continue next with Module 9 — Address Resolution, while preserving the open cleanup items above.
