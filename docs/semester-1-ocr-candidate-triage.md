@@ -86,7 +86,7 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. Eighty-nine have now been opened individually at native resolution, leaving 55 contact-sheet-only candidates in these four batches. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. Ninety-nine have now been opened individually at native resolution, leaving 45 contact-sheet-only candidates in these four batches. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
 
 ## High-resolution contact-sheet review — batch 3
 
@@ -214,3 +214,8 @@ The following candidate images were reviewed for prompt/diagram context, but the
 | IMG-1576, IMG-1787 | `s4-utp-termination-diagnosis-applied-001` | Excessive untwisted wire length at an RJ-45 termination increases crosstalk risk |
 | IMG-1714 | `s1-network-characteristics-failover-applied-001` | Security, QoS, and fault tolerance in a redundant WAN scenario |
 | IMG-1088 | `s11-subnet-host-membership-matching-applied-001` | Match /27 subnet ranges to usable host addresses; reject broadcast/network addresses |
+
+
+## Native-resolution follow-up — ten additional images (follow-up 7)
+
+Ten consecutive images, IMG-0580–IMG-0589, were opened individually at native resolution after SHA-256-verified recovery from the original OneNote notebook. Seven contain quiz/activity prompts, but all visible answer controls are empty. IMG-0585 shows a Packet Tracer switch-port activity window at 100% completion, but its assessment choices remain unselected and no verified port answer is visible; it is not treated as a solved answer. IMG-0580 and IMG-0586 are section-title slides, and IMG-0588 is an instructional data-link frame slide. Blue stars are decorative. No new answer key, source-origin association, or visual-context association was found. The cumulative total for the 144 candidates in batches 1–4 is now **99 opened at native resolution / 45 contact-sheet-only**. See [native-resolution follow-up 7](./semester-1-image-review-native-followup-7.md).
