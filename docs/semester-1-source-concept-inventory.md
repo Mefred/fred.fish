@@ -719,7 +719,7 @@ The active `network-layer` lesson contains **62 questions**: 9 source-origin and
 ### Remaining work before sign-off
 
 - Complete a question-by-question comparison against all Module 8 source pages and topic objective text.
-- Recheck the four longest-prefix scenarios for meaningful prefix-calculation differences and verify that route-selection explanations keep AD, metric, and longest-prefix match separate.
+- **Longest-prefix calculation review — completed:** verified the /16 → /22 → /25 case for 10.20.4.200 (selects 10.20.4.128/25), the /16 → /24 case for 10.20.30.55 (selects 10.20.30.0/24), and the /8 → /16 → /21 case for 10.24.11.70 (selects 10.24.8.0/21). The routing-table matching item separately exercises multiple destination/interface choices and default-route fallback. These scenarios use different prefix sets and correct answers. Continue keeping administrative distance, protocol metric, and longest-prefix match as separate route-selection stages.
 - Verify the routing-table and router-forwarding diagrams at native resolution.
 - Verify the MTU/fragmentation assumptions and IPv6 Packet Too Big behavior against the source exhibit and stated IPv4/IPv6 scope.
 - Run the question-bank validator and regenerate coverage documentation after content edits.
