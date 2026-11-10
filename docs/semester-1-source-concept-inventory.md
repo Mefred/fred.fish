@@ -929,7 +929,7 @@ The active `ipv6-addressing` lesson contains **35 questions**, all **AI-generate
 - **Multicast groups:** matching retains FF02::1/FF02::2 mapping; the applied item now tests RS/RA destination direction, and a new solicited-node scenario explains selective neighbor resolution.
 - **DAD:** `s12-ipv6-dad-scenario-001` and `s12-dad-duplicate-address-002` are related but can be retained as a two-step pair if the second explicitly tests the response to a detected duplicate address. Ensure the host does not use the duplicate address.
 - **Solicited-node multicast:** `s12-solicited-node-multicast-applied-003` now explains why Neighbor Discovery targets a solicited-node multicast group rather than FF02::1.
-- **Provenance:** All 34 active questions are AI-generated. No source answer key is visibly established in the current source inventory for this module; do not upgrade provenance merely because a prompt or diagram resembles the source.
+- **Provenance:** All 35 active questions are AI-generated. No source answer key is visibly established for this lesson; keep all records AI-generated until native-resolution exhibits establish a marked answer. No source answer key is visibly established in the current source inventory for this module; do not upgrade provenance merely because a prompt or diagram resembles the source.
 
 ### Remaining work before sign-off
 
