@@ -38,10 +38,10 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 15 | 2 |
 | 16 | 3 |
 | 18 | 1 |
-| 19 | 0 |
+| 20 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 408 concepts (66.9%) sit exactly at the two-question minimum.
+**Priority implication:** 407 concepts (66.7%) sit exactly at the two-question minimum.
 
 ## Question formats
 
