@@ -457,7 +457,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 648 questions, 42 source-origin questions, and 606 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 648 questions, 41 source-origin questions, and 607 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
