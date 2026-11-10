@@ -61,9 +61,9 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 172 |
-| 3 — Applied | 271 |
-| 4 — Advanced | 108 |
+| 2 — Foundational | 171 |
+| 3 — Applied | 270 |
+| 4 — Advanced | 110 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
@@ -179,3 +179,9 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s17-windows-dhcp-command-applied-002` from a duplicate `ipconfig /release` / `ipconfig /renew` ordering question into verification of the new lease using `ipconfig /all`.
 - Reworked `s17-ios-show-commands-applied-002` from a second command-matching task into a five-command collection scenario covering active configuration, ARP mappings, protocol state, IOS/platform details, and concise IPv4 interface status. The full IOS command map remains in `s17-ios-show-commands-match-001`.
 - These edits retain the same question count and existing concept tags; provenance remains AI-generated.
+
+
+### Difficulty distribution reconciliation — Module 17 scenarios
+
+- The revised baseline and traceroute interpretation questions are now difficulty 4; the DHCP lease verification scenario is difficulty 3. The bank-wide difficulty totals therefore reconcile to **46 introductory, 171 foundational, 270 applied, 110 advanced, and 22 challenging**.
+- Question count, concept-tag count, and provenance totals are unchanged.
