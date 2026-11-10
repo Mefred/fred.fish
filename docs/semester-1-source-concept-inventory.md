@@ -607,3 +607,40 @@ The active `number-systems` lesson contains **21** assigned questions. All 21 ar
 5. **Visual checks:** verify IMG-0380/0388 number-system diagrams, IMG-0391/0393/0394 binary conversion examples, and IMG-0400 hexadecimal conversion material at native resolution before signing off the visual teaching aids. The text extraction is sufficient for this objective mapping but not for diagram/layout fidelity.
 
 Module 5 is **partially audited, not signed off**. The next pass should resolve the dotted-decimal duplicate, add MAC hexadecimal representation and intermediate conversion-step practice, then continue to Module 6 — Data Link Layer.
+
+
+## Page-by-page source verification: Module 6 — Data Link Layer
+
+**Status: partially audited; not signed off.** The recovered lecture notes identify two visible content sections, 6.1 *Purpose of the Data Link Layer* and 6.2 *Topologies*, followed by the module practice/quiz. The source material in 6.1 covers the role of Layer 2, standards organizations (IEEE, ITU, ISO, ANSI), LAN/WAN frame protocols, frame fields, and LLC responsibilities. Section 6.2 covers physical/logical topologies, point-to-point links, media access, and duplex behavior.
+
+### Active lesson inventory
+
+The active `data-link-layer` lesson contains **26 questions**, all marked `ai-generated`. They cover LLC and MAC responsibilities, frame structure and fields, FCS/error detection, router re-encapsulation, point-to-point and multiaccess topologies, WAN topology trade-offs, controlled versus contention-based access, CSMA/CD, CSMA/CA, and half/full duplex.
+
+### Objective-to-question findings
+
+1. **Purpose and scope of Layer 2:** LLC, MAC, local-link addressing, and router re-encapsulation are represented. The lesson explains that Layer 2 prepares packets for transmission over a local medium and that routers replace the Layer 2 frame at each routed hop. A direct end-to-end troubleshooting scenario that asks learners to distinguish a Layer 2 failure from an IP-routing failure would improve application.
+2. **Standards and protocol variation:** The source explicitly names IEEE, ITU, ISO, and ANSI and lists Ethernet, 802.11, PPP, HDLC, and Frame Relay as examples of link protocols. The current 26-question lesson does not directly assess the standards organizations or require learners to choose an appropriate frame protocol from a LAN/WAN context. Add these only after verifying the source exhibit and exact scope.
+3. **Frame structure and fields:** The bank covers boundaries, source/destination MAC addressing, Type, Control, Data, and error detection, plus Ethernet FCS. The generic frame-field matching question must retain its caveat that fields vary by data-link protocol; do not teach every protocol as having an identical header/trailer layout. The Type field is protocol identification; FCS is error detection, not correction.
+4. **LLC versus MAC:** Both sublayers are taught, including LLC's upper-layer interface/protocol identification and MAC's addressing/media-access responsibilities. However, `s6-mac-sublayer-001` and `s6-mac-sublayer-applied-002` substantially repeat the same two responsibilities. `s6-llc-role-001` and `s6-llc-protocol-demux-002` also assess closely related LLC concepts. Replace or differentiate these with source-aligned scenario application rather than adding more recall variants.
+5. **Media access and duplex:** CSMA/CD on legacy shared half-duplex Ethernet, CSMA/CA on wireless, controlled/token access, and duplex modes are represented. The CSMA/CA explanation should avoid implying that acknowledgments alone are the collision-avoidance mechanism; carrier sensing, interframe waiting, and randomized backoff are central. The two CSMA/CA questions and the two controlled-access questions overlap. The duplex matching questions also repeat the same half/full distinction; retain one direct comparison and make the other an applied fault diagnosis.
+6. **Topologies:** Point-to-point, multiaccess, point-to-point WAN, hub-and-spoke, and mesh are covered. `s6-topology-types-001` and `s6-multiaccess-topology-applied-002` overlap on point-to-point versus multiaccess; `s6-wan-topologies-match-001` and `s6-wan-topologies-applied-002` overlap on WAN structures/trade-offs. Preserve a clear distinction between physical topology and logical media-access behavior.
+7. **Source practice items:** The recovered review material includes a topology-selection item, a multicast destination-MAC forwarding item, a Packet Tracer switch-port lookup task, and a host's handling of an unknown destination MAC. These are useful source practice references, but their answers must not be promoted to source-origin without verifying the marked answer or the original Packet Tracer activity. The Packet Tracer activity file itself has not been located or executed as part of this audit.
+
+### Duplicate and scope review
+
+- **FCS repetition:** `s6-fcs-purpose-001`, `s6-fcs-troubleshoot-001`, `s6-fcs-corruption-response-002`, and `s6-frame-structure-applied-002` repeat the FCS detect/discard concept. Keep a definition item and one troubleshooting item; repurpose the others for frame-field interpretation or distinguishing error detection from recovery.
+- **MAC/LLC repetition:** The paired MAC and LLC questions above are near-duplicate checks. Prefer distinct contexts and measurable decisions.
+- **Topology repetition:** Two pairs of topology questions test substantially the same mappings. Consolidate and use the freed slots for standards/protocol selection and physical-versus-logical topology reasoning.
+- **All 26 questions remain AI-generated.** The lecture notes and review questions contain unmarked or ambiguous answer content; provenance must remain AI-generated until a source image or authoritative answer state visibly establishes the answer.
+- **Module boundary:** Keep switch MAC-table learning, unknown-unicast flooding, VLAN forwarding, and switching methods primarily in Module 7 (Ethernet Switching). The Module 6 router re-encapsulation and local-link MAC framing questions are appropriate reinforcement, but avoid letting the Data Link lesson become a duplicate Ethernet-switching lesson.
+
+### Remaining work before sign-off
+
+- Verify the native-resolution diagrams for the frame-field layout and topology exhibits; text extraction alone does not establish diagram fidelity.
+- Resolve the repeated FCS, LLC/MAC, CSMA/CA, controlled-access, duplex, and topology prompts.
+- Add direct, source-verified coverage for the listed standards organizations and LAN/WAN frame-protocol examples.
+- Locate and execute the Module 6 Packet Tracer switch-port activity, then verify the source answer state.
+- Run the question-bank validator and regenerate coverage documentation after any content edits.
+
+Module 6 is **partially audited, not signed off**. Continue next with resolving the documented duplicates and checking Module 7 boundary placement before advancing to Module 7 — Ethernet Switching.
