@@ -148,3 +148,14 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - `docs/semester-1-source-concept-inventory.md` — source topic mapping and review status.
 - `docs/semester-1-image-audit.md` and `docs/semester-1-ocr-candidate-triage.md` — image/OCR audit.
 - `docs/semester-1-image-recovery.md` — reproducible OneNote image recovery.
+
+
+### Latest continuation update (November 9, 2026 — Modules 4–17 audit reconciliation)
+
+- Added the missing Module 4 Physical Layer content audit. The source-concept inventory now has content-level audit sections for all 17 modules. Module 1–3 are first-pass content reviews; Modules 4–17 have expanded objective/question/duplicate/scope findings. No module is considered fully signed off while visual and activity checks remain incomplete.
+- Audited Module 4's 44 active questions: three source-origin and 41 AI-generated. The audit covers signaling, bandwidth/throughput/goodput/latency, UTP/STP/coax, TIA/EIA-568, fiber, connectors, wireless standards, interference, and the two source Packet Tracer activities.
+- Corrected the Module 4 audit's cable-type interpretation after checking the actual answer mappings: the pinout question tests same/different wiring standards; the applied question tests traditional unlike/like device types. They are compatible, not contradictory.
+- Updated the coverage-report generator and report footer to reflect that a content-level source inventory now exists for all 17 modules. The coverage report still measures question tags, not mastery or module sign-off.
+- Latest-head CI run #758 failed during `validate:learning` because the source inventory referenced two nonexistent Module 4 question IDs: `s4-fiber-modes-match-001` and `s4-wireless-deployment-001`. Both were corrected to the actual active IDs (`s4-fiber-mode-match-001` and `s4-wlan-deployment-security-001`) in commit `370b289`. A direct cross-check found **503 unique question references in the inventory and zero missing active IDs**.
+- CI run **#759** is queued against the corrected head `370b2893596e015b38a69892bdae8cd814282741`. Its result is not yet confirmed.
+- The PR remains draft and unmerged. Remaining work: question-bank duplicate cleanup/corrections, native-resolution exhibit review, Packet Tracer/source activity execution, physical-device/accessibility/learner testing, and final human review.
