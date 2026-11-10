@@ -93,7 +93,9 @@ The latest 11 image checks verified the exact prompt and answer marks/diagram de
 - IPv4 header questions identify the source and destination address fields, TTL, Version (0100), and Header Checksum.
 - RJ-45/8P8C is the Ethernet twisted-pair connector.
 
-OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. The remaining question candidates and diagram-dependent lesson references still need visual review.
+OCR still cannot reliably capture diagram relationships, handwritten annotations, topology labels, answer-selection marks, command-line formatting, or low-contrast text. Native-resolution review of the fixed candidate set does not remove this general OCR limitation.
+
+**Current manual-review status (November 9, 2026):** all 144 candidates across batches 1–4 have been opened individually at native resolution (144/144; zero contact-sheet-only candidates). Follow-ups 7–10 separately inspected 40 additional images outside that fixed set, for 184 unique native-resolution inspections overall. The final batch-3 candidates are documented in [native-resolution follow-up 17](./semester-1-image-review-native-followup-17.md). Any future image review must be tracked as a newly scoped batch; the OCR export's 744-unique-image unresolved status is not a live manual-review backlog.
 
 ### High-resolution contact-sheet review — batch 1
 
