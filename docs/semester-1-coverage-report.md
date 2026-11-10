@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 629
+- **Questions:** 630
 - **Lessons represented:** 22
 - **Distinct concept tags:** 613
 
@@ -25,7 +25,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
-| number-systems | 21 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 7 | 1–4 |
+| number-systems | 22 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 8 | 1–4 |
 | physical-layer | 44 | 53 | matching: 9, multiple: 1, scenario: 19, single: 15 | 1–4 |
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
@@ -37,15 +37,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 405 |
-| 3 | 78 |
+| 2 | 403 |
+| 3 | 79 |
 | 4 | 39 |
-| 5 | 23 |
-| 6 | 19 |
-| 7 | 7 |
+| 5 | 24 |
+| 6 | 18 |
+| 7 | 8 |
 | 8 | 9 |
-| 9 | 6 |
-| 10 | 5 |
+| 9 | 5 |
+| 10 | 6 |
 | 11 | 6 |
 | 12 | 2 |
 | 13 | 2 |
@@ -951,8 +951,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `base-2` | 2 | number-systems |
 | `best-effort` | 2 | network-layer |
 | `bidirectional-connectivity` | 2 | network-layer |
-| `binary` | 2 | number-systems |
-| `binary-positional-notation` | 3 | number-systems |
+| `binary` | 3 | number-systems |
+| `binary-positional-notation` | 4 | number-systems |
 | `binary-to-decimal` | 4 | number-systems |
 | `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 2 | physical-layer |
@@ -1096,7 +1096,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `goodput` | 2 | physical-layer |
 | `half-duplex` | 3 | data-link-layer, physical-layer |
 | `hardware-threats` | 2 | network-security |
-| `hexadecimal` | 4 | ethernet-switching, number-systems |
+| `hexadecimal` | 5 | ethernet-switching, number-systems |
 | `hexadecimal-conversion` | 3 | number-systems |
 | `hexadecimal-to-binary` | 2 | number-systems |
 | `hexadecimal-to-decimal` | 3 | number-systems |
@@ -1162,7 +1162,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ips` | 2 | network-security |
 | `ipv4-address-configuration` | 2 | basic-device-configuration, router-configuration |
 | `ipv4-address-types` | 2 | ipv4-addressing |
-| `ipv4-addressing` | 6 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
+| `ipv4-addressing` | 7 | basic-device-configuration, ipv4-addressing, number-systems, small-network |
 | `ipv4-differentiated-services` | 3 | network-layer |
 | `ipv4-fragmentation-fields` | 4 | network-layer |
 | `ipv4-header-checksum` | 3 | network-layer |
@@ -1297,9 +1297,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `no-shutdown` | 5 | basic-device-configuration, ipv6-addressing, router-configuration |
 | `ns-record` | 2 | application-layer |
 | `nslookup` | 5 | application-layer, small-network |
-| `number-systems` | 9 | number-systems |
+| `number-systems` | 10 | number-systems |
 | `nvram` | 3 | router-configuration |
-| `octet` | 2 | number-systems |
+| `octet` | 3 | number-systems |
 | `online-collaboration` | 2 | network-trends |
 | `open-standards` | 3 | protocols-and-models |
 | `osi-model` | 11 | application-layer, protocols-and-models |
@@ -1543,11 +1543,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 91 |
-| multiple | 38 |
+| matching | 88 |
+| multiple | 37 |
 | ordering | 22 |
-| scenario | 190 |
-| single | 235 |
+| scenario | 198 |
+| single | 232 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1555,9 +1555,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 169 |
+| 2 | 166 |
 | 3 | 271 |
-| 4 | 121 |
+| 4 | 125 |
 | 5 | 22 |
 
 ## Interpretation and limits
