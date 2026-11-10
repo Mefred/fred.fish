@@ -221,7 +221,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - Added two AI-generated applied scenarios for the “Networks Affect our Lives” objective: remote access to education/services and communication across geographic boundaries. They use existing source block references as topic context but are not source-origin because the recovered objective slide `IMG-0051` contains only a title.
 - Moved the two CCNA/career questions from `network-components` to the dedicated `it-professional` lesson ID, removing the misleading `network-components` tag from those records. The source inventory now reflects the Module 1 topic taxonomy.
-- Recomputed bank totals: **648 questions, 24 lesson IDs, 617 concepts, 42 source-origin, 606 AI-generated**. All 617 concepts remain above the two-question floor.
+- Recomputed bank totals: **648 questions, 24 lesson IDs, 617 concepts, 41 source-origin, 607 AI-generated**. All 617 concepts remain above the two-question floor.
 
 
 ### Module 2 question-quality pass — November 10, 2026
@@ -229,7 +229,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s2-ios-keyword-001` from a near-duplicate `running-config` definition into a command-syntax scenario distinguishing the `ping` keyword from its user-supplied destination IP argument. `s2-config-keyword-001` remains the fixed-keyword retrieval item. Added the shared `command-arguments` concept tag to both items, preserving the two-question minimum.
 - Added `s2-end-to-end-ping-applied-001`, a same-subnet connectivity troubleshooting scenario. It reinforces that hosts in the same /24 communicate through the switch without a default gateway and that the destination host's IPv4 address/mask should be checked before changing router settings.
 - Reworked `s2-ios-keyword-001` into a `ping` command/argument scenario and retained `s2-config-keyword-001` for fixed-keyword retrieval. Added `s2-end-to-end-ping-applied-001` for same-subnet connectivity troubleshooting, plus `s2-context-help-applied-001` and `s2-tab-completion-applied-001` for IOS `?` help and Tab completion.
-- Updated the Module 2 inventory and regenerated the coverage report. Current bank: **648 questions, 24 lesson IDs, 617 concepts, 42 source-origin, 606 AI-generated**; no concept falls below two questions.
+- Updated the Module 2 inventory and regenerated the coverage report. Current bank: **648 questions, 24 lesson IDs, 617 concepts, 41 source-origin, 607 AI-generated**; no concept falls below two questions.
 
 
 ### Module 2 CLI usability practice — November 10, 2026
