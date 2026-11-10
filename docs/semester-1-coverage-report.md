@@ -17,7 +17,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
-| ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
+| ipv4-addressing | 43 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 16, single: 12 | 2–5 |
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
@@ -38,16 +38,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Questions per concept | Number of concepts |
 |---:|---:|
 | 2 | 387 |
-| 3 | 90 |
-| 4 | 39 |
+| 3 | 89 |
+| 4 | 40 |
 | 5 | 28 |
 | 6 | 18 |
 | 7 | 9 |
 | 8 | 8 |
 | 9 | 7 |
-| 10 | 7 |
-| 11 | 4 |
-| 12 | 1 |
+| 10 | 6 |
+| 11 | 3 |
+| 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
@@ -55,7 +55,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 17 | 2 |
 | 18 | 1 |
 | 20 | 1 |
-| 31 | 1 |
+| 33 | 1 |
 
 **Concepts with fewer than two questions:** 0.
 
@@ -1184,7 +1184,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv4-routing-table` | 5 | network-layer |
 | `ipv4-source-destination` | 5 | network-layer |
 | `ipv4-static-route` | 2 | network-layer |
-| `ipv4-subnetting` | 31 | ipv4-addressing |
+| `ipv4-subnetting` | 33 | ipv4-addressing |
 | `ipv4-troubleshooting` | 2 | small-network |
 | `ipv4-ttl` | 5 | icmp, network-layer |
 | `ipv4-unicast-broadcast-multicast` | 3 | ipv4-addressing |
@@ -1276,7 +1276,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `neighbor-solicitation` | 4 | address-resolution, icmp, ipv6-addressing |
 | `network-access` | 2 | network-types |
 | `network-access-layer` | 2 | protocols-and-models |
-| `network-address` | 10 | ipv4-addressing |
+| `network-address` | 12 | ipv4-addressing |
 | `network-applications-vs-services` | 2 | small-network |
 | `network-architecture-requirements` | 2 | network-security |
 | `network-attacks` | 2 | network-security |
@@ -1297,7 +1297,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
 | `network-security-controls` | 13 | network-security, network-types, reliable-networks |
-| `network-segmentation` | 3 | ipv4-addressing |
+| `network-segmentation` | 4 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 16 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | network-components |
@@ -1462,7 +1462,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `subnet-mask` | 11 | ipv4-addressing, router-configuration |
 | `subnet-membership` | 4 | ipv4-addressing |
 | `subnet-overlap` | 2 | ipv4-addressing |
-| `subnet-sizing` | 11 | ipv4-addressing |
+| `subnet-sizing` | 12 | ipv4-addressing |
 | `svi` | 2 | basic-device-configuration |
 | `switch-configuration` | 2 | ethernet-switching |
 | `switch-default-gateway` | 2 | basic-device-configuration |
@@ -1553,11 +1553,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 48 |
-| matching | 79 |
+| matching | 78 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 229 |
-| single | 221 |
+| scenario | 232 |
+| single | 219 |
 | true-false | 1 |
 
 ### Difficulty
