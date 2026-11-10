@@ -297,7 +297,6 @@ The recovered Module 14 material covers transport-layer responsibilities, TCP an
 Six new AI-generated questions add duplicate-ACK loss recovery, SACK, MSS/MTU comparison, flow-versus-congestion-control distinctions, advertised-window capacity, and remaining-window arithmetic. They are derived from recovered Module 14 notes and existing source references, not presented as verbatim source questions. TCP header and sliding-window diagrams were screened in the candidate exhibit pass; no marked answer key was visible. Full-size packet-capture interpretation remains pending.
 
 ## Module 15 first-pass topic-to-question mapping
-
 The recovered Module 15 objective is to explain how application-layer protocols support end-user applications. Its source topics cover the application/presentation/session layers, peer-to-peer, web/email protocols, IP addressing services, and file sharing. The active `application-layer` lesson now has 27 questions.
 
 | Source topic objective | Source concepts recovered | Active question-bank evidence | First-pass finding |
@@ -597,7 +596,6 @@ The active `number-systems` lesson contains **22** assigned questions. All 22 ar
 | IPv4 dotted-decimal application | `s5-ipv4-octet-reasoning-001`, `s5-dotted-decimal-applied-002`, `s5-ipv4-binary-conversion-001`. | **Represented:** the definition item explains the four-octet notation; the revised applied item diagnoses an invalid octet value (300), reinforcing the 0–255 range without repeating the definition. |
 | IPv6 and MAC hexadecimal representation | `s5-ipv6-hex-structure-001`, `s5-ipv6-hextet-scenario-001`, `s5-ipv6-hextet-count-001`, `s5-mac-hex-length-applied-003`. | **Represented:** IPv6 hextets and the 48-bit MAC representation are now distinguished. The new MAC item checks six bytes × two hex digits = twelve hexadecimal digits, without expanding into MAC-layer operation. |
 | Number-system terminology | `s5-positional-notation-match-001`, `s5-positional-notation-applied-002`. | **Represented:** radix and base 2, base 10, and base 16 are matched. Check that explanations clarify positional weights as powers of the radix, rather than describing radix only as a count of symbols. |
-
 ### Module 5 scope and quality findings
 
 1. **Dotted-decimal duplicate resolved:** `s5-dotted-decimal-applied-002` now tests the 0–255 octet boundary using an invalid address, rather than repeating the four-octet definition.
@@ -897,7 +895,6 @@ The active `ipv4-addressing` lesson contains **43 questions** in `src/data/learn
 
 Module 11 is **partially audited, not signed off**. Continue next with Module 12 — IPv6 Addressing, while keeping the duplicate cleanup, identifier reconciliation, exhibit verification, and Packet Tracer execution open.
 
-
 ## Page-by-page source verification: Module 12 — IPv6 Addressing
 
 **Status: partially audited; not signed off.** The source objective is “Implement an IPv6 addressing scheme.” The recovered topic objectives cover IPv4 limitations, IPv6 representation and address types, static GUA/LLA configuration, dynamic GUA configuration, dynamic LLA configuration, IPv6 multicast, and IPv6 subnetting. The notes cover dual stack, tunneling, translation, compression rules, GUA/LLA/anycast/multicast, EUI-64 and random interface IDs, SLAAC and DHCPv6 modes, solicited-node multicast, all-nodes/all-routers groups, and the 16-bit subnet ID between a /48 global routing prefix and /64 interface ID.
@@ -1098,7 +1095,6 @@ The active `application-layer` lesson contains **29 questions** in `src/data/lea
 
 Module 15 is **partially audited, not signed off**. Continue next with Module 16 — Network Security Fundamentals, while keeping duplicate cleanup, DNS/DHCP practical work, source-exhibit verification, and application-protocol coverage open.
 
-
 ## Page-by-page source verification: Module 16 — Network Security Fundamentals
 
 **Status: partially audited; not signed off.** The source objective is “Configure switches and routers with device hardening features to enhance security.” Its four topic objectives are **Security Threats and Vulnerabilities** (explain why basic security measures are necessary on network devices), **Network Attacks** (identify security vulnerabilities), **Network Attack Mitigation** (identify general mitigation techniques), and **Device Security** (configure network devices with hardening features to mitigate threats). The source covers threat impacts, technology/configuration/policy vulnerabilities, malware, reconnaissance/access/DoS attacks, firewalls, defense in depth, AAA, VPN, IPS, endpoint security, physical security, Cisco AutoSecure, strong passphrases, SSH, password controls, and backups. Practical source activities include **Configure Secure Passwords and SSH**, **Secure Network Devices**, **Research Network Security Threats**, and **Configure Network Devices with SSH**.
@@ -1255,12 +1251,11 @@ The active `physical-layer` lesson contains **44 questions**: **3 source-origin*
 
 ### Remaining work before sign-off
 
-- Decide whether to retain both UTP cable-type questions as distinct pinout-versus-device-role retrieval practice or consolidate them.
-- Recheck the remaining UTP termination exhibit and the source Packet Tracer physical-installation activities; the identified Module 4 applied-question duplicates have been rewritten.
-- The goodput calculation scenario is now present; review it in a learner session to confirm the unit conversion is clear.
-- Verify the original UTP termination and cable-selection exhibits at native resolution, including T568A/T568B pinouts and the rollover cable diagram.
-- Execute Packet Tracer **Connect the Physical Layer** and **Connect a Wired and Wireless LAN**. Record device/module identification, cable selection, connections, link status, end-to-end tests, and physical topology observations.
-- Run the question-bank validator and regenerate the coverage report after question-bank edits.
+- **Resolved:** retain both UTP cable-type questions. They test separate dimensions: T568A/T568B pinout convention and traditional device-role guidance. The lesson explains both and qualifies device-role guidance with MDI/MDI-X and Auto-MDI/MDIX behavior.
+- **Completed content review:** the goodput calculation, cable-selection scenarios, standards distinction, fiber mode/connector selection, dispersion, and wireless deployment scenarios are present and differentiated in the objective findings above.
+- **Still pending:** inspect the original UTP termination and cable-selection exhibits at native resolution, including T568A/T568B pinouts and the rollover cable diagram. Keep the exhibit-based termination question AI-generated until its marked answer is visually verified.
+- **Still pending:** execute Packet Tracer **Connect the Physical Layer** and **Connect a Wired and Wireless LAN**. Record device/module identification, cable selection, connections, link status, end-to-end tests, and physical topology observations.
+- **Still pending:** run the question-bank validator and regenerate the coverage report after question-bank edits.
 
 Module 4 is **partially audited, not signed off**. With this section added, the source-concept inventory has detailed audit sections for Modules 1–17. Remaining work is content correction and deduplication, native-image verification, source lab execution, accessibility/learner testing, and final PR validation.
 
