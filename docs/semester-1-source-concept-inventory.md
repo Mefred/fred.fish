@@ -1202,7 +1202,7 @@ The active `small-network` lesson contains **61 questions**, including **3 sourc
 
 ### Remaining work before sign-off
 
-- Consolidate the remaining device-selection, extended-ping, DHCP-relay, and any identical troubleshooting-order questions. The IOS show-command and DHCP lease pairs now test distinct retrieval-versus-application skills; the baseline and traceroute scenarios have also been differentiated.
+- Review the remaining extended-ping, DHCP-relay, and troubleshooting-order pairs for genuinely distinct learning objectives. The device-selection/scaling overlap has been addressed by separating general selection criteria, PoE switch requirements, and evidence-based capacity planning. The IOS show-command and DHCP lease pairs test distinct retrieval-versus-application skills; the baseline and traceroute scenarios have also been differentiated.
 - Verify the DNS multi-stage fault answer: resolver IP reachability does not establish DNS service health; distinguish server timeout from stale local cache.
 - Add missing small-network device role coverage and make the lesson navigation follow the seven source topic objectives.
 - Verify Linux/macOS/Windows command names and clearly label legacy versus current commands.
