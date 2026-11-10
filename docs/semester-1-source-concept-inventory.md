@@ -644,3 +644,43 @@ The active `data-link-layer` lesson contains **26 questions**, all marked `ai-ge
 - Run the question-bank validator and regenerate coverage documentation after any content edits.
 
 Module 6 is **partially audited, not signed off**. Continue next with resolving the documented duplicates and checking Module 7 boundary placement before advancing to Module 7 — Ethernet Switching.
+
+
+## Page-by-page source verification: Module 7 — Ethernet Switching
+
+**Status: partially audited; not signed off.** The recovered source identifies sections 7.1 *Ethernet Frames*, 7.2 *Ethernet MAC Address*, 7.3 *The MAC Address Table*, and 7.4 *Switch Speeds and Forwarding Methods*, followed by the module practice/quiz. The source summary emphasizes Ethernet at Layers 1 and 2, MAC addressing, frame structure, switch learning/forwarding, forwarding methods, memory buffering, and duplex/speed negotiation.
+
+### Active lesson inventory
+
+The active `ethernet-switching` lesson contains **38 questions**. The seed also contains 10 records with an `s7-` identifier that are assigned to other lesson IDs; those are not counted as active Module 7 lesson questions. The 38 active records cover MAC address format/OUI, broadcast and multicast behavior, source learning and MAC-table aging/moves, unknown-unicast flooding, NIC filtering, frame size, store-and-forward/cut-through/fragment-free, duplex mismatch, Auto-MDIX, collision domains, buffering, and VLAN/STP/inter-VLAN scenarios. The active lesson includes both source-origin and AI-generated items; provenance is recorded per question.
+
+### Objective-to-question findings
+
+1. **Ethernet frame and addressing:** The lesson assesses 48-bit/6-byte MAC addresses, OUI, broadcast, multicast, NIC filtering, and frame-size limits. Ensure the bank distinguishes the Ethernet broadcast destination (`FF:FF:FF:FF:FF:FF`) from IPv4 broadcast and from multicast. The source's 64–1,518-byte frame size excludes preamble/SFD; VLAN tags and jumbo-frame support need explicit context whenever the maximum is tested.
+2. **MAC address table learning and forwarding:** Dynamic learning from the source MAC plus ingress port, refresh/aging, MAC moves, known unicast forwarding, and unknown-unicast flooding are represented. Add or retain a complete decision-table scenario that compares known unicast, unknown unicast, broadcast, and multicast, with VLAN and ingress-port constraints explicit. Do not teach that a switch learns from the destination MAC.
+3. **Multicast and broadcast:** The source specifies multicast destination behavior and IPv4/IPv6 multicast MAC prefixes. The current lesson includes multicast-related items, but the exact IPv4 mapping and IPv6 mapping should be validated against the native exhibit before treating the lesson as comprehensive. Multicast flooding is subject to switch configuration such as multicast snooping; avoid presenting “always floods every port” as universal.
+4. **Forwarding methods:** Store-and-forward and cut-through are covered, including fast-forward and fragment-free variants. The source says store-and-forward receives the complete frame and checks CRC/FCS; cut-through starts after reading the destination address. Verify the fragment-free 64-byte detail and any speed/latency trade-off against the source diagram before adding a precise numeric claim.
+5. **Switch memory buffering:** Port-based and shared-memory buffering are represented by one matching question. Add an applied congestion/egress-contention scenario only if source-level scope and diagrams support it.
+6. **Speed, duplex, and Auto-MDIX:** The lesson covers duplex mismatch, full-duplex collision behavior, Auto-MDIX, and collision domains. Source also covers autonegotiation and the requirement for link partners to agree on speed/duplex. Add a direct negotiation outcome question if absent after a full question-level review. Be precise: modern Gigabit Ethernet is full-duplex; do not generalize half-duplex collision behavior to modern switched full-duplex links.
+7. **Source lab:** The lecture notes identify a “View the Switch MAC Address Table” lab with objectives to build/configure a network and examine the switch MAC table. This practical activity has not yet been executed in Packet Tracer; a static recall question is not a substitute for reading live `show mac address-table` output and verifying learned ports.
+
+### Duplicate and scope review
+
+- **Repeated host filtering:** `s7-host-unknown-mac-001` and `s7-nic-frame-processing-applied-002` assess essentially the same NIC behavior (discard an ordinary unicast frame not addressed to the NIC). Retain one and convert the other to a distinct broadcast/multicast acceptance scenario.
+- **Repeated duplex/collision concept:** `s7-full-duplex-001` and `s7-full-duplex-access-001` both ask why switched full-duplex avoids collisions/CSMA/CD. Retain one direct item and use the other for interpreting an interface's duplex/speed state or diagnosing a mismatch.
+- **Repeated frame-size concept:** `s7-frame-size-001` and `s7-frame-size-standards-applied-002` both assess the conventional 1,518-byte maximum. Differentiate by testing frame-length calculation including/excluding preamble/SFD or a tagged frame, with source-qualified assumptions.
+- **Repeated Auto-MDIX concept:** `s7-auto-mdix-001` and `s7-auto-mdix-verification-005` overlap. Retain a concise definition and an applied physical-link troubleshooting case only if they require distinct decisions.
+- **Repeated OUI concept:** `s7-oui-purpose-001` and `s7-oui-vendor-identification-005` test the same 24-bit vendor-prefix interpretation. Consolidate into one stronger question.
+- **Potential curriculum bleed:** Several active lesson items assess VLAN trunking, native VLAN mismatch, spanning tree, router-on-a-stick, and Layer 2 loop troubleshooting. These topics may be present in later switching curriculum, but the recovered Module 7 source sections and module summary do not establish them as Module 7 objectives. Verify their source mapping; move them to the appropriate later lesson or mark them as deliberate enrichment rather than core Module 7 coverage.
+- **Source-origin caution:** A question is source-origin only when its exact answer is visibly established by the source asset. Review-material extracts sometimes include distractor lists or ambiguous answer fragments; do not infer the correct answer from extracted text alone.
+
+### Remaining work before sign-off
+
+- Review all 38 active lesson records against the full Module 7 source pages, not just the summary and extracted snippets.
+- Resolve the repeated NIC filtering, duplex, frame-size, Auto-MDIX, and OUI prompts.
+- Verify the VLAN/STP/inter-VLAN questions' intended curriculum placement.
+- Inspect the MAC address, multicast, switching-method, and buffering exhibits at native resolution.
+- Locate and execute the “View the Switch MAC Address Table” Packet Tracer lab; record the actual command output and expected learning behavior.
+- Run the question-bank validator and regenerate coverage documentation after content changes.
+
+Module 7 is **partially audited, not signed off**. The next audit target is Module 8 — Network Layer; the Module 7 practical lab and taxonomy cleanup remain open.
