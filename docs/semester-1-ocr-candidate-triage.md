@@ -87,7 +87,7 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. One hundred sixteen have been opened individually at native resolution, leaving 28 contact-sheet-only candidates in these four batches. Follow-ups 7–10 separately inspected 40 additional images outside this 144-candidate set; across both workstreams, 156 unique images have now been individually inspected. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. One hundred twenty-six have been opened individually at native resolution, leaving 18 contact-sheet-only candidates in these four batches. Follow-ups 7–10 separately inspected 40 additional images outside this 144-candidate set; across both workstreams, 166 unique images have now been individually inspected. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
 
 ## High-resolution contact-sheet review — batch 3
 
@@ -259,3 +259,8 @@ Ten new unique candidates, IMG-0556, IMG-0558, IMG-0559, IMG-0560, IMG-0561, IMG
 ### Native-resolution follow-up 14 — final four batch-4 candidates
 
 IMG-0571, IMG-0576, IMG-0577, and IMG-0578 were opened individually at native resolution. All answer controls were empty; IMG-0576 is a Data Link Layer summary. This completes all 36 candidates in batch 4. The original batch 1–4 count is now **116/144**, with **28** contact-sheet-only candidates remaining in batches 1–3; across both workstreams, 156 unique images have been inspected. See [native-resolution follow-up 14](./semester-1-image-review-native-followup-14.md).
+
+
+## Native-resolution follow-up — ten batch-3 candidates (follow-up 15)
+
+Ten new unique batch-3 candidates—IMG-0431, IMG-0432, IMG-0433, IMG-0435, IMG-0437, IMG-0439, IMG-0440, IMG-0442, IMG-0444, and IMG-0447—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. No new source-origin association, AI visual-context association, or active question was added. Batch 3 now has 18/36 candidates opened at native resolution. The original 144-candidate set stands at **126/144 native-resolution / 18 contact-sheet-only**. Follow-ups 7–10 separately inspected 40 images outside that set; across both workstreams, 166 unique images have been individually inspected. See [native-resolution follow-up 15](./semester-1-image-review-native-followup-15.md).
