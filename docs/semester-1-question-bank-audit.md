@@ -4,9 +4,9 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **656** |
-| Unique question IDs | 656 |
-| Unique normalized prompts | 656 |
+| Active questions | **657** |
+| Unique question IDs | 657 |
+| Unique normalized prompts | 657 |
 | Lesson IDs represented | 24 |
 | Distinct concept tags | 620 |
 | Concepts with only one question | **0** |
@@ -50,10 +50,10 @@ Every active concept tag has at least two question records. This is a bank-cover
 | Matching | 75 |
 | Multiple select | 36 |
 | Ordering | 25 |
-| Scenario / troubleshooting | 269 |
+| Scenario / troubleshooting | 270 |
 | Single choice | 206 |
 | True / false | 1 |
-| **Total** | **656** |
+| **Total** | **657** |
 
 ## Difficulty
 
@@ -61,7 +61,7 @@ Every active concept tag has at least two question records. This is a bank-cover
 |---|---:|
 | 1 — Introductory | 43 |
 | 2 — Foundational | 154 |
-| 3 — Applied | 280 |
+| 3 — Applied | 281 |
 | 4 — Advanced | 157 |
 | 5 — Challenging | 22 |
 
@@ -252,7 +252,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 ### Current continuation reconciliation — November 10, 2026
 
-- The latest active seed contains **656 questions**, **656 unique IDs**, **656 unique normalized prompts**, **620 concepts**, **40 source-origin**, and **616 AI-generated** questions. The two newest Module 17 Linux host-command questions are included in this snapshot.
+- The latest active seed contains **657 questions**, **657 unique IDs**, **657 unique normalized prompts**, **620 concepts**, **40 source-origin**, and **617 AI-generated** questions. The latest Module 17 additions cover Linux interface inspection and current Windows ARP-cache clearing syntax.
 - Current format totals: Single choice: 205; Multiple select: 36; True / false: 1; Matching: 75; Fill in the blank: 44; Ordering: 25; Scenario / troubleshooting: 268.
 - Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 156; 5: 22.
 - Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
