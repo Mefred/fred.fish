@@ -25,8 +25,8 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
 | Visually verified source-origin image-question associations | 40 |
-| Visual references used by AI-generated questions | 14 |
-| Total visually reviewed image-question associations | 54 |
+| Visual references used by AI-generated questions | 15 |
+| Total visually reviewed image-question associations | 55 |
 | Candidate asset records visually reviewed as not questions | 4 |
 | Unique unresolved candidate images still marked unresolved in original export | 744 |
 | Candidate asset records still marked unresolved in original export | 750 |
@@ -239,9 +239,14 @@ Ten more images, IMG-0610–IMG-0619, were opened individually at native resolut
 
 ## Native-resolution follow-up — ten additional batch-4 candidates (follow-up 11)
 
-Ten candidates from the original 144-image set—IMG-0518, IMG-0519, IMG-0520, IMG-0522, IMG-0523, IMG-0524, IMG-0529, IMG-0531, IMG-0535, and IMG-0537—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. IMG-0519 is a module review slide and IMG-0522 is a physical-layer signaling slide. No new source-origin association or question was added. The original batch 1–4 review now stands at **99/144 native-resolution / 45 contact-sheet-only**. Follow-ups 7–10 separately inspected 40 additional images outside that set, bringing the total across both workstreams to 139 individually inspected unique images. See [native-resolution follow-up 11](./semester-1-image-review-native-followup-11.md).
+Ten candidates from the original 144-image set—IMG-0518, IMG-0519, IMG-0520, IMG-0522, IMG-0523, IMG-0524, IMG-0529, IMG-0531, IMG-0535, and IMG-0537—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. IMG-0519 is a module review slide and IMG-0522 is a physical-layer signaling slide. No new source-origin association was added. One AI-generated first-hop destination-MAC scenario now uses IMG-0562 as visual context; it is not labeled source-origin because the source answer controls are unselected. The original batch 1–4 review now stands at **99/144 native-resolution / 45 contact-sheet-only**. Follow-ups 7–10 separately inspected 40 additional images outside that set, bringing the total across both workstreams to 139 individually inspected unique images. See [native-resolution follow-up 11](./semester-1-image-review-native-followup-11.md).
 
 
 ## Native-resolution follow-up — ten additional batch-4 candidates (follow-up 12)
 
 Ten more candidates from the original 144-image set—IMG-0539, IMG-0540, IMG-0542, IMG-0543, IMG-0544, IMG-0549, IMG-0550, IMG-0553, IMG-0554, and IMG-0555—were opened individually at native resolution after SHA-256-verified recovery. All visible answer controls are empty; stars are decorative. IMG-0540 and IMG-0555 are module-summary slides. No new source-origin association or question was added. The original batch 1–4 review now stands at **109/144 native-resolution / 35 contact-sheet-only**. Follow-ups 7–10 separately inspected 40 additional images outside that set, bringing the total across both workstreams to 149 individually inspected unique images. See [native-resolution follow-up 12](./semester-1-image-review-native-followup-12.md).
+
+
+### Additional AI visual-context association
+
+IMG-0562 now supports AI-generated question s4-first-hop-destination-mac-scenario-001. The topology shows a web server and its default gateway router on one subnet, with PC1 on a remote subnet; the first Ethernet frame uses the local router's MAC address. The source choices are unselected, so this is not source-origin.
