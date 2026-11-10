@@ -13,7 +13,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | address-resolution | 17 | 20 | fill: 1, matching: 3, scenario: 5, single: 8 | 1–4 |
 | application-layer | 27 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 11, single: 7 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
-| data-link-layer | 27 | 43 | matching: 8, multiple: 3, ordering: 1, scenario: 7, single: 8 | 2–4 |
+| data-link-layer | 27 | 43 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
@@ -37,20 +37,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 403 |
-| 3 | 79 |
-| 4 | 39 |
+| 2 | 399 |
+| 3 | 85 |
+| 4 | 37 |
 | 5 | 24 |
 | 6 | 18 |
 | 7 | 8 |
 | 8 | 9 |
 | 9 | 5 |
-| 10 | 6 |
-| 11 | 6 |
+| 10 | 7 |
+| 11 | 5 |
 | 12 | 2 |
 | 13 | 2 |
-| 14 | 3 |
-| 15 | 2 |
+| 14 | 2 |
+| 15 | 3 |
 | 16 | 4 |
 | 18 | 1 |
 | 20 | 1 |
@@ -1004,7 +1004,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `cut-through-switching` | 2 | ethernet-switching |
 | `data-centers` | 2 | network-trends |
 | `data-link-frame` | 2 | data-link-layer |
-| `data-link-layer` | 14 | data-link-layer, protocols-and-models |
+| `data-link-layer` | 15 | data-link-layer, protocols-and-models |
 | `data-link-topologies` | 2 | data-link-layer |
 | `decapsulation` | 3 | data-link-layer, protocols-and-models |
 | `decimal-to-binary` | 2 | number-systems |
@@ -1046,16 +1046,16 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `end-devices` | 2 | network-components |
 | `endpoint-security` | 4 | network-security, network-trends |
 | `environmental-threats` | 2 | network-security |
-| `error-detection` | 4 | data-link-layer |
+| `error-detection` | 3 | data-link-layer |
 | `etherchannel` | 2 | ethernet-switching |
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 2 | address-resolution |
 | `ethernet-cabling` | 4 | ethernet-switching, physical-layer |
-| `ethernet-frame` | 11 | data-link-layer, ethernet-switching |
+| `ethernet-frame` | 10 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 2 | ethernet-switching |
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 2 | network-layer |
-| `ethernet-standards` | 2 | ethernet-switching |
+| `ethernet-standards` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-switching` | 10 | ethernet-switching |
 | `ethernet-troubleshooting` | 3 | ethernet-switching, small-network |
 | `ethernet-wan` | 2 | internet-connections |
@@ -1067,7 +1067,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fast-forward-switching` | 2 | ethernet-switching |
 | `fault-isolation` | 3 | network-topologies, small-network |
 | `fault-tolerance` | 8 | network-topologies, reliable-networks, small-network |
-| `fcs` | 4 | data-link-layer |
+| `fcs` | 3 | data-link-layer |
 | `fiber-core` | 2 | physical-layer |
 | `fiber-dispersion` | 2 | physical-layer |
 | `fiber-internet` | 2 | internet-connections |
@@ -1328,7 +1328,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `physical-security` | 2 | network-security |
 | `physical-topology` | 3 | network-topologies |
 | `ping` | 7 | icmp, small-network |
-| `point-to-point-topology` | 2 | data-link-layer |
+| `point-to-point-topology` | 3 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
 | `port-numbers` | 8 | application-layer, protocols-and-models, transport-layer |
@@ -1436,7 +1436,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `spanning-tree` | 2 | ethernet-switching |
 | `ssh` | 5 | network-security, router-configuration, transport-layer |
 | `st-connector` | 2 | physical-layer |
-| `standards-organizations` | 2 | network-types, protocols-and-models |
+| `standards-organizations` | 3 | data-link-layer, network-types, protocols-and-models |
 | `star-topology` | 2 | network-topologies |
 | `startup-config` | 2 | basic-device-configuration |
 | `startup-configuration` | 3 | router-configuration |
@@ -1510,7 +1510,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `vty-lines` | 2 | router-configuration |
 | `vulnerabilities` | 2 | network-security |
 | `wan` | 6 | internet-connections, network-types |
-| `wan-topologies` | 2 | data-link-layer |
+| `wan-topologies` | 3 | data-link-layer |
 | `web-protocols` | 2 | application-layer |
 | `well-known-ports` | 2 | transport-layer |
 | `wifi` | 2 | physical-layer |
@@ -1543,11 +1543,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 88 |
-| multiple | 37 |
-| ordering | 22 |
-| scenario | 198 |
-| single | 232 |
+| matching | 85 |
+| multiple | 36 |
+| ordering | 23 |
+| scenario | 205 |
+| single | 228 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1555,9 +1555,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 166 |
-| 3 | 271 |
-| 4 | 125 |
+| 2 | 164 |
+| 3 | 270 |
+| 4 | 128 |
 | 5 | 22 |
 
 ## Interpretation and limits
