@@ -1257,17 +1257,9 @@ Module 4 is **partially audited, not signed off**. With this section added, the 
 
 ### Focused question-bank expansion — Modules 14–16 (November 10, 2026)
 
-- **Module 14:** Added four AI-generated items: a typical FIN/ACK four-message close sequence, RST versus orderly FIN interpretation, UDP Length-field payload calculation, and UDP's four basic header fields. The FIN sequence is explicitly described as a typical client-initiated close; each direction closes independently.
-- **Module 15:** Added four AI-generated items: DNS root-to-TLD-to-authoritative referral ordering, an authoritative-answer trace, DHCPv6 four-message address assignment, and stateless DHCPv6 alongside SLAAC when the RA flags are M=0/O=1.
-- **Module 16:** Added two AI-generated endpoint-defense scenarios: host-based endpoint protection and EDR network isolation while preserving telemetry during incident response.
+- **Module 14:** Added four AI-generated items: `s14-tcp-termination-fin-order-001`, `s14-tcp-termination-reset-001`, `s14-udp-header-length-applied-001`, and `s14-udp-header-fields-applied-001`. They cover a typical FIN/ACK four-message close, RST versus orderly FIN, UDP Length-field payload calculation, and the four basic UDP header fields. The FIN sequence is explicitly described as a typical client-initiated close; each direction closes independently.
+- **Module 15:** Added four AI-generated items: `s15-dns-hierarchy-order-001`, `s15-dns-hierarchy-trace-001`, `s15-dhcpv6-message-order-001`, and `s15-dhcpv6-stateless-slaac-001`. They cover DNS referrals and authoritative answers, DHCPv6 message order, and stateless DHCPv6 alongside SLAAC when the RA flags are M=0/O=1.
+- **Module 16:** Added `s16-endpoint-protection-role-001` and `s16-edr-isolation-scenario-001` for host-based endpoint protection and EDR network isolation while preserving telemetry during incident response.
 - The additions use existing source references as topic anchors and remain labeled AI-generated; none is represented as a verbatim source question.
 - All new concept tags are covered by at least two active questions. The existing validator's two-question minimum remains satisfied.
 
-
-### Focused question-bank expansion — Modules 14–16 (November 10, 2026)
-
-- **Module 14:** Added four AI-generated items: a typical FIN/ACK four-message close sequence, RST versus orderly FIN interpretation, UDP Length-field payload calculation, and UDP's four basic header fields. The FIN sequence is explicitly described as a typical client-initiated close; each direction closes independently.
-- **Module 15:** Added four AI-generated items: DNS root-to-TLD-to-authoritative referral ordering, an authoritative-answer trace, DHCPv6 four-message address assignment, and stateless DHCPv6 alongside SLAAC when the RA flags are M=0/O=1.
-- **Module 16:** Added two AI-generated endpoint-defense scenarios: host-based endpoint protection and EDR network isolation while preserving telemetry during incident response.
-- The additions use existing source references as topic anchors and remain labeled AI-generated; none is represented as a verbatim source question.
-- All new concept tags are covered by at least two active questions. The existing validator's two-question minimum remains satisfied.
