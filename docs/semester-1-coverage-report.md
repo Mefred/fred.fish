@@ -11,7 +11,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
 | address-resolution | 17 | 20 | fill: 1, matching: 3, scenario: 5, single: 8 | 1–4 |
-| application-layer | 27 | 37 | matching: 7, multiple: 1, ordering: 3, scenario: 8, single: 8 | 1–4 |
+| application-layer | 27 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 11, single: 7 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 43 | matching: 8, multiple: 3, ordering: 1, scenario: 7, single: 8 | 2–4 |
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
@@ -21,7 +21,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 61 | 69 | fill: 3, matching: 9, multiple: 5, ordering: 1, scenario: 24, single: 19 | 1–5 |
-| network-security | 29 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 5, single: 5 | 1–5 |
+| network-security | 29 | 45 | matching: 9, multiple: 3, ordering: 1, scenario: 11, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
@@ -37,13 +37,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 406 |
+| 2 | 405 |
 | 3 | 78 |
-| 4 | 38 |
+| 4 | 39 |
 | 5 | 23 |
-| 6 | 21 |
+| 6 | 20 |
 | 7 | 6 |
-| 8 | 8 |
+| 8 | 9 |
 | 9 | 6 |
 | 10 | 5 |
 | 11 | 6 |
@@ -1543,11 +1543,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 100 |
-| multiple | 37 |
+| matching | 91 |
+| multiple | 38 |
 | ordering | 22 |
-| scenario | 180 |
-| single | 237 |
+| scenario | 189 |
+| single | 236 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1556,8 +1556,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 46 |
 | 2 | 171 |
-| 3 | 274 |
-| 4 | 116 |
+| 3 | 270 |
+| 4 | 120 |
 | 5 | 22 |
 
 ## Interpretation and limits
