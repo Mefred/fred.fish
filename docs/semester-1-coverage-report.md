@@ -2,16 +2,16 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 619
+- **Questions:** 629
 - **Lessons represented:** 22
-- **Distinct concept tags:** 610
+- **Distinct concept tags:** 613
 
 ## Lesson coverage
 
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
 | address-resolution | 17 | 20 | fill: 1, matching: 3, scenario: 5, single: 8 | 1–4 |
-| application-layer | 23 | 35 | matching: 7, multiple: 1, ordering: 1, scenario: 6, single: 8 | 1–4 |
+| application-layer | 27 | 37 | matching: 7, multiple: 1, ordering: 3, scenario: 8, single: 8 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 43 | matching: 8, multiple: 3, ordering: 1, scenario: 7, single: 8 | 2–4 |
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
@@ -21,7 +21,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 61 | 69 | fill: 3, matching: 9, multiple: 5, ordering: 1, scenario: 24, single: 19 | 1–5 |
-| network-security | 27 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 3, single: 5 | 1–5 |
+| network-security | 29 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 5, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
 | network-types | 12 | 13 | multiple: 1, scenario: 3, single: 8 | 1–3 |
@@ -31,7 +31,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
 | small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
-| transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
+| transport-layer | 42 | 36 | fill: 2, matching: 3, multiple: 6, ordering: 2, scenario: 8, single: 21 | 1–4 |
 
 ## Concept exposure distribution
 
@@ -1538,10 +1538,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|
 | fill | 52 |
 | matching | 100 |
-| multiple | 36 |
-| ordering | 19 |
-| scenario | 175 |
-| single | 236 |
+| multiple | 37 |
+| ordering | 22 |
+| scenario | 180 |
+| single | 237 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1550,8 +1550,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 46 |
 | 2 | 171 |
-| 3 | 270 |
-| 4 | 110 |
+| 3 | 274 |
+| 4 | 116 |
 | 5 | 22 |
 
 ## Interpretation and limits
