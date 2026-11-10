@@ -1121,7 +1121,7 @@ The active `network-security` lesson contains **27 questions**. Two questions (`
 - **Malware duplicate:** `s16-malware-types-match-001` and `s16-malware-types-applied-002` test the same three malware definitions.
 - **Attack-category duplicate:** `s16-attack-categories-match-001` and `s16-attack-categories-applied-002` map the same reconnaissance/access/DoS categories.
 - **Vulnerability-category duplicate:** `s16-vulnerability-types-match-001` and `s16-vulnerability-types-applied-002` repeat technology/configuration/policy examples.
-- **Firewall-filter duplicate/inconsistency:** `s16-firewall-types-match-001` and `s16-firewall-filtering-applied-002` disagree on whether source-level application filtering is based on ports or payload inspection. Resolve the instructional definition before retaining both.
+- **Firewall filtering distinction corrected:** `s16-firewall-types-match-001` retains the source-level application/port filtering definition; `s16-firewall-filtering-applied-002` now explicitly labels payload inspection as deep application-aware inspection. The two items test different levels of filtering.
 - **Physical-threat duplicate:** `s16-physical-threats-match-001` and `s16-physical-threats-applied-002` repeat all four physical threat classes.
 - **Defense-in-depth overlap:** `s16-defense-depth-001`, `s1-security-defense-layers-001`, and `s1-security-mapping-001` overlap in layered controls. The two `s1-*` items are Module 1 carryover, not native Module 16 source evidence.
 - **SSH overlap:** `s16-ssh-config-order-001` and `s16-ios-ssh-hardening-applied-002` both test the same prerequisites. Preserve one configuration task and use the other for troubleshooting an incomplete/unsafe configuration.
@@ -1134,7 +1134,7 @@ The active `network-security` lesson contains **27 questions**. Two questions (`
 ### Remaining work before sign-off
 
 - Consolidate the duplicate AAA, malware, attack-category, vulnerability-category, firewall, physical-threat, SSH, and ACL question pairs.
-- Resolve the firewall application-filtering ports-versus-payload definition mismatch.
+- Recheck the revised deep application-aware inspection wording in the next full question-bank validation.
 - Add source-aligned practice for the four attack impacts, MITM, endpoint protection/NAC, patching, DMZs, configuration/IOS backups, and integrated device hardening.
 - Correct explanations that overstate `service password-encryption` and Trojan self-replication; modernize the RSA key-size guidance while preserving the source's historical context.
 - Reconcile the two legacy `s1-*` IDs assigned to `network-security`.
