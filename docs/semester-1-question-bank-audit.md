@@ -4,8 +4,8 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **611** |
-| Unique question IDs | 611 |
+| Active questions | **614** |
+| Unique question IDs | 614 |
 | Unique normalized prompts | 611 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 610 |
@@ -47,22 +47,22 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 235 |
+| Single choice | 236 |
 | Multiple select | 35 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 99 |
+| Matching | 100 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 169 |
-| **Total** | **611** |
+| Scenario / troubleshooting | 170 |
+| **Total** | **614** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 170 |
-| 3 — Applied | 268 |
+| 2 — Foundational | 171 |
+| 3 — Applied | 270 |
 | 4 — Advanced | 105 |
 | 5 — Challenging | 22 |
 
@@ -126,7 +126,7 @@ Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Ded
 
 Site CI run #649 passed on commit `79637c2`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. It completed successfully with zero reported accessibility violations. Later commits continue to receive the same full workflow; use the PR Checks tab to verify the latest head rather than treating any in-progress or queued run as passed.
 
-Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest ten Module 17 additions bring the bank to 611 questions; the regenerated report records 56 questions across 88 concept tags in `small-network`. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
+Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The latest thirteen Module 17 additions bring the bank to 614 questions; the regenerated report records 56 questions across 88 concept tags in `small-network`. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
