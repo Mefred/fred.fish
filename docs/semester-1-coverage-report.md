@@ -14,7 +14,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | application-layer | 29 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 15, single: 5 | 1–4 |
 | basic-device-configuration | 30 | 47 | fill: 4, multiple: 1, ordering: 4, scenario: 13, single: 8 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
-| ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
+| ethernet-switching | 38 | 59 | fill: 3, matching: 5, scenario: 17, single: 13 | 1–5 |
 | icmp | 18 | 28 | matching: 1, scenario: 9, single: 8 | 2–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 16, single: 12 | 2–5 |
@@ -39,12 +39,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 379 |
+| 2 | 378 |
 | 3 | 93 |
-| 4 | 45 |
+| 4 | 46 |
 | 5 | 27 |
-| 6 | 18 |
-| 7 | 9 |
+| 6 | 16 |
+| 7 | 11 |
 | 8 | 8 |
 | 9 | 5 |
 | 10 | 5 |
@@ -983,7 +983,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `binary-to-hexadecimal` | 3 | number-systems |
 | `bluetooth` | 2 | physical-layer |
 | `broadband-access` | 3 | internet-connections |
-| `broadcast` | 6 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
+| `broadcast` | 7 | address-resolution, ethernet-switching, ipv4-addressing, protocols-and-models |
 | `broadcast-address` | 8 | ipv4-addressing |
 | `broadcast-domains` | 3 | ipv4-addressing, router-configuration |
 | `broadcast-storm` | 2 | ethernet-switching |
@@ -1258,7 +1258,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `login-security` | 2 | network-security |
 | `longest-prefix-match` | 5 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
-| `mac-address-table` | 6 | ethernet-switching |
+| `mac-address-table` | 7 | ethernet-switching |
 | `mac-addressing` | 21 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
 | `mac-flapping` | 2 | ethernet-switching |
 | `mac-learning` | 2 | ethernet-switching |
@@ -1281,7 +1281,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multi-device-troubleshooting` | 2 | small-network |
 | `multi-service-server` | 2 | small-network |
 | `multiaccess-topology` | 2 | data-link-layer |
-| `multicast` | 3 | ethernet-switching, ipv4-addressing, protocols-and-models |
+| `multicast` | 4 | ethernet-switching, ipv4-addressing, protocols-and-models |
 | `multicast-address` | 2 | ipv6-addressing |
 | `multicast-group` | 2 | ipv4-addressing |
 | `multimode-fiber` | 3 | physical-layer |
@@ -1521,7 +1521,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `udp` | 11 | application-layer, protocols-and-models, transport-layer |
 | `udp-header` | 4 | transport-layer |
 | `unicast` | 3 | address-resolution, ipv4-addressing, protocols-and-models |
-| `unknown-unicast-flooding` | 2 | ethernet-switching |
+| `unknown-unicast-flooding` | 3 | ethernet-switching |
 | `url-filtering` | 2 | network-security |
 | `usable-host-count` | 2 | ipv4-addressing |
 | `usable-host-range` | 5 | ipv4-addressing |
@@ -1572,11 +1572,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 45 |
-| matching | 74 |
+| matching | 75 |
 | multiple | 35 |
 | ordering | 25 |
 | scenario | 261 |
-| single | 207 |
+| single | 206 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1585,8 +1585,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 43 |
 | 2 | 156 |
-| 3 | 282 |
-| 4 | 145 |
+| 3 | 281 |
+| 4 | 146 |
 | 5 | 22 |
 
 ## Interpretation and limits
