@@ -1537,10 +1537,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 101 |
+| matching | 100 |
 | multiple | 36 |
-| ordering | 20 |
-| scenario | 173 |
+| ordering | 19 |
+| scenario | 175 |
 | single | 236 |
 | true-false | 1 |
 
