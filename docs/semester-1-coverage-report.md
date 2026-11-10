@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 639
+- **Questions:** 641
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -31,29 +31,30 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 27 | 40 | fill: 1, matching: 1, multiple: 1, ordering: 3, scenario: 16, single: 5 | 1–5 |
 | small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
-| transport-layer | 42 | 36 | fill: 2, matching: 3, multiple: 6, ordering: 2, scenario: 9, single: 20 | 1–4 |
+| transport-layer | 44 | 37 | fill: 2, matching: 2, multiple: 6, ordering: 2, scenario: 14, single: 18 | 1–4 |
 
 ## Concept exposure distribution
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 384 |
-| 3 | 88 |
-| 4 | 44 |
-| 5 | 26 |
-| 6 | 18 |
+| 2 | 382 |
+| 3 | 90 |
+| 4 | 42 |
+| 5 | 28 |
+| 6 | 17 |
 | 7 | 10 |
 | 8 | 8 |
-| 9 | 8 |
-| 10 | 5 |
+| 9 | 6 |
+| 10 | 8 |
 | 11 | 4 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
-| 16 | 2 |
+| 16 | 1 |
 | 17 | 2 |
 | 18 | 2 |
+| 19 | 1 |
 | 20 | 1 |
 | 33 | 1 |
 
@@ -892,6 +893,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 - `congestion-control`
 - `connectionless-transport`
+- `dhcp`
 - `dns`
 - `flow-control`
 - `http`
@@ -1030,7 +1032,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `device-management` | 2 | basic-device-configuration |
 | `device-resource-management` | 2 | small-network |
 | `device-selection` | 3 | small-network |
-| `dhcp` | 9 | application-layer, basic-device-configuration, small-network |
+| `dhcp` | 10 | application-layer, basic-device-configuration, small-network, transport-layer |
 | `dhcp-options` | 2 | small-network |
 | `dhcp-relay` | 2 | small-network |
 | `dhcp-scope` | 2 | small-network |
@@ -1089,7 +1091,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `file-sharing-services` | 2 | application-layer |
 | `firewall-filtering` | 5 | network-security |
 | `flash` | 2 | router-configuration |
-| `flow-control` | 7 | transport-layer |
+| `flow-control` | 8 | transport-layer |
 | `fragment-free-switching` | 2 | ethernet-switching |
 | `frame-boundaries` | 2 | data-link-layer |
 | `frame-control-field` | 2 | data-link-layer |
@@ -1269,7 +1271,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multicast-address` | 2 | ipv6-addressing |
 | `multicast-group` | 2 | ipv4-addressing |
 | `multimode-fiber` | 3 | physical-layer |
-| `multiplexing` | 3 | transport-layer |
+| `multiplexing` | 4 | transport-layer |
 | `mx-record` | 2 | application-layer |
 | `name-resolution` | 9 | application-layer, small-network |
 | `native-vlan` | 2 | ethernet-switching |
@@ -1343,7 +1345,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `point-to-point-topology` | 3 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
-| `port-numbers` | 8 | application-layer, protocols-and-models, transport-layer |
+| `port-numbers` | 10 | application-layer, protocols-and-models, transport-layer |
 | `port-unreachable` | 2 | icmp |
 | `positional-notation` | 2 | number-systems |
 | `powerline-networking` | 4 | network-trends |
@@ -1363,7 +1365,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `radio-frequency-interference` | 2 | physical-layer |
 | `radix` | 2 | number-systems |
 | `ram` | 2 | router-configuration |
-| `real-time-applications` | 4 | small-network, transport-layer |
+| `real-time-applications` | 3 | small-network, transport-layer |
 | `reconnaissance-attacks` | 2 | network-security |
 | `recursive-route-lookup` | 2 | network-layer |
 | `redundancy` | 5 | network-topologies, reliable-networks, small-network |
@@ -1371,7 +1373,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reference-models` | 2 | protocols-and-models |
 | `reliability` | 6 | transport-layer |
 | `reliability-and-flow-control` | 3 | transport-layer |
-| `reliable-delivery` | 2 | transport-layer |
+| `reliable-delivery` | 3 | transport-layer |
 | `remote-management` | 4 | basic-device-configuration, router-configuration |
 | `remote-network-communication` | 6 | address-resolution, data-link-layer, protocols-and-models, small-network |
 | `retransmission` | 3 | protocols-and-models, transport-layer |
@@ -1442,7 +1444,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `slaac` | 6 | basic-device-configuration, ipv6-addressing |
 | `smb` | 2 | application-layer |
 | `smtp` | 2 | application-layer |
-| `socket-pairs` | 2 | transport-layer |
+| `socket-pairs` | 3 | transport-layer |
 | `source-destination-addressing` | 2 | data-link-layer, protocols-and-models |
 | `source-ip-selection` | 4 | icmp, small-network |
 | `spanning-tree` | 2 | ethernet-switching |
@@ -1476,15 +1478,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-port-settings` | 2 | ethernet-switching |
 | `switch-troubleshooting` | 2 | ethernet-switching |
 | `switching-latency` | 2 | ethernet-switching |
-| `tcp` | 16 | protocols-and-models, transport-layer |
-| `tcp-acknowledgments` | 6 | transport-layer |
+| `tcp` | 19 | protocols-and-models, transport-layer |
+| `tcp-acknowledgments` | 7 | transport-layer |
 | `tcp-connection-establishment` | 2 | transport-layer |
 | `tcp-connection-termination` | 2 | transport-layer |
 | `tcp-control-flags` | 2 | transport-layer |
 | `tcp-header` | 2 | transport-layer |
 | `tcp-ip-model` | 7 | application-layer, protocols-and-models |
-| `tcp-sequence-numbers` | 4 | transport-layer |
-| `tcp-windowing` | 4 | transport-layer |
+| `tcp-sequence-numbers` | 5 | transport-layer |
+| `tcp-windowing` | 5 | transport-layer |
 | `technological-vulnerability` | 2 | network-security |
 | `tftp` | 2 | application-layer |
 | `throughput` | 3 | physical-layer |
@@ -1501,7 +1503,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 3 | icmp, network-layer |
 | `tunneling` | 2 | ipv6-addressing |
-| `udp` | 9 | application-layer, protocols-and-models, transport-layer |
+| `udp` | 10 | application-layer, protocols-and-models, transport-layer |
 | `udp-header` | 4 | transport-layer |
 | `unicast` | 3 | address-resolution, ipv4-addressing, protocols-and-models |
 | `unknown-unicast-flooding` | 2 | ethernet-switching |
@@ -1555,11 +1557,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 45 |
-| matching | 74 |
+| matching | 73 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 245 |
-| single | 214 |
+| scenario | 250 |
+| single | 212 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1568,8 +1570,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 1 | 44 |
 | 2 | 158 |
-| 3 | 274 |
-| 4 | 141 |
+| 3 | 275 |
+| 4 | 142 |
 | 5 | 22 |
 
 ## Interpretation and limits
