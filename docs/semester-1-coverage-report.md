@@ -2,9 +2,9 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 646
+- **Questions:** 648
 - **Lessons represented:** 24
-- **Distinct concept tags:** 616
+- **Distinct concept tags:** 617
 
 ## Lesson coverage
 
@@ -12,7 +12,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|---:|---|---|
 | address-resolution | 19 | 20 | fill: 1, matching: 1, scenario: 11, single: 6 | 1–4 |
 | application-layer | 29 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 15, single: 5 | 1–4 |
-| basic-device-configuration | 28 | 46 | fill: 4, multiple: 1, ordering: 4, scenario: 11, single: 8 | 1–5 |
+| basic-device-configuration | 30 | 47 | fill: 4, multiple: 1, ordering: 4, scenario: 13, single: 8 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
 | ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
 | icmp | 18 | 28 | matching: 1, scenario: 9, single: 8 | 2–4 |
@@ -39,9 +39,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 381 |
+| 2 | 380 |
 | 3 | 93 |
-| 4 | 42 |
+| 4 | 44 |
 | 5 | 27 |
 | 6 | 17 |
 | 7 | 11 |
@@ -130,6 +130,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### basic-device-configuration
 
 - `command-arguments`
+- `command-help`
 - `command-keywords`
 - `configuration-commands`
 - `configuration-persistence`
@@ -1006,7 +1007,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `collision-avoidance` | 2 | data-link-layer |
 | `collision-domains` | 2 | ethernet-switching |
 | `command-arguments` | 2 | basic-device-configuration |
-| `command-keywords` | 2 | basic-device-configuration |
+| `command-help` | 2 | basic-device-configuration |
+| `command-keywords` | 4 | basic-device-configuration |
 | `communication-rules` | 2 | protocols-and-models |
 | `confidentiality` | 2 | network-security |
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
@@ -1172,7 +1174,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `intranet` | 2 | network-types |
 | `intrusion-prevention-system` | 2 | network-security |
 | `ios-command-modes` | 3 | basic-device-configuration, router-configuration |
-| `ios-command-syntax` | 2 | basic-device-configuration |
+| `ios-command-syntax` | 4 | basic-device-configuration |
 | `ios-commands` | 6 | router-configuration |
 | `ios-debug` | 2 | small-network |
 | `ios-device-hardening` | 2 | basic-device-configuration |
@@ -1575,7 +1577,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 73 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 258 |
+| scenario | 260 |
 | single | 209 |
 | true-false | 1 |
 
@@ -1584,8 +1586,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 43 |
-| 2 | 157 |
-| 3 | 279 |
+| 2 | 158 |
+| 3 | 280 |
 | 4 | 145 |
 | 5 | 22 |
 
