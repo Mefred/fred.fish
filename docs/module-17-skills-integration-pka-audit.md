@@ -86,7 +86,7 @@ The written instructions require:
 
 The comparison configuration confirms the password-encryption/minimum-length settings, login-blocking command, domain name, local Admin1 secret, console login/timeout, and SSH-only VTY configuration.
 
-**Assessment-tree discrepancy:** the written instructions explicitly require Admin1 privilege level 15 and a 1024-bit RSA key. The visible comparison tree records the Admin1 username/secret and SSH transport configuration, but does not expose a separate privilege-15 or RSA-modulus comparison. The lesson therefore follows the written requirement and teaches `username Admin1 privilege 15 secret …` plus generation of a 1024-bit key. Do not omit either requirement merely because the comparator does not expose a separate check.
+**Assessment-tree discrepancy and security caveat:** the written instructions explicitly require Admin1 privilege level 15 and a 1024-bit RSA key. The visible comparison tree records the Admin1 username/secret and SSH transport configuration, but does not expose a separate privilege-15 or RSA-modulus comparison. The lesson therefore follows the written requirement and teaches `username Admin1 privilege 15 secret …` plus generation of a 1024-bit key. Do not omit either requirement in this Packet Tracer 9.0.1 lab merely because the comparator does not expose a separate check. A 1024-bit RSA key is a legacy lab compatibility requirement, not modern production guidance; use a currently appropriate key size (commonly at least 2048 bits where supported). Also note that IOS `service password-encryption` applies weak reversible Type 7 obfuscation and does not provide strong cryptographic protection for line passwords.
 
 ### S1, S2, and S3
 
