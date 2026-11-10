@@ -12,7 +12,7 @@
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 616 |
+| AI-generated questions | 617 |
 
 Every active concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -24,11 +24,11 @@ Every active concept tag has at least two question records. This is a bank-cover
 | 3 | 96 |
 | 4 | 47 |
 | 5 | 26 |
-| 6 | 15 |
-| 7 | 12 |
+| 6 | 14 |
+| 7 | 13 |
 | 8 | 9 |
-| 9 | 6 |
-| 10 | 5 |
+| 9 | 5 |
+| 10 | 6 |
 | 11 | 7 |
 | 12 | 5 |
 | 13 | 2 |
@@ -36,7 +36,8 @@ Every active concept tag has at least two question records. This is a bank-cover
 | 15 | 4 |
 | 17 | 2 |
 | 18 | 3 |
-| 19 | 2 |
+| 19 | 1 |
+| 20 | 1 |
 | 21 | 1 |
 | 33 | 1 |
 
