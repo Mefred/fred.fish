@@ -1204,7 +1204,7 @@ The active `small-network` lesson contains **61 questions**, including **3 sourc
 
 - Review the remaining extended-ping, DHCP-relay, and troubleshooting-order pairs for genuinely distinct learning objectives. The device-selection/scaling overlap has been addressed by separating general selection criteria, PoE switch requirements, and evidence-based capacity planning. The IOS show-command and DHCP lease pairs test distinct retrieval-versus-application skills; the baseline and traceroute scenarios have also been differentiated.
 - Verify the DNS multi-stage fault answer: resolver IP reachability does not establish DNS service health; distinguish server timeout from stale local cache.
-- Add missing small-network device role coverage and make the lesson navigation follow the seven source topic objectives.
+- Device-role coverage is now explicit in the Module 17 lesson (end devices, switches, wireless access points, routers, and passive media). Still align lesson navigation and section grouping with the seven source topic objectives.
 - Verify Linux/macOS/Windows command names and clearly label legacy versus current commands.
 - Preserve the high-value multi-device VLAN fault scenario and three-stage DHCP/DNS/default-route challenge; ensure each stage's evidence and answer remain internally consistent.
 - Execute Packet Tracer **Interpret show Command Output**, **Troubleshoot Connectivity Issues**, and **Skills Integration Challenge**. For the capstone, record the VLSM allocation, router interface/security configuration, switch SVI/security configuration, end-to-end tests, and troubleshooting evidence.
