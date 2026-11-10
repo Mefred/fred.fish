@@ -9,7 +9,8 @@
 - No clearly marked answer-selection or matching key was visible in this batch.
 - The images are unmarked LLC/MAC sublayer questions, frame-field questions, switching/topology questions, host/switch MAC behavior questions, and lesson-summary slides.
 - No new source-origin question or visual-context association was added.
-- Because this batch was contact-sheet screening only, it does not reduce the native-resolution review backlog.
+- Ten candidates (IMG-0431, IMG-0432, IMG-0433, IMG-0435, IMG-0437, IMG-0439, IMG-0440, IMG-0442, IMG-0444, IMG-0447) have since been opened individually at native resolution; all answer controls were empty and no new associations were added.
+- Batch 3 now has 18/36 candidates opened at native resolution, with 18 still contact-sheet-only.
 
 ## Candidate-by-candidate log
 
@@ -58,3 +59,8 @@
 2. Preserve repeated prompts as source evidence, but do not create duplicate questions merely because the same question appears on multiple slides.
 3. Treat IMG-0472 as an activity screenshot, not a solved Packet Tracer answer.
 4. Continue native-resolution review for diagram-dependent details and any answer marks too small to resolve on the contact sheet.
+
+
+## Native-resolution follow-up
+
+See [native-resolution follow-up 15](./semester-1-image-review-native-followup-15.md) for the ten individually inspected candidates. Across the original 144-image set, 126 candidates are now opened at native resolution and 18 remain contact-sheet-only.
