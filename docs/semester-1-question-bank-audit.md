@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **618** |
-| Unique question IDs | 618 |
-| Unique normalized prompts | 618 |
+| Active questions | **619** |
+| Unique question IDs | 619 |
+| Unique normalized prompts | 619 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 610 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 42 |
-| AI-generated questions | 576 |
+| AI-generated questions | 577 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -25,20 +25,20 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 2 | 407 |
 | 3 | 79 |
 | 4 | 36 |
-| 5 | 22 |
-| 6 | 21 |
+| 5 | 21 |
+| 6 | 22 |
 | 7 | 8 |
-| 8 | 9 |
-| 9 | 2 |
+| 8 | 8 |
+| 9 | 3 |
 | 10 | 4 |
 | 11 | 7 |
 | 12 | 3 |
-| 13 | 3 |
-| 14 | 1 |
+| 13 | 1 |
+| 14 | 3 |
 | 15 | 2 |
 | 16 | 3 |
 | 18 | 1 |
-| 19 | 1 |
+| 19 | 0 |
 | 31 | 1 |
 
 **Priority implication:** 408 concepts (66.9%) sit exactly at the two-question minimum.
@@ -53,8 +53,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | Fill in the blank | 52 |
 | Matching | 101 |
 | Ordering | 20 |
-| Scenario / troubleshooting | 172 |
-| **Total** | **618** |
+| Scenario / troubleshooting | 173 |
+| **Total** | **619** |
 
 ## Difficulty
 
@@ -63,12 +63,12 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 1 — Introductory | 46 |
 | 2 — Foundational | 172 |
 | 3 — Applied | 271 |
-| 4 — Advanced | 107 |
+| 4 — Advanced | 108 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 618 questions during the full expansion. The 225 additions comprise 207 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 619 questions during the full expansion. The 226 additions comprise 208 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -108,7 +108,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
-There are 40 source-origin image-question associations plus fourteen unique visually reviewed images used as context for AI-generated applied questions (54 combined reviewed associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records including duplicate references) as unresolved; this is an export-status count, not the current manual-review backlog. Manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. Across batches 1–4, 144 candidates were screened at high-resolution contact-sheet scale; 109 have been opened individually at native resolution and 35 remain contact-sheet-only. Follow-ups 5–6 inspected 26 new unique candidates plus two previously reviewed images as consistency checks and found no new associations. Follow-ups 7–10 separately inspected 40 additional images outside this 144-candidate set; they added one source-origin association (IMG-0619) and one AI-generated routing-table question based on IMG-0601. Follow-up 11 opened ten additional candidates within the original 144-image set; all answer controls were empty and no new question or association was added. Across both workstreams, 149 unique images have now been individually inspected. Contact-sheet screening alone is not sufficient to rule out small answer marks or diagram details. See the native follow-up logs for the decisions.
+There are 40 source-origin image-question associations plus fifteen unique visually reviewed images used as context for AI-generated applied questions (55 combined reviewed associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records including duplicate references) as unresolved; this is an export-status count, not the current manual-review backlog. Manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. Across batches 1–4, 144 candidates were screened at high-resolution contact-sheet scale; 109 have been opened individually at native resolution and 35 remain contact-sheet-only. Follow-ups 5–6 inspected 26 new unique candidates plus two previously reviewed images as consistency checks and found no new associations. Follow-ups 7–10 separately inspected 40 additional images outside this 144-candidate set; they added one source-origin association (IMG-0619) and one AI-generated routing-table question based on IMG-0601. Follow-up 11 opened ten additional candidates within the original 144-image set; all answer controls were empty and no new question or association was added. Across both workstreams, 149 unique images have now been individually inspected. Follow-up 12 also added one AI-generated first-hop destination-MAC scenario using IMG-0562 as visual context. Contact-sheet screening alone is not sufficient to rule out small answer marks or diagram details. See the native follow-up logs for the decisions.
 
 ## Provenance rules
 
@@ -126,7 +126,7 @@ Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Ded
 
 Site CI run #649 passed on commit `79637c2`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. It completed successfully with zero reported accessibility violations. Later commits continue to receive the same full workflow; use the PR Checks tab to verify the latest head rather than treating any in-progress or queued run as passed.
 
-Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; the current bank has 618 questions after an additional Module 8 routing-table matching question and a source-origin IPv4 Protocol-field question. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; the existing UTP question now includes a second verified source image.
+Five additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; the current bank has 618 questions after an additional Module 8 routing-table matching question and a source-origin IPv4 Protocol-field question. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; an additional AI-generated first-hop destination-MAC scenario now uses IMG-0562 as a verified topology reference; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
