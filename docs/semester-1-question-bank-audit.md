@@ -47,8 +47,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 237 |
-| Multiple select | 35 |
+| Single choice | 236 |
+| Multiple select | 36 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 100 |
