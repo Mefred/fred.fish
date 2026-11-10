@@ -10,10 +10,10 @@
 - All visible radio buttons and checkboxes are unselected.
 - Blue star graphics on question slides are decorative and do not indicate selected answers.
 - IMG-0540 and IMG-0555 are instructional module-summary slides.
-- No new source-origin association, AI visual-context association, or active question was added.
+- No new source-origin association was added. One AI-generated scenario now uses IMG-0562 as visual context; its answer is derived from the visible topology and standard next-hop forwarding behavior, not a marked source answer.
 - The original batch 1–4 native-resolution count is now 109 of 144, leaving 35 contact-sheet-only.
 - Follow-ups 7–10 separately inspected 40 additional images outside the original 144-candidate set. Across both workstreams, 149 unique images have now been individually inspected (109 + 40).
-- No question count or provenance label changed.
+- One AI-generated question was added; the source-origin count did not change.
 
 ## Candidate-by-candidate log
 
@@ -29,6 +29,10 @@
 | IMG-0553 | Data-link frame trailer question; all four radio buttons are empty | No marked answer |
 | IMG-0554 | LLC sublayer functions multiple-select question; all five checkboxes are empty | No marked answer |
 | IMG-0555 | Ethernet switching summary covering MAC learning, forwarding, switching methods, memory buffering, and duplex modes | Instructional review material; no answer key |
+
+## Added AI-generated question
+
+- s4-first-hop-destination-mac-scenario-001 uses the router/server/PC topology in IMG-0562. The web server sends to PC1 on a remote subnet, so its first Ethernet frame uses the local default-gateway router R2 MAC address (00-60-2F-3A-07-CC) as the destination MAC. The item is explicitly AI-generated because the source answer controls are unselected.
 
 ## Review decisions
 
