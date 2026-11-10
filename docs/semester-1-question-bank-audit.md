@@ -26,8 +26,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 3 | 78 |
 | 4 | 39 |
 | 5 | 23 |
-| 6 | 20 |
-| 7 | 6 |
+| 6 | 19 |
+| 7 | 7 |
 | 8 | 9 |
 | 9 | 6 |
 | 10 | 5 |
@@ -35,8 +35,8 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | 12 | 2 |
 | 13 | 2 |
 | 14 | 3 |
-| 15 | 3 |
-| 16 | 3 |
+| 15 | 2 |
+| 16 | 4 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
@@ -47,13 +47,13 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 236 |
+| Single choice | 235 |
 | Multiple select | 38 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 91 |
 | Ordering | 22 |
-| Scenario / troubleshooting | 189 |
+| Scenario / troubleshooting | 190 |
 | **Total** | **629** |
 
 ## Difficulty
@@ -61,9 +61,9 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 171 |
-| 3 — Applied | 270 |
-| 4 — Advanced | 120 |
+| 2 — Foundational | 169 |
+| 3 — Applied | 271 |
+| 4 — Advanced | 121 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
