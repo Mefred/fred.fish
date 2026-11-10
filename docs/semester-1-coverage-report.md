@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 616
+- **Questions:** 617
 - **Lessons represented:** 22
 - **Distinct concept tags:** 610
 
@@ -20,7 +20,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 6, multiple: 1, scenario: 13, single: 14 | 2–5 |
 | ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
-| network-layer | 59 | 69 | fill: 3, matching: 8, multiple: 5, ordering: 1, scenario: 24, single: 18 | 1–5 |
+| network-layer | 60 | 69 | fill: 3, matching: 9, multiple: 5, ordering: 1, scenario: 24, single: 18 | 1–5 |
 | network-security | 27 | 45 | matching: 16, multiple: 2, ordering: 1, scenario: 3, single: 5 | 1–5 |
 | network-topologies | 10 | 14 | matching: 1, scenario: 2, single: 7 | 1–3 |
 | network-trends | 14 | 13 | fill: 2, matching: 1, scenario: 3, single: 7, true-false: 1 | 1–3 |
@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 61 | 88 | fill: 4, matching: 5, multiple: 6, ordering: 4, scenario: 31, single: 11 | 1–5 |
+| small-network | 61 | 89 | fill: 4, matching: 5, multiple: 6, ordering: 4, scenario: 31, single: 11 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
@@ -39,15 +39,15 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---:|---:|
 | 2 | 408 |
 | 3 | 78 |
-| 4 | 37 |
-| 5 | 23 |
-| 6 | 19 |
+| 4 | 36 |
+| 5 | 22 |
+| 6 | 21 |
 | 7 | 8 |
 | 8 | 9 |
 | 9 | 2 |
 | 10 | 5 |
-| 11 | 7 |
-| 12 | 2 |
+| 11 | 6 |
+| 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 3 |
@@ -805,6 +805,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `extended-traceroute`
 - `fault-isolation`
 - `fault-tolerance`
+- `host-configuration`
 - `host-ip-configuration`
 - `host-troubleshooting`
 - `icmp`
@@ -1002,14 +1003,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decimal-to-binary` | 2 | number-systems |
 | `decimal-to-hexadecimal` | 2 | number-systems |
 | `default-gateway` | 13 | address-resolution, basic-device-configuration, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
-| `default-route` | 11 | ipv6-addressing, network-layer, small-network |
+| `default-route` | 12 | ipv6-addressing, network-layer, small-network |
 | `defense-in-depth` | 3 | network-security |
 | `delivery-options` | 2 | protocols-and-models |
 | `denial-of-service` | 2 | network-security |
 | `device-hardening` | 2 | network-security |
 | `device-management` | 2 | basic-device-configuration |
 | `device-resource-management` | 2 | small-network |
-| `device-selection` | 2 | small-network |
+| `device-selection` | 3 | small-network |
 | `dhcp` | 6 | application-layer, basic-device-configuration, small-network |
 | `dhcp-options` | 2 | small-network |
 | `dhcp-relay` | 2 | small-network |
@@ -1095,8 +1096,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `hextets` | 2 | ipv6-addressing |
 | `hierarchical-topology` | 2 | network-topologies |
 | `host-capacity` | 7 | ipv4-addressing |
-| `host-configuration` | 2 | ipv4-addressing |
-| `host-ip-configuration` | 3 | small-network |
+| `host-configuration` | 3 | ipv4-addressing, small-network |
+| `host-ip-configuration` | 6 | small-network |
 | `host-reachability` | 3 | icmp |
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 8 | address-resolution, router-configuration, small-network |
@@ -1219,7 +1220,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `local-route` | 2 | network-layer |
 | `logical-topology` | 2 | network-topologies |
 | `login-security` | 2 | network-security |
-| `longest-prefix-match` | 4 | network-layer |
+| `longest-prefix-match` | 5 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 6 | ethernet-switching |
 | `mac-addressing` | 19 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
@@ -1273,14 +1274,14 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-performance` | 2 | physical-layer, transport-layer |
 | `network-redundancy` | 2 | data-link-layer |
 | `network-reliability` | 7 | reliable-networks, small-network |
-| `network-requirements` | 2 | small-network |
+| `network-requirements` | 3 | small-network |
 | `network-scalability` | 3 | ipv4-addressing, network-components, small-network |
 | `network-scale` | 2 | network-components |
 | `network-scope` | 4 | network-types |
 | `network-security-controls` | 11 | network-security, network-types, reliable-networks |
 | `network-segmentation` | 3 | ipv4-addressing |
 | `network-trends` | 3 | network-trends |
-| `network-troubleshooting` | 12 | icmp, internet-connections, small-network |
+| `network-troubleshooting` | 16 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | network-components |
 | `next-hop` | 8 | ipv6-addressing, network-layer, small-network |
 | `next-hop-resolution` | 3 | network-layer |
@@ -1297,7 +1298,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ospf` | 2 | network-layer |
 | `oui` | 2 | ethernet-switching |
 | `packet-filtering` | 2 | network-security |
-| `packet-forwarding` | 5 | network-layer, router-configuration |
+| `packet-forwarding` | 6 | network-layer, router-configuration |
 | `packet-switching` | 2 | reliable-networks |
 | `packet-tracer-challenge` | 3 | small-network |
 | `password-encryption` | 2 | basic-device-configuration |
@@ -1380,7 +1381,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `routing-table` | 8 | network-layer |
 | `routing-table-codes` | 2 | network-layer |
 | `routing-table-interpretation` | 2 | network-layer |
-| `routing-table-lookup` | 5 | icmp, network-layer |
+| `routing-table-lookup` | 6 | icmp, network-layer |
 | `routing-table-troubleshooting` | 4 | network-layer, small-network |
 | `rsa-keys` | 2 | network-security, router-configuration |
 | `running-config` | 2 | basic-device-configuration |
@@ -1532,11 +1533,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Format | Count |
 |---|---:|
 | fill | 52 |
-| matching | 99 |
+| matching | 101 |
 | multiple | 35 |
 | ordering | 20 |
-| scenario | 169 |
-| single | 235 |
+| scenario | 172 |
+| single | 236 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1544,9 +1545,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 46 |
-| 2 | 170 |
-| 3 | 268 |
-| 4 | 105 |
+| 2 | 171 |
+| 3 | 271 |
+| 4 | 107 |
 | 5 | 22 |
 
 ## Interpretation and limits
