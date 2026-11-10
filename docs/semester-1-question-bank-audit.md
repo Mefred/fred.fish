@@ -4,45 +4,43 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **654** |
-| Unique question IDs | 654 |
-| Unique normalized prompts | 654 |
+| Active questions | **656** |
+| Unique question IDs | 656 |
+| Unique normalized prompts | 656 |
 | Lesson IDs represented | 24 |
-| Distinct concept tags | 619 |
+| Distinct concept tags | 620 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 40 |
-| AI-generated questions | 614 |
+| AI-generated questions | 616 |
 
-Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
+Every active concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
 ### Concept exposure distribution
 
-The current concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
-
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 375 |
+| 2 | 376 |
 | 3 | 96 |
 | 4 | 47 |
 | 5 | 26 |
 | 6 | 15 |
-| 7 | 13 |
+| 7 | 12 |
 | 8 | 9 |
-| 9 | 5 |
+| 9 | 6 |
 | 10 | 5 |
 | 11 | 7 |
 | 12 | 5 |
 | 13 | 2 |
 | 14 | 1 |
 | 15 | 4 |
-| 17 | 3 |
+| 17 | 2 |
 | 18 | 3 |
-| 19 | 1 |
+| 19 | 2 |
 | 21 | 1 |
 | 33 | 1 |
 
-**Priority implication:** 375 concepts (60.6%) sit exactly at the two-question minimum.
+**Priority implication:** 376 concepts (60.6%) sit exactly at the two-question minimum.
 
 ## Question formats
 
@@ -52,10 +50,10 @@ The current concept tags are not evenly represented. This distribution makes the
 | Matching | 75 |
 | Multiple select | 36 |
 | Ordering | 25 |
-| Scenario / troubleshooting | 268 |
-| Single choice | 205 |
+| Scenario / troubleshooting | 269 |
+| Single choice | 206 |
 | True / false | 1 |
-| **Total** | **654** |
+| **Total** | **656** |
 
 ## Difficulty
 
@@ -63,13 +61,13 @@ The current concept tags are not evenly represented. This distribution makes the
 |---|---:|
 | 1 — Introductory | 43 |
 | 2 — Foundational | 154 |
-| 3 — Applied | 279 |
-| 4 — Advanced | 156 |
+| 3 — Applied | 280 |
+| 4 — Advanced | 157 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 648 questions during the full expansion. The 255 additions comprise 237 AI-generated questions and eighteen source-origin questions. Three existing records are now correctly labeled AI-generated: two images showed prompts without answer keys, and the Module 2 `running-config` keyword item was rewritten as a derived command-syntax question. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 617 distinct tags, including the two-question `networks-affect-lives`, `command-arguments`, and `command-help` tags and the autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 648 questions during the full expansion. The 255 additions comprise 237 AI-generated questions and eighteen source-origin questions. Three existing records are now correctly labeled AI-generated: two images showed prompts without answer keys, and the Module 2 `running-config` keyword item was rewritten as a derived command-syntax question. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 620 distinct tags. The latest two AI-generated Module 17 questions add a two-question `linux-network-commands` concept, preserving the validator's minimum exposure of two questions per concept. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
