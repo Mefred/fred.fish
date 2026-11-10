@@ -935,3 +935,47 @@ The active `ipv6-addressing` lesson contains **34 questions**, all **AI-generate
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
 
 Module 12 is **partially audited, not signed off**. Continue next with Module 13 — ICMP, while keeping duplicate cleanup, LLA configuration coverage, exhibit verification, and practical validation open.
+
+
+## Page-by-page source verification: Module 13 — ICMP
+
+**Status: partially audited; not signed off.** The source objective is “Use various tools to test network connectivity.” Its two topic objectives are **ICMP Messages** (explain how ICMP is used to test connectivity) and **Ping and Traceroute Testing** (use ping and traceroute utilities). The recovered notes cover ICMPv4/ICMPv6 feedback, Echo Request/Reply, Destination Unreachable codes, Time Exceeded, IPv6 Neighbor Discovery messages, pinging loopback/default gateway/remote hosts, traceroute hop discovery, IPv4 TTL, IPv6 Hop Limit, and interpreting missing probe responses.
+
+### Active lesson inventory
+
+The active `icmp` lesson contains **18 questions**: **1 source-origin** and **17 AI-generated**. The source-origin question is `s13-traceroute-source-001`, which tests the default source address selected by a Cisco router traceroute: the address of the outbound interface toward the destination.
+
+### Objective-to-question findings
+
+1. **ICMP purpose and message families:** The bank tests ICMP Echo Request/Reply, Destination Unreachable, and Time Exceeded. Preserve the core point that ICMP provides feedback about IP packet processing; it does not make IP reliable or guarantee that every failure produces an ICMP response. Filtering, rate limiting, and security policy can suppress ICMP messages.
+2. **Ping and Echo:** Ping uses ICMP Echo Request and Echo Reply for IPv4 and IPv6 reachability tests. The bank has three closely related questions: `s13-icmp-echo-001`, `s13-icmp-echo-002`, and `s13-icmp-echo-applied-002`. Keep one direct message-pair question and one applied interpretation task; the applied task should ask what a successful reply proves and what it does not prove (for example, application-layer service availability).
+3. **Local TCP/IP stack and local network:** `s13-ping-loopback-scenario-001` correctly uses 127.0.0.1 or ::1 to test the local IP stack. `s13-ping-default-gateway-scenario-001` correctly uses the host's local router interface as a next diagnostic test. A successful gateway ping confirms local host-to-gateway reachability, not end-to-end Internet reachability.
+4. **Ping failure interpretation:** `s13-icmp-filtered-ping-001` correctly notes that a failed ping does not prove the host is down when HTTPS works; ICMP may be filtered. The source also notes that the first ping may time out while ARP/ND resolves the local next-hop address. Add this as a distinct diagnostic case if it is not covered elsewhere.
+5. **Destination Unreachable codes:** `s13-icmpv4-unreachable-codes-match-001` covers the four source-listed ICMPv4 codes: network unreachable (0), host unreachable (1), protocol unreachable (2), and port unreachable (3). `s13-icmpv4-unreachable-applied-002` repeats most of the same mappings with fewer entries. Consolidate to one complete matching task and one applied troubleshooting case that requires interpreting a received code. The source's ICMPv6 codes differ; do not reuse IPv4 numeric meanings for IPv6.
+6. **Time Exceeded and traceroute:** The IPv4 TTL is decremented by routers; when it reaches zero the packet is discarded and a Time Exceeded message may be sent to the source. IPv6 uses Hop Limit in the same general manner. `s13-ttl-expired-001`, `s13-ttl-time-exceeded-001`, and `s13-traceroute-ttl-sequence-002` overlap, but can be differentiated as (a) router behavior at zero, (b) message returned to the source, and (c) why traceroute increases TTL across probes. `s13-ipv6-hop-limit-001` should remain a separate IPv6 comparison if it explicitly tests Hop Limit rather than repeating the same explanation.
+7. **Traceroute output:** `s13-traceroute-asterisk-001` correctly states that an asterisk means no response was received before timeout; it does not prove that the router is down. A router may forward traffic while suppressing or rate-limiting TTL-expired responses. Interpret later hops and independent tests before assigning a fault.
+8. **Traceroute source address:** `s13-traceroute-source-001` is the sole source-origin question. `s13-router-interface-source-applied-002` repeats the same Cisco IOS default-source behavior and should be differentiated or removed. State the implementation scope: Cisco router traceroute normally uses the address of the outgoing interface as the probe source unless the source is explicitly selected.
+9. **ICMPv6 Neighbor Discovery:** `s13-icmpv6-nd-001` and `s13-neighbor-discovery-applied-002` both test NS/NA address resolution. This is primarily Module 9 content. Keep one brief cross-module reinforcement question at most; use the other slot for a distinct ICMPv6 function or a ping/traceroute test rather than repeating address resolution.
+10. **Traceroute implementation nuance:** The recovered notes describe traceroute as using Echo Request/Reply and Time Exceeded. Probe types vary by implementation: Windows `tracert` uses ICMP Echo probes, while common Unix/Linux and Cisco IOS traceroute implementations traditionally use UDP probes (and other implementations may use ICMP or TCP). The stable teaching point is that probes use increasing TTL/Hop Limit and intermediate routers return Time Exceeded; the destination's final response depends on the probe type and implementation. Avoid stating that every traceroute utility universally uses ICMP Echo.
+11. **Practical troubleshooting:** The source activities require more than recall: document IPv4/IPv6 addressing, ping, trace the route, locate connectivity faults, correct device configuration, and retest. The current bank has short diagnosis scenarios but does not replace execution of those activities.
+
+### Duplicate, overlap, and source-answer findings
+
+- **Echo request/reply repetition:** `s13-icmp-echo-001`, `s13-icmp-echo-002`, and `s13-icmp-echo-applied-002` all assess the same message pair. Keep one direct and one meaningfully applied item.
+- **TTL/Time Exceeded repetition:** `s13-ttl-expired-001`, `s13-ttl-time-exceeded-001`, and `s13-traceroute-ttl-sequence-002` are closely related. Differentiate router discard behavior, returned ICMP feedback, and traceroute's increasing probe limit.
+- **Traceroute source duplication:** `s13-traceroute-source-001` and `s13-router-interface-source-applied-002` ask the same Cisco router source-address question. Retain the source-origin item and repurpose the other for reading a multi-hop trace.
+- **ICMPv6 ND overlap:** `s13-icmpv6-nd-001` and `s13-neighbor-discovery-applied-002` repeat NS/NA mapping and duplicate Module 9 address-resolution content.
+- **Unreachable-code matching duplication:** `s13-icmpv4-unreachable-codes-match-001` and `s13-icmpv4-unreachable-applied-002` cover nearly identical code-to-meaning pairs. Keep the complete mapping and change the other into a fault diagnosis with a specific code.
+- **Source wording caveat:** The notes describe ping and traceroute together but do not establish that every traceroute implementation sends ICMP Echo probes. The lesson should distinguish traceroute's TTL/Hop Limit mechanism from its platform-specific probe type.
+- **Source-origin:** Only `s13-traceroute-source-001` is currently marked source-origin. Other source-referenced questions remain AI-generated unless a marked answer or authoritative exhibit is visibly verified.
+
+### Remaining work before sign-off
+
+- Consolidate the repeated Echo, traceroute source, ICMPv6 NS/NA, and unreachable-code questions.
+- Differentiate TTL expiry, Time Exceeded feedback, and the progressive TTL/Hop Limit behavior used by traceroute.
+- Add an applied trace-output exercise with multiple hops, timeouts, and a final destination response; avoid assuming an asterisk proves a router failure.
+- Clarify the platform-specific traceroute probe types while preserving the common TTL/Hop Limit and Time Exceeded mechanism.
+- Execute Packet Tracer **13.2.6 Verify IPv4 and IPv6 Addressing**, **13.2.7 Use Ping and Traceroute to Test Network Connectivity**, and **13.3.1 Use ICMP to Test and Correct Network Connectivity**, plus the source lab **Use Ping and Traceroute to Test Network Connectivity**. Record addressing-table checks, ping results, hop outputs, fault isolation, configuration corrections, and retest results.
+- Run the question-bank validator and regenerate the coverage report after question-bank edits.
+
+Module 13 is **partially audited, not signed off**. Continue next with Module 14 — Transport Layer, while keeping duplicate cleanup, traceroute implementation precision, and practical Packet Tracer validation open.
