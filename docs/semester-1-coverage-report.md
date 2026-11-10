@@ -29,7 +29,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | networks-connect-us | 2 | 1 | scenario: 2 | 2–2 |
 | number-systems | 22 | 21 | fill: 10, matching: 2, ordering: 1, scenario: 1, single: 8 | 1–4 |
 | physical-layer | 44 | 53 | matching: 9, multiple: 1, scenario: 19, single: 15 | 1–4 |
-| protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
+| protocols-and-models | 38 | 54 | matching: 11, multiple: 2, ordering: 3, scenario: 5, single: 17 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 27 | 40 | fill: 1, matching: 1, multiple: 1, ordering: 3, scenario: 16, single: 5 | 1–5 |
 | small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
@@ -39,24 +39,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 380 |
-| 3 | 93 |
+| 2 | 379 |
+| 3 | 94 |
 | 4 | 44 |
 | 5 | 27 |
-| 6 | 17 |
-| 7 | 11 |
-| 8 | 7 |
+| 6 | 18 |
+| 7 | 9 |
+| 8 | 8 |
 | 9 | 5 |
 | 10 | 6 |
-| 11 | 7 |
-| 12 | 4 |
+| 11 | 6 |
+| 12 | 5 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
-| 16 | 1 |
-| 17 | 2 |
-| 18 | 2 |
-| 19 | 1 |
+| 17 | 3 |
+| 18 | 3 |
 | 20 | 1 |
 | 33 | 1 |
 
@@ -1009,7 +1007,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `command-arguments` | 2 | basic-device-configuration |
 | `command-help` | 2 | basic-device-configuration |
 | `command-keywords` | 4 | basic-device-configuration |
-| `communication-rules` | 2 | protocols-and-models |
+| `communication-rules` | 3 | protocols-and-models |
 | `confidentiality` | 2 | network-security |
 | `configuration-commands` | 2 | basic-device-configuration, router-configuration |
 | `configuration-persistence` | 3 | basic-device-configuration, network-layer |
@@ -1036,7 +1034,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `data-link-frame` | 2 | data-link-layer |
 | `data-link-layer` | 15 | data-link-layer, protocols-and-models |
 | `data-link-topologies` | 2 | data-link-layer |
-| `decapsulation` | 3 | data-link-layer, protocols-and-models |
+| `decapsulation` | 2 | data-link-layer, protocols-and-models |
 | `decimal-to-binary` | 2 | number-systems |
 | `decimal-to-hexadecimal` | 2 | number-systems |
 | `default-gateway` | 14 | address-resolution, basic-device-configuration, data-link-layer, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
@@ -1072,7 +1070,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `email-protocols` | 3 | application-layer |
 | `employee-network-utilization` | 2 | small-network |
 | `enable-secret` | 4 | basic-device-configuration, router-configuration |
-| `encapsulation` | 16 | data-link-layer, network-layer, protocols-and-models |
+| `encapsulation` | 17 | data-link-layer, network-layer, protocols-and-models |
 | `end-devices` | 2 | network-components |
 | `endpoint-security` | 6 | network-security, network-trends |
 | `environmental-threats` | 2 | network-security |
@@ -1140,7 +1138,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `host-role` | 2 | network-components |
 | `host-troubleshooting` | 9 | address-resolution, router-configuration, small-network |
 | `hostname-domain-name` | 5 | router-configuration |
-| `http` | 7 | application-layer, protocols-and-models, transport-layer |
+| `http` | 6 | application-layer, protocols-and-models, transport-layer |
 | `http-get` | 2 | application-layer |
 | `http-post` | 2 | application-layer |
 | `http-put` | 2 | application-layer |
@@ -1170,7 +1168,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `internet-governance` | 2 | network-types |
 | `internet-layer` | 2 | protocols-and-models |
 | `internet-standards` | 2 | protocols-and-models |
-| `interoperability` | 2 | protocols-and-models |
+| `interoperability` | 3 | protocols-and-models |
 | `intranet` | 2 | network-types |
 | `intrusion-prevention-system` | 2 | network-security |
 | `ios-command-modes` | 3 | basic-device-configuration, router-configuration |
@@ -1274,7 +1272,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `media-independent` | 2 | network-layer |
 | `media-selection` | 2 | physical-layer |
 | `mesh-topology` | 2 | data-link-layer, network-topologies |
-| `message-delivery` | 2 | protocols-and-models |
+| `message-delivery` | 3 | protocols-and-models |
 | `message-encoding` | 2 | protocols-and-models |
 | `message-formatting` | 2 | protocols-and-models |
 | `message-size` | 2 | protocols-and-models |
@@ -1332,8 +1330,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `nvram` | 4 | router-configuration |
 | `octet` | 3 | number-systems |
 | `online-collaboration` | 2 | network-trends |
-| `open-standards` | 3 | protocols-and-models |
-| `osi-model` | 11 | application-layer, protocols-and-models |
+| `open-standards` | 2 | protocols-and-models |
+| `osi-model` | 12 | application-layer, protocols-and-models |
 | `ospf` | 2 | network-layer |
 | `oui` | 2 | ethernet-switching |
 | `packet-filtering` | 2 | network-security |
@@ -1375,7 +1373,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `protocol-interaction` | 3 | protocols-and-models |
 | `protocol-suites` | 3 | protocols-and-models |
 | `protocol-unreachable` | 2 | icmp |
-| `protocols` | 3 | protocols-and-models |
+| `protocols` | 2 | protocols-and-models |
 | `public-ipv4` | 2 | ipv4-addressing |
 | `quality-of-service` | 10 | network-layer, network-trends, reliable-networks, small-network |
 | `radio-frequency` | 2 | physical-layer |
@@ -1387,7 +1385,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `recursive-route-lookup` | 2 | network-layer |
 | `redundancy` | 5 | network-topologies, reliable-networks, small-network |
 | `redundant-links` | 2 | ethernet-switching |
-| `reference-models` | 2 | protocols-and-models |
+| `reference-models` | 3 | protocols-and-models |
 | `reliability` | 6 | transport-layer |
 | `reliability-and-flow-control` | 3 | transport-layer |
 | `reliable-delivery` | 3 | transport-layer |
@@ -1495,13 +1493,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `switch-port-settings` | 2 | ethernet-switching |
 | `switch-troubleshooting` | 2 | ethernet-switching |
 | `switching-latency` | 2 | ethernet-switching |
-| `tcp` | 19 | protocols-and-models, transport-layer |
+| `tcp` | 18 | protocols-and-models, transport-layer |
 | `tcp-acknowledgments` | 7 | transport-layer |
 | `tcp-connection-establishment` | 2 | transport-layer |
 | `tcp-connection-termination` | 2 | transport-layer |
 | `tcp-control-flags` | 2 | transport-layer |
 | `tcp-header` | 2 | transport-layer |
-| `tcp-ip-model` | 7 | application-layer, protocols-and-models |
+| `tcp-ip-model` | 8 | application-layer, protocols-and-models |
 | `tcp-sequence-numbers` | 5 | transport-layer |
 | `tcp-windowing` | 5 | transport-layer |
 | `technological-vulnerability` | 2 | network-security |
@@ -1572,13 +1570,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### Question formats
 
 | Format | Count |
-|---|---:|---:|
+|---|---:|
 | fill | 45 |
-| matching | 73 |
+| matching | 74 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 260 |
-| single | 209 |
+| scenario | 261 |
+| single | 207 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1586,11 +1584,11 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 43 |
-| 2 | 158 |
-| 3 | 280 |
+| 2 | 156 |
+| 3 | 282 |
 | 4 | 145 |
 | 5 | 22 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory now documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
