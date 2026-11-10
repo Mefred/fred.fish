@@ -4,14 +4,14 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **617** |
-| Unique question IDs | 617 |
-| Unique normalized prompts | 617 |
+| Active questions | **618** |
+| Unique question IDs | 618 |
+| Unique normalized prompts | 618 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 610 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 41 |
+| Source-origin questions | 42 |
 | AI-generated questions | 576 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
@@ -22,21 +22,21 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 408 |
-| 3 | 78 |
+| 2 | 407 |
+| 3 | 79 |
 | 4 | 36 |
 | 5 | 22 |
 | 6 | 21 |
 | 7 | 8 |
 | 8 | 9 |
 | 9 | 2 |
-| 10 | 5 |
-| 11 | 6 |
+| 10 | 4 |
+| 11 | 7 |
 | 12 | 3 |
 | 13 | 3 |
 | 14 | 1 |
-| 15 | 3 |
-| 16 | 2 |
+| 15 | 2 |
+| 16 | 3 |
 | 18 | 1 |
 | 19 | 1 |
 | 31 | 1 |
@@ -47,28 +47,28 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 236 |
+| Single choice | 237 |
 | Multiple select | 35 |
 | True / false | 1 |
 | Fill in the blank | 52 |
 | Matching | 101 |
 | Ordering | 20 |
 | Scenario / troubleshooting | 172 |
-| **Total** | **617** |
+| **Total** | **618** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 171 |
+| 2 — Foundational | 172 |
 | 3 — Applied | 271 |
 | 4 — Advanced | 107 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 617 questions during the full expansion. The 224 additions comprise 207 AI-generated questions and seventeen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 618 questions during the full expansion. The 225 additions comprise 207 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -108,7 +108,7 @@ The original OneNote image payloads were recovered and matched to the OCR export
 | `IMG-0598` | `s8-host-routing-table-source-001` | Host maintains a local routing table with loopback, local, and default routes |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | Router decapsulates, selects a route using the destination IPv4 address, and re-encapsulates for the next hop |
 
-There are 39 source-origin image-question associations plus fourteen unique visually reviewed images used as context for AI-generated applied questions (53 combined reviewed associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records including duplicate references) as unresolved; this is an export-status count, not the current manual-review backlog. Manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. Across batches 1–4, 144 candidates were screened at high-resolution contact-sheet scale; 119 have now been opened individually at native resolution and 25 remain contact-sheet-only. The latest two native-resolution passes inspected 26 new unique candidates plus two previously reviewed images, IMG-0428 and IMG-0472, as consistency checks. No new answer marks, source-origin associations, or AI visual-context links were found. Contact-sheet screening alone is not sufficient to rule out small answer marks or diagram details. See the native follow-up logs for the decisions.
+There are 40 source-origin image-question associations plus fourteen unique visually reviewed images used as context for AI-generated applied questions (54 combined reviewed associations). Four false-positive image candidates remain excluded. The original OCR export still labels 744 unique candidate images (750 asset records including duplicate references) as unresolved; this is an export-status count, not the current manual-review backlog. Manual review batches are tracked separately in the repository and have not been written back to the Library ZIP. Do not promote an OCR candidate solely because its text resembles an active question. Across batches 1–4, 144 candidates were screened at high-resolution contact-sheet scale; 129 have now been opened individually at native resolution and 15 remain contact-sheet-only. The latest two native-resolution passes inspected 26 new unique candidates plus two previously reviewed images, IMG-0428 and IMG-0472, as consistency checks. No new answer marks, source-origin associations, or AI visual-context links were found. Contact-sheet screening alone is not sufficient to rule out small answer marks or diagram details. See the native follow-up logs for the decisions.
 
 ## Provenance rules
 
