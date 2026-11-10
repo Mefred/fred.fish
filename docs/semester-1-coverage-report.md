@@ -30,7 +30,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | protocols-and-models | 38 | 54 | matching: 10, multiple: 2, ordering: 3, scenario: 4, single: 19 | 1–4 |
 | reliable-networks | 13 | 11 | multiple: 1, ordering: 2, scenario: 2, single: 8 | 1–4 |
 | router-configuration | 22 | 37 | fill: 4, matching: 3, multiple: 2, ordering: 1, scenario: 7, single: 5 | 1–5 |
-| small-network | 61 | 89 | fill: 4, matching: 4, multiple: 6, ordering: 3, scenario: 33, single: 11 | 1–5 |
+| small-network | 61 | 89 | fill: 4, matching: 4, multiple: 7, ordering: 3, scenario: 33, single: 10 | 1–5 |
 | transport-layer | 38 | 34 | fill: 2, matching: 3, multiple: 5, ordering: 1, scenario: 7, single: 20 | 1–4 |
 
 ## Concept exposure distribution
@@ -1538,10 +1538,10 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 |---|---:|
 | fill | 52 |
 | matching | 101 |
-| multiple | 35 |
+| multiple | 36 |
 | ordering | 20 |
 | scenario | 173 |
-| single | 237 |
+| single | 236 |
 | true-false | 1 |
 
 ### Difficulty
