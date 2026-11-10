@@ -196,14 +196,14 @@ for (const slug of migratedLessons) {
 
   const sourceWithoutCommandBlocks = legacyHtml.replace(/<div class="command-block">[\s\S]*?<\/div>/g, "");
   const sourceCodeBlockCount = [...sourceWithoutCommandBlocks.matchAll(/<pre>/g)].length;
-  const builtCodeBlockCount = [...html.matchAll(/<pre data-lesson-code-block>/g)].length;
+  const builtCodeBlockCount = [...html.matchAll(/<pre\b(?=[^>]*\bdata-lesson-code-block\b)[^>]*>/g)].length;
   if (builtCodeBlockCount !== sourceCodeBlockCount) {
     fail(slug, `generated route contains ${builtCodeBlockCount} component code blocks; legacy source contains ${sourceCodeBlockCount} standalone code blocks`);
   }
   if (!html.includes(`data-completion="${slug.slice(0, 2)}"`)) {
     fail(slug, "generated route is missing its original lesson completion key");
   }
-  if ((html.match(/<aside class="sidebar" id="sidebar">/g) ?? []).length !== 1) {
+  if ((html.match(/<aside class="sidebar" id="sidebar"[^>]*>/g) ?? []).length !== 1) {
     fail(slug, "generated page must contain exactly one shared Cisco sidebar");
   }
   for (const [label, pattern] of [
@@ -211,7 +211,7 @@ for (const slug of migratedLessons) {
     ["article metadata", /property="og:type" content="article"/],
     ["lesson stylesheet", /href="\/assets\/learning\.css"/],
     ["lesson interaction script", /src="\/assets\/learning\.js"/],
-    ["shared Cisco sidebar", /<aside class="sidebar" id="sidebar">/],
+    ["shared Cisco sidebar", /<aside class="sidebar" id="sidebar"[^>]*>/],
     ["lesson body", /<main class="main">[\s\S]*<article class="lesson-main">/],
     ["component-rendered lesson header", /<header class="lesson-header" data-lesson-header>/],
     ["component-rendered lesson sections", /<section class="lesson-section" id="[^"]+" data-lesson-section>/],

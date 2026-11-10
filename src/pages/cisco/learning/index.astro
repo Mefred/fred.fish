@@ -11,6 +11,7 @@ const curriculum = [{"id":"foundations","label":"PART 01 / FOUNDATIONS","title":
       <h1>Learn networking.<br /><span>Understand why it works.</span></h1>
       <p>A structured course from physical signals on a cable to routing, network services, security, and automation. Lessons combine explanations, original diagrams, configuration examples, and interactive knowledge checks.</p>
       <div class="learning-hero-meta"><span>30 MODULES</span><span>95 PRACTICE QUESTIONS</span><span>CCNA 200-301 ALIGNMENT</span></div>
+      <div class="learning-actions"><a class="learning-action-primary" href="/cisco/practice/">Start adaptive practice →</a><a href="/cisco/progress/">View learning dashboard ↗</a><a href="/cisco/learning/semester-1/">Semester 1 course notes ↗</a></div>
     </header>
     <section class="learning-stats" aria-label="Course statistics">
       <div><strong>30</strong><span>published learning modules</span></div>
@@ -87,3 +88,7 @@ const curriculum = [{"id":"foundations","label":"PART 01 / FOUNDATIONS","title":
     window.addEventListener("storage", updateProgress);
   </script>
 </SiteLayout>
+
+<style>
+.learning-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:24px}.learning-actions a{font-size:11px;color:var(--muted);border:1px solid var(--line);padding:10px 13px;border-radius:8px}.learning-actions a:hover{border-color:var(--teal);color:var(--teal)}.learning-actions .learning-action-primary{background:var(--teal);border-color:var(--teal);color:#061513;font-weight:750}
+</style>

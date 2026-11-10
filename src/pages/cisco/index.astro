@@ -4,7 +4,7 @@ import Eyebrow from "../../components/Eyebrow.astro";
 ---
 <SiteLayout
   title="Cisco Networking — fred.fish"
-  description="A practical Cisco networking workspace with a structured CCNA curriculum and organized IOS XE references."
+  description="A practical Cisco networking workspace with a structured CCNA curriculum, adaptive practice, and organized IOS XE references."
   active="cisco"
 >
   <section class="page-intro cisco-intro">
@@ -13,6 +13,7 @@ import Eyebrow from "../../components/Eyebrow.astro";
     <p>A growing technical workspace for learning networking, practising configurations, and keeping useful Cisco IOS XE references close at hand.</p>
     <div class="intro-actions">
       <a class="button button-primary" href="/cisco/learning/">Explore the curriculum <span aria-hidden="true">↗</span></a>
+      <a class="button" href="/cisco/practice/">Start adaptive practice <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -20,10 +21,20 @@ import Eyebrow from "../../components/Eyebrow.astro";
     <a class="cisco-card cisco-card-feature" href="/cisco/learning/">
       <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌘</span><span class="cisco-card-label">01 / LEARN</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
       <div><h2>Networking curriculum</h2><p>Build a strong foundation from physical-layer concepts through switching, routing, services, security, and automation.</p></div>
-      <div class="cisco-card-metrics"><span><strong>30</strong> modules</span><span><strong>95</strong> practice questions</span><span>CCNA 200-301 aligned</span></div>
+      <div class="cisco-card-metrics"><span><strong>30</strong> modules</span><span>CCNA 200-301 aligned</span></div>
+    </a>
+    <a class="cisco-card" href="/cisco/practice/">
+      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">◎</span><span class="cisco-card-label">02 / PRACTICE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
+      <div><h2>Adaptive practice</h2><p>Short quiz sessions that track individual concepts, reinforce weak areas, and revisit mastered topics over time.</p></div>
+      <span class="cisco-card-cta">Start a 10-question session <span aria-hidden="true">→</span></span>
+    </a>
+    <a class="cisco-card" href="/cisco/progress/">
+      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">▥</span><span class="cisco-card-label">03 / PROGRESS</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
+      <div><h2>Learning dashboard</h2><p>See concept mastery, accuracy, session history, and the concepts that need your attention next.</p></div>
+      <span class="cisco-card-cta">Review progress <span aria-hidden="true">→</span></span>
     </a>
     <a class="cisco-card" href="/cisco/reference/">
-      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌕</span><span class="cisco-card-label">02 / REFERENCE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
+      <div class="cisco-card-top"><span class="cisco-card-icon" aria-hidden="true">⌕</span><span class="cisco-card-label">04 / REFERENCE</span><span class="cisco-card-arrow" aria-hidden="true">↗</span></div>
       <div><h2>IOS XE reference</h2><p>Keep commands, configuration patterns, verification steps, and troubleshooting notes organized in one place.</p></div>
       <span class="cisco-card-cta">Browse references <span aria-hidden="true">→</span></span>
     </a>

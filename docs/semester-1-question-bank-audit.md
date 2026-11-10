@@ -4,71 +4,71 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **629** |
-| Unique question IDs | 629 |
-| Unique normalized prompts | 629 |
-| Lesson IDs represented | 22 |
-| Distinct concept tags | 613 |
+| Active questions | **657** |
+| Unique question IDs | 657 |
+| Unique normalized prompts | 657 |
+| Lesson IDs represented | 24 |
+| Distinct concept tags | 620 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 42 |
-| AI-generated questions | 587 |
+| Source-origin questions | 40 |
+| AI-generated questions | 617 |
 
-Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
+Every active concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
 ### Concept exposure distribution
 
-The current 610 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
-
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 405 |
-| 3 | 78 |
-| 4 | 39 |
-| 5 | 23 |
-| 6 | 19 |
-| 7 | 7 |
+| 2 | 376 |
+| 3 | 96 |
+| 4 | 47 |
+| 5 | 26 |
+| 6 | 14 |
+| 7 | 13 |
 | 8 | 9 |
-| 9 | 6 |
-| 10 | 5 |
-| 11 | 6 |
-| 12 | 2 |
+| 9 | 5 |
+| 10 | 6 |
+| 11 | 7 |
+| 12 | 5 |
 | 13 | 2 |
-| 14 | 3 |
-| 15 | 2 |
-| 16 | 4 |
-| 18 | 1 |
+| 14 | 1 |
+| 15 | 4 |
+| 17 | 2 |
+| 18 | 3 |
+| 19 | 1 |
 | 20 | 1 |
-| 31 | 1 |
+| 21 | 1 |
+| 33 | 1 |
 
-**Priority implication:** 405 concepts (66.1%) sit exactly at the two-question minimum.
+**Priority implication:** 376 concepts (60.6%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 235 |
-| Multiple select | 38 |
+| Fill in the blank | 44 |
+| Matching | 75 |
+| Multiple select | 36 |
+| Ordering | 25 |
+| Scenario / troubleshooting | 270 |
+| Single choice | 206 |
 | True / false | 1 |
-| Fill in the blank | 52 |
-| Matching | 91 |
-| Ordering | 22 |
-| Scenario / troubleshooting | 190 |
-| **Total** | **629** |
+| **Total** | **657** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
-| 1 — Introductory | 46 |
-| 2 — Foundational | 169 |
-| 3 — Applied | 271 |
-| 4 — Advanced | 121 |
+| 1 — Introductory | 43 |
+| 2 — Foundational | 154 |
+| 3 — Applied | 281 |
+| 4 — Advanced | 157 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 619 questions during the full expansion. The 226 additions comprise 208 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 648 questions during the full expansion. The 255 additions comprise 237 AI-generated questions and eighteen source-origin questions. Three existing records are now correctly labeled AI-generated: two images showed prompts without answer keys, and the Module 2 `running-config` keyword item was rewritten as a derived command-syntax question. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 620 distinct tags. The latest two AI-generated Module 17 questions add a two-question `linux-network-commands` concept, preserving the validator's minimum exposure of two questions per concept. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -124,15 +124,15 @@ Distractor-feedback validation is isolated in `scripts/distractor-validation.mjs
 
 Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Dedicated regression tests reject missing or duplicate pair mappings, duplicate targets, unknown IDs, declared-answer mismatches, non-string or blank IDs, malformed top-level inputs, and mappings with extra delimiters. The learning test command runs these cases alongside adaptive-engine tests for weak/unseen-concept prioritization, bounded selection, recent-question fallback, progress immutability, mastery/review scheduling, ordering shuffles, and early lesson diversity.
 
-Site CI run #649 passed on commit `79637c2`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. It completed successfully with zero reported accessibility violations. Later commits continue to receive the same full workflow; use the PR Checks tab to verify the latest head rather than treating any in-progress or queued run as passed.
+Latest PR-head CI run **#791** passed on commit `95335604417fbd3d35f44aba91ea3ad628019739**. All workflow steps succeeded: dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. The run completed with zero reported accessibility violations. Manual physical-device, assistive-technology, learner-session, and Packet Tracer execution remain separate sign-off tasks.
 
-Six additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; the current bank has 619 questions after an additional Module 8 routing-table matching question, a source-origin IPv4 Protocol-field question, and an AI-generated first-hop destination-MAC scenario. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; an additional AI-generated first-hop destination-MAC scenario now uses IMG-0562 as a verified topology reference; the existing UTP question now includes a second verified source image.
+Six additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; subsequent Module 8 additions included a routing-table matching question, a source-origin IPv4 Protocol-field question, and an AI-generated first-hop destination-MAC scenario. Ten later questions expanded Modules 14–16; the current bank contains 648 questions across 617 concepts. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; an additional AI-generated first-hop destination-MAC scenario now uses IMG-0562 as a verified topology reference; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened 144 candidates at contact-sheet scale, with 63 opened at native resolution and 81 not yet individually opened at native resolution. Continue native-size inspection where small answer marks or diagram details could change question provenance or correctness.
-- The source-concept inventory now contains content-level audit sections for all 17 modules, with active question counts, provenance, source alignment, duplicate/scope findings, and remaining validation work. This does not mean any module is fully signed off: native-resolution exhibit checks and source lab/Packet Tracer execution remain open.
+- All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened and opened all 144 candidates individually at native resolution (144/144; zero contact-sheet-only candidates). Follow-ups 7–10 separately inspected 40 additional images outside that fixed set, for 184 unique native-resolution inspections overall. Any future image review must be scoped as a new batch rather than counted as unfinished work from the original 144.
+- The source-concept inventory contains content-level audit sections for all 17 modules, with active question counts, provenance, source alignment, and duplicate/scope findings. The scoped native-resolution image review is complete for 184 unique images; this does not sign off every source exhibit or module. Additional module-specific exhibit verification and source lab/Packet Tracer execution remain open.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
 
@@ -158,7 +158,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Updated the coverage-report generator and report footer to reflect that a content-level source inventory now exists for all 17 modules. The coverage report still measures question tags, not mastery or module sign-off.
 - Latest-head CI run #758 failed during `validate:learning` because the source inventory referenced two nonexistent Module 4 question IDs: `s4-fiber-modes-match-001` and `s4-wireless-deployment-001`. Both were corrected to the actual active IDs (`s4-fiber-mode-match-001` and `s4-wlan-deployment-security-001`) in commit `370b289`. A direct cross-check found **503 unique question references in the inventory and zero missing active IDs**.
 - CI run **#759** is queued against the corrected head `370b2893596e015b38a69892bdae8cd814282741`. Its result is not yet confirmed.
-- The PR remains draft and unmerged. Remaining work: question-bank duplicate cleanup/corrections, native-resolution exhibit review, Packet Tracer/source activity execution, physical-device/accessibility/learner testing, and final human review.
+- Automated validation and the scoped 184-image native-resolution review are complete. Remaining sign-off work is source Packet Tracer/activity execution where original files are available, manual physical-device and assistive-technology checks, a real learner-session review, and final human content review. Missing source PKAs must remain documented as unavailable rather than inferred.
 
 
 ### Content correction — Module 16 firewall filtering
@@ -193,7 +193,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
   - Module 14: TCP FIN/ACK termination order, RST versus FIN, UDP header field identification, and UDP Length/payload arithmetic.
   - Module 15: DNS hierarchy referrals, authoritative DNS answer interpretation, DHCPv6 message order, and stateless DHCPv6 with SLAAC.
   - Module 16: endpoint protection and EDR containment/telemetry preservation.
-- Recomputed snapshot: **629 questions, 629 unique IDs/prompts, 613 concept tags, 42 source-origin, 587 AI-generated**. All concept tags remain at or above the two-question minimum.
+- Recomputed snapshot: **648 questions, 648 unique IDs/prompts, 617 concept tags, 41 source-origin, 607 AI-generated**. All concept tags remain at or above the two-question minimum.
 - Updated bank-wide format and difficulty distributions from the active seed; the coverage report was reconciled separately.
 
 
@@ -204,12 +204,67 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s15-file-sharing-protocols-applied-002` into an FTP control-versus-data connection troubleshooting scenario.
 - Reworked six Module 16 matching duplicates into applied scenarios: AAA authorization, Trojan behavior, denial-of-service objective, technological vulnerability, stateful firewall inspection, and environmental threat mitigation.
 - Reworked `s16-vpn-ips-applied-002` into a two-control selection scenario. Existing question IDs and provenance remain unchanged.
-- Recomputed formats and difficulty from the active seed: **236 single, 38 multiple, 1 true/false, 52 fill, 91 matching, 22 ordering, 189 scenario**; difficulty **46 / 171 / 270 / 120 / 22**. The 629-question and 613-concept totals remain unchanged, with no under-practiced tags.
+- At this point in the earlier cleanup, the bank had 629 questions and 613 concept tags. The current seed has since advanced to 648 questions and 617 concept tags; see the current snapshot and latest continuation note above. No concept is below the two-question floor.
 
 
-### Further duplicate review — Module 14 and Module 17
+### Documentation reconciliation — November 10, 2026
 
-- Reworked `s14-windowing-applied-002` into a TCP zero-window/persist-probe scenario. It now tests recovery from a full receive buffer rather than restating what an advertised window means.
-- Reworked `s17-dns-troubleshooting-001` to ask which subsystem to investigate from the evidence, while the separate DNS question tests the direct `nslookup` query.
-- Reworked `s17-cdp-discovery-applied-002` to test the detailed CDP neighbor command and advertised network-layer address, distinct from the summary neighbor command.
-- The active bank remains at 629 questions and 613 concepts. Updated current distribution: **235 single, 38 multiple, 1 true/false, 52 fill, 91 matching, 22 ordering, 190 scenario**; difficulty **46 / 169 / 271 / 121 / 22**. All concept tags remain at or above two questions.
+- Regenerated `docs/semester-1-coverage-report.md` directly from all 648 active seed records. The report now includes 24 lessons and 617 concept tags and reconciles with the seed and audit snapshot.
+- Updated README and source-concept inventory bank totals to 648 questions, 617 concepts, 41 source-origin, and 607 AI-generated.
+- Current format totals from the seed: **210 single, 35 multiple, 1 true/false, 45 fill, 73 matching, 25 ordering, and 254 scenario**. Current difficulty totals: **43 / 156 / 277 / 145 / 22**.
+- The two-question concept exposure floor remains satisfied across all 616 tags. These are structural coverage checks, not a substitute for validating source alignment or learner outcomes.
+
+
+### Module 1 objective coverage — November 10, 2026
+
+- Added two AI-generated applied scenarios for the “Networks Affect our Lives” objective: remote access to education/services and communication across geographic boundaries. They use existing source block references as topic context but are not source-origin because the recovered objective slide `IMG-0051` contains only a title.
+- Moved the two CCNA/career questions from `network-components` to the dedicated `it-professional` lesson ID, removing the misleading `network-components` tag from those records. The source inventory now reflects the Module 1 topic taxonomy.
+- Recomputed bank totals: **648 questions, 24 lesson IDs, 617 concepts, 41 source-origin, 607 AI-generated**. All 617 concepts remain above the two-question floor.
+
+
+### Module 2 question-quality pass — November 10, 2026
+
+- Reworked `s2-ios-keyword-001` from a near-duplicate `running-config` definition into a command-syntax scenario distinguishing the `ping` keyword from its user-supplied destination IP argument. `s2-config-keyword-001` remains the fixed-keyword retrieval item. Added the shared `command-arguments` concept tag to both items, preserving the two-question minimum.
+- Added `s2-end-to-end-ping-applied-001`, a same-subnet connectivity troubleshooting scenario. It reinforces that hosts in the same /24 communicate through the switch without a default gateway and that the destination host's IPv4 address/mask should be checked before changing router settings.
+- Reworked `s2-ios-keyword-001` into a `ping` command/argument scenario and retained `s2-config-keyword-001` for fixed-keyword retrieval. Added `s2-end-to-end-ping-applied-001` for same-subnet connectivity troubleshooting, plus `s2-context-help-applied-001` and `s2-tab-completion-applied-001` for IOS `?` help and Tab completion.
+- Updated the Module 2 inventory and regenerated the coverage report. Current bank: **648 questions, 24 lesson IDs, 617 concepts, 41 source-origin, 607 AI-generated**; no concept falls below two questions.
+
+
+### Module 2 CLI usability practice — November 10, 2026
+
+- Added explicit practice for context-sensitive IOS help (`?`) and unique-prefix command completion (Tab), bringing the Module 2 command-structure topic beyond keyword/argument identification.
+- Module 2 now has 30 active questions. The question bank totals **648 questions, 24 lesson IDs, and 617 concepts**; all concepts retain at least two questions.
+
+
+### Provenance correction — Module 2 command syntax — November 10, 2026
+
+- Reclassified `s2-config-keyword-001` from source-origin to AI-generated after rewriting it as a derived fixed-keyword distinction. Its `IMG-0122` reference is contextual support, not a source-marked answer key for that exact prompt.
+- Current provenance is **41 source-origin and 607 AI-generated** across 648 questions. The 40 documented source-origin image-question associations in the image audit are a separate count and do not include `IMG-0122`.
+
+
+### Current continuation reconciliation — November 10, 2026
+
+- The latest active seed contains **653 questions**, **653 unique IDs**, **653 unique normalized prompts**, **617 concepts**, **40 source-origin**, and **613 AI-generated** questions.
+- Current format totals: Single choice: 205; Multiple select: 36; True / false: 1; Matching: 75; Fill in the blank: 44; Ordering: 25; Scenario / troubleshooting: 267.
+- Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 155; 5: 22.
+- Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
+- This structural cross-check is not a substitute for executing the repository validator, adaptive-engine tests, Astro check/build, browser tests, or Packet Tracer labs.
+
+
+### Current continuation reconciliation — November 10, 2026
+
+- The latest active seed contains **657 questions**, **657 unique IDs**, **657 unique normalized prompts**, **620 concepts**, **40 source-origin**, and **617 AI-generated** questions. The latest Module 17 additions cover Linux interface inspection and current Windows ARP-cache clearing syntax.
+- Current format totals: Single choice: 205; Multiple select: 36; True / false: 1; Matching: 75; Fill in the blank: 44; Ordering: 25; Scenario / troubleshooting: 268.
+- Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 156; 5: 22.
+- Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
+- This structural cross-check is not a substitute for executing the repository validator, adaptive-engine tests, Astro check/build, browser tests, or Packet Tracer labs.
+
+
+### Current seed reconciliation and Module 4 source-reference audit — November 10, 2026
+
+- Recounted the active seed directly: **657 questions**, **657 unique IDs**, **657 unique normalized prompts**, and **620 concept tags**. Formats: **206 single choice, 36 multiple select, 1 true/false, 75 matching, 44 fill-in, 25 ordering, and 270 scenario/troubleshooting**. Difficulty: **43 introductory, 154 foundational, 281 applied, 157 advanced, and 22 challenging**.
+- All 620 concepts retain at least two question records. These counts are a direct structural recount, not a claim that the repository validator or CI ran.
+- Corrected source references on **30 Module 4 AI-generated question records**. The previous references included unrelated fiber-connector, throughput, LLC, and number-system exhibits. Replacements now point to the relevant source exhibits for TIA/EIA cabling standards, coax, fiber/copper comparison, UTP wiring conventions, wireless media/standards, STP, goodput, copper interference/attenuation, and fiber modes/dispersion.
+- s4-utp-cable-types-match-001 now cites the T568A/T568B wiring-convention slide (IMG-0353); s4-utp-cable-types-applied-002 cites that slide plus the PC/console/FastEthernet cable-selection exhibit (IMG-0367). The two cable-type questions remain distinct retrieval dimensions.
+- These corrected records remain AI-generated. OCR confirms exhibit subjects and some prompt text, but does not establish marked answers. The original OneNote image payloads were recovered and SHA-256 matched for all 2,646 manifest records. Native-resolution inspection is documented for 184 unique images in the broader review plus the targeted Module 4 follow-up. IMG-0353 confirms the T568A/T568B pinouts, straight-through/crossover standards, rollover console use, and Auto-MDI/MDIX caveat. IMG-1576 and IMG-1787 are duplicate, unmarked termination prompts; excessive untwisted wire length is visually evident. IMG-0541 independently compares poor and proper termination. IMG-0367's four answer controls are unselected. The targeted review is documented in `docs/semester-1-image-review-module4-utp.md`; no marked source answer was inferred.
+- This source-reference correction does not change the question count, provenance totals, concept count, or question content.

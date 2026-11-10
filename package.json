@@ -6,9 +6,13 @@
   "scripts": {
     "dev": "astro dev",
     "check": "astro check",
-    "build": "astro check && astro build && node scripts/copy-legacy.mjs",
+    "build": "npm run validate:learning && npm run test:learning && npm run report:learning && astro check && astro build && node scripts/copy-legacy.mjs",
     "preview": "astro preview",
-    "validate:links": "node scripts/validate-links.mjs"
+    "validate:links": "node scripts/validate-links.mjs",
+    "validate:learning": "node scripts/validate-learning-data.mjs",
+    "test:learning": "node --experimental-strip-types scripts/test-adaptive-engine.mjs && node scripts/test-learning-validator.mjs",
+    "report:learning": "node scripts/report-learning-coverage.mjs",
+    "test:browser": "node scripts/test-browser.mjs"
   },
   "dependencies": {
     "astro": "^7.4.7"
