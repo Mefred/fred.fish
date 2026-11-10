@@ -413,7 +413,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 
 ## Latest question-depth completion
 
-The active bank now contains 653 questions across 24 lesson IDs and 617 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 260 additions over the original 393-question bank comprise 242 AI-generated and 18 source-origin questions; one previously source-origin record was reclassified as AI-generated after review. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
+The active bank now contains 654 questions across 24 lesson IDs and 619 concept identifiers. A per-concept exposure audit found no remaining singleton tags: every identifier is represented by at least two distinct question records. The 261 additions over the original 393-question bank comprise 243 AI-generated and 18 source-origin questions; one previously source-origin record was reclassified as AI-generated after review. They reinforce existing tags across IOS configuration, switching, IPv4/IPv6, routing, physical media, transport/application protocols, security, and troubleshooting; the two Module 1 career questions, the Module 17 employee-utilization and network-applications-versus-services concepts, and the multi-service-server concept each have at least two questions. The current per-lesson counts and per-tag exposure histogram are maintained in `semester-1-coverage-report.md`. This closes the question-count floor for under-practiced tags, but it does not replace source-page verification, lesson-objective alignment, or learner-session testing.
 
 
 ## Additional source-verified question mappings from recovered images
@@ -445,7 +445,7 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-There are 40 source-origin image-question associations plus fifteen unique reviewed image references used by AI-generated applied questions (55 total). The question bank contains 653 records across 617 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
+There are 40 source-origin image-question associations plus fifteen unique reviewed image references used by AI-generated applied questions (55 total). The question bank contains 654 records across 619 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
 
 
 ## Additional source-verified Module 8 questions
@@ -457,7 +457,7 @@ Two source slides contain explicit, directly usable answer evidence and have bee
 | `IMG-0598` | `s8-host-routing-table-source-001` | The slide states that hosts maintain a local routing table containing loopback, local-network, and default routes. |
 | `IMG-0639` | `s8-router-forwarding-steps-source-001` | The slide explicitly orders router forwarding: remove incoming Layer 2 framing, inspect the destination IPv4 address and select the best route, then create new Layer 2 framing for the next hop. |
 
-The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 653 questions, 40 source-origin questions, and 613 AI-generated questions.
+The source-origin audit also corrected two earlier records whose images showed a question prompt but no answer key: `s3-llc-functions-001` and `s3-telnet-encapsulation-001` are now correctly labeled `ai-generated`. The current bank contains 654 questions, 40 source-origin questions, and 614 AI-generated questions.
 
 
 ## Module 1 career-objective expansion
@@ -576,7 +576,7 @@ The recovered IMG-0601 exhibit contains an unfilled matching activity and a visi
 
 ### IPv4 Protocol-field source question
 
-IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. At the time this source-origin question was added, the source-origin count increased to 42. Subsequent provenance reconciliation now reports 40 source-origin and 613 AI-generated questions across the current 653-question bank and 617 concept identifiers. It does not add a new concept identifier.
+IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. At the time this source-origin question was added, the source-origin count increased to 42. Subsequent provenance reconciliation now reports 40 source-origin and 614 AI-generated questions across the current 654-question bank and 619 concept identifiers. It does not add a new concept identifier.
 
 
 ### IMG-0562 first-hop Layer 2 destination scenario
@@ -1281,4 +1281,4 @@ Module 4 is **partially audited, not signed off**. With this section added, the 
 - Reworked `s15-http-methods-applied-002` into a PUT/idempotency scenario and `s15-file-sharing-protocols-applied-002` into an FTP control/data-channel troubleshooting scenario.
 - Reworked `s16-aaa-functions-applied-002`, `s16-malware-types-applied-002`, `s16-attack-categories-applied-002`, `s16-vulnerability-types-applied-002`, `s16-firewall-filtering-applied-002`, and `s16-physical-threats-applied-002` from duplicate matching tasks into concrete scenarios.
 - Reworked `s16-vpn-ips-applied-002` into a two-control selection item. The original broad matching questions remain as retrieval practice; the revised items now test application of those distinctions.
-- No question IDs were removed or duplicated. The active bank now contains 653 questions and 617 concept tags; all concepts retain at least two questions.
+- No question IDs were removed or duplicated. The active bank now contains 654 questions and 619 concept tags; all concepts retain at least two questions.
