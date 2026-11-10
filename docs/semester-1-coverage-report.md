@@ -40,22 +40,22 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Questions per concept | Number of concepts |
 |---:|---:|
 | 2 | 379 |
-| 3 | 94 |
-| 4 | 44 |
+| 3 | 93 |
+| 4 | 45 |
 | 5 | 27 |
 | 6 | 18 |
 | 7 | 9 |
 | 8 | 8 |
 | 9 | 5 |
-| 10 | 6 |
-| 11 | 6 |
+| 10 | 5 |
+| 11 | 7 |
 | 12 | 5 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
 | 17 | 3 |
 | 18 | 3 |
-| 20 | 1 |
+| 21 | 1 |
 | 33 | 1 |
 
 **Concepts with fewer than two questions:** 0.
@@ -1079,7 +1079,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ethernet` | 2 | protocols-and-models |
 | `ethernet-broadcast` | 2 | address-resolution |
 | `ethernet-cabling` | 4 | ethernet-switching, physical-layer |
-| `ethernet-frame` | 10 | data-link-layer, ethernet-switching |
+| `ethernet-frame` | 11 | data-link-layer, ethernet-switching |
 | `ethernet-frame-processing` | 2 | ethernet-switching |
 | `ethernet-media-access` | 3 | data-link-layer, ethernet-switching |
 | `ethernet-multiaccess` | 2 | network-layer |
@@ -1095,7 +1095,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `fast-forward-switching` | 2 | ethernet-switching |
 | `fault-isolation` | 3 | network-topologies, small-network |
 | `fault-tolerance` | 8 | network-topologies, reliable-networks, small-network |
-| `fcs` | 3 | data-link-layer |
+| `fcs` | 4 | data-link-layer |
 | `fiber-core` | 2 | physical-layer |
 | `fiber-dispersion` | 2 | physical-layer |
 | `fiber-internet` | 2 | internet-connections |
@@ -1259,7 +1259,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 5 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 6 | ethernet-switching |
-| `mac-addressing` | 20 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
+| `mac-addressing` | 21 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
 | `mac-flapping` | 2 | ethernet-switching |
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 2 | ethernet-switching |
@@ -1591,4 +1591,4 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory now documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
