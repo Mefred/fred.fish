@@ -258,3 +258,13 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Current difficulty totals: 1: 43; 2: 154; 3: 279; 4: 156; 5: 22.
 - Every concept has at least two questions; the structural cross-check found no duplicate IDs/prompts and no missing question references in the source-concept inventory.
 - This structural cross-check is not a substitute for executing the repository validator, adaptive-engine tests, Astro check/build, browser tests, or Packet Tracer labs.
+
+
+### Current seed reconciliation and Module 4 source-reference audit — November 10, 2026
+
+- Recounted the active seed directly: **657 questions**, **657 unique IDs**, **657 unique normalized prompts**, and **620 concept tags**. Formats: **206 single choice, 36 multiple select, 1 true/false, 75 matching, 44 fill-in, 25 ordering, and 270 scenario/troubleshooting**. Difficulty: **43 introductory, 154 foundational, 281 applied, 157 advanced, and 22 challenging**.
+- All 620 concepts retain at least two question records. These counts are a direct structural recount, not a claim that the repository validator or CI ran.
+- Corrected source references on **30 Module 4 AI-generated question records**. The previous references included unrelated fiber-connector, throughput, LLC, and number-system exhibits. Replacements now point to the relevant source exhibits for TIA/EIA cabling standards, coax, fiber/copper comparison, UTP wiring conventions, wireless media/standards, STP, goodput, copper interference/attenuation, and fiber modes/dispersion.
+- s4-utp-cable-types-match-001 now cites the T568A/T568B wiring-convention slide (IMG-0353); s4-utp-cable-types-applied-002 cites that slide plus the PC/console/FastEthernet cable-selection exhibit (IMG-0367). The two cable-type questions remain distinct retrieval dimensions.
+- These corrected records remain AI-generated. OCR confirms exhibit subjects and some prompt text, but does not establish marked answers or every visual mapping. The OCR bundle contains no source image payloads; native-resolution review remains open.
+- This source-reference correction does not change the question count, provenance totals, concept count, or question content.
