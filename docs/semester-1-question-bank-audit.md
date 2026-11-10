@@ -22,38 +22,38 @@ The current 613 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 403 |
-| 3 | 79 |
-| 4 | 39 |
+| 2 | 399 |
+| 3 | 85 |
+| 4 | 37 |
 | 5 | 24 |
 | 6 | 18 |
 | 7 | 8 |
 | 8 | 9 |
 | 9 | 5 |
-| 10 | 6 |
-| 11 | 6 |
+| 10 | 7 |
+| 11 | 5 |
 | 12 | 2 |
 | 13 | 2 |
-| 14 | 3 |
-| 15 | 2 |
+| 14 | 2 |
+| 15 | 3 |
 | 16 | 4 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 403 concepts (65.7%) sit exactly at the two-question minimum.
+**Priority implication:** 399 concepts (65.1%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 232 |
-| Multiple select | 37 |
+| Single choice | 228 |
+| Multiple select | 36 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 88 |
-| Ordering | 22 |
-| Scenario / troubleshooting | 198 |
+| Matching | 85 |
+| Ordering | 23 |
+| Scenario / troubleshooting | 205 |
 | **Total** | **630** |
 
 ## Difficulty
@@ -61,9 +61,9 @@ The current 613 concept tags are not evenly represented. This distribution makes
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 166 |
-| 3 — Applied | 271 |
-| 4 — Advanced | 125 |
+| 2 — Foundational | 164 |
+| 3 — Applied | 270 |
+| 4 — Advanced | 128 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
