@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 641
+- **Questions:** 643
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -11,7 +11,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Lesson ID | Questions | Distinct concept tags | Formats | Difficulty range |
 |---|---:|---:|---|---|
 | address-resolution | 19 | 20 | fill: 1, matching: 1, scenario: 11, single: 6 | 1–4 |
-| application-layer | 27 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 11, single: 7 | 1–4 |
+| application-layer | 29 | 37 | matching: 5, multiple: 1, ordering: 3, scenario: 15, single: 5 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
 | data-link-layer | 27 | 45 | matching: 5, multiple: 2, ordering: 2, scenario: 14, single: 4 | 2–4 |
 | ethernet-switching | 38 | 59 | fill: 3, matching: 4, scenario: 17, single: 14 | 1–5 |
@@ -37,17 +37,17 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 382 |
-| 3 | 90 |
-| 4 | 42 |
+| 2 | 380 |
+| 3 | 92 |
+| 4 | 41 |
 | 5 | 28 |
-| 6 | 17 |
+| 6 | 18 |
 | 7 | 10 |
 | 8 | 8 |
-| 9 | 6 |
-| 10 | 8 |
-| 11 | 4 |
-| 12 | 3 |
+| 9 | 4 |
+| 10 | 6 |
+| 11 | 7 |
+| 12 | 4 |
 | 13 | 3 |
 | 14 | 1 |
 | 15 | 4 |
@@ -934,9 +934,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Concept tag | Questions | Lesson(s) |
 |---|---:|---|
 | `8021q` | 3 | ethernet-switching |
-| `a-record` | 2 | application-layer |
+| `a-record` | 3 | application-layer |
 | `aaa` | 2 | network-security |
-| `aaaa-record` | 2 | application-layer |
+| `aaaa-record` | 3 | application-layer |
 | `access-attacks` | 2 | network-security |
 | `access-control-lists` | 2 | network-security |
 | `access-ports` | 2 | ethernet-switching |
@@ -951,7 +951,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `apipa` | 3 | small-network |
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
-| `application-layer-services` | 10 | application-layer, small-network |
+| `application-layer-services` | 11 | application-layer, small-network |
 | `arp` | 18 | address-resolution, data-link-layer, icmp, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
@@ -1032,13 +1032,13 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `device-management` | 2 | basic-device-configuration |
 | `device-resource-management` | 2 | small-network |
 | `device-selection` | 3 | small-network |
-| `dhcp` | 10 | application-layer, basic-device-configuration, small-network, transport-layer |
+| `dhcp` | 12 | application-layer, basic-device-configuration, small-network, transport-layer |
 | `dhcp-options` | 2 | small-network |
 | `dhcp-relay` | 2 | small-network |
 | `dhcp-scope` | 2 | small-network |
 | `dhcp-troubleshooting` | 5 | small-network |
 | `dhcpv6` | 4 | application-layer, basic-device-configuration, ipv6-addressing |
-| `dns` | 9 | application-layer, network-types, transport-layer |
+| `dns` | 10 | application-layer, network-types, transport-layer |
 | `dns-client-configuration` | 2 | basic-device-configuration |
 | `dns-hierarchy` | 2 | application-layer |
 | `dns-resource-records` | 2 | application-layer |
@@ -1168,7 +1168,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ios-verification-commands` | 13 | address-resolution, basic-device-configuration, ipv6-addressing, network-layer, router-configuration, small-network |
 | `ip` | 2 | protocols-and-models |
 | `ip-addressing` | 4 | protocols-and-models |
-| `ip-addressing-services` | 4 | application-layer |
+| `ip-addressing-services` | 6 | application-layer |
 | `ip-characteristics` | 2 | network-layer |
 | `ip-default-gateway` | 2 | router-configuration |
 | `ip-helper-address` | 2 | small-network |
@@ -1273,7 +1273,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `multimode-fiber` | 3 | physical-layer |
 | `multiplexing` | 4 | transport-layer |
 | `mx-record` | 2 | application-layer |
-| `name-resolution` | 9 | application-layer, small-network |
+| `name-resolution` | 10 | application-layer, small-network |
 | `native-vlan` | 2 | ethernet-switching |
 | `neighbor-advertisement` | 2 | address-resolution, icmp |
 | `neighbor-discovery` | 2 | icmp |
@@ -1345,7 +1345,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `point-to-point-topology` | 3 | data-link-layer |
 | `pop3` | 2 | application-layer |
 | `port-based-memory` | 2 | ethernet-switching |
-| `port-numbers` | 10 | application-layer, protocols-and-models, transport-layer |
+| `port-numbers` | 11 | application-layer, protocols-and-models, transport-layer |
 | `port-unreachable` | 2 | icmp |
 | `positional-notation` | 2 | number-systems |
 | `powerline-networking` | 4 | network-trends |
@@ -1503,7 +1503,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `troubleshooting-methodology` | 2 | small-network |
 | `ttl` | 3 | icmp, network-layer |
 | `tunneling` | 2 | ipv6-addressing |
-| `udp` | 10 | application-layer, protocols-and-models, transport-layer |
+| `udp` | 11 | application-layer, protocols-and-models, transport-layer |
 | `udp-header` | 4 | transport-layer |
 | `unicast` | 3 | address-resolution, ipv4-addressing, protocols-and-models |
 | `unknown-unicast-flooding` | 2 | ethernet-switching |
@@ -1555,25 +1555,25 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 ### Question formats
 
 | Format | Count |
-|---|---:|
+|---|---:|---:|
 | fill | 45 |
 | matching | 73 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 250 |
-| single | 212 |
+| scenario | 254 |
+| single | 210 |
 | true-false | 1 |
 
 ### Difficulty
 
 | Level | Count |
 |---:|---:|
-| 1 | 44 |
-| 2 | 158 |
-| 3 | 275 |
-| 4 | 142 |
+| 1 | 43 |
+| 2 | 156 |
+| 3 | 277 |
+| 4 | 145 |
 | 5 | 22 |
 
 ## Interpretation and limits
 
-This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory now documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
+This report measures only concept tags attached to active questions. The exposure table counts questions per tag; it does not measure learner mastery or question quality. The source-concept inventory documents content-level audits for all 17 modules and identifies topic coverage, provenance, duplicates, scope boundaries, and open validation tasks. A concept tag is not proof that the associated source objective has been mastered or fully taught. Native-resolution source-exhibit review and source lab/Packet Tracer execution remain incomplete; do not interpret this report as module sign-off. Question counts are a triage signal, not evidence of learner mastery or proof of complete instructional coverage.
