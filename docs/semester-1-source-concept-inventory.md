@@ -493,7 +493,7 @@ The recovered IMG-0601 exhibit contains an unfilled matching activity and a visi
 
 ### IPv4 Protocol-field source question
 
-IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. This increases the source-origin count to 42 and the total bank to 618; it does not add a new concept identifier.
+IMG-0619 presents a direct question asking which IPv4 header field identifies the next-level protocol. Its adjacent field-description table explicitly states that the Protocol field identifies ICMP, TCP, UDP, and other next-level protocols. The active bank now includes source-origin question s8-ipv4-protocol-field-source-001 linked to IMG-0619. This increases the source-origin count to 42 and the total bank to 619; it does not add a new concept identifier.
 
 
 ### IMG-0562 first-hop Layer 2 destination scenario
