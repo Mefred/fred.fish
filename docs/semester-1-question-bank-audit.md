@@ -132,7 +132,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
 - All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened 144 candidates at contact-sheet scale, with 63 opened at native resolution and 81 not yet individually opened at native resolution. Continue native-size inspection where small answer marks or diagram details could change question provenance or correctness.
-- The source-concept inventory includes a first-pass objective-to-question map for all 17 modules. It is not yet a page-by-page audit of every question, answer, diagram, and Packet Tracer activity.
+- The source-concept inventory now contains content-level audit sections for all 17 modules, with active question counts, provenance, source alignment, duplicate/scope findings, and remaining validation work. This does not mean any module is fully signed off: native-resolution exhibit checks and source lab/Packet Tracer execution remain open.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
 
