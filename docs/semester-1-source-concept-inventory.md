@@ -639,7 +639,6 @@ The active `data-link-layer` lesson contains **27 assigned questions**: 26 `s6-*
 
 - Verify the native-resolution diagrams for the frame-field layout and topology exhibits; text extraction alone does not establish diagram fidelity.
 - Review the remaining frame-field matching overlap and FCS receive-processing sequence in a learner session; the identified LLC/MAC, CSMA/CA, controlled-access, duplex, and topology duplicates have been differentiated.
-- Native-resolution review of the frame-field and topology exhibits remains open; standards/protocol coverage has been added from the recovered objective text.
 - Locate and execute the Module 6 Packet Tracer switch-port activity, then verify the source answer state.
 - Run the question-bank validator and regenerate coverage documentation after any content edits.
 
