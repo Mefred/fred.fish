@@ -15,7 +15,7 @@
 - IMG-0599 explicitly presents an IPv4 source-address-field question and the table identifies the answer. It is already linked to source-origin question s8-ipv4-source-address-field-source-001.
 - The blue star graphics are decorative, not answer-selection marks.
 - No new question or source-image association was needed; two existing source associations were directly reverified.
-- Cumulative native-resolution review across the 144 candidates in batches 1–4 is now 109 of 144; 35 remain contact-sheet-only.
+- The 144-candidate batch 1–4 count remains 89/144 opened at native resolution, with 55 contact-sheet-only. Follow-ups 7–8 have opened twenty additional images (IMG-0580–IMG-0599) outside those four contact-sheet batches; across both workstreams, 109 unique images have now been individually inspected (89 + 20).
 - No question count or provenance label changed.
 
 ## Candidate-by-candidate log
