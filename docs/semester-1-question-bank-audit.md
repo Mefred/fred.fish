@@ -206,4 +206,12 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s15-file-sharing-protocols-applied-002` into an FTP control-versus-data connection troubleshooting scenario.
 - Reworked six Module 16 matching duplicates into applied scenarios: AAA authorization, Trojan behavior, denial-of-service objective, technological vulnerability, stateful firewall inspection, and environmental threat mitigation.
 - Reworked `s16-vpn-ips-applied-002` into a two-control selection scenario. Existing question IDs and provenance remain unchanged.
-- Recomputed formats and difficulty from the active seed: **235 single, 38 multiple, 1 true/false, 52 fill, 91 matching, 22 ordering, 190 scenario**; difficulty **46 / 169 / 271 / 121 / 22**. The 629-question and 613-concept totals remain unchanged, with no under-practiced tags.
+- At this point in the earlier cleanup, the bank had 629 questions and 613 concept tags. The current seed has since advanced to 643 questions and 614 concept tags; see the current snapshot and latest continuation note above. No concept is below the two-question floor.
+
+
+### Documentation reconciliation — November 10, 2026
+
+- Regenerated `docs/semester-1-coverage-report.md` directly from all 643 active seed records. The report now includes 22 lessons and 614 concept tags and reconciles with the seed and audit snapshot.
+- Updated README and source-concept inventory bank totals to 643 questions, 614 concepts, 42 source-origin, and 601 AI-generated.
+- Current format totals from the seed: **210 single, 35 multiple, 1 true/false, 45 fill, 73 matching, 25 ordering, and 254 scenario**. Current difficulty totals: **43 / 156 / 277 / 145 / 22**.
+- The two-question concept exposure floor remains satisfied across all 614 tags. These are structural coverage checks, not a substitute for validating source alignment or learner outcomes.
