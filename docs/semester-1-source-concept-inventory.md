@@ -362,7 +362,7 @@ The original OneNote image assets were recovered and hash-matched against all 2,
 | 8. Network Layer | `IMG-0640` | `s8-ipv4-version-field-source-001` | IPv4 Version field is 4 (binary 0100) |
 | 8. Network Layer | `IMG-0647` | `s8-ipv4-header-checksum-field-source-001` | Header Checksum detects corruption in the IPv4 header |
 
-There are 39 source-origin image-question associations plus fourteen unique reviewed image references used by AI-generated applied questions (53 total). The question bank contains 618 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
+There are 40 source-origin image-question associations plus fourteen unique reviewed image references used by AI-generated applied questions (54 total). The question bank contains 618 records across 610 concept tags, with a minimum of two questions per tag. The original OCR export still marks 744 unique question-like images (750 asset records) unresolved. Manual review batches are tracked separately; the Library ZIP status fields have not been rewritten. See the generated [coverage report](./semester-1-coverage-report.md) and consolidated [image audit](./semester-1-image-audit.md) for current totals.
 
 
 ## Additional source-verified Module 8 questions
@@ -452,7 +452,7 @@ This matrix maps recovered topic objectives to representative active question ID
 - Module 1's “Networks Affect our Lives” slide (IMG-0051) is only a title slide in the recovered notebook; the available source does not provide enough explanatory content to author a source-grounded assessment for that objective.
 - Module 2 and Module 3 contain cross-lesson and repeated source material; their existing topic-specific mapping sections above identify known partial and near-duplicate areas.
 - Remaining candidate image slides often contain unmarked questions, activities, or diagrams without answer keys. Do not convert those into source-origin questions unless the prompt and answer are directly supported by visible source evidence.
-- The 77-image visual triage described in the image audit is a screening pass only. The original OCR export marks 744 unique images (750 asset records including duplicate references) as unresolved; that is an export-status count, not the current manual-review backlog. Batches 1–4 screened 144 candidates at high-resolution contact-sheet scale; 89 have now been opened at native resolution and 55 remain contact-sheet-only within those batches. See `docs/semester-1-image-audit.md` for the reconciled review status.
+- The 77-image visual triage described in the image audit is a screening pass only. The original OCR export marks 744 unique images (750 asset records including duplicate references) as unresolved; that is an export-status count, not the current manual-review backlog. Batches 1–4 screened 144 candidates at high-resolution contact-sheet scale; 129 have now been opened at native resolution and 15 remain contact-sheet-only within those batches. See `docs/semester-1-image-audit.md` for the reconciled review status.
 
 
 ## First-pass topic-to-question comparison: Module 17
