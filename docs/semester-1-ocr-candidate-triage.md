@@ -86,7 +86,7 @@ The next 36 unique candidates (IMG-0287–IMG-0427) were screened. Five marked O
 
 All six are already linked to active source-origin questions. The remaining 30 images are unmarked prompts, answer-choice screens without selections, or instructional slides/diagrams. No new source-origin question was added. See [the batch 2 review log](./semester-1-image-review-batch-2.md).
 
-Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale, and twelve answer/visual items have been cross-checked at native resolution. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the other 132 candidates in these batches, or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
+Across batches 1–4, 144 candidate images have been screened at high-resolution contact-sheet scale. Sixty-three have now been opened individually at native resolution, leaving 81 contact-sheet-only candidates in these four batches. The original OCR ZIP status labels remain unchanged. Contact-sheet screening is not a substitute for native-resolution review of the remaining candidates or of additional diagram-dependent candidates selected for later review. The original export's 744-unique-image / 750-asset-record unresolved status count is not the current manual-review backlog.
 
 ## High-resolution contact-sheet review — batch 3
 
