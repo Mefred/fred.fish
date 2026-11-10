@@ -322,7 +322,7 @@ The Module 3 source objectives are compared with 38 active questions assigned to
 ## Next review work
 
 - Perform a page-by-page source review to validate that each mapped question tests what the lesson actually teaches, not merely a related concept tag.
-- Continue native-resolution review of the 15 contact-sheet-only candidates from batches 1–4 where answer marks or diagram details could affect interpretation, then select further unresolved candidates for review. The OCR export's 744-unique-image status is not the current manual-review backlog; do not promote inferred answers as source-origin.
+- Continue native-resolution review of the 55 contact-sheet-only candidates from batches 1–4 where answer marks or diagram details could affect interpretation, then select further unresolved candidates for review. The OCR export's 744-unique-image status is not the current manual-review backlog; do not promote inferred answers as source-origin.
 - Review cross-lesson placements and distinguish repeated source material from true objective coverage.
 - Add targeted questions only where the source text or a verified visual provides evidence for a missing objective or under-practiced detail.
 - Revisit the title-only Module 1 “Networks Affect our Lives” slide if a fuller source page or instructor notes become available.
@@ -452,7 +452,7 @@ This matrix maps recovered topic objectives to representative active question ID
 - Module 1's “Networks Affect our Lives” slide (IMG-0051) is only a title slide in the recovered notebook; the available source does not provide enough explanatory content to author a source-grounded assessment for that objective.
 - Module 2 and Module 3 contain cross-lesson and repeated source material; their existing topic-specific mapping sections above identify known partial and near-duplicate areas.
 - Remaining candidate image slides often contain unmarked questions, activities, or diagrams without answer keys. Do not convert those into source-origin questions unless the prompt and answer are directly supported by visible source evidence.
-- The 77-image visual triage described in the image audit is a screening pass only. The original OCR export marks 744 unique images (750 asset records including duplicate references) as unresolved; that is an export-status count, not the current manual-review backlog. Batches 1–4 screened 144 candidates at high-resolution contact-sheet scale; 129 have now been opened at native resolution and 15 remain contact-sheet-only within those batches. See `docs/semester-1-image-audit.md` for the reconciled review status.
+- The 77-image visual triage described in the image audit is a screening pass only. The original OCR export marks 744 unique images (750 asset records including duplicate references) as unresolved; that is an export-status count, not the current manual-review backlog. Batches 1–4 screened 144 candidates at high-resolution contact-sheet scale; 89 have now been opened at native resolution and 55 remain contact-sheet-only within those batches. Follow-ups 7–10 separately inspected 40 additional images outside that 144-candidate set. See `docs/semester-1-image-audit.md` for the reconciled review status.
 
 
 ## First-pass topic-to-question comparison: Module 17
