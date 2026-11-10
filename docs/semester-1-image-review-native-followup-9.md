@@ -12,7 +12,7 @@
 - IMG-0607 contains an IPv4 TTL question whose adjacent field-description table explicitly identifies Time to Live. It is already linked to source-origin question s8-ipv4-ttl-field-source-001.
 - The blue star on the question slides is decorative, not an answer-selection mark.
 - No new source-origin answer key or source-image association was needed.
-- Cumulative native-resolution review across the 144 candidates in batches 1–4 is now 119 of 144; 25 remain contact-sheet-only.
+- The 144-candidate batch 1–4 count remains 89/144 opened at native resolution, with 55 contact-sheet-only. Follow-ups 7–9 have opened thirty additional images (IMG-0580–IMG-0609) outside those four contact-sheet batches; across both workstreams, 119 unique images have now been individually inspected (89 + 30).
 - One AI-generated question was added from the unfilled IMG-0601 routing-table activity. The active bank now contains 617 questions; the source-origin count remains 41.
 
 ## Candidate-by-candidate log
