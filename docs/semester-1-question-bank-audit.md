@@ -4,28 +4,28 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **643** |
-| Unique question IDs | 643 |
-| Unique normalized prompts | 643 |
-| Lesson IDs represented | 22 |
-| Distinct concept tags | 614 |
+| Active questions | **645** |
+| Unique question IDs | 645 |
+| Unique normalized prompts | 645 |
+| Lesson IDs represented | 24 |
+| Distinct concept tags | 615 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 42 |
-| AI-generated questions | 601 |
+| AI-generated questions | 603 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
 ### Concept exposure distribution
 
-The current 614 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
+The current 615 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 380 |
-| 3 | 92 |
+| 2 | 381 |
+| 3 | 93 |
 | 4 | 41 |
-| 5 | 28 |
+| 5 | 27 |
 | 6 | 18 |
 | 7 | 10 |
 | 8 | 8 |
@@ -43,7 +43,7 @@ The current 614 concept tags are not evenly represented. This distribution makes
 | 20 | 1 |
 | 33 | 1 |
 
-**Priority implication:** 380 concepts (61.9%) sit exactly at the two-question minimum.
+**Priority implication:** 381 concepts (62.0%) sit exactly at the two-question minimum.
 
 ## Question formats
 
@@ -55,22 +55,22 @@ The current 614 concept tags are not evenly represented. This distribution makes
 | Fill in the blank | 45 |
 | Matching | 73 |
 | Ordering | 25 |
-| Scenario / troubleshooting | 254 |
-| **Total** | **643** |
+| Scenario / troubleshooting | 256 |
+| **Total** | **645** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 43 |
-| 2 — Foundational | 156 |
+| 2 — Foundational | 158 |
 | 3 — Applied | 277 |
 | 4 — Advanced | 145 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 643 questions during the full expansion. The 250 additions comprise 232 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 614 distinct tags, including the new two-question autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 645 questions during the full expansion. The 252 additions comprise 234 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 615 distinct tags, including the two-question `networks-affect-lives` tag and the autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -128,7 +128,7 @@ Matching-answer validation is isolated in `scripts/matching-validation.mjs`. Ded
 
 Site CI run #649 passed on commit `79637c2`, including the dependency audit, question-bank and adaptive/parser regression tests, Astro type-check/build, generated local-link validation, desktop/mobile Playwright practice sessions, persistence/dashboard checks, Cisco lesson/quiz integrity, preserved routes, and axe-core accessibility checks. It completed successfully with zero reported accessibility violations. Later commits continue to receive the same full workflow; use the PR Checks tab to verify the latest head rather than treating any in-progress or queued run as passed.
 
-Six additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; subsequent Module 8 additions included a routing-table matching question, a source-origin IPv4 Protocol-field question, and an AI-generated first-hop destination-MAC scenario. Ten later questions expanded Modules 14–16; the current bank contains 643 questions across 614 concepts. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; an additional AI-generated first-hop destination-MAC scenario now uses IMG-0562 as a verified topology reference; the existing UTP question now includes a second verified source image.
+Six additional diagram-based AI-generated questions now use verified visual context: IPv6 hierarchical subnet-ID allocation (IMG-0944), IPv4 subnet-table host membership (IMG-1070), first-hop Layer 2/Layer 3 address selection (IMG-1567), equal-size subnet-mask selection for four host groups (IMG-1584), and UTP cable selection for console/switch/router links (IMG-2104). The coverage report is regenerated from the active seed data and lists per-lesson counts, concept exposure, formats, and difficulty distribution. The fifteen Module 17 additions brought the bank to 616 questions before the subsequent Module 8 routing-table expansion; the regenerated report records 61 questions across 88 concept tags in `small-network`; subsequent Module 8 additions included a routing-table matching question, a source-origin IPv4 Protocol-field question, and an AI-generated first-hop destination-MAC scenario. Ten later questions expanded Modules 14–16; the current bank contains 645 questions across 615 concepts. The newest pairs assess network applications versus application-layer services and the ability of one server to provide multiple services. Three further AI-generated questions add source-grounded macOS host command practice for `ifconfig`, `networksetup -listallnetworkservices`, and `networksetup -getinfo`. Two additional applied design scenarios assess device capacity/selection and a documented, device-type-based IP addressing scheme. A new source-origin coaxial-cable identification question uses two verified cable images; an additional AI-generated first-hop destination-MAC scenario now uses IMG-0562 as a verified topology reference; the existing UTP question now includes a second verified source image.
 
 ## Remaining source and review limitations
 
@@ -195,7 +195,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
   - Module 14: TCP FIN/ACK termination order, RST versus FIN, UDP header field identification, and UDP Length/payload arithmetic.
   - Module 15: DNS hierarchy referrals, authoritative DNS answer interpretation, DHCPv6 message order, and stateless DHCPv6 with SLAAC.
   - Module 16: endpoint protection and EDR containment/telemetry preservation.
-- Recomputed snapshot: **643 questions, 643 unique IDs/prompts, 614 concept tags, 42 source-origin, 601 AI-generated**. All concept tags remain at or above the two-question minimum.
+- Recomputed snapshot: **645 questions, 645 unique IDs/prompts, 615 concept tags, 42 source-origin, 603 AI-generated**. All concept tags remain at or above the two-question minimum.
 - Updated bank-wide format and difficulty distributions from the active seed; the coverage report was reconciled separately.
 
 
@@ -206,12 +206,19 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 - Reworked `s15-file-sharing-protocols-applied-002` into an FTP control-versus-data connection troubleshooting scenario.
 - Reworked six Module 16 matching duplicates into applied scenarios: AAA authorization, Trojan behavior, denial-of-service objective, technological vulnerability, stateful firewall inspection, and environmental threat mitigation.
 - Reworked `s16-vpn-ips-applied-002` into a two-control selection scenario. Existing question IDs and provenance remain unchanged.
-- At this point in the earlier cleanup, the bank had 629 questions and 613 concept tags. The current seed has since advanced to 643 questions and 614 concept tags; see the current snapshot and latest continuation note above. No concept is below the two-question floor.
+- At this point in the earlier cleanup, the bank had 629 questions and 613 concept tags. The current seed has since advanced to 645 questions and 615 concept tags; see the current snapshot and latest continuation note above. No concept is below the two-question floor.
 
 
 ### Documentation reconciliation — November 10, 2026
 
-- Regenerated `docs/semester-1-coverage-report.md` directly from all 643 active seed records. The report now includes 22 lessons and 614 concept tags and reconciles with the seed and audit snapshot.
-- Updated README and source-concept inventory bank totals to 643 questions, 614 concepts, 42 source-origin, and 601 AI-generated.
+- Regenerated `docs/semester-1-coverage-report.md` directly from all 645 active seed records. The report now includes 24 lessons and 615 concept tags and reconciles with the seed and audit snapshot.
+- Updated README and source-concept inventory bank totals to 645 questions, 615 concepts, 42 source-origin, and 603 AI-generated.
 - Current format totals from the seed: **210 single, 35 multiple, 1 true/false, 45 fill, 73 matching, 25 ordering, and 254 scenario**. Current difficulty totals: **43 / 156 / 277 / 145 / 22**.
-- The two-question concept exposure floor remains satisfied across all 614 tags. These are structural coverage checks, not a substitute for validating source alignment or learner outcomes.
+- The two-question concept exposure floor remains satisfied across all 615 tags. These are structural coverage checks, not a substitute for validating source alignment or learner outcomes.
+
+
+### Module 1 objective coverage — November 10, 2026
+
+- Added two AI-generated applied scenarios for the “Networks Affect our Lives” objective: remote access to education/services and communication across geographic boundaries. They use existing source block references as topic context but are not source-origin because the recovered objective slide `IMG-0051` contains only a title.
+- Moved the two CCNA/career questions from `network-components` to the dedicated `it-professional` lesson ID, removing the misleading `network-components` tag from those records. The source inventory now reflects the Module 1 topic taxonomy.
+- Recomputed bank totals: **645 questions, 24 lesson IDs, 615 concepts, 42 source-origin, 603 AI-generated**. All 615 concepts remain above the two-question floor.
