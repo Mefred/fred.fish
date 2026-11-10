@@ -24,9 +24,9 @@ See [image recovery instructions](./semester-1-image-recovery.md) for the repeat
 | Normalized OCR-text candidates | 474 |
 | Exact duplicate OCR groups with two asset records | 318 |
 | Single-asset OCR groups | 156 |
-| Visually verified source-origin image-question associations | 39 |
-| Visual references used by AI-generated questions | 9 |
-| Total visually reviewed image-question associations | 48 |
+| Visually verified source-origin image-question associations | 40 |
+| Visual references used by AI-generated questions | 14 |
+| Total visually reviewed image-question associations | 54 |
 | Candidate asset records visually reviewed as not questions | 4 |
 | Unique unresolved candidate images still marked unresolved in original export | 744 |
 | Candidate asset records still marked unresolved in original export | 750 |
