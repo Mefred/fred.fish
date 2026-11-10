@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 638
+- **Questions:** 639
 - **Lessons represented:** 22
 - **Distinct concept tags:** 614
 
@@ -18,7 +18,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
 | ipv4-addressing | 43 | 32 | fill: 9, matching: 5, multiple: 1, scenario: 16, single: 12 | 2–5 |
-| ipv6-addressing | 34 | 47 | fill: 9, matching: 8, scenario: 9, single: 8 | 2–5 |
+| ipv6-addressing | 35 | 47 | fill: 6, matching: 5, scenario: 17, single: 7 | 2–5 |
 | network-components | 15 | 15 | fill: 1, matching: 1, multiple: 3, scenario: 3, single: 7 | 1–3 |
 | network-layer | 62 | 69 | fill: 2, matching: 7, multiple: 5, ordering: 1, scenario: 31, single: 16 | 1–5 |
 | network-security | 29 | 45 | matching: 9, multiple: 3, ordering: 1, scenario: 11, single: 5 | 1–5 |
@@ -37,12 +37,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Questions per concept | Number of concepts |
 |---:|---:|
-| 2 | 387 |
+| 2 | 386 |
 | 3 | 89 |
-| 4 | 40 |
-| 5 | 28 |
-| 6 | 18 |
-| 7 | 9 |
+| 4 | 41 |
+| 5 | 27 |
+| 6 | 17 |
+| 7 | 11 |
 | 8 | 8 |
 | 9 | 7 |
 | 10 | 6 |
@@ -1194,7 +1194,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-address-representation` | 2 | ipv6-addressing |
 | `ipv6-address-resolution` | 2 | icmp |
 | `ipv6-address-structure` | 4 | ipv6-addressing, number-systems |
-| `ipv6-address-types` | 6 | ipv6-addressing |
+| `ipv6-address-types` | 7 | ipv6-addressing |
 | `ipv6-addressing` | 3 | ipv6-addressing |
 | `ipv6-extension-headers` | 2 | network-layer |
 | `ipv6-fixed-header` | 2 | network-layer |
@@ -1204,8 +1204,8 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `ipv6-interface-configuration` | 2 | ipv6-addressing |
 | `ipv6-interface-id` | 2 | ipv6-addressing |
 | `ipv6-interface-verification` | 3 | ipv6-addressing, router-configuration, small-network |
-| `ipv6-multicast` | 2 | ipv6-addressing |
-| `ipv6-neighbor-discovery` | 5 | address-resolution, ipv6-addressing |
+| `ipv6-multicast` | 3 | ipv6-addressing |
+| `ipv6-neighbor-discovery` | 6 | address-resolution, ipv6-addressing |
 | `ipv6-network-prefix` | 2 | ipv6-addressing |
 | `ipv6-next-header` | 2 | network-layer |
 | `ipv6-payload-length` | 2 | network-layer |
@@ -1232,7 +1232,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `lc-connector` | 2 | physical-layer |
 | `leased-line` | 2 | internet-connections |
 | `line-protocol` | 2 | basic-device-configuration, router-configuration |
-| `link-local-address` | 6 | ipv4-addressing, ipv6-addressing, small-network |
+| `link-local-address` | 7 | ipv4-addressing, ipv6-addressing, small-network |
 | `llc-sublayer` | 3 | data-link-layer, protocols-and-models |
 | `local-authentication` | 3 | network-security, router-configuration |
 | `local-route` | 2 | network-layer |
@@ -1430,7 +1430,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `show-ip-interface` | 2 | small-network |
 | `show-ip-interface-brief` | 3 | basic-device-configuration, router-configuration, small-network |
 | `show-ip-route` | 5 | network-layer, small-network |
-| `show-ipv6-interface` | 3 | ipv6-addressing, router-configuration, small-network |
+| `show-ipv6-interface` | 4 | ipv6-addressing, router-configuration, small-network |
 | `show-protocols` | 2 | small-network |
 | `show-running-config` | 2 | small-network |
 | `show-version` | 2 | small-network |
@@ -1552,12 +1552,12 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 | Format | Count |
 |---|---:|
-| fill | 48 |
-| matching | 78 |
+| fill | 45 |
+| matching | 75 |
 | multiple | 35 |
 | ordering | 25 |
-| scenario | 232 |
-| single | 219 |
+| scenario | 240 |
+| single | 218 |
 | true-false | 1 |
 
 ### Difficulty
@@ -1565,9 +1565,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | Level | Count |
 |---:|---:|
 | 1 | 45 |
-| 2 | 160 |
-| 3 | 274 |
-| 4 | 137 |
+| 2 | 159 |
+| 3 | 275 |
+| 4 | 138 |
 | 5 | 22 |
 
 ## Interpretation and limits
