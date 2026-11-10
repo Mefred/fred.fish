@@ -63,8 +63,8 @@ The current 614 concept tags are not evenly represented. This distribution makes
 |---|---:|
 | 1 — Introductory | 45 |
 | 2 — Foundational | 159 |
-| 3 — Applied | 276 |
-| 4 — Advanced | 137 |
+| 3 — Applied | 275 |
+| 4 — Advanced | 138 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
