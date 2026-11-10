@@ -12,7 +12,7 @@
 - IMG-0615 contains a Destination IPv4 Address question whose adjacent table explicitly identifies the answer. It is already linked to source-origin question s8-ipv4-destination-address-field-source-001.
 - IMG-0619 contains a Protocol-field question whose adjacent table explicitly identifies Protocol as the field for the next-level protocol (ICMP, TCP, UDP, etc.). A new source-origin question now captures that item.
 - The blue star on the IPv4 question slides is decorative, not an answer-selection mark.
-- Cumulative native-resolution review across the 144 candidates in batches 1–4 is now 129 of 144; 15 remain contact-sheet-only.
+- The 144-candidate batch 1–4 count remains 89/144 opened at native resolution, with 55 contact-sheet-only. Follow-ups 7–10 have opened forty additional images (IMG-0580–IMG-0619) outside those four contact-sheet batches; across both workstreams, 129 unique images have now been individually inspected (89 + 40).
 - One source-origin question was added. The active bank now contains 618 questions: 42 source-origin and 576 AI-generated.
 
 ## Candidate-by-candidate log
