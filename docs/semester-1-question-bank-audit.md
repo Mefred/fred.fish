@@ -47,13 +47,13 @@ The current 613 concept tags are not evenly represented. This distribution makes
 
 | Format | Questions |
 |---|---:|
-| Single choice | 235 |
-| Multiple select | 38 |
+| Single choice | 231 |
+| Multiple select | 37 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 91 |
+| Matching | 88 |
 | Ordering | 22 |
-| Scenario / troubleshooting | 190 |
+| Scenario / troubleshooting | 198 |
 | **Total** | **629** |
 
 ## Difficulty
@@ -61,9 +61,9 @@ The current 613 concept tags are not evenly represented. This distribution makes
 | Level | Questions |
 |---|---:|
 | 1 — Introductory | 46 |
-| 2 — Foundational | 169 |
+| 2 — Foundational | 165 |
 | 3 — Applied | 271 |
-| 4 — Advanced | 121 |
+| 4 — Advanced | 125 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
