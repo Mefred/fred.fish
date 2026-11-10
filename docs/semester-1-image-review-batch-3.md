@@ -10,7 +10,7 @@
 - The images are unmarked LLC/MAC sublayer questions, frame-field questions, switching/topology questions, host/switch MAC behavior questions, and lesson-summary slides.
 - No new source-origin question or visual-context association was added.
 - Ten candidates (IMG-0431, IMG-0432, IMG-0433, IMG-0435, IMG-0437, IMG-0439, IMG-0440, IMG-0442, IMG-0444, IMG-0447) have since been opened individually at native resolution; all answer controls were empty and no new associations were added.
-- Batch 3 now has 28/36 candidates opened at native resolution, with eight still contact-sheet-only.
+- Batch 3 now has all 36/36 candidates opened at native resolution; zero remain contact-sheet-only.
 
 ## Candidate-by-candidate log
 
@@ -69,3 +69,8 @@ See [native-resolution follow-up 15](./semester-1-image-review-native-followup-1
 ## Additional native-resolution follow-up
 
 Ten more unique batch-3 candidates were inspected in [native-resolution follow-up 16](./semester-1-image-review-native-followup-16.md). Batch 3 now stands at 28/36 native-resolution, with eight candidates remaining contact-sheet-only.
+
+
+## Native-resolution completion
+
+The final eight candidates are documented in [native-resolution follow-up 17](./semester-1-image-review-native-followup-17.md). Batch 3 is now 36/36 native-resolution. Together with completed batch 4 and earlier native reviews in batches 1–2, all 144 candidates from batches 1–4 have now been individually inspected at native resolution.
