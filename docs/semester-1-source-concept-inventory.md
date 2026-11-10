@@ -844,7 +844,7 @@ The active `router-configuration` lesson contains **27 questions** in `src/data/
 - Review the two-interface addressing scenario and mixed interface-status output in a learner session.
 - Inspect the router/interface/default-gateway source exhibits at native resolution before adding any source-origin items.
 - Execute the source Packet Tracer activities **Build a Switch and Router Network (Lab 10.4.4)**, **Connect a Router to a LAN**, and **Troubleshoot Default Gateway Issues**. Record actual interface states, configuration commands, end-to-end connectivity, and the troubleshooting/documentation workflow. These are not complete merely because their text appears in the lecture notes.
-- Run the question-bank validator and regenerate the coverage report after question-bank edits.
+- **Completed:** regenerated the coverage report from the 657-question seed and manually checked all 657 records, answer formats, source references, unique IDs/prompts, inventory links, and the two-question concept floor (zero structural errors). **Pending:** run `npm run validate:learning`, `npm run test:learning`, `npm run check`, `npm run build`, and browser tests in a fresh CI run.
 
 Module 10 is **partially audited, not signed off**. Continue next with Module 11 — IPv4 Addressing, while keeping the duplicate cleanup, source-exhibit verification, and Packet Tracer execution open.
 
