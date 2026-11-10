@@ -974,7 +974,7 @@ The active `icmp` lesson contains **18 questions**: **1 source-origin** and **17
 - **ICMPv6 Neighbor Discovery:** the direct item tests NS/NA address resolution; the applied item now tests DAD response handling rather than repeating the same mapping.
 - **Unreachable-code practice:** the matching item retains all four common ICMPv4 codes; the applied scenario interprets Type 3 Code 2 and contrasts protocol unreachable with port unreachable.
 - **Source wording caveat:** The notes describe ping and traceroute together but do not establish that every traceroute implementation sends ICMP Echo probes. The lesson should distinguish traceroute's TTL/Hop Limit mechanism from its platform-specific probe type.
-- **Source-origin:** All 25 active questions are marked AI-generated. No item should be upgraded to source-origin without a visibly verified answer key or source exhibit.
+- **Source-origin:** All 29 active questions are marked AI-generated. No item should be upgraded to source-origin without a visibly verified answer key or source exhibit.
 
 ### Remaining work before sign-off
 
@@ -1051,7 +1051,7 @@ Module 14 is **partially audited, not signed off**. Continue next with Module 15
 
 ### Active lesson inventory
 
-The active `application-layer` lesson contains **25 questions** in `src/data/learning/semester-1-seed.ts`: all **AI-generated**; no source-origin answers are established.
+The active `application-layer` lesson contains **29 questions** in `src/data/learning/semester-1-seed.ts`: all **AI-generated**; no source-origin answers are established.
 
 ### Objective-to-question findings
 
