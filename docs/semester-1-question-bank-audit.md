@@ -51,9 +51,9 @@ The current 610 concept tags are not evenly represented. This distribution makes
 | Multiple select | 35 |
 | True / false | 1 |
 | Fill in the blank | 52 |
-| Matching | 101 |
-| Ordering | 20 |
-| Scenario / troubleshooting | 173 |
+| Matching | 100 |
+| Ordering | 19 |
+| Scenario / troubleshooting | 175 |
 | **Total** | **619** |
 
 ## Difficulty
