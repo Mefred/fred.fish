@@ -887,3 +887,51 @@ The active `ipv4-addressing` lesson contains **43 questions** in `src/data/learn
 - Run the question-bank validator and regenerate the coverage report after question-bank edits.
 
 Module 11 is **partially audited, not signed off**. Continue next with Module 12 — IPv6 Addressing, while keeping the duplicate cleanup, identifier reconciliation, exhibit verification, and Packet Tracer execution open.
+
+
+## Page-by-page source verification: Module 12 — IPv6 Addressing
+
+**Status: partially audited; not signed off.** The source objective is “Implement an IPv6 addressing scheme.” The recovered topic objectives cover IPv4 limitations, IPv6 representation and address types, static GUA/LLA configuration, dynamic GUA configuration, dynamic LLA configuration, IPv6 multicast, and IPv6 subnetting. The notes cover dual stack, tunneling, translation, compression rules, GUA/LLA/anycast/multicast, EUI-64 and random interface IDs, SLAAC and DHCPv6 modes, solicited-node multicast, all-nodes/all-routers groups, and the 16-bit subnet ID between a /48 global routing prefix and /64 interface ID.
+
+### Active lesson inventory
+
+The active `ipv6-addressing` lesson contains **34 questions**, all **AI-generated**. There are no source-origin questions in this lesson at the current head. Source references are visual/context references and do not independently establish an answer key.
+
+### Objective-to-question findings
+
+1. **Need for IPv6 and coexistence:** The bank covers IPv4 exhaustion and the three transition approaches: dual stack, tunneling, and translation. The explanation should preserve the mechanism: dual stack runs both protocols; tunneling encapsulates one protocol packet inside the other across an incompatible network; translation converts between IPv4 and IPv6 addressing/packet formats (for example NAT64). These are migration/coexistence mechanisms, not substitutes for native end-to-end IPv6.
+2. **Address representation:** The lesson covers eight 16-bit hextets, omission of leading zeroes, and compression of one contiguous run of all-zero hextets using `::` once. However, four questions (`s12-ipv6-compress-001`, `s12-ipv6-compress-002`, `s12-zero-compression-applied-002`, and `s12-zero-suppression-applied-002`) substantially repeat address compression. Keep one standard conversion, one case requiring a choice between possible zero runs, and a distinct validation item that catches illegal double-colon use.
+3. **Address types:** GUA, LLA, multicast, anycast, and loopback are represented. Keep the prefix distinctions precise: commonly allocated GUAs are in 2000::/3, link-local unicast uses FE80::/10, multicast uses FF00::/8, and loopback is ::1/128. Anycast is not a separate prefix family; it is an address assigned to multiple interfaces and delivered according to routing to one appropriate instance. IPv6 has no broadcast address.
+4. **Static GUA and LLA configuration:** The active bank has a router interface configuration sequence for a GUA and `no shutdown`, but it does not clearly test manual LLA configuration with `ipv6 address <address> link-local` as a distinct skill. Add a direct configuration task for both address types and verify that an IPv6 interface has a link-local address. The same LLA may be reused on separate links, but it must be unique within a link; using distinct per-interface LLAs is a common operational convention.
+5. **Dynamic GUA configuration:** SLAAC, Router Advertisements, and DHCPv6 modes are represented. The RA can supply the prefix and default-router information; SLAAC lets the host generate its own interface ID, using EUI-64 or a random value. Stateless DHCPv6 can supply other configuration such as DNS/domain information, while stateful DHCPv6 supplies the address. Keep RA flags distinct: M=0/O=0 indicates SLAAC without DHCPv6; M=0/O=1 indicates SLAAC plus stateless DHCPv6; M=1 indicates managed/stateful DHCPv6.
+6. **Dynamic LLA and interface IDs:** The source says every IPv6-enabled interface needs a link-local address, which can be configured manually or generated dynamically. The active bank covers FE80::/10 and EUI-64, but the EUI-64 material is repeated across `s12-eui64-001`, `s12-interface-id-applied-002`, and `s12-eui64-applied-002`. Keep one conceptual item and one full MAC-to-interface-ID calculation. Explain that modified EUI-64 inserts FFFE and flips the universal/local bit; do not imply all modern operating systems use EUI-64, since random/stable privacy identifiers are also common.
+7. **Router discovery and SLAAC troubleshooting:** RS/RA are represented, as are cases where a host has an LLA but no GUA. `s12-slaac-ra-troubleshoot-001` and `s12-slaac-ra-failure-002` substantially repeat the same initial check. Keep one concise fault scenario and make the other test interpretation of RA flags/prefix lifetime or the difference between missing RA and a host-side address-generation failure.
+8. **IPv6 multicast:** The bank covers FF00::/8, all-nodes FF02::1, all-routers FF02::2, and solicited-node multicast. The two all-nodes/all-routers matching questions (`s12-ipv6-assigned-multicast-match-001` and `s12-ipv6-multicast-groups-applied-002`) are near duplicates. Retain one matching exercise and add an applied question that explains why solicited-node multicast is more selective than sending to all nodes. Multicast addresses are destination addresses, not source addresses.
+9. **IPv6 subnetting:** The bank teaches the 16-bit subnet ID between a /48 global routing prefix and /64 interface ID, including a hierarchical bit allocation. `s12-ipv6-subnet-id-scenario-001`, `s12-ipv6-subnet-id-applied-002`, and `s12-hierarchical-subnet-id-image-applied-001` overlap. Keep a field-identification item and one real bit-allocation calculation; use the third slot for deriving several aligned /64 subnet prefixes from a /48.
+10. **Routing/configuration scope:** `s12-ipv6-routing-enable-001` (`ipv6 unicast-routing`) and the IPv6 default-route questions are useful operational material but extend beyond the explicit Module 12 addressing objectives. Keep them clearly labeled as routing/configuration enrichment or move them to the relevant routing module. The default route questions `s12-ipv6-default-route-001` and `s12-ipv6-static-route-applied-002` duplicate the same `ipv6 route ::/0` command and next hop; consolidate them.
+
+### Duplicate and scope findings
+
+- **IPv6 compression:** Four questions repeat the same leading-zero/zero-run transformation. Consolidate into distinct canonicalization, longest-run selection, and invalid-notation reasoning.
+- **EUI-64:** Three questions ask about FFFE insertion or the U/L-bit transformation. Retain one direct rule and one complete worked conversion from a supplied MAC address.
+- **Coexistence:** `s12-ipv6-coexistence-001` and `s12-ipv4-ipv6-coexistence-applied-002` both match dual stack/tunneling/translation to their definitions. Keep one and repurpose the other for selecting a migration approach from a network constraint.
+- **SLAAC troubleshooting:** `s12-slaac-ra-troubleshoot-001` and `s12-slaac-ra-failure-002` both start with checking for an RA and its prefix/flags. Differentiate them or remove one.
+- **DHCPv6 mode mapping:** `s12-ra-dhcpv6-modes-match-001` and `s12-dhcpv6-mode-applied-002` both test SLAAC-only, SLAAC plus stateless DHCPv6, and stateful DHCPv6. Keep one complete flag-to-method exercise and use the other for a client troubleshooting decision.
+- **Default static route:** `s12-ipv6-default-route-001` and `s12-ipv6-static-route-applied-002` are near-identical command recall. This is routing enrichment rather than a core address-type objective.
+- **Subnet ID:** `s12-ipv6-subnet-id-scenario-001`, `s12-ipv6-subnet-id-applied-002`, and `s12-hierarchical-subnet-id-image-applied-001` all assess the /48-to-/64 subnet ID field. Differentiate bit allocation from prefix calculation.
+- **Anycast:** `s12-anycast-scenario-001` and `s12-anycast-applied-002` assess the same nearest/best-matching routing behavior. Keep one applied route-selection example.
+- **Multicast groups:** `s12-ipv6-assigned-multicast-match-001` and `s12-ipv6-multicast-groups-applied-002` both map FF02::1 and FF02::2 to all-nodes/all-routers. Consolidate.
+- **DAD:** `s12-ipv6-dad-scenario-001` and `s12-dad-duplicate-address-002` are related but can be retained as a two-step pair if the second explicitly tests the response to a detected duplicate address. Ensure the host does not use the duplicate address.
+- **Provenance:** All 34 active questions are AI-generated. No source answer key is visibly established in the current source inventory for this module; do not upgrade provenance merely because a prompt or diagram resembles the source.
+
+### Remaining work before sign-off
+
+- Consolidate the repeated compression, EUI-64, coexistence, SLAAC/RA, DHCPv6 flag, subnet-ID, default-route, anycast, and multicast questions.
+- Add explicit manual LLA configuration and a complete GUA/LLA verification task.
+- Add a multi-subnet /48-to-/64 calculation that requires allocating multiple /64 prefixes and explaining the subnet ID.
+- Clarify which routing commands are deliberate enrichment versus core Module 12 addressing curriculum.
+- Inspect native-resolution IPv6 address, EUI-64, multicast, and subnet-ID diagrams before creating any source-origin questions; OCR fragments and visual context alone are insufficient.
+- Locate and execute the source IPv6 addressing Packet Tracer activities, if present in the source archive, and record actual GUA/LLA assignments, RA/DHCPv6 behavior, multicast behavior, and connectivity results. The source text reviewed here identifies the instructional content but does not establish live Packet Tracer execution.
+- Run the question-bank validator and regenerate the coverage report after question-bank edits.
+
+Module 12 is **partially audited, not signed off**. Continue next with Module 13 — ICMP, while keeping duplicate cleanup, LLA configuration coverage, exhibit verification, and practical validation open.
