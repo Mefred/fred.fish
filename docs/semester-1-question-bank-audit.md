@@ -11,8 +11,8 @@
 | Distinct concept tags | 617 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
-| Source-origin questions | 42 |
-| AI-generated questions | 606 |
+| Source-origin questions | 41 |
+| AI-generated questions | 607 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -70,7 +70,7 @@ The current 616 concept tags are not evenly represented. This distribution makes
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 648 questions during the full expansion. The 255 additions comprise 237 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 617 distinct tags, including the two-question `networks-affect-lives`, `command-arguments`, and `command-help` tags and the autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 648 questions during the full expansion. The 255 additions comprise 237 AI-generated questions and eighteen source-origin questions. Three existing records are now correctly labeled AI-generated: two images showed prompts without answer keys, and the Module 2 `running-config` keyword item was rewritten as a derived command-syntax question. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 617 distinct tags, including the two-question `networks-affect-lives`, `command-arguments`, and `command-help` tags and the autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -195,7 +195,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
   - Module 14: TCP FIN/ACK termination order, RST versus FIN, UDP header field identification, and UDP Length/payload arithmetic.
   - Module 15: DNS hierarchy referrals, authoritative DNS answer interpretation, DHCPv6 message order, and stateless DHCPv6 with SLAAC.
   - Module 16: endpoint protection and EDR containment/telemetry preservation.
-- Recomputed snapshot: **648 questions, 648 unique IDs/prompts, 617 concept tags, 42 source-origin, 606 AI-generated**. All concept tags remain at or above the two-question minimum.
+- Recomputed snapshot: **648 questions, 648 unique IDs/prompts, 617 concept tags, 41 source-origin, 607 AI-generated**. All concept tags remain at or above the two-question minimum.
 - Updated bank-wide format and difficulty distributions from the active seed; the coverage report was reconciled separately.
 
 
@@ -212,7 +212,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 ### Documentation reconciliation — November 10, 2026
 
 - Regenerated `docs/semester-1-coverage-report.md` directly from all 648 active seed records. The report now includes 24 lessons and 617 concept tags and reconciles with the seed and audit snapshot.
-- Updated README and source-concept inventory bank totals to 648 questions, 617 concepts, 42 source-origin, and 606 AI-generated.
+- Updated README and source-concept inventory bank totals to 648 questions, 617 concepts, 41 source-origin, and 607 AI-generated.
 - Current format totals from the seed: **210 single, 35 multiple, 1 true/false, 45 fill, 73 matching, 25 ordering, and 254 scenario**. Current difficulty totals: **43 / 156 / 277 / 145 / 22**.
 - The two-question concept exposure floor remains satisfied across all 616 tags. These are structural coverage checks, not a substitute for validating source alignment or learner outcomes.
 
@@ -236,3 +236,9 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - Added explicit practice for context-sensitive IOS help (`?`) and unique-prefix command completion (Tab), bringing the Module 2 command-structure topic beyond keyword/argument identification.
 - Module 2 now has 30 active questions. The question bank totals **648 questions, 24 lesson IDs, and 617 concepts**; all concepts retain at least two questions.
+
+
+### Provenance correction — Module 2 command syntax — November 10, 2026
+
+- Reclassified `s2-config-keyword-001` from source-origin to AI-generated after rewriting it as a derived fixed-keyword distinction. Its `IMG-0122` reference is contextual support, not a source-marked answer key for that exact prompt.
+- Current provenance is **41 source-origin and 607 AI-generated** across 648 questions. The 40 documented source-origin image-question associations in the image audit are a separate count and do not include `IMG-0122`.
