@@ -4,15 +4,15 @@
 
 | Measure | Current value |
 |---|---:|
-| Active questions | **631** |
-| Unique question IDs | 631 |
-| Unique normalized prompts | 631 |
+| Active questions | **633** |
+| Unique question IDs | 633 |
+| Unique normalized prompts | 633 |
 | Lesson IDs represented | 22 |
 | Distinct concept tags | 614 |
 | Concepts with only one question | **0** |
 | Minimum questions per concept | **2** |
 | Source-origin questions | 42 |
-| AI-generated questions | 589 |
+| AI-generated questions | 591 |
 
 Every existing concept tag has at least two question records. This is a bank-coverage floor, not evidence that a learner has mastered each concept or that every source objective has been exhaustively taught.
 
@@ -22,54 +22,54 @@ The current 614 concept tags are not evenly represented. This distribution makes
 
 | Questions per concept | Concept tags |
 |---:|---:|
-| 2 | 397 |
-| 3 | 87 |
+| 2 | 396 |
+| 3 | 88 |
 | 4 | 35 |
-| 5 | 27 |
-| 6 | 18 |
+| 5 | 26 |
+| 6 | 19 |
 | 7 | 8 |
-| 8 | 8 |
-| 9 | 6 |
+| 8 | 7 |
+| 9 | 7 |
 | 10 | 7 |
 | 11 | 4 |
-| 12 | 2 |
+| 12 | 1 |
 | 13 | 3 |
-| 14 | 2 |
-| 15 | 3 |
+| 14 | 1 |
+| 15 | 4 |
 | 16 | 3 |
-| 17 | 1 |
+| 17 | 2 |
 | 18 | 1 |
 | 20 | 1 |
 | 31 | 1 |
 
-**Priority implication:** 397 concepts (64.7%) sit exactly at the two-question minimum.
+**Priority implication:** 396 concepts (64.5%) sit exactly at the two-question minimum.
 
 ## Question formats
 
 | Format | Questions |
 |---|---:|
-| Single choice | 223 |
+| Single choice | 221 |
 | Multiple select | 36 |
 | True / false | 1 |
 | Fill in the blank | 51 |
-| Matching | 83 |
+| Matching | 81 |
 | Ordering | 23 |
-| Scenario / troubleshooting | 214 |
-| **Total** | **631** |
+| Scenario / troubleshooting | 220 |
+| **Total** | **633** |
 
 ## Difficulty
 
 | Level | Questions |
 |---|---:|
-| 1 — Introductory | 46 |
+| 1 — Introductory | 45 |
 | 2 — Foundational | 163 |
 | 3 — Applied | 269 |
-| 4 — Advanced | 131 |
+| 4 — Advanced | 134 |
 | 5 — Challenging | 22 |
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 631 questions during the full expansion. The 238 additions comprise 220 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 614 distinct tags, including the new two-question autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 633 questions during the full expansion. The 240 additions comprise 222 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 614 distinct tags, including the new two-question autonegotiation tag. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
