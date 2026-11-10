@@ -165,3 +165,10 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 
 - Updated `s16-firewall-filtering-applied-002` to label payload inspection as **Deep application-aware inspection**. Its explanation now distinguishes this advanced capability from the source-level application filtering example, which evaluates application types/services using port numbers.
 - No question count, concept tags, difficulty, answer key, or provenance changed. The correction is an instructional distinction, not a new source-origin claim.
+
+
+### Question-bank cleanup — Module 17 scenario differentiation
+
+- Reworked `s17-baseline-monitoring-applied-002` from a paraphrase of the 25%-to-90% anomaly question into a five-week utilization trend/capacity-forecasting scenario.
+- Reworked `s17-trace-interpretation-applied-002` from a duplicate intermediate-hop timeout into a multi-hop RTT interpretation scenario where the large latency increase first appears at hop 2.
+- Question count, concept tags, difficulty range, and source provenance remain unchanged. These are AI-generated applied scenarios, not new source-origin questions.
