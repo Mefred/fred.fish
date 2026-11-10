@@ -18,7 +18,7 @@ Every existing concept tag has at least two question records. This is a bank-cov
 
 ### Concept exposure distribution
 
-The current 610 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
+The current 613 concept tags are not evenly represented. This distribution makes the coverage floor visible and helps prioritize future depth work; it counts distinct question records per tag, not learner mastery.
 
 | Questions per concept | Concept tags |
 |---:|---:|
@@ -68,7 +68,7 @@ The current 610 concept tags are not evenly represented. This distribution makes
 
 ## Concept-depth expansion
 
-The bank grew from 393 to 619 questions during the full expansion. The 226 additions comprise 208 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 610 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
+The bank grew from 393 to 629 questions during the full expansion. The 236 additions comprise 218 AI-generated questions and eighteen source-origin questions. Two earlier records were reclassified as AI-generated because their images showed prompts but no answer key. Most additions reuse existing concept identifiers; the two Module 1 career questions add the networking-careers and ccna-certification tags, each used by both questions. The active bank now has 613 distinct tags. The two-question minimum is enforced by `scripts/validate-learning-data.mjs`, so a future edit that leaves a concept with fewer than two questions fails validation.
 
 The expansion adds distinct practice across:
 - IOS navigation, device setup, interface configuration, password handling, SSH-only VTY access, management SVIs, and verification commands.
@@ -131,7 +131,7 @@ Six additional diagram-based AI-generated questions now use verified visual cont
 ## Remaining source and review limitations
 
 - The OCR export's original ZIP contains metadata and OCR text, not the original image bytes. The original OneNote `.one` file was available separately and all 2,646 manifest assets were recovered from it with exact SHA-256 matches. See [image recovery instructions](./semester-1-image-recovery.md).
-- All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened 144 candidates at contact-sheet scale, with 63 opened at native resolution and 81 not yet individually opened at native resolution. Continue native-size inspection where small answer marks or diagram details could change question provenance or correctness.
+- All 772 unresolved candidate records have been screened at thumbnail resolution. The original export's 744 unique-image unresolved status (750 records including duplicates) is not a current full-size-review count. The detailed batch 1–4 review has screened and opened all 144 candidates individually at native resolution (144/144; zero contact-sheet-only candidates). Follow-ups 7–10 separately inspected 40 additional images outside that fixed set, for 184 unique native-resolution inspections overall. Any future image review must be scoped as a new batch rather than counted as unfinished work from the original 144.
 - The source-concept inventory now contains content-level audit sections for all 17 modules, with active question counts, provenance, source alignment, duplicate/scope findings, and remaining validation work. This does not mean any module is fully signed off: native-resolution exhibit checks and source lab/Packet Tracer execution remain open.
 - Desktop/mobile Chromium viewport tests and automated axe checks are not substitutes for a manual pass on physical devices, assistive technologies, or real learner sessions.
 - Learner progress is browser-local; cross-device account sync and a backend are outside this PR.
