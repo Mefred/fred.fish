@@ -2,7 +2,7 @@
 
 Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learning-coverage.mjs`.
 
-- **Questions:** 618
+- **Questions:** 619
 - **Lessons represented:** 22
 - **Distinct concept tags:** 610
 
@@ -13,7 +13,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | address-resolution | 17 | 20 | fill: 1, matching: 3, scenario: 5, single: 8 | 1–4 |
 | application-layer | 23 | 35 | matching: 7, multiple: 1, ordering: 1, scenario: 6, single: 8 | 1–4 |
 | basic-device-configuration | 27 | 42 | fill: 4, multiple: 1, ordering: 4, scenario: 9, single: 9 | 1–5 |
-| data-link-layer | 26 | 39 | matching: 8, multiple: 3, ordering: 1, scenario: 6, single: 8 | 2–4 |
+| data-link-layer | 27 | 43 | matching: 8, multiple: 3, ordering: 1, scenario: 7, single: 8 | 2–4 |
 | ethernet-switching | 38 | 57 | fill: 3, matching: 4, scenario: 15, single: 16 | 1–5 |
 | icmp | 18 | 26 | matching: 2, scenario: 4, single: 12 | 1–4 |
 | internet-connections | 16 | 17 | scenario: 4, single: 12 | 1–4 |
@@ -40,20 +40,20 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 2 | 407 |
 | 3 | 79 |
 | 4 | 36 |
-| 5 | 22 |
-| 6 | 21 |
+| 5 | 21 |
+| 6 | 22 |
 | 7 | 8 |
-| 8 | 9 |
-| 9 | 2 |
+| 8 | 8 |
+| 9 | 3 |
 | 10 | 4 |
 | 11 | 7 |
 | 12 | 3 |
-| 13 | 3 |
-| 14 | 1 |
+| 13 | 1 |
+| 14 | 3 |
 | 15 | 2 |
 | 16 | 3 |
 | 18 | 1 |
-| 19 | 1 |
+| 20 | 1 |
 | 31 | 1 |
 
 **Concepts with fewer than two questions:** 0.
@@ -168,6 +168,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 
 ### data-link-layer
 
+- `arp`
 - `collision-avoidance`
 - `contention-based-access`
 - `controlled-access`
@@ -177,6 +178,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `data-link-layer`
 - `data-link-topologies`
 - `decapsulation`
+- `default-gateway`
 - `duplex`
 - `duplex-communication`
 - `encapsulation`
@@ -201,7 +203,9 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 - `mesh-topology`
 - `multiaccess-topology`
 - `network-redundancy`
+- `next-hop`
 - `point-to-point-topology`
+- `remote-network-communication`
 - `routing`
 - `source-destination-addressing`
 - `token-passing`
@@ -932,7 +936,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `application-filtering` | 2 | network-security |
 | `application-layer` | 4 | application-layer, protocols-and-models |
 | `application-layer-services` | 9 | application-layer, small-network |
-| `arp` | 13 | address-resolution, protocols-and-models |
+| `arp` | 14 | address-resolution, data-link-layer, protocols-and-models |
 | `arp-cache` | 6 | address-resolution, small-network |
 | `attenuation` | 2 | physical-layer |
 | `authentication` | 2 | network-security |
@@ -1002,7 +1006,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `decapsulation` | 3 | data-link-layer, protocols-and-models |
 | `decimal-to-binary` | 2 | number-systems |
 | `decimal-to-hexadecimal` | 2 | number-systems |
-| `default-gateway` | 13 | address-resolution, basic-device-configuration, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
+| `default-gateway` | 14 | address-resolution, basic-device-configuration, data-link-layer, ethernet-switching, icmp, ipv4-addressing, network-layer, protocols-and-models, router-configuration, small-network |
 | `default-route` | 12 | ipv6-addressing, network-layer, small-network |
 | `defense-in-depth` | 3 | network-security |
 | `delivery-options` | 2 | protocols-and-models |
@@ -1223,7 +1227,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `longest-prefix-match` | 5 | network-layer |
 | `loopback-address` | 2 | icmp, ipv6-addressing |
 | `mac-address-table` | 6 | ethernet-switching |
-| `mac-addressing` | 19 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
+| `mac-addressing` | 20 | address-resolution, data-link-layer, ethernet-switching, ipv6-addressing, protocols-and-models, small-network |
 | `mac-flapping` | 2 | ethernet-switching |
 | `mac-learning` | 2 | ethernet-switching |
 | `mac-move` | 2 | ethernet-switching |
@@ -1283,7 +1287,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `network-trends` | 3 | network-trends |
 | `network-troubleshooting` | 16 | icmp, internet-connections, small-network |
 | `networking-careers` | 2 | network-components |
-| `next-hop` | 8 | ipv6-addressing, network-layer, small-network |
+| `next-hop` | 9 | data-link-layer, ipv6-addressing, network-layer, small-network |
 | `next-hop-resolution` | 3 | network-layer |
 | `nic` | 2 | ethernet-switching |
 | `no-shutdown` | 5 | basic-device-configuration, ipv6-addressing, router-configuration |
@@ -1353,7 +1357,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | `reliability-and-flow-control` | 3 | transport-layer |
 | `reliable-delivery` | 2 | transport-layer |
 | `remote-management` | 3 | basic-device-configuration, router-configuration |
-| `remote-network-communication` | 5 | address-resolution, protocols-and-models, small-network |
+| `remote-network-communication` | 6 | address-resolution, data-link-layer, protocols-and-models, small-network |
 | `retransmission` | 3 | protocols-and-models, transport-layer |
 | `return-route` | 3 | network-layer |
 | `rfc1918` | 2 | ipv4-addressing |
@@ -1536,7 +1540,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | matching | 101 |
 | multiple | 35 |
 | ordering | 20 |
-| scenario | 172 |
+| scenario | 173 |
 | single | 237 |
 | true-false | 1 |
 
@@ -1547,7 +1551,7 @@ Generated from `src/data/learning/semester-1-seed.ts` by `scripts/report-learnin
 | 1 | 46 |
 | 2 | 172 |
 | 3 | 271 |
-| 4 | 107 |
+| 4 | 108 |
 | 5 | 22 |
 
 ## Interpretation and limits
