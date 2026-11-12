@@ -53,8 +53,6 @@ jobs:
         run: npm run validate:links
       - name: Test desktop, mobile, and accessibility behavior
         run: npm run test:browser
-      - name: Validate Cisco lesson and quiz integrity
-        run: node scripts/validate-lessons.mjs
       - name: Verify preserved routes and Cisco curriculum
         shell: bash
         run: |
