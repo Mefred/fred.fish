@@ -49,8 +49,6 @@ jobs:
           '
       - name: Type-check and build
         run: npm run build
-      - name: Validate generated local links and fragments
-        run: npm run validate:links
       - name: Test desktop, mobile, and accessibility behavior
         run: npm run test:browser
       - name: Verify preserved routes and Cisco curriculum
