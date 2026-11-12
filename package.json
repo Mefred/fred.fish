@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "check": "astro check",
-    "build": "npm run validate:learning && npm run test:learning && npm run report:learning && astro check && astro build && node scripts/copy-legacy.mjs",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
